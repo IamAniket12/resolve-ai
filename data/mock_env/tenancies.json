@@ -1,32 +1,142 @@
 [
   {
-    "tenancy_id": "TEN-5001", "property_id": "PROP-0042", "status": "active",
-    "tenants": [{"name": "Amara Okafor", "phone": "+44 7700 900501", "email": "amara.okafor@example.com"}],
-    "start": "2025-06-01", "end": "2026-05-31", "rolling": true,
+    "tenancy_id": "TEN-5001",
+    "property_id": "PROP-0042",
+    "status": "active",
+    "tenants": [
+      {
+        "name": "Amara Okafor",
+        "phone": "+44 7700 900501",
+        "email": "amara.okafor@example.com"
+      }
+    ],
+    "start": "2025-06-01",
+    "end": "2026-05-31",
+    "rolling": true,
     "vulnerability_notes": "Tenant has a 4-month-old baby (noted at check-in).",
     "access_notes": "Tenant at home most days; call 30 min before. Concierge holds a spare key."
   },
   {
-    "tenancy_id": "TEN-5002", "property_id": "PROP-0077", "status": "active",
-    "tenants": [{"name": "Tom Reilly", "phone": "+44 7700 900502", "email": "tom.reilly@example.com"},
-                {"name": "Sadie Reilly", "phone": "+44 7700 900503", "email": ""}],
-    "start": "2024-02-15", "end": "2026-02-14", "rolling": true,
+    "tenancy_id": "TEN-5002",
+    "property_id": "PROP-0077",
+    "status": "active",
+    "tenants": [
+      {
+        "name": "Tom Reilly",
+        "phone": "+44 7700 900502",
+        "email": "tom.reilly@example.com"
+      },
+      {
+        "name": "Sadie Reilly",
+        "phone": "+44 7700 900503",
+        "email": ""
+      }
+    ],
+    "start": "2024-02-15",
+    "end": "2026-02-14",
+    "rolling": true,
     "vulnerability_notes": "",
     "access_notes": "Both tenants work; access after 5pm or Saturdays."
   },
   {
-    "tenancy_id": "TEN-5003", "property_id": "PROP-0113", "status": "active",
-    "tenants": [{"name": "Lena Fischer", "phone": "+44 7700 900504", "email": "lena.fischer@example.com"}],
-    "start": "2026-01-10", "end": "2027-01-09", "rolling": false,
+    "tenancy_id": "TEN-5003",
+    "property_id": "PROP-0113",
+    "status": "active",
+    "tenants": [
+      {
+        "name": "Lena Fischer",
+        "phone": "+44 7700 900504",
+        "email": "lena.fischer@example.com"
+      }
+    ],
+    "start": "2026-01-10",
+    "end": "2027-01-09",
+    "rolling": false,
     "vulnerability_notes": "",
     "access_notes": "Key safe at side door, code held by office.",
     "sms_disabled": true
   },
   {
-    "tenancy_id": "TEN-4990", "property_id": "PROP-0150", "status": "ended",
-    "tenants": [{"name": "Ravi Patel", "phone": "+44 7700 900505", "email": "ravi.patel@example.com"}],
-    "start": "2023-09-01", "end": "2026-08-31", "rolling": false,
+    "tenancy_id": "TEN-4990",
+    "property_id": "PROP-0150",
+    "status": "ended",
+    "tenants": [
+      {
+        "name": "Ravi Patel",
+        "phone": "+44 7700 900505",
+        "email": "ravi.patel@example.com"
+      }
+    ],
+    "start": "2023-09-01",
+    "end": "2026-08-31",
+    "rolling": false,
     "vulnerability_notes": "",
     "access_notes": "Tenancy ENDED 2026-08-31. Property vacant pending re-let; keys in office."
+  },
+  {
+    "tenancy_id": "TEN-5011",
+    "property_id": "PROP-0188",
+    "status": "active",
+    "tenants": [
+      {
+        "name": "Josh Carter",
+        "phone": "+44 7700 900611",
+        "email": "josh.carter@example.com"
+      },
+      {
+        "name": "Priya Menon",
+        "phone": "+44 7700 900612",
+        "email": "priya.menon@example.com"
+      },
+      {
+        "name": "Ben Okoro",
+        "phone": "+44 7700 900613",
+        "email": "ben.okoro@example.com"
+      }
+    ],
+    "start": "2025-09-01",
+    "end": "2026-08-31",
+    "rolling": true,
+    "vulnerability_notes": "",
+    "access_notes": "Someone usually home after 4pm; WhatsApp group is the agreed contact channel."
+  },
+  {
+    "tenancy_id": "TEN-5012",
+    "property_id": "PROP-0205",
+    "status": "active",
+    "tenants": [
+      {
+        "name": "Grace Adeyemi",
+        "phone": "+44 7700 900621",
+        "email": "grace.adeyemi@example.com"
+      },
+      {
+        "name": "Sam Whitlock",
+        "phone": "+44 7700 900622",
+        "email": "sam.whitlock@example.com"
+      }
+    ],
+    "start": "2024-04-01",
+    "end": "2026-03-31",
+    "rolling": true,
+    "vulnerability_notes": "",
+    "access_notes": "Both work from home Tue/Thu. Concierge desk can admit contractors with 24h notice."
+  },
+  {
+    "tenancy_id": "TEN-5013",
+    "property_id": "PROP-0233",
+    "status": "active",
+    "tenants": [
+      {
+        "name": "Mo Hussain",
+        "phone": "+44 7700 900631",
+        "email": "mo.hussain@example.com"
+      }
+    ],
+    "start": "2026-02-01",
+    "end": "2027-01-31",
+    "rolling": false,
+    "vulnerability_notes": "",
+    "access_notes": "Shift worker; prefers text. Available mornings before 11."
   }
 ]

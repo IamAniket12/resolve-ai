@@ -13,12 +13,15 @@ from resolve_ai.config import Settings
 from resolve_ai.llm import LLM, LLMResponse
 
 GAS_WORDS = ["smell of gas", "gas smell", "smell gas", "carbon monoxide", "co alarm", "gas leak"]
-ELEC_WORDS = ["spark", "burning smell", "electric shock", "exposed wire", "sockets wet", "water in the light", "light fitting", "fuse box smoking"]
+ELEC_WORDS = ["sparking", "sparks ", "is sparking", "burning smell", "electric shock", "exposed wire", "sockets wet", "water in the light", "ceiling light fitting", "through the light", "fuse box smoking"]
 INJECTION_WORDS = ["system note to ai", "note to ai assistant", "ignore your", "skip the approval", "ignore previous", "you are now"]
 LEAK_WORDS = ["leak", "water coming", "dripping", "flood", "ceiling", "burst"]
 HEAT_WORDS = ["boiler", "no heating", "no hot water", "heating", "radiator"]
 MOULD_WORDS = ["mould", "mold", "damp", "condensation"]
 LOCK_WORDS = ["lock", "break-in", "broken window", "can't secure", "door won't"]
+APPLIANCE_WORDS = ["washing machine", "dishwasher", "tumble dryer", "fridge", "freezer", "oven", "cooker", "hob"]
+TENANT_DAMAGE_WORDS = ["i dropped", "my fault", "that's on me", "i broke", "accidentally", "i'll cover it", "own up"]
+AMBIGUITY_WORDS = ["didn't check", "haven't checked", "not sure if", "could be either"]
 VULN_WORDS = ["baby", "infant", "elderly", "disabled", "pregnan", "oxygen", "newborn", "months old", "wheelchair", "dialysis"]
 
 
@@ -69,24 +72,45 @@ class MockLLM(LLM):
         return out
 
     @staticmethod
+    def _evidence(text: str, words: List[str]) -> str:
+        """First line of the material that contains one of the keywords (what the mock 'noticed')."""
+        for line in text.splitlines():
+            low = line.lower()
+            if any(w in low for w in words):
+                return line.strip()[:220]
+        return ""
+
+    @staticmethod
     def _classify(text: str) -> Dict[str, Any]:
         t = text.lower()
         vulnerable = any(w in t for w in VULN_WORDS)
+        out = MockLLM._classify_inner(t, vulnerable)
+        out["evidence"] = MockLLM._evidence(text, out.pop("_words", []))
+        out["tenant_damage"] = MockLLM._evidence(text, TENANT_DAMAGE_WORDS)
+        out["ambiguous"] = out["category"] == "heating" and "shower" in t and any(w in t for w in AMBIGUITY_WORDS)
+        out["noisy"] = len(text) > 8000
+        return out
+
+    @staticmethod
+    def _classify_inner(t: str, vulnerable: bool) -> Dict[str, Any]:
         if any(w in t for w in GAS_WORDS):
-            return {"category": "gas", "urgency": "emergency", "trade": "gas_engineer", "safety": "gas", "vulnerable": vulnerable}
+            return {"category": "gas", "urgency": "emergency", "trade": "gas_engineer", "safety": "gas", "vulnerable": vulnerable, "_words": GAS_WORDS}
         if any(w in t for w in ELEC_WORDS):
-            return {"category": "electrical", "urgency": "emergency", "trade": "electrician", "safety": "electrical", "vulnerable": vulnerable}
+            return {"category": "electrical", "urgency": "emergency", "trade": "electrician", "safety": "electrical", "vulnerable": vulnerable, "_words": ELEC_WORDS}
+        if any(w in t for w in APPLIANCE_WORDS) and "mould" not in t:
+            urg = "urgent" if any(w in t for w in LEAK_WORDS) else "routine"
+            return {"category": "appliance", "urgency": urg, "trade": "appliance_engineer", "safety": None, "vulnerable": vulnerable, "_words": APPLIANCE_WORDS}
+        if any(w in t for w in MOULD_WORDS):
+            return {"category": "damp_mould", "urgency": "urgent", "trade": "damp_specialist", "safety": None, "vulnerable": vulnerable, "_words": MOULD_WORDS}
         if any(w in t for w in LEAK_WORDS):
             urg = "emergency" if ("flood" in t or "pouring" in t or "can't stop" in t or "cannot stop" in t) else "urgent"
-            return {"category": "plumbing", "urgency": urg, "trade": "plumber", "safety": None, "vulnerable": vulnerable}
+            return {"category": "plumbing", "urgency": urg, "trade": "plumber", "safety": None, "vulnerable": vulnerable, "_words": LEAK_WORDS}
         if any(w in t for w in HEAT_WORDS):
             urg = "emergency" if vulnerable else "urgent"
-            return {"category": "heating", "urgency": urg, "trade": "gas_engineer", "safety": None, "vulnerable": vulnerable}
-        if any(w in t for w in MOULD_WORDS):
-            return {"category": "damp_mould", "urgency": "urgent", "trade": "damp_specialist", "safety": None, "vulnerable": vulnerable}
+            return {"category": "heating", "urgency": urg, "trade": "gas_engineer", "safety": None, "vulnerable": vulnerable, "_words": HEAT_WORDS}
         if any(w in t for w in LOCK_WORDS):
-            return {"category": "security", "urgency": "emergency", "trade": "locksmith", "safety": None, "vulnerable": vulnerable}
-        return {"category": "other", "urgency": "routine", "trade": "handyperson", "safety": None, "vulnerable": vulnerable}
+            return {"category": "security", "urgency": "emergency", "trade": "locksmith", "safety": None, "vulnerable": vulnerable, "_words": LOCK_WORDS}
+        return {"category": "other", "urgency": "routine", "trade": "handyperson", "safety": None, "vulnerable": vulnerable, "_words": []}
 
     @staticmethod
     def _property_query(text: str) -> Optional[str]:
@@ -189,6 +213,18 @@ class MockLLM(LLM):
         ticket = res["create_maintenance_ticket"][-1]["data"]
         tid = ticket.get("ticket_id", "")
 
+        # Step 4b: genuine ambiguity about which system failed -> one targeted question, no guess
+        if cls["ambiguous"]:
+            if "send_message" not in res:
+                q = ("Quick check so we send the right engineer today: is the hot water from the KITCHEN tap also cold? "
+                     "If the kitchen tap runs hot, the fault is the electric shower unit and we will send an electrician. "
+                     "If it is cold too, it is the boiler and we will send a Gas Safe engineer. Reply 'tap hot' or 'tap cold'.")
+                return LLMResponse([_text("Cannot tell whether the shower unit or the boiler failed; asking one question before booking."),
+                                    _tool_use("send_message", {"recipient_type": "tenant", "recipient": tenant.get("phone") or tenant.get("email", ""),
+                                                               "channel": "sms" if tenant.get("phone") else "email", "body": q}),
+                                    _tool_use("record_note", {"ticket_id": tid, "note": "Awaiting tenant reply: kitchen tap hot/cold decides electrician vs gas engineer. Provisional trade: gas_engineer."})], "tool_use")
+            return LLMResponse([_text("Ticket open; awaiting the tenant's answer before booking.")], "end_turn")
+
         # Step 5: contractors
         if "search_contractors" not in res:
             return LLMResponse([_tool_use("search_contractors", {"trade": cls["trade"], "postcode": prop.get("postcode", ""), "emergency": cls["urgency"] == "emergency"})], "tool_use")
@@ -283,18 +319,26 @@ class MockLLM(LLM):
             risk.append(f"vulnerability: {vuln_note}")
         if any(w in text.lower() for w in INJECTION_WORDS):
             risk.append("embedded instructions in case material ignored (possible prompt injection)")
+        if cls.get("tenant_damage"):
+            risk.append(f"possible tenant-caused damage, recharge to consider: \"{cls['tenant_damage']}\"")
+        assumptions = ["Mock LLM: keyword triage; replace with Claude for real judgement."]
+        if cls.get("noisy"):
+            assumptions.append("Material is long and mostly irrelevant chatter; only maintenance-related lines were used.")
+        gaps = [] if res.get("lookup_property") and res["lookup_property"][-1]["ok"] else ["Property could not be verified from the material"]
+        if cls.get("ambiguous"):
+            gaps.append("Whether the kitchen hot tap is also cold - decides electric shower (electrician) vs boiler (Gas Safe engineer)")
         return {
-            "case_summary": f"Reported {cls['category']} issue at {prop.get('address', 'unverified property')}. Urgency assessed as {cls['urgency']}." + (f" Vulnerability: {vuln_note}" if vuln_note else ""),
+            "case_summary": f"Reported {cls['category']} issue at {prop.get('address', 'unverified property')}. Urgency assessed as {cls['urgency']}." + (f" Evidence: \"{cls['evidence']}\"" if cls.get("evidence") else "") + (f" Vulnerability: {vuln_note}" if vuln_note else ""),
             "issue_category": cls["category"],
             "urgency": cls["urgency"] if cls["urgency"] in {"emergency", "urgent", "routine"} else "unclear",
             "decision": decision,
-            "outcome": ("Escalated to a human with handover: " + esc[-1]["input"]["reason"]) if esc else ("Contractor booked and parties informed." if booked else ("Awaiting landlord approval." if approval else "Blocked pending information.")),
+            "outcome": ("Escalated to a human with handover: " + esc[-1]["input"]["reason"]) if esc else ("Contractor booked and parties informed." if booked else ("Awaiting landlord approval." if approval else "Blocked pending information: " + (gaps[-1] if gaps else "see information_gaps"))),
             "actions_taken": actions,
             "failed_actions": failed,
             "escalation": {"required": bool(esc), "to": esc[-1]["input"]["to"] if esc else "", "reason": esc[-1]["input"]["reason"] if esc else "", "handover": esc[-1]["input"]["handover"] if esc else ""},
             "conflicts": [],
-            "information_gaps": [] if res.get("lookup_property") and res["lookup_property"][-1]["ok"] else ["Property could not be verified from the material"],
-            "assumptions": ["Mock LLM: keyword triage; replace with Claude for real judgement."],
+            "information_gaps": gaps,
+            "assumptions": assumptions,
             "tenant_communication": next((r["input"]["body"] for r in res.get("send_message", []) if r["ok"] and r["input"]["recipient_type"] == "tenant"), "none"),
             "landlord_communication": next((r["input"]["body"] for r in res.get("send_message", []) if r["ok"] and r["input"]["recipient_type"] == "landlord"), "none"),
             "next_steps": ["Contractor attends; confirm completion with tenant"] if booked else (["Human reviews escalation"] if esc else ["Await approval / information"]),

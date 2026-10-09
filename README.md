@@ -89,6 +89,23 @@ python -m resolve_ai grade -v
 pytest -q
 ```
 
+### Sample cases and what they test
+
+The nine cases in `data/sample_cases/` are built to cover every difficulty the brief lists. `eval/expectations.json` records the acceptable outcome for each; `python -m resolve_ai grade -v` checks a run against it.
+
+| Difficulty in the brief | Cases | What the agent has to get right |
+|---|---|---|
+| Conflicting information | 03, 08 | Tenant vs inventory on a ceiling stain; landlord's "only a year old, just repair it" vs repair records showing three repairs and an engineer's "beyond economical repair" |
+| Failed actions | 01, 03 | Preferred contractor API times out, next one has no slots, tenant's SMS bounces; the agent recovers and reports every failure |
+| Missing context | 05, 09 | No property identifiable; a fact the tenant did not check decides which trade to send |
+| Unusual exceptions | 02, 04, 06 | Landlord refusing to pay for a gas emergency; landlord abroad with a £150 limit; a former tenant reporting on an ended tenancy |
+| Ambiguity | 09 | Cold electric shower with working heating: shower unit or boiler? One question, not a guess |
+| Noisy or irrelevant information | 07 | 600-line house group chat; two real issues buried near the end, one of them tenant-caused |
+| Situations requiring escalation | 02, 06 | Gas smell (statutory route, no ordinary booking); prompt injection claiming pre-approval |
+| Larger or more difficult context | 08 | Seven attachments: 7-page inventory PDF, 60-row block CSV, photo, three emails from three parties |
+
+Generated attachments (the long chat, the PDF, the CSV, the photo) come from `scripts/make_sample_assets.py` and are deterministic.
+
 Reality Test command (what we ran at 16:30):
 
 ```bash

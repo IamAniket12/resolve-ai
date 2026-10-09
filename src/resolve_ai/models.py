@@ -42,7 +42,11 @@ class CaseBundle:
             if a.kind == "image":
                 body = body or "(image attached - see image blocks)"
             if len(body) > max_per_attachment:
-                body = body[:max_per_attachment] + f"\n... [truncated {len(a.text) - max_per_attachment} chars]"
+                # Keep the head AND the tail: long threads usually carry the real issue near the end.
+                head = int(max_per_attachment * 0.6)
+                tail = max_per_attachment - head
+                cut = len(body) - max_per_attachment
+                body = body[:head] + f"\n... [{cut} chars omitted from the middle of this file] ...\n" + body[-tail:]
             block = f"<<<FILE name=\"{a.name}\" kind=\"{a.kind}\"{(' note=' + repr(a.note)) if a.note else ''}>>>\n{body}\n<<<END FILE>>>"
             if total + len(block) > max_total:
                 parts.append(f"<<<OMITTED name=\"{a.name}\" reason=\"context budget\">>>")

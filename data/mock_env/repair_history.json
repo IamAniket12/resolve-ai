@@ -1,8 +1,112 @@
 [
-  {"job_id": "JOB-8801", "property_id": "PROP-0042", "date": "2026-08-14", "category": "heating", "description": "Boiler losing pressure, no hot water. Re-pressurised, replaced PRV.", "contractor_id": "CON-TH01", "cost_gbp": 165, "outcome": "completed"},
-  {"job_id": "JOB-8802", "property_id": "PROP-0042", "date": "2026-09-20", "category": "heating", "description": "Boiler losing pressure again. Found slow leak on expansion vessel; vessel replaced. 90-day callback warranty.", "contractor_id": "CON-TH01", "cost_gbp": 240, "outcome": "completed"},
-  {"job_id": "JOB-8650", "property_id": "PROP-0077", "date": "2026-03-02", "category": "plumbing", "description": "Dripping bath tap; washer replaced.", "contractor_id": "CON-RP03", "cost_gbp": 95, "outcome": "completed"},
-  {"job_id": "JOB-8700", "property_id": "PROP-0077", "date": "2025-09-28", "category": "gas", "description": "Annual gas safety check (CP12 issued, expires 2026-09-30).", "contractor_id": "CON-GS02", "cost_gbp": 80, "outcome": "completed"},
-  {"job_id": "JOB-8710", "property_id": "PROP-0113", "date": "2026-06-11", "category": "plumbing", "description": "Kitchen tap replacement.", "contractor_id": "CON-CP02", "cost_gbp": 140, "outcome": "completed"},
-  {"job_id": "JOB-8300", "property_id": "PROP-0150", "date": "2026-02-05", "category": "heating", "description": "Radiator bleed and TRV replacement.", "contractor_id": "CON-MH06", "cost_gbp": 110, "outcome": "completed"}
+  {
+    "job_id": "JOB-8801",
+    "property_id": "PROP-0042",
+    "date": "2026-08-14",
+    "category": "heating",
+    "description": "Boiler losing pressure, no hot water. Re-pressurised, replaced PRV.",
+    "contractor_id": "CON-TH01",
+    "cost_gbp": 165,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8802",
+    "property_id": "PROP-0042",
+    "date": "2026-09-20",
+    "category": "heating",
+    "description": "Boiler losing pressure again. Found slow leak on expansion vessel; vessel replaced. 90-day callback warranty.",
+    "contractor_id": "CON-TH01",
+    "cost_gbp": 240,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8650",
+    "property_id": "PROP-0077",
+    "date": "2026-03-02",
+    "category": "plumbing",
+    "description": "Dripping bath tap; washer replaced.",
+    "contractor_id": "CON-RP03",
+    "cost_gbp": 95,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8700",
+    "property_id": "PROP-0077",
+    "date": "2025-09-28",
+    "category": "gas",
+    "description": "Annual gas safety check (CP12 issued, expires 2026-09-30).",
+    "contractor_id": "CON-GS02",
+    "cost_gbp": 80,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8710",
+    "property_id": "PROP-0113",
+    "date": "2026-06-11",
+    "category": "plumbing",
+    "description": "Kitchen tap replacement.",
+    "contractor_id": "CON-CP02",
+    "cost_gbp": 140,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8300",
+    "property_id": "PROP-0150",
+    "date": "2026-02-05",
+    "category": "heating",
+    "description": "Radiator bleed and TRV replacement.",
+    "contractor_id": "CON-MH06",
+    "cost_gbp": 110,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8720",
+    "property_id": "PROP-0188",
+    "date": "2026-04-18",
+    "category": "electrical",
+    "description": "Bathroom extractor fan noisy; bearing lubricated. Advised fan is 8+ years old and should be replaced at next fault.",
+    "contractor_id": "CON-EL05",
+    "cost_gbp": 85,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8611",
+    "property_id": "PROP-0205",
+    "date": "2025-11-04",
+    "category": "appliance",
+    "description": "Washing machine (Beko WTK94121W, supplied 2024-03) not spinning. Carbon brushes replaced.",
+    "contractor_id": "CON-AF10",
+    "cost_gbp": 120,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8744",
+    "property_id": "PROP-0205",
+    "date": "2026-05-21",
+    "category": "appliance",
+    "description": "Washing machine leaking from door seal. Seal replaced.",
+    "contractor_id": "CON-AF10",
+    "cost_gbp": 135,
+    "outcome": "completed"
+  },
+  {
+    "job_id": "JOB-8798",
+    "property_id": "PROP-0205",
+    "date": "2026-08-30",
+    "category": "appliance",
+    "description": "Washing machine drum bearing noise and intermittent leak at pump housing. Temporary fix. ENGINEER NOTE: unit is beyond economical repair; recommend replacement (approx £350 supplied and fitted) rather than further repairs.",
+    "contractor_id": "CON-AF10",
+    "cost_gbp": 110,
+    "outcome": "completed - replacement recommended"
+  },
+  {
+    "job_id": "JOB-8755",
+    "property_id": "PROP-0233",
+    "date": "2026-06-02",
+    "category": "heating",
+    "description": "Annual boiler service. No faults.",
+    "contractor_id": "CON-TP12",
+    "cost_gbp": 80,
+    "outcome": "completed"
+  }
 ]

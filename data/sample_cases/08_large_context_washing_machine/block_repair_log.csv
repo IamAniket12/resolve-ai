@@ -1,0 +1,61 @@
+job_ref,date,unit,category,description,contractor,cost_gbp,status
+RC-1000,2024-09-09,Flat 7,decor,sealant renewed,Wharf Plumbing,110,completed
+RC-1001,2024-09-14,Flat 3,electrical,light fitting replaced,block mgmt,60,completed
+RC-1002,2024-09-25,Flat 8,plumbing,shower head replaced,HandyPro,85,completed
+RC-1003,2024-10-07,Flat 7,appliance,oven element,HandyPro,60,completed
+RC-1004,2024-10-12,Flat 9,communal,bin store door,HandyPro,85,completed
+RC-1005,2024-10-28,Flat 11,electrical,RCD tripping,ApplianceFix SW,140,completed
+RC-1006,2024-11-03,Flat 10,locks,door closer adjusted,ApplianceFix SW,110,completed
+RC-1007,2024-11-08,Flat 4,decor,touch-up after leak,HandyPro,110,completed
+RC-1008,2024-11-21,Flat 10,appliance,fridge not cooling,block mgmt,0,completed
+RC-1009,2024-12-04,Flat 8,plumbing,slow drain,Wharf Plumbing,140,completed
+RC-1010,2024-12-18,Flat 12,pest,mice communal bin area,Bright Spark,95,completed
+RC-1011,2024-12-28,Flat 3,locks,post box lock,block mgmt,0,completed
+RC-1012,2025-01-10,Flat 12,decor,blind replaced,HandyPro,95,completed
+RC-1013,2025-01-24,Flat 5,appliance,fridge not cooling,Bright Spark,95,completed
+RC-1014,2025-02-02,Flat 9,electrical,light fitting replaced,Bright Spark,60,completed
+RC-1015,2025-02-07,Flat 6,communal,stair light out,Bright Spark,0,completed
+RC-1016,2025-02-18,Flat 7,communal,entry phone fault,HandyPro,60,completed
+RC-1017,2025-03-05,Flat 2,locks,post box lock,ApplianceFix SW,60,completed
+RC-1018,2025-03-12,Flat 2,communal,lift fault reported to block mgmt,HandyPro,75,completed
+RC-1019,2025-03-19,Flat 4,locks,post box lock,HandyPro,95,completed
+RC-1020,2025-03-31,Flat 7,locks,lock change at tenancy end,block mgmt,0,completed
+RC-1021,2025-04-09,Flat 1,electrical,socket not working,ApplianceFix SW,140,completed
+RC-1022,2025-04-22,Flat 3,decor,carpet cleaned,Wharf Plumbing,95,completed
+RC-1023,2025-04-28,Flat 1,appliance,fridge not cooling,Bright Spark,85,completed
+RC-1024,2025-05-13,Flat 12,electrical,RCD tripping,Bright Spark,75,completed
+RC-1025,2025-05-23,Flat 11,plumbing,shower head replaced,Wharf Plumbing,0,completed
+RC-1026,2025-06-06,Flat 10,plumbing,slow drain,Wharf Plumbing,75,completed
+RC-1027,2025-06-17,Flat 2,pest,ants in kitchen,Wharf Plumbing,95,completed
+RC-1028,2025-06-25,Flat 8,pest,silverfish bathroom,HandyPro,0,completed
+RC-1029,2025-07-01,Flat 11,pest,silverfish bathroom,HandyPro,95,completed
+RC-1030,2025-07-17,Flat 12,electrical,extractor fan replaced,block mgmt,85,completed
+RC-1031,2025-07-27,Flat 4,pest,ants in kitchen,Wharf Plumbing,0,completed
+RC-1032,2025-08-08,Flat 2,electrical,light fitting replaced,ApplianceFix SW,110,completed
+RC-1033,2025-08-22,Flat 11,plumbing,toilet running,HandyPro,95,completed
+RC-1034,2025-08-28,Flat 9,appliance,fridge not cooling,Bright Spark,95,completed
+RC-1035,2025-09-08,Flat 1,appliance,hob ignition,block mgmt,75,completed
+RC-1036,2025-09-14,Flat 7,decor,sealant renewed,Bright Spark,0,completed
+RC-1037,2025-09-27,Flat 12,locks,window handle,Bright Spark,95,completed
+RC-1038,2025-10-06,Flat 5,decor,touch-up after leak,Wharf Plumbing,85,completed
+RC-1039,2025-10-16,Flat 10,locks,window handle,Wharf Plumbing,75,completed
+RC-1040,2025-10-27,Flat 11,locks,window handle,block mgmt,95,completed
+RC-2001,2025-11-04,Flat 7,appliance,Washing machine Beko WTK94121W not spinning - carbon brushes replaced,ApplianceFix SW,120,completed
+RC-1041,2025-11-06,Flat 4,locks,door closer adjusted,block mgmt,95,completed
+RC-1042,2025-11-12,Flat 3,communal,lift fault reported to block mgmt,HandyPro,110,completed
+RC-1043,2025-11-21,Flat 2,locks,window handle,Bright Spark,75,completed
+RC-1044,2025-12-04,Flat 5,communal,bin store door,Wharf Plumbing,75,completed
+RC-1045,2025-12-12,Flat 9,appliance,dishwasher not draining,Wharf Plumbing,60,completed
+RC-1046,2025-12-26,Flat 6,appliance,dishwasher not draining,ApplianceFix SW,140,completed
+RC-1047,2026-01-01,Flat 2,locks,post box lock,block mgmt,85,completed
+RC-1048,2026-01-06,Flat 1,heating,boiler service,Bright Spark,0,completed
+RC-1049,2026-01-12,Flat 8,pest,wasps balcony,block mgmt,0,completed
+RC-1050,2026-01-19,Flat 11,decor,touch-up after leak,Bright Spark,140,completed
+RC-1051,2026-01-24,Flat 3,electrical,RCD tripping,ApplianceFix SW,140,completed
+RC-1052,2026-02-01,Flat 10,plumbing,toilet running,Wharf Plumbing,75,completed
+RC-1053,2026-02-17,Flat 6,decor,touch-up after leak,block mgmt,0,completed
+RC-1054,2026-03-05,Flat 7,decor,sealant renewed,Wharf Plumbing,75,completed
+RC-2002,2026-05-21,Flat 7,appliance,Washing machine leaking from door seal - seal replaced,ApplianceFix SW,135,completed
+RC-2005,2026-06-02,Flat 7,heating,Boiler annual service,Wharf Plumbing,80,completed
+RC-2003,2026-08-30,Flat 7,appliance,"Washing machine bearing noise + intermittent leak at pump housing. Temp fix. ENGINEER: beyond economical repair, recommend replacement approx GBP 350 fitted",ApplianceFix SW,110,completed - replacement recommended
+RC-2004,2026-09-14,Flat 6,decor,"Kitchen ceiling stain investigation - possible ingress from Flat 7 above, monitor",HandyPro,0,monitoring

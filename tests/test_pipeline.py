@@ -27,10 +27,10 @@ def settings(monkeypatch):
 
 def test_discover_sample_cases():
     bundles = discover_cases(SAMPLES)
-    assert len(bundles) == 6
+    assert len(bundles) == 9
     assert all(b.attachments for b in bundles)
     kinds = {a.kind for b in bundles for a in b.attachments}
-    assert {"json", "text", "email", "transcript"} <= kinds
+    assert {"json", "text", "email", "transcript", "pdf", "csv", "image"} <= kinds
 
 
 def test_schema_is_strict():

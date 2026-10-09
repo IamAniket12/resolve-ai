@@ -10,10 +10,16 @@
     "landlord_email": "priya.nair@example.com",
     "landlord_instructions": "Use Thames Heating for anything boiler-related (they installed it). Approve up to £300 without asking. Email me for anything above.",
     "spend_limit_gbp": 300,
-    "preferred_contractors": ["CON-TH01"],
+    "preferred_contractors": [
+      "CON-TH01"
+    ],
     "gas_safety_cert_expiry": "2027-02-11",
     "eicr_expiry": "2029-06-30",
-    "boiler": {"make": "Vaillant ecoTEC", "installed": "2019-03", "age_years": 7},
+    "boiler": {
+      "make": "Vaillant ecoTEC",
+      "installed": "2019-03",
+      "age_years": 7
+    },
     "notes": "Block has a concierge Mon-Fri 8-6. Stopcock under kitchen sink."
   },
   {
@@ -30,7 +36,11 @@
     "preferred_contractors": [],
     "gas_safety_cert_expiry": "2026-09-30",
     "eicr_expiry": "2028-01-15",
-    "boiler": {"make": "Baxi 830", "installed": "2014-11", "age_years": 11},
+    "boiler": {
+      "make": "Baxi 830",
+      "installed": "2014-11",
+      "age_years": 11
+    },
     "notes": "Gas safety certificate EXPIRED 2026-09-30 - renewal overdue."
   },
   {
@@ -44,10 +54,16 @@
     "landlord_email": "helen.carter@example.com",
     "landlord_instructions": "Standard authority. Prefer Coastal Plumbing.",
     "spend_limit_gbp": 250,
-    "preferred_contractors": ["CON-CP02"],
+    "preferred_contractors": [
+      "CON-CP02"
+    ],
     "gas_safety_cert_expiry": "2027-05-01",
     "eicr_expiry": "2030-03-01",
-    "boiler": {"make": "Worcester Greenstar", "installed": "2021-08", "age_years": 5},
+    "boiler": {
+      "make": "Worcester Greenstar",
+      "installed": "2021-08",
+      "age_years": 5
+    },
     "notes": "Upstairs flat (Flat 2) is managed by a different agent (Hove Lettings, 01273 000000)."
   },
   {
@@ -64,7 +80,74 @@
     "preferred_contractors": [],
     "gas_safety_cert_expiry": "2027-01-20",
     "eicr_expiry": "2028-11-11",
-    "boiler": {"make": "Ideal Logic", "installed": "2018-01", "age_years": 8},
+    "boiler": {
+      "make": "Ideal Logic",
+      "installed": "2018-01",
+      "age_years": 8
+    },
     "notes": ""
+  },
+  {
+    "property_id": "PROP-0188",
+    "address": "14 Linden Grove, Leeds",
+    "postcode": "LS6 2AB",
+    "type": "house (3-bed terrace, 3 sharers)",
+    "landlord_id": "LL-0533",
+    "landlord_name": "Fatima Begum",
+    "landlord_phone": "+44 7700 900533",
+    "landlord_email": "f.begum@example.com",
+    "landlord_instructions": "Standard authority. Tenants are responsible for damage they cause; recharge via deposit.",
+    "spend_limit_gbp": 250,
+    "preferred_contractors": [],
+    "gas_safety_cert_expiry": "2027-03-15",
+    "eicr_expiry": "2028-09-01",
+    "boiler": {
+      "make": "Ideal Logic",
+      "installed": "2020-05",
+      "age_years": 6
+    },
+    "notes": "Bathroom has a ceiling extractor fan on the light circuit. Glass induction hob (landlord-supplied, 2023)."
+  },
+  {
+    "property_id": "PROP-0205",
+    "address": "Flat 7, Riverside Court, 3 Wharf Lane, Bristol",
+    "postcode": "BS1 6XY",
+    "type": "flat (3rd floor, purpose-built block)",
+    "landlord_id": "LL-0610",
+    "landlord_name": "Riverside Court Investments Ltd (contact: Owen Pryce)",
+    "landlord_phone": "+44 7700 900610",
+    "landlord_email": "owen.pryce@rcinvest.example.com",
+    "landlord_instructions": "Company landlord. Standard authority. Repairs over £250 need written sign-off from Owen Pryce. Prefer repair over replacement unless an engineer says beyond economical repair.",
+    "spend_limit_gbp": 250,
+    "preferred_contractors": [],
+    "gas_safety_cert_expiry": "2027-06-30",
+    "eicr_expiry": "2029-02-28",
+    "boiler": {
+      "make": "Vaillant ecoTEC",
+      "installed": "2016-10",
+      "age_years": 10
+    },
+    "notes": "Block managed by Wharf Lane Block Management (block@wharflane.example.com) for communal parts. Flat 6 is directly below."
+  },
+  {
+    "property_id": "PROP-0233",
+    "address": "5 Stanley Terrace, Nottingham",
+    "postcode": "NG7 1AB",
+    "type": "house (2-bed terrace)",
+    "landlord_id": "LL-0702",
+    "landlord_name": "Graham Steele",
+    "landlord_phone": "+44 7700 900702",
+    "landlord_email": "g.steele@example.com",
+    "landlord_instructions": "Standard authority.",
+    "spend_limit_gbp": 250,
+    "preferred_contractors": [],
+    "gas_safety_cert_expiry": "2027-04-10",
+    "eicr_expiry": "2028-05-20",
+    "boiler": {
+      "make": "Worcester Greenstar 30i combi",
+      "installed": "2022-03",
+      "age_years": 4
+    },
+    "notes": "Bathroom has a Triton electric shower on its own circuit; the combi boiler supplies hot water to the taps only. Water stopcock under stairs."
   }
 ]
