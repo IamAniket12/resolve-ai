@@ -1,0 +1,30 @@
+[project]
+name = "resolve-ai"
+version = "0.1.0"
+description = "Resolve AI - an autonomous property-maintenance agent (Dwelly Real-World Agents Hackathon, Property Management track)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "anthropic>=1.0",
+    "pydantic>=2.0",
+    "requests>=2.31",
+    "pypdf>=4.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+resolve = "resolve_ai.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+resolve_ai = ["policy/*.md"]

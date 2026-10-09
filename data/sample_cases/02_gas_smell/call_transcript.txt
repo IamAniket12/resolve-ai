@@ -1,0 +1,7 @@
+Inbound call, Fri 10 Oct 2026 08:15, duration 2m10s
+Agent: Good morning, maintenance line.
+Caller: Hi, it's Tom Reilly at 9 Birch Close in Croydon. There's a really strong smell of gas in the kitchen this morning, near the cooker. My wife's got a headache. I've opened the back door.
+Agent: Okay, is the smell strong?
+Caller: Yeah it's strong, you notice it as soon as you walk in. Can you send someone round? I don't want to be paying for this, it's not something we did.
+Agent: I'm going to pass this on right away.
+Caller: Also the landlord said last year he's not paying for any more gas stuff, so I don't know what you want to do about that.

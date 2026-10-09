@@ -1,0 +1,106 @@
+About Event
+​On Saturday, October 10, Dwelly is hosting its first hackathon in London, with Anthropic, ElevenLabs, General Catalyst, and EQT joining as partners. Twenty teams, chosen from a pool of applicants, will spend a full day building AI agents that can survive real operational chaos.
+
+​We're looking for agents that hold up in the parts of business that still run on phone calls, messages, paperwork, and human judgment. Teams will connect their agents to real tools and workflows, handle ambiguity and exceptions, keep a human in the loop where it matters, and show measurable value by the end of the day.
+
+​Every team works with a real-world operational problem and a set of synthetic data to build from. You choose your scope, build your agent, and then we test it against that same data, calls, emails, documents, CRM records, maintenance tickets, and compliance cases, to see if it actually holds up. Each team picks a track, takes a case from first contact to a verified outcome, and shows us what they've built.
+
+​Tracks
+
+​Insurance Claims Processing
+
+​Property Management
+
+​Banking & Financial Services
+
+​Delivery & Logistics
+
+​How the Hackathon Works
+
+​You'll get a synthetic operating environment for your chosen track, calls, emails, documents, CRM records, and more, and 4.5 hours to build an agent that can process it autonomously.
+
+​Thirty minutes before the deadline, we release new escalation cases you've never seen: conflicting information, failed actions, missing context. There's no time to review manually, your agent has to handle this Reality Test alone. At the deadline you submit results and code, then get 30 minutes to record a 60-second demo video.
+
+​Judging
+
+​Most of your score comes from how your agent performs on the unseen Reality Test:
+
+​35% — Correct outcomes: did the agent reach the right resolution?
+
+​20% — Coverage: how many of the final cases did it complete?
+
+​20% — Judgement & safety: did it handle ambiguity, conflicting information, and escalation correctly?
+
+​15% — Engineering quality: is the solution genuinely autonomous, robust, and reproducible?
+
+​10% — Real-world applicability: could this actually work in a real operational environment?
+
+​The demo video is there to explain your solution to judges and the audience.
+
+​Award Categories
+
+​Best Real-World AI Agent — Grand Prize, for the highest overall score across the Reality Test and judging
+
+​Best Exception Handling — for the agent that performs best on the hardest, most ambiguous escalation cases
+
+​Best Voice Agent — for the best use of voice in a real operational workflow
+
+​Best Engineering — for the best technical implementation: architecture, reliability, and quality of execution
+
+​People's Choice — chosen by participants and the audience after all demos are shown
+
+​Prizes
+
+​£5,000 cash for the Grand Prize (Best Real-World AI Agent).
+
+​Each team member receives 3 months of Elevenlabs Pro tier ($297 value/team member, 600k credits/mo)
+
+​Claude Credits
+
+​Certificate
+
+​£1,500 cash for each additional award category.
+
+​Each team member receives 3 months of Elevenlabs Pro tier ($297 value/team member, 600k credits/mo) and Scale tier ($897 value/team member, 1.8M credits/mo) for Best Voice Agent
+
+​Claude Credits
+
+​Certificate
+
+​£500 cash for People's Choice
+
+​Each team member receives 3 months of Elevenlabs Pro tier ($297 value/team member, 600k credits/mo)
+
+​Claude Credits
+
+​Certificate
+
+​Plus gifts from our partners, including swag, AI credits, office hours with our partners, and more.
+
+​1 month free of Elevenlabs Creator tier (normally $22/month, 131k credits) for all participants.
+
+​The strongest teams may go on to a real pilot with Dwelly.
+
+​Team size
+
+​Teams of 2–5 people. Don't have a team yet? That's fine — come to the pre-event networking to form one on the day, or apply as a solo participant and we'll help you find teammates.
+
+​Registration
+
+​Every team member registers individually (not just the lead).
+
+​The day
+
+​9:00am — meet and greet
+
+​9:30am — onboarding
+
+​10:00am to 5:00pm — building
+
+​5:00pm to 7:00pm — demos, judges deliberate, winners announced
+
+​Food, drinks, and conversation throughout
+
+​We cover everything: food, drinks, tables, seating, power, WiFi, tool tokens, synthetic data, and frameworks. You just build.
+
+​Invite only. Places are strictly limited and each application to join is reviewed individually. We hope to see you there!

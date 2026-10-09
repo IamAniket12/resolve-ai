@@ -1,0 +1,9 @@
+We want to build **Resolve AI**, an AI agent for property maintenance.
+
+The idea came from a simple problem: when a tenant reports something like “my boiler has stopped working” or “there’s water leaking from the ceiling”, there is usually a lot of work that happens after that message. Someone has to understand how serious the issue is, check the property and repair history, find the right contractor, arrange the repair, keep the tenant updated, and make sure the issue is actually resolved.
+
+We want Resolve AI to handle this workflow instead of being just another chatbot. A tenant could report a problem in their own words, and the agent would work out what the issue might be, check the relevant property information and previous repairs, decide what needs to happen next, and use tools to create a maintenance case, contact or schedule a contractor, and keep track of the case.
+
+For things that are dangerous or need a human decision, such as gas or electrical issues, the agent would escalate rather than trying to make the decision itself.
+
+For the hackathon, we want to build a working version of this workflow and show how an agent can go from **“something is broken” to “the issue is being resolved”** with as little manual work as possible.
