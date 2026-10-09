@@ -1,0 +1,14 @@
+{
+  "_comment": "Copy to data/http_endpoints.json and fill from the event API docs. {placeholders} are taken from the tool payload; remaining fields go to query string (GET) or JSON body.",
+  "lookup_property": {"method": "GET", "path": "/properties/search"},
+  "lookup_tenancy": {"method": "GET", "path": "/properties/{property_id}/tenancy"},
+  "get_repair_history": {"method": "GET", "path": "/properties/{property_id}/repairs"},
+  "search_contractors": {"method": "GET", "path": "/contractors"},
+  "check_contractor_availability": {"method": "GET", "path": "/contractors/{contractor_id}/availability"},
+  "create_maintenance_ticket": {"method": "POST", "path": "/tickets"},
+  "schedule_contractor": {"method": "POST", "path": "/tickets/{ticket_id}/bookings"},
+  "send_message": {"method": "POST", "path": "/messages"},
+  "request_landlord_approval": {"method": "POST", "path": "/approvals"},
+  "escalate_to_human": {"method": "POST", "path": "/escalations"},
+  "record_note": {"method": "POST", "path": "/tickets/{ticket_id}/notes"}
+}
