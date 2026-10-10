@@ -1,0 +1,231 @@
+<a id="event-027"></a>
+## 2026-08-13 05:53:15 UTC — event 027
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Visit date selected - 15/08/2026 08:30 am
+
+<a id="event-028"></a>
+## 2026-08-13 05:54:16 UTC — event 028
+
+- **Channel:** Email
+- **From:** Agency / system
+- **To:** Contractor
+
+Dear Riverside Works,
+
+We are providing the confirmed appointment details for the **Blocked toilet** at Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ:
+
+Confirmed Time Slot: Sunday (15/08/2026)
+Pets:
+Contact Details: 07700 900946
+Tenant Name: Noah Turner
+
+Please be prepared to accommodate any changes to the date or time if the tenant contacts you with a change of plans.
+
+We appreciate your cooperation.
+
+<a id="event-029"></a>
+## 2026-08-13 05:54:16 UTC — event 029
+
+- **Channel:** Email
+- **From:** Agency / system
+- **To:** Tenant
+
+Dear Noah Turner,
+
+We are providing the confirmed appointment details for the **Blocked toilet** at Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ:
+Confirmed Time Slot: Sunday (15/08/2026)
+Maintenance Provider Name: Riverside Works
+Contact Details: 07700 900946
+
+Please inform the Maintenance Provider if there are any changes on your end.
+
+<a id="event-030"></a>
+## 2026-08-15 05:36:22 UTC — event 030
+
+- **Channel:** SMS
+- **From:** Agency / system
+- **To:** Tenant
+
+Hello, this is Northbridge Lettings! Your Blocked toilet appointment is scheduled for Sunday (15/08/2026). To reschedule call 07700 900422
+
+<a id="event-031"></a>
+## 2026-08-16 04:51:40 UTC — event 031
+
+- **Channel:** Call
+- **From:** Tenant
+- **To:** Contractor
+
+The caller confirms the appointment for installing a new toilet, reassured by the agent that the service is still scheduled despite some communication from another party.
+
+<a id="event-032"></a>
+## 2026-08-18 05:36:14 UTC — event 032
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+No work results; we need to check what is happening
+
+<a id="event-033"></a>
+## 2026-08-19 03:44:05 UTC — event 033
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Please check if we need to provide a response to provider. If not, please return this request to auto mode.
+
+<a id="event-034"></a>
+## 2026-08-19 03:44:06 UTC — event 034
+
+- **Channel:** Email
+- **From:** Contractor
+- **To:** Agency / system
+
+Ava Fletcher confirms the completion of the job regarding the blocked toilet, attaches a completed image and invoice for the service. The image and invoice remain unavailable.
+
+<a id="event-035"></a>
+## 2026-08-19 07:24:30 UTC — event 035
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Task has been moved to Result
+
+<a id="event-036"></a>
+## 2026-08-19 07:24:35 UTC — event 036
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Request marked as completed, lets do the final checks
+
+<a id="event-037"></a>
+## 2026-08-19 07:25:35 UTC — event 037
+
+- **Channel:** Note
+- **From:** Agency / system
+- **To:** Not specified
+
+[Text/transcription missing from maintenance comment]
+
+<a id="event-038"></a>
+## 2026-08-19 07:26:00 UTC — event 038
+
+- **Channel:** Note
+- **From:** Agency / system
+- **To:** Not specified
+
+Skipped uploading one or more documents. **Reason provided:** Not required.
+
+<a id="event-039"></a>
+## 2026-08-19 07:27:11 UTC — event 039
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Need confirmation from landlord
+
+<a id="event-040"></a>
+## 2026-08-19 07:28:45 UTC — event 040
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+All checks have been completed; the request is now closed
+
+<a id="event-041"></a>
+## 2026-08-19 07:29:22 UTC — event 041
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Manually updated via Change Mode
+
+<a id="event-042"></a>
+## 2026-08-19 09:05:03 UTC — event 042
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Manually updated via Change Mode
+
+<a id="event-043"></a>
+## 2026-08-21 07:29:15 UTC — event 043
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Paused automatically: exceeded visit/move-out/hold deadline by 2 days (latest: 2026-08-19 07:29:12)
+
+<a id="event-044"></a>
+## 2026-08-21 10:24:30 UTC — event 044
+
+- **Channel:** Note
+- **From:** Agency / system
+- **To:** Not specified
+
+Message sent in Slack PM questions channel -
+
+Eliza Quinn [2:18 PM]
+
+MAINTENANCE REQUEST
+Request type: Blocked toilet
+Property address: Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ
+This job is showing 'All checks have been completed; the request is now closed' but it keeps coming into the dashboard. Can somebody please assist. Thank you.
+
+<a id="event-045"></a>
+## 2026-08-21 10:24:46 UTC — event 045
+
+- **Channel:** Hold
+- **From:** Agency / system
+- **To:** Not specified
+
+Put on hold by Eliza Quinn. Reason: Other. Comment: Held due to system issues.
+
+<a id="event-046"></a>
+## 2026-08-21 10:28:24 UTC — event 046
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Manually updated via Change Mode
+
+<a id="event-047"></a>
+## 2026-08-21 10:29:43 UTC — event 047
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Manually updated via Change Mode
+
+<a id="event-048"></a>
+## 2026-08-21 10:32:59 UTC — event 048
+
+- **Channel:** Note
+- **From:** Agency / system
+- **To:** Not specified
+
+Added document(s): invoice (unavailable)
+
+<a id="event-049"></a>
+## 2026-08-21 10:32:59 UTC — event 049
+
+- **Channel:** Update
+- **From:** Agency / system
+- **To:** Not specified
+
+Task has been completed by supervisor

@@ -42,6 +42,7 @@ def answer_md(r: CaseResult) -> str:
         "",
         *([ "> " + line for line in x.next_action.draft.strip().splitlines()] + [""] if x.next_action.draft.strip() else []),
         f"Performed in this run: {'yes' if x.next_action.performed else 'no (recommended)'}",
+        *([f"Follow up on **{x.next_action.follow_up_on}**: {x.next_action.follow_up_action or 'check the case again'}"] if x.next_action.follow_up_on else []),
         "",
         *(["Other defensible next actions:", _bullets(x.alternative_next_actions), ""] if x.alternative_next_actions else []),
         "## Summary",

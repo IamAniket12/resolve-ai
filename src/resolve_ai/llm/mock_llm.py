@@ -346,6 +346,10 @@ class MockLLM(LLM):
                     ch = "email" if h["input"].get("channel") == "email" else ("sms" if h["input"].get("channel") in {"sms", "whatsapp"} else "note")
                     to = h["input"].get("recipient_type", "tenant")
                 na = {"channel": ch, "to": to, "summary": f"{name.replace('_', ' ')} as the next step", "draft": str(h["input"].get("body") or h["input"].get("reason") or h["input"].get("comment") or "")[:600], "performed": True}
+                if name in {"request_landlord_approval", "send_message", "update_case_status"}:
+                    from datetime import date, timedelta
+                    na["follow_up_on"] = (date.today() + timedelta(days=3)).isoformat()
+                    na["follow_up_action"] = "chase by email and SMS; escalate to the property manager after a second silence"
                 break
         return {
             "next_action": na,

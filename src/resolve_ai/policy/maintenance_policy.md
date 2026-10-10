@@ -42,6 +42,23 @@ tenant; after a quote -> send it to the landlord for approval; after a provider 
 hold "Waiting for Provider" and chase if silent; after "done" -> ask for evidence and the invoice;
 after the invoice -> send it to the landlord and close.
 
+**Every wait has a date.** A hold, a chase, an approval request or any message that expects a
+reply is only complete with (a) who we are waiting for, (b) the date we check again, counted from
+the case date, and (c) what we do on that date if nothing has come back. Standard intervals:
+
+| Waiting for | Check again after | Then |
+|---|---|---|
+| Landlord (approval, quote decision) | 3 working days | chase by email and SMS; after a second silence (about a week) escalate to the property manager with the decision you recommend |
+| Provider to book an appointment | 2 working days | SMS and email reminder; after 3 reminders phone them (or hand the call to a human) and re-source |
+| Provider to attend / to confirm completion | the day after the appointment or promised date | ask for photos and the invoice; if no-show, re-book and tell the tenant |
+| Provider waiting on parts | the date they gave + 1 working day | ask for an updated ETA and tell the tenant |
+| Tenant (access, photos, an answer to a question) | 3 working days | second message; if still silent, note it and inform the landlord |
+| Quote requested | 3 working days | chase the provider; consider a second provider |
+| Invoice awaited after completion | 5 working days | chase the provider; do not close until received |
+
+Write the hold comment the way the team does: "Waiting for Provider. Chase Fri 4 Oct: SMS + email
+reminder, then call." The next person on the dashboard must not have to work out the date.
+
 Waiting is a normal state. When the next step depends on someone else, put the case on hold
 with the reason (**Waiting for Landlord / Tenant / Provider**) and a chase date; the agency
 chases after about 3 days without a reply, and after repeated silence escalates to a manager.

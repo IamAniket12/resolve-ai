@@ -83,14 +83,29 @@ def main() -> None:
     ap.add_argument("--events", type=int, default=3)
     ap.add_argument("--fraction", type=float)
     ap.add_argument("--only", nargs="*")
+    ap.add_argument("--random", type=int, help="pick this many cases at random")
+    ap.add_argument("--seed", type=int, default=2026)
+    ap.add_argument("--at-reply", action="store_true",
+                    help="cut right after an inbound message (landlord/tenant/contractor), at a random point, so the next event is the agency's move")
     a = ap.parse_args()
     track = Path(a.track_dir)
     out = Path(a.out_dir)
     cases = sorted(p for p in track.iterdir() if p.is_dir() and (p / "index.md").exists())
     if a.only:
         cases = [c for c in cases if c.name in set(a.only)]
+    import random
+    rng = random.Random(a.seed)
+    if a.random:
+        cases = sorted(rng.sample(cases, min(a.random, len(cases))), key=lambda p: p.name)
     for c in cases:
-        keep, n = cut_case(c, out, a.events, a.fraction)
+        events_keep = a.events
+        if a.at_reply:
+            _, evs = split_events((c / "history.md").read_text(encoding="utf-8", errors="replace"))
+            inbound = [i + 1 for i, e in enumerate(evs)
+                       if re.search(r"\*\*From:\*\* (Landlord|Tenant|Contractor|Maintenance|Provider)", e)
+                       and 3 <= i + 1 <= len(evs) - 2]
+            events_keep = rng.choice(inbound) if inbound else 3
+        keep, n = cut_case(c, out, events_keep, a.fraction)
         print(f"{c.name}: kept {keep}/{n} events")
 
 

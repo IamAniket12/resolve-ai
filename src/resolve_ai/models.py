@@ -100,6 +100,8 @@ class NextAction(BaseModel):
     summary: str = Field(description="One sentence: what the action is and why it is the right next step now.")
     draft: str = Field(default="", description="The message text, hold comment or note exactly as it would be sent or recorded. Empty for no_action.")
     performed: bool = Field(default=False, description="True if this action was carried out via a tool in this run.")
+    follow_up_on: str = Field(default="", description="Date (YYYY-MM-DD) when the agency checks this case again if nothing happens, counted from the case date. Required for every hold, chase, approval request or message that expects a reply; empty only for no_action or a closing action.")
+    follow_up_action: str = Field(default="", description="What happens on that date if there is still no reply: e.g. 'chase the landlord by email and SMS', 'phone the provider, then re-source', 'escalate to the property manager'.")
 
 
 class Resolution(BaseModel):
