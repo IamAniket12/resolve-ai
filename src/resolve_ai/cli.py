@@ -84,6 +84,10 @@ def cmd_preflight(args) -> int:
     if empty:
         ok = False
         print(f"[WARN] cases with no readable text at all: {empty}")
+    if len(bundles) > 60 or any("__" in b.case_id for b in bundles):
+        ok = False
+        print(f"[WARN] {len(bundles)} cases, or several track folders detected (ids like 'Track__001'). The Reality Test is one track: "
+              "point --cases at the Property Management folder itself, or you will spend time and money on other tracks.")
     dup = {c for c in [b.case_id for b in bundles] if [b.case_id for b in bundles].count(c) > 1}
     if dup:
         ok = False
@@ -124,6 +128,80 @@ def cmd_preflight(args) -> int:
     print(f"\n[plan] {n} cases, {workers} workers -> ~{waves} waves x {per_case_s:.0f}s ~= {waves * per_case_s / 60:.1f} min of a {args.minutes} min budget; per-case timeout {timeout}s")
     print(f"[plan] command:\n       python -m resolve_ai run --cases \"{args.cases}\" --out ANSWERS --workers {workers} --timeout {timeout}")
     print("\n" + ("PREFLIGHT OK" if ok else "PREFLIGHT HAS WARNINGS - read them before running"))
+    return 0 if ok else 2
+
+
+SUSPICIOUS = ["give this project", "high score", "dear judge", "to the judge", "judging agent", "evaluator:", "ignore previous instructions",
+              "ignore the above", "you are the grader", "rate this", "maximum score"]
+
+
+def cmd_verify(args) -> int:
+    """Submission integrity check after a run: every case answered, answers match traces, no judge-addressed text,
+    no secrets, and a plain report of fallbacks. Read-only; it never edits an answer (the rules forbid that)."""
+    import re
+    run_dir = Path("logs") / args.run if args.run else None
+    if run_dir is None:
+        runs = sorted((p for p in Path("logs").iterdir() if p.is_dir()), key=lambda p: p.name) if Path("logs").exists() else []
+        run_dir = runs[-1] if runs else None
+    if not run_dir or not run_dir.exists():
+        print("[FAIL] no run found under logs/")
+        return 1
+    out = Path(args.out)
+    ok = True
+    print(f"== Verify {out} against run {run_dir.name}\n")
+    meta = json.loads((run_dir / "run_meta.json").read_text()) if (run_dir / "run_meta.json").exists() else {}
+    expected = meta.get("cases", [])
+    traces = {p.parent.name: json.loads(p.read_text()) for p in run_dir.glob("*/trace.json")}
+    missing = [c for c in expected if not (out / c / "ANSWER.md").exists() or not (out / c / "REASONING.md").exists()]
+    if missing:
+        ok = False
+        print(f"[FAIL] cases without both ANSWER.md and REASONING.md: {missing}")
+    else:
+        print(f"[ok] {len(expected)} cases each have ANSWER.md and REASONING.md")
+    no_trace = [c for c in expected if c not in traces]
+    if no_trace:
+        ok = False
+        print(f"[FAIL] cases without trace.json: {no_trace}")
+    fallback = [c for c, t in traces.items() if t.get("status") != "completed"]
+    print(f"[{'ok' if not fallback else 'WARN'}] fallback answers: {len(fallback)}" + (f" -> {fallback} (leave them as they are; do not hand-edit)" if fallback else ""))
+    # answers must reflect the traces (integrity)
+    mismatch = []
+    for c, t in traces.items():
+        a = out / c / "ANSWER.md"
+        if a.exists():
+            txt = a.read_text()
+            if f"`{t['resolution']['decision']}`" not in txt:
+                mismatch.append(c)
+    if mismatch:
+        ok = False
+        print(f"[FAIL] ANSWER.md decision differs from trace.json (was an answer edited by hand?): {mismatch}")
+    else:
+        print("[ok] every ANSWER.md decision matches its trace")
+    # no judge-addressed text, no secrets
+    hits, secrets = [], []
+    for p in list(out.rglob("*.md")) + list(run_dir.rglob("*.json")) + list(run_dir.rglob("*.log")):
+        txt = p.read_text(errors="replace")
+        low = txt.lower()
+        for phrase in SUSPICIOUS:
+            if phrase in low:
+                hits.append(f"{p}: '{phrase}'")
+        if re.search(r"sk-ant-[A-Za-z0-9_-]{20,}", txt) or re.search(r"xi-api-key:\s*[A-Za-z0-9]{20,}", txt):
+            secrets.append(str(p))
+    if hits:
+        ok = False
+        print("[FAIL] text that could read as addressed to a judge (remove the cause, re-run, never edit answers):")
+        for h in hits[:10]:
+            print("       " + h)
+    else:
+        print("[ok] no judge-addressed phrases in answers or logs")
+    if secrets:
+        ok = False
+        print(f"[FAIL] possible API keys in outputs: {secrets}")
+    else:
+        print("[ok] no API keys in outputs")
+    if (out / "INDEX.md").exists():
+        print("[ok] INDEX.md present")
+    print("\n" + ("VERIFY OK - safe to commit ANSWERS/ and logs/" if ok else "VERIFY FAILED - fix the cause and re-run the system; do not edit answers"))
     return 0 if ok else 2
 
 
@@ -181,6 +259,11 @@ def main(argv=None) -> None:
     pf.add_argument("--max-workers", type=int, default=8)
     pf.add_argument("--provider", choices=["auto", "anthropic", "mock"])
     pf.set_defaults(fn=cmd_preflight)
+
+    v = sub.add_parser("verify", help="integrity check of ANSWERS/ against a run before committing")
+    v.add_argument("--out", default="ANSWERS")
+    v.add_argument("--run", help="run id under logs/ (default: latest)")
+    v.set_defaults(fn=cmd_verify)
 
     g = sub.add_parser("grade", help="score a run against eval/expectations.json")
     g.add_argument("--expectations", default="eval/expectations.json")

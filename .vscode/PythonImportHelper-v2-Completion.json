@@ -160,6 +160,14 @@
         "documentation": {}
     },
     {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "argparse",
         "kind": 6,
         "isExtraImport": true,
@@ -184,6 +192,14 @@
         "importPath": "re",
         "description": "re",
         "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -867,6 +883,14 @@
         "documentation": {}
     },
     {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
         "label": "load_policy",
         "importPath": "resolve_ai.config",
         "description": "resolve_ai.config",
@@ -1118,6 +1142,30 @@
         "documentation": {}
     },
     {
+        "label": "ToolError",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "build_backend",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
         "label": "ToolRegistry",
         "importPath": "resolve_ai.tools.registry",
         "description": "resolve_ai.tools.registry",
@@ -1135,6 +1183,14 @@
     },
     {
         "label": "voice",
+        "importPath": "resolve_ai.tools",
+        "description": "resolve_ai.tools",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools",
+        "documentation": {}
+    },
+    {
+        "label": "http_backend",
         "importPath": "resolve_ai.tools",
         "description": "resolve_ai.tools",
         "isExtraImport": true,
@@ -1369,6 +1425,22 @@
         "description": "resolve_ai.writer",
         "isExtraImport": true,
         "detail": "resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "BaseHTTPRequestHandler",
+        "importPath": "http.server",
+        "description": "http.server",
+        "isExtraImport": true,
+        "detail": "http.server",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPServer",
+        "importPath": "http.server",
+        "description": "http.server",
+        "isExtraImport": true,
+        "detail": "http.server",
         "documentation": {}
     },
     {
@@ -2118,6 +2190,15 @@
         "documentation": {}
     },
     {
+        "label": "cmd_verify",
+        "kind": 2,
+        "importPath": "src.resolve_ai.cli",
+        "description": "src.resolve_ai.cli",
+        "peekOfCode": "def cmd_verify(args) -> int:\n    \"\"\"Submission integrity check after a run: every case answered, answers match traces, no judge-addressed text,\n    no secrets, and a plain report of fallbacks. Read-only; it never edits an answer (the rules forbid that).\"\"\"\n    import re\n    run_dir = Path(\"logs\") / args.run if args.run else None\n    if run_dir is None:\n        runs = sorted((p for p in Path(\"logs\").iterdir() if p.is_dir()), key=lambda p: p.name) if Path(\"logs\").exists() else []\n        run_dir = runs[-1] if runs else None\n    if not run_dir or not run_dir.exists():\n        print(\"[FAIL] no run found under logs/\")",
+        "detail": "src.resolve_ai.cli",
+        "documentation": {}
+    },
+    {
         "label": "cmd_grade",
         "kind": 2,
         "importPath": "src.resolve_ai.cli",
@@ -2132,6 +2213,15 @@
         "importPath": "src.resolve_ai.cli",
         "description": "src.resolve_ai.cli",
         "peekOfCode": "def main(argv=None) -> None:\n    p = argparse.ArgumentParser(prog=\"resolve\", description=\"Resolve AI - property maintenance agent\")\n    sub = p.add_subparsers(dest=\"cmd\", required=True)\n    r = sub.add_parser(\"run\", help=\"process a folder of cases and write ANSWERS/\")\n    r.add_argument(\"--cases\", required=True)\n    r.add_argument(\"--out\", default=\"ANSWERS\")\n    r.add_argument(\"--workers\", type=int)\n    r.add_argument(\"--timeout\", type=int, help=\"seconds per case\")\n    r.add_argument(\"--provider\", choices=[\"auto\", \"anthropic\", \"mock\"])\n    r.add_argument(\"--tools\", choices=[\"mock\", \"http\"])",
+        "detail": "src.resolve_ai.cli",
+        "documentation": {}
+    },
+    {
+        "label": "SUSPICIOUS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.cli",
+        "description": "src.resolve_ai.cli",
+        "peekOfCode": "SUSPICIOUS = [\"give this project\", \"high score\", \"dear judge\", \"to the judge\", \"judging agent\", \"evaluator:\", \"ignore previous instructions\",\n              \"ignore the above\", \"you are the grader\", \"rate this\", \"maximum score\"]\ndef cmd_verify(args) -> int:\n    \"\"\"Submission integrity check after a run: every case answered, answers match traces, no judge-addressed text,\n    no secrets, and a plain report of fallbacks. Read-only; it never edits an answer (the rules forbid that).\"\"\"\n    import re\n    run_dir = Path(\"logs\") / args.run if args.run else None\n    if run_dir is None:\n        runs = sorted((p for p in Path(\"logs\").iterdir() if p.is_dir()), key=lambda p: p.name) if Path(\"logs\").exists() else []\n        run_dir = runs[-1] if runs else None",
         "detail": "src.resolve_ai.cli",
         "documentation": {}
     },
@@ -2511,6 +2601,69 @@
         "description": "src.resolve_ai.writer",
         "peekOfCode": "HUMAN_MINUTES_ESCALATED_WITH_HANDOVER = 10\ndef run_summary(results: List[CaseResult]) -> str:\n    from collections import Counter\n    n = len(results)\n    if not n:\n        return \"No cases.\\n\"\n    done = sum(1 for r in results if r.status == \"completed\")\n    dec = Counter(r.resolution.decision for r in results)\n    urg = Counter(r.resolution.urgency for r in results)\n    esc = sum(1 for r in results if r.resolution.escalation.required)",
         "detail": "src.resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "Handler",
+        "kind": 6,
+        "importPath": "tests.test_http_backend",
+        "description": "tests.test_http_backend",
+        "peekOfCode": "class Handler(BaseHTTPRequestHandler):\n    def log_message(self, *a):  # silence\n        pass\n    def _reply(self, code: int, body: dict):\n        data = json.dumps(body).encode()\n        self.send_response(code)\n        self.send_header(\"Content-Type\", \"application/json\")\n        self.send_header(\"Content-Length\", str(len(data)))\n        self.end_headers()\n        self.wfile.write(data)",
+        "detail": "tests.test_http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "server",
+        "kind": 2,
+        "importPath": "tests.test_http_backend",
+        "description": "tests.test_http_backend",
+        "peekOfCode": "def server():\n    srv = HTTPServer((\"127.0.0.1\", 0), Handler)\n    t = threading.Thread(target=srv.serve_forever, daemon=True)\n    t.start()\n    yield f\"http://127.0.0.1:{srv.server_port}\"\n    srv.shutdown()\n@pytest.fixture\ndef endpoints(tmp_path, monkeypatch):\n    f = tmp_path / \"endpoints.json\"\n    f.write_text(json.dumps({",
+        "detail": "tests.test_http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "endpoints",
+        "kind": 2,
+        "importPath": "tests.test_http_backend",
+        "description": "tests.test_http_backend",
+        "peekOfCode": "def endpoints(tmp_path, monkeypatch):\n    f = tmp_path / \"endpoints.json\"\n    f.write_text(json.dumps({\n        \"lookup_property\": {\"method\": \"GET\", \"path\": \"/properties/search\"},\n        \"check_contractor_availability\": {\"method\": \"GET\", \"path\": \"/contractors/{contractor_id}/availability\"},\n        \"create_maintenance_ticket\": {\"method\": \"POST\", \"path\": \"/tickets\"},\n        \"record_note\": {\"method\": \"POST\", \"path\": \"/tickets/{ticket_id}/notes\"},\n    }))\n    monkeypatch.setattr(http_backend, \"ENDPOINTS_FILE\", Path(f))\n    return f",
+        "detail": "tests.test_http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "test_http_tools_are_called_with_auth_placeholders_and_bodies",
+        "kind": 2,
+        "importPath": "tests.test_http_backend",
+        "description": "tests.test_http_backend",
+        "peekOfCode": "def test_http_tools_are_called_with_auth_placeholders_and_bodies(server, endpoints):\n    SEEN.clear()\n    reg = ToolRegistry(build_backend(_settings(server), \"t1\"))\n    r = reg.call(\"lookup_property\", {\"query\": \"1 Event Street\"})\n    assert r[\"found\"] and r[\"property_id\"] == \"EV-1\"\n    method, path, headers, _ = SEEN[-1]\n    assert method == \"GET\" and path == \"/properties/search?query=1+Event+Street\"\n    assert headers.get(\"Authorization\") == \"Bearer test-token\" and headers.get(\"x-api-key\") == \"test-token\"\n    t = reg.call(\"create_maintenance_ticket\", {\"property_id\": \"EV-1\", \"title\": \"Leak\", \"category\": \"plumbing\",\n                                               \"urgency\": \"urgent\", \"description\": \"d\", \"reported_by\": \"tenant\"})",
+        "detail": "tests.test_http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "test_http_errors_become_tool_errors_and_unmapped_tools_fall_back_to_mock",
+        "kind": 2,
+        "importPath": "tests.test_http_backend",
+        "description": "tests.test_http_backend",
+        "peekOfCode": "def test_http_errors_become_tool_errors_and_unmapped_tools_fall_back_to_mock(server, endpoints):\n    reg = ToolRegistry(build_backend(_settings(server), \"t2\"))\n    with pytest.raises(ToolError) as e:\n        reg.call(\"check_contractor_availability\", {\"contractor_id\": \"CON-X\", \"urgency\": \"urgent\"})\n    assert \"HTTP 504\" in str(e.value)\n    # search_contractors has no HTTP mapping -> served by the mock, so the agent is never stranded\n    r = reg.call(\"search_contractors\", {\"trade\": \"plumber\", \"postcode\": \"SE15 4QJ\", \"emergency\": False})\n    assert r[\"contractors\"]\ndef test_composite_routes_only_listed_tools(server, endpoints):\n    s = _settings(server)",
+        "detail": "tests.test_http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "test_composite_routes_only_listed_tools",
+        "kind": 2,
+        "importPath": "tests.test_http_backend",
+        "description": "tests.test_http_backend",
+        "peekOfCode": "def test_composite_routes_only_listed_tools(server, endpoints):\n    s = _settings(server)\n    s.http_tools = {\"lookup_property\"}\n    reg = ToolRegistry(build_backend(s, \"t3\"))\n    SEEN.clear()\n    reg.call(\"lookup_property\", {\"query\": \"x\"})\n    assert SEEN and SEEN[-1][1].startswith(\"/properties/search\")\n    before = len(SEEN)\n    reg.call(\"create_maintenance_ticket\", {\"property_id\": \"PROP-0042\", \"title\": \"t\", \"category\": \"c\", \"urgency\": \"routine\",\n                                           \"description\": \"d\", \"reported_by\": \"tenant\"})",
+        "detail": "tests.test_http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "SEEN",
+        "kind": 5,
+        "importPath": "tests.test_http_backend",
+        "description": "tests.test_http_backend",
+        "peekOfCode": "SEEN = []\nclass Handler(BaseHTTPRequestHandler):\n    def log_message(self, *a):  # silence\n        pass\n    def _reply(self, code: int, body: dict):\n        data = json.dumps(body).encode()\n        self.send_response(code)\n        self.send_header(\"Content-Type\", \"application/json\")\n        self.send_header(\"Content-Length\", str(len(data)))\n        self.end_headers()",
+        "detail": "tests.test_http_backend",
         "documentation": {}
     },
     {
