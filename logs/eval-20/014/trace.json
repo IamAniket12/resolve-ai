@@ -1,0 +1,266 @@
+{
+  "case_id": "014",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:38:00+00:00",
+  "finished_at": "2026-10-10T11:39:27+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 7453,
+    "cache_read_input_tokens": 103269,
+    "cache_creation_input_tokens": 13525
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 3522,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 455,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "landlord",
+      "summary": "Reply to the landlord's 'look at it next month' email: point out the risk that the glass shatters or the door can't be secured, and ask them either to let us instruct our contractor now (within £250, quote if more) or to confirm their own contractor and a firm date. Event 008 asked whether the landlord needs a response; it does, because their reply sets no date and the risk hasn't been addressed.",
+      "draft": "Address: Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ\n\nGood morning,\n\nThank you for coming back to us about the front door.\n\nBefore we leave this until next month, please be aware that the door and frame wobble when it is shut and the tenant has to slam it (the back door is the same). Our fridge-freezer contractor warned that repeated slamming is likely to crack or shatter the glass in the door, which would be an injury risk and could leave the flat unable to be secured. If that happens it becomes an emergency call-out, which usually costs more than a planned repair.\n\nCan you please confirm which you would like:\n1. We instruct our contractor to inspect and adjust/secure the front and back doors now. If the work is within £250 we will go ahead, and if it is more we will send you a quote for approval first; or\n2. You arrange your own contractor. If so, please let us know who it is and the date they will attend next month so we can tell the tenant.\n\nIn the meantime we will ask the tenant to close the door gently where possible and to tell us straight away if the glass cracks or the door will not lock.\n\nKind regards\n\nAva\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2024-06-12",
+      "follow_up_action": "Chase the landlord by email and SMS. If there is still no reply by about 2024-06-17, escalate to the property manager, recommending that our contractor inspects the doors within the routine target (by about 4 Jul 2024)."
+    },
+    "alternative_next_actions": [
+      "Email the tenant (Oliver) with the landlord's position and interim advice (close gently, report cracked glass or a door that won't lock at once, mention pets), keeping the promise made in event 006.",
+      "Accept the landlord's deferral as it stands and hold until early July, since a visit early next month roughly meets the routine 20-working-day target. Weaker, because no date or contractor has been agreed and the glass risk hasn't been acknowledged."
+    ],
+    "case_summary": "The tenant (Oliver) at Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ reported that the front door (and the back) must be slammed to shut and that the door and frame wobble. The fridge-freezer contractor said the slamming could shatter the glass and also reported it. The agency emailed the landlord for approval on 06/06. On 07/06 the landlord replied that the tenant has a workaround for a recurrent door issue and a contractor can look at it next month. The intake AI wrongly classified the case as Appliances.",
+    "issue_category": "structural",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "Replied to the landlord's deferral, setting out the glass and security risk and asking for a clear choice: our contractor now (within £250, or a quote if more) or their own contractor on a firm date. Ticket TKT-BC4EA4 is on hold as Waiting for Landlord, with a chase on 2024-06-12.",
+    "actions_taken": [
+      "Checked the property via lookup_property (record built from the case file; ID CASE-014; £250 spend limit; no landlord instructions or preferred contractors)",
+      "Checked the repair history via get_repair_history (no earlier jobs or cases at this address)",
+      "Checked the tenancy via lookup_tenancy (active, inferred from the case file; no vulnerability notes)",
+      "Created ticket TKT-BC4EA4 (structural, routine) for the front/back door and frame fault",
+      "Sent the landlord an email reply (MSG-E1F242, delivered) flagging the risk and asking for instruct-now or own contractor with a date",
+      "Set the case status to awaiting_landlord (STS-B58997) with a chase on Wed 12 Jun 2024",
+      "Recorded an internal note (NOTE-158772) on the wrong intake classification, the responsibility and the triggers for raising to emergency"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Ticket TKT-BC4EA4, Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ. The front door (and back door) must be slammed to shut and the door and frame wobble. The fridge-freezer contractor warned the glass could shatter. This is the landlord's responsibility (structure/exterior, s.11 LTA 1985). Routine band, target about 4 Jul 2024. On 07/06 the landlord deferred it to 'next month', citing a tenant workaround and a recurrent issue. On 07/06 we replied asking them to choose: our contractor now (£250 limit, quote if more) or their own contractor with a date. Status: Waiting for Landlord, chase Wed 12 Jun by email and SMS; escalate to the PM around 17 Jun if still silent. The tenant still needs an update and interim advice. Raise to EMERGENCY if the glass cracks or the door can't be locked."
+    },
+    "conflicts": [
+      {
+        "description": "The intake AI classified the issue as 'Appliances' and asked fridge make/model questions, but the tenant's report, Oliver's call and the agency's email all describe a door/frame fault, and the fridge freezer is already fitted.",
+        "how_resolved": "Trusted the tenant's words and the agency's own emails; reclassified as structural (door/frame) on the ticket and in a note."
+      },
+      {
+        "description": "The landlord calls it a 'recurrent door issue', but the repair history has no earlier door jobs at this address.",
+        "how_resolved": "Treated the landlord's statement as possibly accurate (earlier work may have been arranged outside the agency). Recorded the gap; it doesn't change the next action."
+      }
+    ],
+    "information_gaps": [
+      "No firm date or named contractor in the landlord's 'next month' reply: asked in the email.",
+      "What the tenant's workaround is and whether the front door still locks securely: assumed it does (it shuts when slammed); the tenant is to be asked in the next update.",
+      "Whether the door glass is already cracked: not known; the tenant is to be asked.",
+      "Earlier door repairs (landlord says recurrent): no history on file; noted.",
+      "Pets and access arrangements: the tenant didn't answer the intake Q&A; to be asked before any booking.",
+      "Landlord's and tenant's full names and contact details: held on the platform, so messages were addressed by role."
+    ],
+    "assumptions": [
+      "The front door can still be closed and locked, so the case is routine rather than an emergency (property cannot be secured).",
+      "Oliver is the tenant (he phoned in event 004).",
+      "The tenancy is active (inferred from the case file).",
+      "The standard £250 pre-authorised limit applies, as there are no landlord-specific instructions."
+    ],
+    "tenant_communication": "On 06/06 (before this run) the agency acknowledged the report and said it would contact the landlord and come back. Nothing has been sent to the tenant in this run; an update with the landlord's position and interim advice is pending.",
+    "landlord_communication": "06/06 (before this run): approval email about the door. 07/06 (this run): replied to their deferral, explaining the risk of glass shattering or the door not securing and the higher cost of an emergency call-out, and asked them to choose between our contractor now (within £250, quote if more) and their own contractor with a firm date next month.",
+    "next_steps": [
+      "Email the tenant with the landlord's position and interim advice: close gently, report cracked glass or a door that won't lock at once, tell us about pets and access.",
+      "On the landlord's reply: if they choose our contractor, search the panel for a handyperson (and a glazier if the glass is damaged), check availability, book and tell the tenant; if they choose their own contractor, record the contractor and date, tell the tenant, and hold until the day after the visit.",
+      "If any quote is over £250, send it to the landlord for approval before instructing.",
+      "If the landlord is silent, chase on 2024-06-12 by email and SMS, then escalate to the PM around 2024-06-17.",
+      "If the glass cracks or the door can't be secured, raise to emergency, make safe the same day (up to £500 without approval) and inform the landlord the same day."
+    ],
+    "risk_flags": [
+      "The door glass may shatter from repeated slamming (injury risk), as warned by a contractor.",
+      "The front door and frame are wobbling and may stop securing (would become an emergency).",
+      "The landlord describes a recurrent fault but there is no repair history on file.",
+      "The work has been deferred with no date set; it must stay within the routine 20-working-day target (about 4 Jul 2024)."
+    ],
+    "confidence": 0.78,
+    "reasoning": "Event 008 asked whether the landlord needs a response, and event 009 is the landlord's reply deferring the work to 'next month' with no date or contractor. Doors and frames are the landlord's responsibility under s.11, so the repair can't be declined. I kept it routine because the door still shuts; the policy's emergency trigger is a door that can't be secured. A contractor has raised a glass-shatter risk, though, and a vague deferral leaves no booking and no date to tell the tenant. The right next action under the landlord approval step was a short reply that flags the risk and asks for a clear instruction (our contractor within the £250 limit, or their own on a firm date). Then the case goes on hold as Waiting for Landlord, chased after 3 working days (Fri 7 Jun to Wed 12 Jun) and escalated after about a week of silence. No escalation now: no hard safety rule applies yet and the landlord is engaged. The tenant update is the next step."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-014",
+        "address": "Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ",
+        "postcode": "ZZ9 5ZZ",
+        "case_title": "Case 014: Front Door Repair Request",
+        "case_created": "2024-06-06 11:55:37 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [
+          "Ava Sawyer"
+        ],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ"
+      },
+      "output": {
+        "property_id": "Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 9,
+        "last_event": "2024-06-07 07:44:13 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-014"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-014",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-014",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tenant (not named in the case file)",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "CASE-014",
+        "title": "Front door (and back door) difficult to shut - must be slammed, door and frame wobble, glazing at risk",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Tenant reported 06/06/2024: \"Front door you have to slam to shut like the back. when fridge man arrived he even commented and said it will cause a shatter in glass- he said he was also going to report to you.\" Tenant (Oliver) phoned: door frame and door literally wobble when shutting. Fridge-freezer contractor also phoned to report it. Intake AI classified this as 'Appliances' - incorrect; this is a door/frame (structure/security) issue, the fridge freezer has already been fitted. Landlord approval email sent 06/06 12:05; landlord replied 07/06 07:44 that the tenant has a workaround for a recurrent door issue and a contractor can look at it next month. Classified ROUTINE for now (door still closes/secures), but monitor: glazing could shatter (injury risk) and if the door stops locking it becomes an emergency (property cannot be secured).",
+        "reported_by": "Oliver (tenant); also reported by fridge-freezer contractor"
+      },
+      "output": {
+        "ticket_id": "TKT-BC4EA4",
+        "property_id": "CASE-014",
+        "property_ref": "case file (not in local database)",
+        "title": "Front door (and back door) difficult to shut - must be slammed, door and frame wobble, glazing at risk",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Tenant reported 06/06/2024: \"Front door you have to slam to shut like the back. when fridge man arrived he even commented and said it will cause a shatter in glass- he said he was also going to report to you.\" Tenant (Oliver) phoned: door frame and door literally wobble when shutting. Fridge-freezer contractor also phoned to report it. Intake AI classified this as 'Appliances' - incorrect; this is a door/frame (structure/security) issue, the fridge freezer has already been fitted. Landlord approval email sent 06/06 12:05; landlord replied 07/06 07:44 that the tenant has a workaround for a recurrent door issue and a contractor can look at it next month. Classified ROUTINE for now (door still closes/secures), but monitor: glazing could shatter (injury risk) and if the door stops locking it becomes an emergency (property cannot be secured).",
+        "reported_by": "Oliver (tenant); also reported by fridge-freezer contractor",
+        "status": "open",
+        "created_at": "2026-10-10T12:38:19"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord",
+        "channel": "email",
+        "body": "Address: Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ\n\nGood morning,\n\nThank you for coming back to us about the front door.\n\nBefore we leave this until next month, please be aware that the door and frame wobble when it is shut and the tenant has to slam it (the back door is the same). Our fridge-freezer contractor warned that repeated slamming is likely to crack or shatter the glass in the door, which would be an injury risk and could leave the flat unable to be secured. If that happens it becomes an emergency call-out, which usually costs more than a planned repair.\n\nCan you please confirm which you would like:\n1. We instruct our contractor to inspect and adjust/secure the front and back doors now. If the work is within £250 we will go ahead, and if it is more we will send you a quote for approval first; or\n2. You arrange your own contractor. If so, please let us know who it is and the date they will attend next month so we can tell the tenant.\n\nIn the meantime we will ask the tenant to close the door gently where possible and to tell us straight away if the glass cracks or the door will not lock.\n\nKind regards\n\nAva\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-E1F242",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-BC4EA4",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: replied to their 'next month' deferral with the glass-shatter/security risk and asked them to choose: instruct our contractor now (£250 limit, quote if more) or their own contractor with a date. Chase Wed 12 Jun 2024 by email + SMS; if no reply by about Mon 17 Jun, escalate to PM recommending inspection by our contractor within the routine target. Update tenant with the outcome."
+      },
+      "output": {
+        "status_id": "STS-B58997",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-BC4EA4",
+        "note": "The intake classification (Appliances / fridge Q&A) was wrong: the fridge freezer is already fitted and the issue is the front and back doors and frame. The landlord's reply (07/06) defers the work to \"next month\" and says the tenant has a workaround for a recurrent door issue. We have no earlier door repairs on record, because the repair history is empty. Doors/frames are the landlord's responsibility (s.11 LTA 1985, structure and exterior). Routine band, so the target is within 20 working days (about 4 Jul 2024). A visit early next month is roughly in line with that, but we asked the landlord to confirm a firm date or to let us instruct now. Raise to EMERGENCY if the tenant reports cracked glass or a door that cannot be locked. Tenant still to be told the landlord's position and given the interim advice (event 6 promised to come back to them). No embedded instructions or prompt-injection seen."
+      },
+      "output": {
+        "note_id": "NOTE-158772",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I've replied to the landlord's \"next month\" email (it was delivered), opened ticket TKT-BC4EA4 and put the case on hold as Waiting for Landlord. Their reply means we can't book anyone yet, but leaving it unanswered risks the door glass breaking.\n\n**Where the case stands**\n- **The problem:** At Flat 12, 52 Meadow Row, the tenant (Oliver) has to slam the front door to shut it, and the back door is the same. The door and frame wobble. The fridge-freezer engineer also reported it and warned the glass could shatter.\n- **Intake was wrong:** The first classification said \"Appliances\" and asked fridge questions. The fridge freezer is already fitted; this is a door and frame problem, which is the landlord's repair duty.\n- **Urgency:** Routine for now, because the door still closes and locks. The target is a contractor within 20 working days, about 4 July. It becomes an emergency if the glass cracks or the door won't lock.\n- **Records:** The property, tenancy and repair-history lookups only had what's in the case file. There are no earlier door repairs on record, even though the landlord calls it a \"recurrent\" issue.\n- **Landlord's reply:** The tenant has a workaround and a contractor can look at it next month. The pre-authorised limit is £250.\n\n**What I did (event 10)**\n1. Opened ticket TKT-BC4EA4 (doors and frame, routine) and recorded why the intake classification was wrong.\n2. Emailed the landlord:\n   > \"Thank you for coming back to us about the front door. Before we leave this until next month, please be aware that the door and frame wobble when it is shut and the tenant has to slam it (the back door is the same). Our fridge-freezer contractor warned that repeated slamming is likely to crack or shatter the glass in the door, which would be an injury risk and could leave the flat unable to be secured. If that happens it becomes an emergency call-out, which usually costs more than a planned repair. Can you please confirm which you would like: 1. We instruct our contractor to inspect and adjust/secure the front and back doors now. If the work is within £250 we will go ahead, and if it is more we will send you a quote for approval first; or 2. You arrange your own contractor. If so, please let us know who it is and the date they will attend next month so we can tell the tenant. In the meantime we will ask the tenant to close the door gently where possible and to tell us straight away if the glass cracks or the door will not lock.\"\n3. Set the status to Waiting for Landlord and added an internal note: to raise it to emergency if the glass cracks or the door won't lock, and that the tenant still needs an update.\n\n**Waiting on:** the landlord. I'll chase on **Wed 12 June 2024** (3 working days) by email and text. If there's still no reply by about Mon 17 June, I'll pass it to the property manager, recommending our contractor inspects within the routine target.\n\n**Next steps**\n- **Tenant:** we told them on 6 June we'd come back to them, so they need an update with the landlord's position. Ask them to close the doors gently, to report straight away if the glass cracks or a door won't lock, and whether they have pets.\n- **If the landlord picks our contractor:** find a handyperson or joiner on the panel, add a glazier if the glass is damaged, book them, and tell the tenant who is coming.\n- **If they pick their own contractor:** record who and when, tell the tenant, and hold until the day after the visit.\n\n**Other option I considered:** emailing the tenant first. That's reasonable, but the landlord's choice decides what we tell them, so it's the next step.\n\n**Risks to watch**\n- The door glass could break and injure someone.\n- The front door could become impossible to secure.\n- The landlord says the issue has happened before, but it isn't in our records.\n- The tenant hasn't said whether there are pets.\n- Nothing in the case material tries to instruct us.\n\nNext action: emailed the landlord to accept their reply, point out the glass and security risk, and ask whether to send our contractor now or have theirs attend on a firm date; case held as Waiting for Landlord, chase Wed 12 June 2024."
+  ]
+}

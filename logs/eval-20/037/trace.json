@@ -1,0 +1,370 @@
+{
+  "case_id": "037",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:38:36+00:00",
+  "finished_at": "2026-10-10T11:39:56+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 7862,
+    "cache_read_input_tokens": 114030,
+    "cache_creation_input_tokens": 18709
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 6593,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 354,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "contractor",
+      "summary": "Beacon Utilities has had three reminders and still has not booked, and the policy phone call could not be placed, so a direct email asks for the appointment date, what today's six-digit-code call to the tenant was, and a reply by Thu 4 Apr or the job goes to another contractor.",
+      "draft": "Dear Beacon Utilities,\n\nRe: Shower Repair Request – Flat 14, 44 Lantern Quay, Alderwick, ZZ9 8ZZ (instructed 27 March 2024)\n\nWe have now sent three reminders (28 March, 30 March and 2 April) and have not yet received confirmation of an appointment for this job. The landlord has approved replacement of the damaged, leaking shower hose.\n\nWe understand a call from your side reached the tenant today asking her to enter a six-digit code. Please confirm:\n1. Whether an appointment has been booked with the tenant, and if so the date and time.\n2. What that automated call / six-digit code was for, so we can reassure the tenant it was genuine.\n3. If not yet booked, the earliest date you can attend – we need this job completed by Monday 8 April.\n\nPlease reply by end of day tomorrow (Thursday 4 April). If we do not hear from you by then, we will need to re-allocate the job to another provider.\n\nAfter completion, please send photos of the replaced hose and your invoice.\n\nKind regards,\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2024-04-04",
+      "follow_up_action": "If Beacon has not given an appointment date, a human phones Beacon Utilities. If that doesn't settle it, give the job to the next plumber on the panel (Oakfield Homes, then Henry Quinn or Meadow Solutions), email the tenant who is coming and remind her to mention pets, and update the landlord."
+    },
+    "alternative_next_actions": [
+      "Message Eliza Oakley (tenant) to ask whether Beacon has arranged a visit, and tell her to check the six-digit-code call really is from Beacon before entering anything.",
+      "Pass the phone call to the property manager now and find another contractor at once, since three reminders have gone unanswered.",
+      "Add only the status update '3+ reminders have been sent to provider. Please check what's happening.' and leave the next step to a human."
+    ],
+    "case_summary": "Tenant Eliza Oakley at Flat 14, 44 Lantern Quay, Alderwick, ZZ9 8ZZ reported on 26 Mar that the shower cable leading to the shower handle is damaged and leaking. Landlord Freya asked on 27 Mar for the shower hose to be replaced, and Beacon Utilities was given the job the same day. Reminders went to Beacon on 28 Mar, 30 Mar and 2 Apr with no booking confirmed. On 3 Apr a call from the contractor's side asked the tenant to enter a six-digit code, which does not confirm an appointment.",
+    "issue_category": "plumbing/leak (shower hose)",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "Beacon Utilities was emailed directly to confirm an appointment or give up the job by Thu 4 Apr. The case is on hold as Waiting for Provider, with a check on 4 Apr and a plan to phone them and find another contractor if they stay silent.",
+    "actions_taken": [
+      "Looked up the property: record built from the case file (CASE-037). Landlord Freya, spend limit £250, preferred contractor Beacon Utilities.",
+      "Searched plumbers for ZZ9 8ZZ: Beacon Utilities (already on this case) plus Oakfield Homes, Henry Quinn, Meadow Solutions and others. No phone numbers on file.",
+      "Looked up the tenancy: active, tenant Eliza Oakley, no vulnerability notes.",
+      "Checked repair history: no previous jobs or other cases at this address.",
+      "Emailed Beacon Utilities (MSG-B57F08, delivered) asking for the appointment date, what the six-digit-code call was, and a reply by 4 Apr, with the job to be done by 8 Apr.",
+      "Set case status to awaiting_provider (STS-8AE39C) with a chase on Thu 4 Apr and the plan to phone and find another contractor.",
+      "Saved an internal note (NOTE-444D9F) with the timeline, the call that wasn't placed and the risk flags."
+    ],
+    "failed_actions": [
+      "place_call to Beacon Utilities: status not_placed (mode simulated, voice calling not enabled, no phone number on file). Nobody was reached and nothing was confirmed. Emailed Beacon instead, and noted that a human must make the call if Beacon is still silent on 4 Apr."
+    ],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Shower hose replacement at Flat 14, 44 Lantern Quay, ZZ9 8ZZ, approved by landlord Freya on 27 Mar (within the £250 limit). Beacon Utilities got the job on 27 Mar and was reminded on 28 Mar, 30 Mar and 2 Apr with no booking. On 3 Apr their side called the tenant asking her to enter a six-digit code, so it is not confirmed the call was genuine. The phone call to Beacon could not be placed. A direct email (MSG-B57F08) asks for a reply by Thu 4 Apr. Blocked on: Beacon confirming a date. Recommended on 4 Apr if still silent: a person phones Beacon. If that doesn't settle it, give the job to Oakfield Homes, Henry Quinn or Meadow Solutions, email the tenant the new plan with a reminder to mention pets, and tell the landlord. Check with the tenant whether the code call was genuine."
+    },
+    "conflicts": [
+      {
+        "description": "The tenant described a damaged 'shower cable leading to the shower handle'. The landlord and the updated job description treat it as the shower hose.",
+        "how_resolved": "Went with the landlord's reading (hose), which fits a leak at the handle. If the contractor finds an electric shower with water reaching the wiring, it becomes an electrical emergency."
+      },
+      {
+        "description": "Event 15 shows contact from the contractor's side (an automated call asking the tenant for a six-digit code), but no appointment has been confirmed to the agency.",
+        "how_resolved": "Not treated as a booking. Asked Beacon directly what the call was and to confirm any appointment."
+      }
+    ],
+    "information_gaps": [
+      "Whether Beacon has actually booked an appointment: asked Beacon by email.",
+      "What the six-digit-code call was and whether it was genuine: asked Beacon. Not yet raised with the tenant.",
+      "Photos the tenant was asked for on 27 Mar were never received: not blocking, since the landlord has already approved the replacement.",
+      "No phone numbers for Beacon or the tenant: messages go through the platform contact records, and any call is for a human to make."
+    ],
+    "assumptions": [
+      "The job is routine-to-urgent plumbing: a contained leak at the shower hose, with no electrical hazard reported.",
+      "Replacing the hose costs less than the £250 pre-authorised limit, and the landlord has approved it anyway.",
+      "The tenancy is active and there are no vulnerable occupants (none recorded)."
+    ],
+    "tenant_communication": "Nothing new from this run. Earlier the tenant was asked for photos (27 Mar) and told that Beacon Utilities would contact her (27 Mar).",
+    "landlord_communication": "Nothing new from this run. The landlord approved the hose replacement on 27 Mar. They will be updated if the contractor changes or the job is completed.",
+    "next_steps": [
+      "Thu 4 Apr: check for Beacon's reply. If there is a date, email and SMS the tenant to confirm the appointment and set the completion check for the day after the visit.",
+      "If Beacon is still silent: a human phones Beacon, then gives the job to Oakfield Homes, Henry Quinn or Meadow Solutions and tells the tenant and landlord.",
+      "After the visit: get photos and the invoice, check the invoice is within £250, then close."
+    ],
+    "risk_flags": [
+      "Six-digit-code call to the tenant has not been verified and could be a scam. The tenant should not share codes until we know the call is genuine.",
+      "If it is an electric shower, water near its electrics would make this an electrical emergency.",
+      "The contractor has not responded after three reminders and the job is ahead of schedule risk."
+    ],
+    "confidence": 0.72,
+    "reasoning": "Landlord approval is done and a contractor is assigned, so the case is at the waiting-for-provider stage. Policy says that after three reminders with no booking we phone the provider, then find another one. The call could not be placed, so the next best written step is a direct email to Beacon with a firm deadline, plus a hold dated two working days or less ahead. The contractor's call to the tenant shows they may be engaging, so moving the job straight away would be premature, and it is too early to escalate."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 14, 44 Lantern Quay, Alderwick, ZZ9 8ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-037",
+        "address": "Flat 14, 44 Lantern Quay, Alderwick, ZZ9 8ZZ",
+        "postcode": "ZZ9 8ZZ",
+        "case_title": "Case 037: Shower Repair Request",
+        "case_created": "2024-03-26 06:23:04 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "Freya",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Beacon Utilities"
+        ],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "search_contractors",
+      "input": {
+        "trade": "plumber",
+        "postcode": "ZZ9 8ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "plumber",
+        "postcode": "ZZ9 8ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "NAMED-1",
+            "name": "Beacon Utilities",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "named in this case file",
+            "note": "Already involved in this case: prefer for continuity, warranty or an open quote. Contact via platform record."
+          },
+          {
+            "contractor_id": "BATCH-1",
+            "name": "Oakfield Homes",
+            "trades": [
+              "appliance_engineer",
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 2 other case(s) in this batch"
+          },
+          {
+            "contractor_id": "BATCH-6",
+            "name": "Henry Quinn",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          },
+          {
+            "contractor_id": "BATCH-7",
+            "name": "Meadow Solutions",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          },
+          {
+            "contractor_id": "BATCH-8",
+            "name": "maintenance provider",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          },
+          {
+            "contractor_id": "BATCH-9",
+            "name": "Oliver",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          }
+        ],
+        "note": "Contractors already named in this case come first; then ones the agency used in other cases; then the panel."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-037"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-037",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-037",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Eliza Oakley",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record (address messages by name)"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "CASE-037"
+      },
+      "output": {
+        "property_id": "CASE-037",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 15,
+        "last_event": "2024-04-03 12:17:31 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "place_call",
+      "input": {
+        "to_role": "contractor",
+        "phone": "Beacon Utilities",
+        "purpose": "Provider has not confirmed an appointment after 3 reminders (28 Mar, 30 Mar, 2 Apr) for the shower hose replacement at Flat 14, 44 Lantern Quay, Alderwick, ZZ9 8ZZ. Their system called the tenant today asking her to enter a six-digit code; need to establish whether an appointment is booked.",
+        "talking_points": "- Calling from Northbridge Lettings about the Shower Repair Request at Flat 14, 44 Lantern Quay, Alderwick, ZZ9 8ZZ (instructed 27 Mar; landlord approved replacement of the shower hose, within £250 pre-authorised limit).\n- We have sent 3 reminders with no reply. Is an appointment booked with the tenant (Eliza Oakley)? If yes, get the date and time.\n- Today (3 Apr ~12:17) the tenant received a call from your number asking her to input a six-digit code. Was that your automated booking/confirmation system? What is the code for and how should she respond?\n- If not yet booked: can you attend within 3 working days (by Mon 8 Apr)? If you cannot take the job, please say so now so we can re-allocate.\n- Remind: job is a like-for-like shower hose replacement; reply to the job email with the appointment date and, after completion, photos and the invoice."
+      },
+      "output": {
+        "status": "not_placed",
+        "mode": "simulated",
+        "to_role": "contractor",
+        "phone": "Beacon Utilities",
+        "purpose": "Provider has not confirmed an appointment after 3 reminders (28 Mar, 30 Mar, 2 Apr) for the shower hose replacement at Flat 14, 44 Lantern Quay, Alderwick, ZZ9 8ZZ. Their system called the tenant today asking her to enter a six-digit code; need to establish whether an appointment is booked.",
+        "transcript_summary": "",
+        "note": "No live call was placed: voice calling is not enabled in this environment. Nobody was reached, nothing was confirmed and no commitment exists. Use send_message to reach this person, and if a live conversation is essential, record in the handover that a human must make the call."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Beacon Utilities",
+        "channel": "email",
+        "body": "Dear Beacon Utilities,\n\nRe: Shower Repair Request – Flat 14, 44 Lantern Quay, Alderwick, ZZ9 8ZZ (instructed 27 March 2024)\n\nWe have now sent three reminders (28 March, 30 March and 2 April) and have not yet received confirmation of an appointment for this job. The landlord has approved replacement of the damaged, leaking shower hose.\n\nWe understand a call from your side reached the tenant today asking her to enter a six-digit code. Please confirm:\n1. Whether an appointment has been booked with the tenant, and if so the date and time.\n2. What that automated call / six-digit code was for, so we can reassure the tenant it was genuine.\n3. If not yet booked, the earliest date you can attend – we need this job completed by Monday 8 April.\n\nPlease reply by end of day tomorrow (Thursday 4 April). If we do not hear from you by then, we will need to re-allocate the job to another provider.\n\nAfter completion, please send photos of the replaced hose and your invoice.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-B57F08",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "CASE-037",
+        "status": "awaiting_provider",
+        "comment": "Waiting for Provider. 3+ reminders sent to Beacon Utilities, no booking confirmed; direct email sent 3 Apr (call could not be placed). Check Thu 4 Apr: if no appointment date, human to phone Beacon and re-source (Oakfield Homes / Henry Quinn / Meadow Solutions), then tell tenant the new plan."
+      },
+      "output": {
+        "status_id": "STS-8AE39C",
+        "status": "awaiting_provider",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "CASE-037",
+        "note": "3 Apr 12:17 review. Landlord Freya approved shower hose replacement 27 Mar (within £250 limit). Beacon Utilities instructed 27 Mar; reminders 28 Mar, 30 Mar, 2 Apr, no reply/booking. Event 15: call from contractor side to tenant asking her to input a six-digit code – no appointment confirmed by it; unclear if genuine automated booking system or something else (risk flag: tenant should not share codes unless verified as Beacon). Attempted place_call to Beacon: NOT placed (voice disabled, simulated) – nobody reached, nothing confirmed; no phone number on file. Sent direct email to Beacon (MSG-B57F08) asking for appointment date, explanation of code call, deadline reply Thu 4 Apr, completion by Mon 8 Apr. Triage: routine/urgent-boundary plumbing (contained leak at shower hose); 'cable' interpreted by landlord as hose – if it turns out to be an electric shower with water reaching electrics, upgrade to electrical emergency. No vulnerability noted. Tenant photos requested 27 Mar never received."
+      },
+      "output": {
+        "note_id": "NOTE-444D9F",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Beacon Utilities still hasn't booked the shower hose job after three reminders. I tried to phone them but the call didn't go through, so I emailed them directly and put the case on hold until tomorrow.\n\n**Where the case stood at event 15:** Freya (landlord) approved replacing the shower hose on 27 Mar. That's within the £250 pre-authorised limit. Beacon Utilities was told about the job the same day. We sent reminders on 28 Mar, 30 Mar and 2 Apr and got no reply and no booking. Event 15 is a call from Beacon's side to the tenant, Eliza Oakley, asking her to enter a six-digit code. That doesn't confirm an appointment, and it isn't clear the call was genuine. Policy after three reminders is to phone the contractor, then find another one if needed.\n\n**What I did:**\n- **Phone call to Beacon:** this was not placed. Voice calls aren't enabled here, and there's no phone number on file. Nobody was reached and nothing was confirmed.\n- **Email to Beacon:** I emailed them instead and it was delivered (MSG-B57F08). It asks:\n  1. whether an appointment is booked with the tenant, and the date and time;\n  2. what today's six-digit-code call was for;\n  3. if not booked, their earliest date, because we need the job done by Mon 8 Apr.\n\n  It asks for a reply by end of day Thu 4 Apr and says we'll give the job to another contractor if they don't reply. It also asks for photos of the new hose and the invoice once the work is done.\n- **Case status:** set to Waiting for Provider. The comment reads: \"3+ reminders sent to Beacon Utilities, no booking confirmed; direct email sent 3 Apr (call could not be placed). Check Thu 4 Apr: if no appointment date, human to phone Beacon and re-source (Oakfield Homes / Henry Quinn / Meadow Solutions), then tell tenant the new plan.\"\n- **Internal note:** saved (NOTE-444D9F) with the full timeline, the failed call and the risks below.\n\n**Risks to watch:**\n- **Six-digit code call:** it may not have been Beacon. The tenant shouldn't give out codes until we know the call was genuine.\n- **\"Cable\" vs \"hose\":** Freya read the tenant's \"shower cable\" as the hose. If it turns out to be an electric shower and water is reaching the wiring, this becomes an electrical emergency.\n- **Tenant photos:** we asked for them on 27 Mar and never received any.\n- **Vulnerability:** none recorded.\n\n**Follow-up on Thu 4 Apr:** if Beacon hasn't given a date, someone needs to phone them. If that call doesn't settle it, give the job to Oakfield Homes, Henry Quinn or Meadow Solutions. Then email Eliza with who is coming and remind her to mention any pets. Freya only needs an update if the contractor changes.\n\n**Other options I didn't take:**\n- Message Eliza to ask whether Beacon has arranged a visit, and to check the code call is from them before she enters anything.\n- Pass the phone call to the property manager now rather than waiting until tomorrow.\n\nNext action (event 16): direct email to Beacon Utilities after three unanswered reminders, asking for the appointment date and what the six-digit-code call was, reply due Thu 4 Apr; case on hold as Waiting for Provider until then."
+  ]
+}

@@ -64,7 +64,7 @@ def main() -> None:
             rch = CH.get(real_n1["ch"].strip().lower(), real_n1["ch"].lower())
             rto = role(real_n1["to"]) if real_n1["ch"] in {"Email", "SMS", "Call"} else "agency"
             ch_ok = (na.get("channel") == rch) or (rch == "hold" and na.get("channel") in {"hold", "status_update"}) or (rch == "note" and na.get("channel") in {"note", "status_update"})
-            to_ok = (na.get("to") == rto) or (rto == "agency" and na.get("to") in {"agency", "none"})
+            to_ok = (na.get("to") == rto) or (rto == "agency" and na.get("to") in {"agency", "none"}) or (rch == "hold" and ch_ok)  # a hold's "to" is who we wait for
             n1_channel += ch_ok; n1_to += to_ok
             print(f"   n+1 agent: {na.get('channel')} → {na.get('to')} | real: {real_n1['ch']} → {real_n1['to']} :: {re.sub(r'\s+', ' ', real_n1['body'])[:110]}  [{'ch ok' if ch_ok else 'ch X'} / {'to ok' if to_ok else 'to X'}]")
         print(f"== {cid}: agent {r['decision']} / status {st.get('status', '-')} | contacted {sorted(agent_parties)} | real next contacted {sorted(real_parties)} | overlap {sorted(overlap)}")

@@ -1,0 +1,18 @@
+# Case 005: Check-Out Cleaning
+
+## Case details
+
+- **Source role:** Agency manager
+- **Created:** 2024-11-02 13:58:25 UTC
+- **Property:** Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ
+
+## Initial request
+
+Following the tenant vacating please provide an estimate to; 
+1) Clean property through out as per check out to include all appliances, freezer defrost  and a carpet clean in bedroom two.
+
+## Attachments
+
+- [attachment-01-check-out-inspection-report.pdf](attachments/attachment-01-check-out-inspection-report.pdf)
+- [attachment-02-cleaning-quote.pdf](attachments/attachment-02-cleaning-quote.pdf)
+- [attachment-03-cleaning-quote.pdf](attachments/attachment-03-cleaning-quote.pdf)

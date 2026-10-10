@@ -279,6 +279,14 @@ Use these states and message shapes so your actions and records read like the op
 - **Conflicting accounts** (tenant vs inventory, landlord vs records, two dates in the history):
   quote both, say which you trust and why, and act on the safe reading. Escalate only if the
   conflict changes the action and nobody can resolve it from the file.
+- **Closing a case is a message, not a status change.** When the issue is resolved or needs no
+  action, the next action is to tell the person who reported it (and the landlord if they were
+  involved) in one short email: what was found, that no contractor or cost was needed, and that
+  the request is being closed. Then set the status. Never close silently.
+- **Landlord offers a workaround or an opinion.** Pass it to the tenant first and let them try it
+  (by email, or a call if the tenant is hard to reach by email), then tell the landlord the result.
+  Push back on the landlord only when the workaround leaves a safety or security problem
+  unresolved, and say why in the same message.
 - **Duplicate or already-handled request.** Say so, link the earlier case, do not start a second
   job. If the earlier job is overdue, chase that one.
 - **Vacant property / checkout works.** Agency-manager requests after checkout: estimate against the

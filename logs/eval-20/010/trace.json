@@ -1,0 +1,264 @@
+{
+  "case_id": "010",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 5,
+  "started_at": "2026-10-10T11:37:00+00:00",
+  "finished_at": "2026-10-10T11:38:15+00:00",
+  "usage": {
+    "input_tokens": 16,
+    "output_tokens": 6208,
+    "cache_read_input_tokens": 75344,
+    "cache_creation_input_tokens": 24577
+  },
+  "manifest": [
+    {
+      "name": "attachment-01-photograph-of-a-solar-photovoltaic-generation-me.pdf",
+      "kind": "pdf",
+      "chars": 926,
+      "note": ""
+    },
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 2248,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 473,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "landlord",
+      "summary": "Email the landlord the tenant's January solar PV meter photo (reading 16845), because the tenant has now sent the reading the landlord needs, then put the case on hold until the next quarterly reading.",
+      "draft": "Address: Flat 10, 180 Alder Lane, Cedarford, ZZ3 4ZZ\n\nHi,\n\nPlease find attached the latest photo of the solar panel (PV generation) meter reading, which the tenant sent us on 17 January 2025.\n\nReading: 16845 (Single Phase Watt Meter, 1000 imp/kWh, Juniper Utilities)\nDate of photo received: 17/01/2025\nNote: the solar PV emergency isolator is shown in the ON position, and we saw nothing in the photo that needs attention.\n\nWe will ask the tenant for the next quarterly reading in mid-April 2025. If you would like readings on a different schedule (our file also mentions mid-June), please let us know.\n\nKind regards,\nNorthbridge Lettings\n\n[Attachment: attachment-01-photograph-of-a-solar-photovoltaic-generation-me.pdf]",
+      "performed": true,
+      "follow_up_on": "2025-04-14",
+      "follow_up_action": "Email the tenant for the next quarterly solar meter photo. If there is no reply by 17 Apr 2025, chase by SMS and email. If still silent about 22 Apr, note it and tell the landlord. If the landlord replies before then with a different schedule (e.g. mid-June), move the hold date."
+    },
+    "alternative_next_actions": [
+      "Send the tenant a short thank-you email confirming we received the meter photo.",
+      "Record a status of completed_without_payment for the January reading cycle and open a fresh reminder for the next reading."
+    ],
+    "case_summary": "This is a recurring admin task at Flat 10, 180 Alder Lane, Cedarford, ZZ3 4ZZ: the landlord wants a photo of the solar PV meter reading from the tenant every 3 months. The agency asked the tenant for a photo on 11 and 17 Jan 2025. The tenant (signed Miles Fletcher) replied on 17 Jan with a signature-only email; the attached photo shows the meter reading 16845 with the PV isolator ON. It is not a repair, and no contractor or spend is involved.",
+    "issue_category": "not-a-repair (solar PV meter reading for the landlord)",
+    "urgency": "not_a_repair",
+    "decision": "in_progress",
+    "outcome": "The January reading (16845) has been emailed to the landlord with the photo. The case is on hold, waiting for the tenant, until 14 Apr 2025, when the next quarterly reading will be requested.",
+    "actions_taken": [
+      "lookup_property for the address and the postcode: CASE-010 found (built from the case file; landlord not named, no instructions)",
+      "lookup_tenancy for CASE-010: tenancy assumed active, tenant not named",
+      "get_repair_history for CASE-010: no previous jobs or other cases",
+      "send_message email to the landlord with the meter reading and photo: MSG-F817D8, delivered",
+      "record_note with the reading, the conflicts and the records gaps: NOTE-BFE2B6, saved",
+      "update_case_status set to awaiting_tenant, hold until 14 Apr 2025 for the next reading: STS-1CCB5A, recorded"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "The January solar meter reading (16845, photo dated 17/01/2025) was received from the tenant and emailed to the landlord (MSG-F817D8). The case is on hold, waiting for the tenant. On 14 Apr 2025, email the tenant for the next photo; if there is no reply, chase by SMS and email on 17 Apr. The landlord has been asked whether the next reading should be mid-April (every 3 months) or mid-June (as the original request said); if they reply, adjust the hold. Add the tenant's name, Miles Fletcher, to the contact record."
+    },
+    "conflicts": [
+      {
+        "description": "The original request (Nov 2024) and the holds in events 2-5 say the next reading is due mid-June, but the agency asked for a reading in January and the request also says readings are every 3 months.",
+        "how_resolved": "Followed the 3-month schedule from the January reading, so the next request is mid-April 2025, which is the safe reading (asking early is harmless). Asked the landlord in the email to confirm the schedule they want."
+      },
+      {
+        "description": "Event 8 is logged as a call to the tenant but says 'The caller from Oakfield Compliance agreed to send a photo'.",
+        "how_resolved": "Treated as a logging error. It does not change the action, because the tenant's photo was then received. Noted internally."
+      },
+      {
+        "description": "The tenant's reply (event 12) contains only a signature (Miles Fletcher, with a phone number), with no text about the reading.",
+        "how_resolved": "Treated the attached meter photo as the reply. The photo matches the property address and shows a clear reading of 16845."
+      }
+    ],
+    "information_gaps": [
+      "The landlord is not named in the records; the email was addressed to 'Landlord' through the platform contact record.",
+      "The tenant's name was not in the tenancy record; the reply was signed Miles Fletcher. A note asks for the contact record to be updated.",
+      "Whether the next reading is due mid-April or mid-June is unclear; the landlord has been asked in the email."
+    ],
+    "assumptions": [
+      "The attached photo is what the tenant sent with the event 12 email.",
+      "Miles Fletcher is the current tenant (the tenancy is assumed active from the case file).",
+      "Readings continue every 3 months, so the next one is due mid-April 2025."
+    ],
+    "tenant_communication": "The tenant was asked for the meter photo on 11 and 17 Jan 2025 and sent it on 17 Jan. Nothing has been sent to the tenant since; a thank-you is listed as an alternative action.",
+    "landlord_communication": "Emailed the January reading (16845) with the photo. Told the landlord the next request will be made in mid-April and asked them to confirm if they want a different schedule (MSG-F817D8).",
+    "next_steps": [
+      "14 Apr 2025: email the tenant for the next solar meter photo.",
+      "17 Apr 2025: if there is no reply, chase the tenant by SMS and email.",
+      "About 22 Apr 2025: if still silent, note it and tell the landlord.",
+      "When the photo arrives, send it to the landlord.",
+      "If the landlord replies saying mid-June, move the hold date.",
+      "Add the tenant's name, Miles Fletcher, to the platform contact record."
+    ],
+    "risk_flags": [],
+    "confidence": 0.85,
+    "reasoning": "The task is to pass the tenant's solar meter readings to the landlord. The tenant has now sent the requested photo, so the natural next step is to send it to the landlord. I checked the photo: it matches the property address, the reading is clear, and the PV isolator is ON with nothing of concern. This is not a repair, so no contractor, spend or landlord approval applies, and an escalation is not needed. Under the policy, every wait needs a date, so the case is on hold for the next reading using the 3-month schedule, with chase steps for the tenant. The conflict over when the next reading is due (mid-June vs every 3 months) and the call log naming 'Oakfield Compliance' were noted. The scheduling question went to the landlord because it does not change today's action."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 10, 180 Alder Lane, Cedarford, ZZ3 4ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-010",
+        "address": "Flat 10, 180 Alder Lane, Cedarford, ZZ3 4ZZ",
+        "postcode": "ZZ3 4ZZ",
+        "case_title": "Case 010: Solar panel readings photo request",
+        "case_created": "2024-11-04 23:55:34 UTC",
+        "reported_by_role": "Agency manager",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ3 4ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-010",
+        "address": "Flat 10, 180 Alder Lane, Cedarford, ZZ3 4ZZ",
+        "postcode": "ZZ3 4ZZ",
+        "case_title": "Case 010: Solar panel readings photo request",
+        "case_created": "2024-11-04 23:55:34 UTC",
+        "reported_by_role": "Agency manager",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-010"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-010",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-010",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tenant (not named in the case file)",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "CASE-010"
+      },
+      "output": {
+        "property_id": "CASE-010",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 12,
+        "last_event": "2025-01-17 02:42:42 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord",
+        "channel": "email",
+        "body": "Address: Flat 10, 180 Alder Lane, Cedarford, ZZ3 4ZZ\n\nHi,\n\nPlease find attached the latest photo of the solar panel (PV generation) meter reading, which the tenant sent us on 17 January 2025.\n\nReading: 16845 (Single Phase Watt Meter, 1000 imp/kWh, Juniper Utilities)\nDate of photo received: 17/01/2025\nNote: the solar PV emergency isolator is shown in the ON position, and we saw nothing in the photo that needs attention.\n\nWe will ask the tenant for the next quarterly reading in mid-April 2025. If you would like readings on a different schedule (our file also mentions mid-June), please let us know.\n\nKind regards,\nNorthbridge Lettings\n\n[Attachment: attachment-01-photograph-of-a-solar-photovoltaic-generation-me.pdf]"
+      },
+      "output": {
+        "message_id": "MSG-F817D8",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 010, solar PV readings (recurring every 3 months, photo from tenant for the landlord). Event 12 (17/01/2025 02:42): the tenant (signed \"Miles Fletcher\") replied. The email body was only a signature, so we treated the attached photo as the reply. The photo shows the meter reading 16845 with the PV isolator ON. Forwarded to the landlord by email (MSG-F817D8). Points to check: (1) The index (written Nov 2024) and the holds in events 2-5 say the next reading is due mid-June, but the agency asked for a reading in January and the policy is every 3 months. I have followed the quarterly schedule, so the next request is mid-April 2025, and I asked the landlord to confirm. (2) In event 8, a call logged as to the Tenant says \"caller from Oakfield Compliance\". This looks like a logging error. Nothing to act on, but noted. (3) The tenant name Miles Fletcher is not in the records (the tenancy record has no name). Please add it to the platform contact record. Not a repair, so no ticket, contractor or spend."
+      },
+      "output": {
+        "note_id": "NOTE-BFE2B6",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "awaiting_tenant",
+        "comment": "Jan reading (16845) received and sent to LL 17/01. Hold for next quarterly reading. Mon 14 Apr 2025: email T for meter photo; if no reply by Thu 17 Apr, chase by SMS + email."
+      },
+      "output": {
+        "status_id": "STS-1CCB5A",
+        "status": "awaiting_tenant",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The tenant has sent the January solar meter photo, so I've emailed the reading to the landlord and put the case on hold until the next quarterly reading.\n\n**Where the case stands:** This is a recurring admin task, not a repair: the landlord wants a photo of the solar meter reading from the tenant every 3 months. We emailed the tenant for the photo on 11 Jan and again on 17 Jan. The tenant (signed \"Miles Fletcher\") replied at 02:42 on 17 Jan with an email that only contained a signature. I've taken the attached photo as his reply: it shows the meter reading **16845**, with the solar system's emergency switch ON. The property, tenancy and repair-history lookups only repeated what the case file says; there's no other history and no landlord instructions.\n\n**What I did:**\n1. **Emailed the landlord** (message MSG-F817D8, delivered). The text was:\n   > Address: Flat 10, 180 Alder Lane, Cedarford, ZZ3 4ZZ\n   > Hi,\n   > Please find attached the latest photo of the solar panel (PV generation) meter reading, which the tenant sent us on 17 January 2025.\n   > Reading: 16845 (Single Phase Watt Meter, 1000 imp/kWh, Juniper Utilities)\n   > Date of photo received: 17/01/2025\n   > Note: the solar PV emergency isolator is shown in the ON position, and we saw nothing in the photo that needs attention.\n   > We will ask the tenant for the next quarterly reading in mid-April 2025. If you would like readings on a different schedule (our file also mentions mid-June), please let us know.\n   > Kind regards, Northbridge Lettings\n   > [Attachment: solar PV meter photo]\n2. **Added an internal note** (NOTE-BFE2B6) with the points below.\n3. **Set the status to waiting for the tenant** (STS-1CCB5A): \"Jan reading (16845) received and sent to LL 17/01. Hold for next quarterly reading. Mon 14 Apr 2025: email T for meter photo; if no reply by Thu 17 Apr, chase by SMS + email.\"\n\n**Points to check:**\n- **When the next reading is due:** the original request (Nov 2024) and the holds since then say \"mid June\", but we asked for a reading in January and the task is every 3 months. I've gone with mid-April and asked the landlord to confirm in the email.\n- **Possible logging error:** the 13 Jan call is logged as made to the tenant but mentions a \"caller from Oakfield Compliance\". Nothing to act on.\n- **Tenant name missing:** the name Miles Fletcher isn't in the tenancy record yet, so it should be added. I didn't pass his phone number to the landlord because they didn't need it.\n\nNo ticket, contractor, spend or escalation was needed.\n\n**Next steps:**\n- **14 Apr 2025:** email the tenant for the next meter photo.\n- **17 Apr:** if there's no reply, chase by SMS and email.\n- **About 22 Apr:** if there's still no reply, note it and tell the landlord.\n- **Whenever the photo arrives:** send it to the landlord.\n- **If the landlord replies saying mid-June:** move the hold date.\n\n**Alternative next action:** a short thank-you email to the tenant confirming we got the photo.\n\n**Follow-up:** check again Mon 14 Apr 2025 and email the tenant for the next quarterly reading.\n\nNext action (event 13): emailed the landlord the tenant's January solar meter photo (reading 16845) and put the case on hold, waiting for the tenant, until Mon 14 Apr 2025, when we ask for the next reading."
+  ]
+}

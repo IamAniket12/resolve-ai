@@ -1,0 +1,207 @@
+{
+  "case_id": "011",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 4,
+  "started_at": "2026-10-10T11:37:00+00:00",
+  "finished_at": "2026-10-10T11:38:01+00:00",
+  "usage": {
+    "input_tokens": 14,
+    "output_tokens": 5079,
+    "cache_read_input_tokens": 62414,
+    "cache_creation_input_tokens": 25184
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 7327,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 717,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "status_update",
+      "to": "agency",
+      "summary": "The provider agreed a visit with the tenant for tomorrow morning (Mon 7 Dec), so the 'Waiting for Provider' hold for a booking is over. Mark the case as appointment booked and set a completion check for the day after the visit.",
+      "draft": "Appointment booked: provider agreed a visit with tenant Amelia Nolan for Mon 7 Dec, morning (exact time not given to us). Waiting for Provider to attend. Check Tue 8 Dec: ask Oakfield Homes to confirm completion and send photos + invoice (quote first if over £250); if they did not attend, re-book and tell the tenant.",
+      "performed": true,
+      "follow_up_on": "2026-12-08",
+      "follow_up_action": "Email and SMS Oakfield Homes asking them to confirm the work is done and to send photos and the invoice, or a quote for landlord approval if it is over £250. Ask the tenant to confirm the dishwasher now finishes its cycle. If nobody came, re-book and tell the tenant the new plan."
+    },
+    "alternative_next_actions": [
+      "Email Oakfield Homes to get the exact appointment time and confirm their engineer is attending, given the different firm names in the call logs.",
+      "Once a firm time is known, send the tenant the standard appointment confirmation email and SMS."
+    ],
+    "case_summary": "The tenant, Amelia Nolan, reported that the landlord-supplied dishwasher at Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ fills and washes but never finishes its cycle. Intake classed it as routine. The landlord (Turner) approved a contractor on 3 Dec and Oakfield Homes, the landlord's preferred contractor, was instructed on 6 Dec. At 05:12 on 6 Dec a contractor call recorded the tenant agreeing to an appointment tomorrow morning (Mon 7 Dec). The tenant has two guinea pigs.",
+    "issue_category": "appliance",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "The appointment is booked for Mon 7 Dec 2026 (morning) between the provider and the tenant. The case is marked appointment booked, waiting for the provider to attend, with a completion check on Tue 8 Dec.",
+    "actions_taken": [
+      "Looked up the property (CASE-011, built from the case file): landlord Turner, spend limit £250, preferred contractor Oakfield Homes, no standing instructions.",
+      "Looked up the tenancy: Amelia Nolan, active (inferred), no vulnerability notes.",
+      "Checked the repair history: no earlier jobs or other cases at this address.",
+      "Updated the case status to appointment_booked (STS-2BD29F) with the chase date and plan.",
+      "Recorded an internal note (NOTE-264566) on the appointment, the contractor-name mismatch, the spend limit, pets and the lack of warranty history."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "For the team: routine dishwasher repair at Flat 12, 78 Copperfield Walk, ZZ3 1ZZ. Landlord Turner approved on 3 Dec. Oakfield Homes was instructed on 6 Dec. The tenant (Amelia Nolan) agreed an appointment with the provider for Mon 7 Dec, morning; we don't have the exact time. On Tue 8 Dec ask Oakfield Homes for completion confirmation, photos and the invoice, and ask the tenant to confirm the dishwasher works. If the cost is over £250, get a quote and landlord approval before paying. Check that the firm that attended is Oakfield Homes, because the call logs show Cedar Maintenance and Alder Maintenance."
+    },
+    "conflicts": [
+      {
+        "description": "The instructed and assigned provider is Oakfield Homes (events 11-13), but the contractor calls are logged as 'Ashford at Cedar Maintenance' (event 14, callback 07700 900730) and 'Alder Maintenance / Ruben Kendall' (event 15).",
+        "how_resolved": "I treated the agency's instruction records as correct: Oakfield Homes is the provider. The other names are probably how the call system labels or anonymises callers, or a subcontractor. This doesn't change the next action. It is noted so we can check who attended when the completion report and invoice arrive."
+      }
+    ],
+    "information_gaps": [
+      "The exact appointment time on Mon 7 Dec: the call record only says 'tomorrow morning'. No fixed time was promised to anyone. We will ask the provider when we check on 8 Dec, or earlier if they reply.",
+      "The tenant's photo of the dishwasher was not available (the attachment in event 13 is unavailable). Not blocking.",
+      "The repair cost is unknown. The job email tells the provider to quote first if approval is needed, and the spend limit is £250."
+    ],
+    "assumptions": [
+      "'Tomorrow morning' in event 18 (logged 6 Dec 05:12) means Mon 7 Dec 2026.",
+      "The dishwasher was supplied by the landlord, so it is a landlord repair (the landlord approved the work).",
+      "The tenancy is active, as inferred from the case file."
+    ],
+    "tenant_communication": "The tenant was emailed on 6 Dec (event 12) that Oakfield Homes would contact her and was reminded to mention her pets. She has agreed the appointment directly with the provider. Nothing new was sent in this run.",
+    "landlord_communication": "Turner was asked for approval on 29 Nov and approved on 3 Dec. Nothing new was sent in this run. The landlord will be updated once the work is done or a quote comes in.",
+    "next_steps": [
+      "Tue 8 Dec: ask Oakfield Homes to confirm the work is done and send photos and the invoice, or a quote if over £250, which goes to the landlord for approval before any work.",
+      "Ask the tenant to confirm the dishwasher now finishes its cycle.",
+      "If nobody attended: re-book and tell the tenant.",
+      "Check the invoice is within £250, or within the approved quote, then send it to the landlord and close as completed."
+    ],
+    "risk_flags": [],
+    "confidence": 0.8,
+    "reasoning": "Event 17 put the case on hold until the provider booked a visit. Event 18 shows the visit is now booked with the tenant, so the right next step is to record that state and set the check the policy requires: the day after the appointment. I sent no appointment confirmation with a time, because the policy says never to promise a time the contractor hasn't confirmed and the tenant already arranged the visit herself. There was no history of earlier repairs, so warranty and repeat-fault rules don't apply. It is routine work within the agency's authority with landlord approval, so no escalation is needed."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-011",
+        "address": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ",
+        "postcode": "ZZ3 1ZZ",
+        "case_title": "Case 011: Dishwasher Repair Request",
+        "case_created": "2026-11-29 05:07:59 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "Turner",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Oakfield Homes"
+        ],
+        "agency_staff_on_case": [
+          "Ava Oakley"
+        ],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-011"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-011",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-011",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Amelia Nolan",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record (address messages by name)"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "CASE-011"
+      },
+      "output": {
+        "property_id": "CASE-011",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 18,
+        "last_event": "2026-12-06 05:12:24 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "CASE-011",
+        "status": "appointment_booked",
+        "comment": "Appointment booked: provider agreed a visit with tenant Amelia Nolan for Mon 7 Dec, morning (exact time not given to us). Waiting for Provider to attend. Check Tue 8 Dec: ask Oakfield Homes to confirm completion and send photos + invoice (quote first if over £250); if they did not attend, re-book and tell the tenant."
+      },
+      "output": {
+        "status_id": "STS-2BD29F",
+        "status": "appointment_booked",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "CASE-011",
+        "note": "Event 18 (06 Dec 05:12): a contractor call with the tenant agreed a dishwasher appointment for \"tomorrow morning\" = Mon 7 Dec 2026. That ends the Waiting for Provider hold from event 17 (appointment now booked). Name mismatch: the instructed/assigned provider is Oakfield Homes (events 11-13, landlord-preferred), but the provider calls log as \"Ashford at Cedar Maintenance\" (event 14, callback 07700 900730) and \"Alder Maintenance / Ruben Kendall\" (event 15). This is probably how the call system labels or anonymises callers, or a subcontractor. It does not change the action, but check that the attending firm is Oakfield Homes when the completion/invoice arrives. Landlord Turner approved on 03 Dec. Spend limit £250: if the repair is over £250, the provider must quote and we get landlord approval before work (stated in the job email). Pets: two guinea pigs (in the job email). No previous repairs at this address, so there is no warranty or recurrence issue. The exact appointment time was not confirmed to us, so no fixed-slot confirmation has been sent to the tenant (policy: never promise an unconfirmed time)."
+      },
+      "output": {
+        "note_id": "NOTE-264566",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I've marked the case as appointment booked: the provider has arranged a visit with the tenant for tomorrow morning, Monday 7 Dec. We now wait for them to attend, and I check again on Tuesday 8 Dec. I added an internal note as well. I sent no messages, because we don't have an exact time to confirm to anyone.\n\n**Where the case stands:** The landlord (Turner) approved the repair by email on 3 Dec. Oakfield Homes, the landlord's preferred contractor, was given the job on 6 Dec, and the tenant (Amelia Nolan) was told. At 04:25 the case was put on hold waiting for Oakfield Homes to book a visit. Then at 05:12 a contractor call recorded Amelia agreeing to a dishwasher appointment \"tomorrow morning\". That ends the wait for a booking.\n\n**Checks:** There are no earlier repairs at this address, so there's no warranty or repeat-fault issue. The cost limit without landlord sign-off is £250. The job email already tells Oakfield Homes to quote first if the repair will cost more. The two guinea pigs were mentioned to them.\n\n**One thing that doesn't match:** The job went to Oakfield Homes, but the contractor calls are logged under other names: \"Ashford at Cedar Maintenance\" (callback 07700 900730) and \"Alder Maintenance / Ruben Kendall\". This is probably how the phone system labels callers, or a subcontractor. It doesn't change what we do now, but when the invoice arrives we should check that Oakfield Homes did the work.\n\n**Status comment on the dashboard:** \"Appointment booked: provider agreed a visit with tenant Amelia Nolan for Mon 7 Dec, morning (exact time not given to us). Waiting for Provider to attend. Check Tue 8 Dec: ask Oakfield Homes to confirm completion and send photos + invoice (quote first if over £250); if they did not attend, re-book and tell the tenant.\"\n\n**Follow-up on Tue 8 Dec 2026:**\n- Ask Oakfield Homes to confirm the work is done and send photos and the invoice, or a quote if it's over £250.\n- Ask Amelia to confirm the dishwasher now finishes its cycle.\n- If nobody came, re-book and tell Amelia the new plan.\n\n**Other options I didn't take:**\n- Email Oakfield Homes to get the exact time and confirm it's their engineer attending.\n- Send Amelia a confirmation email and text once a firm time is known.\n\nNext action: case marked as appointment booked for Mon 7 Dec (morning), waiting for Oakfield Homes to attend; check again Tue 8 Dec for completion photos and the invoice, or re-book if they didn't come."
+  ]
+}
