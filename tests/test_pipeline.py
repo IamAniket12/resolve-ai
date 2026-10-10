@@ -71,3 +71,24 @@ def test_fallback_answer_is_complete(settings, tmp_path):
     write_case(r, tmp_path / "ANSWERS", tmp_path / "logs")
     text = (tmp_path / "ANSWERS" / b.case_id / "ANSWER.md").read_text()
     assert "simulated crash" in text
+
+
+def test_anthropic_cache_breakpoints_do_not_accumulate():
+    """The client marks the case material and the latest turn, never more, and never mutates the caller's messages."""
+    from resolve_ai.llm.anthropic_client import AnthropicLLM
+    from resolve_ai.config import Settings
+    llm = AnthropicLLM(Settings())  # constructs without a key
+    messages = [
+        {"role": "user", "content": [{"type": "text", "text": "case material"}]},
+        {"role": "assistant", "content": [{"type": "tool_use", "id": "t1", "name": "x", "input": {}}]},
+        {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "t1", "content": "r1"}]},
+        {"role": "assistant", "content": [{"type": "tool_use", "id": "t2", "name": "x", "input": {}}]},
+        {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "t2", "content": "r2"}]},
+    ]
+    kw = llm._common("sys", messages, [])
+    marked = [(i, b["type"]) for i, m in enumerate(kw["messages"]) for b in m["content"] if isinstance(b, dict) and "cache_control" in b]
+    assert marked == [(0, "text"), (4, "tool_result")]
+    assert all("cache_control" not in b for m in messages for b in m["content"])  # caller's copy untouched
+    kw2 = llm._common("sys", messages + [{"role": "user", "content": "finalize"}], [])
+    marked2 = [i for i, m in enumerate(kw2["messages"]) for b in m["content"] if isinstance(b, dict) and "cache_control" in b]
+    assert marked2 == [0, 5]

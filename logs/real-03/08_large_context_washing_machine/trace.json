@@ -1,0 +1,630 @@
+{
+  "case_id": "08_large_context_washing_machine",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 10,
+  "started_at": "2026-10-10T10:17:54+00:00",
+  "finished_at": "2026-10-10T10:21:53+00:00",
+  "usage": {
+    "input_tokens": 183042,
+    "output_tokens": 18370,
+    "cache_read_input_tokens": 97575,
+    "cache_creation_input_tokens": 9589
+  },
+  "manifest": [
+    {
+      "name": "01_tenant_report.eml",
+      "kind": "email",
+      "chars": 895,
+      "note": ""
+    },
+    {
+      "name": "02_landlord_reply.eml",
+      "kind": "email",
+      "chars": 409,
+      "note": ""
+    },
+    {
+      "name": "03_block_management.eml",
+      "kind": "email",
+      "chars": 711,
+      "note": ""
+    },
+    {
+      "name": "block_repair_log.csv",
+      "kind": "csv",
+      "chars": 6199,
+      "note": ""
+    },
+    {
+      "name": "crm_record.json",
+      "kind": "json",
+      "chars": 538,
+      "note": ""
+    },
+    {
+      "name": "inventory_checkin_2024.pdf",
+      "kind": "pdf",
+      "chars": 3777,
+      "note": ""
+    },
+    {
+      "name": "photo_kitchen_floor.png",
+      "kind": "image",
+      "chars": 0,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "Tenant Grace Adeyemi reported that the landlord-supplied Beko WTK94121W washing machine at Flat 7, Riverside Court, Bristol BS1 6XY (PROP-0205) leaked badly during spin, with water across the kitchen floor and under the units. It is the machine's 4th fault in about 11 months, and on 30/08/2026 the engineer recorded it as beyond economical repair (replacement approx £350). The landlord (Owen Pryce, Riverside Court Investments Ltd) replied 'repair not replace, only about a year old, keep under limit'. Block management then reported a wet ceiling patch in Flat 6 below, with a possible freeholder insurance claim.",
+    "issue_category": "appliance (washing machine leak) with possible water ingress to neighbouring flat",
+    "urgency": "urgent",
+    "decision": "escalated",
+    "outcome": "ApplianceFix SW is booked as a callback on their 30/08 temporary fix for Mon 12/10/2026 09:00-11:00 via the concierge (BKG-842139, £95 call-out, within authority) to find the leak source and quote for replacement. Landlord approval APR-9BAE23 for a ~£350 replacement is pending. The case is escalated to the property manager (ESC-622E1E) over the Flat 6 ingress / insurer risk and the landlord's refusal of an engineer-recommended replacement that is above authority.",
+    "actions_taken": [
+      "lookup_property PROP-0205: confirmed address, landlord LL-0610, £250 limit, standing instruction to replace if engineer says beyond economical repair, Flat 6 directly below",
+      "lookup_tenancy: TEN-5012 active (rolling), tenants Grace Adeyemi and Sam Whitlock, concierge access with 24h notice, no vulnerability",
+      "get_repair_history: 3 prior washing machine jobs by CON-AF10 (Nov 2025 £120, May 2026 £135, Aug 2026 £110 temporary fix, BER noted)",
+      "search_contractors appliance_engineer BS1 6XY: only CON-AF10 ApplianceFix South West returned",
+      "search_contractors plumber BS1 6XY: CON-WP11 Wharf Plumbing (emergency-capable) kept as contingency",
+      "check_contractor_availability CON-AF10 urgent: slots on 12/10/2026 returned",
+      "create_maintenance_ticket TKT-365DCE (appliance, urgent)",
+      "schedule_contractor CON-AF10 SLOT-URG-1 Mon 12/10/2026 09:00-11:00, booking BKG-842139, est £95, access via concierge",
+      "request_landlord_approval APR-9BAE23 for ~£350 replacement (pending)",
+      "Emailed tenant Grace Adeyemi: appointment details, interim advice, pets reminder, replacement approval in progress (MSG-6321BA)",
+      "Emailed landlord Owen Pryce: booking within authority, evidence on age/BER/history/Flat 6 ingress, quote approval request (MSG-D75F61)",
+      "Emailed ApplianceFix SW the job details and callback instructions (MSG-30ADE3) and sent SMS nudge (MSG-C080E4)",
+      "Emailed Wharf Lane Block Management a holding reply confirming the investigation (MSG-F8C12F; sent with recipient type property_manager)",
+      "record_note NOTE-A0E3B5 with the date anomaly, contractor rationale and conflicts",
+      "escalate_to_human ESC-622E1E to property manager, severity high",
+      "update_case_status appointment_booked with chase date 13/10",
+      "SMS appointment confirmation to tenant (MSG-9BC400)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": true,
+      "to": "property manager",
+      "reason": "Water ingress into neighbouring Flat 6, with block management raising a possible freeholder insurance claim, and the landlord refusing an engineer-recommended replacement (above the £250 authority) on an incorrect premise about the machine's age.",
+      "handover": "PROPERTY: Flat 7, Riverside Court, 3 Wharf Lane, Bristol BS1 6XY (PROP-0205). Landlord: Riverside Court Investments Ltd, contact Owen Pryce (LL-0610, owen.pryce@rcinvest.example.com, +44 7700 900610). £250 limit; written sign-off needed above that; standing instruction is repair unless an engineer says beyond economical repair. Tenancy TEN-5012 active (rolling): Grace Adeyemi and Sam Whitlock, no vulnerability. FACTS: On 09/10 the Beko WTK94121W (supplied new 03/2024 per inventory KIT-09) leaked badly under the kitchen units; it is now switched off and unused. 4th fault in 11 months, all by ApplianceFix SW (CON-AF10): carbon brushes Nov 2025 £120, door seal May 2026 £135, pump housing leak Aug 2026 £110 temporary fix with the note 'beyond economical repair, replace approx £350'. Block management (10/10) report a wet damp patch on the Flat 6 kitchen ceiling (directly below), with a similar mark in September (RC-2004, monitoring), and mention the freeholder's insurer. DONE: Ticket TKT-365DCE. Callback booked with ApplianceFix SW for Mon 12/10 09:00-11:00 via concierge (BKG-842139, £95), with instructions to find the leak source, confirm in writing whether it explains the Flat 6 ingress, isolate the machine, give a written replacement quote and photos, and do nothing chargeable over £250. Approval APR-9BAE23 (~£350 replacement) pending, and the landlord has been emailed the evidence. Tenant informed by email and SMS. Block given a holding reply. FOR YOU: (a) If Owen still refuses replacement after the quote, call him and push for written approval; repeated patch repairs on a beyond-economical-repair machine that has already leaked downstairs expose him to third-party liability. (b) Handle the block/insurer correspondence and any Flat 6 damage claim, and consider advising the landlord to notify his own insurer. (c) The case date field says 14/09/2026 but all material is dated October; I worked to October. RECOMMENDED: Approve the replacement once the 12/10 quote arrives, send the engineer's written leak-source finding to the block, and chase the landlord on 13/10. If water reappears with the machine isolated, send Wharf Plumbing (CON-WP11, +44 117 000 0111) the same day."
+    },
+    "conflicts": [
+      {
+        "description": "Landlord says the machine is 'only about a year old'; the check-in inventory (KIT-09) and repair history JOB-8611 show it was supplied new 03/2024, about 2.5 years ago.",
+        "how_resolved": "Trusted the inventory and repair records (two independent documentary sources); the correct age was put to the landlord in writing."
+      },
+      {
+        "description": "Landlord instructs 'repair not replace, keep under the usual limit', but the engineer (30/08/2026) recorded beyond economical repair, and the landlord's own standing instruction allows replacement in that case.",
+        "how_resolved": "Unresolved - escalated. Booked only the within-authority callback/diagnostic and requested landlord approval (APR-9BAE23) for replacement; no replacement ordered without written sign-off."
+      },
+      {
+        "description": "Tenant warned our records might list the machine as a Bosch; the CRM, repair history and block log all record a Beko WTK94121W, matching the inventory.",
+        "how_resolved": "No actual discrepancy in our records; trusted the inventory and records and told the tenant."
+      },
+      {
+        "description": "The case date is given as 2026-09-14, but the tenant, landlord and block emails are dated 09-10/10/2026, the ticket was timestamped 2026-10-10, and contractor slots were offered for 12/10/2026.",
+        "how_resolved": "Worked to the October timeline, which all operational sources and tool outputs agree on; recorded the anomaly in the note and the handover."
+      },
+      {
+        "description": "Policy prefers moving away from a contractor after the fault has recurred twice or more following their visits, but ApplianceFix SW is the only appliance engineer on the panel and this is a callback within 90 days of their temporary fix.",
+        "how_resolved": "Used ApplianceFix SW under callback/warranty terms, since no alternative was returned and the policy requires checking callback terms with the previous contractor first."
+      }
+    ],
+    "information_gaps": [
+      "Whether water is still escaping with the machine switched off (e.g. inlet hose/valve): tenant asked to isolate the valve and report; plumber CON-WP11 held as contingency.",
+      "Confirmed source of the Flat 6 ceiling ingress: engineer asked to confirm in writing on 12/10.",
+      "Firm replacement quote: requested from ApplianceFix SW at the 12/10 visit (current figure is the engineer's ~£350 estimate).",
+      "ApplianceFix callback/workmanship terms and whether any charge applies: asked in the job email.",
+      "Manufacturer warranty status (machine supplied 03/2024): not verified; probably expired.",
+      "Pets at the property: unknown; tenant reminded to tell the provider.",
+      "Extent of any damage to Flat 7 kitchen floor/units: tenant asked to report swelling or damage."
+    ],
+    "assumptions": [
+      "Urgent rather than emergency, because the tenant has switched the machine off and stopped using it, so the leak is contained.",
+      "The October-dated emails reflect the real current position despite the 14/09/2026 case date.",
+      "Concierge access offered by the tenant and recorded in tenancy access notes counts as access agreed; more than 24h notice is given for the Monday slot.",
+      "The washing machine is landlord-supplied (inventory states all items landlord-owned), so repair/replacement is the landlord's responsibility, and the leak is appliance failure, not tenant damage."
+    ],
+    "tenant_communication": "Grace was emailed and sent an SMS. She was told that ApplianceFix South West (+44 117 000 0110) attends Mon 12/10/2026 09:00-11:00 via the concierge as a callback on the August visit. She was asked to keep the machine off, turn off the water to it if safe, dry the floor, report floor/unit damage and contact us at once if water keeps appearing. She was told we have asked the landlord to approve a replacement and will get a firm quote on Monday, that records correctly show a Beko, and to tell the provider about any pets.",
+    "landlord_communication": "Owen Pryce was emailed. The email said a within-authority callback is booked for 12/10 (£95 call-out). It put the facts to him: the machine is ~2.5 years old, this is its 4th fault with £365 spent, the engineer's beyond-economical-repair note meets his own standing instruction, and water has reached Flat 6 with the insurer mentioned. He was asked for written sign-off for a ~£350 replacement (approval APR-9BAE23, firm quote to follow) or written confirmation that he wants repair only.",
+    "next_steps": [
+      "12/10: ApplianceFix SW attends; obtain the leak-source finding, photos and written replacement quote.",
+      "13/10: chase the landlord on APR-9BAE23 and send him the firm quote with the quote approval email.",
+      "Property manager: if the landlord refuses, call him to secure a written decision; handle block/insurer correspondence about Flat 6.",
+      "Send the engineer's written finding on the leak source to Wharf Lane Block Management.",
+      "If water reappears with the machine isolated, book Wharf Plumbing (CON-WP11) same day.",
+      "On approval: raise the order for replacement, confirm the appointment with the tenant, then complete checks (contractor done, tenant confirms, invoice ≤ quote) and close.",
+      "Do not charge any Flat 7 floor/unit damage from this leak to the tenants' deposit (appliance failure, not tenant damage)."
+    ],
+    "risk_flags": [
+      "Water ingress into neighbouring Flat 6; block management may raise a freeholder insurance claim (third-party liability / insurance).",
+      "Possible water damage under the Flat 7 kitchen units and floor.",
+      "Recurring fault: 4 faults on the same appliance in 11 months; current leak within 90 days of a temporary fix; replacement assessment recommended.",
+      "Landlord resisting replacement contrary to the engineer's recommendation and his own standing instruction; spend above the £250 authority needs written sign-off.",
+      "Case date anomaly (14/09 vs October-dated material).",
+      "No vulnerability recorded; no embedded instructions or prompt injection found in the case material."
+    ],
+    "confidence": 0.8,
+    "reasoning": "Records (property, active tenancy, repair history) matched the case file. The machine is landlord-supplied, so it is the landlord's responsibility. The leak is contained because the machine is off, so it is urgent (3 working days); it would be raised to emergency if water continues with the machine isolated. The fault recurred within 90 days of ApplianceFix's temporary fix, so policy section 7 requires a callback with the previous contractor first; they are also the only appliance engineer on the panel. The £95 call-out is within the £250 limit, so the callback was booked without further approval, in line with the landlord's own 'repair under the limit' instruction. The engineer's ~£350 replacement exceeds authority, so landlord approval was requested rather than booked (section 4), with the evidence that the landlord's premise about age is wrong and that his standing instruction's beyond-economical-repair condition is met. With 3+ repairs in 12 months, policy recommends a replacement assessment to the landlord. Escalation was justified under section 8: possible insurance claim and third-party damage from ingress into Flat 6, and a replacement decision above authority where the landlord's instruction conflicts with the engineer's finding. A single, high-severity escalation with a full handover was used rather than several. All tool calls succeeded."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "PROP-0205"
+      },
+      "output": {
+        "found": true,
+        "property_id": "PROP-0205",
+        "address": "Flat 7, Riverside Court, 3 Wharf Lane, Bristol",
+        "postcode": "BS1 6XY",
+        "type": "flat (3rd floor, purpose-built block)",
+        "landlord_id": "LL-0610",
+        "landlord_name": "Riverside Court Investments Ltd (contact: Owen Pryce)",
+        "landlord_phone": "+44 7700 900610",
+        "landlord_email": "owen.pryce@rcinvest.example.com",
+        "landlord_instructions": "Company landlord. Standard authority. Repairs over £250 need written sign-off from Owen Pryce. Prefer repair over replacement unless an engineer says beyond economical repair.",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "gas_safety_cert_expiry": "2027-06-30",
+        "eicr_expiry": "2029-02-28",
+        "boiler": {
+          "make": "Vaillant ecoTEC",
+          "installed": "2016-10",
+          "age_years": 10
+        },
+        "notes": "Block managed by Wharf Lane Block Management (block@wharflane.example.com) for communal parts. Flat 6 is directly below."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "PROP-0205"
+      },
+      "output": {
+        "tenancies": [
+          {
+            "tenancy_id": "TEN-5012",
+            "property_id": "PROP-0205",
+            "status": "active",
+            "tenants": [
+              {
+                "name": "Grace Adeyemi",
+                "phone": "+44 7700 900621",
+                "email": "grace.adeyemi@example.com"
+              },
+              {
+                "name": "Sam Whitlock",
+                "phone": "+44 7700 900622",
+                "email": "sam.whitlock@example.com"
+              }
+            ],
+            "start": "2024-04-01",
+            "end": "2026-03-31",
+            "rolling": true,
+            "vulnerability_notes": "",
+            "access_notes": "Both work from home Tue/Thu. Concierge desk can admit contractors with 24h notice."
+          }
+        ],
+        "active_tenancy": {
+          "tenancy_id": "TEN-5012",
+          "property_id": "PROP-0205",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Grace Adeyemi",
+              "phone": "+44 7700 900621",
+              "email": "grace.adeyemi@example.com"
+            },
+            {
+              "name": "Sam Whitlock",
+              "phone": "+44 7700 900622",
+              "email": "sam.whitlock@example.com"
+            }
+          ],
+          "start": "2024-04-01",
+          "end": "2026-03-31",
+          "rolling": true,
+          "vulnerability_notes": "",
+          "access_notes": "Both work from home Tue/Thu. Concierge desk can admit contractors with 24h notice."
+        },
+        "warning": null
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "PROP-0205"
+      },
+      "output": {
+        "property_id": "PROP-0205",
+        "jobs": [
+          {
+            "job_id": "JOB-8798",
+            "property_id": "PROP-0205",
+            "date": "2026-08-30",
+            "category": "appliance",
+            "description": "Washing machine drum bearing noise and intermittent leak at pump housing. Temporary fix. ENGINEER NOTE: unit is beyond economical repair; recommend replacement (approx £350 supplied and fitted) rather than further repairs.",
+            "contractor_id": "CON-AF10",
+            "cost_gbp": 110,
+            "outcome": "completed - replacement recommended"
+          },
+          {
+            "job_id": "JOB-8744",
+            "property_id": "PROP-0205",
+            "date": "2026-05-21",
+            "category": "appliance",
+            "description": "Washing machine leaking from door seal. Seal replaced.",
+            "contractor_id": "CON-AF10",
+            "cost_gbp": 135,
+            "outcome": "completed"
+          },
+          {
+            "job_id": "JOB-8611",
+            "property_id": "PROP-0205",
+            "date": "2025-11-04",
+            "category": "appliance",
+            "description": "Washing machine (Beko WTK94121W, supplied 2024-03) not spinning. Carbon brushes replaced.",
+            "contractor_id": "CON-AF10",
+            "cost_gbp": 120,
+            "outcome": "completed"
+          }
+        ],
+        "count": 3
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "appliance_engineer",
+        "postcode": "BS1 6XY",
+        "emergency": false
+      },
+      "output": {
+        "trade": "appliance_engineer",
+        "postcode": "BS1 6XY",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-AF10",
+            "name": "ApplianceFix South West",
+            "trades": [
+              "appliance_engineer"
+            ],
+            "certifications": [
+              "Manufacturer-trained (Beko, Bosch)"
+            ],
+            "postcode_areas": [
+              "BS",
+              "BA"
+            ],
+            "rating": 4.5,
+            "emergency": false,
+            "call_out_gbp": 95,
+            "phone": "+44 117 000 0110",
+            "email": "jobs@appliancefix-sw.example.com"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "plumber",
+        "postcode": "BS1 6XY",
+        "emergency": false
+      },
+      "output": {
+        "trade": "plumber",
+        "postcode": "BS1 6XY",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-WP11",
+            "name": "Wharf Plumbing",
+            "trades": [
+              "plumber",
+              "drainage"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "BS"
+            ],
+            "rating": 4.3,
+            "emergency": true,
+            "call_out_gbp": 100,
+            "phone": "+44 117 000 0111",
+            "email": "ops@wharfplumbing.example.com"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-AF10",
+        "urgency": "urgent"
+      },
+      "output": {
+        "contractor_id": "CON-AF10",
+        "name": "ApplianceFix South West",
+        "urgency": "urgent",
+        "slots": [
+          {
+            "slot_id": "SLOT-URG-1",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          },
+          {
+            "slot_id": "SLOT-URG-2",
+            "start": "2026-10-12T14:00",
+            "end": "2026-10-12T16:00"
+          },
+          {
+            "slot_id": "SLOT-URG-3",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "PROP-0205",
+        "title": "Washing machine leaking badly (4th fault in 12 months) - possible water ingress to Flat 6 below",
+        "category": "appliance",
+        "urgency": "urgent",
+        "description": "Reported by tenant Grace Adeyemi (email dated 09/10/2026 21:12): \"The washing machine is leaking again, this time quite badly. During the spin cycle tonight there was a pool of water across the kitchen floor (photo attached) and it's gone under the units. We've switched it off at the wall and we won't use it. This is the fourth time in a year. The engineer who came in August told us the machine was not worth fixing again and that he'd recommended a replacement to you. Can it please be replaced rather than patched up again?\" Photo shows pooled water on kitchen floor.\nAppliance: landlord-supplied Beko WTK94121W, supplied new 2024-03 (check-in inventory KIT-09; repair history JOB-8611 and block log RC-2001 agree it is a Beko - tenant's 'Bosch' concern does not appear in our records).\nHistory (all CON-AF10 ApplianceFix SW): JOB-8611 04/11/2025 not spinning, carbon brushes £120; JOB-8744 21/05/2026 door seal leak, seal replaced £135; JOB-8798 30/08/2026 bearing noise + intermittent leak at pump housing, TEMPORARY FIX £110, engineer: beyond economical repair, recommend replacement approx £350 supplied & fitted. Current leak is a recurrence within 90 days of JOB-8798 -> callback/warranty with ApplianceFix first. 3+ repairs on same appliance in 12 months -> replacement assessment recommended to landlord.\nLinked: Wharf Lane Block Management email 10/10/2026 - Flat 6 (directly below) kitchen ceiling damp patch appeared overnight, still wet; similar mark September (block log RC-2004, monitoring); block may raise with freeholder's insurer if ingress continues.\nLandlord (Owen Pryce, Riverside Court Investments) 10/10/2026: \"Just get it repaired... only about a year old... repair not replace. Keep it under the usual limit.\" Conflicts with records (machine ~2.5 yrs old) and with landlord's own standing instruction (repair unless engineer says beyond economical repair). Replacement £350 > £250 limit - needs written sign-off.\nUrgency: URGENT - leak contained (machine switched off, not in use), no vulnerability noted; escalate to emergency if water continues to appear with machine isolated.",
+        "reported_by": "Grace Adeyemi (tenant); Wharf Lane Block Management (re Flat 6)"
+      },
+      "output": {
+        "ticket_id": "TKT-365DCE",
+        "property_id": "PROP-0205",
+        "title": "Washing machine leaking badly (4th fault in 12 months) - possible water ingress to Flat 6 below",
+        "category": "appliance",
+        "urgency": "urgent",
+        "description": "Reported by tenant Grace Adeyemi (email dated 09/10/2026 21:12): \"The washing machine is leaking again, this time quite badly. During the spin cycle tonight there was a pool of water across the kitchen floor (photo attached) and it's gone under the units. We've switched it off at the wall and we won't use it. This is the fourth time in a year. The engineer who came in August told us the machine was not worth fixing again and that he'd recommended a replacement to you. Can it please be replaced rather than patched up again?\" Photo shows pooled water on kitchen floor.\nAppliance: landlord-supplied Beko WTK94121W, supplied new 2024-03 (check-in inventory KIT-09; repair history JOB-8611 and block log RC-2001 agree it is a Beko - tenant's 'Bosch' concern does not appear in our records).\nHistory (all CON-AF10 ApplianceFix SW): JOB-8611 04/11/2025 not spinning, carbon brushes £120; JOB-8744 21/05/2026 door seal leak, seal replaced £135; JOB-8798 30/08/2026 bearing noise + intermittent leak at pump housing, TEMPORARY FIX £110, engineer: beyond economical repair, recommend replacement approx £350 supplied & fitted. Current leak is a recurrence within 90 days of JOB-8798 -> callback/warranty with ApplianceFix first. 3+ repairs on same appliance in 12 months -> replacement assessment recommended to landlord.\nLinked: Wharf Lane Block Management email 10/10/2026 - Flat 6 (directly below) kitchen ceiling damp patch appeared overnight, still wet; similar mark September (block log RC-2004, monitoring); block may raise with freeholder's insurer if ingress continues.\nLandlord (Owen Pryce, Riverside Court Investments) 10/10/2026: \"Just get it repaired... only about a year old... repair not replace. Keep it under the usual limit.\" Conflicts with records (machine ~2.5 yrs old) and with landlord's own standing instruction (repair unless engineer says beyond economical repair). Replacement £350 > £250 limit - needs written sign-off.\nUrgency: URGENT - leak contained (machine switched off, not in use), no vulnerability noted; escalate to emergency if water continues to appear with machine isolated.",
+        "reported_by": "Grace Adeyemi (tenant); Wharf Lane Block Management (re Flat 6)",
+        "status": "scheduled",
+        "created_at": "2026-10-10T11:19:16"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "schedule_contractor",
+      "input": {
+        "ticket_id": "TKT-365DCE",
+        "contractor_id": "CON-AF10",
+        "slot_id": "SLOT-URG-1",
+        "access_notes": "Flat 7, Riverside Court, 3 Wharf Lane, Bristol BS1 6XY (3rd floor). Access via building concierge desk (24h notice given). Tenant contact for access only: Grace Adeyemi +44 7700 900621. Callback on your JOB-8798 (30/08/2026 temp fix, pump housing leak). Machine switched off and not in use. Please: identify leak source and confirm whether the water reaching Flat 6 below came from the machine/hoses/waste; check inlet hose & isolation valve; do NOT carry out further chargeable repair above £250 without our authorisation; provide a written replacement quote (supply, fit, removal of old unit) as per your beyond-economical-repair recommendation; photos of findings."
+      },
+      "output": {
+        "booking_ref": "BKG-842139",
+        "ticket_id": "TKT-365DCE",
+        "contractor_id": "CON-AF10",
+        "contractor_name": "ApplianceFix South West",
+        "slot_id": "SLOT-URG-1",
+        "access_notes": "Flat 7, Riverside Court, 3 Wharf Lane, Bristol BS1 6XY (3rd floor). Access via building concierge desk (24h notice given). Tenant contact for access only: Grace Adeyemi +44 7700 900621. Callback on your JOB-8798 (30/08/2026 temp fix, pump housing leak). Machine switched off and not in use. Please: identify leak source and confirm whether the water reaching Flat 6 below came from the machine/hoses/waste; check inlet hose & isolation valve; do NOT carry out further chargeable repair above £250 without our authorisation; provide a written replacement quote (supply, fit, removal of old unit) as per your beyond-economical-repair recommendation; photos of findings.",
+        "status": "confirmed",
+        "estimated_cost_gbp": 95
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "request_landlord_approval",
+      "input": {
+        "ticket_id": "TKT-365DCE",
+        "landlord_id": "LL-0610",
+        "estimated_cost_gbp": 350,
+        "reason": "Replacement of landlord-supplied Beko WTK94121W washing machine at Flat 7 Riverside Court. Machine was supplied new March 2024 (check-in inventory KIT-09), so is c.2.5 years old, not one year. 4th fault in ~11 months: carbon brushes Nov 2025 (£120), door seal May 2026 (£135), bearing noise + pump housing leak Aug 2026 (£110, temporary fix) - £365 already spent. ApplianceFix SW recorded on 30/08/2026 that the unit is BEYOND ECONOMICAL REPAIR and recommended replacement at approx £350 supplied & fitted. Your standing instruction is repair unless an engineer says beyond economical repair - that condition is met. Latest leak (09/10) has reached the flat below (Flat 6) per block management, who mention the freeholder's insurer if ingress continues. Estimate £350 is the engineer's figure; firm written quote requested from the 12/10 callback visit. Above £250 limit - written sign-off from Owen Pryce required."
+      },
+      "output": {
+        "approval_id": "APR-9BAE23",
+        "ticket_id": "TKT-365DCE",
+        "landlord_id": "LL-0610",
+        "estimated_cost_gbp": 350,
+        "reason": "Replacement of landlord-supplied Beko WTK94121W washing machine at Flat 7 Riverside Court. Machine was supplied new March 2024 (check-in inventory KIT-09), so is c.2.5 years old, not one year. 4th fault in ~11 months: carbon brushes Nov 2025 (£120), door seal May 2026 (£135), bearing noise + pump housing leak Aug 2026 (£110, temporary fix) - £365 already spent. ApplianceFix SW recorded on 30/08/2026 that the unit is BEYOND ECONOMICAL REPAIR and recommended replacement at approx £350 supplied & fitted. Your standing instruction is repair unless an engineer says beyond economical repair - that condition is met. Latest leak (09/10) has reached the flat below (Flat 6) per block management, who mention the freeholder's insurer if ingress continues. Estimate £350 is the engineer's figure; firm written quote requested from the 12/10 callback visit. Above £250 limit - written sign-off from Owen Pryce required.",
+        "status": "pending",
+        "note": "Landlord notified; typical response within 24h. Do not book non-emergency work until approved."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "grace.adeyemi@example.com",
+        "channel": "email",
+        "body": "Dear Grace,\n\nThank you for reporting the washing machine leak and for switching it off straight away.\n\nOur maintenance provider ApplianceFix South West will be attending your property for the washing machine leak. This is a return visit following their August call-out.\nConfirmed Time Slot: Monday 12 October 2026, 09:00-11:00\nMaintenance Provider Name: ApplianceFix South West\nContact Details: +44 117 000 0110\nAccess: as you offered, they will be let in by the concierge desk. You do not need to be home. Please tell the concierge to expect them, and contact the provider if anything changes on your side.\n\nRequest description: washing machine leaking badly during the spin cycle, water across the kitchen floor and under the units (4th fault in 12 months).\n\nIn the meantime:\n- Please keep the machine unplugged and do not use it.\n- If you can safely reach the cold-water isolation valve behind or beside the machine, please turn it off.\n- Dry the floor as best you can. Please tell us if the floor or the units look swollen or damaged.\n- If water keeps appearing with the machine switched off and isolated, contact us straight away so we can send a plumber the same day.\n\nAbout replacement: we have seen the engineer's August recommendation. We have asked the landlord to approve replacing the machine, and the engineer will give us a firm quote on Monday. We will update you as soon as the landlord replies. We have also checked our records: they correctly list the machine as a Beko WTK94121W.\n\nIf you have any pets, please make sure you tell our provider.\n\nKind regards,\nMaintenance Team"
+      },
+      "output": {
+        "message_id": "MSG-6321BA",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "owen.pryce@rcinvest.example.com",
+        "channel": "email",
+        "body": "Address: Flat 7, Riverside Court, 3 Wharf Lane, Bristol BS1 6XY\n\nHi Owen,\n\nThank you for your reply. Here is where things stand on the washing machine leak:\n\n1. Following your instruction to repair within the usual limit, we have booked ApplianceFix South West for Monday 12 October, 09:00-11:00. This is a callback on their 30 August visit, which was a temporary fix only, so we have asked for any charge to be covered under that callback. Their call-out fee is £95, which is within your £250 authority. They will find the source of the leak and confirm whether it caused the water coming through to Flat 6 below.\n\n2. Some facts relevant to \"repair not replace\":\n- The machine (Beko WTK94121W) was supplied new in March 2024, according to the check-in inventory. It is about 2.5 years old, not one year.\n- This is its 4th fault in about 11 months: carbon brushes in Nov 2025 (£120), door seal in May 2026 (£135), and bearing noise plus a pump housing leak in Aug 2026 (£110, temporary fix). That is £365 spent so far.\n- On 30 August the engineer recorded that the machine is beyond economical repair and recommended a replacement at about £350 supplied and fitted.\n- Your standing instruction is to repair unless an engineer says a unit is beyond economical repair. That condition has now been met.\n\n3. Wharf Lane Block Management tell us that Flat 6 (directly below) has a wet damp patch on the kitchen ceiling. They say they may involve the freeholder's insurer if the ingress continues. Further patch repairs risk more water damage to Flat 6 and to your own kitchen units.\n\nI have sent you an approval request (ref APR-9BAE23) to replace the machine for about £350. We will send the firm quote after Monday's visit. This is above the £250 limit, so we need your written sign-off. Can you please advise if you approve for me to raise an order for a replacement? If you would rather we only repair it, please confirm that in writing once you have seen the engineer's findings.\n\nKind regards,\nMaintenance Team"
+      },
+      "output": {
+        "message_id": "MSG-D75F61",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "jobs@appliancefix-sw.example.com",
+        "channel": "email",
+        "body": "Request title: Washing machine leaking badly - CALLBACK on your JOB-8798 (30/08/2026). Our ticket TKT-365DCE, booking BKG-842139.\nAddress: Flat 7, Riverside Court, 3 Wharf Lane, Bristol BS1 6XY (3rd floor)\nAppointment: Monday 12/10/2026, 09:00-11:00. Access is via the building concierge desk.\nTenant: Grace Adeyemi, +44 7700 900621 (for access only)\n\nRequest description: Beko WTK94121W. Badly leaking during spin on 09/10, water across the kitchen floor and under the units. The machine is switched off and not in use. Water may have come through to the kitchen ceiling of Flat 6 below.\nThis fault comes back within 90 days of your temporary fix on 30/08 (pump housing leak), so please treat this as a callback under your workmanship terms. Please tell us in writing if you intend to charge anything beyond the call-out.\n\nPlease:\n(1) identify the leak source, including the inlet hose, isolation valve and waste;\n(2) confirm in writing whether this leak explains the water reaching the flat below;\n(3) make the machine safe and isolate it;\n(4) do NOT carry out any repair over £250 without our written authorisation;\n(5) send a written quote to replace it (supply, fit, removal of the old unit), in line with your beyond-economical-repair note;\n(6) send photos of your findings.\n\nIf you have already scheduled an appointment, reply with the date and time."
+      },
+      "output": {
+        "message_id": "MSG-30ADE3",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "+44 117 000 0110",
+        "channel": "sms",
+        "body": "Hello, this is the Maintenance Team! Please check your email regarding the property at Flat 7, Riverside Court, 3 Wharf Lane, Bristol BS1 6XY (callback JOB-8798, Mon 12/10 09:00-11:00)."
+      },
+      "output": {
+        "message_id": "MSG-C080E4",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "property_manager",
+        "recipient": "block@wharflane.example.com",
+        "channel": "email",
+        "body": "Dear Wharf Lane Block Management,\n\nRe: Water ingress reported by Flat 6, Riverside Court (your ref RC-2004)\n\nThank you for your email. The tenant of Flat 7 reported a washing machine leak in the kitchen on the evening of 09/10/2026. The machine was switched off immediately and is not being used, which is the likely source of the water coming through. An appliance engineer is booked to attend Flat 7 on Monday 12/10/2026 (morning), and the concierge will give access. The engineer will confirm the source of the leak in writing, and we will tell you the findings.\n\nIf the damp patch in Flat 6 grows or new water appears, please tell us straight away. With the machine out of use, that would point to a different source, and we would send a plumber the same day.\n\nKind regards,\nMaintenance Team (managing agent for Flat 7)"
+      },
+      "output": {
+        "message_id": "MSG-F8C12F",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-365DCE",
+        "note": "Internal observations:\n1) DATE ANOMALY: the case file gives \"now\" as 2026-09-14, but the tenant, landlord and block emails are dated 09-10/10/2026, the ticket timestamp is 2026-10-10 and the contractor slots are 12/10. Block log RC-2004 (Flat 6 stain, 14/09, monitoring) matches the block's \"similar mark in September\". I have worked to the October timeline, which every operational source agrees on. Under that timeline, the 12/10 slot is within the urgent 3-working-day target. If \"now\" really were 14/09, the emails could not exist yet, so I treated the case-date field as wrong.\n2) Contractor choice: ApplianceFix SW is the only appliance engineer on the panel for BS. Policy prefers moving away after 2+ recurrences, but there is no alternative, and this is a callback within 90 days of their temporary fix (JOB-8798), so it is appropriate for them to attend.\n3) Landlord says the machine is \"about a year old\". The inventory KIT-09 and JOB-8611 both say it was supplied new in 03/2024 (about 2.5 years). His \"repair not replace\" conflicts with his own standing instruction (replace if an engineer says beyond economical repair). Approval APR-9BAE23 is pending for about £350. Do not order a replacement without Owen Pryce's written sign-off.\n4) Make/model: the tenant warned our records might say Bosch. The CRM, repair history and block log all say Beko WTK94121W, so there is no discrepancy. ApplianceFix's certifications list \"Bosch\" as a brand, which may be where the confusion came from.\n5) Spend to date on this machine: £365 over 3 jobs. Manufacturer warranty from 03/2024 has probably expired (not verified), so the engineer should confirm it.\n6) Other risks: water went under the units, so possible damage to the kitchen floor/units at Flat 7 (inventory KIT-02: vinyl good at check-in). This is fair wear / appliance failure, not tenant damage, and must not be charged to the deposit. Flat 7 has had sealant renewed 3 times (RC-1000, RC-1036, RC-1054). If Flat 6 ingress continues with the machine isolated, send Wharf Plumbing (CON-WP11, emergency-capable, £100 call-out) to trace the leak.\n7) No embedded instructions or prompt injection found in the case material."
+      },
+      "output": {
+        "note_id": "NOTE-A0E3B5",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "TKT-365DCE",
+        "severity": "high",
+        "to": "property_manager",
+        "reason": "Water ingress into neighbouring Flat 6 with block management threatening a freeholder insurance claim, and the landlord refusing an engineer-recommended replacement above authority on an incorrect premise.",
+        "handover": "PROPERTY: Flat 7, Riverside Court, 3 Wharf Lane, Bristol BS1 6XY (PROP-0205). Landlord: Riverside Court Investments Ltd, Owen Pryce (LL-0610), £250 limit, needs written sign-off above that. Tenancy TEN-5012 is active (rolling). Tenants: Grace Adeyemi and Sam Whitlock. No vulnerability noted.\nFACTS: On 09/10 the landlord-supplied Beko WTK94121W leaked badly during spin, under the kitchen units (tenant email and photo). The machine is now off and not in use. This is its 4th fault in 11 months, all handled by ApplianceFix SW: Nov 2025 £120, May 2026 £135, Aug 2026 £110 temporary fix. On 30/08 the engineer recorded \"beyond economical repair, replace approx £350\". Block management (10/10) report a wet damp patch on Flat 6's kitchen ceiling below, and a similar mark in September (block log RC-2004, monitoring). They want the source confirmed and mention the freeholder's insurer. The landlord (10/10) says \"repair not replace, only about a year old, keep under limit\". Records show it was supplied new in 03/2024, and his standing instruction allows replacement once an engineer says beyond economical repair.\nDONE: Ticket TKT-365DCE (urgent). ApplianceFix SW booked as a callback on JOB-8798 for Mon 12/10 09:00-11:00 via the concierge (BKG-842139, call-out £95, within authority). They were asked to find the leak source, confirm in writing whether it explains the Flat 6 ingress, isolate the machine, provide a written replacement quote and photos, and do nothing chargeable over £250. Landlord approval APR-9BAE23 for about £350 replacement is pending, and the landlord has been emailed the evidence. The tenant was emailed the appointment, interim advice (isolate the valve, report any ongoing water) and a pets reminder. Block management got a holding reply confirming the investigation (sent with recipient type 'property_manager' because the tool has no block-manager type).\nBLOCKED / FOR YOU: (a) If Owen still refuses replacement after the quote, decide whether to push back. Continued patch repairs on a BER machine that has already caused ingress downstairs expose the landlord to liability and an insurer claim. Recommend a call to Owen to secure written approval. (b) Deal with the insurer/block correspondence. Any third-party damage claim from Flat 6 is outside the agent's authority. Consider advising the landlord to notify his own insurer. (c) Note the date anomaly: the case date says 14/09/2026 but all material is dated October. I worked to October.\nRECOMMENDED: Approve replacement (about £350, within the landlord's own BER rule) once the 12/10 quote arrives. Send the engineer's written leak-source finding to the block. Chase the landlord on 13/10 if he has not replied."
+      },
+      "output": {
+        "escalation_id": "ESC-622E1E",
+        "status": "queued",
+        "to": "property_manager",
+        "severity": "high"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-365DCE",
+        "status": "appointment_booked",
+        "comment": "ApplianceFix SW callback Mon 12/10 09:00-11:00 via concierge (BKG-842139). Replacement approval APR-9BAE23 pending with landlord. Escalated to PM re Flat 6 ingress/insurer. Chase landlord and get engineer findings 13/10."
+      },
+      "output": {
+        "status_id": "STS-0864B6",
+        "status": "appointment_booked",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 9,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "+44 7700 900621",
+        "channel": "sms",
+        "body": "Hello, this is the Maintenance Team! Your washing machine leak appointment is scheduled for 09:00-11:00 (Mon 12 Oct 2026) with ApplianceFix South West, access via concierge. To reschedule call +44 117 000 0110"
+      },
+      "output": {
+        "message_id": "MSG-9BC400",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Now communications to tenant, landlord, contractor and block management.",
+    "I've booked an engineer for Monday, asked the landlord to approve a replacement machine, and escalated the case to the property manager because water has come through into the flat below. The case is now **appointment booked** (ticket TKT-365DCE, urgent).\n\n**Where it stands**\n- The tenants' washing machine leaked badly during spin and the water went under the kitchen units. They have switched it off and are not using it, so the leak is contained. That makes it urgent, not an emergency.\n- It is a Beko WTK94121W, supplied new in March 2024, so about 2.5 years old. Every record says Beko, so the tenant's \"Bosch\" worry doesn't apply.\n- This is the machine's 4th fault in 11 months, all handled by ApplianceFix South West, at £365 so far. On 30 August their engineer did a temporary fix and wrote that the machine is beyond economical repair, recommending a replacement at about £350 fitted.\n- Owen Pryce (for the landlord company) says \"repair not replace, it's only about a year old.\" The age is wrong, and his own standing instruction allows replacement once an engineer says a unit is beyond economical repair.\n- Block management say Flat 6, directly below, has a wet patch on the kitchen ceiling. They may involve the freeholder's insurer if it continues.\n\n**What I did**\n1. **Booked ApplianceFix South West** for Monday 12 October, 09:00–11:00, with the concierge letting them in (booking BKG-842139). It's a callback on their August temporary fix, within 90 days. Their call-out is £95, inside the £250 limit. They are the only appliance engineer on our panel for this area. I asked them to:\n   - find the leak source and confirm in writing whether it caused the water in Flat 6;\n   - isolate the machine and send photos;\n   - send a written quote for a replacement;\n   - do nothing over £250 without our authorisation.\n2. **Asked Owen to approve a replacement** at about £350 (APR-9BAE23, pending) and emailed him the evidence. No replacement will be ordered without his written sign-off.\n3. **Told the tenant** about the appointment by email and SMS. I advised them to turn off the water to the machine, tell us at once if water keeps appearing, and mention any pets to the engineer.\n4. **Sent block management a holding reply.** The messaging tool has no block-manager option, so this went under \"property manager\".\n5. **Escalated to the property manager** (high priority) about the water damage to Flat 6 and the possible insurance claim, and about Owen refusing a replacement above our spending limit. I also added an internal note to the ticket.\n\n**The case date doesn't match the emails.** The case file says today is 14 September 2026, but all the emails are dated 9–10 October, the ticket was stamped 10 October and the engineer's slots are 12 October. I worked to the October timeline. On that timeline Monday's slot meets the urgent target of 3 working days.\n\n**For the property manager**\n- **13 October:** chase Owen and collect the engineer's findings and quote.\n- If he still refuses, push for written approval: more patch repairs on this machine risk further damage to Flat 6.\n- Handle any insurer or Flat 6 damage correspondence, and consider advising Owen to notify his own insurer.\n- Send the engineer's written finding on the leak source to block management.\n- If water keeps appearing with the machine isolated, send Wharf Plumbing the same day.\n- Kitchen floor or unit damage comes from the machine failing, not the tenants, so it must not come out of their deposit."
+  ]
+}

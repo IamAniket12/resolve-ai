@@ -36,12 +36,39 @@ class AnthropicLLM(LLM):
                 self.use_fallbacks = False
         return self.client.messages.create(**kw)
 
+    @staticmethod
+    def _with_cache_breakpoints(messages: List[dict]) -> List[dict]:
+        """Copy the messages and mark two cache breakpoints: the case material (first user message) and the
+        latest turn. With the system prompt that is three of the four allowed. Every step then re-reads the whole
+        prefix from cache instead of paying full price for it. Markers never accumulate because we copy each time."""
+        import copy
+        msgs = copy.deepcopy(messages)
+        if not msgs:
+            return msgs
+
+        def blocks(m: dict) -> List[dict]:
+            if isinstance(m["content"], str):
+                m["content"] = [{"type": "text", "text": m["content"]}]
+            return m["content"]
+
+        def mark(m: dict) -> None:
+            bl = blocks(m)
+            for b in reversed(bl):
+                if isinstance(b, dict) and b.get("type") in {"text", "tool_result", "image", "document"}:
+                    b["cache_control"] = {"type": "ephemeral"}
+                    return
+
+        mark(msgs[0])
+        if len(msgs) > 1:
+            mark(msgs[-1])
+        return msgs
+
     def _common(self, system: str, messages: List[dict], tools: List[dict]) -> Dict[str, Any]:
         return {
             "model": self.model,
             "max_tokens": 16000,
             "system": [{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
-            "messages": messages,
+            "messages": self._with_cache_breakpoints(messages),
             "tools": tools,
             "thinking": {"type": "adaptive"},
         }

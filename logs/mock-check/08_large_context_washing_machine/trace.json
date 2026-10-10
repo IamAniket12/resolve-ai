@@ -5,8 +5,8 @@
   "provider": "mock",
   "model": "mock-rules-v1",
   "steps": 8,
-  "started_at": "2026-10-10T10:17:53+00:00",
-  "finished_at": "2026-10-10T10:17:53+00:00",
+  "started_at": "2026-10-10T10:28:18+00:00",
+  "finished_at": "2026-10-10T10:28:18+00:00",
   "usage": {},
   "manifest": [
     {
@@ -244,7 +244,7 @@
         "description": "Case ID: 08_large_context_washing_machine\nSource: data/sample_cases/08_large_context_washing_machine\nFiles received (7): 01_tenant_report.eml (email), 02_landlord_reply.eml (email), 03_block_management.eml (email), block_repair_log.csv (csv), crm_record.json (json), inventory_checkin_2024.pdf (pdf), photo_kitchen_floor.png (image)\nCase date: 2026-09-14. Treat this as \"now\" for ages, deadlines, chase dates and how long people have been waiting; today's real date is irrelevant.\n\nWork this case now. Use the tools to verify and act. When you have finished acting (or determined that you must stop), end your turn with a short plain-text summary of the outcome.\n\n<case_material>\n<<<FILE name=\"01_tenant_report.eml\" kind=\"email\">>>\nFrom: Grace Adeyemi <grace.adeyemi@example.com>\nTo: maintenance@agen",
         "reported_by": "Grace Adeyemi",
         "status": "scheduled",
-        "created_at": "2026-10-10T11:17:53"
+        "created_at": "2026-10-10T11:28:18"
       },
       "ok": true,
       "error": null,

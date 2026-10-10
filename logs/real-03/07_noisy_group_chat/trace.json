@@ -1,0 +1,840 @@
+{
+  "case_id": "07_noisy_group_chat",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 10,
+  "started_at": "2026-10-10T10:17:54+00:00",
+  "finished_at": "2026-10-10T10:21:54+00:00",
+  "usage": {
+    "input_tokens": 261929,
+    "output_tokens": 18111,
+    "cache_read_input_tokens": 97575,
+    "cache_creation_input_tokens": 9589
+  },
+  "manifest": [
+    {
+      "name": "crm_record.json",
+      "kind": "json",
+      "chars": 476,
+      "note": ""
+    },
+    {
+      "name": "whatsapp_group_export.txt",
+      "kind": "text",
+      "chars": 33828,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "Tenant Ben Okoro emailed maintenance@ (received 08/10/2026 05:40) about 14 Linden Grove, Leeds LS6 2AB (PROP-0188, landlord Fatima Begum, tenancy TEN-5011 rolling/active, 3 sharers). He attached a long, noisy WhatsApp group export containing three real repairs. (1) The bathroom extractor fan is dead and black mould is spreading, and Ben reports his asthma has worsened; this is mould with a health complaint, so Awaab's Law applies. (2) The landlord-supplied glass induction hob is cracked, which Priya Menon admits she caused. (3) A gutter drips outside a bedroom window (routine). Everything else in the chat is household chatter.",
+    "issue_category": "damp/mould (primary); also appliance (tenant-damaged induction hob) and structural/exterior (gutter)",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "Three tickets were opened. Gutter: HandyPro booked for Tue 13/10 09:00-11:00 (BKG-1EE833). Fan/mould: Bright Spark Electrical and DryHome Damp Specialists have been sent the job details and the job is on hold, Waiting for Tenant, until someone confirms they can be home Mon 12/10 14:00-16:00. Hob: the tenants were told to isolate it and it is on hold for a quote, to be charged to Priya Menon.",
+    "actions_taken": [
+      "Looked up the property PROP-0188, the tenancy (TEN-5011 active/rolling, 3 tenants) and the repair history (JOB-8720: fan bearing lubricated 18/04/2026 by CON-EL05, replacement advised at next fault)",
+      "Searched the panel for electricians, damp specialists, appliance engineers, roofers and handypersons for LS6; checked availability for CON-EL05, CON-DS08, CON-YH13 (urgent) and CON-HP07 (routine)",
+      "Created ticket TKT-C94980 (fan failed + black mould, urgent, damp_mould)",
+      "Created ticket TKT-DD3AE3 (cracked induction hob, tenant-caused, urgent make-safe + quote)",
+      "Created ticket TKT-1B6529 (gutter dripping, routine)",
+      "Booked HandyPro (CON-HP07) for TKT-1B6529, slot SLOT-ROU-1, Tue 13/10/2026 09:00-11:00, booking BKG-1EE833, est. £75, external only",
+      "Sent WhatsApp to Ben Okoro (+44 7700 900613) covering all three issues: asked whether someone can be home Mon 12/10 from 2pm, gave mould interim advice, told them to stop using and isolate the whole hob, gave the gutter appointment, gas-smell advice (0800 111 999) and a pets reminder (MSG-C81964, delivered)",
+      "Emailed Priya Menon that the hob must be isolated, that the cost will be charged to her in line with the landlord's instruction, and that a quote will follow before any work (MSG-3F667E, delivered)",
+      "Emailed landlord Fatima Begum about all three issues with the tenant's verbatim words, the Awaab's Law urgency, that the fan/mould jobs are within the £250 limit, that the hob will be charged to the tenant with a quote to follow, and the gutter booking (MSG-49F727, delivered)",
+      "Emailed Bright Spark Electrical with the fan replacement job (pre-authorised up to £250, quote first if more) and a request to isolate and quote the hob without replacing it; told them the Mon 12/10 14:00-16:00 booking will follow tenant confirmation (MSG-53749E, delivered)",
+      "Emailed DryHome Damp Specialists with the mould inspection, treatment and report job (pre-authorised up to £250); told them the Mon 12/10 14:00-16:00 booking will follow tenant confirmation (MSG-84A6F1, delivered)",
+      "Recorded an internal note on TKT-C94980 covering date discrepancies, truncated export, ignored noise, the 'weird smell' handling, the asthma flag and contractor selection reasoning (NOTE-38A9C7)",
+      "Set statuses: TKT-C94980 awaiting_tenant (chase 09/10); TKT-DD3AE3 awaiting_quote (check 13/10); TKT-1B6529 appointment_booked (completion check 14/10)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Property: 14 Linden Grove, Leeds LS6 2AB (PROP-0188). Landlord: Fatima Begum (LL-0533), f.begum@example.com, standard £250 authority, tenants pay for damage they cause via the deposit. Tenancy TEN-5011 is active/rolling with Josh Carter, Priya Menon and Ben Okoro; the WhatsApp group is the agreed channel and someone is usually home after 4pm.\n\nTKT-C94980, fan + mould (urgent, Awaab's Law):\n- Waiting for Ben to confirm access for Mon 12/10 14:00-16:00.\n- When he confirms, book Bright Spark CON-EL05 SLOT-URG-2 and DryHome CON-DS08 SLOT-URG-2 via schedule_contractor.\n- If he can't do it, ask the contractors for a time after 4pm. The investigation must happen by 22/10.\n- Chase Ben 09/10 if he hasn't replied.\n\nTKT-DD3AE3, hob:\n- Tenants told to isolate the hob. Bright Spark will inspect and quote on the fan visit.\n- Send the quote to the landlord (quote approval email) and to Priya, who has been told she'll be charged.\n\nTKT-1B6529, gutter:\n- HandyPro booked 13/10 09:00-11:00 (BKG-1EE833, ~£75).\n- Run the completion check 14/10."
+    },
+    "conflicts": [
+      {
+        "description": "The chat says the email was sent to maintenance@ on 26/09/2026, but the CRM shows it received on 08/10/2026 05:40, and the export header says 'Exported 10/10/2026', which is after the case date.",
+        "how_resolved": "Used the CRM receipt time (08/10) as the start of the agency's clock and set the Awaab's Law investigation deadline to 22/10. Recorded that the tenants may have been waiting since about 26/09. Possibly a date-format or clock error; it doesn't change the action."
+      },
+      {
+        "description": "The tenancy record's fixed term ended 31/08/2026, but its status is active.",
+        "how_resolved": "The record shows rolling: true and status active, so I treated it as a periodic tenancy continuing with the same three tenants, who match the chat."
+      },
+      {
+        "description": "Tenants say they are home after 4pm, but every urgent slot offered ends by 16:00.",
+        "how_resolved": "Didn't book. Asked the tenants to confirm access for 14:00-16:00 first, as the policy requires access to be confirmed with the tenant before confirming to the contractor."
+      }
+    ],
+    "information_gaps": [
+      "About 8.8k characters of the export (around 05/09-15/09) were truncated and not reviewed; there may be other reports in that part. Noted on the ticket.",
+      "Tenant access for Mon 12/10 14:00-16:00 is unconfirmed; asked Ben via WhatsApp.",
+      "The cost of the fan replacement and mould treatment is unknown; contractors were told to quote first if over £250.",
+      "The hob repair/replacement cost is unknown; a quote was requested from the electrician.",
+      "It's not clear whose window the gutter is outside or whether it's at the front or rear; the handyperson was told to check both and call the tenant if access is needed.",
+      "The cause of the 'weird smell in the hall' is unverified; the tenants put it down to neighbour cooking. Gas advice given."
+    ],
+    "assumptions": [
+      "Ben's worsening asthma counts as a health complaint, so the mould is urgent under Awaab's Law; without immediate danger it doesn't go to emergency band.",
+      "The fan replacement and the damp inspection/treatment are each within the £250 pre-authorised limit (call-outs £130 and £180), so they can proceed without landlord approval and the landlord was informed.",
+      "The electrician can isolate the induction hob and quote for a like-for-like replacement, because no appliance engineer on the panel covers LS.",
+      "A handyperson is suitable for gutter clearance or joint resealing, because no roofer on the panel covers LS.",
+      "The 'weird smell in the hall' is not a gas report; the tenants consistently put it down to neighbour cooking.",
+      "The gutter job is external only, so no internal access confirmation was needed and more than 24 hours' notice was given."
+    ],
+    "tenant_communication": "Ben (WhatsApp, for the household): we're treating the fan/mould as urgent; Bright Spark and DryHome can come Mon 12/10 2-4pm, please confirm someone is home from 2pm; interim mould advice (ventilate, wipe condensation, no bleach, see the GP if breathing worsens); stop using and isolate the whole hob; HandyPro booked Tue 13/10 9-11am for the gutter (external); gas-smell advice 0800 111 999; tell contractors about pets. Priya (email): isolate the hob; the repair will be charged to her per the landlord's instruction; a quote will be sent before any work.",
+    "landlord_communication": "Fatima Begum emailed about all three issues with the tenant's verbatim words. Fan/mould is urgent (Awaab's Law, health complaint), arranged within the £250 limit with Bright Spark and DryHome provisionally for Mon 12/10, and any quote above that will come to her for approval. The hob damage is tenant-caused and will be charged to Priya, with a quote to follow for her approval. The gutter is booked with HandyPro for Tue 13/10 (~£75). Invited her to say if she prefers her own contractor.",
+    "next_steps": [
+      "09/10: chase Ben if no reply on access. On confirmation, book CON-EL05 and CON-DS08 SLOT-URG-2 (Mon 12/10 14:00-16:00), send the appointment confirmation to the tenant, and set TKT-C94980 to appointment_booked.",
+      "If 12/10 access isn't possible, get after-4pm slots from the contractors; the investigation must happen by 22/10 (Awaab's Law).",
+      "After the 12/10 visit: get completion evidence (photos, DryHome report, invoices) and check the invoices against the £250 authority.",
+      "Hob: when Bright Spark's quote arrives, send the quote approval email to the landlord and share the cost with Priya Menon; order only after approval and agreement on payment (deposit deduction or direct).",
+      "Gutter: completion check with HandyPro and the tenants on 14/10; close as completed once invoiced.",
+      "Fan replacement makes 2 fan jobs in 12 months; if the fault recurs, recommend a ventilation review to the landlord.",
+      "If any tenant describes the hall smell as gas, switch to the gas emergency procedure and escalate."
+    ],
+    "risk_flags": [
+      "Damp/mould with a health complaint (Ben Okoro's worsening asthma): Awaab's Law, investigate by 22/10/2026",
+      "The mould has been spreading for about 5 weeks since the fan failed; the tenants' report reached us about 12 days after they say they sent it",
+      "Cracked glass on the induction hob is an electrical safety risk; tenants told to isolate it",
+      "Repeated 'weird smell in the hall' reports, put down to neighbour cooking; gas advice given, monitor",
+      "Tenant-caused damage (hob) chargeable to Priya Menon; keep evidence for any deposit deduction",
+      "Part of the export was truncated and not reviewed"
+    ],
+    "confidence": 0.8,
+    "reasoning": "Records confirmed the property, landlord, active rolling tenancy and fan history.\n\nFan/mould:\n- A dead extractor fan with spreading mould plus a tenant's worsening asthma counts as damp/mould with a health complaint, so it is at least urgent under Awaab's Law.\n- This is the landlord's responsibility (ventilation, electrical installation, fitness for habitation).\n- The previous fan job was 173 days ago, more than 90, so it isn't a warranty callback. Bright Spark was kept for continuity since it had advised replacement.\n- Both jobs sit within the £250 standing authority, so no approval step was needed and the landlord was informed.\n- Bookings were held back because policy requires tenant access to be confirmed first and every slot conflicted with the after-4pm availability.\n\nHob:\n- The tenant admits causing the damage and the landlord says tenants pay, so it's chargeable. Safety was dealt with first by telling them to isolate.\n- A quote is needed before ordering because the cost is unknown and likely above the limit.\n\nGutter:\n- Routine exterior repair, landlord's responsibility, within authority. Booked with the only suitable panel trade covering LS.\n\nNoise was ignored, and the date discrepancies were recorded. No escalation, since the policy gives the answers and the tools succeeded."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "PROP-0188"
+      },
+      "output": {
+        "found": true,
+        "property_id": "PROP-0188",
+        "address": "14 Linden Grove, Leeds",
+        "postcode": "LS6 2AB",
+        "type": "house (3-bed terrace, 3 sharers)",
+        "landlord_id": "LL-0533",
+        "landlord_name": "Fatima Begum",
+        "landlord_phone": "+44 7700 900533",
+        "landlord_email": "f.begum@example.com",
+        "landlord_instructions": "Standard authority. Tenants are responsible for damage they cause; recharge via deposit.",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "gas_safety_cert_expiry": "2027-03-15",
+        "eicr_expiry": "2028-09-01",
+        "boiler": {
+          "make": "Ideal Logic",
+          "installed": "2020-05",
+          "age_years": 6
+        },
+        "notes": "Bathroom has a ceiling extractor fan on the light circuit. Glass induction hob (landlord-supplied, 2023)."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "PROP-0188"
+      },
+      "output": {
+        "tenancies": [
+          {
+            "tenancy_id": "TEN-5011",
+            "property_id": "PROP-0188",
+            "status": "active",
+            "tenants": [
+              {
+                "name": "Josh Carter",
+                "phone": "+44 7700 900611",
+                "email": "josh.carter@example.com"
+              },
+              {
+                "name": "Priya Menon",
+                "phone": "+44 7700 900612",
+                "email": "priya.menon@example.com"
+              },
+              {
+                "name": "Ben Okoro",
+                "phone": "+44 7700 900613",
+                "email": "ben.okoro@example.com"
+              }
+            ],
+            "start": "2025-09-01",
+            "end": "2026-08-31",
+            "rolling": true,
+            "vulnerability_notes": "",
+            "access_notes": "Someone usually home after 4pm; WhatsApp group is the agreed contact channel."
+          }
+        ],
+        "active_tenancy": {
+          "tenancy_id": "TEN-5011",
+          "property_id": "PROP-0188",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Josh Carter",
+              "phone": "+44 7700 900611",
+              "email": "josh.carter@example.com"
+            },
+            {
+              "name": "Priya Menon",
+              "phone": "+44 7700 900612",
+              "email": "priya.menon@example.com"
+            },
+            {
+              "name": "Ben Okoro",
+              "phone": "+44 7700 900613",
+              "email": "ben.okoro@example.com"
+            }
+          ],
+          "start": "2025-09-01",
+          "end": "2026-08-31",
+          "rolling": true,
+          "vulnerability_notes": "",
+          "access_notes": "Someone usually home after 4pm; WhatsApp group is the agreed contact channel."
+        },
+        "warning": null
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "PROP-0188"
+      },
+      "output": {
+        "property_id": "PROP-0188",
+        "jobs": [
+          {
+            "job_id": "JOB-8720",
+            "property_id": "PROP-0188",
+            "date": "2026-04-18",
+            "category": "electrical",
+            "description": "Bathroom extractor fan noisy; bearing lubricated. Advised fan is 8+ years old and should be replaced at next fault.",
+            "contractor_id": "CON-EL05",
+            "cost_gbp": 85,
+            "outcome": "completed"
+          }
+        ],
+        "count": 1
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "electrician",
+        "postcode": "LS6 2AB",
+        "emergency": false
+      },
+      "output": {
+        "trade": "electrician",
+        "postcode": "LS6 2AB",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-EL05",
+            "name": "Bright Spark Electrical",
+            "trades": [
+              "electrician"
+            ],
+            "certifications": [
+              "NICEIC 77001"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.7,
+            "emergency": true,
+            "call_out_gbp": 130,
+            "phone": "+44 20 7946 0105",
+            "email": "book@brightspark.example.com"
+          },
+          {
+            "contractor_id": "CON-YH13",
+            "name": "Yorkshire Heat & Electrical",
+            "trades": [
+              "gas_engineer",
+              "electrician"
+            ],
+            "certifications": [
+              "Gas Safe 655001",
+              "NICEIC 80211"
+            ],
+            "postcode_areas": [
+              "LS",
+              "BD",
+              "WF"
+            ],
+            "rating": 4.6,
+            "emergency": true,
+            "call_out_gbp": 120,
+            "phone": "+44 113 000 0113",
+            "email": "book@yhe.example.com"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "damp_specialist",
+        "postcode": "LS6 2AB",
+        "emergency": false
+      },
+      "output": {
+        "trade": "damp_specialist",
+        "postcode": "LS6 2AB",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-DS08",
+            "name": "DryHome Damp Specialists",
+            "trades": [
+              "damp_specialist"
+            ],
+            "certifications": [
+              "PCA member"
+            ],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.4,
+            "emergency": false,
+            "call_out_gbp": 180,
+            "phone": "+44 20 7946 0108",
+            "email": "survey@dryhome.example.com"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "appliance_engineer",
+        "postcode": "LS6 2AB",
+        "emergency": false
+      },
+      "output": {
+        "trade": "appliance_engineer",
+        "postcode": "LS6 2AB",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-AF10",
+            "name": "ApplianceFix South West",
+            "trades": [
+              "appliance_engineer"
+            ],
+            "certifications": [
+              "Manufacturer-trained (Beko, Bosch)"
+            ],
+            "postcode_areas": [
+              "BS",
+              "BA"
+            ],
+            "rating": 4.5,
+            "emergency": false,
+            "call_out_gbp": 95,
+            "phone": "+44 117 000 0110",
+            "email": "jobs@appliancefix-sw.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "roofer",
+        "postcode": "LS6 2AB",
+        "emergency": false
+      },
+      "output": {
+        "trade": "roofer",
+        "postcode": "LS6 2AB",
+        "emergency_only": false,
+        "contractors": [],
+        "note": "No contractors match; try emergency=false, a neighbouring trade, or escalate."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "handyperson",
+        "postcode": "LS6 2AB",
+        "emergency": false
+      },
+      "output": {
+        "trade": "handyperson",
+        "postcode": "LS6 2AB",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-HP07",
+            "name": "HandyPro",
+            "trades": [
+              "handyperson",
+              "locksmith",
+              "glazier"
+            ],
+            "certifications": [],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.2,
+            "emergency": true,
+            "call_out_gbp": 75,
+            "phone": "+44 20 7946 0107",
+            "email": "jobs@handypro.example.com"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-EL05",
+        "urgency": "urgent"
+      },
+      "output": {
+        "contractor_id": "CON-EL05",
+        "name": "Bright Spark Electrical",
+        "urgency": "urgent",
+        "slots": [
+          {
+            "slot_id": "SLOT-URG-1",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          },
+          {
+            "slot_id": "SLOT-URG-2",
+            "start": "2026-10-12T14:00",
+            "end": "2026-10-12T16:00"
+          },
+          {
+            "slot_id": "SLOT-URG-3",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-DS08",
+        "urgency": "urgent"
+      },
+      "output": {
+        "contractor_id": "CON-DS08",
+        "name": "DryHome Damp Specialists",
+        "urgency": "urgent",
+        "slots": [
+          {
+            "slot_id": "SLOT-URG-1",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          },
+          {
+            "slot_id": "SLOT-URG-2",
+            "start": "2026-10-12T14:00",
+            "end": "2026-10-12T16:00"
+          },
+          {
+            "slot_id": "SLOT-URG-3",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-YH13",
+        "urgency": "urgent"
+      },
+      "output": {
+        "contractor_id": "CON-YH13",
+        "name": "Yorkshire Heat & Electrical",
+        "urgency": "urgent",
+        "slots": [
+          {
+            "slot_id": "SLOT-URG-1",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          },
+          {
+            "slot_id": "SLOT-URG-2",
+            "start": "2026-10-12T14:00",
+            "end": "2026-10-12T16:00"
+          },
+          {
+            "slot_id": "SLOT-URG-3",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-HP07",
+        "urgency": "routine"
+      },
+      "output": {
+        "contractor_id": "CON-HP07",
+        "name": "HandyPro",
+        "urgency": "routine",
+        "slots": [
+          {
+            "slot_id": "SLOT-ROU-1",
+            "start": "2026-10-13T09:00",
+            "end": "2026-10-13T11:00"
+          },
+          {
+            "slot_id": "SLOT-ROU-2",
+            "start": "2026-10-16T09:00",
+            "end": "2026-10-16T11:00"
+          },
+          {
+            "slot_id": "SLOT-ROU-3",
+            "start": "2026-10-20T09:00",
+            "end": "2026-10-20T11:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "PROP-0188",
+        "title": "Bathroom extractor fan failed - black mould spreading, tenant reports asthma worse",
+        "category": "damp_mould",
+        "urgency": "urgent",
+        "description": "Reported by Ben Okoro (tenant) by email to maintenance@, received 08/10/2026 05:40, with the house WhatsApp export attached. In the chat on 17/09/2026 Priya Menon wrote: \"the bathroom extractor fan has stopped working completely, it's not just noisy any more. the ceiling above the shower has black mould patches now, it's spreading onto the wall\". Josh Carter: \"it's been dead about 2 weeks. I've been opening the window but it's not enough\" (so the fan failed around early Sept). Ben Okoro: \"my asthma's been worse this month, not sure if it's that but probably doesn't help\" - that is a HEALTH COMPLAINT, so Awaab's Law applies: at least urgent, investigate within 14 days of 08/10 (by 22/10/2026). History: JOB-8720 on 18/04/2026, Bright Spark Electrical (CON-EL05), fan was noisy, bearing lubricated, £85. They advised the fan is 8+ years old and should be replaced at the next fault. That was 173 days ago, so it is outside the 90-day callback window and is not a warranty job, but the fault is the same, so it goes back to the same contractor for continuity. The fan is on the bathroom light circuit (per the property record). This is the landlord's responsibility (ventilation/electrical installation, fitness for habitation). Scope: replace the extractor fan (consider a humidistat/overrun model) and inspect/treat the mould on the ceiling and wall above the shower, finding the cause.",
+        "reported_by": "Ben Okoro (tenant), on behalf of the household (Priya Menon, Josh Carter)"
+      },
+      "output": {
+        "ticket_id": "TKT-C94980",
+        "property_id": "PROP-0188",
+        "title": "Bathroom extractor fan failed - black mould spreading, tenant reports asthma worse",
+        "category": "damp_mould",
+        "urgency": "urgent",
+        "description": "Reported by Ben Okoro (tenant) by email to maintenance@, received 08/10/2026 05:40, with the house WhatsApp export attached. In the chat on 17/09/2026 Priya Menon wrote: \"the bathroom extractor fan has stopped working completely, it's not just noisy any more. the ceiling above the shower has black mould patches now, it's spreading onto the wall\". Josh Carter: \"it's been dead about 2 weeks. I've been opening the window but it's not enough\" (so the fan failed around early Sept). Ben Okoro: \"my asthma's been worse this month, not sure if it's that but probably doesn't help\" - that is a HEALTH COMPLAINT, so Awaab's Law applies: at least urgent, investigate within 14 days of 08/10 (by 22/10/2026). History: JOB-8720 on 18/04/2026, Bright Spark Electrical (CON-EL05), fan was noisy, bearing lubricated, £85. They advised the fan is 8+ years old and should be replaced at the next fault. That was 173 days ago, so it is outside the 90-day callback window and is not a warranty job, but the fault is the same, so it goes back to the same contractor for continuity. The fan is on the bathroom light circuit (per the property record). This is the landlord's responsibility (ventilation/electrical installation, fitness for habitation). Scope: replace the extractor fan (consider a humidistat/overrun model) and inspect/treat the mould on the ceiling and wall above the shower, finding the cause.",
+        "reported_by": "Ben Okoro (tenant), on behalf of the household (Priya Menon, Josh Carter)",
+        "status": "open",
+        "created_at": "2026-10-10T11:19:34"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "PROP-0188",
+        "title": "Cracked glass on induction hob (tenant-caused) - make safe and quote, rechargeable",
+        "category": "appliance",
+        "urgency": "urgent",
+        "description": "Reported in the house WhatsApp export that Ben Okoro (tenant) emailed to us on 08/10/2026. On 20/09/2026 Priya Menon wrote: \"I dropped the cast iron pan on the hob yesterday and the glass has a big crack across the back left ring. the other rings work but I'm not using the cracked one. sorry I know that's on me\" and \"yeah I'll cover it\". So the damage happened around 19/09/2026. The appliance is a landlord-supplied glass induction hob (2023, per the property record). A cracked glass induction hob is an electrical safety risk (liquid getting in, exposed electronics), so the tenants are being told to stop using the whole hob and switch it off at the cooker isolator / consumer unit. The tenant admits causing the damage. The landlord's standing instruction is: \"Tenants are responsible for damage they cause; recharge via deposit\". So this is CHARGEABLE TO THE TENANT (Priya Menon), but it still needs making safe. No appliance engineer on the panel covers LS. The electrician attending for the extractor fan will inspect, confirm isolation and quote for a like-for-like replacement. The quote then goes to the landlord for approval and to the tenant for the recharge.",
+        "reported_by": "Priya Menon (tenant, via group chat forwarded by Ben Okoro)"
+      },
+      "output": {
+        "ticket_id": "TKT-DD3AE3",
+        "property_id": "PROP-0188",
+        "title": "Cracked glass on induction hob (tenant-caused) - make safe and quote, rechargeable",
+        "category": "appliance",
+        "urgency": "urgent",
+        "description": "Reported in the house WhatsApp export that Ben Okoro (tenant) emailed to us on 08/10/2026. On 20/09/2026 Priya Menon wrote: \"I dropped the cast iron pan on the hob yesterday and the glass has a big crack across the back left ring. the other rings work but I'm not using the cracked one. sorry I know that's on me\" and \"yeah I'll cover it\". So the damage happened around 19/09/2026. The appliance is a landlord-supplied glass induction hob (2023, per the property record). A cracked glass induction hob is an electrical safety risk (liquid getting in, exposed electronics), so the tenants are being told to stop using the whole hob and switch it off at the cooker isolator / consumer unit. The tenant admits causing the damage. The landlord's standing instruction is: \"Tenants are responsible for damage they cause; recharge via deposit\". So this is CHARGEABLE TO THE TENANT (Priya Menon), but it still needs making safe. No appliance engineer on the panel covers LS. The electrician attending for the extractor fan will inspect, confirm isolation and quote for a like-for-like replacement. The quote then goes to the landlord for approval and to the tenant for the recharge.",
+        "reported_by": "Priya Menon (tenant, via group chat forwarded by Ben Okoro)",
+        "status": "open",
+        "created_at": "2026-10-10T11:19:34"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "PROP-0188",
+        "title": "Gutter dripping outside bedroom window when it rains",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Reported in the house WhatsApp export that Ben Okoro (tenant) emailed to us on 08/10/2026. The same message appears many times from 23/08/2026 onwards, posted by different tenants: \"the gutter is dripping outside my window when it rains, not urgent just annoying\". On 24/09 Josh Carter called it \"the gutter thing but that's minor\". It is not clear whose window it is or whether it is at the front or the rear. This is exterior, so it is the landlord's responsibility (s.11 LTA 1985). The likely cause is a blocked gutter or a leaking joint. No roofer on the panel covers LS, so it is going to a handyperson for gutter clearance or joint repair, within the £250 authority. Ask the handyperson to report any defect that needs a roofer.",
+        "reported_by": "Ben Okoro (tenant), on behalf of household"
+      },
+      "output": {
+        "ticket_id": "TKT-1B6529",
+        "property_id": "PROP-0188",
+        "title": "Gutter dripping outside bedroom window when it rains",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Reported in the house WhatsApp export that Ben Okoro (tenant) emailed to us on 08/10/2026. The same message appears many times from 23/08/2026 onwards, posted by different tenants: \"the gutter is dripping outside my window when it rains, not urgent just annoying\". On 24/09 Josh Carter called it \"the gutter thing but that's minor\". It is not clear whose window it is or whether it is at the front or the rear. This is exterior, so it is the landlord's responsibility (s.11 LTA 1985). The likely cause is a blocked gutter or a leaking joint. No roofer on the panel covers LS, so it is going to a handyperson for gutter clearance or joint repair, within the £250 authority. Ask the handyperson to report any defect that needs a roofer.",
+        "reported_by": "Ben Okoro (tenant), on behalf of household",
+        "status": "scheduled",
+        "created_at": "2026-10-10T11:19:34"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "schedule_contractor",
+      "input": {
+        "ticket_id": "TKT-1B6529",
+        "contractor_id": "CON-HP07",
+        "slot_id": "SLOT-ROU-1",
+        "access_notes": "External gutter only, no internal access needed. A gutter drips outside a first-floor bedroom window at 14 Linden Grove LS6 2AB; check the front and rear elevations. The side/rear gate may be unlocked. If you need to get into the house or the rear garden, call the tenant first on +44 7700 900613 (Ben). Someone is usually home after 4pm. Clear the gutter and/or reseal the joint. Pre-authorised up to £250 inc. VAT; report anything that needs a roofer, or that costs more, before you go ahead."
+      },
+      "output": {
+        "booking_ref": "BKG-1EE833",
+        "ticket_id": "TKT-1B6529",
+        "contractor_id": "CON-HP07",
+        "contractor_name": "HandyPro",
+        "slot_id": "SLOT-ROU-1",
+        "access_notes": "External gutter only, no internal access needed. A gutter drips outside a first-floor bedroom window at 14 Linden Grove LS6 2AB; check the front and rear elevations. The side/rear gate may be unlocked. If you need to get into the house or the rear garden, call the tenant first on +44 7700 900613 (Ben). Someone is usually home after 4pm. Clear the gutter and/or reseal the joint. Pre-authorised up to £250 inc. VAT; report anything that needs a roofer, or that costs more, before you go ahead.",
+        "status": "confirmed",
+        "estimated_cost_gbp": 75
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "+44 7700 900613",
+        "channel": "whatsapp",
+        "body": "Hi Ben, thanks for your email about 14 Linden Grove. We've read the chat export and picked out 3 repairs. Please share this with Josh and Priya.\n\n1) Bathroom extractor fan not working + black mould (URGENT). We're treating this as urgent because of your asthma. Bright Spark Electrical will replace the fan, and DryHome Damp Specialists will inspect and treat the mould. Both can come on Mon 12 Oct, 2pm-4pm. Can one of you be home from 2pm that day? Please reply YES, or give us another time, and we'll confirm the booking with them. Until then, keep the bathroom window open during and after showers, wipe condensation off, and keep the door shut so moisture doesn't spread. Do NOT use bleach on the mould. If your breathing gets worse, please speak to your GP and let us know.\n\n2) Cracked induction hob: please stop using the WHOLE hob now, not just the cracked ring. Switch it off at the cooker isolator switch (or the cooker breaker in the consumer unit). A cracked glass top can let liquid reach the electrics. The electrician will check it on the same visit and give us a quote. We'll message Priya separately about that.\n\n3) Gutter dripping: HandyPro is booked for Tue 13 Oct, 9-11am. The work is outside, so nobody needs to be in. If they need to get into the garden or the house, they'll call you first. Please leave the side/rear gate unlocked if you can.\n\nAlso, if the \"weird smell in the hall\" ever smells like gas, open the windows, don't use any switches, leave the house and call 0800 111 999 straight away.\n\nIf you have any pets, please tell the contractors. Thanks, Resolve Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-C81964",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "priya.menon@example.com",
+        "channel": "email",
+        "body": "Dear Priya,\n\nRe: cracked induction hob, 14 Linden Grove, Leeds LS6 2AB\n\nThank you for being upfront about the hob in the house chat. For safety, please stop using the hob altogether, not just the cracked ring. Switch it off at the cooker isolator or the cooker breaker in the consumer unit. Liquid can get through cracked glass to the electrics underneath.\n\nThe hob belongs to the landlord, but the damage was caused accidentally by a tenant. That means the repair or replacement cost will be charged to you. This is in line with the landlord's instructions and your message saying you'll cover it. Usually the charge is taken from the deposit at the end of the tenancy, or you can pay it directly.\n\nOur electrician will check the hob when they come for the bathroom fan and quote for a like-for-like replacement. We'll send you the quote before any work is ordered.\n\nKind regards,\nResolve Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-3F667E",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "f.begum@example.com",
+        "channel": "email",
+        "body": "Address: 14 Linden Grove, Leeds LS6 2AB\nHi Fatima,\n\nOn 08/10 the tenants reported 3 issues. We're dealing with them as follows:\n\n1) Bathroom extractor fan + mould (URGENT, ticket TKT-C94980). Tenant's words: \"the bathroom extractor fan has stopped working completely, it's not just noisy any more. the ceiling above the shower has black mould patches now, it's spreading onto the wall\". One tenant also says his asthma has been worse this month. Because this is mould with a health complaint, the law requires us to investigate within 14 days. In April, Bright Spark Electrical advised that the fan (8+ years old) should be replaced at its next fault. We're arranging a replacement fan with Bright Spark and a mould inspection and treatment with DryHome Damp Specialists, provisionally for Mon 12 Oct, subject to tenant access. Each job is within your £250 pre-authorised limit. If either quote comes in higher, we'll ask you before any work goes ahead.\n\n2) Cracked induction hob (ticket TKT-DD3AE3). Tenant Priya Menon says she accidentally dropped a pan on it around 19/09 and has offered to pay. In line with your instructions, this will be charged to her. We've told the tenants to stop using the hob and isolate it. The electrician will inspect it and quote for a like-for-like replacement, and we'll send you the quote to approve.\n\n3) Gutter dripping outside a bedroom window (routine, ticket TKT-1B6529). HandyPro is booked for Tue 13 Oct, 9-11am. Call-out is about £75, within your limit.\n\nLet me know if you'd rather use your own contractor for any of these.\n\nKind regards,\nResolve Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-49F727",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "book@brightspark.example.com",
+        "channel": "email",
+        "body": "Request: Bathroom extractor fan failed (urgent) + hob safety check/quote\nAddress: 14 Linden Grove, Leeds LS6 2AB\nTickets: TKT-C94980 (fan), TKT-DD3AE3 (hob)\nTenant contact: Ben Okoro, +44 7700 900613\n\nDescription:\n1) The ceiling extractor fan in the bathroom (on the light circuit) has stopped working completely, and black mould is spreading above the shower. You attended on 18/04/2026 (JOB-8720), when you lubricated the bearing and advised replacing the fan at the next fault. Please replace it, ideally with a humidistat/overrun model. This is pre-authorised up to £250 inc. VAT. If it will cost more, send us a quote before doing the work.\n2) The glass induction hob is cracked across the back left ring (accidental tenant damage). Please check it is safely isolated and quote for a like-for-like replacement. Do NOT carry out the replacement until we approve the quote.\n\nWe plan to book you for Mon 12 Oct, 14:00-16:00 (your slot SLOT-URG-2) once the tenant confirms access. We'll confirm shortly. If you have already scheduled an appointment, reply with the date and time."
+      },
+      "output": {
+        "message_id": "MSG-53749E",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "survey@dryhome.example.com",
+        "channel": "email",
+        "body": "Request: Black mould in bathroom, health complaint (urgent, Awaab's Law)\nAddress: 14 Linden Grove, Leeds LS6 2AB\nTicket: TKT-C94980\nTenant contact: Ben Okoro, +44 7700 900613\n\nDescription: Black mould on the bathroom ceiling above the shower is spreading onto the wall. The extractor fan failed about 5 weeks ago and an electrician is replacing it on the same day. One occupant reports worsening asthma. Please inspect, identify the cause, treat the affected areas and send a short written report with photos. This is pre-authorised up to £250 inc. VAT. If further work is needed, quote before doing it.\n\nWe plan to book you for Mon 12 Oct, 14:00-16:00 (your slot SLOT-URG-2) once the tenant confirms access. We'll confirm shortly. If you have already scheduled an appointment, reply with the date and time."
+      },
+      "output": {
+        "message_id": "MSG-84A6F1",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-C94980",
+        "note": "Intake notes for case 07 (one email + WhatsApp export, split into 3 tickets: TKT-C94980 fan/mould, TKT-DD3AE3 hob, TKT-1B6529 gutter).\n\n(a) Discrepancies in the source material:\n- The chat says the email was \"sent to maintenance@\" on 26/09/2026, but the CRM received it on 08/10/2026 05:40.\n- The export header says \"Exported 10/10/2026\", which is after the case date (08/10). Possibly a date format/clock error.\n- Either way, the tenants have been waiting since about 26/09. The Awaab's Law clock is taken conservatively from our receipt on 08/10: investigate by 22/10.\n- About 8.8k characters in the middle of the export (05/09-15/09) were truncated. Any report in that part has not been reviewed.\n\n(b) Noise ignored: bins, Tesco, wifi, neighbour's drilling and cat, smoke alarm visit by landlord (her own plan), break-ins on Alma Rd (not this property), radiator \"bled it, it's fine now\" (resolved by tenants), shower curtain (tenant's purchase), rent chatter.\n\n(c) \"Weird smell in the hall, think it's the neighbour's cooking\" appears many times. Tenants put it down to cooking, not gas. Gas advice (0800 111 999) has been given in the tenant message, without escalating. Re-triage as a gas emergency if anyone describes it as gas or rotten eggs.\n\n(d) Asthma: Ben's worsening asthma is recorded as a health complaint/risk flag. The tenancy record has no vulnerability notes. The band is kept at urgent (Awaab's Law minimum, contractor within 3 working days, by Tue 13/10) rather than emergency, because there is no immediate danger.\n\n(e) Tenancy: TEN-5011 fixed term ended 31/08/2026 and is now rolling/periodic, status active. All 3 tenants match the chat.\n\n(f) No embedded instructions/prompt injection found.\n\n(g) Contractor selection:\n- Fan: Bright Spark (CON-EL05) for continuity. The last visit was 18/04, more than 90 days ago, so this is not a warranty callback. This is the 2nd fan job in 12 months, and the replacement was already recommended.\n- No appliance engineer or roofer on the panel covers LS. The hob goes to the electrician for inspection/quote; the gutter goes to a handyperson.\n- All urgent slots are 09:00-16:00, but tenants say they are home after 4pm. Access for Mon 12/10 14:00-16:00 has been requested from the tenants before booking."
+      },
+      "output": {
+        "note_id": "NOTE-38A9C7",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 9,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-C94980",
+        "status": "awaiting_tenant",
+        "comment": "Waiting for Tenant: need confirmation that someone is home Mon 12/10 14:00-16:00 before booking Bright Spark (fan) and DryHome (mould). Chase 09/10 midday. Awaab's Law investigation deadline 22/10."
+      },
+      "output": {
+        "status_id": "STS-ABB2D5",
+        "status": "awaiting_tenant",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 9,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-DD3AE3",
+        "status": "awaiting_quote",
+        "comment": "Hold for quote: tenants told to isolate the hob; Bright Spark to inspect and quote on the fan visit. Quote goes to the landlord for approval; recharge to Priya Menon. Check 13/10."
+      },
+      "output": {
+        "status_id": "STS-6D4953",
+        "status": "awaiting_quote",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 9,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-1B6529",
+        "status": "appointment_booked",
+        "comment": "HandyPro booked Tue 13/10 09:00-11:00 (BKG-1EE833), external only, about £75 within authority. Completion check 14/10."
+      },
+      "output": {
+        "status_id": "STS-10F61C",
+        "status": "appointment_booked",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Now messages to tenants, landlord and the electrician/damp contractors.",
+    "I've split Ben's email into three tickets. The gutter is booked, and the urgent fan and mould job is waiting on one reply from the tenants. The hob is waiting on a quote. Nothing needs escalating.\n\nThe property, the tenancy (now rolling on from month to month, all three tenants still in) and the repair history all match the email and chat. Nearly all of the chat is household chatter, which I ignored.\n\n**1. Extractor fan dead and black mould spreading (TKT-C94980): urgent, waiting for the tenants**\n- **Why urgent:** Ben says his asthma has been worse this month. That makes it mould with a health complaint, so under Awaab's Law we must investigate by 22/10.\n- **Contractors:** Bright Spark Electrical (NICEIC) will replace the fan. They lubricated it in April and advised replacing it at the next fault. That was more than 90 days ago, so it's a new job, not a free callback. DryHome Damp Specialists will inspect and treat the mould. Both jobs are within the landlord's £250 limit, and both firms have been sent the job details.\n- **What's blocking it:** the only slots are before 4pm, but the tenants are usually home after 4. I've asked Ben whether someone can be in on Mon 12/10, 2–4pm, and not booked anything until he confirms. Chase him tomorrow, 09/10. Once he says yes, book that slot (SLOT-URG-2) with both firms.\n- **Meanwhile:** I've given the tenants interim advice on ventilation and mould.\n\n**2. Cracked induction hob (TKT-DD3AE3): waiting for a quote, chargeable to Priya**\n- Priya admits she cracked it, and the landlord's standing instruction is that tenants pay for damage they cause.\n- I've told the tenants to stop using the whole hob and switch it off at the isolator. No appliance engineer on our panel covers Leeds, so Bright Spark will check it and quote on the same visit.\n- Priya has been told the cost will be charged to her. The quote then goes to the landlord (Fatima Begum) to approve, and to Priya.\n\n**3. Gutter dripping (TKT-1B6529): routine, booked**\n- HandyPro is booked for Tue 13/10, 9–11am (ref BKG-1EE833), at about £75. No roofer on our panel covers Leeds.\n- It's outside work, and the tenants have more than 24 hours' notice. Check it's done on 14/10.\n\nThe landlord has been emailed about all three.\n\n**Problems in the case material (also in the ticket notes):**\n- **Dates:** the chat says the email was sent on 26/09, but we received it on 08/10, and the export is dated 10/10, after today. I've counted the Awaab's Law deadline from 08/10.\n- **Missing text:** about 8.8k characters from 05/09 to 15/09 were cut from the export, so any report in that part wasn't seen.\n- **Smell in the hall:** the chat mentions a \"weird smell in the hall\" many times, which the tenants put down to the neighbour's cooking. I didn't treat it as a gas leak, but I gave the gas emergency advice (0800 111 999). If anyone describes it as gas, it becomes an emergency.\n- **Asthma:** this is flagged as a health risk. The tenancy record has no vulnerability notes.\n\nI found no embedded instructions in the material."
+  ]
+}

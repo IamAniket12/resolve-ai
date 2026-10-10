@@ -5,8 +5,8 @@
   "provider": "mock",
   "model": "mock-rules-v1",
   "steps": 8,
-  "started_at": "2026-10-10T10:17:53+00:00",
-  "finished_at": "2026-10-10T10:17:53+00:00",
+  "started_at": "2026-10-10T10:28:18+00:00",
+  "finished_at": "2026-10-10T10:28:18+00:00",
   "usage": {},
   "manifest": [
     {
@@ -206,7 +206,7 @@
         "description": "Case ID: 07_noisy_group_chat\nSource: data/sample_cases/07_noisy_group_chat\nFiles received (2): crm_record.json (json), whatsapp_group_export.txt (text)\nCase date: 2026-10-08 05:40. Treat this as \"now\" for ages, deadlines, chase dates and how long people have been waiting; today's real date is irrelevant.\n\nWork this case now. Use the tools to verify and act. When you have finished acting (or determined that you must stop), end your turn with a short plain-text summary of the outcome.\n\n<case_material>\n<<<FILE name=\"crm_record.json\" kind=\"json\">>>\n{\n  \"source\": \"inbound email to maintenance@ from Ben Okoro (tenant)\",\n  \"received\": \"2026-10-08T05:40:00+01:00\",\n  \"property_id\": \"PROP-0188\",\n  \"address\": \"14 Linden Grove, Leeds LS6 2AB\",\n  \"tenancy_id\": \"TEN-5011\",\n  \"email_body\": \"Hi, a few thi",
         "reported_by": "Josh Carter",
         "status": "scheduled",
-        "created_at": "2026-10-10T11:17:53"
+        "created_at": "2026-10-10T11:28:18"
       },
       "ok": true,
       "error": null,

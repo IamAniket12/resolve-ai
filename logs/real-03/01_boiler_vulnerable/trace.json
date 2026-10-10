@@ -1,0 +1,532 @@
+{
+  "case_id": "01_boiler_vulnerable",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 9,
+  "started_at": "2026-10-10T10:17:54+00:00",
+  "finished_at": "2026-10-10T10:20:33+00:00",
+  "usage": {
+    "input_tokens": 68610,
+    "output_tokens": 14353,
+    "cache_read_input_tokens": 87986,
+    "cache_creation_input_tokens": 9589
+  },
+  "manifest": [
+    {
+      "name": "crm_record.json",
+      "kind": "json",
+      "chars": 318,
+      "note": ""
+    },
+    {
+      "name": "tenant_whatsapp.txt",
+      "kind": "text",
+      "chars": 314,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "Tenant Amara Okafor (TEN-5001, active rolling tenancy) reported by WhatsApp that the Vaillant ecoTEC boiler at Flat 3, 18 Maple Road, London SE15 4QJ (PROP-0042) has stopped working. She has had no heating or hot water since last night, the pressure gauge is at zero, and she asked for someone to come today. A 4-month-old baby lives in the flat, which the tenancy record confirms. This is the third pressure-loss fault since August. Thames Heating did both earlier repairs (PRV on 14 Aug, £165; expansion vessel on 20 Sep, £240, with a 90-day callback warranty), so this is a recurring fault and should be a warranty callback.",
+    "issue_category": "heating/boiler",
+    "urgency": "emergency",
+    "decision": "escalated",
+    "outcome": "GasSure London (CON-GS02, Gas Safe 598877) is booked for emergency attendance on Sat 10 Oct 2026, 13:00-15:00, booking BKG-37A766, estimated £140. A warranty callback claim has been emailed to Thames Heating. The tenant and landlord have been told. The case is escalated (high) to the property manager, who needs to phone Thames Heating, arrange temporary heating and confirm the timing.",
+    "actions_taken": [
+      "lookup_property PROP-0042: landlord Priya Nair (LL-0107), wants Thames Heating used for boiler work, £300 pre-authorised, prefers email; boiler is a Vaillant ecoTEC installed 2019",
+      "lookup_tenancy PROP-0042: TEN-5001 active (rolling); tenant Amara Okafor; vulnerability note says 4-month-old baby; access: call 30 minutes before, concierge holds a spare key Mon-Fri 8-6",
+      "get_repair_history PROP-0042: JOB-8801 (14 Aug 2026, PRV replaced, £165) and JOB-8802 (20 Sep 2026, expansion vessel replaced, £240, 90-day callback warranty), both by CON-TH01",
+      "search_contractors gas_engineer SE15 4QJ emergency: returned CON-TH01 Thames Heating and CON-GS02 GasSure London",
+      "check_contractor_availability CON-GS02 emergency: slots on 10 Oct 13:00, 10 Oct 16:00 and 11 Oct 09:00",
+      "create_maintenance_ticket: TKT-F7420B, emergency, heating",
+      "schedule_contractor: GasSure London, SLOT-EME-1 (10 Oct 2026 13:00-15:00), booking BKG-37A766 confirmed, estimated £140",
+      "send_message WhatsApp to tenant (MSG-06CEFF, delivered): confirmed slot, provider name and phone, reminder about pets, interim warmth and safety advice, gas emergency number 0800 111 999, NHS 111/999, and that the property manager will contact her about temporary heating",
+      "send_message email to Thames Heating (MSG-070279, delivered): warranty callback claim under JOB-8802, asking them to confirm acceptance and whether they can attend earlier",
+      "send_message email to landlord (MSG-23018F, delivered): emergency works, the £140 spend, why a contractor other than Thames Heating was booked, and a recommendation for a replacement/diagnostic assessment",
+      "escalate_to_human to property_manager, severity high (ESC-AAB7EF)",
+      "record_note on the date conflict, the departure from the landlord's preferred contractor, warranty recovery, and the voice call not being placed (NOTE-3A3975)",
+      "update_case_status appointment_booked (STS-A4A161)"
+    ],
+    "failed_actions": [
+      "check_contractor_availability CON-TH01 (Thames Heating) emergency: HTTP 504 gateway timeout. Retried once and got HTTP 504 again. Fell back to GasSure London.",
+      "place_call to Thames Heating +44 20 7946 0101: status not_placed, mode simulated. Nobody was reached and nothing was confirmed. Sent an email instead and asked the property manager to phone them."
+    ],
+    "escalation": {
+      "required": true,
+      "to": "property manager",
+      "reason": "Emergency loss of heating and hot water with a 4-month-old baby in the flat. The landlord-preferred warranty contractor (Thames Heating) could not be booked: the availability check failed twice and the voice call was not placed. A fallback engineer is booked, but a human must phone Thames Heating, arrange temporary heating, and confirm whether the 10 Oct 13:00 slot is fast enough given the conflicting dates.",
+      "handover": "Facts: PROP-0042, Flat 3, 18 Maple Road, London SE15 4QJ. Tenant Amara Okafor, +44 7700 900501, active rolling tenancy TEN-5001, 4-month-old baby. Reported fault: no heating or hot water since last night, pressure at zero, third time since August. No gas smell or CO reported. History: JOB-8801 on 14 Aug (PRV, £165) and JOB-8802 on 20 Sep (expansion vessel, £240, 90-day callback warranty), both Thames Heating CON-TH01 (+44 20 7946 0101, jobs@thamesheating.example.com). Landlord Priya Nair (LL-0107, priya.nair@example.com) wants Thames Heating for the boiler; £300 pre-authorised. Done: ticket TKT-F7420B; GasSure London (CON-GS02, +44 20 7946 0102) booked, BKG-37A766, Sat 10 Oct 2026 13:00-15:00, estimated £140; WhatsApp sent to the tenant; warranty claim emailed to Thames Heating; landlord emailed. Blocked: no contact has been made with Thames Heating (their booking system returned 504 twice and the call was not placed). To do: (1) Phone Thames Heating now. Ask whether they accept the warranty callback under JOB-8802 and can attend today. If they confirm an earlier time in writing, decide whether to cancel BKG-37A766 and tell the tenant. (2) Arrange temporary electric heaters and check on the tenant and baby; she has been told the property manager will contact her about heating. (3) Check the dates: the case date is 21 Sep, the WhatsApp is dated 9 Oct, and the system and slots show 10 Oct. If the slot is not same-day relative to the report, find faster Gas Safe cover. (4) After the visit, get GasSure's findings and photos. If the 20 Sep repair has failed, recover the cost from Thames Heating under warranty. Follow up the replacement-assessment recommendation with the landlord (3 faults in under 2 months). Recommended decision: keep the GasSure booking unless Thames Heating confirm an earlier attendance in writing."
+    },
+    "conflicts": [
+      {
+        "description": "Dates do not match. The case date ('now') is 21 Sep 2026 and the CRM last_contact is 21 Sep 2026, but the tenant's WhatsApp is timestamped Thu 9 Oct 2026, and the ticket created_at and contractor slots are around 10 Oct 2026.",
+        "how_resolved": "Unresolved - escalated. The report was treated as live and urgent either way. The property manager has been asked to check whether the 10 Oct 13:00 slot counts as same-day attendance."
+      },
+      {
+        "description": "The landlord's instruction is to use Thames Heating for anything boiler-related, and they hold the warranty. But their scheduling system was down and they could not be reached. Policy 5.3 also says to stop preferring a contractor once a fault has recurred twice after their visits, which has now happened.",
+        "how_resolved": "Emergency policy 5.5 (do not leave an emergency unbooked) and the recurrence rule were applied: an independent Gas Safe engineer (GasSure) was booked. The warranty was still claimed from Thames Heating in writing, and the landlord was told why."
+      },
+      {
+        "description": "The tenant says this is the 'third time since August'. The records show two earlier jobs (14 Aug and 20 Sep), so this is the third fault.",
+        "how_resolved": "The records agree with the tenant. No conflict in substance; it was recorded as a recurring fault."
+      }
+    ],
+    "information_gaps": [
+      "Whether Thames Heating accept the warranty callback and can attend earlier is unknown: no contact was made. Emailed them, and passed the phone call to the property manager.",
+      "The root cause of the repeated pressure loss is unknown. The booked engineer has been asked to diagnose it and photograph the findings.",
+      "Whether the tenant has a safe source of temporary heat is unknown. Passed to the property manager to arrange heaters.",
+      "The true current date is ambiguous, so it is uncertain whether the booked slot meets the same-day target. Escalated.",
+      "The tenant has not yet confirmed she can give access during the 10 Oct slot. The tenancy notes say she is at home most days, and the engineer will call her 30 minutes before arriving."
+    ],
+    "assumptions": [
+      "The WhatsApp report is current and the boiler is still off.",
+      "There is no gas leak or CO risk, because none was reported. The tenant was still given gas emergency advice.",
+      "The fault is the same pressure-loss problem covered by the JOB-8802 warranty, which runs to about 19 Dec 2026.",
+      "The £140 GasSure call-out is within the landlord's £300 pre-authorised limit and the £500 emergency limit, so prior approval was not needed. The landlord was informed the same day.",
+      "The tenant is at home and can give access. Concierge access may not be available, as 10 Oct 2026 is a Saturday."
+    ],
+    "tenant_communication": "WhatsApp (delivered): we are treating this as an emergency because of the baby. Confirmed slot Sat 10 Oct 2026 13:00-15:00 with GasSure London (Gas Safe registered), +44 20 7946 0102; the engineer will call about 30 minutes before arriving; she should mention any pets. Thames Heating have also been told because of the warranty. Interim advice: keep the baby warm, use a safe electric heater away from the cot if she has one, do not try to repair the boiler. If she smells gas or a CO alarm sounds, call 0800 111 999. If the baby seems unwell, call NHS 111 or 999. The property manager will contact her about temporary heating.",
+    "landlord_communication": "Email to Priya Nair (delivered): the tenant's report quoted word for word; emergency classification because of the infant; Thames Heating warranty claim under JOB-8802 and why they could not be booked; GasSure booked for 10 Oct 13:00-15:00 at an estimated £140 (within the £300 limit), with a quote required before any work over £300 except make-safe; recommendation for a full diagnostic and boiler replacement assessment after three pressure-loss faults since mid-August; findings to follow.",
+    "next_steps": [
+      "Property manager: phone Thames Heating (+44 20 7946 0101) now about the warranty callback and earlier attendance. Decide whether to keep or cancel BKG-37A766.",
+      "Property manager: arrange temporary heaters for the tenant and check on the household's welfare.",
+      "Check the date conflict and whether the slot meets same-day attendance. If not, find faster Gas Safe cover.",
+      "10 Oct after 15:00: completion check with GasSure (findings, photos, invoice against the £140 estimate) and with the tenant (heating and hot water restored).",
+      "If the 20 Sep expansion vessel repair has failed, claim or recharge the cost from Thames Heating under the 90-day warranty.",
+      "Send the landlord GasSure's findings and the boiler replacement-assessment recommendation. Get approval for any work above £300.",
+      "Chase Thames Heating if there is no reply within the day. Chase the landlord after about 3 working days if a replacement decision is outstanding."
+    ],
+    "risk_flags": [
+      "Vulnerable occupant: 4-month-old infant in a cold flat with no heating or hot water (emergency band; health risk).",
+      "Recurring fault: 3 pressure-loss failures on the same boiler in under 2 months; replacement assessment recommended.",
+      "Warranty: the fault falls within the JOB-8802 90-day callback period; risk of paying twice if not recovered from Thames Heating.",
+      "Departed from the landlord's standing instruction to use Thames Heating, because of emergency unavailability; the landlord has been informed.",
+      "Date conflict in the case material may mean the booked slot is not same-day.",
+      "Statutory repair: heating and hot water installation, s.11 Landlord and Tenant Act 1985 and the Fitness for Human Habitation Act 2018 apply."
+    ],
+    "confidence": 0.8,
+    "reasoning": "The property and tenancy were confirmed from the records. Total loss of heating and hot water with an infant counts as an emergency at any time (policy section 1 and the vulnerability rule in section 2). There was no gas smell or CO, so the gas hard rule did not apply, but the work still needs a Gas Safe engineer. The repair history shows the same fault within the 90-day warranty of JOB-8802, so the first choice was a warranty callback to Thames Heating, which the landlord also prefers. Their availability check failed twice (504) and the voice call was not placed. Policy 5.5 says an emergency must not be left unbooked, and policy 5.3 says to stop preferring a contractor after a fault recurs twice following their visits, so the only other panel Gas Safe engineer with emergency cover (GasSure) was booked at its earliest slot. The £140 estimate is within both the £300 landlord limit and the £500 emergency limit. The landlord was informed the same day and a replacement assessment was recommended, because there have been three repairs on the same installation. The case was escalated because a required action failed twice, the household is vulnerable, and the date conflict means the slot may not be same-day. A human needs to make the live call to Thames Heating and arrange temporary heating."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "PROP-0042"
+      },
+      "output": {
+        "found": true,
+        "property_id": "PROP-0042",
+        "address": "Flat 3, 18 Maple Road, London",
+        "postcode": "SE15 4QJ",
+        "type": "flat (2nd floor, purpose-built block)",
+        "landlord_id": "LL-0107",
+        "landlord_name": "Priya Nair",
+        "landlord_phone": "+44 7700 900107",
+        "landlord_email": "priya.nair@example.com",
+        "landlord_instructions": "Use Thames Heating for anything boiler-related (they installed it). Approve up to £300 without asking. Email me for anything above.",
+        "spend_limit_gbp": 300,
+        "preferred_contractors": [
+          "CON-TH01"
+        ],
+        "gas_safety_cert_expiry": "2027-02-11",
+        "eicr_expiry": "2029-06-30",
+        "boiler": {
+          "make": "Vaillant ecoTEC",
+          "installed": "2019-03",
+          "age_years": 7
+        },
+        "notes": "Block has a concierge Mon-Fri 8-6. Stopcock under kitchen sink."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "PROP-0042"
+      },
+      "output": {
+        "tenancies": [
+          {
+            "tenancy_id": "TEN-5001",
+            "property_id": "PROP-0042",
+            "status": "active",
+            "tenants": [
+              {
+                "name": "Amara Okafor",
+                "phone": "+44 7700 900501",
+                "email": "amara.okafor@example.com"
+              }
+            ],
+            "start": "2025-06-01",
+            "end": "2026-05-31",
+            "rolling": true,
+            "vulnerability_notes": "Tenant has a 4-month-old baby (noted at check-in).",
+            "access_notes": "Tenant at home most days; call 30 min before. Concierge holds a spare key."
+          }
+        ],
+        "active_tenancy": {
+          "tenancy_id": "TEN-5001",
+          "property_id": "PROP-0042",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Amara Okafor",
+              "phone": "+44 7700 900501",
+              "email": "amara.okafor@example.com"
+            }
+          ],
+          "start": "2025-06-01",
+          "end": "2026-05-31",
+          "rolling": true,
+          "vulnerability_notes": "Tenant has a 4-month-old baby (noted at check-in).",
+          "access_notes": "Tenant at home most days; call 30 min before. Concierge holds a spare key."
+        },
+        "warning": null
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "PROP-0042"
+      },
+      "output": {
+        "property_id": "PROP-0042",
+        "jobs": [
+          {
+            "job_id": "JOB-8802",
+            "property_id": "PROP-0042",
+            "date": "2026-09-20",
+            "category": "heating",
+            "description": "Boiler losing pressure again. Found slow leak on expansion vessel; vessel replaced. 90-day callback warranty.",
+            "contractor_id": "CON-TH01",
+            "cost_gbp": 240,
+            "outcome": "completed"
+          },
+          {
+            "job_id": "JOB-8801",
+            "property_id": "PROP-0042",
+            "date": "2026-08-14",
+            "category": "heating",
+            "description": "Boiler losing pressure, no hot water. Re-pressurised, replaced PRV.",
+            "contractor_id": "CON-TH01",
+            "cost_gbp": 165,
+            "outcome": "completed"
+          }
+        ],
+        "count": 2
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "gas_engineer",
+        "postcode": "SE15 4QJ",
+        "emergency": true
+      },
+      "output": {
+        "trade": "gas_engineer",
+        "postcode": "SE15 4QJ",
+        "emergency_only": true,
+        "contractors": [
+          {
+            "contractor_id": "CON-TH01",
+            "name": "Thames Heating Ltd",
+            "trades": [
+              "gas_engineer",
+              "plumber"
+            ],
+            "certifications": [
+              "Gas Safe 512345"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "E",
+              "N",
+              "CR"
+            ],
+            "rating": 4.6,
+            "emergency": true,
+            "call_out_gbp": 120,
+            "phone": "+44 20 7946 0101",
+            "email": "jobs@thamesheating.example.com"
+          },
+          {
+            "contractor_id": "CON-GS02",
+            "name": "GasSure London",
+            "trades": [
+              "gas_engineer"
+            ],
+            "certifications": [
+              "Gas Safe 598877"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "CR",
+              "BR"
+            ],
+            "rating": 4.4,
+            "emergency": true,
+            "call_out_gbp": 140,
+            "phone": "+44 20 7946 0102",
+            "email": "book@gassure.example.com"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-TH01",
+        "urgency": "emergency"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Contractor scheduling system for Thames Heating Ltd returned HTTP 504 (gateway timeout). Retry or choose another contractor.",
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-TH01",
+        "urgency": "emergency"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Contractor scheduling system for Thames Heating Ltd returned HTTP 504 (gateway timeout). Retry or choose another contractor.",
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-GS02",
+        "urgency": "emergency"
+      },
+      "output": {
+        "contractor_id": "CON-GS02",
+        "name": "GasSure London",
+        "urgency": "emergency",
+        "slots": [
+          {
+            "slot_id": "SLOT-EME-1",
+            "start": "2026-10-10T13:00",
+            "end": "2026-10-10T15:00"
+          },
+          {
+            "slot_id": "SLOT-EME-2",
+            "start": "2026-10-10T16:00",
+            "end": "2026-10-10T18:00"
+          },
+          {
+            "slot_id": "SLOT-EME-3",
+            "start": "2026-10-11T09:00",
+            "end": "2026-10-11T11:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "PROP-0042",
+        "title": "Boiler failure - no heating or hot water, pressure at zero (vulnerable: 4-month-old baby) - 3rd fault since Aug, warranty callback",
+        "category": "heating",
+        "urgency": "emergency",
+        "description": "Reported by tenant Amara Okafor via WhatsApp (+44 7700 900501): \"Hi, the boiler has stopped working again. No heating and no hot water since last night. The pressure gauge is on zero. This is the third time since August. I have a 4 month old baby here and the flat is freezing. Please can someone come today?\"\n\nClassification: EMERGENCY - total loss of heating and hot water with a vulnerable occupant (infant, 4 months; confirmed in tenancy vulnerability notes). No gas smell / CO reported.\n\nHistory: JOB-8801 (14 Aug 2026, Thames Heating CON-TH01, £165) - pressure loss, re-pressurised, PRV replaced. JOB-8802 (20 Sep 2026, Thames Heating, £240) - pressure loss, expansion vessel replaced, 90-day callback warranty (valid to ~19 Dec 2026). Current fault = same symptom (pressure loss) within warranty -> warranty callback to Thames Heating, should be no charge. Recurring fault: 3 faults on same boiler (Vaillant ecoTEC, 2019) in under 2 months -> recommend replacement/full diagnostic assessment to landlord.\n\nLandlord (Priya Nair, LL-0107) instructions: use Thames Heating for boiler work; pre-authorised £300; email for anything above.\n\nData conflict: case date is 21 Sep 2026 but WhatsApp is timestamped Thu 9 Oct 2026; CRM last_contact 21 Sep 2026. Treated as a live report needing same-day attendance regardless; timestamp discrepancy noted.",
+        "reported_by": "Amara Okafor (tenant)"
+      },
+      "output": {
+        "ticket_id": "TKT-F7420B",
+        "property_id": "PROP-0042",
+        "title": "Boiler failure - no heating or hot water, pressure at zero (vulnerable: 4-month-old baby) - 3rd fault since Aug, warranty callback",
+        "category": "heating",
+        "urgency": "emergency",
+        "description": "Reported by tenant Amara Okafor via WhatsApp (+44 7700 900501): \"Hi, the boiler has stopped working again. No heating and no hot water since last night. The pressure gauge is on zero. This is the third time since August. I have a 4 month old baby here and the flat is freezing. Please can someone come today?\"\n\nClassification: EMERGENCY - total loss of heating and hot water with a vulnerable occupant (infant, 4 months; confirmed in tenancy vulnerability notes). No gas smell / CO reported.\n\nHistory: JOB-8801 (14 Aug 2026, Thames Heating CON-TH01, £165) - pressure loss, re-pressurised, PRV replaced. JOB-8802 (20 Sep 2026, Thames Heating, £240) - pressure loss, expansion vessel replaced, 90-day callback warranty (valid to ~19 Dec 2026). Current fault = same symptom (pressure loss) within warranty -> warranty callback to Thames Heating, should be no charge. Recurring fault: 3 faults on same boiler (Vaillant ecoTEC, 2019) in under 2 months -> recommend replacement/full diagnostic assessment to landlord.\n\nLandlord (Priya Nair, LL-0107) instructions: use Thames Heating for boiler work; pre-authorised £300; email for anything above.\n\nData conflict: case date is 21 Sep 2026 but WhatsApp is timestamped Thu 9 Oct 2026; CRM last_contact 21 Sep 2026. Treated as a live report needing same-day attendance regardless; timestamp discrepancy noted.",
+        "reported_by": "Amara Okafor (tenant)",
+        "status": "scheduled",
+        "created_at": "2026-10-10T11:18:21"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "place_call",
+      "input": {
+        "to_role": "contractor",
+        "phone": "+44 20 7946 0101",
+        "purpose": "Emergency warranty callback: boiler lost pressure again at Flat 3, 18 Maple Road, London SE15 4QJ, 4-month-old baby in the flat. Need same-day attendance confirmed (your online scheduling system is returning errors).",
+        "talking_points": "- Agency ref TKT-F7420B. Property: Flat 3, 18 Maple Road, London SE15 4QJ (2nd floor, purpose-built block, concierge Mon-Fri 8-6).\n- Fault: no heating and no hot water since last night, pressure gauge at zero. Same symptom as your JOB-8801 (14 Aug, PRV replaced) and JOB-8802 (20 Sep, expansion vessel replaced, 90-day callback warranty).\n- We are treating this as a warranty callback under JOB-8802, so no charge expected. Please confirm you accept it as a warranty callback.\n- Vulnerable household: 4-month-old baby. Emergency band, so we need attendance TODAY. Can you confirm an engineer and an arrival window today?\n- Please find the root cause of the repeated pressure loss (e.g. leak on system/radiators, heat exchanger, filling loop) and advise whether the boiler needs a replacement assessment.\n- If any extra work beyond warranty is needed: up to £300 is pre-authorised; anything above must be quoted to us before you start (except make-safe).\n- Access: the engineer should call the tenant 30 minutes before arriving; we will send the tenant's number by SMS/email after the call.\n- If you CANNOT attend today, tell us now so we can send another Gas Safe engineer."
+      },
+      "output": {
+        "status": "not_placed",
+        "mode": "simulated",
+        "to_role": "contractor",
+        "phone": "+44 20 7946 0101",
+        "purpose": "Emergency warranty callback: boiler lost pressure again at Flat 3, 18 Maple Road, London SE15 4QJ, 4-month-old baby in the flat. Need same-day attendance confirmed (your online scheduling system is returning errors).",
+        "transcript_summary": "",
+        "note": "No live call was placed: voice calling is not enabled in this environment. Nobody was reached, nothing was confirmed and no commitment exists. Use send_message to reach this person, and if a live conversation is essential, record in the handover that a human must make the call."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "schedule_contractor",
+      "input": {
+        "ticket_id": "TKT-F7420B",
+        "contractor_id": "CON-GS02",
+        "slot_id": "SLOT-EME-1",
+        "access_notes": "Flat 3, 18 Maple Road, London SE15 4QJ (2nd floor, purpose-built block). Tenant Amara Okafor will be home: please call +44 7700 900501 30 minutes before arrival. Infant in the property. Boiler: Vaillant ecoTEC (2019). Fault: no heating/hot water, pressure at zero; repeat pressure loss after PRV (Aug) and expansion vessel (20 Sep) replacements by another contractor. Please diagnose root cause, make safe/restore heating, photograph findings. Spend: up to £300 pre-authorised; quote first for anything above, except make-safe work."
+      },
+      "output": {
+        "booking_ref": "BKG-37A766",
+        "ticket_id": "TKT-F7420B",
+        "contractor_id": "CON-GS02",
+        "contractor_name": "GasSure London",
+        "slot_id": "SLOT-EME-1",
+        "access_notes": "Flat 3, 18 Maple Road, London SE15 4QJ (2nd floor, purpose-built block). Tenant Amara Okafor will be home: please call +44 7700 900501 30 minutes before arrival. Infant in the property. Boiler: Vaillant ecoTEC (2019). Fault: no heating/hot water, pressure at zero; repeat pressure loss after PRV (Aug) and expansion vessel (20 Sep) replacements by another contractor. Please diagnose root cause, make safe/restore heating, photograph findings. Spend: up to £300 pre-authorised; quote first for anything above, except make-safe work.",
+        "status": "confirmed",
+        "estimated_cost_gbp": 140
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "+44 7700 900501",
+        "channel": "whatsapp",
+        "body": "Dear Amara,\nThank you for letting us know, and sorry this has happened again. With your baby at home we are treating this as an emergency.\n\nConfirmed time slot: Sat 10 Oct 2026, 13:00-15:00\nMaintenance provider: GasSure London (Gas Safe registered)\nContact: +44 20 7946 0102\nThe engineer will call you about 30 minutes before arriving. Please tell them if you have any pets, and let the engineer know if anything changes on your side.\n\nWe have also told Thames Heating, because this fault may be covered by their warranty on last month's repair.\n\nUntil the engineer arrives:\n- Keep the baby warm with extra layers and blankets, and keep everyone in one room with the door closed.\n- If you have a safe electric heater, use it, but keep it away from the cot and from bedding.\n- Please don't try any repairs on the boiler yourself.\n- If you smell gas or a CO alarm goes off, open the windows, don't use any switches, leave the flat and call the National Gas Emergency line on 0800 111 999.\n- If your baby seems unwell or very cold, call NHS 111, or 999 in an emergency.\n\nOur property manager will also get in touch with you about temporary heating. Ref: TKT-F7420B."
+      },
+      "output": {
+        "message_id": "MSG-06CEFF",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "jobs@thamesheating.example.com",
+        "channel": "email",
+        "body": "URGENT: warranty callback, JOB-8802. Our ref TKT-F7420B.\nProperty: Flat 3, 18 Maple Road, London SE15 4QJ (Vaillant ecoTEC)\n\nThe tenant reports that the boiler has failed again: no heating or hot water since last night, and the pressure gauge is at zero. This is the same fault as JOB-8801 (14 Aug, PRV replaced) and JOB-8802 (20 Sep, expansion vessel replaced, 90-day callback warranty). We are raising it as a warranty callback under JOB-8802.\n\nThere is a 4-month-old baby in the property. Your scheduling system returned errors (HTTP 504) twice and we could not reach you by phone. So that the household is not left without heat, we have booked another Gas Safe engineer as an emergency for Sat 10 Oct, 13:00-15:00.\n\nPlease reply urgently to say:\n1. whether you accept this as a warranty callback under JOB-8802, and\n2. whether you can attend today, earlier than that slot (if so, please give your confirmed time).\nWe will tell you what the attending engineer finds about the cause of the repeated pressure loss.\n\nWe will send the tenant's contact details once your attendance is confirmed."
+      },
+      "output": {
+        "message_id": "MSG-070279",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "priya.nair@example.com",
+        "channel": "email",
+        "body": "Address: Flat 3, 18 Maple Road, London SE15 4QJ\nHi Priya,\nI'm letting you know about emergency works at this property today. Ref: TKT-F7420B.\n\nThe tenant reported: \"Hi, the boiler has stopped working again. No heating and no hot water since last night. The pressure gauge is on zero. This is the third time since August. I have a 4 month old baby here and the flat is freezing. Please can someone come today?\"\n\nBecause there is an infant in the flat, this falls in our emergency band.\n\nWhat we have done:\n- We raised it with Thames Heating as a warranty callback, as you asked us to use them for the boiler. The expansion vessel they replaced on 20 Sep (JOB-8802) has a 90-day callback warranty. Their booking system failed twice and we could not reach them by phone, so we have emailed them for an urgent reply.\n- So the baby is not left without heating, we have booked GasSure London (Gas Safe registered) as an emergency attendance on Sat 10 Oct, 13:00-15:00. The estimated call-out is £140. That is within your £300 pre-authorised limit. The engineer has been told to quote before any work above £300, except make-safe.\n- If Thames Heating confirm they can attend earlier under warranty, we will tell you and review the GasSure booking.\n\nRecommendation: this is the third pressure-loss fault on the boiler since mid-August. Earlier repairs were the PRV on 14 Aug (£165) and the expansion vessel on 20 Sep (£240). We recommend a full diagnostic and a replacement assessment for the boiler (Vaillant ecoTEC, installed 2019). We will send you the engineer's findings. If the cause is linked to the 20 Sep repair, we will ask Thames Heating to cover it under warranty.\n\nThanks,\nResolve AI, Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-23018F",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "TKT-F7420B",
+        "severity": "high",
+        "to": "property_manager",
+        "reason": "Emergency boiler failure with a 4-month-old baby. The warranty contractor (Thames Heating) could not be booked: scheduling system HTTP 504 twice, and the voice call could not be placed. A fallback engineer is booked, but someone needs to phone Thames Heating and arrange temporary heating.",
+        "handover": "FACTS\n- PROP-0042, Flat 3, 18 Maple Road, London SE15 4QJ. Tenancy TEN-5001 is active (rolling). Tenant: Amara Okafor, +44 7700 900501. The tenancy record confirms a 4-month-old baby.\n- Tenant WhatsApp: no heating or hot water since last night, pressure at zero, \"third time since August\", asks for someone today. No gas smell or CO reported.\n- Repair history: JOB-8801 (14 Aug, Thames Heating, PRV, £165) and JOB-8802 (20 Sep, Thames Heating, expansion vessel, £240, 90-day callback warranty). This is the same fault within the warranty period, so it is recurring.\n- Landlord Priya Nair (LL-0107) wants Thames Heating (CON-TH01) used for the boiler. £300 pre-authorised. Prefers email.\n\nACTIONS TAKEN\n- Ticket TKT-F7420B raised as an emergency.\n- Thames Heating availability check failed twice (HTTP 504). The voice call was NOT placed (calling is disabled, so nobody was reached).\n- Booked GasSure London (CON-GS02, Gas Safe 598877), ref BKG-37A766, slot SLOT-EME-1, Sat 10 Oct 2026 13:00-15:00. Estimated call-out £140 (within the limit).\n- WhatsApp sent to the tenant (MSG-06CEFF): slot details, interim warmth and safety advice, gas emergency number.\n- Email sent to Thames Heating (MSG-070279) claiming the warranty under JOB-8802 and asking whether they can attend earlier.\n- Email sent to the landlord (MSG-23018F): emergency works, the spend, and a recommendation for a replacement assessment.\n\nWHAT A HUMAN NEEDS TO DO\n1. Phone Thames Heating on +44 20 7946 0101 now. Ask whether they accept the warranty callback and can attend today. If they can come before GasSure, decide whether to cancel BKG-37A766 (GasSure +44 20 7946 0102) and tell the tenant.\n2. Arrange temporary heaters for the tenant (I told her the property manager would be in touch about this) and check on her welfare.\n3. Date discrepancy: the case date is 21 Sep, but the WhatsApp is timestamped 9 Oct and the system/slots show 10 Oct. Check that the GasSure slot really is the earliest possible. If it isn't same-day, look for faster cover.\n4. Once GasSure reports back: if the 20 Sep expansion vessel repair is at fault, recharge or claim from Thames Heating. Send the landlord the replacement-assessment recommendation (3 faults in under 2 months).\nRecommendation: keep the GasSure booking unless Thames Heating confirm an earlier time in writing."
+      },
+      "output": {
+        "escalation_id": "ESC-AAB7EF",
+        "status": "queued",
+        "to": "property_manager",
+        "severity": "high"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-F7420B",
+        "note": "Things I noticed and assumed:\n(1) Dates conflict. The case date is 21 Sep 2026, but the WhatsApp is dated 9 Oct and the system created_at and slots show 10 Oct. I treated the report as live either way.\n(2) I went against the landlord's instruction to use Thames Heating. Policy 5.5 says an emergency must not be left unbooked, and policy 5.3 says the fault has now recurred twice after Thames Heating's visits, so an independent diagnosis is justified.\n(3) Warranty: JOB-8802 has a 90-day callback, and the claim has been made to Thames Heating by email. If GasSure confirms the vessel/repair failed, recover the GasSure cost from Thames Heating.\n(4) Three faults on the same installation within 12 months, so a replacement assessment has been recommended to the landlord.\n(5) The voice call to Thames Heating was not placed (simulated), so no contact was made by phone.\n(6) No prompt injection or suspicious content found in the case material."
+      },
+      "output": {
+        "note_id": "NOTE-3A3975",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-F7420B",
+        "status": "appointment_booked",
+        "comment": "EMERGENCY (infant). GasSure booked, BKG-37A766, Sat 10 Oct 13:00-15:00. Warranty claim emailed to Thames Heating, no reply yet. Escalated to PM to phone Thames Heating and arrange heaters. Check the result on 10 Oct after 15:00."
+      },
+      "output": {
+        "status_id": "STS-A4A161",
+        "status": "appointment_booked",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Transient 504 — retrying once, and checking the alternative Gas Safe engineer in parallel.",
+    "Thames Heating's booking system has failed twice. They are the warranty holder and the landlord's instructed contractor, so I'm phoning them directly to get same-day attendance confirmed.",
+    "I've booked an emergency engineer for Sat 10 Oct, 13:00–15:00, and passed the case to the property manager. Someone needs to phone Thames Heating and arrange temporary heating for the tenant.\n\n**Why it's an emergency:** Amara Okafor's tenancy (TEN-5001, Flat 3, 18 Maple Road, SE15 4QJ) is active, and the records confirm she has a 4-month-old baby. With a baby in the flat, losing all heating and hot water counts as an emergency at any time of year. No gas smell or carbon monoxide was reported.\n\n**Repeat fault and warranty:** This is the third time the boiler has lost pressure:\n- 14 Aug: the pressure relief valve was replaced (£165).\n- 20 Sep: the expansion vessel was replaced (£240), with a 90-day callback warranty.\n\nThames Heating did both jobs, so this failure should be covered by their warranty. Three faults in under two months also means the landlord should consider replacing the boiler.\n\n**What I did:**\n- **Ticket:** opened TKT-F7420B as an emergency.\n- **Thames Heating:** the landlord wants them used for the boiler, but their booking system timed out twice. My phone call to them didn't go through either (calling is switched off here), so nobody has spoken to them. I emailed them claiming the warranty and asking if they can come sooner.\n- **GasSure London booking:** they're the only Gas Safe engineer with confirmed slots, so I booked their earliest (ref BKG-37A766). The estimated call-out is £140, within the landlord's £300 limit. They must quote before any work over £300, except making the boiler safe.\n- **Tenant:** sent a WhatsApp with the appointment details, ways to keep the baby warm, the gas emergency number (0800 111 999), and a reminder to mention pets. I told her the property manager would contact her about temporary heating.\n- **Landlord:** emailed Priya Nair about the emergency work and the £140, explained why we didn't use Thames Heating, and recommended a boiler replacement assessment.\n- **Handover:** escalated to the property manager (high priority) and set the case to appointment booked. I'll check the result on 10 Oct after 15:00.\n\n**Dates don't match:** the case date is 21 Sep, but the WhatsApp is dated 9 Oct and the booking system shows 10 Oct. If the tenant messaged on 9 Oct, the 10 Oct slot isn't the same-day visit she asked for.\n\n**What the property manager needs to do:**\n1. Phone Thames Heating (+44 20 7946 0101) to confirm the warranty and whether they can come sooner. If they can, decide whether to cancel the GasSure booking and tell the tenant.\n2. Arrange temporary heaters and check on the tenant.\n3. Check whether the GasSure slot really is the earliest available, and look for faster cover if it isn't same-day.\n4. After the visit: if the 20 Sep repair turns out to be the cause, recover the cost from Thames Heating. Then follow up with the landlord on replacing the boiler."
+  ]
+}

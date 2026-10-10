@@ -5,8 +5,8 @@
   "provider": "mock",
   "model": "mock-rules-v1",
   "steps": 9,
-  "started_at": "2026-10-10T10:17:53+00:00",
-  "finished_at": "2026-10-10T10:17:53+00:00",
+  "started_at": "2026-10-10T10:28:18+00:00",
+  "finished_at": "2026-10-10T10:28:18+00:00",
   "usage": {},
   "manifest": [
     {
@@ -205,7 +205,7 @@
         "description": "Case ID: 04_over_limit_landlord_abroad\nSource: data/sample_cases/04_over_limit_landlord_abroad\nFiles received (2): landlord_email.eml (email), portal_ticket.json (json)\nCase date: 2026-10-09 19:30. Treat this as \"now\" for ages, deadlines, chase dates and how long people have been waiting; today's real date is irrelevant.\n\nWork this case now. Use the tools to verify and act. When you have finished acting (or determined that you must stop), end your turn with a short plain-text summary of the outcome.\n\n<case_material>\n<<<FILE name=\"landlord_email.eml\" kind=\"email\">>>\nFrom: Marcus Oyelaran <m.oyelaran@example.com>\nTo: maintenance@agency.example.com\nDate: Tue, 06 Oct 2026 11:02:00 +0100\nSubject: Re: Birch Close - reminder\n\nReminder as per my instructions: I'm abroad until 20 October. Nothing o",
         "reported_by": "Tom Reilly",
         "status": "scheduled",
-        "created_at": "2026-10-10T11:17:53"
+        "created_at": "2026-10-10T11:28:18"
       },
       "ok": true,
       "error": null,

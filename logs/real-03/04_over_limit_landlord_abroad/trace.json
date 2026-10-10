@@ -1,0 +1,513 @@
+{
+  "case_id": "04_over_limit_landlord_abroad",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 8,
+  "started_at": "2026-10-10T10:17:54+00:00",
+  "finished_at": "2026-10-10T10:20:01+00:00",
+  "usage": {
+    "input_tokens": 54023,
+    "output_tokens": 12513,
+    "cache_read_input_tokens": 67123,
+    "cache_creation_input_tokens": 20863
+  },
+  "manifest": [
+    {
+      "name": "landlord_email.eml",
+      "kind": "email",
+      "chars": 290,
+      "note": ""
+    },
+    {
+      "name": "portal_ticket.json",
+      "kind": "json",
+      "chars": 370,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "On 2026-10-09 tenant Sadie Reilly reported through the portal that the boiler (Baxi 830, 2014) at 9 Birch Close, Croydon CR0 7EX (PROP-0077) is banging loudly and the upstairs radiators have been cold for about a week. Hot water still works. The property record shows the gas safety certificate (CP12) expired on 2026-09-30. Landlord Marcus Oyelaran is abroad until 20 Oct, allows nothing over £150 without his written OK, and wants email only.",
+    "issue_category": "heating/boiler",
+    "urgency": "urgent",
+    "decision": "escalated",
+    "outcome": "An urgent ticket is open. A Gas Safe diagnostic visit (GasSure London, £140, within the £150 limit) is offered for Mon 12 Oct but is not booked until the tenants confirm access. Landlord approval for renewing the gas safety certificate at the same visit (about £220 in total) is pending. The expired certificate has been escalated to compliance.",
+    "actions_taken": [
+      "Looked up property PROP-0077: landlord LL-0220, £150 limit, email only, abroad until 20 Oct, CP12 expired 2026-09-30, Baxi 830 boiler installed 2014",
+      "Looked up tenancy TEN-5002: active and rolling, tenants Tom and Sadie Reilly, no vulnerability recorded, access after 5pm or Saturdays",
+      "Pulled repair history: no previous heating faults; last CP12 by GasSure London (CON-GS02) on 2025-09-28 for £80",
+      "Searched gas engineers for CR0: Thames Heating CON-TH01 (rating 4.6, £120 call-out) and GasSure London CON-GS02 (rating 4.4, £140 call-out), both Gas Safe",
+      "Created ticket TKT-CA0F52 (heating, urgent)",
+      "Checked GasSure London availability: urgent slots Mon 12 Oct 09:00-11:00 and 14:00-16:00",
+      "Raised landlord approval request APR-54BB6C for about £220 (diagnostic £140 + CP12 renewal about £80), status pending",
+      "Emailed the landlord (m.oyelaran@example.com) the approval request, quoting the tenant's report and flagging the expired CP12 (delivered MSG-D2CC47)",
+      "Texted Sadie Reilly asking her to confirm a slot, with gas emergency advice and a pets reminder (delivered MSG-950A74)",
+      "Emailed Tom Reilly the same access request and safety advice (delivered MSG-1B5C87)",
+      "Escalated the expired CP12 to compliance as high priority (ESC-FDA1A3)",
+      "Recorded an internal note on triage, contractor choice and constraints (NOTE-6E9CEB)",
+      "Set case status to awaiting_tenant, with chase dates and the pending landlord approval noted (STS-045003)"
+    ],
+    "failed_actions": [
+      "Thames Heating (CON-TH01) availability check failed with HTTP 504 gateway timeout",
+      "Retried Thames Heating availability once and it failed again with HTTP 504; switched to GasSure London (CON-GS02), whose check succeeded"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "compliance",
+      "reason": "The gas safety certificate (CP12) for this occupied property expired on 2026-09-30, which breaches a legal duty. Renewing it at the planned visit takes the cost over the landlord's £150 limit, and he is abroad and contactable by email only until 20 Oct. A human must decide how the agency gets the certificate renewed if he does not reply.",
+      "handover": "PROPERTY: PROP-0077, 9 Birch Close, Croydon CR0 7EX. Tenancy TEN-5002 is active (rolling); tenants Tom Reilly (tom.reilly@example.com, +44 7700 900502) and Sadie Reilly (+44 7700 900503, no email on file); no vulnerability recorded; access after 5pm or Saturdays. TICKET: TKT-CA0F52, urgent. Boiler is banging and upstairs radiators are cold for about a week; hot water OK; no gas smell or CO reported. COMPLIANCE: CP12 expired 2026-09-30 (last check JOB-8700, GasSure London, £80). LANDLORD: Marcus Oyelaran LL-0220; nothing over £150 without written OK; abroad until 20 Oct; EMAIL ONLY, do not phone. DONE: Thames Heating's booking system failed twice (HTTP 504). GasSure London (CON-GS02, Gas Safe 598877, £140 call-out, within limit) has urgent slots Mon 12 Oct, SLOT-URG-1 09:00-11:00 and SLOT-URG-2 14:00-16:00 (SLOT-URG-3 duplicates URG-1). Both slots clash with the tenants' access hours, so we asked the tenants by SMS and email to confirm before booking. NOT BOOKED. Landlord approval APR-54BB6C is pending for about £220 (diagnostic plus CP12 renewal), and the landlord has been emailed. BLOCKED: the CP12 renewal needs landlord sign-off; the booking needs tenant confirmation. RECOMMENDED: (1) Book the GasSure diagnostic as soon as the tenants confirm a slot, or ask GasSure for an evening or Saturday. (2) Chase the landlord by email only on Tue 13 Oct. If he is still silent, decide whether to instruct the CP12 as a separate statutory job (about £80, under the limit). (3) Log the overdue CP12 on the compliance register and give the new certificate to the tenants within 28 days. (4) Send any repair quote over £150 to the landlord for written approval. The boiler is 11 years old, so consider a replacement assessment if the repair is costly."
+    },
+    "conflicts": [
+      {
+        "description": "The tenant called the problem 'Not urgent', but heating has been partly lost for about a week and it is getting colder.",
+        "how_resolved": "Classed as urgent under policy (partial loss of heating outside the winter window, household not vulnerable). The tenant's own wording does not lower a policy band."
+      },
+      {
+        "description": "GasSure London only offered daytime slots on Mon 12 Oct, but the tenancy access notes say both tenants work and can only give access after 5pm or on Saturdays.",
+        "how_resolved": "Not booked. Asked the tenants to confirm whether they can give access in one of the slots, as policy requires access to be confirmed before booking."
+      },
+      {
+        "description": "The landlord's phone number is on the property record, but his instructions (record and 6 Oct email) say email only, no calls.",
+        "how_resolved": "Followed the landlord's instruction and contacted him by email only. This is not a life-safety emergency."
+      }
+    ],
+    "information_gaps": [
+      "Tenant access availability for the Mon 12 Oct slots: asked by SMS and email, waiting for a reply",
+      "Whether the landlord approves the CP12 renewal and the combined cost of about £220: approval requested by email, pending",
+      "Cause of the banging (for example kettling, pump fault or airlock) and the repair cost: unknown until the engineer diagnoses it",
+      "Whether there are pets at the property: tenants asked",
+      "Thames Heating availability: unknown because their booking system was down",
+      "Exact CP12 price this year: estimated at about £80 from last year's invoice"
+    ],
+    "assumptions": [
+      "The £150 limit applies per job and covers the £140 diagnostic call-out alone, so the diagnostic visit needs no further approval",
+      "The CP12 renewal costs about the same as last year's £80",
+      "The banging is not an immediate gas safety hazard because no gas smell or CO has been reported; the tenants were still given the 0800 111 999 advice",
+      "The created_at timestamp the ticket tool returned (2026-10-10) is a system artefact; the case date is 2026-10-09 19:30"
+    ],
+    "tenant_communication": "Sadie (by SMS) and Tom (by email) were told the report is logged as urgent and that Gas Safe engineer GasSure London will come to diagnose the boiler. They were asked to confirm access for Mon 12 Oct 9-11am or 2-4pm, or say if neither works. They were told the engineer may also do the gas safety check at the same visit, to keep using hot water as normal and turn the boiler off if the banging gets worse, and to mention any pets. Gas/CO advice: open windows, don't use switches, leave the house and call 0800 111 999.",
+    "landlord_communication": "Emailed only. The email quoted the tenant's report verbatim and said a £140 Gas Safe diagnostic visit is being arranged within his £150 limit. It flagged that the CP12 expired on 30 Sep 2026 and asked for his written approval to renew it at the same visit (about £220 in total), or to use his own Gas Safe engineer and send us the certificate. It also said any repair will be quoted to him before work over his limit goes ahead. Formal approval request APR-54BB6C has been raised.",
+    "next_steps": [
+      "When the tenants reply, book GasSure London for the confirmed slot (SLOT-URG-1 or SLOT-URG-2), send the appointment confirmation by SMS to Sadie and email to Tom, and send the job to GasSure",
+      "If neither slot suits the tenants, ask GasSure for an evening or Saturday slot or retry Thames Heating availability, keeping within the 3-working-day urgent target",
+      "Chase the tenants on Sun 11 Oct if they have not replied",
+      "Chase the landlord by email only on Tue 13 Oct about APR-54BB6C; if he is still silent, compliance decides how to get the CP12 done",
+      "Add the CP12 renewal to the job only once the landlord approves or compliance authorises it",
+      "After diagnosis, send any repair quote over £150 to the landlord for written approval by email; suggest a boiler replacement assessment if the repair is costly (boiler is 11 years old)",
+      "Completion check: contractor confirms the work is done, tenant confirms or sends photos, invoice matches the quote, and the new CP12 is uploaded and given to the tenants"
+    ],
+    "risk_flags": [
+      "Gas safety certificate (CP12) expired 2026-09-30: statutory breach under the Gas Safety (Installation and Use) Regulations 1998, escalated to compliance",
+      "Landlord abroad, email only, with a strict £150 limit, which could delay statutory and repair work",
+      "Boiler is 11 years old and banging; any gas work must be done by a Gas Safe engineer",
+      "Weather getting colder: if the repair runs past 1 Nov, total loss of heating would become an emergency"
+    ],
+    "confidence": 0.82,
+    "reasoning": "The records confirmed the property, the active tenancy and the landlord's instructions; the landlord's 6 Oct email matched his property record. Under policy section 1, partial loss of heating in October for a household with no vulnerability is urgent. No gas smell or CO was reported, so the gas hard rules did not apply, but safety advice was still given. Section 5 requires a Gas Safe engineer. There were no landlord-preferred contractors and no previous heating fault, so the highest-rated contractor (Thames Heating) was tried first. Their booking system failed twice, so per the recovery rules I moved to GasSure London, who did the last CP12. Their £140 call-out is within the landlord's stricter £150 limit, so the diagnostic visit needs no further approval. Policy section 6 requires access to be confirmed with the tenant before booking, and the offered slots clash with the tenants' access hours, so I asked the tenants before booking. Section 4 says work over the limit needs approval before booking, so the CP12 renewal (about £220 in total for the visit) went to the landlord by email, as he asked. The expired CP12 is a statutory compliance breach and the landlord is hard to reach, so I escalated it to compliance. A human needs to decide how to make sure the certificate is renewed."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "9 Birch Close, CR0 7EX"
+      },
+      "output": {
+        "found": true,
+        "property_id": "PROP-0077",
+        "address": "9 Birch Close, Croydon",
+        "postcode": "CR0 7EX",
+        "type": "house (3-bed semi)",
+        "landlord_id": "LL-0220",
+        "landlord_name": "Marcus Oyelaran",
+        "landlord_phone": "+44 7700 900220",
+        "landlord_email": "m.oyelaran@example.com",
+        "landlord_instructions": "Do NOT spend more than £150 on anything without my written approval. I'm abroad until 20 Oct; email only.",
+        "spend_limit_gbp": 150,
+        "preferred_contractors": [],
+        "gas_safety_cert_expiry": "2026-09-30",
+        "eicr_expiry": "2028-01-15",
+        "boiler": {
+          "make": "Baxi 830",
+          "installed": "2014-11",
+          "age_years": 11
+        },
+        "notes": "Gas safety certificate EXPIRED 2026-09-30 - renewal overdue."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "PROP-0077"
+      },
+      "output": {
+        "tenancies": [
+          {
+            "tenancy_id": "TEN-5002",
+            "property_id": "PROP-0077",
+            "status": "active",
+            "tenants": [
+              {
+                "name": "Tom Reilly",
+                "phone": "+44 7700 900502",
+                "email": "tom.reilly@example.com"
+              },
+              {
+                "name": "Sadie Reilly",
+                "phone": "+44 7700 900503",
+                "email": ""
+              }
+            ],
+            "start": "2024-02-15",
+            "end": "2026-02-14",
+            "rolling": true,
+            "vulnerability_notes": "",
+            "access_notes": "Both tenants work; access after 5pm or Saturdays."
+          }
+        ],
+        "active_tenancy": {
+          "tenancy_id": "TEN-5002",
+          "property_id": "PROP-0077",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tom Reilly",
+              "phone": "+44 7700 900502",
+              "email": "tom.reilly@example.com"
+            },
+            {
+              "name": "Sadie Reilly",
+              "phone": "+44 7700 900503",
+              "email": ""
+            }
+          ],
+          "start": "2024-02-15",
+          "end": "2026-02-14",
+          "rolling": true,
+          "vulnerability_notes": "",
+          "access_notes": "Both tenants work; access after 5pm or Saturdays."
+        },
+        "warning": null
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "PROP-0077"
+      },
+      "output": {
+        "property_id": "PROP-0077",
+        "jobs": [
+          {
+            "job_id": "JOB-8650",
+            "property_id": "PROP-0077",
+            "date": "2026-03-02",
+            "category": "plumbing",
+            "description": "Dripping bath tap; washer replaced.",
+            "contractor_id": "CON-RP03",
+            "cost_gbp": 95,
+            "outcome": "completed"
+          },
+          {
+            "job_id": "JOB-8700",
+            "property_id": "PROP-0077",
+            "date": "2025-09-28",
+            "category": "gas",
+            "description": "Annual gas safety check (CP12 issued, expires 2026-09-30).",
+            "contractor_id": "CON-GS02",
+            "cost_gbp": 80,
+            "outcome": "completed"
+          }
+        ],
+        "count": 2
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "gas_engineer",
+        "postcode": "CR0 7EX",
+        "emergency": false
+      },
+      "output": {
+        "trade": "gas_engineer",
+        "postcode": "CR0 7EX",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-TH01",
+            "name": "Thames Heating Ltd",
+            "trades": [
+              "gas_engineer",
+              "plumber"
+            ],
+            "certifications": [
+              "Gas Safe 512345"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "E",
+              "N",
+              "CR"
+            ],
+            "rating": 4.6,
+            "emergency": true,
+            "call_out_gbp": 120,
+            "phone": "+44 20 7946 0101",
+            "email": "jobs@thamesheating.example.com"
+          },
+          {
+            "contractor_id": "CON-GS02",
+            "name": "GasSure London",
+            "trades": [
+              "gas_engineer"
+            ],
+            "certifications": [
+              "Gas Safe 598877"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "CR",
+              "BR"
+            ],
+            "rating": 4.4,
+            "emergency": true,
+            "call_out_gbp": 140,
+            "phone": "+44 20 7946 0102",
+            "email": "book@gassure.example.com"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "PROP-0077",
+        "title": "Boiler banging, upstairs radiators cold (hot water OK)",
+        "category": "heating",
+        "urgency": "urgent",
+        "description": "Reported via tenant portal 2026-10-09 19:30 by Sadie Reilly (tenant, TEN-5002 active/rolling): \"Boiler is making a loud banging noise and the radiators upstairs are cold. Hot water still works. Not urgent but it's been a week now and it's getting colder.\" No photos. Classification: URGENT - partial loss of heating outside 1 Nov-31 Mar window, no vulnerability recorded, ongoing ~1 week. No gas smell / CO alarm reported. Boiler: Baxi 830, installed 2014-11 (11 yrs). COMPLIANCE: gas safety certificate (CP12) EXPIRED 2026-09-30 (last check JOB-8700, GasSure London CON-GS02, 2025-09-28, £80) - renewal overdue. Landlord Marcus Oyelaran (LL-0220): abroad until 20 Oct, spend limit £150 per job without written approval, EMAIL ONLY, no calls. Access: tenants work, after 5pm or Saturdays. No previous heating faults in history.",
+        "reported_by": "Sadie Reilly (tenant)"
+      },
+      "output": {
+        "ticket_id": "TKT-CA0F52",
+        "property_id": "PROP-0077",
+        "title": "Boiler banging, upstairs radiators cold (hot water OK)",
+        "category": "heating",
+        "urgency": "urgent",
+        "description": "Reported via tenant portal 2026-10-09 19:30 by Sadie Reilly (tenant, TEN-5002 active/rolling): \"Boiler is making a loud banging noise and the radiators upstairs are cold. Hot water still works. Not urgent but it's been a week now and it's getting colder.\" No photos. Classification: URGENT - partial loss of heating outside 1 Nov-31 Mar window, no vulnerability recorded, ongoing ~1 week. No gas smell / CO alarm reported. Boiler: Baxi 830, installed 2014-11 (11 yrs). COMPLIANCE: gas safety certificate (CP12) EXPIRED 2026-09-30 (last check JOB-8700, GasSure London CON-GS02, 2025-09-28, £80) - renewal overdue. Landlord Marcus Oyelaran (LL-0220): abroad until 20 Oct, spend limit £150 per job without written approval, EMAIL ONLY, no calls. Access: tenants work, after 5pm or Saturdays. No previous heating faults in history.",
+        "reported_by": "Sadie Reilly (tenant)",
+        "status": "open",
+        "created_at": "2026-10-10T11:18:27"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-TH01",
+        "urgency": "urgent"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Contractor scheduling system for Thames Heating Ltd returned HTTP 504 (gateway timeout). Retry or choose another contractor.",
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-TH01",
+        "urgency": "urgent"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Contractor scheduling system for Thames Heating Ltd returned HTTP 504 (gateway timeout). Retry or choose another contractor.",
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-GS02",
+        "urgency": "urgent"
+      },
+      "output": {
+        "contractor_id": "CON-GS02",
+        "name": "GasSure London",
+        "urgency": "urgent",
+        "slots": [
+          {
+            "slot_id": "SLOT-URG-1",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          },
+          {
+            "slot_id": "SLOT-URG-2",
+            "start": "2026-10-12T14:00",
+            "end": "2026-10-12T16:00"
+          },
+          {
+            "slot_id": "SLOT-URG-3",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-12T11:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "request_landlord_approval",
+      "input": {
+        "ticket_id": "TKT-CA0F52",
+        "landlord_id": "LL-0220",
+        "estimated_cost_gbp": 220,
+        "reason": "Boiler (Baxi 830, 2014) banging with upstairs radiators cold for ~1 week; hot water OK. Diagnostic visit by Gas Safe engineer GasSure London (call-out £140) is within your £150 limit and is being arranged. The gas safety certificate (CP12) EXPIRED on 30 Sep 2026 and is a legal requirement; we propose GasSure (who did last year's check, £80) renews it at the same visit. Combined visit est. £220 (call-out £140 + CP12 approx. £80), above your £150 limit, so we need your written OK. Any repair found on diagnosis will be quoted and sent to you separately before work proceeds."
+      },
+      "output": {
+        "approval_id": "APR-54BB6C",
+        "ticket_id": "TKT-CA0F52",
+        "landlord_id": "LL-0220",
+        "estimated_cost_gbp": 220,
+        "reason": "Boiler (Baxi 830, 2014) banging with upstairs radiators cold for ~1 week; hot water OK. Diagnostic visit by Gas Safe engineer GasSure London (call-out £140) is within your £150 limit and is being arranged. The gas safety certificate (CP12) EXPIRED on 30 Sep 2026 and is a legal requirement; we propose GasSure (who did last year's check, £80) renews it at the same visit. Combined visit est. £220 (call-out £140 + CP12 approx. £80), above your £150 limit, so we need your written OK. Any repair found on diagnosis will be quoted and sent to you separately before work proceeds.",
+        "status": "pending",
+        "note": "Landlord notified; typical response within 24h. Do not book non-emergency work until approved."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "m.oyelaran@example.com",
+        "channel": "email",
+        "body": "Address: 9 Birch Close, Croydon, CR0 7EX\nRef: TKT-CA0F52\n\nHi Marcus,\n\nThe tenant of this property has reported the following:\nRequest description: \"Boiler is making a loud banging noise and the radiators upstairs are cold. Hot water still works. Not urgent but it's been a week now and it's getting colder.\"\n\nWhat we are doing within your £150 limit: arranging a diagnostic visit from a Gas Safe registered engineer, GasSure London (call-out £140). We will confirm the date once the tenants confirm access.\n\nWhat needs your written approval (please reply by email):\n1. Gas safety certificate: our records show the CP12 for the property EXPIRED on 30 September 2026. An annual gas safety check is a legal requirement for the landlord. GasSure London did last year's check (£80). We propose they renew it at the same visit. Total for the visit approx. £220 (£140 call-out + approx. £80 CP12), which is over your £150 limit. Can you please confirm you approve?\n2. Any repair the engineer finds will be quoted and sent to you for approval before any work over your limit goes ahead.\n\nBecause the gas safety check is overdue, please reply as soon as you can. If you would rather use your own Gas Safe engineer for the certificate, let us know and send us the certificate once it is done.\n\nAs you asked, we will contact you by email only.\n\nKind regards,\nMaintenance team"
+      },
+      "output": {
+        "message_id": "MSG-D2CC47",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "+44 7700 900503",
+        "channel": "sms",
+        "body": "Hello Sadie, this is the maintenance team about your boiler report (ref TKT-CA0F52). We are arranging a Gas Safe engineer, GasSure London, to look at it. They have slots on Mon 12 Oct, 9-11am or 2-4pm. Can you or Tom give access in either slot? Please reply with which one, or tell us if neither works. If you smell gas or a CO alarm goes off, open the windows, don't use switches, leave the house and call 0800 111 999. If you have pets, please tell us."
+      },
+      "output": {
+        "message_id": "MSG-950A74",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "tom.reilly@example.com",
+        "channel": "email",
+        "body": "Dear Tom and Sadie,\n\nRe: 9 Birch Close, boiler banging and upstairs radiators cold (ref TKT-CA0F52)\n\nThank you for reporting this. We have logged it as urgent. Our maintenance provider GasSure London, a Gas Safe registered engineer, will attend to find out what is wrong with the boiler.\n\nThey have these appointments available on Monday 12 October 2026:\n- 9:00 to 11:00\n- 14:00 to 16:00\n\nWe know you both usually work during the day. Please reply and tell us which slot you can do, or if neither works (for example, an evening or a Saturday). We will only book it once you confirm. The engineer may also carry out the annual gas safety check during the same visit.\n\nUntil then: hot water still works, so keep using it as normal. If the banging gets worse, turn the boiler off. If you ever smell gas or a carbon monoxide alarm goes off, open the windows, don't use any electrical switches, leave the house and call the National Gas Emergency line on 0800 111 999.\n\nIf you have any pets, please tell us so we can let the engineer know.\n\nKind regards,\nMaintenance team"
+      },
+      "output": {
+        "message_id": "MSG-1B5C87",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "TKT-CA0F52",
+        "severity": "high",
+        "to": "compliance",
+        "reason": "Gas safety certificate (CP12) for occupied property expired 2026-09-30; renewal needs landlord written approval over his £150 limit, and landlord is abroad (email only) until 20 Oct.",
+        "handover": "PROPERTY: PROP-0077, 9 Birch Close, Croydon CR0 7EX (3-bed semi). Tenancy TEN-5002 active (rolling), tenants Tom and Sadie Reilly, no vulnerability recorded.\nFACTS: Property record shows gas safety cert expired 2026-09-30 (last CP12 JOB-8700 by GasSure London CON-GS02, 2025-09-28, £80). So the property has had no valid CP12 for 9 days (Gas Safety (Installation and Use) Regs 1998). Separately, on 9 Oct the tenant reported the boiler (Baxi 830, 2014) banging and upstairs radiators cold for ~1 week, hot water OK. No gas smell or CO reported. Ticket TKT-CA0F52 is classed URGENT (partial heating loss in October, not vulnerable).\nLANDLORD: Marcus Oyelaran LL-0220. Standing instruction (record + his email of 6 Oct): nothing over £150 without written OK; abroad until 20 Oct; EMAIL ONLY, no calls.\nDONE: Ticket created. Thames Heating (CON-TH01, top-rated) availability check failed twice (HTTP 504). GasSure London (CON-GS02, Gas Safe 598877, call-out £140) has urgent slots Mon 12 Oct 09-11 / 14-16. Their diagnostic call-out is within the £150 limit. We asked the tenants (SMS to Sadie, email to Tom) to confirm access, because their access notes say after 5pm/Saturdays only. NOT BOOKED yet. Landlord approval APR-54BB6C requested and landlord emailed for a combined visit of about £220 (diagnosis £140 + CP12 renewal ~£80).\nBLOCKED: CP12 renewal is over the landlord's limit and needs his written OK. It is a statutory duty, so it cannot just wait if he doesn't reply.\nRECOMMENDED: (1) If the landlord hasn't replied by Tue 13 Oct, chase by email only and decide if the agency will instruct the CP12 as a statutory item (it's £80 on its own, under the limit, if done as a separate job). (2) Record the overdue CP12 on the compliance register and get the new certificate to the tenants within 28 days of the check. (3) Do not phone the landlord."
+      },
+      "output": {
+        "escalation_id": "ESC-FDA1A3",
+        "status": "queued",
+        "to": "compliance",
+        "severity": "high"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-CA0F52",
+        "note": "Triage: URGENT (partial heating loss, 9 Oct = outside 1 Nov-31 Mar winter window, no vulnerability). Tenant called it \"not urgent\" but it has lasted a week and is getting colder, so I kept it at urgent. No gas smell/CO, so the gas hard rule does not apply. Tenants were still given the 0800 111 999 advice. Sources agree: landlord email of 6 Oct and property record both say £150 limit, abroad until 20 Oct, email only. Phone number is on record but must NOT be used. Contractor choice: no landlord-preferred contractors and no previous heating fault. Thames Heating (rating 4.6, call-out £120) was tried first: availability check HTTP 504 twice. Moved to GasSure London (4.4, call-out £140, Gas Safe 598877, did the last CP12 so there is continuity). Their diagnostic £140 is within the £150 limit, so no approval is needed for diagnosis only. All GasSure slots (Mon 12 Oct 09-11, 14-16; SLOT-URG-3 duplicates URG-1) clash with the access notes (after 5pm/Sat), so access was asked of the tenants before booking. CP12 renewal at the same visit (~£80, total ~£220) is pending landlord approval APR-54BB6C. Do not add it to the job order until approved, or until compliance decides. Sadie has no email on file, so SMS was used; Tom was emailed. Boiler is 11 years old: if the repair is costly, consider a replacement assessment."
+      },
+      "output": {
+        "note_id": "NOTE-6E9CEB",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-CA0F52",
+        "status": "awaiting_tenant",
+        "comment": "Waiting for Tenant: confirm access for GasSure diagnostic Mon 12 Oct (09-11/14-16). Waiting for Landlord on APR-54BB6C (CP12 renewal, ~£220 total), email only. Chase tenant Sun 11 Oct, landlord Tue 13 Oct. CP12 expired, escalated to compliance."
+      },
+      "output": {
+        "status_id": "STS-045003",
+        "status": "awaiting_tenant",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I've opened ticket TKT-CA0F52 for 9 Birch Close (PROP-0077), but no engineer is booked yet: I'm waiting for the tenants to confirm they can let the engineer in. I've also escalated the expired gas safety certificate to compliance.\n\n**What's wrong:** Sadie Reilly reported the boiler banging loudly and the upstairs radiators cold for about a week; hot water still works. I've marked it **urgent**. It's a partial loss of heating, it's October (before the 1 Nov winter rule) and nobody vulnerable is recorded. There's no gas smell or carbon monoxide alarm, so the gas emergency rules don't apply. The tenancy is active and the property, tenants and landlord details all match the records.\n\n**Something not in the report:** the property's gas safety certificate ran out on 30 Sep 2026, nine days ago. The annual check is a legal requirement.\n\n**Landlord rules:** his 6 Oct email and his property record say the same thing. Nothing over £150 without his written OK, he's abroad until 20 Oct, and email only. His phone number is on file but I haven't used it.\n\n**What I did:**\n- **Engineer:** I tried Thames Heating first (best rated, £120 call-out), but their booking system timed out twice. GasSure London are Gas Safe registered and did last year's gas safety check. Their £140 call-out is under the landlord's £150 limit, so the diagnostic visit doesn't need his approval. They're free on Mon 12 Oct, 9–11am or 2–4pm.\n- **Tenants:** both slots fall in working hours, and the records say the tenants can only give access after 5pm or on Saturdays. So I asked them to confirm a slot before booking: a text to Sadie (no email on file) and an email to Tom. Both also got the gas emergency advice (0800 111 999) and a reminder to mention pets.\n- **Landlord:** I raised approval request APR-54BB6C and emailed him. It asks for his written OK for GasSure to renew the gas safety certificate at the same visit (about £80, so about £220 for the visit). Any repair the engineer finds will be quoted to him before work goes ahead.\n- **Compliance:** I escalated the expired certificate as high priority (ESC-FDA1A3) with a full handover. It's a legal duty, the landlord is hard to reach, and someone needs to decide what happens if he doesn't reply.\n- **Case status:** set to waiting for tenant, with an internal note on the triage, the Thames failure and why I picked GasSure.\n\n**Next steps:**\n1. **If the tenants confirm a slot:** book it with GasSure London and send the appointment confirmation.\n2. **If neither slot works:** ask GasSure for an evening or Saturday, or try Thames Heating again.\n3. **Chase dates:** tenants Sun 11 Oct, landlord Tue 13 Oct (email only).\n4. **Compliance:** decide whether the agency goes ahead with the gas safety check if the landlord stays silent. Done as a separate job (about £80) it would be under his limit.\n5. **Repair cost:** the boiler is 11 years old. If the repair quote is high, suggest the landlord gets a replacement assessment."
+  ]
+}

@@ -5,8 +5,8 @@
   "provider": "mock",
   "model": "mock-rules-v1",
   "steps": 2,
-  "started_at": "2026-10-10T10:17:53+00:00",
-  "finished_at": "2026-10-10T10:17:53+00:00",
+  "started_at": "2026-10-10T10:28:18+00:00",
+  "finished_at": "2026-10-10T10:28:18+00:00",
   "usage": {},
   "manifest": [
     {

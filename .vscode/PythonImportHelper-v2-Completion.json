@@ -2294,7 +2294,16 @@
         "kind": 2,
         "importPath": "tests.test_pipeline",
         "description": "tests.test_pipeline",
-        "peekOfCode": "def test_fallback_answer_is_complete(settings, tmp_path):\n    b = discover_cases(SAMPLES)[0]\n    r = fallback_result(b, \"simulated crash\")\n    assert r.status == \"fallback\"\n    assert r.resolution.decision == \"escalated\"\n    write_case(r, tmp_path / \"ANSWERS\", tmp_path / \"logs\")\n    text = (tmp_path / \"ANSWERS\" / b.case_id / \"ANSWER.md\").read_text()\n    assert \"simulated crash\" in text",
+        "peekOfCode": "def test_fallback_answer_is_complete(settings, tmp_path):\n    b = discover_cases(SAMPLES)[0]\n    r = fallback_result(b, \"simulated crash\")\n    assert r.status == \"fallback\"\n    assert r.resolution.decision == \"escalated\"\n    write_case(r, tmp_path / \"ANSWERS\", tmp_path / \"logs\")\n    text = (tmp_path / \"ANSWERS\" / b.case_id / \"ANSWER.md\").read_text()\n    assert \"simulated crash\" in text\ndef test_anthropic_cache_breakpoints_do_not_accumulate():\n    \"\"\"The client marks the case material and the latest turn, never more, and never mutates the caller's messages.\"\"\"",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "test_anthropic_cache_breakpoints_do_not_accumulate",
+        "kind": 2,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "def test_anthropic_cache_breakpoints_do_not_accumulate():\n    \"\"\"The client marks the case material and the latest turn, never more, and never mutates the caller's messages.\"\"\"\n    from resolve_ai.llm.anthropic_client import AnthropicLLM\n    from resolve_ai.config import Settings\n    llm = AnthropicLLM(Settings())  # constructs without a key\n    messages = [\n        {\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"case material\"}]},\n        {\"role\": \"assistant\", \"content\": [{\"type\": \"tool_use\", \"id\": \"t1\", \"name\": \"x\", \"input\": {}}]},\n        {\"role\": \"user\", \"content\": [{\"type\": \"tool_result\", \"tool_use_id\": \"t1\", \"content\": \"r1\"}]},\n        {\"role\": \"assistant\", \"content\": [{\"type\": \"tool_use\", \"id\": \"t2\", \"name\": \"x\", \"input\": {}}]},",
         "detail": "tests.test_pipeline",
         "documentation": {}
     },
