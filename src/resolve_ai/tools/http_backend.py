@@ -45,7 +45,9 @@ class HttpBackend:
         return bool(self.base) and tool in self.endpoints
 
     def __getattr__(self, tool: str):
-        if tool.startswith("_"):
+        # Only tool names become handlers. Private names and the optional transform_<tool> hooks must
+        # resolve normally, otherwise getattr(self, "transform_x", None) would return a bogus handler.
+        if tool.startswith(("_", "transform_")):
             raise AttributeError(tool)
 
         def handler(**payload):
