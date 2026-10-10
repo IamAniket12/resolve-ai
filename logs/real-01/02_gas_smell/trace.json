@@ -1,0 +1,539 @@
+{
+  "case_id": "02_gas_smell",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 11,
+  "started_at": "2026-10-10T10:07:57+00:00",
+  "finished_at": "2026-10-10T10:10:49+00:00",
+  "usage": {
+    "input_tokens": 83394,
+    "output_tokens": 12950,
+    "cache_read_input_tokens": 93570,
+    "cache_creation_input_tokens": 20399
+  },
+  "manifest": [
+    {
+      "name": "call_transcript.txt",
+      "kind": "transcript",
+      "chars": 647,
+      "note": ""
+    },
+    {
+      "name": "crm_record.json",
+      "kind": "json",
+      "chars": 351,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "Tenant Tom Reilly phoned on Fri 10 Oct 2026 at 08:15 about a strong smell of gas in the kitchen near the cooker at 9 Birch Close, Croydon CR0 7EX (PROP-0077). His wife and co-tenant Sadie has a headache, which could be a sign of gas or carbon monoxide exposure. The gas safety certificate (CP12) expired on 30 Sep 2026. The landlord has said he does not want to be billed for gas work, which goes against his legal duty. The gas emergency safety rule applies.",
+    "issue_category": "gas",
+    "urgency": "emergency",
+    "decision": "escalated",
+    "outcome": "The tenants have the gas safety advice by call and SMS, and the landlord has been told by email. The case went to the property manager (critical) and compliance (high). No Gas Safe engineer is booked yet because the tools offered no usable same-day slot, so the property manager must confirm attendance today.",
+    "actions_taken": [
+      "Checked the property, tenancy and repair history for PROP-0077. The property and landlord match the case file, tenancy TEN-5002 is active (rolling), CP12 expired 2026-09-30, and the last CP12 was done by CON-GS02 on 2025-09-28.",
+      "Opened emergency gas ticket TKT-8A472B.",
+      "Placed a simulated voice call to tenant Tom Reilly (+44 7700 900502) with the gas safety script: no switches or flames, ventilate, evacuate, call 0800 111 999, call 999 or NHS 111 if symptoms get worse, no charge to the tenant. Status was completed, but the summary was generic.",
+      "Sent the tenant an SMS with the same safety advice and asked for the gas emergency reference (MSG-AE97C8, delivered).",
+      "Searched the panel for emergency Gas Safe engineers covering CR0 7EX. Found CON-GS02 GasSure London (Gas Safe 598877, £140 call-out, used here before) and CON-TH01 Thames Heating (Gas Safe 512345, rating 4.6, £120 call-out).",
+      "Checked GasSure's emergency availability. Slots returned were 10 Oct 04:00-06:00 and 07:00-09:00 (both already past at intake) and 11 Oct 02:00-04:00 (overnight). None were booked.",
+      "Placed a simulated voice call to GasSure (+44 20 7946 0102) asking for same-day attendance, a cost estimate and a CP12 renewal on the same visit. The summary said they 'can attend the proposed slot' but no specific time was confirmed.",
+      "Emailed the landlord (m.oyelaran@example.com) about the emergency, his legal duty, the expired CP12, and that an estimate will come before any non-emergency spend over £150 (MSG-A79C94, delivered).",
+      "Escalated to the property manager, critical (ESC-89B4C5).",
+      "Escalated to compliance, high, for the expired CP12 and the landlord's refusal of gas spend (ESC-0263E0).",
+      "Added an internal note to the ticket (NOTE-B33AEB).",
+      "Set the case status to escalated (STS-9AD088)."
+    ],
+    "failed_actions": [
+      "Checking Thames Heating (CON-TH01) availability returned HTTP 504 gateway timeout. Retried once and got HTTP 504 again. Instead, I checked GasSure and called them, and recorded Thames' phone (020 7946 0101) in the handover for a manual booking.",
+      "Booking GasSure: the only emergency slots the tool returned were already past or overnight, so no valid slot was booked. This is not a tool error but a booking blocker, and it was passed to the property manager."
+    ],
+    "escalation": {
+      "required": true,
+      "to": "property manager (critical); compliance (high)",
+      "reason": "Gas emergency (strong gas smell, occupant headache) triggers the hard safety rule. No Gas Safe attendance time is confirmed. The landlord's 'do not bill gas work' stance and £150 limit conflict with his legal repair duty. The CP12 expired on 30 Sep 2026 at an occupied property.",
+      "handover": "PROP-0077, 9 Birch Close, Croydon CR0 7EX, a 3-bed semi. Active rolling tenancy TEN-5002: Tom Reilly +44 7700 900502, Sadie Reilly +44 7700 900503. Normal access is after 5pm or Saturdays, but this is an emergency. At 08:15 on 10 Oct Tom reported a strong gas smell in the kitchen near the cooker and said Sadie has a headache. The intake handler gave no safety advice. I gave it later by a simulated call and by SMS (MSG-AE97C8). Nothing confirms that the tenants evacuated or called 0800 111 999. Ticket TKT-8A472B is open. Gas Safe options: GasSure London CON-GS02, 020 7946 0102, did the CP12 here (continuity). Its online emergency slots were past or 02:00-04:00 on 11 Oct, and a simulated call claimed they can attend but gave no time. Thames Heating CON-TH01, 020 7946 0101, rating 4.6, availability system down (HTTP 504 twice). Landlord Marcus Oyelaran (LL-0220) is abroad until 20 Oct and only uses email. His written limit is £150. In a CRM note on 2025-11-03 he asked not to be billed for gas work. He was emailed today (MSG-A79C94). The CP12 expired on 2026-09-30. ACTIONS NOW: (1) Call Tom, or Sadie if he doesn't answer. Confirm everyone is out and 0800 111 999 has been called, and get the reference. If it hasn't been called, tell them to call now or call it for them. (2) Confirm a real same-day time with GasSure, or with Thames if GasSure can't. Book it and send the tenant the appointment confirmation. (3) Approve the emergency make-safe up to £500 (policy). Get the landlord's written email approval for further repair and the CP12 renewal. Do not refuse the repair because of the landlord's stance. (4) Check whether the cooker belongs to the landlord (not recorded). (5) Compliance should send the landlord formal notice of his CP12 obligations."
+    },
+    "conflicts": [
+      {
+        "description": "The landlord asked not to be billed for gas work (CRM note 2025-11-03, repeated by the tenant: 'not paying for any more gas stuff') and has a £150 written limit. But a suspected gas leak and the annual CP12 are legal duties for the landlord, and policy allows emergency make-safe up to £500.",
+        "how_resolved": "Unresolved - escalated. I did not treat his stance as a ban on a legal or safety repair. The landlord was told about his duty, and the property manager and compliance must handle the spend decision."
+      },
+      {
+        "description": "The simulated GasSure call said they 'can attend the proposed slot', but the slots the tool returned were already past or overnight, and no specific time was proposed or confirmed.",
+        "how_resolved": "I trusted the tool's slot data over the generic call summary. Nothing was booked and no time was promised to the tenant. The property manager will confirm the time directly."
+      },
+      {
+        "description": "The tenancy end date is 2026-02-14, which is before the case date, but the record shows it as active and rolling.",
+        "how_resolved": "Treated as an active periodic tenancy because the status is active and rolling is true. This does not change the action."
+      }
+    ],
+    "information_gaps": [
+      "Not confirmed whether the tenants evacuated or called 0800 111 999, and no gas emergency reference yet. Asked by call and SMS, and the property manager will follow up.",
+      "No confirmed same-day attendance time from a Gas Safe engineer. Blocked, and passed to the property manager.",
+      "Not known whether there are other occupants such as children or pets. Asked on the call, but the summary didn't answer.",
+      "Not known whether the cooker is landlord-supplied, which affects responsibility if the cooker is at fault. Flagged in the handover.",
+      "No cost estimate yet for make-safe or repair.",
+      "Sadie's symptoms are unclear. The tenant was told to call 999 or NHS 111 if they get worse."
+    ],
+    "assumptions": [
+      "The case material is current and the call happened on 10 Oct 2026, so GasSure's 04:00-09:00 slots that day had already passed when the ticket was created (11:08).",
+      "The gas smell was not caused by the tenants, as they said and with no evidence otherwise, so I told them they would not be charged.",
+      "The National Gas Emergency Service will make the supply safe first, and a Gas Safe engineer will then trace and repair the fault."
+    ],
+    "tenant_communication": "Tom Reilly got a simulated call and an SMS (MSG-AE97C8, delivered). He was told not to use switches, electrics, the cooker or any flame, to ventilate, to turn off the gas at the meter if safe, to evacuate, to call 0800 111 999 from outside, and to call 999 or NHS 111 if anyone feels worse. He was told he won't be charged, that the property manager is handling it, and that a Gas Safe engineer will follow up. He was asked to reply with the gas emergency reference. No appointment time has been promised.",
+    "landlord_communication": "Emailed Marcus Oyelaran (MSG-A79C94) the same day with the tenant's report quoted. The email covered the safety steps taken, that the repair is a legal duty and emergency make-safe goes ahead under policy with same-day notice, that an estimate will come before any non-emergency spend over his £150 limit, that the CP12 expired on 30 Sep 2026 with a recommendation to renew it on the same visit, and that the property manager will be in touch about his previous stance on gas work.",
+    "next_steps": [
+      "Property manager: call Tom now (Sadie as backup) to confirm evacuation and that 0800 111 999 was called, and record the reference.",
+      "Property manager: confirm same-day attendance by GasSure (020 7946 0102), or by Thames Heating (020 7946 0101) if needed. Book it, set the status to appointment_booked, and send the tenant the appointment confirmation by email and SMS.",
+      "Approve the emergency make-safe up to £500. Request landlord approval by email for further repairs over £150 and for the CP12 renewal.",
+      "Compliance: send the landlord formal notice of his CP12 obligations and make sure the CP12 is renewed as soon as possible.",
+      "Completion check: get the Gas Safe engineer's report or warning notice and invoice, confirm with the tenant that gas is safe, and check whether the cooker is landlord-supplied.",
+      "Re-check today. If the landlord does not reply by email within about 3 days, chase and escalate."
+    ],
+    "risk_flags": [
+      "GAS EMERGENCY: strong gas smell, hard safety rule applies, Gas Safe engineers only.",
+      "Possible gas or carbon monoxide exposure symptom: occupant has a headache.",
+      "No confirmation yet that the tenants evacuated or called the gas emergency line.",
+      "CP12 expired 2026-09-30 at an occupied property (legal breach under the Gas Safety (Installation and Use) Regulations 1998).",
+      "The landlord refuses gas spend despite his legal duty, and his £150 limit is below the emergency make-safe authority.",
+      "The intake call handler gave no safety advice on the first call.",
+      "No contractor booked for an emergency: the only slots offered were past or overnight, and the backup's booking system was down."
+    ],
+    "confidence": 0.85,
+    "reasoning": "Under policy section 2, a gas smell triggers the hard gas rule: give safety advice and 0800 111 999, book only Gas Safe engineers, and escalate to the property manager straight away. The headache adds a possible carbon monoxide risk. The records confirmed the property, an active tenancy, an expired CP12 and the landlord's stance. Section 3 and section 4 ('do not spend' on a legal repair means escalate, never refuse) mean the landlord's refusal and £150 limit cannot block the emergency, so I informed him the same day by email, as he requires. Section 5 favours GasSure because they did the last CP12 here, but they had no valid same-day slot, and Thames' booking system failed twice. I booked nothing invalid and promised no time (section 6), and passed the booking to the property manager with both contacts. The expired CP12 combined with the landlord's refusal is a separate compliance problem with a different owner, so it was escalated to compliance."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "PROP-0077"
+      },
+      "output": {
+        "found": true,
+        "property_id": "PROP-0077",
+        "address": "9 Birch Close, Croydon",
+        "postcode": "CR0 7EX",
+        "type": "house (3-bed semi)",
+        "landlord_id": "LL-0220",
+        "landlord_name": "Marcus Oyelaran",
+        "landlord_phone": "+44 7700 900220",
+        "landlord_email": "m.oyelaran@example.com",
+        "landlord_instructions": "Do NOT spend more than £150 on anything without my written approval. I'm abroad until 20 Oct; email only.",
+        "spend_limit_gbp": 150,
+        "preferred_contractors": [],
+        "gas_safety_cert_expiry": "2026-09-30",
+        "eicr_expiry": "2028-01-15",
+        "boiler": {
+          "make": "Baxi 830",
+          "installed": "2014-11",
+          "age_years": 11
+        },
+        "notes": "Gas safety certificate EXPIRED 2026-09-30 - renewal overdue."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "PROP-0077"
+      },
+      "output": {
+        "tenancies": [
+          {
+            "tenancy_id": "TEN-5002",
+            "property_id": "PROP-0077",
+            "status": "active",
+            "tenants": [
+              {
+                "name": "Tom Reilly",
+                "phone": "+44 7700 900502",
+                "email": "tom.reilly@example.com"
+              },
+              {
+                "name": "Sadie Reilly",
+                "phone": "+44 7700 900503",
+                "email": ""
+              }
+            ],
+            "start": "2024-02-15",
+            "end": "2026-02-14",
+            "rolling": true,
+            "vulnerability_notes": "",
+            "access_notes": "Both tenants work; access after 5pm or Saturdays."
+          }
+        ],
+        "active_tenancy": {
+          "tenancy_id": "TEN-5002",
+          "property_id": "PROP-0077",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tom Reilly",
+              "phone": "+44 7700 900502",
+              "email": "tom.reilly@example.com"
+            },
+            {
+              "name": "Sadie Reilly",
+              "phone": "+44 7700 900503",
+              "email": ""
+            }
+          ],
+          "start": "2024-02-15",
+          "end": "2026-02-14",
+          "rolling": true,
+          "vulnerability_notes": "",
+          "access_notes": "Both tenants work; access after 5pm or Saturdays."
+        },
+        "warning": null
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "PROP-0077"
+      },
+      "output": {
+        "property_id": "PROP-0077",
+        "jobs": [
+          {
+            "job_id": "JOB-8650",
+            "property_id": "PROP-0077",
+            "date": "2026-03-02",
+            "category": "plumbing",
+            "description": "Dripping bath tap; washer replaced.",
+            "contractor_id": "CON-RP03",
+            "cost_gbp": 95,
+            "outcome": "completed"
+          },
+          {
+            "job_id": "JOB-8700",
+            "property_id": "PROP-0077",
+            "date": "2025-09-28",
+            "category": "gas",
+            "description": "Annual gas safety check (CP12 issued, expires 2026-09-30).",
+            "contractor_id": "CON-GS02",
+            "cost_gbp": 80,
+            "outcome": "completed"
+          }
+        ],
+        "count": 2
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "PROP-0077",
+        "title": "EMERGENCY - strong smell of gas in kitchen near cooker (occupant reports headache)",
+        "category": "gas",
+        "urgency": "emergency",
+        "description": "Inbound call Fri 10 Oct 2026 08:15 from tenant Tom Reilly (TEN-5002, active rolling tenancy). Reports a \"really strong smell of gas in the kitchen this morning, near the cooker\"; noticeable as soon as you walk in. His wife (co-tenant Sadie Reilly) has a headache - possible gas/CO exposure symptom. Tenant has opened the back door. Tenant says not caused by them and does not want to pay. Call handler only said \"I'm going to pass this on\" - no safety advice recorded as given on the call.\nContext: Gas safety certificate (CP12) EXPIRED 2026-09-30 - renewal overdue (last CP12 by CON-GS02 on 2025-09-28). Boiler Baxi 830, installed 2014 (11 yrs). Landlord (LL-0220 Marcus Oyelaran) note 2025-11-03: called gas check \"a waste of money\" and asked not to be billed for gas work - statutory duty explained, no agreement. Landlord instructions: no spend >£150 without written approval; abroad until 20 Oct, email only. Tenant also mentions landlord said last year he is \"not paying for any more gas stuff\".\nSafety rule applies: gas emergency - National Gas Emergency 0800 111 999, Gas Safe engineer only, escalate to property manager.",
+        "reported_by": "Tom Reilly (tenant)"
+      },
+      "output": {
+        "ticket_id": "TKT-8A472B",
+        "property_id": "PROP-0077",
+        "title": "EMERGENCY - strong smell of gas in kitchen near cooker (occupant reports headache)",
+        "category": "gas",
+        "urgency": "emergency",
+        "description": "Inbound call Fri 10 Oct 2026 08:15 from tenant Tom Reilly (TEN-5002, active rolling tenancy). Reports a \"really strong smell of gas in the kitchen this morning, near the cooker\"; noticeable as soon as you walk in. His wife (co-tenant Sadie Reilly) has a headache - possible gas/CO exposure symptom. Tenant has opened the back door. Tenant says not caused by them and does not want to pay. Call handler only said \"I'm going to pass this on\" - no safety advice recorded as given on the call.\nContext: Gas safety certificate (CP12) EXPIRED 2026-09-30 - renewal overdue (last CP12 by CON-GS02 on 2025-09-28). Boiler Baxi 830, installed 2014 (11 yrs). Landlord (LL-0220 Marcus Oyelaran) note 2025-11-03: called gas check \"a waste of money\" and asked not to be billed for gas work - statutory duty explained, no agreement. Landlord instructions: no spend >£150 without written approval; abroad until 20 Oct, email only. Tenant also mentions landlord said last year he is \"not paying for any more gas stuff\".\nSafety rule applies: gas emergency - National Gas Emergency 0800 111 999, Gas Safe engineer only, escalate to property manager.",
+        "reported_by": "Tom Reilly (tenant)",
+        "status": "open",
+        "created_at": "2026-10-10T11:08:45"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "place_call",
+      "input": {
+        "to_role": "tenant",
+        "phone": "+44 7700 900502",
+        "purpose": "Give immediate gas-emergency safety instructions and confirm the tenant has called the National Gas Emergency line",
+        "talking_points": "- This is the agency calling back about the gas smell at 9 Birch Close.\n- Please do NOT operate any electrical switches (lights, extractor, doorbell), do not use the cooker or any naked flame, do not smoke.\n- Open all windows and doors if safe to do so; turn off the gas at the meter (emergency control valve) only if it is safe and easy to reach.\n- Because the smell is strong and your wife has a headache: everyone (and any pets) should leave the property now and wait outside.\n- Call the National Gas Emergency line on 0800 111 999 straight away (free, 24/7) - they will attend and make the supply safe. Use a mobile phone outside the property.\n- Headache can be a sign of gas or carbon monoxide exposure: if anyone feels dizzy, sick, short of breath or the headache worsens, call 999; otherwise contact NHS 111 for advice.\n- Ask: have you called 0800 111 999 yet? Is everyone out of the property? Is anyone else in the home (children, elderly, pregnant, pets)?\n- Reassure: you will not be charged for this; gas safety is the landlord's legal responsibility. Our property manager is handling it now and we will arrange a Gas Safe registered engineer for the follow-up repair. Please tell us the gas emergency reference and what the engineer says when they attend."
+      },
+      "output": {
+        "status": "completed",
+        "mode": "simulated",
+        "to_role": "tenant",
+        "phone": "+44 7700 900502",
+        "purpose": "Give immediate gas-emergency safety instructions and confirm the tenant has called the National Gas Emergency line",
+        "transcript_summary": "Tenant confirmed the access arrangement and current state of the issue; no new hazards reported.",
+        "note": "Simulated call (VOICE_LIVE_CALLS=0 or ElevenLabs not configured)."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "+44 7700 900502",
+        "channel": "sms",
+        "body": "Gas smell at 9 Birch Close - please act now: 1) Do NOT use light switches, electrics, the cooker or any flame. 2) Open windows/doors, turn gas off at the meter if safe. 3) As the smell is strong, everyone leave the property. 4) Call National Gas Emergency 0800 111 999 from outside. Headache can be a sign of gas/CO exposure - if anyone feels worse, dizzy or sick call 999, otherwise NHS 111. You will not be charged; our property manager is handling this and a Gas Safe engineer will follow up. Please reply with the gas emergency reference."
+      },
+      "output": {
+        "message_id": "MSG-AE97C8",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 1
+    },
+    {
+      "step": 4,
+      "name": "search_contractors",
+      "input": {
+        "trade": "gas_engineer",
+        "postcode": "CR0 7EX",
+        "emergency": true
+      },
+      "output": {
+        "trade": "gas_engineer",
+        "postcode": "CR0 7EX",
+        "emergency_only": true,
+        "contractors": [
+          {
+            "contractor_id": "CON-TH01",
+            "name": "Thames Heating Ltd",
+            "trades": [
+              "gas_engineer",
+              "plumber"
+            ],
+            "certifications": [
+              "Gas Safe 512345"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "E",
+              "N",
+              "CR"
+            ],
+            "rating": 4.6,
+            "emergency": true,
+            "call_out_gbp": 120,
+            "phone": "+44 20 7946 0101",
+            "email": "jobs@thamesheating.example.com"
+          },
+          {
+            "contractor_id": "CON-GS02",
+            "name": "GasSure London",
+            "trades": [
+              "gas_engineer"
+            ],
+            "certifications": [
+              "Gas Safe 598877"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "CR",
+              "BR"
+            ],
+            "rating": 4.4,
+            "emergency": true,
+            "call_out_gbp": 140,
+            "phone": "+44 20 7946 0102",
+            "email": "book@gassure.example.com"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-GS02",
+        "urgency": "emergency"
+      },
+      "output": {
+        "contractor_id": "CON-GS02",
+        "name": "GasSure London",
+        "urgency": "emergency",
+        "slots": [
+          {
+            "slot_id": "SLOT-EME-1",
+            "start": "2026-10-10T04:00",
+            "end": "2026-10-10T06:00"
+          },
+          {
+            "slot_id": "SLOT-EME-2",
+            "start": "2026-10-10T07:00",
+            "end": "2026-10-10T09:00"
+          },
+          {
+            "slot_id": "SLOT-EME-3",
+            "start": "2026-10-11T02:00",
+            "end": "2026-10-11T04:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-TH01",
+        "urgency": "emergency"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Contractor scheduling system for Thames Heating Ltd returned HTTP 504 (gateway timeout). Retry or choose another contractor.",
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-TH01",
+        "urgency": "emergency"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Contractor scheduling system for Thames Heating Ltd returned HTTP 504 (gateway timeout). Retry or choose another contractor.",
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "place_call",
+      "input": {
+        "to_role": "contractor",
+        "phone": "+44 20 7946 0102",
+        "purpose": "Request same-day emergency Gas Safe attendance at 9 Birch Close, Croydon CR0 7EX (strong gas smell near cooker); online slots offered are already past or overnight",
+        "talking_points": "- Agency calling re ticket TKT-8A472B, 9 Birch Close, Croydon CR0 7EX - you did the CP12 here on 28 Sep 2025.\n- Tenant reported a strong smell of gas in the kitchen near the cooker this morning; one occupant has a headache. Tenant has been told to evacuate and call National Gas Emergency 0800 111 999 (they will make safe/cap).\n- Ask: can a Gas Safe engineer attend TODAY (10 Oct) to trace/repair the leak once the supply is made safe? Your online emergency slots shown are 04:00-06:00 and 07:00-09:00 today (already passed) and 02:00-04:00 tomorrow - please confirm a real attendance time.\n- Ask for estimated cost of call-out plus make-safe/repair (emergency authority up to £500 pending property manager sign-off).\n- Note: the gas safety certificate expired 30 Sep 2026 - ask if the engineer can also carry out the CP12 renewal on the same visit (to be confirmed by property manager).\n- Do NOT confirm a booking verbally - our property manager will confirm. Access: tenant will be contacted by us; tenant contact will be shared on confirmation."
+      },
+      "output": {
+        "status": "completed",
+        "mode": "simulated",
+        "to_role": "contractor",
+        "phone": "+44 20 7946 0102",
+        "purpose": "Request same-day emergency Gas Safe attendance at 9 Birch Close, Croydon CR0 7EX (strong gas smell near cooker); online slots offered are already past or overnight",
+        "transcript_summary": "Contractor confirmed they can attend the proposed slot and will call the tenant 30 minutes before arrival.",
+        "note": "Simulated call (VOICE_LIVE_CALLS=0 or ElevenLabs not configured)."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 8,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "m.oyelaran@example.com",
+        "channel": "email",
+        "body": "Address: 9 Birch Close, Croydon CR0 7EX\nRef: TKT-8A472B\n\nHi Marcus,\n\nThis is to let you know about an emergency at your property today (Fri 10 Oct). At 08:15 the tenant reported: \"There's a really strong smell of gas in the kitchen this morning, near the cooker. My wife's got a headache.\"\n\nWhat we have done: we have told the tenants to leave the property, not to use any switches or flames, and to call the National Gas Emergency Service (0800 111 999), who will make the supply safe. We are arranging a Gas Safe registered engineer to find and repair the fault, and our property manager is handling the case.\n\nPlease note:\n- Fixing a suspected gas leak is an emergency and a legal repair duty for the landlord (s.11 Landlord and Tenant Act 1985 and the Gas Safety (Installation and Use) Regulations 1998). Under our policy, emergency make-safe work goes ahead without waiting for approval and we tell you the same day. We will send you an estimate before any further repair work goes ahead that costs more than your £150 limit.\n- The gas safety certificate for the property ran out on 30 Sep 2026. A yearly gas safety check is a legal requirement for let properties. We recommend the engineer renews the certificate while they are there, and our property manager will contact you about this.\n\nWe know you have said before that you do not want to be billed for gas work. We cannot leave a gas safety issue unrepaired, and our property manager will be in touch. Please reply by email with any questions.\n\nKind regards,\nResolve AI - Maintenance Operations"
+      },
+      "output": {
+        "message_id": "MSG-A79C94",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 9,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "TKT-8A472B",
+        "severity": "critical",
+        "to": "property_manager",
+        "reason": "Gas emergency (strong gas smell, occupant headache) - hard safety rule; Gas Safe attendance time not confirmed; landlord refuses gas spend; CP12 expired",
+        "handover": "FACTS (sources: call transcript 10 Oct 2026 08:15, CRM record, property/tenancy/history lookups)\n- Property PROP-0077, 9 Birch Close, Croydon CR0 7EX (3-bed semi). Active rolling tenancy TEN-5002: Tom Reilly +44 7700 900502, Sadie Reilly +44 7700 900503. No vulnerability recorded, but Sadie has a headache (possible gas/CO symptom). Access normally after 5pm/Sat. This is an emergency, so access is needed now.\n- Strong gas smell in kitchen near the cooker; tenant opened back door. On the inbound call the handler gave NO safety advice.\n- The gas safety certificate (CP12) EXPIRED 2026-09-30. Last CP12 was done by CON-GS02 GasSure London on 2025-09-28. Boiler Baxi 830, 2014.\n- Landlord LL-0220 Marcus Oyelaran: abroad until 20 Oct, email only, spend limit £150 in writing. CRM note 2025-11-03: called the gas check \"a waste of money\" and asked not to be billed for gas work. The statutory duty was explained and no agreement was reached. Tenant repeats this (\"not paying for any more gas stuff\").\n\nDONE\n- Ticket TKT-8A472B opened (emergency, gas).\n- Simulated voice call to Tom with gas safety script (no switches/flames, ventilate, evacuate, call 0800 111 999, 999/NHS 111 if symptoms worsen, no charge to tenant). The call summary was generic and did NOT confirm that they have called 0800 111 999 or that everyone is out. SMS with the same advice delivered (MSG-AE97C8), asking them to reply with the gas emergency reference.\n- Gas Safe panel search for CR0: CON-GS02 GasSure London (Gas Safe 598877, £140 call-out, used here before) and CON-TH01 Thames Heating (Gas Safe 512345, 4.6, £120). GasSure's emergency slots were 10 Oct 04-06 and 07-09 (both already passed at intake) and 11 Oct 02-04 (overnight, not same-day). I did NOT book any of these. Thames Heating's availability system returned HTTP 504 twice.\n- Simulated call to GasSure (+44 20 7946 0102) asking for same-day attendance after National Gas make-safe, a cost estimate and a CP12 renewal on the same visit. The summary says they \"can attend the proposed slot and will call tenant 30 min before\". No specific time was confirmed, so no booking has been made and the tenant has NOT been promised a time.\n- Landlord emailed (MSG-A79C94): told about the emergency and the statutory duty, the expired CP12 flagged, and an estimate promised before any non-emergency spend over £150.\n\nBLOCKED / YOUR ACTIONS\n1. Call Tom now. Confirm everyone is out and National Gas (0800 111 999) has been called, and get the reference. If no answer, try Sadie +44 7700 900503. If they have not called it, advise them to do it now or call it on their behalf.\n2. Call GasSure 020 7946 0102 and confirm a real same-day time for after the supply is made safe. If they cannot, call Thames Heating 020 7946 0101 (their portal is down). Book in the system and send the tenant the appointment confirmation.\n3. Spend: emergency make-safe can go ahead up to £500 under policy. The landlord's £150 limit and \"don't bill gas\" stance conflict with his statutory duty. Recommended: go ahead with the Gas Safe make-safe/repair, and get landlord written approval by email for anything beyond make-safe and for the CP12 renewal. Do not refuse the repair.\n4. If the engineer finds it is the cooker, check whether it is landlord-supplied (no record of this either way)."
+      },
+      "output": {
+        "escalation_id": "ESC-89B4C5",
+        "status": "queued",
+        "to": "property_manager",
+        "severity": "critical"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 9,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "TKT-8A472B",
+        "severity": "high",
+        "to": "compliance",
+        "reason": "Gas safety certificate expired 30 Sep 2026 at an occupied let; landlord previously refused gas check spend; live gas leak report today",
+        "handover": "PROP-0077, 9 Birch Close, Croydon CR0 7EX, occupied (TEN-5002, Reilly). The CP12 expired 2026-09-30 (last one by GasSure London CON-GS02, 2025-09-28). Landlord Marcus Oyelaran (LL-0220, m.oyelaran@example.com, abroad until 20 Oct, email only) told us on 2025-11-03 that the gas check was \"a waste of money\" and asked not to be billed for gas work. No agreement was reached. Today (10 Oct) the tenant reported a strong gas smell near the cooker with an occupant headache. This is being handled as an emergency under TKT-8A472B by the property manager. The landlord was emailed today about the expired CP12 and his statutory duty. Recommended: the Gas Safe engineer attending the leak also renews the CP12. Send the landlord a formal written notice of his obligations under the Gas Safety (Installation and Use) Regulations 1998. If he still refuses, decide whether the agency instructs the CP12 regardless or reviews its management of the property."
+      },
+      "output": {
+        "escalation_id": "ESC-0263E0",
+        "status": "queued",
+        "to": "compliance",
+        "severity": "high"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 10,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-8A472B",
+        "note": "Intake gap: the 08:15 call handler gave no gas safety advice. It was given by call and SMS at ticket creation. Both voice calls were simulated and returned generic summaries, so they are not proof that the tenant evacuated or called 0800 111 999, or that GasSure confirmed a time. GasSure's emergency slots returned by the tool were already in the past (04-06, 07-09 on 10 Oct) or overnight (02-04 on 11 Oct), so none were booked. Thames Heating's availability check returned HTTP 504 twice. The landlord's \"do not bill gas work\" stance (CRM 2025-11-03, repeated by the tenant) conflicts with his statutory duty. It was not treated as a prohibition, and this was escalated. Tenant told they will not be charged (no evidence the tenant caused this). Escalations: ESC-89B4C5 (PM, critical), ESC-0263E0 (compliance, high)."
+      },
+      "output": {
+        "note_id": "NOTE-B33AEB",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 10,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-8A472B",
+        "status": "escalated",
+        "comment": "GAS EMERGENCY: tenant told to evacuate and call 0800 111 999. Property manager must confirm same-day Gas Safe attendance (GasSure, or Thames as backup) now, ESC-89B4C5. CP12 expired, sent to compliance. Check again today."
+      },
+      "output": {
+        "status_id": "STS-9AD088",
+        "status": "escalated",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Safety advice to the tenant is the first priority — calling now, with an SMS as a written record.",
+    "I've treated this as a gas emergency and sent it to the property manager as critical. The tenants have safety advice. **No Gas Safe engineer is booked yet**, because no usable appointment time came back, and nobody has confirmed the tenants have left or called the gas emergency line.\n\n**What I checked:** the records match the case file. The property is PROP-0077, 9 Birch Close, Croydon CR0 7EX. Tom and Sadie Reilly's tenancy is active. The landlord, Marcus Oyelaran, will only spend £150 without written approval and is abroad until 20 Oct (email only). Two problems showed up:\n- **The gas safety certificate ran out on 30 Sep 2026.**\n- The person who took the 08:15 call gave no safety advice.\n\n**What I did:**\n- **Ticket:** opened TKT-8A472B as an emergency. The headache could be a sign of gas or carbon monoxide exposure, so I've flagged it.\n- **Tenant:** gave the gas safety advice by phone and text (text delivered): no switches or flames, open windows, leave the house, call 0800 111 999, and call 999 or NHS 111 if symptoms get worse. I told them they won't be charged. The phone call was simulated and its summary was vague, so it doesn't show they followed the advice.\n- **Engineers:** I only looked at Gas Safe registered engineers.\n  - GasSure London did the last gas check here. Their emergency slots today had already passed, and the only other one is 2–4am tomorrow, so I didn't book any.\n  - Thames Heating's booking system timed out twice.\n  - I called GasSure (also simulated) to ask for a visit today. They said they \"can attend the proposed slot\", but no time was actually agreed, so I booked nothing and promised the tenants no time.\n- **Landlord:** emailed him about the emergency, his legal duty to repair it, and the expired certificate. I promised an estimate before any non-emergency spend over £150.\n- **Escalations:** property manager, critical (ESC-89B4C5). Compliance, high, for the expired certificate (ESC-0263E0). Internal note added and case status set to escalated.\n\n**Risks:**\n- The landlord's 2025 request not to be billed for gas work, which Tom also mentioned, goes against his legal duty. I haven't treated it as a ban and haven't refused the repair.\n- The house is occupied with no valid gas safety certificate.\n- No record says whether the cooker belongs to the landlord.\n\n**What the property manager needs to do now:**\n1. Call Tom (or Sadie on +44 7700 900503) to confirm everyone is out and the gas emergency line has been called, and get its reference.\n2. Agree a real time today with GasSure (020 7946 0102), or Thames Heating (020 7946 0101) if GasSure can't. Book it and send the tenants the appointment confirmation.\n3. Approve the emergency make-safe. Policy allows up to £500 without approval, above the landlord's £150 limit. Get his approval by email for any further repair and for renewing the certificate, ideally on the same visit."
+  ]
+}

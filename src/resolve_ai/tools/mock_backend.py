@@ -72,15 +72,21 @@ class MockBackend:
         return None
 
     def _slots(self, urgency: str, n: int = 3) -> List[dict]:
-        base = datetime.combine(date.today(), datetime.min.time())
-        offsets = {"emergency": [4, 7, 26], "urgent": [26, 50, 74], "routine": [3 * 24 + 9, 6 * 24 + 9, 10 * 24 + 9]}[urgency]
-        out = []
-        for i, h in enumerate(offsets[:n]):
-            start = base + timedelta(hours=h + 9 if urgency == "routine" else h)
-            if urgency == "routine":
-                start = base + timedelta(hours=h)
-            out.append({"slot_id": f"SLOT-{urgency[:3].upper()}-{i + 1}", "start": start.isoformat(timespec="minutes"), "end": (start + timedelta(hours=2)).isoformat(timespec="minutes")})
-        return out
+        """Future slots relative to now: emergency within hours, urgent next working days, routine next 1-2 weeks."""
+        now = datetime.now().replace(minute=0, second=0, microsecond=0)
+        if urgency == "emergency":
+            starts = [now + timedelta(hours=2), now + timedelta(hours=5), now + timedelta(hours=22)]
+        elif urgency == "urgent":
+            d = now.replace(hour=9) + timedelta(days=1)
+            starts = [d, d + timedelta(hours=5), d + timedelta(days=1)]
+        else:
+            d = now.replace(hour=9) + timedelta(days=3)
+            starts = [d, d + timedelta(days=3), d + timedelta(days=7)]
+        # keep off Sundays for non-emergencies
+        if urgency != "emergency":
+            starts = [s + timedelta(days=1) if s.weekday() == 6 else s for s in starts]
+        return [{"slot_id": f"SLOT-{urgency[:3].upper()}-{i + 1}", "start": s.isoformat(timespec="minutes"),
+                 "end": (s + timedelta(hours=2)).isoformat(timespec="minutes")} for i, s in enumerate(starts[:n])]
 
     # ---------- tools ----------
     def lookup_property(self, query: str) -> dict:

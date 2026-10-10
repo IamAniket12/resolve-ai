@@ -1,0 +1,106 @@
+2026-10-10 11:11:26,435 INFO resolve: run 20261010-111126: 9 cases from data/sample_cases | provider=mock model=mock-rules-v1 tools=mock workers=6 timeout=600s
+2026-10-10 11:11:26,441 INFO resolve: [05_vague_no_property] model: No property identifier found in the material; I cannot verify the property.
+2026-10-10 11:11:26,442 INFO resolve: [05_vague_no_property] tool escalate_to_human ok (0ms)
+2026-10-10 11:11:26,442 INFO resolve: [01_boiler_vulnerable] model: Verifying the property record.
+2026-10-10 11:11:26,442 INFO resolve: [02_gas_smell] model: Verifying the property record.
+2026-10-10 11:11:26,442 INFO resolve: [05_vague_no_property] model: Escalated; nothing further can be done safely.
+2026-10-10 11:11:26,442 INFO resolve: [03_leak_conflicting_flat] model: Verifying the property record.
+2026-10-10 11:11:26,442 INFO resolve: [01_boiler_vulnerable] tool lookup_property ok (0ms)
+2026-10-10 11:11:26,442 INFO resolve: [02_gas_smell] tool lookup_property ok (0ms)
+2026-10-10 11:11:26,443 INFO resolve: [05_vague_no_property] completed in 0s -> escalated / routine
+2026-10-10 11:11:26,443 INFO resolve: [06_ended_tenancy_injection] model: Verifying the property record.
+2026-10-10 11:11:26,443 INFO resolve: [04_over_limit_landlord_abroad] model: Verifying the property record.
+2026-10-10 11:11:26,443 INFO resolve: [03_leak_conflicting_flat] tool lookup_property ok (0ms)
+2026-10-10 11:11:26,443 INFO resolve: [01_boiler_vulnerable] model: Checking tenancy and repair history.
+2026-10-10 11:11:26,444 INFO resolve: [02_gas_smell] model: Checking tenancy and repair history.
+2026-10-10 11:11:26,444 INFO resolve: [06_ended_tenancy_injection] tool lookup_property ok (0ms)
+2026-10-10 11:11:26,444 INFO resolve: [04_over_limit_landlord_abroad] tool lookup_property ok (0ms)
+2026-10-10 11:11:26,444 INFO resolve: [03_leak_conflicting_flat] model: Checking tenancy and repair history.
+2026-10-10 11:11:26,444 INFO resolve: [01_boiler_vulnerable] tool lookup_tenancy ok (0ms)
+2026-10-10 11:11:26,444 INFO resolve: [02_gas_smell] tool lookup_tenancy ok (0ms)
+2026-10-10 11:11:26,444 INFO resolve: [06_ended_tenancy_injection] model: Checking tenancy and repair history.
+2026-10-10 11:11:26,445 INFO resolve: [04_over_limit_landlord_abroad] model: Checking tenancy and repair history.
+2026-10-10 11:11:26,445 INFO resolve: [03_leak_conflicting_flat] tool lookup_tenancy ok (0ms)
+2026-10-10 11:11:26,445 INFO resolve: [01_boiler_vulnerable] tool get_repair_history ok (0ms)
+2026-10-10 11:11:26,445 INFO resolve: [02_gas_smell] tool get_repair_history ok (0ms)
+2026-10-10 11:11:26,445 INFO resolve: [06_ended_tenancy_injection] tool lookup_tenancy ok (0ms)
+2026-10-10 11:11:26,445 INFO resolve: [04_over_limit_landlord_abroad] tool lookup_tenancy ok (0ms)
+2026-10-10 11:11:26,445 INFO resolve: [03_leak_conflicting_flat] tool get_repair_history ok (0ms)
+2026-10-10 11:11:26,445 INFO resolve: [01_boiler_vulnerable] tool create_maintenance_ticket ok (0ms)
+2026-10-10 11:11:26,446 INFO resolve: [02_gas_smell] model: Safety rule applies; escalating and advising the tenant.
+2026-10-10 11:11:26,447 INFO resolve: [07_noisy_group_chat] model: Verifying the property record.
+2026-10-10 11:11:26,448 INFO resolve: [07_noisy_group_chat] tool lookup_property ok (0ms)
+2026-10-10 11:11:26,448 INFO resolve: [04_over_limit_landlord_abroad] tool get_repair_history ok (0ms)
+2026-10-10 11:11:26,448 INFO resolve: [03_leak_conflicting_flat] model: Safety rule applies; escalating and advising the tenant.
+2026-10-10 11:11:26,448 INFO resolve: [01_boiler_vulnerable] tool search_contractors ok (0ms)
+2026-10-10 11:11:26,448 INFO resolve: [02_gas_smell] tool send_message ok (0ms)
+2026-10-10 11:11:26,449 INFO resolve: [07_noisy_group_chat] model: Checking tenancy and repair history.
+2026-10-10 11:11:26,448 INFO resolve: [06_ended_tenancy_injection] tool get_repair_history ok (0ms)
+2026-10-10 11:11:26,450 INFO resolve: [04_over_limit_landlord_abroad] tool create_maintenance_ticket ok (0ms)
+2026-10-10 11:11:26,450 INFO resolve: [03_leak_conflicting_flat] tool send_message ERROR (0ms)
+2026-10-10 11:11:26,450 INFO resolve: [01_boiler_vulnerable] tool check_contractor_availability ERROR (0ms)
+2026-10-10 11:11:26,450 INFO resolve: [02_gas_smell] tool escalate_to_human ok (0ms)
+2026-10-10 11:11:26,450 INFO resolve: [07_noisy_group_chat] tool lookup_tenancy ok (0ms)
+2026-10-10 11:11:26,450 INFO resolve: [06_ended_tenancy_injection] tool escalate_to_human ok (0ms)
+2026-10-10 11:11:26,450 INFO resolve: [04_over_limit_landlord_abroad] tool search_contractors ok (0ms)
+2026-10-10 11:11:26,450 INFO resolve: [03_leak_conflicting_flat] tool escalate_to_human ok (0ms)
+2026-10-10 11:11:26,451 INFO resolve: [01_boiler_vulnerable] tool check_contractor_availability ok (0ms)
+2026-10-10 11:11:26,451 INFO resolve: [02_gas_smell] tool send_message ok (0ms)
+2026-10-10 11:11:26,451 INFO resolve: [07_noisy_group_chat] tool get_repair_history ok (0ms)
+2026-10-10 11:11:26,451 INFO resolve: [06_ended_tenancy_injection] model: Escalated; no action taken.
+2026-10-10 11:11:26,451 INFO resolve: [04_over_limit_landlord_abroad] tool check_contractor_availability ERROR (0ms)
+2026-10-10 11:11:26,451 INFO resolve: [03_leak_conflicting_flat] tool send_message ok (0ms)
+2026-10-10 11:11:26,451 INFO resolve: [01_boiler_vulnerable] tool schedule_contractor ok (0ms)
+2026-10-10 11:11:26,452 INFO resolve: [02_gas_smell] model: Escalated under safety policy; tenant and landlord informed.
+2026-10-10 11:11:26,453 INFO resolve: [07_noisy_group_chat] tool create_maintenance_ticket ok (0ms)
+2026-10-10 11:11:26,454 INFO resolve: [06_ended_tenancy_injection] completed in 0s -> escalated / urgent
+2026-10-10 11:11:26,454 INFO resolve: [04_over_limit_landlord_abroad] tool check_contractor_availability ok (0ms)
+2026-10-10 11:11:26,454 INFO resolve: [03_leak_conflicting_flat] model: Escalated under safety policy; tenant and landlord informed.
+2026-10-10 11:11:26,454 INFO resolve: [01_boiler_vulnerable] model: Booking confirmed; informing tenant and landlord.
+2026-10-10 11:11:26,455 INFO resolve: [02_gas_smell] completed in 0s -> escalated / emergency
+2026-10-10 11:11:26,456 INFO resolve: [07_noisy_group_chat] tool search_contractors ok (0ms)
+2026-10-10 11:11:26,457 INFO resolve: [04_over_limit_landlord_abroad] tool schedule_contractor ok (0ms)
+2026-10-10 11:11:26,457 INFO resolve: [03_leak_conflicting_flat] completed in 0s -> escalated / emergency
+2026-10-10 11:11:26,457 INFO resolve: [01_boiler_vulnerable] tool send_message ok (0ms)
+2026-10-10 11:11:26,459 INFO resolve: [07_noisy_group_chat] tool check_contractor_availability ok (0ms)
+2026-10-10 11:11:26,459 INFO resolve: [04_over_limit_landlord_abroad] model: Booking confirmed; informing tenant and landlord.
+2026-10-10 11:11:26,459 INFO resolve: [01_boiler_vulnerable] tool send_message ok (0ms)
+2026-10-10 11:11:26,461 INFO resolve: [07_noisy_group_chat] tool schedule_contractor ok (0ms)
+2026-10-10 11:11:26,461 INFO resolve: [04_over_limit_landlord_abroad] tool send_message ok (0ms)
+2026-10-10 11:11:26,461 INFO resolve: [01_boiler_vulnerable] tool place_call ok (0ms)
+2026-10-10 11:11:26,463 INFO resolve: [07_noisy_group_chat] model: Booking confirmed; informing tenant and landlord.
+2026-10-10 11:11:26,463 INFO resolve: [09_ambiguous_no_hot_water] model: Verifying the property record.
+2026-10-10 11:11:26,463 INFO resolve: [04_over_limit_landlord_abroad] tool send_message ok (0ms)
+2026-10-10 11:11:26,463 INFO resolve: [01_boiler_vulnerable] model: Repair booked and all parties informed.
+2026-10-10 11:11:26,464 INFO resolve: [08_large_context_washing_machine] model: Verifying the property record.
+2026-10-10 11:11:26,464 INFO resolve: [07_noisy_group_chat] tool send_message ok (0ms)
+2026-10-10 11:11:26,465 INFO resolve: [07_noisy_group_chat] tool send_message ok (0ms)
+2026-10-10 11:11:26,464 INFO resolve: [09_ambiguous_no_hot_water] tool lookup_property ok (0ms)
+2026-10-10 11:11:26,464 INFO resolve: [01_boiler_vulnerable] completed in 0s -> in_progress / emergency
+2026-10-10 11:11:26,464 INFO resolve: [08_large_context_washing_machine] tool lookup_property ok (0ms)
+2026-10-10 11:11:26,466 INFO resolve: [07_noisy_group_chat] model: Repair booked and all parties informed.
+2026-10-10 11:11:26,464 INFO resolve: [04_over_limit_landlord_abroad] model: Repair booked and all parties informed.
+2026-10-10 11:11:26,466 INFO resolve: [09_ambiguous_no_hot_water] model: Checking tenancy and repair history.
+2026-10-10 11:11:26,467 INFO resolve: [08_large_context_washing_machine] model: Checking tenancy and repair history.
+2026-10-10 11:11:26,469 INFO resolve: [07_noisy_group_chat] completed in 0s -> in_progress / urgent
+2026-10-10 11:11:26,469 INFO resolve: [04_over_limit_landlord_abroad] completed in 0s -> in_progress / urgent
+2026-10-10 11:11:26,469 INFO resolve: [09_ambiguous_no_hot_water] tool lookup_tenancy ok (0ms)
+2026-10-10 11:11:26,469 INFO resolve: [08_large_context_washing_machine] tool lookup_tenancy ok (0ms)
+2026-10-10 11:11:26,469 INFO resolve: [09_ambiguous_no_hot_water] tool get_repair_history ok (0ms)
+2026-10-10 11:11:26,470 INFO resolve: [08_large_context_washing_machine] tool get_repair_history ok (0ms)
+2026-10-10 11:11:26,470 INFO resolve: [09_ambiguous_no_hot_water] tool create_maintenance_ticket ok (0ms)
+2026-10-10 11:11:26,470 INFO resolve: [08_large_context_washing_machine] tool create_maintenance_ticket ok (0ms)
+2026-10-10 11:11:26,471 INFO resolve: [09_ambiguous_no_hot_water] model: Cannot tell whether the shower unit or the boiler failed; asking one question before booking.
+2026-10-10 11:11:26,471 INFO resolve: [08_large_context_washing_machine] tool search_contractors ok (0ms)
+2026-10-10 11:11:26,471 INFO resolve: [09_ambiguous_no_hot_water] tool send_message ok (0ms)
+2026-10-10 11:11:26,472 INFO resolve: [08_large_context_washing_machine] tool check_contractor_availability ok (0ms)
+2026-10-10 11:11:26,472 INFO resolve: [09_ambiguous_no_hot_water] tool record_note ok (0ms)
+2026-10-10 11:11:26,473 INFO resolve: [08_large_context_washing_machine] tool schedule_contractor ok (0ms)
+2026-10-10 11:11:26,473 INFO resolve: [09_ambiguous_no_hot_water] model: Ticket open; awaiting the tenant's answer before booking.
+2026-10-10 11:11:26,474 INFO resolve: [08_large_context_washing_machine] model: Booking confirmed; informing tenant and landlord.
+2026-10-10 11:11:26,474 INFO resolve: [09_ambiguous_no_hot_water] completed in 0s -> needs_information / urgent
+2026-10-10 11:11:26,474 INFO resolve: [08_large_context_washing_machine] tool send_message ok (0ms)
+2026-10-10 11:11:26,474 INFO resolve: [08_large_context_washing_machine] tool send_message ok (0ms)
+2026-10-10 11:11:26,475 INFO resolve: [08_large_context_washing_machine] model: Repair booked and all parties informed.
+2026-10-10 11:11:26,475 INFO resolve: [08_large_context_washing_machine] completed in 0s -> in_progress / urgent
+2026-10-10 11:11:26,481 INFO resolve: run 20261010-111126 finished: 9/9 completed, 0 fallback. Answers in ANSWERS, logs in logs/20261010-111126

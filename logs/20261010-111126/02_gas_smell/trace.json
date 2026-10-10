@@ -1,0 +1,248 @@
+{
+  "case_id": "02_gas_smell",
+  "status": "completed",
+  "error": null,
+  "provider": "mock",
+  "model": "mock-rules-v1",
+  "steps": 4,
+  "started_at": "2026-10-10T10:11:26+00:00",
+  "finished_at": "2026-10-10T10:11:26+00:00",
+  "usage": {},
+  "manifest": [
+    {
+      "name": "call_transcript.txt",
+      "kind": "transcript",
+      "chars": 647,
+      "note": ""
+    },
+    {
+      "name": "crm_record.json",
+      "kind": "json",
+      "chars": 351,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "Reported gas issue at 9 Birch Close, Croydon. Urgency assessed as emergency. Evidence: \"Caller: Hi, it's Tom Reilly at 9 Birch Close in Croydon. There's a really strong smell of gas in the kitchen this morning, near the cooker. My wife's got a headache. I've opened the back door.\"",
+    "issue_category": "gas",
+    "urgency": "emergency",
+    "decision": "escalated",
+    "outcome": "Escalated to a human with handover: gas safety rule - requires certified engineer and human oversight.",
+    "actions_taken": [
+      "send_message: {\"recipient_type\": \"tenant\", \"recipient\": \"+44 7700 900502\", \"channel\": \"sms\", \"body\": \"Open windows, do not use switches or naked flames, leave the property if",
+      "send_message: {\"recipient_type\": \"landlord\", \"recipient\": \"m.oyelaran@example.com\", \"channel\": \"email\", \"body\": \"Emergency gas report at 9 Birch Close, Croydon. Tenant advise",
+      "escalate_to_human: {\"ticket_id\": \"\", \"severity\": \"critical\", \"to\": \"property_manager\", \"reason\": \"gas safety rule - requires certified engineer and human oversight.\", \"handover\": "
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": true,
+      "to": "property_manager",
+      "reason": "gas safety rule - requires certified engineer and human oversight.",
+      "handover": "Property PROP-0077 (9 Birch Close, Croydon). Reported: gas hazard. Tenant advised (Open windows, do not use switches or naked flames, leave the property if the smell is strong, and call the National Gas Emergency line on 0800 111 999 now.). Needs Gas Safe engineer today; landlord Marcus Oyelaran to be informed."
+    },
+    "conflicts": [],
+    "information_gaps": [],
+    "assumptions": [
+      "Mock LLM: keyword triage; replace with Claude for real judgement."
+    ],
+    "tenant_communication": "Open windows, do not use switches or naked flames, leave the property if the smell is strong, and call the National Gas Emergency line on 0800 111 999 now.",
+    "landlord_communication": "Emergency gas report at 9 Birch Close, Croydon. Tenant advised on safety steps; property manager escalated; certified engineer being arranged.",
+    "next_steps": [
+      "Human reviews escalation"
+    ],
+    "risk_flags": [
+      "gas safety rule applied"
+    ],
+    "confidence": 0.6,
+    "reasoning": "Rule-based mock: classified by keywords, verified property, applied safety/approval rules from policy, booked first available contractor from preferred list."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "PROP-0077"
+      },
+      "output": {
+        "found": true,
+        "property_id": "PROP-0077",
+        "address": "9 Birch Close, Croydon",
+        "postcode": "CR0 7EX",
+        "type": "house (3-bed semi)",
+        "landlord_id": "LL-0220",
+        "landlord_name": "Marcus Oyelaran",
+        "landlord_phone": "+44 7700 900220",
+        "landlord_email": "m.oyelaran@example.com",
+        "landlord_instructions": "Do NOT spend more than £150 on anything without my written approval. I'm abroad until 20 Oct; email only.",
+        "spend_limit_gbp": 150,
+        "preferred_contractors": [],
+        "gas_safety_cert_expiry": "2026-09-30",
+        "eicr_expiry": "2028-01-15",
+        "boiler": {
+          "make": "Baxi 830",
+          "installed": "2014-11",
+          "age_years": 11
+        },
+        "notes": "Gas safety certificate EXPIRED 2026-09-30 - renewal overdue."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "PROP-0077"
+      },
+      "output": {
+        "tenancies": [
+          {
+            "tenancy_id": "TEN-5002",
+            "property_id": "PROP-0077",
+            "status": "active",
+            "tenants": [
+              {
+                "name": "Tom Reilly",
+                "phone": "+44 7700 900502",
+                "email": "tom.reilly@example.com"
+              },
+              {
+                "name": "Sadie Reilly",
+                "phone": "+44 7700 900503",
+                "email": ""
+              }
+            ],
+            "start": "2024-02-15",
+            "end": "2026-02-14",
+            "rolling": true,
+            "vulnerability_notes": "",
+            "access_notes": "Both tenants work; access after 5pm or Saturdays."
+          }
+        ],
+        "active_tenancy": {
+          "tenancy_id": "TEN-5002",
+          "property_id": "PROP-0077",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tom Reilly",
+              "phone": "+44 7700 900502",
+              "email": "tom.reilly@example.com"
+            },
+            {
+              "name": "Sadie Reilly",
+              "phone": "+44 7700 900503",
+              "email": ""
+            }
+          ],
+          "start": "2024-02-15",
+          "end": "2026-02-14",
+          "rolling": true,
+          "vulnerability_notes": "",
+          "access_notes": "Both tenants work; access after 5pm or Saturdays."
+        },
+        "warning": null
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "PROP-0077"
+      },
+      "output": {
+        "property_id": "PROP-0077",
+        "jobs": [
+          {
+            "job_id": "JOB-8650",
+            "property_id": "PROP-0077",
+            "date": "2026-03-02",
+            "category": "plumbing",
+            "description": "Dripping bath tap; washer replaced.",
+            "contractor_id": "CON-RP03",
+            "cost_gbp": 95,
+            "outcome": "completed"
+          },
+          {
+            "job_id": "JOB-8700",
+            "property_id": "PROP-0077",
+            "date": "2025-09-28",
+            "category": "gas",
+            "description": "Annual gas safety check (CP12 issued, expires 2026-09-30).",
+            "contractor_id": "CON-GS02",
+            "cost_gbp": 80,
+            "outcome": "completed"
+          }
+        ],
+        "count": 2
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "+44 7700 900502",
+        "channel": "sms",
+        "body": "Open windows, do not use switches or naked flames, leave the property if the smell is strong, and call the National Gas Emergency line on 0800 111 999 now."
+      },
+      "output": {
+        "message_id": "MSG-9EEB35",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "",
+        "severity": "critical",
+        "to": "property_manager",
+        "reason": "gas safety rule - requires certified engineer and human oversight.",
+        "handover": "Property PROP-0077 (9 Birch Close, Croydon). Reported: gas hazard. Tenant advised (Open windows, do not use switches or naked flames, leave the property if the smell is strong, and call the National Gas Emergency line on 0800 111 999 now.). Needs Gas Safe engineer today; landlord Marcus Oyelaran to be informed."
+      },
+      "output": {
+        "escalation_id": "ESC-850B85",
+        "status": "queued",
+        "to": "property_manager",
+        "severity": "critical"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "m.oyelaran@example.com",
+        "channel": "email",
+        "body": "Emergency gas report at 9 Birch Close, Croydon. Tenant advised on safety steps; property manager escalated; certified engineer being arranged."
+      },
+      "output": {
+        "message_id": "MSG-A79C94",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Verifying the property record.",
+    "Checking tenancy and repair history.",
+    "Safety rule applies; escalating and advising the tenant.",
+    "Escalated under safety policy; tenant and landlord informed."
+  ]
+}

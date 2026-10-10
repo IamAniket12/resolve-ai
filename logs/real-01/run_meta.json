@@ -1,0 +1,14 @@
+{
+  "run_id": "real-01",
+  "cases_path": "data/sample_cases",
+  "n_cases": 1,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "tool_backend": "mock",
+  "workers": 6,
+  "case_timeout": 600,
+  "effort": "high",
+  "cases": [
+    "02_gas_smell"
+  ]
+}

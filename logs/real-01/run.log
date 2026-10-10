@@ -1,0 +1,21 @@
+2026-10-10 11:07:57,934 INFO resolve: run real-01: 1 cases from data/sample_cases | provider=anthropic model=claude-opus-5-5 tools=mock workers=6 timeout=600s
+2026-10-10 11:08:32,278 INFO resolve: [02_gas_smell] tool lookup_property ok (0ms)
+2026-10-10 11:08:32,279 INFO resolve: [02_gas_smell] tool lookup_tenancy ok (0ms)
+2026-10-10 11:08:32,279 INFO resolve: [02_gas_smell] tool get_repair_history ok (0ms)
+2026-10-10 11:08:45,642 INFO resolve: [02_gas_smell] tool create_maintenance_ticket ok (0ms)
+2026-10-10 11:08:55,251 INFO resolve: [02_gas_smell] model: Safety advice to the tenant is the first priority — calling now, with an SMS as a written record.
+2026-10-10 11:08:55,252 INFO resolve: [02_gas_smell] tool place_call ok (0ms)
+2026-10-10 11:08:55,254 INFO resolve: [02_gas_smell] tool send_message ok (1ms)
+2026-10-10 11:08:57,444 INFO resolve: [02_gas_smell] tool search_contractors ok (0ms)
+2026-10-10 11:09:00,192 INFO resolve: [02_gas_smell] tool check_contractor_availability ok (0ms)
+2026-10-10 11:09:00,192 INFO resolve: [02_gas_smell] tool check_contractor_availability ERROR (0ms)
+2026-10-10 11:09:02,839 INFO resolve: [02_gas_smell] tool check_contractor_availability ERROR (0ms)
+2026-10-10 11:09:10,660 INFO resolve: [02_gas_smell] tool place_call ok (0ms)
+2026-10-10 11:09:20,521 INFO resolve: [02_gas_smell] tool send_message ok (0ms)
+2026-10-10 11:09:39,501 INFO resolve: [02_gas_smell] tool escalate_to_human ok (0ms)
+2026-10-10 11:09:39,502 INFO resolve: [02_gas_smell] tool escalate_to_human ok (0ms)
+2026-10-10 11:09:45,328 INFO resolve: [02_gas_smell] tool record_note ok (0ms)
+2026-10-10 11:09:45,328 INFO resolve: [02_gas_smell] tool update_case_status ok (0ms)
+2026-10-10 11:09:56,053 INFO resolve: [02_gas_smell] model: I've treated this as a gas emergency and sent it to the property manager as critical. The tenants have safety advice. **No Gas Safe engineer is booked yet**, because no usable appointment time came ba
+2026-10-10 11:10:49,859 INFO resolve: [02_gas_smell] completed in 172s -> escalated / emergency
+2026-10-10 11:10:49,872 INFO resolve: run real-01 finished: 1/1 completed, 0 fallback. Answers in ANSWERS, logs in logs/real-01
