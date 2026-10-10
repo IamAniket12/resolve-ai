@@ -26,11 +26,10 @@ def _status_line(r: CaseResult) -> str:
 
 def _next_actions_md(x) -> List[str]:
     acts = list(x.next_actions) or [x.next_action]
-    if x.next_action.summary != "not set" and not any(a.summary == x.next_action.summary for a in acts):
-        acts = [x.next_action] + acts
+    primary = next((i for i, a in enumerate(acts) if a.channel == x.next_action.channel and a.to == x.next_action.to), 0)
     out: List[str] = []
     for i, a in enumerate(acts, 1):
-        tag = " (primary)" if (a.summary == x.next_action.summary and a.channel == x.next_action.channel) else ""
+        tag = " (primary)" if i - 1 == primary else ""
         out.append(f"{i}. **{a.channel.replace('_', ' ')} → {a.to}**{tag} — {a.summary}")
         if a.draft.strip():
             out += ["   > " + line for line in a.draft.strip().splitlines()]
