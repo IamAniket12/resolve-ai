@@ -22,7 +22,8 @@ from typing import List, Optional
 
 
 def _latest_run() -> Optional[Path]:
-    runs = sorted((p for p in Path("logs").iterdir() if p.is_dir()), key=lambda p: p.name) if Path("logs").exists() else []
+    runs = sorted((p for p in Path("logs").iterdir() if p.is_dir() and (p / "run_meta.json").exists()),
+                  key=lambda p: (p / "run_meta.json").stat().st_mtime) if Path("logs").exists() else []
     return runs[-1] if runs else None
 
 

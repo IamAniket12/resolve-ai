@@ -141,8 +141,8 @@ def cmd_verify(args) -> int:
     import re
     run_dir = Path("logs") / args.run if args.run else None
     if run_dir is None:
-        runs = sorted((p for p in Path("logs").iterdir() if p.is_dir()), key=lambda p: p.name) if Path("logs").exists() else []
-        run_dir = runs[-1] if runs else None
+        from resolve_ai.grade import _latest_run
+        run_dir = _latest_run()
     if not run_dir or not run_dir.exists():
         print("[FAIL] no run found under logs/")
         return 1

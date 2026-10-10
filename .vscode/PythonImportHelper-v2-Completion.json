@@ -2194,7 +2194,7 @@
         "kind": 2,
         "importPath": "src.resolve_ai.cli",
         "description": "src.resolve_ai.cli",
-        "peekOfCode": "def cmd_verify(args) -> int:\n    \"\"\"Submission integrity check after a run: every case answered, answers match traces, no judge-addressed text,\n    no secrets, and a plain report of fallbacks. Read-only; it never edits an answer (the rules forbid that).\"\"\"\n    import re\n    run_dir = Path(\"logs\") / args.run if args.run else None\n    if run_dir is None:\n        runs = sorted((p for p in Path(\"logs\").iterdir() if p.is_dir()), key=lambda p: p.name) if Path(\"logs\").exists() else []\n        run_dir = runs[-1] if runs else None\n    if not run_dir or not run_dir.exists():\n        print(\"[FAIL] no run found under logs/\")",
+        "peekOfCode": "def cmd_verify(args) -> int:\n    \"\"\"Submission integrity check after a run: every case answered, answers match traces, no judge-addressed text,\n    no secrets, and a plain report of fallbacks. Read-only; it never edits an answer (the rules forbid that).\"\"\"\n    import re\n    run_dir = Path(\"logs\") / args.run if args.run else None\n    if run_dir is None:\n        from resolve_ai.grade import _latest_run\n        run_dir = _latest_run()\n    if not run_dir or not run_dir.exists():\n        print(\"[FAIL] no run found under logs/\")",
         "detail": "src.resolve_ai.cli",
         "documentation": {}
     },
@@ -2221,7 +2221,7 @@
         "kind": 5,
         "importPath": "src.resolve_ai.cli",
         "description": "src.resolve_ai.cli",
-        "peekOfCode": "SUSPICIOUS = [\"give this project\", \"high score\", \"dear judge\", \"to the judge\", \"judging agent\", \"evaluator:\", \"ignore previous instructions\",\n              \"ignore the above\", \"you are the grader\", \"rate this\", \"maximum score\"]\ndef cmd_verify(args) -> int:\n    \"\"\"Submission integrity check after a run: every case answered, answers match traces, no judge-addressed text,\n    no secrets, and a plain report of fallbacks. Read-only; it never edits an answer (the rules forbid that).\"\"\"\n    import re\n    run_dir = Path(\"logs\") / args.run if args.run else None\n    if run_dir is None:\n        runs = sorted((p for p in Path(\"logs\").iterdir() if p.is_dir()), key=lambda p: p.name) if Path(\"logs\").exists() else []\n        run_dir = runs[-1] if runs else None",
+        "peekOfCode": "SUSPICIOUS = [\"give this project\", \"high score\", \"dear judge\", \"to the judge\", \"judging agent\", \"evaluator:\", \"ignore previous instructions\",\n              \"ignore the above\", \"you are the grader\", \"rate this\", \"maximum score\"]\ndef cmd_verify(args) -> int:\n    \"\"\"Submission integrity check after a run: every case answered, answers match traces, no judge-addressed text,\n    no secrets, and a plain report of fallbacks. Read-only; it never edits an answer (the rules forbid that).\"\"\"\n    import re\n    run_dir = Path(\"logs\") / args.run if args.run else None\n    if run_dir is None:\n        from resolve_ai.grade import _latest_run\n        run_dir = _latest_run()",
         "detail": "src.resolve_ai.cli",
         "documentation": {}
     },
