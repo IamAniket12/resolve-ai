@@ -8,3 +8,7 @@ dist/
 .pytest_cache/
 .DS_Store
 logs/*/mock_state/
+data/public_cut/
+data/public_cases/
+data/reality_test/
+data/public_cut_answers/

@@ -1,0 +1,2224 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "struct",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "struct",
+        "description": "struct",
+        "detail": "struct",
+        "documentation": {}
+    },
+    {
+        "label": "zlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "zlib",
+        "description": "zlib",
+        "detail": "zlib",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "anthropic",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "anthropic",
+        "description": "anthropic",
+        "detail": "anthropic",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "load_policy",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "load_policy",
+        "importPath": "resolve_ai.config",
+        "description": "resolve_ai.config",
+        "isExtraImport": true,
+        "detail": "resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "LLM",
+        "importPath": "resolve_ai.llm",
+        "description": "resolve_ai.llm",
+        "isExtraImport": true,
+        "detail": "resolve_ai.llm",
+        "documentation": {}
+    },
+    {
+        "label": "LLMResponse",
+        "importPath": "resolve_ai.llm",
+        "description": "resolve_ai.llm",
+        "isExtraImport": true,
+        "detail": "resolve_ai.llm",
+        "documentation": {}
+    },
+    {
+        "label": "LLM",
+        "importPath": "resolve_ai.llm",
+        "description": "resolve_ai.llm",
+        "isExtraImport": true,
+        "detail": "resolve_ai.llm",
+        "documentation": {}
+    },
+    {
+        "label": "LLMResponse",
+        "importPath": "resolve_ai.llm",
+        "description": "resolve_ai.llm",
+        "isExtraImport": true,
+        "detail": "resolve_ai.llm",
+        "documentation": {}
+    },
+    {
+        "label": "LLM",
+        "importPath": "resolve_ai.llm",
+        "description": "resolve_ai.llm",
+        "isExtraImport": true,
+        "detail": "resolve_ai.llm",
+        "documentation": {}
+    },
+    {
+        "label": "make_llm",
+        "importPath": "resolve_ai.llm",
+        "description": "resolve_ai.llm",
+        "isExtraImport": true,
+        "detail": "resolve_ai.llm",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "ToolError",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolError",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolError",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "to_tool_result_text",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "build_backend",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "build_backend",
+        "importPath": "resolve_ai.tools.registry",
+        "description": "resolve_ai.tools.registry",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "voice",
+        "importPath": "resolve_ai.tools",
+        "description": "resolve_ai.tools",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseResult",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Resolution",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "ToolEvent",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "resolution_schema",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Attachment",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseResult",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseResult",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Resolution",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "resolution_schema",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "FINALIZE_PROMPT",
+        "importPath": "resolve_ai.prompts",
+        "description": "resolve_ai.prompts",
+        "isExtraImport": true,
+        "detail": "resolve_ai.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "build_case_prompt",
+        "importPath": "resolve_ai.prompts",
+        "description": "resolve_ai.prompts",
+        "isExtraImport": true,
+        "detail": "resolve_ai.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "build_system_prompt",
+        "importPath": "resolve_ai.prompts",
+        "description": "resolve_ai.prompts",
+        "isExtraImport": true,
+        "detail": "resolve_ai.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "email",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "email",
+        "description": "email",
+        "detail": "email",
+        "documentation": {}
+    },
+    {
+        "label": "policy",
+        "importPath": "email",
+        "description": "email",
+        "isExtraImport": true,
+        "detail": "email",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "concurrent.futures",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "ResolveAgent",
+        "importPath": "resolve_ai.agent",
+        "description": "resolve_ai.agent",
+        "isExtraImport": true,
+        "detail": "resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "fallback_result",
+        "importPath": "resolve_ai.agent",
+        "description": "resolve_ai.agent",
+        "isExtraImport": true,
+        "detail": "resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "ResolveAgent",
+        "importPath": "resolve_ai.agent",
+        "description": "resolve_ai.agent",
+        "isExtraImport": true,
+        "detail": "resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "fallback_result",
+        "importPath": "resolve_ai.agent",
+        "description": "resolve_ai.agent",
+        "isExtraImport": true,
+        "detail": "resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "discover_cases",
+        "importPath": "resolve_ai.ingest",
+        "description": "resolve_ai.ingest",
+        "isExtraImport": true,
+        "detail": "resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "discover_cases",
+        "importPath": "resolve_ai.ingest",
+        "description": "resolve_ai.ingest",
+        "isExtraImport": true,
+        "detail": "resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "make_transcriber",
+        "importPath": "resolve_ai.tools.voice",
+        "description": "resolve_ai.tools.voice",
+        "isExtraImport": true,
+        "detail": "resolve_ai.tools.voice",
+        "documentation": {}
+    },
+    {
+        "label": "write_case",
+        "importPath": "resolve_ai.writer",
+        "description": "resolve_ai.writer",
+        "isExtraImport": true,
+        "detail": "resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "write_index",
+        "importPath": "resolve_ai.writer",
+        "description": "resolve_ai.writer",
+        "isExtraImport": true,
+        "detail": "resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "write_case",
+        "importPath": "resolve_ai.writer",
+        "description": "resolve_ai.writer",
+        "isExtraImport": true,
+        "detail": "resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "MockLLM",
+        "importPath": "resolve_ai.llm.mock_llm",
+        "description": "resolve_ai.llm.mock_llm",
+        "isExtraImport": true,
+        "detail": "resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "split_events",
+        "kind": 2,
+        "importPath": "scripts.cut_public_case",
+        "description": "scripts.cut_public_case",
+        "peekOfCode": "def split_events(history: str):\n    \"\"\"Return (header, [event_text, ...]) where each event starts at its anchor.\"\"\"\n    idx = [m.start() for m in EVENT_RE.finditer(history)]\n    if not idx:\n        return history, []\n    header = history[: idx[0]]\n    events = [history[a:b] for a, b in zip(idx, idx[1:] + [len(history)])]\n    return header, events\ndef strip_index(index: str) -> str:\n    out = []",
+        "detail": "scripts.cut_public_case",
+        "documentation": {}
+    },
+    {
+        "label": "strip_index",
+        "kind": 2,
+        "importPath": "scripts.cut_public_case",
+        "description": "scripts.cut_public_case",
+        "peekOfCode": "def strip_index(index: str) -> str:\n    out = []\n    skip = False\n    for line in index.splitlines():\n        if line.startswith(\"## \"):\n            skip = line.strip() in {\"## Overview\", \"## Outcome\", \"## History\"}\n            if skip:\n                continue\n        if skip:\n            continue",
+        "detail": "scripts.cut_public_case",
+        "documentation": {}
+    },
+    {
+        "label": "cut_case",
+        "kind": 2,
+        "importPath": "scripts.cut_public_case",
+        "description": "scripts.cut_public_case",
+        "peekOfCode": "def cut_case(src: Path, dst_root: Path, events_keep: int | None, fraction: float | None) -> tuple[int, int]:\n    dst = dst_root / src.name\n    ans = dst_root.parent / (dst_root.name + \"_answers\") / src.name\n    if dst.exists():\n        shutil.rmtree(dst)\n    dst.mkdir(parents=True)\n    ans.mkdir(parents=True, exist_ok=True)\n    index = (src / \"index.md\").read_text(encoding=\"utf-8\", errors=\"replace\")\n    (dst / \"index.md\").write_text(strip_index(index), encoding=\"utf-8\")\n    (ans / \"index_full.md\").write_text(index, encoding=\"utf-8\")",
+        "detail": "scripts.cut_public_case",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.cut_public_case",
+        "description": "scripts.cut_public_case",
+        "peekOfCode": "def main() -> None:\n    ap = argparse.ArgumentParser()\n    ap.add_argument(\"track_dir\")\n    ap.add_argument(\"out_dir\")\n    ap.add_argument(\"--events\", type=int, default=3)\n    ap.add_argument(\"--fraction\", type=float)\n    ap.add_argument(\"--only\", nargs=\"*\")\n    a = ap.parse_args()\n    track = Path(a.track_dir)\n    out = Path(a.out_dir)",
+        "detail": "scripts.cut_public_case",
+        "documentation": {}
+    },
+    {
+        "label": "EVENT_RE",
+        "kind": 5,
+        "importPath": "scripts.cut_public_case",
+        "description": "scripts.cut_public_case",
+        "peekOfCode": "EVENT_RE = re.compile(r'<a id=\"event-(\\d+)\"></a>')\ndef split_events(history: str):\n    \"\"\"Return (header, [event_text, ...]) where each event starts at its anchor.\"\"\"\n    idx = [m.start() for m in EVENT_RE.finditer(history)]\n    if not idx:\n        return history, []\n    header = history[: idx[0]]\n    events = [history[a:b] for a, b in zip(idx, idx[1:] + [len(history)])]\n    return header, events\ndef strip_index(index: str) -> str:",
+        "detail": "scripts.cut_public_case",
+        "documentation": {}
+    },
+    {
+        "label": "make_group_chat",
+        "kind": 2,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "def make_group_chat() -> str:\n    rng = random.Random(7)\n    n = 600\n    key = {n - off: (who, text) for off, who, text in KEY_MESSAGES}\n    t = datetime(2026, 8, 20, 8, 3)\n    lines = [\"WhatsApp chat export: 'Linden Grove house 🏠'\", \"Exported 10/10/2026 by Ben Okoro\", \"\"]\n    for i in range(n):\n        t += timedelta(minutes=rng.randint(2, 180))\n        if i in key:\n            who, text = key[i]",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "make_pdf",
+        "kind": 2,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "def make_pdf(pages: list[list[str]], out: Path) -> None:\n    objs: list[bytes] = []\n    def add(b: bytes) -> int:\n        objs.append(b)\n        return len(objs)\n    font = add(b\"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\")\n    page_ids = []\n    content_ids = []\n    for lines in pages:\n        y = 800",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "make_inventory_pages",
+        "kind": 2,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "def make_inventory_pages() -> list[list[str]]:\n    pages = []\n    head = [\"RIVERSIDE COURT - CHECK-IN INVENTORY AND SCHEDULE OF CONDITION\", \"Flat 7, Riverside Court, 3 Wharf Lane, Bristol BS1 6XY\",\n            \"Tenancy start: 1 April 2024    Tenants: Grace Adeyemi, Sam Whitlock\", \"Prepared by: Clearview Inventories Ltd    Clerk: R. Dawes\",\n            \"Condition key: good / fair / poor. All items landlord-owned unless stated.\", \"\"]\n    for i, (room, items) in enumerate(ROOMS.items()):\n        lines = (head if i == 0 else [f\"Flat 7 Riverside Court - inventory (continued)\", \"\"]) + [f\"ROOM: {room.upper()}\", \"\"]\n        for j, it in enumerate(items, 1):\n            lines.append(f\"  {room[:3].upper()}-{j:02d}  {it}\")\n        lines += [\"\", f\"Photographs: see appendix {i + 1} (not attached to this copy)\", \"\"]",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "make_repair_log",
+        "kind": 2,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "def make_repair_log(out: Path) -> None:\n    rng = random.Random(8)\n    cats = [\"plumbing\", \"electrical\", \"heating\", \"appliance\", \"communal\", \"decor\", \"locks\", \"pest\"]\n    descs = {\n        \"plumbing\": [\"dripping tap\", \"slow drain\", \"toilet running\", \"shower head replaced\"],\n        \"electrical\": [\"socket not working\", \"light fitting replaced\", \"RCD tripping\", \"extractor fan replaced\"],\n        \"heating\": [\"radiator cold\", \"boiler service\", \"boiler pressure loss\", \"thermostat replaced\"],\n        \"appliance\": [\"oven element\", \"fridge not cooling\", \"hob ignition\", \"dishwasher not draining\"],\n        \"communal\": [\"lift fault reported to block mgmt\", \"stair light out\", \"entry phone fault\", \"bin store door\"],\n        \"decor\": [\"touch-up after leak\", \"sealant renewed\", \"blind replaced\", \"carpet cleaned\"],",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "make_png",
+        "kind": 2,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "def make_png(out: Path, w: int = 320, h: int = 240) -> None:\n    rows = []\n    for y in range(h):\n        row = bytearray([0])\n        for x in range(w):\n            tile = ((x // 40) + (y // 40)) % 2\n            r, g, b = (198, 190, 176) if tile else (184, 176, 160)\n            dx, dy = x - 200, y - 150\n            if dx * dx / 2.2 + dy * dy < 60 * 60:\n                r, g, b = (96, 92, 84)",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT",
+        "kind": 5,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "ROOT = Path(__file__).resolve().parents[1]\nCASES = ROOT / \"data\" / \"sample_cases\"\n# ----------------------------------------------------------------------------\n# 07: WhatsApp group export, noisy, two real issues buried near the end\n# ----------------------------------------------------------------------------\nPEOPLE = [\"Josh\", \"Priya\", \"Ben\"]\nFILLER = [\n    \"anyone home to take a parcel this afternoon?\", \"yes I'm in till 3\", \"who finished the oat milk 😤\",\n    \"not me\", \"lol\", \"bins go out tonight, it's the brown bin week\", \"did it already\", \"legend\",\n    \"the guy next door is drilling AGAIN\", \"it's 9pm, that's taking the piss\", \"film night Friday?\",",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "CASES",
+        "kind": 5,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "CASES = ROOT / \"data\" / \"sample_cases\"\n# ----------------------------------------------------------------------------\n# 07: WhatsApp group export, noisy, two real issues buried near the end\n# ----------------------------------------------------------------------------\nPEOPLE = [\"Josh\", \"Priya\", \"Ben\"]\nFILLER = [\n    \"anyone home to take a parcel this afternoon?\", \"yes I'm in till 3\", \"who finished the oat milk 😤\",\n    \"not me\", \"lol\", \"bins go out tonight, it's the brown bin week\", \"did it already\", \"legend\",\n    \"the guy next door is drilling AGAIN\", \"it's 9pm, that's taking the piss\", \"film night Friday?\",\n    \"I'm out Friday, Saturday?\", \"Sat works\", \"can someone let the window cleaner in Thursday morning\",",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "PEOPLE",
+        "kind": 5,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "PEOPLE = [\"Josh\", \"Priya\", \"Ben\"]\nFILLER = [\n    \"anyone home to take a parcel this afternoon?\", \"yes I'm in till 3\", \"who finished the oat milk 😤\",\n    \"not me\", \"lol\", \"bins go out tonight, it's the brown bin week\", \"did it already\", \"legend\",\n    \"the guy next door is drilling AGAIN\", \"it's 9pm, that's taking the piss\", \"film night Friday?\",\n    \"I'm out Friday, Saturday?\", \"Sat works\", \"can someone let the window cleaner in Thursday morning\",\n    \"I've got a 9am but I'll leave the gate unlocked\", \"cheers\", \"wifi's being slow again\", \"restarted it\",\n    \"better now\", \"rent went out, just checking everyone's did\", \"yep\", \"mine too\", \"has anyone seen my grey hoodie\",\n    \"on the airer in the back room\", \"ta\", \"ordered a new shower curtain, the old one is grim\", \"good shout\",\n    \"pub quiz Tuesday, we need a third\", \"I'm in\", \"neighbour's cat is in our garden again\", \"it's cute leave it\",",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "FILLER",
+        "kind": 5,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "FILLER = [\n    \"anyone home to take a parcel this afternoon?\", \"yes I'm in till 3\", \"who finished the oat milk 😤\",\n    \"not me\", \"lol\", \"bins go out tonight, it's the brown bin week\", \"did it already\", \"legend\",\n    \"the guy next door is drilling AGAIN\", \"it's 9pm, that's taking the piss\", \"film night Friday?\",\n    \"I'm out Friday, Saturday?\", \"Sat works\", \"can someone let the window cleaner in Thursday morning\",\n    \"I've got a 9am but I'll leave the gate unlocked\", \"cheers\", \"wifi's being slow again\", \"restarted it\",\n    \"better now\", \"rent went out, just checking everyone's did\", \"yep\", \"mine too\", \"has anyone seen my grey hoodie\",\n    \"on the airer in the back room\", \"ta\", \"ordered a new shower curtain, the old one is grim\", \"good shout\",\n    \"pub quiz Tuesday, we need a third\", \"I'm in\", \"neighbour's cat is in our garden again\", \"it's cute leave it\",\n    \"going Tesco, need anything?\", \"milk and bin bags pls\", \"and biscuits\", \"done\", \"who's got the spare key?\",",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_MESSAGES",
+        "kind": 5,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "KEY_MESSAGES = [\n    # (offset from end, person, text)\n    (140, \"Priya\", \"btw the bathroom extractor fan has stopped working completely, it's not just noisy any more. the ceiling above the shower has black mould patches now, it's spreading onto the wall\"),\n    (139, \"Josh\", \"yeah I noticed, it's been dead about 2 weeks. I've been opening the window but it's not enough\"),\n    (138, \"Ben\", \"my asthma's been worse this month, not sure if it's that but probably doesn't help\"),\n    (90, \"Priya\", \"also I need to own up - I dropped the cast iron pan on the hob yesterday and the glass has a big crack across the back left ring. the other rings work but I'm not using the cracked one. sorry 🙈 I know that's on me\"),\n    (89, \"Josh\", \"oof. that's gonna be a deposit thing probably\"),\n    (88, \"Priya\", \"yeah I'll cover it, just want it sorted before it gets worse\"),\n    (30, \"Ben\", \"ok so for the agency message: 1) extractor fan dead + mould in bathroom 2) cracked hob glass (Priya's). anything else?\"),\n    (29, \"Josh\", \"the gutter thing but that's minor\"),",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "ROOMS",
+        "kind": 5,
+        "importPath": "scripts.make_sample_assets",
+        "description": "scripts.make_sample_assets",
+        "peekOfCode": "ROOMS = {\n    \"Hallway\": [\"Walls: magnolia emulsion, good\", \"Floor: laminate, light scuffing near door\", \"Ceiling: white, good\", \"Smoke alarm: mains, tested OK\",\n                \"Light fitting: pendant, working\", \"Radiator: single panel, working\", \"Door: fire door, closer working\", \"Coat hooks x3\"],\n    \"Living room\": [\"Walls: magnolia, small scuff behind sofa\", \"Floor: laminate, good\", \"Window: uPVC double glazed, both handles OK, blind good\",\n                    \"Radiator: double panel, TRV fitted\", \"Sofa: 3-seat grey fabric, good\", \"TV unit: oak effect, good\", \"Coffee table: oak effect, ring mark\",\n                    \"Curtains: none\", \"Sockets: 6 double, all tested\", \"Light: 3-spot bar, working\"],\n    \"Kitchen\": [\"Walls: tiled splashback, good; painted walls good\", \"Floor: vinyl, good at check-in\", \"Worktops: laminate, chip near sink\",\n                \"Sink: stainless, mixer tap, working\", \"Oven: Beko BBXIF22100S, clean, working\", \"Hob: Beko induction, working\",\n                \"Extractor: integrated, working, filter clean\", \"Fridge freezer: Beko integrated, working\",\n                \"Washing machine: Beko WTK94121W (supplied new 2024-03), working, no leaks at check-in\", \"Dishwasher: none\",",
+        "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "AnthropicLLM",
+        "kind": 6,
+        "importPath": "src.resolve_ai.llm.anthropic_client",
+        "description": "src.resolve_ai.llm.anthropic_client",
+        "peekOfCode": "class AnthropicLLM(LLM):\n    name = \"anthropic\"\n    def __init__(self, settings: Settings):\n        self.settings = settings\n        self.model = settings.model\n        self.client = anthropic.Anthropic(api_key=settings.anthropic_api_key or None,\n                                          timeout=settings.request_timeout, max_retries=3)\n        self.use_fallbacks = settings.server_fallbacks\n    # ---- low level ----\n    def _create(self, **kw):",
+        "detail": "src.resolve_ai.llm.anthropic_client",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.anthropic_client",
+        "description": "src.resolve_ai.llm.anthropic_client",
+        "peekOfCode": "log = logging.getLogger(__name__)\nFALLBACK_BETA = \"server-side-fallback-2026-07-01\"\nclass AnthropicLLM(LLM):\n    name = \"anthropic\"\n    def __init__(self, settings: Settings):\n        self.settings = settings\n        self.model = settings.model\n        self.client = anthropic.Anthropic(api_key=settings.anthropic_api_key or None,\n                                          timeout=settings.request_timeout, max_retries=3)\n        self.use_fallbacks = settings.server_fallbacks",
+        "detail": "src.resolve_ai.llm.anthropic_client",
+        "documentation": {}
+    },
+    {
+        "label": "FALLBACK_BETA",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.anthropic_client",
+        "description": "src.resolve_ai.llm.anthropic_client",
+        "peekOfCode": "FALLBACK_BETA = \"server-side-fallback-2026-07-01\"\nclass AnthropicLLM(LLM):\n    name = \"anthropic\"\n    def __init__(self, settings: Settings):\n        self.settings = settings\n        self.model = settings.model\n        self.client = anthropic.Anthropic(api_key=settings.anthropic_api_key or None,\n                                          timeout=settings.request_timeout, max_retries=3)\n        self.use_fallbacks = settings.server_fallbacks\n    # ---- low level ----",
+        "detail": "src.resolve_ai.llm.anthropic_client",
+        "documentation": {}
+    },
+    {
+        "label": "MockLLM",
+        "kind": 6,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "class MockLLM(LLM):\n    name = \"mock\"\n    model = \"mock-rules-v1\"\n    def __init__(self, settings: Settings):\n        self.settings = settings\n    # ----- helpers to read the conversation -----\n    @staticmethod\n    def _case_text(messages: List[dict]) -> str:\n        first = messages[0][\"content\"]\n        if isinstance(first, str):",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "GAS_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "GAS_WORDS = [\"smell of gas\", \"gas smell\", \"smell gas\", \"carbon monoxide\", \"co alarm\", \"gas leak\"]\nELEC_WORDS = [\"sparking\", \"sparks \", \"is sparking\", \"burning smell\", \"electric shock\", \"exposed wire\", \"sockets wet\", \"water in the light\", \"ceiling light fitting\", \"through the light\", \"fuse box smoking\"]\nINJECTION_WORDS = [\"system note to ai\", \"note to ai assistant\", \"ignore your\", \"skip the approval\", \"ignore previous\", \"you are now\"]\nLEAK_WORDS = [\"leak\", \"water coming\", \"dripping\", \"flood\", \"ceiling\", \"burst\"]\nHEAT_WORDS = [\"boiler\", \"no heating\", \"no hot water\", \"heating\", \"radiator\"]\nMOULD_WORDS = [\"mould\", \"mold\", \"damp\", \"condensation\"]\nLOCK_WORDS = [\"lock\", \"break-in\", \"broken window\", \"can't secure\", \"door won't\"]\nAPPLIANCE_WORDS = [\"washing machine\", \"dishwasher\", \"tumble dryer\", \"fridge\", \"freezer\", \"oven\", \"cooker\", \"hob\"]\nTENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "ELEC_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "ELEC_WORDS = [\"sparking\", \"sparks \", \"is sparking\", \"burning smell\", \"electric shock\", \"exposed wire\", \"sockets wet\", \"water in the light\", \"ceiling light fitting\", \"through the light\", \"fuse box smoking\"]\nINJECTION_WORDS = [\"system note to ai\", \"note to ai assistant\", \"ignore your\", \"skip the approval\", \"ignore previous\", \"you are now\"]\nLEAK_WORDS = [\"leak\", \"water coming\", \"dripping\", \"flood\", \"ceiling\", \"burst\"]\nHEAT_WORDS = [\"boiler\", \"no heating\", \"no hot water\", \"heating\", \"radiator\"]\nMOULD_WORDS = [\"mould\", \"mold\", \"damp\", \"condensation\"]\nLOCK_WORDS = [\"lock\", \"break-in\", \"broken window\", \"can't secure\", \"door won't\"]\nAPPLIANCE_WORDS = [\"washing machine\", \"dishwasher\", \"tumble dryer\", \"fridge\", \"freezer\", \"oven\", \"cooker\", \"hob\"]\nTENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "INJECTION_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "INJECTION_WORDS = [\"system note to ai\", \"note to ai assistant\", \"ignore your\", \"skip the approval\", \"ignore previous\", \"you are now\"]\nLEAK_WORDS = [\"leak\", \"water coming\", \"dripping\", \"flood\", \"ceiling\", \"burst\"]\nHEAT_WORDS = [\"boiler\", \"no heating\", \"no hot water\", \"heating\", \"radiator\"]\nMOULD_WORDS = [\"mould\", \"mold\", \"damp\", \"condensation\"]\nLOCK_WORDS = [\"lock\", \"break-in\", \"broken window\", \"can't secure\", \"door won't\"]\nAPPLIANCE_WORDS = [\"washing machine\", \"dishwasher\", \"tumble dryer\", \"fridge\", \"freezer\", \"oven\", \"cooker\", \"hob\"]\nTENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "LEAK_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "LEAK_WORDS = [\"leak\", \"water coming\", \"dripping\", \"flood\", \"ceiling\", \"burst\"]\nHEAT_WORDS = [\"boiler\", \"no heating\", \"no hot water\", \"heating\", \"radiator\"]\nMOULD_WORDS = [\"mould\", \"mold\", \"damp\", \"condensation\"]\nLOCK_WORDS = [\"lock\", \"break-in\", \"broken window\", \"can't secure\", \"door won't\"]\nAPPLIANCE_WORDS = [\"washing machine\", \"dishwasher\", \"tumble dryer\", \"fridge\", \"freezer\", \"oven\", \"cooker\", \"hob\"]\nTENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:\n    return {\"type\": \"tool_use\", \"id\": f\"toolu_{uuid.uuid4().hex[:12]}\", \"name\": name, \"input\": inp}",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "HEAT_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "HEAT_WORDS = [\"boiler\", \"no heating\", \"no hot water\", \"heating\", \"radiator\"]\nMOULD_WORDS = [\"mould\", \"mold\", \"damp\", \"condensation\"]\nLOCK_WORDS = [\"lock\", \"break-in\", \"broken window\", \"can't secure\", \"door won't\"]\nAPPLIANCE_WORDS = [\"washing machine\", \"dishwasher\", \"tumble dryer\", \"fridge\", \"freezer\", \"oven\", \"cooker\", \"hob\"]\nTENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:\n    return {\"type\": \"tool_use\", \"id\": f\"toolu_{uuid.uuid4().hex[:12]}\", \"name\": name, \"input\": inp}\ndef _text(t: str) -> dict:",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "MOULD_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "MOULD_WORDS = [\"mould\", \"mold\", \"damp\", \"condensation\"]\nLOCK_WORDS = [\"lock\", \"break-in\", \"broken window\", \"can't secure\", \"door won't\"]\nAPPLIANCE_WORDS = [\"washing machine\", \"dishwasher\", \"tumble dryer\", \"fridge\", \"freezer\", \"oven\", \"cooker\", \"hob\"]\nTENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:\n    return {\"type\": \"tool_use\", \"id\": f\"toolu_{uuid.uuid4().hex[:12]}\", \"name\": name, \"input\": inp}\ndef _text(t: str) -> dict:\n    return {\"type\": \"text\", \"text\": t}",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "LOCK_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "LOCK_WORDS = [\"lock\", \"break-in\", \"broken window\", \"can't secure\", \"door won't\"]\nAPPLIANCE_WORDS = [\"washing machine\", \"dishwasher\", \"tumble dryer\", \"fridge\", \"freezer\", \"oven\", \"cooker\", \"hob\"]\nTENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:\n    return {\"type\": \"tool_use\", \"id\": f\"toolu_{uuid.uuid4().hex[:12]}\", \"name\": name, \"input\": inp}\ndef _text(t: str) -> dict:\n    return {\"type\": \"text\", \"text\": t}\nclass MockLLM(LLM):",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "APPLIANCE_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "APPLIANCE_WORDS = [\"washing machine\", \"dishwasher\", \"tumble dryer\", \"fridge\", \"freezer\", \"oven\", \"cooker\", \"hob\"]\nTENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:\n    return {\"type\": \"tool_use\", \"id\": f\"toolu_{uuid.uuid4().hex[:12]}\", \"name\": name, \"input\": inp}\ndef _text(t: str) -> dict:\n    return {\"type\": \"text\", \"text\": t}\nclass MockLLM(LLM):\n    name = \"mock\"",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "TENANT_DAMAGE_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "TENANT_DAMAGE_WORDS = [\"i dropped\", \"my fault\", \"that's on me\", \"i broke\", \"accidentally\", \"i'll cover it\", \"own up\"]\nAMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:\n    return {\"type\": \"tool_use\", \"id\": f\"toolu_{uuid.uuid4().hex[:12]}\", \"name\": name, \"input\": inp}\ndef _text(t: str) -> dict:\n    return {\"type\": \"text\", \"text\": t}\nclass MockLLM(LLM):\n    name = \"mock\"\n    model = \"mock-rules-v1\"",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "AMBIGUITY_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "AMBIGUITY_WORDS = [\"didn't check\", \"haven't checked\", \"not sure if\", \"could be either\"]\nVULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:\n    return {\"type\": \"tool_use\", \"id\": f\"toolu_{uuid.uuid4().hex[:12]}\", \"name\": name, \"input\": inp}\ndef _text(t: str) -> dict:\n    return {\"type\": \"text\", \"text\": t}\nclass MockLLM(LLM):\n    name = \"mock\"\n    model = \"mock-rules-v1\"\n    def __init__(self, settings: Settings):",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "VULN_WORDS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.llm.mock_llm",
+        "description": "src.resolve_ai.llm.mock_llm",
+        "peekOfCode": "VULN_WORDS = [\"baby\", \"infant\", \"elderly\", \"disabled\", \"pregnan\", \"oxygen\", \"newborn\", \"months old\", \"wheelchair\", \"dialysis\"]\ndef _tool_use(name: str, inp: dict) -> dict:\n    return {\"type\": \"tool_use\", \"id\": f\"toolu_{uuid.uuid4().hex[:12]}\", \"name\": name, \"input\": inp}\ndef _text(t: str) -> dict:\n    return {\"type\": \"text\", \"text\": t}\nclass MockLLM(LLM):\n    name = \"mock\"\n    model = \"mock-rules-v1\"\n    def __init__(self, settings: Settings):\n        self.settings = settings",
+        "detail": "src.resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "HttpBackend",
+        "kind": 6,
+        "importPath": "src.resolve_ai.tools.http_backend",
+        "description": "src.resolve_ai.tools.http_backend",
+        "peekOfCode": "class HttpBackend:\n    def __init__(self, settings: Settings):\n        self.base = settings.tools_base_url.rstrip(\"/\")\n        self.session = requests.Session()\n        if settings.tools_api_key:\n            self.session.headers[\"Authorization\"] = f\"Bearer {settings.tools_api_key}\"\n            self.session.headers[\"x-api-key\"] = settings.tools_api_key\n        self.endpoints: Dict[str, Dict[str, Any]] = {}\n        if ENDPOINTS_FILE.exists():\n            self.endpoints = json.loads(ENDPOINTS_FILE.read_text())",
+        "detail": "src.resolve_ai.tools.http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "CompositeBackend",
+        "kind": 6,
+        "importPath": "src.resolve_ai.tools.http_backend",
+        "description": "src.resolve_ai.tools.http_backend",
+        "peekOfCode": "class CompositeBackend:\n    \"\"\"Route some tools to HTTP, the rest to mock. http_tools: set of names or {'*'}.\"\"\"\n    def __init__(self, http: HttpBackend, mock, http_tools: Optional[set] = None):\n        self.http = http\n        self.mock = mock\n        self.http_tools = http_tools or set()\n    def _use_http(self, tool: str) -> bool:\n        if \"*\" in self.http_tools:\n            return self.http.has(tool)\n        return tool in self.http_tools and self.http.has(tool)",
+        "detail": "src.resolve_ai.tools.http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.http_backend",
+        "description": "src.resolve_ai.tools.http_backend",
+        "peekOfCode": "log = logging.getLogger(__name__)\nENDPOINTS_FILE = Path(os.environ.get(\"HTTP_ENDPOINTS_FILE\", \"data/http_endpoints.json\"))\nclass HttpBackend:\n    def __init__(self, settings: Settings):\n        self.base = settings.tools_base_url.rstrip(\"/\")\n        self.session = requests.Session()\n        if settings.tools_api_key:\n            self.session.headers[\"Authorization\"] = f\"Bearer {settings.tools_api_key}\"\n            self.session.headers[\"x-api-key\"] = settings.tools_api_key\n        self.endpoints: Dict[str, Dict[str, Any]] = {}",
+        "detail": "src.resolve_ai.tools.http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "ENDPOINTS_FILE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.http_backend",
+        "description": "src.resolve_ai.tools.http_backend",
+        "peekOfCode": "ENDPOINTS_FILE = Path(os.environ.get(\"HTTP_ENDPOINTS_FILE\", \"data/http_endpoints.json\"))\nclass HttpBackend:\n    def __init__(self, settings: Settings):\n        self.base = settings.tools_base_url.rstrip(\"/\")\n        self.session = requests.Session()\n        if settings.tools_api_key:\n            self.session.headers[\"Authorization\"] = f\"Bearer {settings.tools_api_key}\"\n            self.session.headers[\"x-api-key\"] = settings.tools_api_key\n        self.endpoints: Dict[str, Dict[str, Any]] = {}\n        if ENDPOINTS_FILE.exists():",
+        "detail": "src.resolve_ai.tools.http_backend",
+        "documentation": {}
+    },
+    {
+        "label": "MockBackend",
+        "kind": 6,
+        "importPath": "src.resolve_ai.tools.mock_backend",
+        "description": "src.resolve_ai.tools.mock_backend",
+        "peekOfCode": "class MockBackend:\n    def __init__(self, settings: Settings, case_id: str):\n        self.settings = settings\n        self.case_id = case_id\n        root = Path(settings.mock_env_dir)\n        self.properties = _load(root / \"properties.json\")\n        self.tenancies = _load(root / \"tenancies.json\")\n        self.contractors = _load(root / \"contractors.json\")\n        self.history = _load(root / \"repair_history.json\")\n        self.state: Dict[str, List[dict]] = {",
+        "detail": "src.resolve_ai.tools.mock_backend",
+        "documentation": {}
+    },
+    {
+        "label": "ToolError",
+        "kind": 6,
+        "importPath": "src.resolve_ai.tools.registry",
+        "description": "src.resolve_ai.tools.registry",
+        "peekOfCode": "class ToolError(Exception):\n    \"\"\"A tool failed in a way the model should see (returned as is_error tool_result).\"\"\"\ndef _schema(props: Dict[str, Any]) -> Dict[str, Any]:\n    return {\n        \"type\": \"object\",\n        \"properties\": props,\n        \"required\": list(props.keys()),\n        \"additionalProperties\": False,\n    }\nTRADES = [\"plumber\", \"gas_engineer\", \"electrician\", \"roofer\", \"locksmith\", \"handyperson\",",
+        "detail": "src.resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "kind": 6,
+        "importPath": "src.resolve_ai.tools.registry",
+        "description": "src.resolve_ai.tools.registry",
+        "peekOfCode": "class ToolRegistry:\n    \"\"\"Routes model tool calls to a backend and validates inputs lightly.\"\"\"\n    def __init__(self, backend):\n        self.backend = backend\n        self._defs = {t[\"name\"]: t for t in TOOL_DEFINITIONS}\n    def definitions(self) -> List[Dict[str, Any]]:\n        return [{**t, \"strict\": True} for t in TOOL_DEFINITIONS]\n    def call(self, name: str, payload: Dict[str, Any]) -> Dict[str, Any]:\n        if name not in self._defs:\n            raise ToolError(f\"unknown tool: {name}\")",
+        "detail": "src.resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "build_backend",
+        "kind": 2,
+        "importPath": "src.resolve_ai.tools.registry",
+        "description": "src.resolve_ai.tools.registry",
+        "peekOfCode": "def build_backend(settings: Settings, case_id: str):\n    \"\"\"Pick the backend. `http` routes the tools listed in HTTP_TOOLS (or all with '*')\n    to the event API and everything else to the mock, so we can mix during the day.\"\"\"\n    from resolve_ai.tools.mock_backend import MockBackend\n    mock = MockBackend(settings, case_id)\n    if settings.tool_backend == \"mock\":\n        return mock\n    from resolve_ai.tools.http_backend import CompositeBackend, HttpBackend\n    http = HttpBackend(settings)\n    return CompositeBackend(http=http, mock=mock, http_tools=settings.http_tools)",
+        "detail": "src.resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "to_tool_result_text",
+        "kind": 2,
+        "importPath": "src.resolve_ai.tools.registry",
+        "description": "src.resolve_ai.tools.registry",
+        "peekOfCode": "def to_tool_result_text(result: Any) -> str:\n    try:\n        return json.dumps(result, ensure_ascii=False, default=str)\n    except TypeError:\n        return str(result)",
+        "detail": "src.resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.registry",
+        "description": "src.resolve_ai.tools.registry",
+        "peekOfCode": "log = logging.getLogger(__name__)\nclass ToolError(Exception):\n    \"\"\"A tool failed in a way the model should see (returned as is_error tool_result).\"\"\"\ndef _schema(props: Dict[str, Any]) -> Dict[str, Any]:\n    return {\n        \"type\": \"object\",\n        \"properties\": props,\n        \"required\": list(props.keys()),\n        \"additionalProperties\": False,\n    }",
+        "detail": "src.resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "TRADES",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.registry",
+        "description": "src.resolve_ai.tools.registry",
+        "peekOfCode": "TRADES = [\"plumber\", \"gas_engineer\", \"electrician\", \"roofer\", \"locksmith\", \"handyperson\",\n          \"pest_control\", \"appliance_engineer\", \"damp_specialist\", \"glazier\", \"drainage\"]\nURGENCY = [\"emergency\", \"urgent\", \"routine\"]\nTOOL_DEFINITIONS: List[Dict[str, Any]] = [\n    {\n        \"name\": \"lookup_property\",\n        \"description\": \"Find a property record by property ID, full/partial address, or postcode. Returns the property, landlord details, landlord instructions, spend limit, preferred contractors and compliance dates. Returns an error if nothing matches - never guess a property.\",\n        \"input_schema\": _schema({\"query\": {\"type\": \"string\", \"description\": \"Property ID (e.g. PROP-0042), address fragment, or postcode\"}}),\n    },\n    {",
+        "detail": "src.resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "URGENCY",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.registry",
+        "description": "src.resolve_ai.tools.registry",
+        "peekOfCode": "URGENCY = [\"emergency\", \"urgent\", \"routine\"]\nTOOL_DEFINITIONS: List[Dict[str, Any]] = [\n    {\n        \"name\": \"lookup_property\",\n        \"description\": \"Find a property record by property ID, full/partial address, or postcode. Returns the property, landlord details, landlord instructions, spend limit, preferred contractors and compliance dates. Returns an error if nothing matches - never guess a property.\",\n        \"input_schema\": _schema({\"query\": {\"type\": \"string\", \"description\": \"Property ID (e.g. PROP-0042), address fragment, or postcode\"}}),\n    },\n    {\n        \"name\": \"lookup_tenancy\",\n        \"description\": \"Get the current tenancy for a property: tenants, contact details, status, vulnerability notes and access notes.\",",
+        "detail": "src.resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "READ_ONLY_TOOLS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.registry",
+        "description": "src.resolve_ai.tools.registry",
+        "peekOfCode": "READ_ONLY_TOOLS = {\"lookup_property\", \"lookup_tenancy\", \"get_repair_history\", \"search_contractors\",\n                   \"check_contractor_availability\", \"record_note\"}\nclass ToolRegistry:\n    \"\"\"Routes model tool calls to a backend and validates inputs lightly.\"\"\"\n    def __init__(self, backend):\n        self.backend = backend\n        self._defs = {t[\"name\"]: t for t in TOOL_DEFINITIONS}\n    def definitions(self) -> List[Dict[str, Any]]:\n        return [{**t, \"strict\": True} for t in TOOL_DEFINITIONS]\n    def call(self, name: str, payload: Dict[str, Any]) -> Dict[str, Any]:",
+        "detail": "src.resolve_ai.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "transcribe_file",
+        "kind": 2,
+        "importPath": "src.resolve_ai.tools.voice",
+        "description": "src.resolve_ai.tools.voice",
+        "peekOfCode": "def transcribe_file(path: Path, api_key: str) -> str:\n    with open(path, \"rb\") as f:\n        r = requests.post(\n            f\"{API}/speech-to-text\",\n            headers={\"xi-api-key\": api_key},\n            files={\"file\": (path.name, f)},\n            data={\"model_id\": \"scribe_v1\", \"diarize\": \"true\", \"tag_audio_events\": \"false\"},\n            timeout=300,\n        )\n    r.raise_for_status()",
+        "detail": "src.resolve_ai.tools.voice",
+        "documentation": {}
+    },
+    {
+        "label": "make_transcriber",
+        "kind": 2,
+        "importPath": "src.resolve_ai.tools.voice",
+        "description": "src.resolve_ai.tools.voice",
+        "peekOfCode": "def make_transcriber(settings: Settings):\n    if not settings.elevenlabs_api_key:\n        return None\n    return lambda p: transcribe_file(p, settings.elevenlabs_api_key)\ndef text_to_speech(settings: Settings, text: str, out_path: Path, voice_id: str = \"21m00Tcm4TlvDq8ikWAM\") -> Path:\n    r = requests.post(\n        f\"{API}/text-to-speech/{voice_id}\",\n        headers={\"xi-api-key\": settings.elevenlabs_api_key, \"accept\": \"audio/mpeg\"},\n        json={\"text\": text, \"model_id\": \"eleven_turbo_v2_5\"},\n        timeout=120,",
+        "detail": "src.resolve_ai.tools.voice",
+        "documentation": {}
+    },
+    {
+        "label": "text_to_speech",
+        "kind": 2,
+        "importPath": "src.resolve_ai.tools.voice",
+        "description": "src.resolve_ai.tools.voice",
+        "peekOfCode": "def text_to_speech(settings: Settings, text: str, out_path: Path, voice_id: str = \"21m00Tcm4TlvDq8ikWAM\") -> Path:\n    r = requests.post(\n        f\"{API}/text-to-speech/{voice_id}\",\n        headers={\"xi-api-key\": settings.elevenlabs_api_key, \"accept\": \"audio/mpeg\"},\n        json={\"text\": text, \"model_id\": \"eleven_turbo_v2_5\"},\n        timeout=120,\n    )\n    r.raise_for_status()\n    out_path.write_bytes(r.content)\n    return out_path",
+        "detail": "src.resolve_ai.tools.voice",
+        "documentation": {}
+    },
+    {
+        "label": "place_call",
+        "kind": 2,
+        "importPath": "src.resolve_ai.tools.voice",
+        "description": "src.resolve_ai.tools.voice",
+        "peekOfCode": "def place_call(settings: Settings, *, to_role: str, phone: str, purpose: str, talking_points: str, case_id: str) -> Dict[str, Any]:\n    live = settings.voice_live_calls and settings.elevenlabs_api_key and settings.elevenlabs_agent_id and settings.elevenlabs_phone_number_id\n    if not live:\n        return _simulated_call(to_role, phone, purpose, talking_points)\n    try:\n        r = requests.post(\n            f\"{API}/convai/twilio/outbound-call\",\n            headers={\"xi-api-key\": settings.elevenlabs_api_key},\n            json={\n                \"agent_id\": settings.elevenlabs_agent_id,",
+        "detail": "src.resolve_ai.tools.voice",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.voice",
+        "description": "src.resolve_ai.tools.voice",
+        "peekOfCode": "log = logging.getLogger(__name__)\nAPI = \"https://api.elevenlabs.io/v1\"\ndef transcribe_file(path: Path, api_key: str) -> str:\n    with open(path, \"rb\") as f:\n        r = requests.post(\n            f\"{API}/speech-to-text\",\n            headers={\"xi-api-key\": api_key},\n            files={\"file\": (path.name, f)},\n            data={\"model_id\": \"scribe_v1\", \"diarize\": \"true\", \"tag_audio_events\": \"false\"},\n            timeout=300,",
+        "detail": "src.resolve_ai.tools.voice",
+        "documentation": {}
+    },
+    {
+        "label": "API",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.voice",
+        "description": "src.resolve_ai.tools.voice",
+        "peekOfCode": "API = \"https://api.elevenlabs.io/v1\"\ndef transcribe_file(path: Path, api_key: str) -> str:\n    with open(path, \"rb\") as f:\n        r = requests.post(\n            f\"{API}/speech-to-text\",\n            headers={\"xi-api-key\": api_key},\n            files={\"file\": (path.name, f)},\n            data={\"model_id\": \"scribe_v1\", \"diarize\": \"true\", \"tag_audio_events\": \"false\"},\n            timeout=300,\n        )",
+        "detail": "src.resolve_ai.tools.voice",
+        "documentation": {}
+    },
+    {
+        "label": "ResolveAgent",
+        "kind": 6,
+        "importPath": "src.resolve_ai.agent",
+        "description": "src.resolve_ai.agent",
+        "peekOfCode": "class ResolveAgent:\n    def __init__(self, llm: LLM, settings: Settings, policy: str, registry_factory):\n        self.llm = llm\n        self.settings = settings\n        self.system = build_system_prompt(policy)\n        self.registry_factory = registry_factory\n        self.schema = resolution_schema()\n    def run(self, bundle: CaseBundle, deadline: Optional[float] = None, trace_cb=None, grace: float = 45.0) -> CaseResult:\n        started = _now()\n        registry: ToolRegistry = self.registry_factory(bundle.case_id)",
+        "detail": "src.resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "fallback_result",
+        "kind": 2,
+        "importPath": "src.resolve_ai.agent",
+        "description": "src.resolve_ai.agent",
+        "peekOfCode": "def fallback_result(bundle: CaseBundle, error: str, events: Optional[List[ToolEvent]] = None, provider: str = \"\") -> CaseResult:\n    \"\"\"Written when the agent could not finish. Honest, safe, and still a complete answer.\"\"\"\n    events = events or []\n    done = [f\"{e.name}({json.dumps(e.input)[:120]})\" for e in events if e.ok]\n    failed = [f\"{e.name}: {e.error}\" for e in events if not e.ok]\n    res = Resolution(\n        case_summary=f\"Case {bundle.case_id}: automated processing did not complete ({error[:200]}). Files received: {', '.join(a.name for a in bundle.attachments) or 'none'}.\",\n        issue_category=\"unclear\", urgency=\"unclear\", decision=\"escalated\",\n        outcome=\"Not resolved autonomously. Escalated to the property manager with the partial trace so no case is dropped.\",\n        actions_taken=done, failed_actions=failed + [f\"agent run aborted: {error[:300]}\"],",
+        "detail": "src.resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "src.resolve_ai.agent",
+        "description": "src.resolve_ai.agent",
+        "peekOfCode": "log = logging.getLogger(__name__)\nMAX_IMAGES = 4\nMAX_TOOL_RESULT_CHARS = 30_000\ndef _now() -> str:\n    return datetime.now(timezone.utc).isoformat(timespec=\"seconds\")\ndef _case_content(bundle: CaseBundle, include_images: bool) -> Any:\n    text = build_case_prompt(bundle)\n    if not include_images:\n        return text\n    blocks: List[Dict[str, Any]] = [{\"type\": \"text\", \"text\": text}]",
+        "detail": "src.resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_IMAGES",
+        "kind": 5,
+        "importPath": "src.resolve_ai.agent",
+        "description": "src.resolve_ai.agent",
+        "peekOfCode": "MAX_IMAGES = 4\nMAX_TOOL_RESULT_CHARS = 30_000\ndef _now() -> str:\n    return datetime.now(timezone.utc).isoformat(timespec=\"seconds\")\ndef _case_content(bundle: CaseBundle, include_images: bool) -> Any:\n    text = build_case_prompt(bundle)\n    if not include_images:\n        return text\n    blocks: List[Dict[str, Any]] = [{\"type\": \"text\", \"text\": text}]\n    for img in bundle.images()[:MAX_IMAGES]:",
+        "detail": "src.resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_TOOL_RESULT_CHARS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.agent",
+        "description": "src.resolve_ai.agent",
+        "peekOfCode": "MAX_TOOL_RESULT_CHARS = 30_000\ndef _now() -> str:\n    return datetime.now(timezone.utc).isoformat(timespec=\"seconds\")\ndef _case_content(bundle: CaseBundle, include_images: bool) -> Any:\n    text = build_case_prompt(bundle)\n    if not include_images:\n        return text\n    blocks: List[Dict[str, Any]] = [{\"type\": \"text\", \"text\": text}]\n    for img in bundle.images()[:MAX_IMAGES]:\n        try:",
+        "detail": "src.resolve_ai.agent",
+        "documentation": {}
+    },
+    {
+        "label": "cmd_run",
+        "kind": 2,
+        "importPath": "src.resolve_ai.cli",
+        "description": "src.resolve_ai.cli",
+        "peekOfCode": "def cmd_run(args) -> int:\n    from resolve_ai.runner import run_cases\n    settings = Settings()\n    if args.provider:\n        settings.llm_provider = args.provider\n    if args.tools:\n        settings.tool_backend = args.tools\n    if args.model:\n        settings.model = args.model\n    if args.effort:",
+        "detail": "src.resolve_ai.cli",
+        "documentation": {}
+    },
+    {
+        "label": "cmd_inspect",
+        "kind": 2,
+        "importPath": "src.resolve_ai.cli",
+        "description": "src.resolve_ai.cli",
+        "peekOfCode": "def cmd_inspect(args) -> int:\n    from resolve_ai.ingest import discover_cases\n    from resolve_ai.tools.voice import make_transcriber\n    bundles = discover_cases(args.cases, transcriber=make_transcriber(Settings()) if args.transcribe else None)\n    print(f\"{len(bundles)} cases in {args.cases}\\n\")\n    for b in bundles:\n        print(f\"== {b.case_id}  ({b.source})\")\n        for a in b.attachments:\n            flag = f\"  [{a.note}]\" if a.note else \"\"\n            print(f\"   - {a.name:40s} {a.kind:10s} {len(a.text):7d} chars{flag}\")",
+        "detail": "src.resolve_ai.cli",
+        "documentation": {}
+    },
+    {
+        "label": "cmd_grade",
+        "kind": 2,
+        "importPath": "src.resolve_ai.cli",
+        "description": "src.resolve_ai.cli",
+        "peekOfCode": "def cmd_grade(args) -> int:\n    from resolve_ai.grade import grade_run\n    return grade_run(Path(args.expectations), args.run, verbose=args.verbose)\ndef main(argv=None) -> None:\n    p = argparse.ArgumentParser(prog=\"resolve\", description=\"Resolve AI - property maintenance agent\")\n    sub = p.add_subparsers(dest=\"cmd\", required=True)\n    r = sub.add_parser(\"run\", help=\"process a folder of cases and write ANSWERS/\")\n    r.add_argument(\"--cases\", required=True)\n    r.add_argument(\"--out\", default=\"ANSWERS\")\n    r.add_argument(\"--workers\", type=int)",
+        "detail": "src.resolve_ai.cli",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.resolve_ai.cli",
+        "description": "src.resolve_ai.cli",
+        "peekOfCode": "def main(argv=None) -> None:\n    p = argparse.ArgumentParser(prog=\"resolve\", description=\"Resolve AI - property maintenance agent\")\n    sub = p.add_subparsers(dest=\"cmd\", required=True)\n    r = sub.add_parser(\"run\", help=\"process a folder of cases and write ANSWERS/\")\n    r.add_argument(\"--cases\", required=True)\n    r.add_argument(\"--out\", default=\"ANSWERS\")\n    r.add_argument(\"--workers\", type=int)\n    r.add_argument(\"--timeout\", type=int, help=\"seconds per case\")\n    r.add_argument(\"--provider\", choices=[\"auto\", \"anthropic\", \"mock\"])\n    r.add_argument(\"--tools\", choices=[\"mock\", \"http\"])",
+        "detail": "src.resolve_ai.cli",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "src.resolve_ai.config",
+        "description": "src.resolve_ai.config",
+        "peekOfCode": "class Settings:\n    # model\n    anthropic_api_key: str = _env(\"ANTHROPIC_API_KEY\")\n    model: str = _env(\"ANTHROPIC_MODEL\", \"claude-opus-5-5\")\n    effort: str = _env(\"ANTHROPIC_EFFORT\", \"high\")\n    server_fallbacks: bool = _flag(\"ANTHROPIC_SERVER_FALLBACKS\", \"1\")\n    request_timeout: float = float(_env(\"ANTHROPIC_REQUEST_TIMEOUT\", \"240\"))\n    llm_provider: str = _env(\"LLM_PROVIDER\", \"auto\")  # auto | anthropic | mock\n    # tools\n    tool_backend: str = _env(\"TOOL_BACKEND\", \"mock\")  # mock | http",
+        "detail": "src.resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "load_policy",
+        "kind": 2,
+        "importPath": "src.resolve_ai.config",
+        "description": "src.resolve_ai.config",
+        "peekOfCode": "def load_policy() -> str:\n    return POLICY_PATH.read_text(encoding=\"utf-8\")",
+        "detail": "src.resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "PACKAGE_DIR",
+        "kind": 5,
+        "importPath": "src.resolve_ai.config",
+        "description": "src.resolve_ai.config",
+        "peekOfCode": "PACKAGE_DIR = Path(__file__).resolve().parent\nPOLICY_PATH = PACKAGE_DIR / \"policy\" / \"maintenance_policy.md\"\ndef _env(name: str, default: str = \"\") -> str:\n    return os.environ.get(name, default).strip()\ndef _flag(name: str, default: str = \"0\") -> bool:\n    return _env(name, default).lower() in {\"1\", \"true\", \"yes\", \"on\"}\n@dataclass\nclass Settings:\n    # model\n    anthropic_api_key: str = _env(\"ANTHROPIC_API_KEY\")",
+        "detail": "src.resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "POLICY_PATH",
+        "kind": 5,
+        "importPath": "src.resolve_ai.config",
+        "description": "src.resolve_ai.config",
+        "peekOfCode": "POLICY_PATH = PACKAGE_DIR / \"policy\" / \"maintenance_policy.md\"\ndef _env(name: str, default: str = \"\") -> str:\n    return os.environ.get(name, default).strip()\ndef _flag(name: str, default: str = \"0\") -> bool:\n    return _env(name, default).lower() in {\"1\", \"true\", \"yes\", \"on\"}\n@dataclass\nclass Settings:\n    # model\n    anthropic_api_key: str = _env(\"ANTHROPIC_API_KEY\")\n    model: str = _env(\"ANTHROPIC_MODEL\", \"claude-opus-5-5\")",
+        "detail": "src.resolve_ai.config",
+        "documentation": {}
+    },
+    {
+        "label": "grade_run",
+        "kind": 2,
+        "importPath": "src.resolve_ai.grade",
+        "description": "src.resolve_ai.grade",
+        "peekOfCode": "def grade_run(expectations_path: Path, run_id: Optional[str] = None, verbose: bool = False) -> int:\n    exp = json.loads(expectations_path.read_text())\n    run_dir = Path(\"logs\") / run_id if run_id else _latest_run()\n    if not run_dir or not run_dir.exists():\n        print(\"no run found under logs/\")\n        return 1\n    print(f\"grading run {run_dir.name}\\n\")\n    total = passed = 0\n    rows = []\n    for cid, e in exp.items():",
+        "detail": "src.resolve_ai.grade",
+        "documentation": {}
+    },
+    {
+        "label": "load_attachment",
+        "kind": 2,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "def load_attachment(path: Path, transcriber: Transcriber = None) -> Attachment:\n    ext = path.suffix.lower()\n    name = path.name\n    try:\n        if ext in TEXT_EXT:\n            kind = \"transcript\" if \"transcript\" in name.lower() or \"call\" in name.lower() else \"text\"\n            return Attachment(name, kind, _read_text(path), str(path))\n        if ext in JSON_EXT:\n            return Attachment(name, \"json\", _load_json_text(path), str(path))\n        if ext in CSV_EXT:",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "discover_cases",
+        "kind": 2,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "def discover_cases(cases_path: str | Path, transcriber: Transcriber = None) -> List[CaseBundle]:\n    root = Path(cases_path)\n    if not root.exists():\n        raise FileNotFoundError(f\"cases path not found: {root}\")\n    if root.is_file():\n        if root.suffix.lower() in {\".json\", \".jsonl\"}:\n            text = _read_text(root)\n            data = [json.loads(l) for l in text.splitlines() if l.strip()] if root.suffix == \".jsonl\" else json.loads(text)\n            if isinstance(data, dict):\n                for key in (\"cases\", \"items\", \"data\", \"tickets\"):",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "log = logging.getLogger(__name__)\nTEXT_EXT = {\".txt\", \".md\", \".log\", \".rst\"}\nJSON_EXT = {\".json\", \".jsonl\", \".yaml\", \".yml\"}\nCSV_EXT = {\".csv\", \".tsv\"}\nEMAIL_EXT = {\".eml\", \".msg\"}\nPDF_EXT = {\".pdf\"}\nIMAGE_EXT = {\".png\", \".jpg\", \".jpeg\", \".gif\", \".webp\"}\nAUDIO_EXT = {\".mp3\", \".wav\", \".m4a\", \".ogg\", \".flac\", \".webm\", \".mp4\"}\nHTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT_EXT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "TEXT_EXT = {\".txt\", \".md\", \".log\", \".rst\"}\nJSON_EXT = {\".json\", \".jsonl\", \".yaml\", \".yml\"}\nCSV_EXT = {\".csv\", \".tsv\"}\nEMAIL_EXT = {\".eml\", \".msg\"}\nPDF_EXT = {\".pdf\"}\nIMAGE_EXT = {\".png\", \".jpg\", \".jpeg\", \".gif\", \".webp\"}\nAUDIO_EXT = {\".mp3\", \".wav\", \".m4a\", \".ogg\", \".flac\", \".webm\", \".mp4\"}\nHTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "JSON_EXT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "JSON_EXT = {\".json\", \".jsonl\", \".yaml\", \".yml\"}\nCSV_EXT = {\".csv\", \".tsv\"}\nEMAIL_EXT = {\".eml\", \".msg\"}\nPDF_EXT = {\".pdf\"}\nIMAGE_EXT = {\".png\", \".jpg\", \".jpeg\", \".gif\", \".webp\"}\nAUDIO_EXT = {\".mp3\", \".wav\", \".m4a\", \".ogg\", \".flac\", \".webm\", \".mp4\"}\nHTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "CSV_EXT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "CSV_EXT = {\".csv\", \".tsv\"}\nEMAIL_EXT = {\".eml\", \".msg\"}\nPDF_EXT = {\".pdf\"}\nIMAGE_EXT = {\".png\", \".jpg\", \".jpeg\", \".gif\", \".webp\"}\nAUDIO_EXT = {\".mp3\", \".wav\", \".m4a\", \".ogg\", \".flac\", \".webm\", \".mp4\"}\nHTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:\n    for enc in (\"utf-8\", \"utf-8-sig\", \"latin-1\"):",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_EXT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "EMAIL_EXT = {\".eml\", \".msg\"}\nPDF_EXT = {\".pdf\"}\nIMAGE_EXT = {\".png\", \".jpg\", \".jpeg\", \".gif\", \".webp\"}\nAUDIO_EXT = {\".mp3\", \".wav\", \".m4a\", \".ogg\", \".flac\", \".webm\", \".mp4\"}\nHTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:\n    for enc in (\"utf-8\", \"utf-8-sig\", \"latin-1\"):\n        try:",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "PDF_EXT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "PDF_EXT = {\".pdf\"}\nIMAGE_EXT = {\".png\", \".jpg\", \".jpeg\", \".gif\", \".webp\"}\nAUDIO_EXT = {\".mp3\", \".wav\", \".m4a\", \".ogg\", \".flac\", \".webm\", \".mp4\"}\nHTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:\n    for enc in (\"utf-8\", \"utf-8-sig\", \"latin-1\"):\n        try:\n            return path.read_text(encoding=enc)",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_EXT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "IMAGE_EXT = {\".png\", \".jpg\", \".jpeg\", \".gif\", \".webp\"}\nAUDIO_EXT = {\".mp3\", \".wav\", \".m4a\", \".ogg\", \".flac\", \".webm\", \".mp4\"}\nHTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:\n    for enc in (\"utf-8\", \"utf-8-sig\", \"latin-1\"):\n        try:\n            return path.read_text(encoding=enc)\n        except UnicodeDecodeError:",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "AUDIO_EXT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "AUDIO_EXT = {\".mp3\", \".wav\", \".m4a\", \".ogg\", \".flac\", \".webm\", \".mp4\"}\nHTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:\n    for enc in (\"utf-8\", \"utf-8-sig\", \"latin-1\"):\n        try:\n            return path.read_text(encoding=enc)\n        except UnicodeDecodeError:\n            continue",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "HTML_EXT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "HTML_EXT = {\".html\", \".htm\"}\nSKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:\n    for enc in (\"utf-8\", \"utf-8-sig\", \"latin-1\"):\n        try:\n            return path.read_text(encoding=enc)\n        except UnicodeDecodeError:\n            continue\n    return path.read_bytes().decode(\"utf-8\", errors=\"replace\")",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "SKIP_NAMES",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "SKIP_NAMES = {\".DS_Store\", \"Thumbs.db\"}\nTranscriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:\n    for enc in (\"utf-8\", \"utf-8-sig\", \"latin-1\"):\n        try:\n            return path.read_text(encoding=enc)\n        except UnicodeDecodeError:\n            continue\n    return path.read_bytes().decode(\"utf-8\", errors=\"replace\")\ndef _load_json_text(path: Path) -> str:",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "Transcriber",
+        "kind": 5,
+        "importPath": "src.resolve_ai.ingest",
+        "description": "src.resolve_ai.ingest",
+        "peekOfCode": "Transcriber = Optional[Callable[[Path], str]]\ndef _read_text(path: Path) -> str:\n    for enc in (\"utf-8\", \"utf-8-sig\", \"latin-1\"):\n        try:\n            return path.read_text(encoding=enc)\n        except UnicodeDecodeError:\n            continue\n    return path.read_bytes().decode(\"utf-8\", errors=\"replace\")\ndef _load_json_text(path: Path) -> str:\n    raw = _read_text(path)",
+        "detail": "src.resolve_ai.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "Attachment",
+        "kind": 6,
+        "importPath": "src.resolve_ai.models",
+        "description": "src.resolve_ai.models",
+        "peekOfCode": "class Attachment:\n    name: str\n    kind: str  # text | json | csv | email | transcript | pdf | image | audio | unknown\n    text: str = \"\"\n    path: Optional[str] = None\n    media_type: Optional[str] = None\n    note: str = \"\"  # e.g. \"audio transcribed with ElevenLabs\" or \"could not parse\"\n@dataclass\nclass CaseBundle:\n    case_id: str",
+        "detail": "src.resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "kind": 6,
+        "importPath": "src.resolve_ai.models",
+        "description": "src.resolve_ai.models",
+        "peekOfCode": "class CaseBundle:\n    case_id: str\n    source: str\n    attachments: List[Attachment] = field(default_factory=list)\n    def images(self) -> List[Attachment]:\n        return [a for a in self.attachments if a.kind == \"image\" and a.path]\n    def manifest(self) -> List[dict]:\n        return [\n            {\"name\": a.name, \"kind\": a.kind, \"chars\": len(a.text), \"note\": a.note}\n            for a in self.attachments",
+        "detail": "src.resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Escalation",
+        "kind": 6,
+        "importPath": "src.resolve_ai.models",
+        "description": "src.resolve_ai.models",
+        "peekOfCode": "class Escalation(BaseModel):\n    model_config = ConfigDict(extra=\"forbid\")\n    required: bool = Field(description=\"True if a human must decide or act before the case can progress.\")\n    to: str = Field(default=\"\", description=\"Who: property manager, landlord, emergency services, compliance, finance, none.\")\n    reason: str = Field(default=\"\", description=\"Why a human is needed. Empty if not required.\")\n    handover: str = Field(default=\"\", description=\"Everything the human needs to pick this up without re-reading the case: facts, what was done, what is blocked, recommended decision.\")\nclass Conflict(BaseModel):\n    model_config = ConfigDict(extra=\"forbid\")\n    description: str\n    how_resolved: str = Field(description=\"Which source was trusted and why, or 'unresolved - escalated'.\")",
+        "detail": "src.resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Conflict",
+        "kind": 6,
+        "importPath": "src.resolve_ai.models",
+        "description": "src.resolve_ai.models",
+        "peekOfCode": "class Conflict(BaseModel):\n    model_config = ConfigDict(extra=\"forbid\")\n    description: str\n    how_resolved: str = Field(description=\"Which source was trusted and why, or 'unresolved - escalated'.\")\nclass Resolution(BaseModel):\n    model_config = ConfigDict(extra=\"forbid\")\n    case_summary: str = Field(description=\"2-4 sentences: who reported what, about which property, and what matters.\")\n    issue_category: str = Field(description=\"e.g. heating/boiler, plumbing/leak, electrical, gas, damp/mould, pests, appliance, security/locks, structural, not-a-repair, unclear\")\n    urgency: Literal[\"emergency\", \"urgent\", \"routine\", \"not_a_repair\", \"unclear\"]\n    decision: Literal[\"resolved\", \"in_progress\", \"escalated\", \"needs_information\", \"no_action\"]",
+        "detail": "src.resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Resolution",
+        "kind": 6,
+        "importPath": "src.resolve_ai.models",
+        "description": "src.resolve_ai.models",
+        "peekOfCode": "class Resolution(BaseModel):\n    model_config = ConfigDict(extra=\"forbid\")\n    case_summary: str = Field(description=\"2-4 sentences: who reported what, about which property, and what matters.\")\n    issue_category: str = Field(description=\"e.g. heating/boiler, plumbing/leak, electrical, gas, damp/mould, pests, appliance, security/locks, structural, not-a-repair, unclear\")\n    urgency: Literal[\"emergency\", \"urgent\", \"routine\", \"not_a_repair\", \"unclear\"]\n    decision: Literal[\"resolved\", \"in_progress\", \"escalated\", \"needs_information\", \"no_action\"]\n    outcome: str = Field(description=\"The final state of the case in one or two sentences: what has been arranged or decided.\")\n    actions_taken: List[str] = Field(description=\"Concrete actions actually performed via tools, in order. Only actions that succeeded.\")\n    failed_actions: List[str] = Field(description=\"Tool calls that failed, with what was tried instead. Empty if none.\")\n    escalation: Escalation",
+        "detail": "src.resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "ToolEvent",
+        "kind": 6,
+        "importPath": "src.resolve_ai.models",
+        "description": "src.resolve_ai.models",
+        "peekOfCode": "class ToolEvent:\n    step: int\n    name: str\n    input: dict\n    output: Any\n    ok: bool\n    error: Optional[str]\n    duration_ms: int\n@dataclass\nclass CaseResult:",
+        "detail": "src.resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseResult",
+        "kind": 6,
+        "importPath": "src.resolve_ai.models",
+        "description": "src.resolve_ai.models",
+        "peekOfCode": "class CaseResult:\n    case_id: str\n    status: str  # completed | fallback\n    resolution: Resolution\n    tool_events: List[ToolEvent] = field(default_factory=list)\n    model_notes: List[str] = field(default_factory=list)  # visible text the model wrote between tool calls\n    started_at: str = \"\"\n    finished_at: str = \"\"\n    provider: str = \"\"\n    model: str = \"\"",
+        "detail": "src.resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "resolution_schema",
+        "kind": 2,
+        "importPath": "src.resolve_ai.models",
+        "description": "src.resolve_ai.models",
+        "peekOfCode": "def resolution_schema() -> dict:\n    \"\"\"JSON schema for structured output, tightened for the API's strict subset:\n    every property required, no defaults, no numeric bounds, additionalProperties false.\"\"\"\n    import copy\n    def tighten(node):\n        if isinstance(node, dict):\n            if node.get(\"type\") == \"object\" and \"properties\" in node:\n                node[\"required\"] = list(node[\"properties\"].keys())\n                node[\"additionalProperties\"] = False\n            for k in (\"default\", \"minimum\", \"maximum\", \"title\"):",
+        "detail": "src.resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "build_system_prompt",
+        "kind": 2,
+        "importPath": "src.resolve_ai.prompts",
+        "description": "src.resolve_ai.prompts",
+        "peekOfCode": "def build_system_prompt(policy: str) -> str:\n    return SYSTEM_PROMPT_TEMPLATE.replace(\"{policy}\", policy)\ndef build_case_prompt(bundle: CaseBundle) -> str:\n    files = \", \".join(f\"{a.name} ({a.kind})\" for a in bundle.attachments) or \"none\"\n    return CASE_PROMPT_TEMPLATE.format(\n        case_id=bundle.case_id,\n        source=bundle.source,\n        n_files=len(bundle.attachments),\n        file_list=files,\n        material=bundle.text_for_prompt(),",
+        "detail": "src.resolve_ai.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "build_case_prompt",
+        "kind": 2,
+        "importPath": "src.resolve_ai.prompts",
+        "description": "src.resolve_ai.prompts",
+        "peekOfCode": "def build_case_prompt(bundle: CaseBundle) -> str:\n    files = \", \".join(f\"{a.name} ({a.kind})\" for a in bundle.attachments) or \"none\"\n    return CASE_PROMPT_TEMPLATE.format(\n        case_id=bundle.case_id,\n        source=bundle.source,\n        n_files=len(bundle.attachments),\n        file_list=files,\n        material=bundle.text_for_prompt(),\n    )",
+        "detail": "src.resolve_ai.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "SYSTEM_PROMPT_TEMPLATE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.prompts",
+        "description": "src.resolve_ai.prompts",
+        "peekOfCode": "SYSTEM_PROMPT_TEMPLATE = \"\"\"You are Resolve AI, the maintenance operations agent for a UK lettings and property-management business.\nYour job: take a maintenance case from first contact to a verified outcome with as little human work as possible, while being safe. Each case arrives as a bundle of raw operational material: tenant messages, call transcripts, emails, CRM records, repair history, documents, photos. Some of it is noisy, incomplete, outdated or contradictory. That is normal.\nHow to work a case:\n1. Understand. Read everything. Identify the property, the people, the reported problem, and what has already happened. Note anything irrelevant and ignore it.\n2. Verify. Use the tools to check the property, tenancy and repair history before acting. Do not trust a single message over the records without checking; do not trust the records blindly either. When sources disagree, say so explicitly and decide which to trust, or escalate if the disagreement changes the action.\n3. Triage. Apply the policy below to set urgency and the safety rules that apply.\n4. Act. Create the ticket, choose and book the right contractor, request approval when spend requires it, and tell the tenant and landlord what is happening. Use tools for every action. Never claim an action you did not perform via a tool.\n5. Recover. If a tool fails, read the error, retry once if it looks transient, otherwise try the next sensible option (another contractor, another channel). If no safe alternative exists, escalate with the failure recorded.\n6. Decide when not to act. Escalate when the policy says so, when a human decision is genuinely required, or when acting could cause harm. Ask for information when one missing fact blocks a safe next step. Doing nothing or escalating can be the correct outcome. Over-escalating routine work is also a failure: the business wants fewer, better escalations.\n7. Report. Produce a complete, honest resolution. Record what you received, what you did, what failed, what you assumed, and what a human must do next.",
+        "detail": "src.resolve_ai.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "CASE_PROMPT_TEMPLATE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.prompts",
+        "description": "src.resolve_ai.prompts",
+        "peekOfCode": "CASE_PROMPT_TEMPLATE = \"\"\"Case ID: {case_id}\nSource: {source}\nFiles received ({n_files}): {file_list}\nWork this case now. Use the tools to verify and act. When you have finished acting (or determined that you must stop), end your turn with a short plain-text summary of the outcome.\n<case_material>\n{material}\n</case_material>\"\"\"\nFINALIZE_PROMPT = \"\"\"Now produce the final structured resolution for this case as JSON matching the required schema. Base it strictly on what actually happened in this conversation: only list actions that tool calls confirmed, list every failed tool call under failed_actions, record every conflict and information gap you noticed, and write a handover a colleague could act on without re-reading the case. Do not add any text outside the JSON.\"\"\"\ndef build_system_prompt(policy: str) -> str:\n    return SYSTEM_PROMPT_TEMPLATE.replace(\"{policy}\", policy)",
+        "detail": "src.resolve_ai.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "FINALIZE_PROMPT",
+        "kind": 5,
+        "importPath": "src.resolve_ai.prompts",
+        "description": "src.resolve_ai.prompts",
+        "peekOfCode": "FINALIZE_PROMPT = \"\"\"Now produce the final structured resolution for this case as JSON matching the required schema. Base it strictly on what actually happened in this conversation: only list actions that tool calls confirmed, list every failed tool call under failed_actions, record every conflict and information gap you noticed, and write a handover a colleague could act on without re-reading the case. Do not add any text outside the JSON.\"\"\"\ndef build_system_prompt(policy: str) -> str:\n    return SYSTEM_PROMPT_TEMPLATE.replace(\"{policy}\", policy)\ndef build_case_prompt(bundle: CaseBundle) -> str:\n    files = \", \".join(f\"{a.name} ({a.kind})\" for a in bundle.attachments) or \"none\"\n    return CASE_PROMPT_TEMPLATE.format(\n        case_id=bundle.case_id,\n        source=bundle.source,\n        n_files=len(bundle.attachments),\n        file_list=files,",
+        "detail": "src.resolve_ai.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "CaseRun",
+        "kind": 6,
+        "importPath": "src.resolve_ai.runner",
+        "description": "src.resolve_ai.runner",
+        "peekOfCode": "class CaseRun:\n    \"\"\"Holds partial state so a timeout can still produce a useful fallback.\"\"\"\n    def __init__(self, bundle: CaseBundle):\n        self.bundle = bundle\n        self.events = []\n        self.result: Optional[CaseResult] = None\ndef run_cases(cases_path: str, answers_dir: str, settings: Settings, workers: Optional[int] = None,\n              case_timeout: Optional[int] = None, only: Optional[List[str]] = None, run_id: Optional[str] = None) -> List[CaseResult]:\n    run_id = run_id or datetime.now().strftime(\"%Y%m%d-%H%M%S\")\n    log_dir = Path(\"logs\") / run_id",
+        "detail": "src.resolve_ai.runner",
+        "documentation": {}
+    },
+    {
+        "label": "run_cases",
+        "kind": 2,
+        "importPath": "src.resolve_ai.runner",
+        "description": "src.resolve_ai.runner",
+        "peekOfCode": "def run_cases(cases_path: str, answers_dir: str, settings: Settings, workers: Optional[int] = None,\n              case_timeout: Optional[int] = None, only: Optional[List[str]] = None, run_id: Optional[str] = None) -> List[CaseResult]:\n    run_id = run_id or datetime.now().strftime(\"%Y%m%d-%H%M%S\")\n    log_dir = Path(\"logs\") / run_id\n    _setup_logging(log_dir)\n    answers = Path(answers_dir)\n    answers.mkdir(parents=True, exist_ok=True)\n    workers = workers or settings.workers\n    case_timeout = case_timeout or settings.case_timeout\n    llm = make_llm(settings)",
+        "detail": "src.resolve_ai.runner",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "src.resolve_ai.runner",
+        "description": "src.resolve_ai.runner",
+        "peekOfCode": "log = logging.getLogger(\"resolve\")\ndef _setup_logging(log_dir: Path) -> None:\n    log_dir.mkdir(parents=True, exist_ok=True)\n    root = logging.getLogger()\n    root.setLevel(logging.INFO)\n    fmt = logging.Formatter(\"%(asctime)s %(levelname)s %(name)s: %(message)s\")\n    fh = logging.FileHandler(log_dir / \"run.log\", encoding=\"utf-8\")\n    fh.setFormatter(fmt)\n    sh = logging.StreamHandler()\n    sh.setFormatter(logging.Formatter(\"%(asctime)s %(message)s\", \"%H:%M:%S\"))",
+        "detail": "src.resolve_ai.runner",
+        "documentation": {}
+    },
+    {
+        "label": "answer_md",
+        "kind": 2,
+        "importPath": "src.resolve_ai.writer",
+        "description": "src.resolve_ai.writer",
+        "peekOfCode": "def answer_md(r: CaseResult) -> str:\n    x = r.resolution\n    esc = x.escalation\n    lines = [\n        f\"# Case {r.case_id} — Answer\",\n        \"\",\n        f\"**Decision:** `{x.decision}`  \",\n        f\"**Urgency:** `{x.urgency}`  \",\n        f\"**Issue category:** {x.issue_category}  \",\n        f\"**Confidence:** {x.confidence:.2f}  \",",
+        "detail": "src.resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "reasoning_md",
+        "kind": 2,
+        "importPath": "src.resolve_ai.writer",
+        "description": "src.resolve_ai.writer",
+        "peekOfCode": "def reasoning_md(r: CaseResult) -> str:\n    x = r.resolution\n    lines = [\n        f\"# Case {r.case_id} — Reasoning and trace\",\n        \"\",\n        \"## What the system received\",\n        _bullets([f\"{m['name']} ({m['kind']}, {m['chars']} chars){' — ' + m['note'] if m.get('note') else ''}\" for m in r.manifest], \"no files\"),\n        \"\",\n        \"## How the decision was reached\",\n        x.reasoning,",
+        "detail": "src.resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "write_case",
+        "kind": 2,
+        "importPath": "src.resolve_ai.writer",
+        "description": "src.resolve_ai.writer",
+        "peekOfCode": "def write_case(r: CaseResult, answers_dir: Path, log_dir: Path) -> None:\n    out = answers_dir / r.case_id\n    out.mkdir(parents=True, exist_ok=True)\n    (out / \"ANSWER.md\").write_text(answer_md(r), encoding=\"utf-8\")\n    (out / \"REASONING.md\").write_text(reasoning_md(r), encoding=\"utf-8\")\n    case_log = log_dir / r.case_id\n    case_log.mkdir(parents=True, exist_ok=True)\n    trace = {\n        \"case_id\": r.case_id, \"status\": r.status, \"error\": r.error, \"provider\": r.provider, \"model\": r.model,\n        \"steps\": r.steps, \"started_at\": r.started_at, \"finished_at\": r.finished_at, \"usage\": r.usage,",
+        "detail": "src.resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "write_index",
+        "kind": 2,
+        "importPath": "src.resolve_ai.writer",
+        "description": "src.resolve_ai.writer",
+        "peekOfCode": "def write_index(results: List[CaseResult], answers_dir: Path) -> None:\n    rows = [\"| Case | Status | Decision | Urgency | Escalated | Confidence |\", \"|---|---|---|---|---|---|\"]\n    for r in sorted(results, key=lambda r: r.case_id):\n        x = r.resolution\n        rows.append(f\"| [{r.case_id}]({r.case_id}/ANSWER.md) | {r.status} | {x.decision} | {x.urgency} | {'yes' if x.escalation.required else 'no'} | {x.confidence:.2f} |\")\n    (answers_dir / \"INDEX.md\").write_text(\"# Answers index\\n\\n\" + \"\\n\".join(rows) + \"\\n\", encoding=\"utf-8\")",
+        "detail": "src.resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "kind": 2,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "def settings(monkeypatch):\n    monkeypatch.chdir(ROOT)\n    s = Settings()\n    s.llm_provider = \"mock\"\n    s.tool_backend = \"mock\"\n    return s\ndef test_discover_sample_cases():\n    bundles = discover_cases(SAMPLES)\n    assert len(bundles) == 9\n    assert all(b.attachments for b in bundles)",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "test_discover_sample_cases",
+        "kind": 2,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "def test_discover_sample_cases():\n    bundles = discover_cases(SAMPLES)\n    assert len(bundles) == 9\n    assert all(b.attachments for b in bundles)\n    kinds = {a.kind for b in bundles for a in b.attachments}\n    assert {\"json\", \"text\", \"email\", \"transcript\", \"pdf\", \"csv\", \"image\"} <= kinds\ndef test_schema_is_strict():\n    s = resolution_schema()\n    assert s[\"additionalProperties\"] is False\n    assert set(s[\"required\"]) == set(s[\"properties\"])",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "test_schema_is_strict",
+        "kind": 2,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "def test_schema_is_strict():\n    s = resolution_schema()\n    assert s[\"additionalProperties\"] is False\n    assert set(s[\"required\"]) == set(s[\"properties\"])\n    for d in s.get(\"$defs\", {}).values():\n        assert set(d[\"required\"]) == set(d[\"properties\"])\ndef test_every_case_gets_an_answer(settings, tmp_path):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda cid: ToolRegistry(build_backend(settings, cid)))\n    for b in discover_cases(SAMPLES):\n        r = agent.run(b)",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "test_every_case_gets_an_answer",
+        "kind": 2,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "def test_every_case_gets_an_answer(settings, tmp_path):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda cid: ToolRegistry(build_backend(settings, cid)))\n    for b in discover_cases(SAMPLES):\n        r = agent.run(b)\n        assert isinstance(r.resolution, Resolution)\n        write_case(r, tmp_path / \"ANSWERS\", tmp_path / \"logs\")\n        assert (tmp_path / \"ANSWERS\" / b.case_id / \"ANSWER.md\").exists()\n        assert (tmp_path / \"ANSWERS\" / b.case_id / \"REASONING.md\").exists()\n        trace = json.loads((tmp_path / \"logs\" / b.case_id / \"trace.json\").read_text())\n        assert trace[\"status\"] == \"completed\"",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "test_gas_case_never_books",
+        "kind": 2,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "def test_gas_case_never_books(settings):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda cid: ToolRegistry(build_backend(settings, cid)))\n    b = next(b for b in discover_cases(SAMPLES) if b.case_id == \"02_gas_smell\")\n    r = agent.run(b)\n    names = {e.name for e in r.tool_events}\n    assert \"schedule_contractor\" not in names\n    assert r.resolution.escalation.required\n    assert \"0800 111 999\" in r.resolution.tenant_communication\ndef test_fallback_answer_is_complete(settings, tmp_path):\n    b = discover_cases(SAMPLES)[0]",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "test_fallback_answer_is_complete",
+        "kind": 2,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "def test_fallback_answer_is_complete(settings, tmp_path):\n    b = discover_cases(SAMPLES)[0]\n    r = fallback_result(b, \"simulated crash\")\n    assert r.status == \"fallback\"\n    assert r.resolution.decision == \"escalated\"\n    write_case(r, tmp_path / \"ANSWERS\", tmp_path / \"logs\")\n    text = (tmp_path / \"ANSWERS\" / b.case_id / \"ANSWER.md\").read_text()\n    assert \"simulated crash\" in text",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT",
+        "kind": 5,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "ROOT = Path(__file__).resolve().parent.parent\nSAMPLES = ROOT / \"data\" / \"sample_cases\"\n@pytest.fixture\ndef settings(monkeypatch):\n    monkeypatch.chdir(ROOT)\n    s = Settings()\n    s.llm_provider = \"mock\"\n    s.tool_backend = \"mock\"\n    return s\ndef test_discover_sample_cases():",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "SAMPLES",
+        "kind": 5,
+        "importPath": "tests.test_pipeline",
+        "description": "tests.test_pipeline",
+        "peekOfCode": "SAMPLES = ROOT / \"data\" / \"sample_cases\"\n@pytest.fixture\ndef settings(monkeypatch):\n    monkeypatch.chdir(ROOT)\n    s = Settings()\n    s.llm_provider = \"mock\"\n    s.tool_backend = \"mock\"\n    return s\ndef test_discover_sample_cases():\n    bundles = discover_cases(SAMPLES)",
+        "detail": "tests.test_pipeline",
+        "documentation": {}
+    }
+]
