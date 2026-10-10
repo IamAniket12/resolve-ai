@@ -65,7 +65,13 @@ def run_cases(cases_path: str, answers_dir: str, settings: Settings, workers: Op
 
     llm = make_llm(settings)
     policy = load_policy()
-    agent = ResolveAgent(llm, settings, policy, registry_factory=lambda cid: ToolRegistry(build_backend(settings, cid)))
+    registry_factory = lambda cid: ToolRegistry(build_backend(settings, cid))  # noqa: E731
+    agent = ResolveAgent(llm, settings, policy, registry_factory=registry_factory)
+    fallback_agent = None
+    if llm.name == "anthropic" and settings.fallback_model and settings.fallback_model != settings.model:
+        import dataclasses
+        fb_settings = dataclasses.replace(settings, model=settings.fallback_model)
+        fallback_agent = ResolveAgent(make_llm(fb_settings), fb_settings, policy, registry_factory=registry_factory)
 
     bundles = discover_cases(cases_path, transcriber=make_transcriber(settings))
     if only:
@@ -86,8 +92,18 @@ def run_cases(cases_path: str, answers_dir: str, settings: Settings, workers: Op
         try:
             r = agent.run(bundle, deadline=deadline, trace_cb=log.info, grace=min(60.0, case_timeout * 0.15))
         except Exception as e:  # noqa: BLE001
-            log.exception("[%s] agent failed", bundle.case_id)
-            r = fallback_result(bundle, f"{type(e).__name__}: {e}", provider=llm.name)
+            log.exception("[%s] agent failed on %s", bundle.case_id, llm.model)
+            remaining = deadline - time.time()
+            if fallback_agent is not None and remaining > 120:
+                log.warning("[%s] retrying once on fallback model %s (%.0fs left)", bundle.case_id, settings.fallback_model, remaining)
+                try:
+                    r = fallback_agent.run(bundle, deadline=deadline, trace_cb=log.info, grace=min(60.0, case_timeout * 0.15))
+                    r.model_notes = [f"primary model {llm.model} failed ({type(e).__name__}); answered by fallback model {settings.fallback_model}"] + list(r.model_notes)
+                except Exception as e2:  # noqa: BLE001
+                    log.exception("[%s] fallback model failed too", bundle.case_id)
+                    r = fallback_result(bundle, f"{type(e).__name__}: {e}; fallback {type(e2).__name__}: {e2}", provider=llm.name)
+            else:
+                r = fallback_result(bundle, f"{type(e).__name__}: {e}", provider=llm.name)
         log.info("[%s] %s in %.0fs -> %s / %s", bundle.case_id, r.status, time.time() - t0, r.resolution.decision, r.resolution.urgency)
         return r
 

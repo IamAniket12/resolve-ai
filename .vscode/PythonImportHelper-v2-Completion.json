@@ -136,6 +136,14 @@
         "documentation": {}
     },
     {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "argparse",
         "kind": 6,
         "isExtraImport": true,
@@ -160,6 +168,14 @@
         "importPath": "shutil",
         "description": "shutil",
         "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -364,6 +380,31 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
         "documentation": {}
     },
     {
@@ -1063,15 +1104,6 @@
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
         "label": "dataclass",
         "importPath": "dataclasses",
         "description": "dataclasses",
@@ -1418,6 +1450,33 @@
         "description": "scripts.make_sample_assets",
         "peekOfCode": "ROOMS = {\n    \"Hallway\": [\"Walls: magnolia emulsion, good\", \"Floor: laminate, light scuffing near door\", \"Ceiling: white, good\", \"Smoke alarm: mains, tested OK\",\n                \"Light fitting: pendant, working\", \"Radiator: single panel, working\", \"Door: fire door, closer working\", \"Coat hooks x3\"],\n    \"Living room\": [\"Walls: magnolia, small scuff behind sofa\", \"Floor: laminate, good\", \"Window: uPVC double glazed, both handles OK, blind good\",\n                    \"Radiator: double panel, TRV fitted\", \"Sofa: 3-seat grey fabric, good\", \"TV unit: oak effect, good\", \"Coffee table: oak effect, ring mark\",\n                    \"Curtains: none\", \"Sockets: 6 double, all tested\", \"Light: 3-spot bar, working\"],\n    \"Kitchen\": [\"Walls: tiled splashback, good; painted walls good\", \"Floor: vinyl, good at check-in\", \"Worktops: laminate, chip near sink\",\n                \"Sink: stainless, mixer tap, working\", \"Oven: Beko BBXIF22100S, clean, working\", \"Hob: Beko induction, working\",\n                \"Extractor: integrated, working, filter clean\", \"Fridge freezer: Beko integrated, working\",\n                \"Washing machine: Beko WTK94121W (supplied new 2024-03), working, no leaks at check-in\", \"Dishwasher: none\",",
         "detail": "scripts.make_sample_assets",
+        "documentation": {}
+    },
+    {
+        "label": "mask",
+        "kind": 2,
+        "importPath": "scripts.mine_templates",
+        "description": "scripts.mine_templates",
+        "peekOfCode": "def mask(text: str) -> str:\n    t = text\n    t = re.sub(r\"Flat \\d+, \\d+ [A-Z][a-z]+ [A-Z][a-z]+, [A-Z][a-z]+, ZZ\\d \\d[A-Z]{2}\", \"<ADDRESS>\", t)\n    t = re.sub(r\"\\d+ [A-Z][a-z]+ (Road|Street|Lane|Close|Walk|Quay|Mews|Avenue|View), [A-Z][a-z]+, ZZ\\d \\d[A-Z]{2}\", \"<ADDRESS>\", t)\n    t = re.sub(r\"ZZ\\d \\d[A-Z]{2}\", \"<POSTCODE>\", t)\n    t = re.sub(r\"\\b\\d{1,2}/\\d{1,2}/\\d{4}\\b\", \"<DATE>\", t)\n    t = re.sub(r\"\\b\\d{4}-\\d{2}-\\d{2}\\b\", \"<DATE>\", t)\n    t = re.sub(r\"\\b\\d{1,2} (January|February|March|April|May|June|July|August|September|October|November|December) \\d{4}\\b\", \"<DATE>\", t)\n    t = re.sub(r\"\\b0?7\\d{3} \\d{6}\\b\", \"<PHONE>\", t)\n    t = re.sub(r\"synthetic-[0-9a-f]+\", \"<REF>\", t)",
+        "detail": "scripts.mine_templates",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.mine_templates",
+        "description": "scripts.mine_templates",
+        "peekOfCode": "def main(track: Path) -> None:\n    updates: Counter = Counter()\n    holds: Counter = Counter()\n    hold_reasons: Counter = Counter()\n    msgs: dict = defaultdict(Counter)\n    examples: dict = {}\n    n_cases = 0\n    for case in sorted(p for p in track.iterdir() if p.is_dir()):\n        h = case / \"history.md\"\n        if not h.exists():",
+        "detail": "scripts.mine_templates",
+        "documentation": {}
+    },
+    {
+        "label": "EVENT_RE",
+        "kind": 5,
+        "importPath": "scripts.mine_templates",
+        "description": "scripts.mine_templates",
+        "peekOfCode": "EVENT_RE = re.compile(\n    r'<a id=\"event-(\\d+)\"></a>\\n## (?P<ts>[\\d\\-: ]+UTC) — event \\d+\\n\\n'\n    r\"- \\*\\*Channel:\\*\\* (?P<channel>[^\\n]+)\\n- \\*\\*From:\\*\\* (?P<frm>[^\\n]+)\\n- \\*\\*To:\\*\\* (?P<to>[^\\n]+)\\n\\n(?P<body>.*?)(?=\\n<a id=\\\"event-|\\Z)\",\n    re.S,\n)\ndef mask(text: str) -> str:\n    t = text\n    t = re.sub(r\"Flat \\d+, \\d+ [A-Z][a-z]+ [A-Z][a-z]+, [A-Z][a-z]+, ZZ\\d \\d[A-Z]{2}\", \"<ADDRESS>\", t)\n    t = re.sub(r\"\\d+ [A-Z][a-z]+ (Road|Street|Lane|Close|Walk|Quay|Mews|Avenue|View), [A-Z][a-z]+, ZZ\\d \\d[A-Z]{2}\", \"<ADDRESS>\", t)\n    t = re.sub(r\"ZZ\\d \\d[A-Z]{2}\", \"<POSTCODE>\", t)",
+        "detail": "scripts.mine_templates",
         "documentation": {}
     },
     {
@@ -1790,6 +1849,15 @@
         "documentation": {}
     },
     {
+        "label": "cmd_preflight",
+        "kind": 2,
+        "importPath": "src.resolve_ai.cli",
+        "description": "src.resolve_ai.cli",
+        "peekOfCode": "def cmd_preflight(args) -> int:\n    \"\"\"Everything to check before the Reality Test run, in one command. Spends at most a few tokens.\"\"\"\n    import math\n    import time\n    from resolve_ai.ingest import discover_cases\n    from resolve_ai.tools.registry import ToolRegistry, build_backend\n    from resolve_ai.tools.voice import make_transcriber\n    settings = Settings()\n    if args.provider:\n        settings.llm_provider = args.provider",
+        "detail": "src.resolve_ai.cli",
+        "documentation": {}
+    },
+    {
         "label": "cmd_grade",
         "kind": 2,
         "importPath": "src.resolve_ai.cli",
@@ -1812,7 +1880,7 @@
         "kind": 6,
         "importPath": "src.resolve_ai.config",
         "description": "src.resolve_ai.config",
-        "peekOfCode": "class Settings:\n    # model\n    anthropic_api_key: str = _env(\"ANTHROPIC_API_KEY\")\n    model: str = _env(\"ANTHROPIC_MODEL\", \"claude-opus-5-5\")\n    effort: str = _env(\"ANTHROPIC_EFFORT\", \"high\")\n    server_fallbacks: bool = _flag(\"ANTHROPIC_SERVER_FALLBACKS\", \"1\")\n    request_timeout: float = float(_env(\"ANTHROPIC_REQUEST_TIMEOUT\", \"240\"))\n    llm_provider: str = _env(\"LLM_PROVIDER\", \"auto\")  # auto | anthropic | mock\n    # tools\n    tool_backend: str = _env(\"TOOL_BACKEND\", \"mock\")  # mock | http",
+        "peekOfCode": "class Settings:\n    # model\n    anthropic_api_key: str = _env(\"ANTHROPIC_API_KEY\")\n    model: str = _env(\"ANTHROPIC_MODEL\", \"claude-opus-5-5\")\n    effort: str = _env(\"ANTHROPIC_EFFORT\", \"high\")\n    fallback_model: str = _env(\"ANTHROPIC_FALLBACK_MODEL\", \"claude-sonnet-5-5\")  # used once per case if the primary model keeps failing\n    server_fallbacks: bool = _flag(\"ANTHROPIC_SERVER_FALLBACKS\", \"1\")\n    request_timeout: float = float(_env(\"ANTHROPIC_REQUEST_TIMEOUT\", \"240\"))\n    llm_provider: str = _env(\"LLM_PROVIDER\", \"auto\")  # auto | anthropic | mock\n    # tools",
         "detail": "src.resolve_ai.config",
         "documentation": {}
     },
@@ -1866,7 +1934,7 @@
         "kind": 2,
         "importPath": "src.resolve_ai.ingest",
         "description": "src.resolve_ai.ingest",
-        "peekOfCode": "def discover_cases(cases_path: str | Path, transcriber: Transcriber = None) -> List[CaseBundle]:\n    root = Path(cases_path)\n    if not root.exists():\n        raise FileNotFoundError(f\"cases path not found: {root}\")\n    if root.is_file():\n        if root.suffix.lower() in {\".json\", \".jsonl\"}:\n            text = _read_text(root)\n            data = [json.loads(l) for l in text.splitlines() if l.strip()] if root.suffix == \".jsonl\" else json.loads(text)\n            if isinstance(data, dict):\n                for key in (\"cases\", \"items\", \"data\", \"tickets\"):",
+        "peekOfCode": "def discover_cases(cases_path: str | Path, transcriber: Transcriber = None) -> List[CaseBundle]:\n    root = Path(cases_path)\n    if not root.exists():\n        raise FileNotFoundError(f\"cases path not found: {root}\")\n    if root.is_file() and root.suffix.lower() == \".zip\":\n        import zipfile\n        target = root.with_name(root.stem + \"_extracted\")\n        if not target.exists():\n            with zipfile.ZipFile(root) as z:\n                z.extractall(target)",
         "detail": "src.resolve_ai.ingest",
         "documentation": {}
     },
@@ -2046,7 +2114,7 @@
         "kind": 2,
         "importPath": "src.resolve_ai.prompts",
         "description": "src.resolve_ai.prompts",
-        "peekOfCode": "def build_system_prompt(policy: str) -> str:\n    return SYSTEM_PROMPT_TEMPLATE.replace(\"{policy}\", policy)\ndef build_case_prompt(bundle: CaseBundle) -> str:\n    files = \", \".join(f\"{a.name} ({a.kind})\" for a in bundle.attachments) or \"none\"\n    return CASE_PROMPT_TEMPLATE.format(\n        case_id=bundle.case_id,\n        source=bundle.source,\n        n_files=len(bundle.attachments),\n        file_list=files,\n        material=bundle.text_for_prompt(),",
+        "peekOfCode": "def build_system_prompt(policy: str) -> str:\n    return SYSTEM_PROMPT_TEMPLATE.replace(\"{policy}\", policy)\ndef build_case_prompt(bundle: CaseBundle) -> str:\n    files = \", \".join(f\"{a.name} ({a.kind})\" for a in bundle.attachments) or \"none\"\n    return CASE_PROMPT_TEMPLATE.format(\n        case_id=bundle.case_id,\n        source=bundle.source,\n        n_files=len(bundle.attachments),\n        file_list=files,\n        as_of=bundle.as_of() or \"not stated in the material (assume the material is current)\",",
         "detail": "src.resolve_ai.prompts",
         "documentation": {}
     },
@@ -2055,7 +2123,7 @@
         "kind": 2,
         "importPath": "src.resolve_ai.prompts",
         "description": "src.resolve_ai.prompts",
-        "peekOfCode": "def build_case_prompt(bundle: CaseBundle) -> str:\n    files = \", \".join(f\"{a.name} ({a.kind})\" for a in bundle.attachments) or \"none\"\n    return CASE_PROMPT_TEMPLATE.format(\n        case_id=bundle.case_id,\n        source=bundle.source,\n        n_files=len(bundle.attachments),\n        file_list=files,\n        material=bundle.text_for_prompt(),\n    )",
+        "peekOfCode": "def build_case_prompt(bundle: CaseBundle) -> str:\n    files = \", \".join(f\"{a.name} ({a.kind})\" for a in bundle.attachments) or \"none\"\n    return CASE_PROMPT_TEMPLATE.format(\n        case_id=bundle.case_id,\n        source=bundle.source,\n        n_files=len(bundle.attachments),\n        file_list=files,\n        as_of=bundle.as_of() or \"not stated in the material (assume the material is current)\",\n        material=bundle.text_for_prompt(),\n    )",
         "detail": "src.resolve_ai.prompts",
         "documentation": {}
     },
@@ -2073,7 +2141,7 @@
         "kind": 5,
         "importPath": "src.resolve_ai.prompts",
         "description": "src.resolve_ai.prompts",
-        "peekOfCode": "CASE_PROMPT_TEMPLATE = \"\"\"Case ID: {case_id}\nSource: {source}\nFiles received ({n_files}): {file_list}\nWork this case now. Use the tools to verify and act. When you have finished acting (or determined that you must stop), end your turn with a short plain-text summary of the outcome.\n<case_material>\n{material}\n</case_material>\"\"\"\nFINALIZE_PROMPT = \"\"\"Now produce the final structured resolution for this case as JSON matching the required schema. Base it strictly on what actually happened in this conversation: only list actions that tool calls confirmed, list every failed tool call under failed_actions, record every conflict and information gap you noticed, and write a handover a colleague could act on without re-reading the case. Do not add any text outside the JSON.\"\"\"\ndef build_system_prompt(policy: str) -> str:\n    return SYSTEM_PROMPT_TEMPLATE.replace(\"{policy}\", policy)",
+        "peekOfCode": "CASE_PROMPT_TEMPLATE = \"\"\"Case ID: {case_id}\nSource: {source}\nFiles received ({n_files}): {file_list}\nCase date: {as_of}. Treat this as \"now\" for ages, deadlines, chase dates and how long people have been waiting; today's real date is irrelevant.\nWork this case now. Use the tools to verify and act. When you have finished acting (or determined that you must stop), end your turn with a short plain-text summary of the outcome.\n<case_material>\n{material}\n</case_material>\"\"\"\nFINALIZE_PROMPT = \"\"\"Now produce the final structured resolution for this case as JSON matching the required schema. Base it strictly on what actually happened in this conversation: only list actions that tool calls confirmed, list every failed tool call under failed_actions, record every conflict and information gap you noticed, and write a handover a colleague could act on without re-reading the case. Do not add any text outside the JSON.\"\"\"\ndef build_system_prompt(policy: str) -> str:",
         "detail": "src.resolve_ai.prompts",
         "documentation": {}
     },
@@ -2118,7 +2186,7 @@
         "kind": 2,
         "importPath": "src.resolve_ai.writer",
         "description": "src.resolve_ai.writer",
-        "peekOfCode": "def answer_md(r: CaseResult) -> str:\n    x = r.resolution\n    esc = x.escalation\n    lines = [\n        f\"# Case {r.case_id} — Answer\",\n        \"\",\n        f\"**Decision:** `{x.decision}`  \",\n        f\"**Urgency:** `{x.urgency}`  \",\n        f\"**Issue category:** {x.issue_category}  \",\n        f\"**Confidence:** {x.confidence:.2f}  \",",
+        "peekOfCode": "def answer_md(r: CaseResult) -> str:\n    x = r.resolution\n    esc = x.escalation\n    lines = [\n        f\"# Case {r.case_id} — Answer\",\n        \"\",\n        _status_line(r),\n        f\"**Decision:** `{x.decision}`  \",\n        f\"**Urgency:** `{x.urgency}`  \",\n        f\"**Issue category:** {x.issue_category}  \",",
         "detail": "src.resolve_ai.writer",
         "documentation": {}
     },
@@ -2141,11 +2209,38 @@
         "documentation": {}
     },
     {
+        "label": "run_summary",
+        "kind": 2,
+        "importPath": "src.resolve_ai.writer",
+        "description": "src.resolve_ai.writer",
+        "peekOfCode": "def run_summary(results: List[CaseResult]) -> str:\n    from collections import Counter\n    n = len(results)\n    if not n:\n        return \"No cases.\\n\"\n    done = sum(1 for r in results if r.status == \"completed\")\n    dec = Counter(r.resolution.decision for r in results)\n    urg = Counter(r.resolution.urgency for r in results)\n    esc = sum(1 for r in results if r.resolution.escalation.required)\n    tool_calls = sum(len(r.tool_events) for r in results)",
+        "detail": "src.resolve_ai.writer",
+        "documentation": {}
+    },
+    {
         "label": "write_index",
         "kind": 2,
         "importPath": "src.resolve_ai.writer",
         "description": "src.resolve_ai.writer",
-        "peekOfCode": "def write_index(results: List[CaseResult], answers_dir: Path) -> None:\n    rows = [\"| Case | Status | Decision | Urgency | Escalated | Confidence |\", \"|---|---|---|---|---|---|\"]\n    for r in sorted(results, key=lambda r: r.case_id):\n        x = r.resolution\n        rows.append(f\"| [{r.case_id}]({r.case_id}/ANSWER.md) | {r.status} | {x.decision} | {x.urgency} | {'yes' if x.escalation.required else 'no'} | {x.confidence:.2f} |\")\n    (answers_dir / \"INDEX.md\").write_text(\"# Answers index\\n\\n\" + \"\\n\".join(rows) + \"\\n\", encoding=\"utf-8\")",
+        "peekOfCode": "def write_index(results: List[CaseResult], answers_dir: Path) -> None:\n    rows = [\"| Case | Status | Decision | Urgency | Escalated | Confidence |\", \"|---|---|---|---|---|---|\"]\n    for r in sorted(results, key=lambda r: r.case_id):\n        x = r.resolution\n        rows.append(f\"| [{r.case_id}]({r.case_id}/ANSWER.md) | {r.status} | {x.decision} | {x.urgency} | {'yes' if x.escalation.required else 'no'} | {x.confidence:.2f} |\")\n    (answers_dir / \"INDEX.md\").write_text(\"# Answers index\\n\\n\" + run_summary(results) + \"\\n\" + \"\\n\".join(rows) + \"\\n\", encoding=\"utf-8\")",
+        "detail": "src.resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "HUMAN_MINUTES_FULL_CASE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.writer",
+        "description": "src.resolve_ai.writer",
+        "peekOfCode": "HUMAN_MINUTES_FULL_CASE = 25\nHUMAN_MINUTES_ESCALATED_WITH_HANDOVER = 10\ndef run_summary(results: List[CaseResult]) -> str:\n    from collections import Counter\n    n = len(results)\n    if not n:\n        return \"No cases.\\n\"\n    done = sum(1 for r in results if r.status == \"completed\")\n    dec = Counter(r.resolution.decision for r in results)\n    urg = Counter(r.resolution.urgency for r in results)",
+        "detail": "src.resolve_ai.writer",
+        "documentation": {}
+    },
+    {
+        "label": "HUMAN_MINUTES_ESCALATED_WITH_HANDOVER",
+        "kind": 5,
+        "importPath": "src.resolve_ai.writer",
+        "description": "src.resolve_ai.writer",
+        "peekOfCode": "HUMAN_MINUTES_ESCALATED_WITH_HANDOVER = 10\ndef run_summary(results: List[CaseResult]) -> str:\n    from collections import Counter\n    n = len(results)\n    if not n:\n        return \"No cases.\\n\"\n    done = sum(1 for r in results if r.status == \"completed\")\n    dec = Counter(r.resolution.decision for r in results)\n    urg = Counter(r.resolution.urgency for r in results)\n    esc = sum(1 for r in results if r.resolution.escalation.required)",
         "detail": "src.resolve_ai.writer",
         "documentation": {}
     },

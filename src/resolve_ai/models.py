@@ -34,6 +34,18 @@ class CaseBundle:
             for a in self.attachments
         ]
 
+    def as_of(self) -> str:
+        """The case's own 'now': the latest timestamp found in the material (histories are dated, not today)."""
+        import re
+        pat = re.compile(r"\b(20\d{2}-\d{2}-\d{2})(?:[ T](\d{2}:\d{2})(?::\d{2})?)?")
+        best = ""
+        for a in self.attachments:
+            for m in pat.finditer(a.text or ""):
+                stamp = m.group(1) + (" " + m.group(2) if m.group(2) else "")
+                if stamp > best:
+                    best = stamp
+        return best
+
     def text_for_prompt(self, max_per_attachment: int = 25_000, max_total: int = 180_000) -> str:
         parts: List[str] = []
         total = 0

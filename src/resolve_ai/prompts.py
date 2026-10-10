@@ -33,6 +33,7 @@ Rules of conduct:
 CASE_PROMPT_TEMPLATE = """Case ID: {case_id}
 Source: {source}
 Files received ({n_files}): {file_list}
+Case date: {as_of}. Treat this as "now" for ages, deadlines, chase dates and how long people have been waiting; today's real date is irrelevant.
 
 Work this case now. Use the tools to verify and act. When you have finished acting (or determined that you must stop), end your turn with a short plain-text summary of the outcome.
 
@@ -54,5 +55,6 @@ def build_case_prompt(bundle: CaseBundle) -> str:
         source=bundle.source,
         n_files=len(bundle.attachments),
         file_list=files,
+        as_of=bundle.as_of() or "not stated in the material (assume the material is current)",
         material=bundle.text_for_prompt(),
     )

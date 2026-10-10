@@ -27,6 +27,7 @@ class Settings:
     anthropic_api_key: str = _env("ANTHROPIC_API_KEY")
     model: str = _env("ANTHROPIC_MODEL", "claude-opus-5-5")
     effort: str = _env("ANTHROPIC_EFFORT", "high")
+    fallback_model: str = _env("ANTHROPIC_FALLBACK_MODEL", "claude-sonnet-5-5")  # used once per case if the primary model keeps failing
     server_fallbacks: bool = _flag("ANTHROPIC_SERVER_FALLBACKS", "1")
     request_timeout: float = float(_env("ANTHROPIC_REQUEST_TIMEOUT", "240"))
     llm_provider: str = _env("LLM_PROVIDER", "auto")  # auto | anthropic | mock

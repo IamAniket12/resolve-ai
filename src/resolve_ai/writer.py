@@ -13,12 +13,24 @@ def _bullets(items: List[str], empty: str = "None") -> str:
     return "\n".join(f"- {i}" for i in items) if items else f"- {empty}"
 
 
+def _status_line(r: CaseResult) -> str:
+    last = next((e for e in reversed(r.tool_events) if e.name == "update_case_status" and e.ok), None)
+    if last:
+        st = str(last.input.get("status", "")).replace("_", " ")
+        cm = last.input.get("comment", "")
+        return f"**Case status now:** {st}" + (f" — {cm}" if cm else "") + "  "
+    if r.resolution.escalation.required:
+        return f"**Case status now:** escalated to {r.resolution.escalation.to or 'a human'}  "
+    return f"**Case status now:** {r.resolution.decision.replace('_', ' ')}  "
+
+
 def answer_md(r: CaseResult) -> str:
     x = r.resolution
     esc = x.escalation
     lines = [
         f"# Case {r.case_id} — Answer",
         "",
+        _status_line(r),
         f"**Decision:** `{x.decision}`  ",
         f"**Urgency:** `{x.urgency}`  ",
         f"**Issue category:** {x.issue_category}  ",
@@ -120,9 +132,51 @@ def write_case(r: CaseResult, answers_dir: Path, log_dir: Path) -> None:
     (case_log / "trace.json").write_text(json.dumps(trace, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
 
 
+# Assumed human handling time per case when an agent does the legwork (minutes). Stated in INDEX.md as an assumption.
+HUMAN_MINUTES_FULL_CASE = 25
+HUMAN_MINUTES_ESCALATED_WITH_HANDOVER = 10
+
+
+def run_summary(results: List[CaseResult]) -> str:
+    from collections import Counter
+    n = len(results)
+    if not n:
+        return "No cases.\n"
+    done = sum(1 for r in results if r.status == "completed")
+    dec = Counter(r.resolution.decision for r in results)
+    urg = Counter(r.resolution.urgency for r in results)
+    esc = sum(1 for r in results if r.resolution.escalation.required)
+    tool_calls = sum(len(r.tool_events) for r in results)
+    tool_fail = sum(1 for r in results for e in r.tool_events if not e.ok)
+    recovered = sum(1 for r in results if any(not e.ok for e in r.tool_events) and r.status == "completed"
+                    and r.resolution.decision in {"resolved", "in_progress", "needs_information", "no_action"})
+    gaps = sum(1 for r in results if r.resolution.information_gaps)
+    conflicts = sum(1 for r in results if r.resolution.conflicts)
+    tokens_in = sum((r.usage or {}).get("input_tokens", 0) for r in results)
+    tokens_out = sum((r.usage or {}).get("output_tokens", 0) for r in results)
+    minutes = sum(HUMAN_MINUTES_ESCALATED_WITH_HANDOVER if r.resolution.escalation.required else HUMAN_MINUTES_FULL_CASE
+                  for r in results if r.status == "completed")
+    lines = [
+        "## Run summary",
+        "",
+        f"- Cases: {n}; answered by the agent: {done}; fallback answers (crash/timeout): {n - done}",
+        "- Decisions: " + ", ".join(f"{k} {v}" for k, v in dec.most_common()),
+        "- Urgency: " + ", ".join(f"{k} {v}" for k, v in urg.most_common()),
+        f"- Escalated to a human: {esc} of {n} ({100 * esc / n:.0f}%), each with a written handover",
+        f"- Cases where the agent recorded conflicting information: {conflicts}; where it recorded information gaps: {gaps}",
+        f"- Tool calls: {tool_calls}; tool failures: {tool_fail}; cases that completed despite a tool failure: {recovered}",
+        f"- Tokens: {tokens_in:,} in / {tokens_out:,} out" if tokens_in or tokens_out else "- Tokens: n/a (mock provider)",
+        f"- Estimated human time saved: about {minutes} minutes, assuming {HUMAN_MINUTES_FULL_CASE} min per case handled end to end "
+        f"and {HUMAN_MINUTES_ESCALATED_WITH_HANDOVER} min saved on an escalation that arrives with a complete handover. "
+        "These are stated assumptions, not measurements.",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def write_index(results: List[CaseResult], answers_dir: Path) -> None:
     rows = ["| Case | Status | Decision | Urgency | Escalated | Confidence |", "|---|---|---|---|---|---|"]
     for r in sorted(results, key=lambda r: r.case_id):
         x = r.resolution
         rows.append(f"| [{r.case_id}]({r.case_id}/ANSWER.md) | {r.status} | {x.decision} | {x.urgency} | {'yes' if x.escalation.required else 'no'} | {x.confidence:.2f} |")
-    (answers_dir / "INDEX.md").write_text("# Answers index\n\n" + "\n".join(rows) + "\n", encoding="utf-8")
+    (answers_dir / "INDEX.md").write_text("# Answers index\n\n" + run_summary(results) + "\n" + "\n".join(rows) + "\n", encoding="utf-8")

@@ -196,6 +196,16 @@ def discover_cases(cases_path: str | Path, transcriber: Transcriber = None) -> L
     root = Path(cases_path)
     if not root.exists():
         raise FileNotFoundError(f"cases path not found: {root}")
+    if root.is_file() and root.suffix.lower() == ".zip":
+        import zipfile
+        target = root.with_name(root.stem + "_extracted")
+        if not target.exists():
+            with zipfile.ZipFile(root) as z:
+                z.extractall(target)
+        # a zip usually wraps everything in one top-level folder
+        inner = [p for p in target.iterdir() if p.is_dir() and not p.name.startswith((".", "_"))]
+        files_here = [p for p in target.iterdir() if p.is_file()]
+        root = inner[0] if len(inner) == 1 and not files_here else target
     if root.is_file():
         if root.suffix.lower() in {".json", ".jsonl"}:
             text = _read_text(root)
@@ -209,8 +219,22 @@ def discover_cases(cases_path: str | Path, transcriber: Transcriber = None) -> L
                 return [_case_from_json_item(item, i, str(root)) for i, item in enumerate(data)]
         return [CaseBundle(root.stem, str(root), [load_attachment(root, transcriber)])]
 
-    subdirs = [p for p in sorted(root.iterdir()) if p.is_dir() and not p.name.startswith(".")]
+    subdirs = [p for p in sorted(root.iterdir()) if p.is_dir() and not p.name.startswith((".", "_"))]
     if subdirs:
+        def has_files(d: Path) -> bool:
+            return any(x.is_file() and not x.name.startswith(".") for x in d.iterdir())
+        if not any(has_files(d) for d in subdirs):
+            # e.g. <root>/Property Management/001/index.md : the first level is a track/group, descend one level
+            bundles: List[CaseBundle] = []
+            for group in subdirs:
+                inner = [p for p in sorted(group.iterdir()) if p.is_dir() and not p.name.startswith((".", "_"))]
+                for d in inner:
+                    b = _case_from_dir(d, transcriber)
+                    if len(subdirs) > 1:
+                        b.case_id = f"{group.name}__{d.name}".replace(" ", "_")
+                    bundles.append(b)
+            if bundles:
+                return bundles
         return [_case_from_dir(d, transcriber) for d in subdirs]
     files = _files_in(root)
     return [CaseBundle(p.stem, str(p), [load_attachment(p, transcriber)]) for p in files]
