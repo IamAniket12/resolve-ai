@@ -126,13 +126,3 @@ def _simulated_call(to_role: str, phone: str, purpose: str, talking_points: str)
                  "confirmed and no commitment exists. Use send_message to reach this person, and if a live conversation is "
                  "essential, record in the handover that a human must make the call."),
     }
-get(to_role, "Call completed.")
-    return {
-        "status": "completed",
-        "mode": "simulated",
-        "to_role": to_role,
-        "phone": phone,
-        "purpose": purpose,
-        "transcript_summary": confirm,
-        "note": "Simulated call (VOICE_LIVE_CALLS=0 or ElevenLabs not configured).",
-    }

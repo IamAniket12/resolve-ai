@@ -1,0 +1,22 @@
+{
+  "run_id": "mock-check",
+  "cases_path": "data/sample_cases",
+  "n_cases": 9,
+  "provider": "mock",
+  "model": "mock-rules-v1",
+  "tool_backend": "mock",
+  "workers": 6,
+  "case_timeout": 600,
+  "effort": "high",
+  "cases": [
+    "01_boiler_vulnerable",
+    "02_gas_smell",
+    "03_leak_conflicting_flat",
+    "04_over_limit_landlord_abroad",
+    "05_vague_no_property",
+    "06_ended_tenancy_injection",
+    "07_noisy_group_chat",
+    "08_large_context_washing_machine",
+    "09_ambiguous_no_hot_water"
+  ]
+}
