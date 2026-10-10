@@ -228,8 +228,8 @@ class MockLLM(LLM):
                      "If the kitchen tap runs hot, the fault is the electric shower unit and we will send an electrician. "
                      "If it is cold too, it is the boiler and we will send a Gas Safe engineer. Reply 'tap hot' or 'tap cold'.")
                 return LLMResponse([_text("Cannot tell whether the shower unit or the boiler failed; asking one question before booking."),
-                                    _tool_use("send_message", {"recipient_type": "tenant", "recipient": tenant.get("phone") or tenant.get("email", ""),
-                                                               "channel": "sms" if tenant.get("phone") else "email", "body": q}),
+                                    _tool_use("send_message", {"recipient_type": "tenant", "recipient": tenant.get("phone") or tenant.get("email") or tenant.get("name", "Tenant"),
+                                                               "channel": "sms" if tenant.get("phone") else ("email" if tenant.get("email") else "portal"), "body": q}),
                                     _tool_use("record_note", {"ticket_id": tid, "note": "Awaiting tenant reply: kitchen tap hot/cold decides electrician vs gas engineer. Provisional trade: gas_engineer."})], "tool_use")
             return LLMResponse([_text("Ticket open; awaiting the tenant's answer before booking.")], "end_turn")
 
@@ -263,7 +263,7 @@ class MockLLM(LLM):
                                                                         "reason": f"Estimated {est} exceeds pre-authorised limit {limit}."})], "tool_use")
         if est > limit and cls["urgency"] != "emergency":
             if "send_message" not in res:
-                return LLMResponse([_tool_use("send_message", {"recipient_type": "tenant", "recipient": tenant.get("phone") or tenant.get("email", ""), "channel": "sms" if tenant.get("phone") else "email",
+                return LLMResponse([_tool_use("send_message", {"recipient_type": "tenant", "recipient": tenant.get("phone") or tenant.get("email") or tenant.get("name", "Tenant"), "channel": "sms" if tenant.get("phone") else ("email" if tenant.get("email") else "portal"),
                                                                "body": "Thanks for reporting this. We have logged the repair and are awaiting the landlord's approval for the cost; we will confirm an appointment as soon as it is approved."})], "tool_use")
             return LLMResponse([_text("Awaiting landlord approval before booking.")], "end_turn")
 
@@ -283,8 +283,8 @@ class MockLLM(LLM):
         if not sent:
             slot = usable["data"]["slots"][0]
             blocks = []
-            if tenant.get("phone") or tenant.get("email"):
-                blocks.append(_tool_use("send_message", {"recipient_type": "tenant", "recipient": tenant.get("phone") or tenant.get("email"), "channel": "sms" if tenant.get("phone") else "email",
+            if tenant.get("phone") or tenant.get("email") or tenant.get("name"):
+                blocks.append(_tool_use("send_message", {"recipient_type": "tenant", "recipient": tenant.get("phone") or tenant.get("email") or tenant.get("name"), "channel": "sms" if tenant.get("phone") else ("email" if tenant.get("email") else "portal"),
                                                          "body": f"Hi {tenant.get('name', '')}, we've booked {booking['data'].get('contractor_name')} for {slot['start']} (ref {booking['data'].get('booking_ref')}). They will call before arriving. Reply if that time doesn't work."}))
             if landlord_email:
                 blocks.append(_tool_use("send_message", {"recipient_type": "landlord", "recipient": landlord_email, "channel": "email",

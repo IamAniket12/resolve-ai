@@ -144,12 +144,37 @@
         "documentation": {}
     },
     {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "argparse",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "argparse",
         "description": "argparse",
         "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -162,116 +187,124 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
         "label": "shutil",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "shutil",
         "description": "shutil",
         "detail": "shutil",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -408,12 +441,19 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
         "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
         "documentation": {}
     },
     {
@@ -443,6 +483,38 @@
     },
     {
         "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -860,6 +932,118 @@
         "documentation": {}
     },
     {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseResult",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Resolution",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "ToolEvent",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "resolution_schema",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Attachment",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseBundle",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseResult",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "CaseResult",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "Resolution",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
+        "label": "resolution_schema",
+        "importPath": "resolve_ai.models",
+        "description": "resolve_ai.models",
+        "isExtraImport": true,
+        "detail": "resolve_ai.models",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -973,110 +1157,6 @@
         "importPath": "base64",
         "description": "base64",
         "detail": "base64",
-        "documentation": {}
-    },
-    {
-        "label": "CaseBundle",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "CaseResult",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "Resolution",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "ToolEvent",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "resolution_schema",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "Attachment",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "CaseBundle",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "CaseBundle",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "CaseBundle",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "CaseResult",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "CaseResult",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "Resolution",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
-        "documentation": {}
-    },
-    {
-        "label": "resolution_schema",
-        "importPath": "resolve_ai.models",
-        "description": "resolve_ai.models",
-        "isExtraImport": true,
-        "detail": "resolve_ai.models",
         "documentation": {}
     },
     {
@@ -1306,6 +1386,33 @@
         "description": "resolve_ai.llm.mock_llm",
         "isExtraImport": true,
         "detail": "resolve_ai.llm.mock_llm",
+        "documentation": {}
+    },
+    {
+        "label": "role",
+        "kind": 2,
+        "importPath": "scripts.compare_public",
+        "description": "scripts.compare_public",
+        "peekOfCode": "def role(s: str) -> str:\n    s = s.lower()\n    for r in (\"tenant\", \"landlord\", \"contractor\", \"provider\"):\n        if r in s:\n            return \"contractor\" if r == \"provider\" else r\n    return \"other\"\ndef main() -> None:\n    ap = argparse.ArgumentParser()\n    ap.add_argument(\"run_id\")\n    ap.add_argument(\"--answers\", default=\"data/public_cut_answers\")",
+        "detail": "scripts.compare_public",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.compare_public",
+        "description": "scripts.compare_public",
+        "peekOfCode": "def main() -> None:\n    ap = argparse.ArgumentParser()\n    ap.add_argument(\"run_id\")\n    ap.add_argument(\"--answers\", default=\"data/public_cut_answers\")\n    ap.add_argument(\"--next\", type=int, default=6)\n    a = ap.parse_args()\n    total = hits = 0\n    flags = []\n    for tr in sorted(Path(\"logs\", a.run_id).glob(\"*/trace.json\")):\n        t = json.loads(tr.read_text())",
+        "detail": "scripts.compare_public",
+        "documentation": {}
+    },
+    {
+        "label": "EV",
+        "kind": 5,
+        "importPath": "scripts.compare_public",
+        "description": "scripts.compare_public",
+        "peekOfCode": "EV = re.compile(r\"## (?P<ts>[\\d\\-: ]+UTC) — event \\d+\\n\\n- \\*\\*Channel:\\*\\* (?P<ch>[^\\n]+)\\n- \\*\\*From:\\*\\* (?P<frm>[^\\n]+)\\n- \\*\\*To:\\*\\* (?P<to>[^\\n]+)\\n\\n(?P<body>.*?)(?=\\n<a id=\\\"event-|\\Z)\", re.S)\ndef role(s: str) -> str:\n    s = s.lower()\n    for r in (\"tenant\", \"landlord\", \"contractor\", \"provider\"):\n        if r in s:\n            return \"contractor\" if r == \"provider\" else r\n    return \"other\"\ndef main() -> None:\n    ap = argparse.ArgumentParser()\n    ap.add_argument(\"run_id\")",
+        "detail": "scripts.compare_public",
         "documentation": {}
     },
     {
@@ -1615,6 +1722,159 @@
         "documentation": {}
     },
     {
+        "label": "CaseFacts",
+        "kind": 6,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "class CaseFacts:\n    \"\"\"Everything we can read off one case file, computed once.\"\"\"\n    def __init__(self, bundle: CaseBundle):\n        self.bundle = bundle\n        index = _text_of(bundle, \"index\")\n        history = _text_of(bundle, \"history\")\n        everything = _all_text(bundle)\n        self.title = (TITLE_RE.search(index).group(1).strip() if TITLE_RE.search(index) else bundle.case_id)\n        m = ADDRESS_RE.search(index) or ADDRESS_RE.search(everything)\n        self.address = m.group(1).strip() if m else (UK_ADDRESS_RE.search(everything).group(0) if UK_ADDRESS_RE.search(everything) else \"\")",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "CaseIndex",
+        "kind": 6,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "class CaseIndex:\n    \"\"\"Facts for every case in the batch, keyed by address, so other cases at the same property become history.\"\"\"\n    def __init__(self, bundles: List[CaseBundle]):\n        self.facts: Dict[str, CaseFacts] = {}\n        self.by_address: Dict[str, List[str]] = defaultdict(list)\n        self.providers: Counter = Counter()\n        self.provider_trades: Dict[str, Counter] = defaultdict(Counter)\n        for b in bundles:\n            try:\n                f = CaseFacts(b)",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "CaseFileBackend",
+        "kind": 6,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "class CaseFileBackend:\n    \"\"\"Records from the case file + batch; actions delegated to `inner` (MockBackend or CompositeBackend).\"\"\"\n    def __init__(self, inner, bundle: CaseBundle, index: Optional[CaseIndex] = None):\n        self.inner = inner\n        self.bundle = bundle\n        self.index = index or CaseIndex([bundle])\n        self.facts = self.index.facts_for(bundle)\n        self._register_named_contractors()\n    def _register_named_contractors(self) -> None:\n        \"\"\"Contractors named in this case or used elsewhere in the batch become bookable in the inner backend,",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "infer_trade",
+        "kind": 2,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "def infer_trade(text: str) -> str:\n    t = text.lower()\n    best, score = \"handyperson\", 0\n    for trade, words in TRADE_HINTS:\n        s = sum(t.count(w) for w in words)\n        if s > score:\n            best, score = trade, s\n    return best\nclass CaseFacts:\n    \"\"\"Everything we can read off one case file, computed once.\"\"\"",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "ADDRESS_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "ADDRESS_RE = re.compile(r\"\\*\\*Property:\\*\\*\\s*(.+)\")\nUK_ADDRESS_RE = re.compile(r\"(?:Flat \\d+[A-Za-z]?,\\s*)?\\d+[A-Za-z]?\\s+[A-Z][A-Za-z']+(?:\\s+[A-Z][A-Za-z']+)*,\\s*[A-Z][A-Za-z']+,\\s*[A-Z]{1,2}\\d{1,2}[A-Z]?\\s*\\d[A-Z]{2}\")\nPOSTCODE_RE = re.compile(r\"\\b([A-Z]{1,2}\\d{1,2}[A-Z]?)\\s*(\\d[A-Z]{2})\\b\")\nEVENT_RE = re.compile(\n    r\"## (?P<ts>[\\d\\-: ]+UTC) — event (?P<n>\\d+)\\n\\n- \\*\\*Channel:\\*\\* (?P<ch>[^\\n]+)\\n- \\*\\*From:\\*\\* (?P<frm>[^\\n]+)\\n- \\*\\*To:\\*\\* (?P<to>[^\\n]+)\\n\\n(?P<body>.*?)(?=\\n<a id=\\\"event-|\\Z)\",\n    re.S,\n)\nGREETING_RE = re.compile(r\"^(?:Hi|Hello|Dear|Good morning|Good afternoon|Morning|Afternoon|HI)[,]?\\s+([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)[,.!]?\\s*$\", re.M)\nPROVIDER_RE = re.compile(r\"(?:Our maintenance provider|maintenance provider|contractor,)\\s+([A-Z][A-Za-z]+(?:\\s+[A-Z][A-Za-z]+){0,2}?)(?=\\s+(?:will|has|is|to)\\b)\")\nHOLD_BY_RE = re.compile(r\"Put on hold by ([A-Z][a-z]+ [A-Z][a-z]+)\")",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "UK_ADDRESS_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "UK_ADDRESS_RE = re.compile(r\"(?:Flat \\d+[A-Za-z]?,\\s*)?\\d+[A-Za-z]?\\s+[A-Z][A-Za-z']+(?:\\s+[A-Z][A-Za-z']+)*,\\s*[A-Z][A-Za-z']+,\\s*[A-Z]{1,2}\\d{1,2}[A-Z]?\\s*\\d[A-Z]{2}\")\nPOSTCODE_RE = re.compile(r\"\\b([A-Z]{1,2}\\d{1,2}[A-Z]?)\\s*(\\d[A-Z]{2})\\b\")\nEVENT_RE = re.compile(\n    r\"## (?P<ts>[\\d\\-: ]+UTC) — event (?P<n>\\d+)\\n\\n- \\*\\*Channel:\\*\\* (?P<ch>[^\\n]+)\\n- \\*\\*From:\\*\\* (?P<frm>[^\\n]+)\\n- \\*\\*To:\\*\\* (?P<to>[^\\n]+)\\n\\n(?P<body>.*?)(?=\\n<a id=\\\"event-|\\Z)\",\n    re.S,\n)\nGREETING_RE = re.compile(r\"^(?:Hi|Hello|Dear|Good morning|Good afternoon|Morning|Afternoon|HI)[,]?\\s+([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)[,.!]?\\s*$\", re.M)\nPROVIDER_RE = re.compile(r\"(?:Our maintenance provider|maintenance provider|contractor,)\\s+([A-Z][A-Za-z]+(?:\\s+[A-Z][A-Za-z]+){0,2}?)(?=\\s+(?:will|has|is|to)\\b)\")\nHOLD_BY_RE = re.compile(r\"Put on hold by ([A-Z][a-z]+ [A-Z][a-z]+)\")\nTENANT_NAME_RE = re.compile(r\"Tenant Name:\\s*([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)\")",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "POSTCODE_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "POSTCODE_RE = re.compile(r\"\\b([A-Z]{1,2}\\d{1,2}[A-Z]?)\\s*(\\d[A-Z]{2})\\b\")\nEVENT_RE = re.compile(\n    r\"## (?P<ts>[\\d\\-: ]+UTC) — event (?P<n>\\d+)\\n\\n- \\*\\*Channel:\\*\\* (?P<ch>[^\\n]+)\\n- \\*\\*From:\\*\\* (?P<frm>[^\\n]+)\\n- \\*\\*To:\\*\\* (?P<to>[^\\n]+)\\n\\n(?P<body>.*?)(?=\\n<a id=\\\"event-|\\Z)\",\n    re.S,\n)\nGREETING_RE = re.compile(r\"^(?:Hi|Hello|Dear|Good morning|Good afternoon|Morning|Afternoon|HI)[,]?\\s+([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)[,.!]?\\s*$\", re.M)\nPROVIDER_RE = re.compile(r\"(?:Our maintenance provider|maintenance provider|contractor,)\\s+([A-Z][A-Za-z]+(?:\\s+[A-Z][A-Za-z]+){0,2}?)(?=\\s+(?:will|has|is|to)\\b)\")\nHOLD_BY_RE = re.compile(r\"Put on hold by ([A-Z][a-z]+ [A-Z][a-z]+)\")\nTENANT_NAME_RE = re.compile(r\"Tenant Name:\\s*([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)\")\nSOURCE_ROLE_RE = re.compile(r\"\\*\\*Source role:\\*\\*\\s*(.+)\")",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "EVENT_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "EVENT_RE = re.compile(\n    r\"## (?P<ts>[\\d\\-: ]+UTC) — event (?P<n>\\d+)\\n\\n- \\*\\*Channel:\\*\\* (?P<ch>[^\\n]+)\\n- \\*\\*From:\\*\\* (?P<frm>[^\\n]+)\\n- \\*\\*To:\\*\\* (?P<to>[^\\n]+)\\n\\n(?P<body>.*?)(?=\\n<a id=\\\"event-|\\Z)\",\n    re.S,\n)\nGREETING_RE = re.compile(r\"^(?:Hi|Hello|Dear|Good morning|Good afternoon|Morning|Afternoon|HI)[,]?\\s+([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)[,.!]?\\s*$\", re.M)\nPROVIDER_RE = re.compile(r\"(?:Our maintenance provider|maintenance provider|contractor,)\\s+([A-Z][A-Za-z]+(?:\\s+[A-Z][A-Za-z]+){0,2}?)(?=\\s+(?:will|has|is|to)\\b)\")\nHOLD_BY_RE = re.compile(r\"Put on hold by ([A-Z][a-z]+ [A-Z][a-z]+)\")\nTENANT_NAME_RE = re.compile(r\"Tenant Name:\\s*([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)\")\nSOURCE_ROLE_RE = re.compile(r\"\\*\\*Source role:\\*\\*\\s*(.+)\")\nCREATED_RE = re.compile(r\"\\*\\*Created:\\*\\*\\s*(.+)\")",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "GREETING_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "GREETING_RE = re.compile(r\"^(?:Hi|Hello|Dear|Good morning|Good afternoon|Morning|Afternoon|HI)[,]?\\s+([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)[,.!]?\\s*$\", re.M)\nPROVIDER_RE = re.compile(r\"(?:Our maintenance provider|maintenance provider|contractor,)\\s+([A-Z][A-Za-z]+(?:\\s+[A-Z][A-Za-z]+){0,2}?)(?=\\s+(?:will|has|is|to)\\b)\")\nHOLD_BY_RE = re.compile(r\"Put on hold by ([A-Z][a-z]+ [A-Z][a-z]+)\")\nTENANT_NAME_RE = re.compile(r\"Tenant Name:\\s*([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)\")\nSOURCE_ROLE_RE = re.compile(r\"\\*\\*Source role:\\*\\*\\s*(.+)\")\nCREATED_RE = re.compile(r\"\\*\\*Created:\\*\\*\\s*(.+)\")\nTITLE_RE = re.compile(r\"^#\\s*(.+)$\", re.M)\nSECTION_RE = re.compile(r\"^## (Overview|Outcome)\\n\\n(.*?)(?=\\n## |\\Z)\", re.S | re.M)\nTRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "PROVIDER_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "PROVIDER_RE = re.compile(r\"(?:Our maintenance provider|maintenance provider|contractor,)\\s+([A-Z][A-Za-z]+(?:\\s+[A-Z][A-Za-z]+){0,2}?)(?=\\s+(?:will|has|is|to)\\b)\")\nHOLD_BY_RE = re.compile(r\"Put on hold by ([A-Z][a-z]+ [A-Z][a-z]+)\")\nTENANT_NAME_RE = re.compile(r\"Tenant Name:\\s*([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)\")\nSOURCE_ROLE_RE = re.compile(r\"\\*\\*Source role:\\*\\*\\s*(.+)\")\nCREATED_RE = re.compile(r\"\\*\\*Created:\\*\\*\\s*(.+)\")\nTITLE_RE = re.compile(r\"^#\\s*(.+)$\", re.M)\nSECTION_RE = re.compile(r\"^## (Overview|Outcome)\\n\\n(.*?)(?=\\n## |\\Z)\", re.S | re.M)\nTRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),\n    (\"plumber\", [\"toilet\", \"tap\", \"leak\", \"drain\", \"shower\", \"basin\", \"pipe\", \"plumb\", \"sink\", \"bath\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "HOLD_BY_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "HOLD_BY_RE = re.compile(r\"Put on hold by ([A-Z][a-z]+ [A-Z][a-z]+)\")\nTENANT_NAME_RE = re.compile(r\"Tenant Name:\\s*([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)\")\nSOURCE_ROLE_RE = re.compile(r\"\\*\\*Source role:\\*\\*\\s*(.+)\")\nCREATED_RE = re.compile(r\"\\*\\*Created:\\*\\*\\s*(.+)\")\nTITLE_RE = re.compile(r\"^#\\s*(.+)$\", re.M)\nSECTION_RE = re.compile(r\"^## (Overview|Outcome)\\n\\n(.*?)(?=\\n## |\\Z)\", re.S | re.M)\nTRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),\n    (\"plumber\", [\"toilet\", \"tap\", \"leak\", \"drain\", \"shower\", \"basin\", \"pipe\", \"plumb\", \"sink\", \"bath\"]),\n    (\"electrician\", [\"electric\", \"light\", \"socket\", \"extractor\", \"fuse\", \"power\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "TENANT_NAME_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "TENANT_NAME_RE = re.compile(r\"Tenant Name:\\s*([A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)\")\nSOURCE_ROLE_RE = re.compile(r\"\\*\\*Source role:\\*\\*\\s*(.+)\")\nCREATED_RE = re.compile(r\"\\*\\*Created:\\*\\*\\s*(.+)\")\nTITLE_RE = re.compile(r\"^#\\s*(.+)$\", re.M)\nSECTION_RE = re.compile(r\"^## (Overview|Outcome)\\n\\n(.*?)(?=\\n## |\\Z)\", re.S | re.M)\nTRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),\n    (\"plumber\", [\"toilet\", \"tap\", \"leak\", \"drain\", \"shower\", \"basin\", \"pipe\", \"plumb\", \"sink\", \"bath\"]),\n    (\"electrician\", [\"electric\", \"light\", \"socket\", \"extractor\", \"fuse\", \"power\"]),\n    (\"appliance_engineer\", [\"washing machine\", \"dishwasher\", \"oven\", \"fridge\", \"cooker\", \"hob\", \"appliance\", \"dryer\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "SOURCE_ROLE_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "SOURCE_ROLE_RE = re.compile(r\"\\*\\*Source role:\\*\\*\\s*(.+)\")\nCREATED_RE = re.compile(r\"\\*\\*Created:\\*\\*\\s*(.+)\")\nTITLE_RE = re.compile(r\"^#\\s*(.+)$\", re.M)\nSECTION_RE = re.compile(r\"^## (Overview|Outcome)\\n\\n(.*?)(?=\\n## |\\Z)\", re.S | re.M)\nTRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),\n    (\"plumber\", [\"toilet\", \"tap\", \"leak\", \"drain\", \"shower\", \"basin\", \"pipe\", \"plumb\", \"sink\", \"bath\"]),\n    (\"electrician\", [\"electric\", \"light\", \"socket\", \"extractor\", \"fuse\", \"power\"]),\n    (\"appliance_engineer\", [\"washing machine\", \"dishwasher\", \"oven\", \"fridge\", \"cooker\", \"hob\", \"appliance\", \"dryer\"]),\n    (\"locksmith\", [\"lock\", \"key\", \"door\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "CREATED_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "CREATED_RE = re.compile(r\"\\*\\*Created:\\*\\*\\s*(.+)\")\nTITLE_RE = re.compile(r\"^#\\s*(.+)$\", re.M)\nSECTION_RE = re.compile(r\"^## (Overview|Outcome)\\n\\n(.*?)(?=\\n## |\\Z)\", re.S | re.M)\nTRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),\n    (\"plumber\", [\"toilet\", \"tap\", \"leak\", \"drain\", \"shower\", \"basin\", \"pipe\", \"plumb\", \"sink\", \"bath\"]),\n    (\"electrician\", [\"electric\", \"light\", \"socket\", \"extractor\", \"fuse\", \"power\"]),\n    (\"appliance_engineer\", [\"washing machine\", \"dishwasher\", \"oven\", \"fridge\", \"cooker\", \"hob\", \"appliance\", \"dryer\"]),\n    (\"locksmith\", [\"lock\", \"key\", \"door\"]),\n    (\"glazier\", [\"window\", \"glass\", \"handle\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "TITLE_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "TITLE_RE = re.compile(r\"^#\\s*(.+)$\", re.M)\nSECTION_RE = re.compile(r\"^## (Overview|Outcome)\\n\\n(.*?)(?=\\n## |\\Z)\", re.S | re.M)\nTRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),\n    (\"plumber\", [\"toilet\", \"tap\", \"leak\", \"drain\", \"shower\", \"basin\", \"pipe\", \"plumb\", \"sink\", \"bath\"]),\n    (\"electrician\", [\"electric\", \"light\", \"socket\", \"extractor\", \"fuse\", \"power\"]),\n    (\"appliance_engineer\", [\"washing machine\", \"dishwasher\", \"oven\", \"fridge\", \"cooker\", \"hob\", \"appliance\", \"dryer\"]),\n    (\"locksmith\", [\"lock\", \"key\", \"door\"]),\n    (\"glazier\", [\"window\", \"glass\", \"handle\"]),\n    (\"handyperson\", [\"clean\", \"garden\", \"hedge\", \"paint\", \"carpet\", \"shelf\", \"general\", \"check-out\", \"checkout\", \"repair\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "SECTION_RE",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "SECTION_RE = re.compile(r\"^## (Overview|Outcome)\\n\\n(.*?)(?=\\n## |\\Z)\", re.S | re.M)\nTRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),\n    (\"plumber\", [\"toilet\", \"tap\", \"leak\", \"drain\", \"shower\", \"basin\", \"pipe\", \"plumb\", \"sink\", \"bath\"]),\n    (\"electrician\", [\"electric\", \"light\", \"socket\", \"extractor\", \"fuse\", \"power\"]),\n    (\"appliance_engineer\", [\"washing machine\", \"dishwasher\", \"oven\", \"fridge\", \"cooker\", \"hob\", \"appliance\", \"dryer\"]),\n    (\"locksmith\", [\"lock\", \"key\", \"door\"]),\n    (\"glazier\", [\"window\", \"glass\", \"handle\"]),\n    (\"handyperson\", [\"clean\", \"garden\", \"hedge\", \"paint\", \"carpet\", \"shelf\", \"general\", \"check-out\", \"checkout\", \"repair\"]),\n    (\"damp_specialist\", [\"damp\", \"mould\", \"mold\", \"condensation\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
+        "label": "TRADE_HINTS",
+        "kind": 5,
+        "importPath": "src.resolve_ai.tools.casefile_backend",
+        "description": "src.resolve_ai.tools.casefile_backend",
+        "peekOfCode": "TRADE_HINTS = [\n    (\"gas_engineer\", [\"boiler\", \"gas\", \"heating\", \"radiator\", \"hot water\"]),\n    (\"plumber\", [\"toilet\", \"tap\", \"leak\", \"drain\", \"shower\", \"basin\", \"pipe\", \"plumb\", \"sink\", \"bath\"]),\n    (\"electrician\", [\"electric\", \"light\", \"socket\", \"extractor\", \"fuse\", \"power\"]),\n    (\"appliance_engineer\", [\"washing machine\", \"dishwasher\", \"oven\", \"fridge\", \"cooker\", \"hob\", \"appliance\", \"dryer\"]),\n    (\"locksmith\", [\"lock\", \"key\", \"door\"]),\n    (\"glazier\", [\"window\", \"glass\", \"handle\"]),\n    (\"handyperson\", [\"clean\", \"garden\", \"hedge\", \"paint\", \"carpet\", \"shelf\", \"general\", \"check-out\", \"checkout\", \"repair\"]),\n    (\"damp_specialist\", [\"damp\", \"mould\", \"mold\", \"condensation\"]),\n    (\"pest_control\", [\"pest\", \"mice\", \"rat\", \"wasp\", \"ant\"]),",
+        "detail": "src.resolve_ai.tools.casefile_backend",
+        "documentation": {}
+    },
+    {
         "label": "HttpBackend",
         "kind": 6,
         "importPath": "src.resolve_ai.tools.http_backend",
@@ -1682,7 +1942,7 @@
         "kind": 2,
         "importPath": "src.resolve_ai.tools.registry",
         "description": "src.resolve_ai.tools.registry",
-        "peekOfCode": "def build_backend(settings: Settings, case_id: str):\n    \"\"\"Pick the backend. `http` routes the tools listed in HTTP_TOOLS (or all with '*')\n    to the event API and everything else to the mock, so we can mix during the day.\"\"\"\n    from resolve_ai.tools.mock_backend import MockBackend\n    mock = MockBackend(settings, case_id)\n    if settings.tool_backend == \"mock\":\n        return mock\n    from resolve_ai.tools.http_backend import CompositeBackend, HttpBackend\n    http = HttpBackend(settings)\n    return CompositeBackend(http=http, mock=mock, http_tools=settings.http_tools)",
+        "peekOfCode": "def build_backend(settings: Settings, case_id: str, bundle=None, case_index=None):\n    \"\"\"Pick the backend. `http` routes the tools listed in HTTP_TOOLS (or all with '*')\n    to the event API and everything else to the mock, so we can mix during the day.\n    When a case bundle is given, the records tools are answered from the case file itself\n    (and from other cases in the batch) before falling back to the inner backend.\"\"\"\n    from resolve_ai.tools.mock_backend import MockBackend\n    inner = MockBackend(settings, case_id)\n    if settings.tool_backend != \"mock\":\n        from resolve_ai.tools.http_backend import CompositeBackend, HttpBackend\n        inner = CompositeBackend(http=HttpBackend(settings), mock=inner, http_tools=settings.http_tools)",
         "detail": "src.resolve_ai.tools.registry",
         "documentation": {}
     },
@@ -1790,7 +2050,7 @@
         "kind": 6,
         "importPath": "src.resolve_ai.agent",
         "description": "src.resolve_ai.agent",
-        "peekOfCode": "class ResolveAgent:\n    def __init__(self, llm: LLM, settings: Settings, policy: str, registry_factory):\n        self.llm = llm\n        self.settings = settings\n        self.system = build_system_prompt(policy)\n        self.registry_factory = registry_factory\n        self.schema = resolution_schema()\n    def run(self, bundle: CaseBundle, deadline: Optional[float] = None, trace_cb=None, grace: float = 45.0) -> CaseResult:\n        started = _now()\n        registry: ToolRegistry = self.registry_factory(bundle.case_id)",
+        "peekOfCode": "class ResolveAgent:\n    def __init__(self, llm: LLM, settings: Settings, policy: str, registry_factory):\n        self.llm = llm\n        self.settings = settings\n        self.system = build_system_prompt(policy)\n        self.registry_factory = registry_factory\n        self.schema = resolution_schema()\n    def run(self, bundle: CaseBundle, deadline: Optional[float] = None, trace_cb=None, grace: float = 45.0) -> CaseResult:\n        started = _now()\n        registry: ToolRegistry = self.registry_factory(bundle)",
         "detail": "src.resolve_ai.agent",
         "documentation": {}
     },
@@ -2267,7 +2527,7 @@
         "kind": 2,
         "importPath": "tests.test_pipeline",
         "description": "tests.test_pipeline",
-        "peekOfCode": "def test_schema_is_strict():\n    s = resolution_schema()\n    assert s[\"additionalProperties\"] is False\n    assert set(s[\"required\"]) == set(s[\"properties\"])\n    for d in s.get(\"$defs\", {}).values():\n        assert set(d[\"required\"]) == set(d[\"properties\"])\ndef test_every_case_gets_an_answer(settings, tmp_path):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda cid: ToolRegistry(build_backend(settings, cid)))\n    for b in discover_cases(SAMPLES):\n        r = agent.run(b)",
+        "peekOfCode": "def test_schema_is_strict():\n    s = resolution_schema()\n    assert s[\"additionalProperties\"] is False\n    assert set(s[\"required\"]) == set(s[\"properties\"])\n    for d in s.get(\"$defs\", {}).values():\n        assert set(d[\"required\"]) == set(d[\"properties\"])\ndef test_every_case_gets_an_answer(settings, tmp_path):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda b: ToolRegistry(build_backend(settings, b.case_id, bundle=b)))\n    for b in discover_cases(SAMPLES):\n        r = agent.run(b)",
         "detail": "tests.test_pipeline",
         "documentation": {}
     },
@@ -2276,7 +2536,7 @@
         "kind": 2,
         "importPath": "tests.test_pipeline",
         "description": "tests.test_pipeline",
-        "peekOfCode": "def test_every_case_gets_an_answer(settings, tmp_path):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda cid: ToolRegistry(build_backend(settings, cid)))\n    for b in discover_cases(SAMPLES):\n        r = agent.run(b)\n        assert isinstance(r.resolution, Resolution)\n        write_case(r, tmp_path / \"ANSWERS\", tmp_path / \"logs\")\n        assert (tmp_path / \"ANSWERS\" / b.case_id / \"ANSWER.md\").exists()\n        assert (tmp_path / \"ANSWERS\" / b.case_id / \"REASONING.md\").exists()\n        trace = json.loads((tmp_path / \"logs\" / b.case_id / \"trace.json\").read_text())\n        assert trace[\"status\"] == \"completed\"",
+        "peekOfCode": "def test_every_case_gets_an_answer(settings, tmp_path):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda b: ToolRegistry(build_backend(settings, b.case_id, bundle=b)))\n    for b in discover_cases(SAMPLES):\n        r = agent.run(b)\n        assert isinstance(r.resolution, Resolution)\n        write_case(r, tmp_path / \"ANSWERS\", tmp_path / \"logs\")\n        assert (tmp_path / \"ANSWERS\" / b.case_id / \"ANSWER.md\").exists()\n        assert (tmp_path / \"ANSWERS\" / b.case_id / \"REASONING.md\").exists()\n        trace = json.loads((tmp_path / \"logs\" / b.case_id / \"trace.json\").read_text())\n        assert trace[\"status\"] == \"completed\"",
         "detail": "tests.test_pipeline",
         "documentation": {}
     },
@@ -2285,7 +2545,7 @@
         "kind": 2,
         "importPath": "tests.test_pipeline",
         "description": "tests.test_pipeline",
-        "peekOfCode": "def test_gas_case_never_books(settings):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda cid: ToolRegistry(build_backend(settings, cid)))\n    b = next(b for b in discover_cases(SAMPLES) if b.case_id == \"02_gas_smell\")\n    r = agent.run(b)\n    names = {e.name for e in r.tool_events}\n    assert \"schedule_contractor\" not in names\n    assert r.resolution.escalation.required\n    assert \"0800 111 999\" in r.resolution.tenant_communication\ndef test_fallback_answer_is_complete(settings, tmp_path):\n    b = discover_cases(SAMPLES)[0]",
+        "peekOfCode": "def test_gas_case_never_books(settings):\n    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda b: ToolRegistry(build_backend(settings, b.case_id, bundle=b)))\n    b = next(b for b in discover_cases(SAMPLES) if b.case_id == \"02_gas_smell\")\n    r = agent.run(b)\n    names = {e.name for e in r.tool_events}\n    assert \"schedule_contractor\" not in names\n    assert r.resolution.escalation.required\n    assert \"0800 111 999\" in r.resolution.tenant_communication\ndef test_fallback_answer_is_complete(settings, tmp_path):\n    b = discover_cases(SAMPLES)[0]",
         "detail": "tests.test_pipeline",
         "documentation": {}
     },

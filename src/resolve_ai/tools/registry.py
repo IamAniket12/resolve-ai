@@ -182,16 +182,20 @@ class ToolRegistry:
         return snap() if snap else {}
 
 
-def build_backend(settings: Settings, case_id: str):
+def build_backend(settings: Settings, case_id: str, bundle=None, case_index=None):
     """Pick the backend. `http` routes the tools listed in HTTP_TOOLS (or all with '*')
-    to the event API and everything else to the mock, so we can mix during the day."""
+    to the event API and everything else to the mock, so we can mix during the day.
+    When a case bundle is given, the records tools are answered from the case file itself
+    (and from other cases in the batch) before falling back to the inner backend."""
     from resolve_ai.tools.mock_backend import MockBackend
-    mock = MockBackend(settings, case_id)
-    if settings.tool_backend == "mock":
-        return mock
-    from resolve_ai.tools.http_backend import CompositeBackend, HttpBackend
-    http = HttpBackend(settings)
-    return CompositeBackend(http=http, mock=mock, http_tools=settings.http_tools)
+    inner = MockBackend(settings, case_id)
+    if settings.tool_backend != "mock":
+        from resolve_ai.tools.http_backend import CompositeBackend, HttpBackend
+        inner = CompositeBackend(http=HttpBackend(settings), mock=inner, http_tools=settings.http_tools)
+    if bundle is None:
+        return inner
+    from resolve_ai.tools.casefile_backend import CaseFileBackend
+    return CaseFileBackend(inner, bundle, case_index)
 
 
 def to_tool_result_text(result: Any) -> str:

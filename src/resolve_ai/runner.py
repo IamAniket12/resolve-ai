@@ -65,7 +65,12 @@ def run_cases(cases_path: str, answers_dir: str, settings: Settings, workers: Op
 
     llm = make_llm(settings)
     policy = load_policy()
-    registry_factory = lambda cid: ToolRegistry(build_backend(settings, cid))  # noqa: E731
+    bundles = discover_cases(cases_path, transcriber=make_transcriber(settings))
+    if only:
+        bundles = [b for b in bundles if b.case_id in set(only)]
+    from resolve_ai.tools.casefile_backend import CaseIndex
+    case_index = CaseIndex(discover_cases(cases_path, transcriber=None)) if only else CaseIndex(bundles)
+    registry_factory = lambda b: ToolRegistry(build_backend(settings, b.case_id, bundle=b, case_index=case_index))  # noqa: E731
     agent = ResolveAgent(llm, settings, policy, registry_factory=registry_factory)
     fallback_agent = None
     if llm.name == "anthropic" and settings.fallback_model and settings.fallback_model != settings.model:
@@ -73,9 +78,6 @@ def run_cases(cases_path: str, answers_dir: str, settings: Settings, workers: Op
         fb_settings = dataclasses.replace(settings, model=settings.fallback_model)
         fallback_agent = ResolveAgent(make_llm(fb_settings), fb_settings, policy, registry_factory=registry_factory)
 
-    bundles = discover_cases(cases_path, transcriber=make_transcriber(settings))
-    if only:
-        bundles = [b for b in bundles if b.case_id in set(only)]
     log.info("run %s: %d cases from %s | provider=%s model=%s tools=%s workers=%d timeout=%ds",
              run_id, len(bundles), cases_path, llm.name, llm.model, settings.tool_backend, workers, case_timeout)
     (log_dir / "run_meta.json").write_text(json.dumps({

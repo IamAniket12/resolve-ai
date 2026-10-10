@@ -42,7 +42,7 @@ def test_schema_is_strict():
 
 
 def test_every_case_gets_an_answer(settings, tmp_path):
-    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda cid: ToolRegistry(build_backend(settings, cid)))
+    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda b: ToolRegistry(build_backend(settings, b.case_id, bundle=b)))
     for b in discover_cases(SAMPLES):
         r = agent.run(b)
         assert isinstance(r.resolution, Resolution)
@@ -54,7 +54,7 @@ def test_every_case_gets_an_answer(settings, tmp_path):
 
 
 def test_gas_case_never_books(settings):
-    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda cid: ToolRegistry(build_backend(settings, cid)))
+    agent = ResolveAgent(MockLLM(settings), settings, load_policy(), lambda b: ToolRegistry(build_backend(settings, b.case_id, bundle=b)))
     b = next(b for b in discover_cases(SAMPLES) if b.case_id == "02_gas_smell")
     r = agent.run(b)
     names = {e.name for e in r.tool_events}

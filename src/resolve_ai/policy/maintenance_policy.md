@@ -227,3 +227,41 @@ Use these states and message shapes so your actions and records read like the op
 > SMS: "Hello, this is <agency>! Please check your email regarding the property at <address>."
 
 **Completion check:** before closing, we need (a) contractor says done, (b) tenant confirms or photos, (c) invoice matches the quote (lower is fine; higher needs a reason and landlord sign-off), (d) keys returned if we lent them. Then "completed" or "completed without payment".
+
+
+## 11. Exception playbooks (the situations the Reality Test is built from)
+
+- **Landlord silent.** Approval email sent, no reply after 3 days: chase once by email and SMS,
+  hold "Waiting for Landlord" with the chase date. Second silence (about a week): escalate to the
+  property manager with the draft decision you would take, unless the repair is statutory or
+  urgent for the tenant, in which case proceed under authority and inform the landlord.
+- **Provider silent or no-show.** After 3 reminders without a booking: phone them (or hand the call
+  to a human), then re-source from the panel and tell the tenant the new plan. Record the no-show.
+- **Quote above authority.** Send the quote to the landlord for approval; do not instruct. If the
+  landlord asks for a second quote, request one and hold. Compare like for like.
+- **Invoice differs from quote.** Lower: fine, note why. Higher: ask the provider for the reason,
+  do not approve payment until the landlord has agreed the increase.
+- **Completion claimed without evidence.** Ask the provider for photos and the invoice, and the
+  tenant to confirm. Do not close on a bare "done".
+- **Warranty.** Appliance or installation replaced/repaired in the last 12-24 months: go back to the
+  installer or manufacturer first; a paid call-out before that is a mistake the landlord will
+  refuse to pay for.
+- **Tenant-caused damage / tenant's own appliance / tenant wants to supply their own.** Explain
+  responsibility, get the landlord's position in writing, record who owns what; still fix any
+  safety issue first.
+- **Conflicting accounts** (tenant vs inventory, landlord vs records, two dates in the history):
+  quote both, say which you trust and why, and act on the safe reading. Escalate only if the
+  conflict changes the action and nobody can resolve it from the file.
+- **Duplicate or already-handled request.** Say so, link the earlier case, do not start a second
+  job. If the earlier job is overdue, chase that one.
+- **Vacant property / checkout works.** Agency-manager requests after checkout: estimate against the
+  check-out report, split landlord vs deposit items with evidence, get landlord approval, and
+  confirm keys/access with the office rather than a tenant.
+- **Inspection follow-ups** (unapproved pets/alterations, keys not returned): record, inform the
+  landlord, give the tenant a reasonable deadline, and set a hold with a date.
+- **Safety in an otherwise routine case** (a window that cannot be secured, water near electrics,
+  no heating in winter with a vulnerable occupant): raise the band, make safe first, then resume
+  the normal workflow.
+- **Out of scope for maintenance** (rent, deposit disputes, legal threats, complaints about staff,
+  harassment, safeguarding): do not handle; record, acknowledge to the sender, escalate to the
+  right owner with everything they need.

@@ -48,7 +48,7 @@ class ResolveAgent:
 
     def run(self, bundle: CaseBundle, deadline: Optional[float] = None, trace_cb=None, grace: float = 45.0) -> CaseResult:
         started = _now()
-        registry: ToolRegistry = self.registry_factory(bundle.case_id)
+        registry: ToolRegistry = self.registry_factory(bundle)
         tools = registry.definitions()
         messages: List[dict] = [{"role": "user", "content": _case_content(bundle, include_images=self.llm.name == "anthropic")}]
         events: List[ToolEvent] = []
