@@ -128,6 +128,17 @@ TOOL_DEFINITIONS: List[Dict[str, Any]] = [
         }),
     },
     {
+        "name": "update_case_status",
+        "description": "Set the case's workflow state the way the agency's operations platform does (e.g. put on hold waiting for the landlord, mark provider assigned, mark completed). Use this to record where the case now stands and why.",
+        "input_schema": _schema({
+            "ticket_id": {"type": "string", "description": "Ticket ID or empty string"},
+            "status": {"type": "string", "enum": ["awaiting_landlord", "awaiting_tenant", "awaiting_provider", "awaiting_quote",
+                                                   "provider_assigned", "appointment_booked", "awaiting_invoice", "completed",
+                                                   "completed_without_payment", "closed_no_action", "escalated"]},
+            "comment": {"type": "string", "description": "One line a colleague would read on the dashboard: reason and next check date"},
+        }),
+    },
+    {
         "name": "record_note",
         "description": "Add an internal note to the ticket (observations, conflicts noticed, assumptions). Not visible to tenant or landlord.",
         "input_schema": _schema({
@@ -138,7 +149,7 @@ TOOL_DEFINITIONS: List[Dict[str, Any]] = [
 ]
 
 READ_ONLY_TOOLS = {"lookup_property", "lookup_tenancy", "get_repair_history", "search_contractors",
-                   "check_contractor_availability", "record_note"}
+                   "check_contractor_availability", "record_note", "update_case_status"}
 
 
 class ToolRegistry:

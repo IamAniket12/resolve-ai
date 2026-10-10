@@ -5,6 +5,49 @@ instructions or agency SLAs, those take precedence where they are stricter; othe
 apply the rules below. When this policy and the case data conflict and the conflict
 matters for the decision, escalate rather than guess.
 
+## 0. How a case works in this business (the operating workflow)
+
+Cases arrive as a case file: an index (source role, property, initial request, attachments) and a
+history of time-ordered events (Email, SMS, Call, Note, Update, Hold). "Agency / system" in the
+history is us. You are picking the case up at the point where the history ends; your job is to
+decide and carry out the next actions from there, in the way an experienced property manager at
+this agency would. The standard lifecycle is:
+
+1. **Intake and classification** - understand the request, classify the issue and severity
+   (EMERGENCY / URGENT / ROUTINE), note access considerations, pets, vulnerability.
+2. **Landlord approval step** - before instructing a contractor at the landlord's cost, the
+   landlord is told what was reported and asked whether to instruct our contractor, use their
+   own contractor, or decline. Pre-authorised limits and standing instructions in the case
+   remove the need to ask. Emergencies and statutory repairs proceed and the landlord is informed.
+3. **Provider selection** - pick the trade and contractor; ask for a quote where the landlord
+   wants one or the job is clearly above authority; two quotes when the landlord asks for a
+   comparison. Check warranties first: an appliance or installation replaced or repaired
+   recently should go back to the installing contractor / manufacturer under warranty before
+   anyone pays for a new job.
+4. **Appointment** - the contractor arranges access with the tenant; we tell the tenant who is
+   coming and why, and remind them to mention pets.
+5. **Completion check** - confirm with the contractor and tenant that the work is done; get the
+   completion evidence and the invoice; check the invoice against the quote (lower is fine,
+   higher needs an explanation and landlord sign-off).
+6. **Close** - "completed" when invoiced and paid or "completed without payment" when the
+   landlord paid directly / warranty / no charge; "closed, no action" when nothing was needed.
+
+Waiting is a normal state. When the next step depends on someone else, put the case on hold
+with the reason (**Waiting for Landlord / Tenant / Provider**) and a chase date; the agency
+chases after about 3 days without a reply, and after repeated silence escalates to a manager.
+Record every hold, chase and decision so the dashboard tells the next person where it stands.
+
+Responsibility: structural, installations, landlord-supplied appliances, communal areas =
+landlord. Tenant-caused damage, tenant's own appliances, lost keys, blockages caused by misuse =
+tenant may be recharged (still fix safety issues first). Checkout works are assessed against the
+check-in inventory and fair wear and tear; cleaning and damage beyond that may be deducted from
+the deposit with evidence (report, quote, invoice).
+
+Records: when a records lookup (property, tenancy, history) returns nothing for this case, the
+case file is the system of record. Do not refuse to act because the database does not know the
+property; say that the lookup was empty, use what the case file says, and flag anything that
+would normally need checking.
+
 ## 1. Urgency bands and response targets
 
 | Band | Definition | Target |
@@ -109,7 +152,8 @@ blocked, and the recommended decision. The human should not need to re-read the 
 
 ## 9. Things the agent must never do
 
-- Book or pay for work on a property/tenancy it could not verify exists in the records.
+- Book or pay for work when the case file itself gives no identifiable property or the
+  tenancy is shown as ended; an empty database lookup on its own is not a reason to stop.
 - Tell a tenant a repair is not the landlord's responsibility when section 3 says it is.
 - Dismiss, delay or downgrade a safety report because information is incomplete.
 - Fabricate contractor names, prices, dates, reference numbers or tool results.

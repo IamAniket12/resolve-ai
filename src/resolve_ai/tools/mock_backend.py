@@ -86,7 +86,10 @@ class MockBackend:
     def lookup_property(self, query: str) -> dict:
         p = self._find_property(query)
         if not p:
-            raise ToolError(f"No property matches '{query}'. Try the property ID, postcode or a shorter address fragment.")
+            return {"found": False, "query": query,
+                    "note": "No record in the local property database. Treat the case file as the system of record for this "
+                            "property: use the address, landlord, tenant and history it contains, and say in the answer that "
+                            "the records lookup returned nothing."}
         return {"found": True, **p}
 
     def lookup_tenancy(self, property_id: str) -> dict:
@@ -113,9 +116,16 @@ class MockBackend:
             if not covers:
                 continue
             hits.append({k: v for k, v in c.items() if k not in {"simulate", "slots"}})
+        note = ""
+        if not hits:
+            # Unknown area (e.g. a postcode outside the panel's coverage): offer the whole panel for the trade.
+            hits = [{k: v for k, v in c.items() if k not in {"simulate", "slots"}} for c in self.contractors
+                    if trade in c["trades"] and (not emergency or c.get("emergency"))]
+            note = ("No contractor covers this postcode area; showing the full panel for the trade. "
+                    "Confirm travel/coverage with the contractor before booking." if hits
+                    else "No contractors match; try emergency=false, a neighbouring trade, or escalate.")
         hits.sort(key=lambda c: -c.get("rating", 0))
-        return {"trade": trade, "postcode": postcode, "emergency_only": emergency, "contractors": hits,
-                "note": "" if hits else "No contractors match; try emergency=false, a neighbouring trade, or escalate."}
+        return {"trade": trade, "postcode": postcode, "emergency_only": emergency, "contractors": hits, "note": note}
 
     def check_contractor_availability(self, contractor_id: str, urgency: str) -> dict:
         c = next((c for c in self.contractors if c["contractor_id"] == contractor_id), None)
@@ -190,6 +200,12 @@ class MockBackend:
         result = voice.place_call(self.settings, to_role=to_role, phone=phone, purpose=purpose, talking_points=talking_points, case_id=self.case_id)
         self.state["calls"].append(result)
         return result
+
+    def update_case_status(self, ticket_id: str, status: str, comment: str) -> dict:
+        e = {"status_id": self._ref("STS"), "ticket_id": ticket_id, "status": status, "comment": comment,
+             "at": datetime.now().isoformat(timespec="seconds")}
+        self.state.setdefault("status_updates", []).append(e)
+        return {"status_id": e["status_id"], "status": status, "recorded": True}
 
     def record_note(self, ticket_id: str, note: str) -> dict:
         n = {"note_id": self._ref("NOTE"), "ticket_id": ticket_id, "note": note}

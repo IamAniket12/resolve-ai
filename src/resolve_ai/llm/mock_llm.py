@@ -146,6 +146,14 @@ class MockLLM(LLM):
             return LLMResponse([_text("Verifying the property record."), _tool_use("lookup_property", {"query": q})], "tool_use")
 
         prop_r = res["lookup_property"][-1]
+        if prop_r["ok"] and prop_r["data"].get("found") is False:
+            # Not in local records: the case file is the record. Log the case as-is and route to a human for setup.
+            if "escalate_to_human" not in res:
+                return LLMResponse([_text("Property is not in the local records; the case file is the system of record."),
+                                    _tool_use("escalate_to_human", {"ticket_id": "", "severity": "low", "to": "property_manager",
+                                                                   "reason": "Property not found in records database; case needs linking to a property record before automated booking.",
+                                                                   "handover": f"Query '{prop_r['input'].get('query')}' returned no record. Case material summarised in the answer. Verify property/tenancy, then proceed per policy."})], "tool_use")
+            return LLMResponse([_text("Escalated: property unverified in records.")], "end_turn")
         if not prop_r["ok"]:
             if len(res["lookup_property"]) < 2:
                 # retry with a different fragment
