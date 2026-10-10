@@ -87,3 +87,41 @@ Layers:
 - 17:00 submit form; publish posts.
 
 See `docs/DAY_RUNBOOK.md` for the checklist version.
+
+---
+
+## Day plan v2 (written 10:45, 10 Oct, after reading the public cases and the Hacker Guide)
+
+What we learned: cases are Dwelly's own anonymised ops records (index.md + history.md + attachments),
+mundane repairs run through a fixed lifecycle, and the Reality Test is "pick the case up where the
+history ends and do the next right things". Scoring: outcomes+coverage 38.5, judgement 14,
+engineering 10.5, real-world 7, demo 30.
+
+### Now, before the key arrives (no model needed)
+1. **Case clock.** Tell the agent the "current date" is the last event's timestamp, not today.
+   Chase dates, warranty ages and "3 days without reply" all depend on it.
+2. **Nested folders.** If the Reality Test folder is `Property Management/001/...` or a zip, discover it.
+3. **Status line in ANSWER.md.** Surface the last `update_case_status` call at the top:
+   "Case status now: On hold, waiting for landlord, chase 13 Oct".
+4. **Run summary in INDEX.md.** Decisions breakdown, escalation rate, tool failures recovered,
+   estimated human minutes saved. This is the "real-world value" evidence and the demo's last shot.
+5. **Model fallback.** If a case fails on API errors, retry once on a second model
+   (ANTHROPIC_FALLBACK_MODEL) before writing the fallback answer.
+6. **Preflight command.** `resolve preflight --cases X`: counts cases, ingests everything, estimates
+   tokens, recommends workers and timeout for a 20-minute finish, checks the key works.
+7. **Mine the public histories** for the agency's standard messages (landlord approval email,
+   tenant "provider will attend" email, SMS wording, hold reasons) and put them into the policy as
+   templates, so our outputs read like theirs.
+
+### When the key arrives
+8. One real case: `run --only 02_gas_smell --provider anthropic`. Read the trace.
+9. Rate-limit test: all 9 samples with 6 workers. Pick workers/effort from what the API allows.
+10. Decision-point eval: cut public cases at 2 points each (intake; after landlord reply), run the
+    real model on ~15, compare with the hidden tail by eye, fix policy and prompt, not cases.
+
+### Midday
+11. Harden: inject tool failures and timeouts on the real model; confirm fallback answers.
+12. Voice (person C only): ElevenLabs contractor-confirmation call from the real tool loop; TTS
+    fallback. Never on the Reality Test path.
+
+### 15:00 to 16:15 package, 16:30 run, 17:00 submit (unchanged runbook)
