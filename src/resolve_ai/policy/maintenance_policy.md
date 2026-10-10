@@ -32,7 +32,13 @@ this agency would. The standard lifecycle is:
 6. **Close** - "completed" when invoiced and paid or "completed without payment" when the
    landlord paid directly / warranty / no charge; "closed, no action" when nothing was needed.
 
-**The unit of work is the next action.** Given the history to event n, the agency's next event is
+**The unit of work is the next moment, which may hold several actions.** The team logs what
+belongs together at the same minute: confirmation to the contractor + confirmation to the tenant +
+status; or "thank you, closing" to the tenant + closed status; or approval email to the landlord +
+holding reply to the tenant + hold with a chase date. Do all of it, name the primary one, and keep
+anything that needs a reply for later.
+
+**Typical next actions.** Given the history to event n, the agency's next event is
 one of: an email, SMS or call to the tenant, landlord or contractor; a hold with a reason; an
 internal note; a status update; a booking; an approval request; or an escalation. Pick the one an
 experienced property manager would do next, do it, and plan the rest. Typical next actions by

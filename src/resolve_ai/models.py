@@ -106,8 +106,10 @@ class NextAction(BaseModel):
 
 class Resolution(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    next_action: NextAction = Field(default_factory=lambda: NextAction(channel="no_action", to="none", summary="not set"))
-    alternative_next_actions: List[str] = Field(default_factory=list, description="Other defensible next actions, each in one line, best first.")
+    next_action: NextAction = Field(default_factory=lambda: NextAction(channel="no_action", to="none", summary="not set"),
+                                    description="The PRIMARY action at event n+1: the one that most matters if only one could happen.")
+    next_actions: List[NextAction] = Field(default_factory=list, description="Everything that belongs to the n+1 moment, in order, primary first. Several actions often happen together (e.g. tell the contractor, tell the tenant, set the hold). Do not include steps that depend on a reply.")
+    alternative_next_actions: List[str] = Field(default_factory=list, description="Mutually exclusive alternatives to the primary action that a reasonable property manager might choose instead, each in one line, best first, with why it is weaker.")
     case_summary: str = Field(description="2-4 sentences: who reported what, about which property, and what matters.")
     issue_category: str = Field(description="e.g. heating/boiler, plumbing/leak, electrical, gas, damp/mould, pests, appliance, security/locks, structural, not-a-repair, unclear")
     urgency: Literal["emergency", "urgent", "routine", "not_a_repair", "unclear"]

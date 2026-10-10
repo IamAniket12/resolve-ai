@@ -24,6 +24,22 @@ def _status_line(r: CaseResult) -> str:
     return f"**Case status now:** {r.resolution.decision.replace('_', ' ')}  "
 
 
+def _next_actions_md(x) -> List[str]:
+    acts = list(x.next_actions) or [x.next_action]
+    if x.next_action.summary != "not set" and not any(a.summary == x.next_action.summary for a in acts):
+        acts = [x.next_action] + acts
+    out: List[str] = []
+    for i, a in enumerate(acts, 1):
+        tag = " (primary)" if (a.summary == x.next_action.summary and a.channel == x.next_action.channel) else ""
+        out.append(f"{i}. **{a.channel.replace('_', ' ')} → {a.to}**{tag} — {a.summary}")
+        if a.draft.strip():
+            out += ["   > " + line for line in a.draft.strip().splitlines()]
+        out.append(f"   Performed in this run: {'yes' if a.performed else 'no (recommended)'}"
+                   + (f". Follow up on **{a.follow_up_on}**: {a.follow_up_action or 'check the case again'}" if a.follow_up_on else ""))
+        out.append("")
+    return out
+
+
 def answer_md(r: CaseResult) -> str:
     x = r.resolution
     esc = x.escalation
@@ -37,14 +53,9 @@ def answer_md(r: CaseResult) -> str:
         f"**Confidence:** {x.confidence:.2f}  ",
         f"**Processing status:** {r.status}" + (f" ({r.error})" if r.error else ""),
         "",
-        "## Next action (event n+1)",
-        f"**{x.next_action.channel.replace('_', ' ')} → {x.next_action.to}** — {x.next_action.summary}",
-        "",
-        *([ "> " + line for line in x.next_action.draft.strip().splitlines()] + [""] if x.next_action.draft.strip() else []),
-        f"Performed in this run: {'yes' if x.next_action.performed else 'no (recommended)'}",
-        *([f"Follow up on **{x.next_action.follow_up_on}**: {x.next_action.follow_up_action or 'check the case again'}"] if x.next_action.follow_up_on else []),
-        "",
-        *(["Other defensible next actions:", _bullets(x.alternative_next_actions), ""] if x.alternative_next_actions else []),
+        "## Next actions (event n+1)",
+        *_next_actions_md(x),
+        *(["Other defensible choices instead of the primary action:", _bullets(x.alternative_next_actions), ""] if x.alternative_next_actions else []),
         "## Summary",
         x.case_summary,
         "",

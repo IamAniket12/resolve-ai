@@ -351,8 +351,21 @@ class MockLLM(LLM):
                     na["follow_up_on"] = (date.today() + timedelta(days=3)).isoformat()
                     na["follow_up_action"] = "chase by email and SMS; escalate to the property manager after a second silence"
                 break
+        bundle = []
+        for name, rs in res.items():
+            for h in rs:
+                if not h["ok"] or name in {"lookup_property", "lookup_tenancy", "get_repair_history", "search_contractors", "check_contractor_availability", "create_maintenance_ticket", "record_note"}:
+                    continue
+                ch = {"escalate_to_human": "escalate", "schedule_contractor": "book_appointment", "request_landlord_approval": "request_approval",
+                      "update_case_status": "status_update", "place_call": "call"}.get(name)
+                if name == "send_message":
+                    ch = "email" if h["input"].get("channel") == "email" else ("sms" if h["input"].get("channel") in {"sms", "whatsapp"} else "note")
+                to = h["input"].get("recipient_type") or h["input"].get("to_role") or {"escalate_to_human": "property_manager", "schedule_contractor": "contractor", "request_landlord_approval": "landlord"}.get(name, "agency")
+                bundle.append({"channel": ch, "to": to, "summary": f"{name.replace('_', ' ')}", "draft": str(h["input"].get("body") or h["input"].get("reason") or h["input"].get("comment") or "")[:400], "performed": True})
+        bundle.sort(key=lambda a: 0 if a["channel"] == na["channel"] and a["to"] == na["to"] else 1)
         return {
             "next_action": na,
+            "next_actions": bundle or [na],
             "alternative_next_actions": [],
             "case_summary": f"Reported {cls['category']} issue at {prop.get('address', 'unverified property')}. Urgency assessed as {cls['urgency']}." + (f" Evidence: \"{cls['evidence']}\"" if cls.get("evidence") else "") + (f" Vulnerability: {vuln_note}" if vuln_note else ""),
             "issue_category": cls["category"],
