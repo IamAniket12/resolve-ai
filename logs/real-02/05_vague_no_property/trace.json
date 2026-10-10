@@ -1,0 +1,142 @@
+{
+  "case_id": "05_vague_no_property",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 4,
+  "started_at": "2026-10-10T10:11:27+00:00",
+  "finished_at": "2026-10-10T10:12:22+00:00",
+  "usage": {
+    "input_tokens": 7134,
+    "output_tokens": 4113,
+    "cache_read_input_tokens": 48470,
+    "cache_creation_input_tokens": 0
+  },
+  "manifest": [
+    {
+      "name": "sms.txt",
+      "kind": "text",
+      "chars": 146,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "On Fri 10 Oct 2026 at 09:05 a text came from +44 7700 900999, a number not in the CRM: 'hi its broken again can u send someone. same as last time.' It gives no name, property or description of the fault. The property records search returned nothing and the case file has no address, so neither the property nor the reporter can be identified and no repair can be raised.",
+    "issue_category": "unclear",
+    "urgency": "unclear",
+    "decision": "needs_information",
+    "outcome": "No ticket raised and nothing booked because no property can be identified. I texted the sender for their name, address/postcode, fault details, a photo and the date of the last repair, with emergency safety advice, and put the case on hold waiting for the tenant with a chase on Mon 13 Oct 2026.",
+    "actions_taken": [
+      "lookup_property using the sender's phone number +44 7700 900999: no record found",
+      "send_message SMS to +44 7700 900999 asking for name, property address/postcode, fault description/photo and date of last repair, with gas/CO (0800 111 999), 999 and water-near-electrics safety advice: delivered (MSG-F4EE29)",
+      "record_note internal case note on the unidentified sender, the empty lookup, why no ticket was raised, and the possible repeat fault (NOTE-12A434)",
+      "update_case_status to awaiting_tenant with chase date Mon 13 Oct 2026 (STS-4C4832)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Case 05_vague_no_property is on hold waiting for the tenant. Facts: one text on Fri 10 Oct 2026 09:05 from +44 7700 900999 (not in CRM): 'hi its broken again can u send someone. same as last time.' The property records search on the number found nothing and the case file has no address, so the property is unknown, the sender is unverified and the fault is unknown. Done so far: SMS sent asking for name, address/postcode, fault details/photo and last repair date, with safety advice (MSG-F4EE29); internal note NOTE-12A434; status awaiting_tenant (STS-4C4832). No ticket or booking, per policy s.9. Blocked: everything depends on knowing the property. Next: if no reply by Mon 13 Oct 2026, call the number. When they reply, check the name and number against the tenancy record, raise a ticket and set the urgency (emergency if it involves safety), check the repair history for a repeat fault or callback within 90 days, then follow the normal steps. Escalate to a manager only after repeated silence or if the reply raises a non-maintenance or safeguarding issue."
+    },
+    "conflicts": [],
+    "information_gaps": [
+      "Property address/ID unknown: case file has none and the lookup on the phone number found nothing. Asked the sender by SMS; blocks everything else.",
+      "Reporter's identity unknown: number not in CRM. Asked for full name; must be checked against the tenancy record once the property is known.",
+      "Nature of the fault unknown ('it's broken'). Asked for a description and photo; urgency cannot be set until known.",
+      "Previous repair ('same as last time') unknown: repair history can't be checked without a property ID. Asked for the last repair date; check the 90-day warranty/callback once identified.",
+      "Access arrangements, pets and vulnerability unknown; to be gathered after the property is identified."
+    ],
+    "assumptions": [
+      "The sender is probably a current tenant reporting a repeat fault, but this is not verified and nothing has been acted on because of it.",
+      "The case material is current (10 Oct 2026 = now) for the chase date."
+    ],
+    "tenant_communication": "SMS to +44 7700 900999 (delivered, MSG-F4EE29): we don't have the number on file. It asks for full name, property address and postcode, what is broken and what it's doing now (photo helpful), and roughly when it was last repaired. It also gives safety advice: for a gas smell or CO alarm, open windows, don't use switches, leave and call 0800 111 999; for fire, flooding or risk to life, call 999; for water near electrics, switch off at the fuse box if safe.",
+    "landlord_communication": "none - landlord cannot be identified until the property is known.",
+    "next_steps": [
+      "Watch for the reply to MSG-F4EE29; if none by Mon 13 Oct 2026, call +44 7700 900999 to get the property and fault details.",
+      "When they reply: look up the property and tenancy and check the sender is a current tenant before acting.",
+      "Check the repair history for the previous job; if the same fault was repaired within 90 days, send it back to the original contractor under warranty/callback and flag it as recurring (3+ repairs in 12 months means recommending a replacement assessment).",
+      "Raise a maintenance ticket with the correct category and urgency; if any safety issue (gas, CO, electrics, flooding, no heating/water for a vulnerable household) treat as emergency at once.",
+      "Follow the normal steps: landlord approval (unless emergency or within the £250 pre-authorised limit), contractor selection, tenant notice of access.",
+      "If the sender stays silent after repeated chases, escalate to the property manager."
+    ],
+    "risk_flags": [
+      "Unverified sender: number not in CRM; check identity and tenancy before booking or sharing any property or personal details.",
+      "Possible repeat fault ('broken again', 'same as last time'): may be under warranty/callback; check the history once the property is known.",
+      "Unknown fault severity: could be a safety issue; safety advice sent and urgency to be raised immediately if the reply shows a hazard."
+    ],
+    "confidence": 0.9,
+    "reasoning": "The only material is a vague text from an unknown number. Policy s.9 forbids booking or paying for work when the case file gives no identifiable property. The policy lets the case file stand in when the database is empty, but here the case file has no address either, so there is nothing to act on and guessing would breach the rule against fabrication. One missing fact (the property, plus what is broken) blocks every safe next step and only the sender can supply it, so under s.8 the decision is needs_information, not escalation. Over-escalating is a failure and no safety rule is triggered by the facts so far. Because urgency is unknown, I included emergency safety advice in the request so a possible hazard is not delayed (s.9: never delay a safety report because information is incomplete). The case is on hold waiting for the tenant with a 3-day chase date, following the agency workflow. The tenancy and repair history lookups could not run without a property ID."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "+44 7700 900999"
+      },
+      "output": {
+        "found": false,
+        "query": "+44 7700 900999",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "+44 7700 900999",
+        "channel": "sms",
+        "body": "Hello, this is the maintenance team at your letting agent. Thanks for your message. We don't have this number on file, so we can't yet tell which property it is. Please reply with: 1) your full name, 2) the property address and postcode, 3) what is broken and what it is doing now (a photo helps), and 4) roughly when it was last repaired. Once we have these we'll raise the repair straight away. IMPORTANT: if you smell gas or a CO alarm is sounding, open windows, don't use switches, leave the property and call 0800 111 999. If there is fire, flooding or a risk to life, call 999. If water is leaking near electrics, switch off at the fuse box if it's safe to do so."
+      },
+      "output": {
+        "message_id": "MSG-F4EE29",
+        "status": "delivered"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 05_vague_no_property. Inbound SMS Fri 10 Oct 2026 09:05 from +44 7700 900999 (not in CRM): \"hi its broken again can u send someone. same as last time. thanks\". Nobody can be identified: no property, no tenant name, no fault description. lookup_property on the phone number came back empty, and the case file has no address either, so there is no system of record to use. Per policy s.9 no ticket has been raised and nothing booked. Can't run tenancy or repair history lookups (no property ID), so I can't check a previous job, warranty or callback. Sent an SMS to the sender asking for name, address/postcode, fault details/photo and date of the last repair, with gas/CO/999/electrical safety advice. Urgency not set yet. If the reply describes a safety issue, treat it as an emergency. \"Again\"/\"same as last time\" means it may be a recurring fault, so check the 90-day warranty/callback once the property is known. Watch for: an unknown sender claiming to be a tenant. Check the reply against the tenancy record before acting."
+      },
+      "output": {
+        "note_id": "NOTE-12A434",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "awaiting_tenant",
+        "comment": "Waiting for Tenant: unknown number +44 7700 900999 reported \"broken again\", no property or fault given. Asked for address, name and details by SMS (MSG-F4EE29). If no reply, chase Mon 13 Oct 2026 (try a call). Treat as emergency if the reply describes a safety issue."
+      },
+      "output": {
+        "status_id": "STS-4C4832",
+        "status": "awaiting_tenant",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I couldn't raise a repair yet because I don't know which property this is or what is broken. I've texted the sender for the details and put the case on hold waiting for the tenant.\n\n**What came in:** one text on Fri 10 Oct 2026 at 09:05 from +44 7700 900999, a number we don't have on file: \"hi its broken again can u send someone. same as last time.\" It gives no name, no address and doesn't say what is broken.\n\n**Checks:** I searched the property records using the phone number and found nothing. The text has no address either, so there's nothing else to go on. Without a property I also couldn't look up the tenancy or repair history, which means I can't check the previous job or whether it's still under warranty.\n\n**What I did:**\n- **No ticket, no booking:** our policy says not to book or pay for work when no property can be identified, and I didn't want to guess one.\n- **Text to the sender (delivered, MSG-F4EE29):** asks for their full name, the property address and postcode, what is broken and what it's doing now (a photo if possible), and roughly when it was last repaired. It also includes safety advice:\n  - gas smell or carbon monoxide alarm: open windows, don't use switches, leave and call 0800 111 999\n  - fire, flooding or risk to life: call 999\n  - water near electrics: switch off at the fuse box if safe\n- **Internal note (NOTE-12A434):** records the above and the open questions.\n- **Case status:** on hold, waiting for the tenant (STS-4C4832). Chase on Mon 13 Oct 2026, by phone if the text gets no reply.\n\n**Next steps when they reply:**\n1. Check their name and number against the tenancy record before acting, since the sender is unverified.\n2. Raise a ticket and set the urgency. Anything involving safety is an emergency.\n3. Check the repair history. \"Same as last time\" suggests the fault has come back, so if the last repair was within 90 days it should go back to that contractor under warranty first.\n4. Then follow the normal steps: landlord approval, choosing a contractor, booking the visit.\n\nNobody needs to step in yet. It only goes to a manager if the sender stays silent after repeated chases or the reply raises something outside maintenance."
+  ]
+}

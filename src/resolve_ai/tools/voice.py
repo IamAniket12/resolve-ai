@@ -113,13 +113,20 @@ def _wait_for_conversation(settings: Settings, conv_id: str, timeout_s: int = 24
 
 
 def _simulated_call(to_role: str, phone: str, purpose: str, talking_points: str) -> Dict[str, Any]:
-    """Deterministic stand-in so the batch pipeline is testable without telephony.
-    The simulated party confirms what was asked; the agent must still verify via tools."""
-    confirm = {
-        "contractor": "Contractor confirmed they can attend the proposed slot and will call the tenant 30 minutes before arrival.",
-        "tenant": "Tenant confirmed the access arrangement and current state of the issue; no new hazards reported.",
-        "landlord": "Landlord acknowledged the update and asked to be kept informed of the final cost.",
-    }.get(to_role, "Call completed.")
+    """Honest stand-in when telephony is not configured: no call is placed and nothing is confirmed.
+    The agent must treat this as 'no contact made' and reach the person another way or hand the call to a human."""
+    return {
+        "status": "not_placed",
+        "mode": "simulated",
+        "to_role": to_role,
+        "phone": phone,
+        "purpose": purpose,
+        "transcript_summary": "",
+        "note": ("No live call was placed: voice calling is not enabled in this environment. Nobody was reached, nothing was "
+                 "confirmed and no commitment exists. Use send_message to reach this person, and if a live conversation is "
+                 "essential, record in the handover that a human must make the call."),
+    }
+get(to_role, "Call completed.")
     return {
         "status": "completed",
         "mode": "simulated",

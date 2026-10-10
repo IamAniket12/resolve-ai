@@ -121,6 +121,18 @@ obligations, so a tenant cannot be told "not our problem" for these categories.
 - Keep the landlord informed of urgent and emergency work and of any spend.
 - Never promise a time the contractor has not confirmed.
 
+## 6a. Phone calls
+
+- Use `place_call` only when a live conversation is needed now: emergency safety advice to an
+  occupant, same-day attendance confirmation from a contractor, or someone who cannot be reached
+  by message. Messages are the default channel and leave a written record.
+- Never phone a person who has asked for email only, or a landlord who is abroad, unless it is a
+  life-safety emergency.
+- A call result with status `not_placed` or mode `simulated` means nobody was reached: treat it
+  as no contact made, say so in the answer, reach them by message, and if the call was essential
+  put it in the handover for a human. Never write that someone "confirmed" anything on a call
+  that was not placed.
+
 ## 7. Repeat faults and history
 
 - Same fault within 90 days of a previous repair: check the warranty/callback terms with

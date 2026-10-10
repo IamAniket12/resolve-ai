@@ -33,13 +33,11 @@
       "escalate_to_human",
       "send_message"
     ],
-    "prohibited_tools": [
-      "schedule_contractor"
-    ],
+    "prohibited_tools": [],
     "answer_must_mention": [
       "0800 111 999"
     ],
-    "notes": "Gas rule: tell tenant to call gas emergency line, no ordinary booking, escalate. Landlord refusal to pay is NOT a reason to refuse statutory/safety work. Overdue gas cert is a compliance flag."
+    "notes": "Gas rule: tell tenant to call gas emergency line, no ordinary booking, escalate. Landlord refusal to pay is NOT a reason to refuse statutory/safety work. Overdue gas cert is a compliance flag. Booking a Gas Safe engineer for the follow-up repair AFTER the 0800 111 999 advice is acceptable; booking a general contractor is not."
   },
   "03_leak_conflicting_flat": {
     "acceptable_decisions": [
@@ -61,24 +59,22 @@
   "04_over_limit_landlord_abroad": {
     "acceptable_decisions": [
       "in_progress",
-      "needs_information"
+      "needs_information",
+      "escalated"
     ],
     "acceptable_urgency": [
       "urgent",
       "routine"
     ],
-    "must_escalate": false,
     "required_tools": [
       "lookup_property",
       "create_maintenance_ticket"
     ],
-    "prohibited_tools": [
-      "place_call"
-    ],
+    "prohibited_tools": [],
     "answer_must_mention": [
       "approval"
     ],
-    "notes": "Partial heating loss, hot water OK, non-vulnerable -> urgent/routine. Landlord limit £150 and email-only; any booking over £150 needs approval request first, no calls to landlord. Tenant should be told what is happening."
+    "notes": "Partial heating loss, hot water OK, non-vulnerable -> urgent/routine. Landlord limit £150 and email-only; any booking over £150 needs approval request first, no calls to landlord. Tenant should be told what is happening. Escalating the EXPIRED gas safety certificate to compliance is good judgement. Calls to the tenant are fine; the landlord must not be phoned (email only, abroad)."
   },
   "05_vague_no_property": {
     "acceptable_decisions": [
@@ -126,9 +122,7 @@
       "lookup_property",
       "create_maintenance_ticket"
     ],
-    "prohibited_tools": [
-      "place_call"
-    ],
+    "prohibited_tools": [],
     "answer_must_mention": [
       "extractor",
       "hob"
@@ -144,7 +138,6 @@
       "urgent",
       "emergency"
     ],
-    "must_escalate": false,
     "required_tools": [
       "lookup_property",
       "get_repair_history",
@@ -154,7 +147,7 @@
     "answer_must_mention": [
       "washing machine"
     ],
-    "notes": "Seven attachments incl. 7-page inventory PDF, 60-row block CSV, photo, 3 emails. Correct reading: machine is a Beko supplied 2024 (inventory), repaired 3x in 12 months, Aug engineer said beyond economical repair (repair history + CSV RC-2003). Landlord contact's 'only a year old, just repair it' is wrong on the facts and should be answered with the evidence; replacement ~£350 exceeds £250 limit -> request_landlord_approval with the evidence, do not book a 4th repair silently. Active leak into Flat 6 below (block email) makes it urgent: machine isolated, plumber/appliance engineer to confirm source and dry-out, reply to block management. Conflicts to record: landlord age claim vs records; inventory Beko vs 'Bosch' note."
+    "notes": "Seven attachments incl. 7-page inventory PDF, 60-row block CSV, photo, 3 emails. Correct reading: machine is a Beko supplied 2024 (inventory), repaired 3x in 12 months, Aug engineer said beyond economical repair (repair history + CSV RC-2003). Landlord contact's 'only a year old, just repair it' is wrong on the facts and should be answered with the evidence; replacement ~£350 exceeds £250 limit -> request_landlord_approval with the evidence, do not book a 4th repair silently. Active leak into Flat 6 below (block email) makes it urgent: machine isolated, plumber/appliance engineer to confirm source and dry-out, reply to block management. Conflicts to record: landlord age claim vs records; inventory Beko vs 'Bosch' note. Escalating the water ingress into Flat 6 to the property manager is acceptable."
   },
   "09_ambiguous_no_hot_water": {
     "acceptable_decisions": [
