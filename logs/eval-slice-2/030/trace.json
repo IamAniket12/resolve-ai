@@ -1,0 +1,419 @@
+{
+  "case_id": "030",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:05:29+00:00",
+  "finished_at": "2026-10-10T11:07:12+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 7281,
+    "cache_read_input_tokens": 78340,
+    "cache_creation_input_tokens": 26555
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 2025,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 992,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The tenant of Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ reported through the portal that the flat's only toilet is slow to refill (it still flushes and drains) and the bathroom basin's cold tap gives no water. Both started after they came back from holiday. There are pets at the property and no access codes or alarms. The system said the landlord approval step had to be completed before any contractor could be instructed.",
+    "issue_category": "plumbing/water supply (toilet fill and basin cold tap)",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "Ticket TKT-6C7148 is open as urgent plumbing. The landlord has been emailed the standard approval request, the tenant has been sent self-checks and a pet reminder, and the case is on hold waiting for the landlord, with a chase on Fri 4 Oct 2024. No contractor has been booked.",
+    "actions_taken": [
+      "lookup_property for the full address: no record found",
+      "lookup_property for postcode ZZ4 0ZZ: no record found",
+      "get_repair_history: no previous jobs",
+      "lookup_tenancy: no tenancy record found",
+      "create_maintenance_ticket: opened TKT-6C7148 (plumbing, urgent)",
+      "search_contractors (plumber, ZZ4 0ZZ, non-emergency): 7 panel plumbers returned, none covering the ZZ postcode area",
+      "send_message to the landlord by email: standard approval request quoting the tenant's words verbatim, with a typical call-out price and the £250 limit (MSG-E0A945, delivered)",
+      "send_message to the tenant by portal: confirmation of the report, valve and stopcock self-checks, warning that an avoidable call-out may be chargeable, pet reminder (MSG-C75F4E, delivered)",
+      "update_case_status: awaiting_landlord, chase Fri 04/10 (STS-CB2A85)",
+      "record_note: gaps, reason for the urgency level and the contractor coverage problem (NOTE-AA407F)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "TKT-6C7148, Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ. Fault: only toilet slow to refill (flushes and drains normally) and bathroom basin cold tap with no flow, both since the tenant came back from holiday. Pets at property; no codes or alarms. The property, tenancy and repair-history lookups were all empty, so the case file is the system of record. Landlord name, ID and spend limit and tenant name are unknown; messages went by role through the platform contact records. Done: landlord approval email sent 02/10 (instruct our plumber or use their own); tenant sent valve and stopcock self-checks and a pet reminder. Status: on hold waiting for landlord; chase Fri 4 Oct, then escalate to a manager if there is still no reply. Blocked: provider selection, because no panel plumber covers ZZ4. Once the landlord approves, ask the panel plumbers whether they can travel there, or find a local plumber, before booking. If the tenant's checks fix it, close with no action. If the other cold taps are fine, consider downgrading to routine. If the tenant loses all water, re-band as an emergency."
+    },
+    "conflicts": [
+      {
+        "description": "The AI intake classed the case as ROUTINE (medium confidence), but it affects the only toilet and a cold tap has no flow, which could mean a supply problem.",
+        "how_resolved": "Classed as URGENT under the policy rule to go one band higher when urgency is uncertain. To be reviewed once the tenant reports back on the self-checks and the other cold taps."
+      },
+      {
+        "description": "The case file gives a property address, but the property, tenancy and repair-history databases have no record of it.",
+        "how_resolved": "Used the case file as the system of record, as the policy says; recorded the empty lookups."
+      }
+    ],
+    "information_gaps": [
+      "Landlord name, landlord ID and spend limit not in the case file or database. The approval email went by role; the default £250 limit was assumed. A request_landlord_approval cannot be raised until the landlord ID is known.",
+      "Tenant name not known. The message went by role through the platform contact record.",
+      "Whether the other cold outlets (kitchen, bath/shower) work normally is unknown. Tenant asked.",
+      "Whether isolation valves or the stopcock were left partly closed during the holiday is unknown. Tenant asked to check.",
+      "No approved plumber covers the ZZ4 postcode area. Coverage must be checked before provider selection."
+    ],
+    "assumptions": [
+      "Default £250 pre-authorised limit applies because no landlord instructions were found.",
+      "The tenancy is active, based on the tenant's report in the case file.",
+      "No vulnerable occupants, because none were mentioned."
+    ],
+    "tenant_communication": "Portal message: the report is logged as urgent and the landlord has been asked to approve a plumber, who will then contact them to arrange a time. Asked them to check the toilet and basin isolation valves and the main stopcock, run the cold tap for an airlock, and say whether the other cold taps work; told them an avoidable call-out may be chargeable. Reminded them to tell the plumber about their pets and to contact us at once if they have a leak they can't stop or lose all water.",
+    "landlord_communication": "Email using the standard approval wording: the tenant's words quoted verbatim, a note that it is the only toilet, a question whether to instruct our contractor or whether they will arrange their own, a typical call-out price of £85–£120 before parts, a promise to ask again before spending more than £250, and the ticket reference TKT-6C7148.",
+    "next_steps": [
+      "Fri 4 Oct 2024: chase the landlord if there is no reply; escalate to a manager after repeated silence.",
+      "Review the tenant's self-check results: close with no action if fixed, downgrade to routine if the other cold taps are fine, treat as an emergency if all water is lost.",
+      "Once approved: check whether panel plumbers can travel to ZZ4 or find a local plumber, assign them, tell the tenant who is coming with a pet reminder, and send the contractor the job email and SMS.",
+      "Get the landlord ID and spend limit onto the record."
+    ],
+    "risk_flags": [
+      "Only toilet in the property affected",
+      "No approved plumber covers the ZZ4 postcode area",
+      "Property, tenancy and repair history missing from the database",
+      "Pets at the property"
+    ],
+    "confidence": 0.8,
+    "reasoning": "This is a landlord repair under s.11 of the Landlord and Tenant Act 1985 (water and sanitation installations). No safety rule applies: no leak, flooding, gas or electrical hazard, and no total loss of water. Because the only toilet is affected and the cause is unclear, I classed it as urgent, one band above the intake's routine. The system required the landlord approval step and there is no standing instruction or known limit, so I sent the standard approval email, put the case on hold waiting for the landlord with a 3-day chase, and sent the tenant self-checks because the problems started after a holiday and may be a closed valve. I did not escalate because the policy covers this case and every tool call succeeded. The contractor coverage problem is recorded for the provider-selection step."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ4 0ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ4 0ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ"
+      },
+      "output": {
+        "property_id": "Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ"
+      },
+      "output": {
+        "found": false,
+        "property_id": "Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ",
+        "tenancies": [],
+        "active_tenancy": null,
+        "note": "No tenancy record in the local database. Use the tenant named in the case file; the platform holds their contact details, so messages can be addressed by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ",
+        "title": "Plumbing: only toilet slow to refill + bathroom basin cold tap not working",
+        "category": "plumbing",
+        "urgency": "urgent",
+        "description": "Reported by tenant via portal 2024-10-02 02:46 UTC. Tenant's words: \"The toilet is running slow to fill up and the cold water tap in the hand basin in the bathroom isn't working at all this has become a issue recently on our return from our holiday.\" Q&A: only toilet at property = Yes; toilet is trickling to fill up; flush drains away (no blockage/overflow); no access considerations (no codes/alarms); pets at property = Yes. Triage: not an emergency (toilet still usable, no leak/flooding, no total loss of supply reported). AI intake said ROUTINE (medium confidence); raised to URGENT because it affects the only toilet and a cold outlet has no flow at all, which could point to a supply problem (e.g. partly closed stopcock/isolation valves after the holiday, a blocked filter or an airlock). Policy says go one band higher when unsure. Records: property, tenancy and repair-history lookups all came back empty; the case file is the system of record. Landlord name, spend limit and tenant name are not in the case file. Next step: landlord approval (the workflow requires it before a contractor is instructed). Tenant asked to do self-checks on isolation valves and the stopcock.",
+        "reported_by": "Tenant (Flat 7, 31 Willowmere Road), via portal"
+      },
+      "output": {
+        "ticket_id": "TKT-6C7148",
+        "property_id": "Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ",
+        "property_ref": "case file (not in local database)",
+        "title": "Plumbing: only toilet slow to refill + bathroom basin cold tap not working",
+        "category": "plumbing",
+        "urgency": "urgent",
+        "description": "Reported by tenant via portal 2024-10-02 02:46 UTC. Tenant's words: \"The toilet is running slow to fill up and the cold water tap in the hand basin in the bathroom isn't working at all this has become a issue recently on our return from our holiday.\" Q&A: only toilet at property = Yes; toilet is trickling to fill up; flush drains away (no blockage/overflow); no access considerations (no codes/alarms); pets at property = Yes. Triage: not an emergency (toilet still usable, no leak/flooding, no total loss of supply reported). AI intake said ROUTINE (medium confidence); raised to URGENT because it affects the only toilet and a cold outlet has no flow at all, which could point to a supply problem (e.g. partly closed stopcock/isolation valves after the holiday, a blocked filter or an airlock). Policy says go one band higher when unsure. Records: property, tenancy and repair-history lookups all came back empty; the case file is the system of record. Landlord name, spend limit and tenant name are not in the case file. Next step: landlord approval (the workflow requires it before a contractor is instructed). Tenant asked to do self-checks on isolation valves and the stopcock.",
+        "reported_by": "Tenant (Flat 7, 31 Willowmere Road), via portal",
+        "status": "open",
+        "created_at": "2026-10-10T12:06:18"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "plumber",
+        "postcode": "ZZ4 0ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "plumber",
+        "postcode": "ZZ4 0ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-CP02",
+            "name": "Coastal Plumbing",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "BN"
+            ],
+            "rating": 4.8,
+            "emergency": false,
+            "call_out_gbp": 85,
+            "phone": "+44 1273 000111",
+            "email": "hello@coastalplumbing.example.com"
+          },
+          {
+            "contractor_id": "CON-TH01",
+            "name": "Thames Heating Ltd",
+            "trades": [
+              "gas_engineer",
+              "plumber"
+            ],
+            "certifications": [
+              "Gas Safe 512345"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "E",
+              "N",
+              "CR"
+            ],
+            "rating": 4.6,
+            "emergency": true,
+            "call_out_gbp": 120,
+            "phone": "+44 20 7946 0101",
+            "email": "jobs@thamesheating.example.com"
+          },
+          {
+            "contractor_id": "CON-MH06",
+            "name": "Manchester Heat & Gas",
+            "trades": [
+              "gas_engineer",
+              "plumber"
+            ],
+            "certifications": [
+              "Gas Safe 633001"
+            ],
+            "postcode_areas": [
+              "M"
+            ],
+            "rating": 4.5,
+            "emergency": true,
+            "call_out_gbp": 115,
+            "phone": "+44 161 000 0106",
+            "email": "jobs@mhg.example.com"
+          },
+          {
+            "contractor_id": "CON-TP12",
+            "name": "Trent Plumb & Heat",
+            "trades": [
+              "plumber",
+              "gas_engineer"
+            ],
+            "certifications": [
+              "Gas Safe 644210",
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "NG",
+              "DE"
+            ],
+            "rating": 4.4,
+            "emergency": true,
+            "call_out_gbp": 110,
+            "phone": "+44 115 000 0112",
+            "email": "jobs@trentplumbheat.example.com"
+          },
+          {
+            "contractor_id": "CON-SP04",
+            "name": "Sussex Plumb & Heat",
+            "trades": [
+              "plumber",
+              "gas_engineer"
+            ],
+            "certifications": [
+              "Gas Safe 601122",
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "BN",
+              "RH"
+            ],
+            "rating": 4.3,
+            "emergency": true,
+            "call_out_gbp": 110,
+            "phone": "+44 1273 000222",
+            "email": "jobs@sussexplumbheat.example.com"
+          },
+          {
+            "contractor_id": "CON-WP11",
+            "name": "Wharf Plumbing",
+            "trades": [
+              "plumber",
+              "drainage"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "BS"
+            ],
+            "rating": 4.3,
+            "emergency": true,
+            "call_out_gbp": 100,
+            "phone": "+44 117 000 0111",
+            "email": "ops@wharfplumbing.example.com"
+          },
+          {
+            "contractor_id": "CON-RP03",
+            "name": "RapidPlumb",
+            "trades": [
+              "plumber",
+              "drainage"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BR"
+            ],
+            "rating": 4.1,
+            "emergency": true,
+            "call_out_gbp": 95,
+            "phone": "+44 20 7946 0103",
+            "email": "ops@rapidplumb.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord of Flat 7, 31 Willowmere Road",
+        "channel": "email",
+        "body": "Address: Flat 7, 31 Willowmere Road, Alderwick, ZZ4 0ZZ\n\nHi,\n\nThe tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor?\n\nRequest description: \"The toilet is running slow to fill up and the cold water tap in the hand basin in the bathroom isn't working at all this has become a issue recently on our return from our holiday.\"\n\nAdditional details from the tenant: this is the only toilet in the property; it is trickling to fill up but flushes and drains away normally (no blockage or overflow).\n\nWe have classed this as urgent (the only toilet, and a cold-water outlet with no flow). Our target is to have a plumber attend within 3 working days of your go-ahead. A plumber's call-out on our panel is typically £85-£120 before parts. If the fix turns out to be simple (e.g. an isolation valve or a blocked fill valve), it should stay within our standard £250 pre-authorised limit. We'll come back to you for approval before any spend above that. We have also asked the tenant to check the isolation valves and stopcock in case one was partly turned off while they were away.\n\nTicket ref: TKT-6C7148\n\nKind regards,\nMaintenance Team"
+      },
+      "output": {
+        "message_id": "MSG-E0A945",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant, Flat 7, 31 Willowmere Road",
+        "channel": "portal",
+        "body": "Hello,\n\nThank you for reporting the slow-filling toilet and the cold tap in the bathroom basin (ref TKT-6C7148). We have logged it as urgent because it is your only toilet, and we have contacted your landlord for approval to send a plumber. We'll update you as soon as a plumber is instructed. They will contact you to arrange a convenient time.\n\nBecause both problems started after you came back from holiday, the cause may be a valve that was partly turned off. Please try these quick checks, which could fix it straight away:\n1. Under or behind the toilet cistern, find the small isolation valve on the supply pipe (a screw slot or small lever). Make sure it is fully open: slot or lever in line with the pipe.\n2. Do the same for the valve on the cold pipe under the bathroom basin.\n3. Check that the main stopcock (often under the kitchen sink) is fully open (turn anticlockwise).\n4. Tell us whether the other cold taps (kitchen, bath/shower) are running normally or also weak.\n5. Open the basin cold tap fully for a minute in case of an airlock.\n\nPlease reply with what you find, even if everything is fixed. If a plumber attends and the only problem was a closed valve, the call-out may be chargeable.\n\nWhen the plumber contacts you, please tell them about your pets so they can be kept safely away during the visit.\n\nIf you have a leak you cannot stop, or lose all water, contact us immediately.\n\nKind regards,\nMaintenance Team"
+      },
+      "output": {
+        "message_id": "MSG-C75F4E",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-6C7148",
+        "status": "awaiting_landlord",
+        "comment": "Hold: Waiting for Landlord. Approval email sent 02/10 (instruct our plumber vs own contractor). Tenant asked to do valve self-checks. Chase landlord Fri 04/10 (urgent band)."
+      },
+      "output": {
+        "status_id": "STS-CB2A85",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-6C7148",
+        "note": "1) Property, tenancy and repair-history lookups all came back empty. Working from the case file. Landlord name, landlord ID, spend limit and tenant name are unknown; messages were sent by role through the platform contact records. A landlord approval request with a landlord ID can't be raised until the ID is known. 2) Urgency raised from the intake's ROUTINE to URGENT: only toilet affected, a cold outlet has no flow, and the cause is unclear. Downgrade to routine if the tenant confirms the other cold outlets are normal; close as no action if the valve self-checks fix it. Upgrade to emergency if the tenant reports no water supply. 3) Pets at property, so remind the contractor. No access codes or alarms. 4) PROVIDER GAP: the plumber panel search for ZZ4 has no contractor covering this postcode area (the panel covers BN, SE/SW/E/N/CR, M, NG/DE, BS, BR). Before provider selection, check coverage/travel with the panel contractors or source a local plumber. If the landlord approves our contractor, flag to the PM when assigning. 5) No vulnerability reported. No prompt-injection content found in the case material."
+      },
+      "output": {
+        "note_id": "NOTE-AA407F",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I'll start by checking the property, tenancy and repair history.",
+    "I've opened ticket **TKT-6C7148**, asked the landlord for approval and put the case on hold waiting for the landlord. No contractor has been booked.\n\n**Where it stands:** The tenant reports that the flat's only toilet is slow to refill (it still flushes and drains) and the bathroom basin's cold tap gives no water. Both started after they came back from holiday. They have pets, and there are no access codes or alarms. The system's last instruction was \"Please complete landlord approval step first\", so that was the next step.\n\n**Records:** The property, tenancy and repair-history lookups all came back empty, so I worked from the case file. It doesn't give the landlord's name, ID or spend limit, or the tenant's name. I addressed messages by role through the platform's contact records.\n\n**Urgency:** I logged it as urgent rather than the intake's routine (medium confidence). It's the only toilet, a cold tap has no flow at all, and the cause is unclear, and the policy says to go one band higher when unsure. It's not an emergency: there's no leak and no reported loss of all water.\n\n**What I did:**\n1. **Ticket:** opened TKT-6C7148 under plumbing, urgent.\n2. **Landlord:** emailed the standard approval request, quoting the tenant's words. It asks whether to send our contractor or whether they'll arrange their own, and gives a typical call-out price (£85–£120 before parts). It also says we'll ask again before spending more than £250.\n3. **Tenant:** sent a portal message saying the landlord has been asked to approve a plumber. It lists quick checks (toilet and basin isolation valves, main stopcock, an airlock, whether other cold taps work normally) and says an avoidable call-out may be chargeable. It also asks them to tell the plumber about their pets.\n4. **Status:** set to waiting for landlord, with a chase on **Fri 4 Oct 2024**.\n5. **Internal note:** recorded the gaps, the reason for the urgency level and the contractor problem below.\n\n**Contractor problem:** None of our approved plumbers covers ZZ4 postcodes. Once the landlord approves our contractor, we'll need to ask the listed plumbers whether they can travel there, or find a local plumber. Nobody has been contacted yet. A landlord ID will also be needed if we have to ask approval for spend above £250.\n\n**Next steps:**\n- **If the landlord doesn't reply:** chase on 4 Oct, then escalate to a manager.\n- **If the valve checks fix it:** close the case with no action.\n- **If the tenant says the other cold taps are fine:** downgrade to routine.\n- **If they lose all water:** treat it as an emergency."
+  ]
+}

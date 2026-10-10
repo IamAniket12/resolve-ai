@@ -1,0 +1,246 @@
+{
+  "case_id": "038",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:06:58+00:00",
+  "finished_at": "2026-10-10T11:08:15+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 6523,
+    "cache_read_input_tokens": 84649,
+    "cache_creation_input_tokens": 12727
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 1958,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 709,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The tenant at Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ reports that the LG washing machine has a power failure and doesn't work. The tenant thinks it can't be fixed because of an online search, not an engineer's diagnosis. The machine was in the flat when they moved in, so it is presumed to belong to the landlord. The tenant has offered to buy their own machine, which would stay theirs and leave with them. The history ended at 'Please complete landlord approval step first', so the next step was the landlord approval request.",
+    "issue_category": "appliance",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "Ticket TKT-1B8B91 is open. The standard landlord approval email has been sent with three options: we send our engineer, the landlord arranges their own, or the landlord accepts the tenant's own machine. The tenant has been updated and asked for photos and basic checks. The case is on hold Waiting for Landlord, with a chase due on 30/07/2025.",
+    "actions_taken": [
+      "lookup_property for the full address: no record found",
+      "lookup_property for postcode ZZ4 4ZZ: no record found",
+      "lookup_tenancy: no tenancy record found",
+      "get_repair_history: no previous jobs",
+      "create_maintenance_ticket TKT-1B8B91 (appliance, routine)",
+      "send_message to the landlord by email, the standard landlord approval request quoting the tenant's words verbatim with 3 options (MSG-5A4BB7, delivered)",
+      "send_message to the tenant by portal: acknowledgement, landlord asked to decide, don't remove or replace the existing machine yet, send photos and any error codes, do basic power checks, safety advice (MSG-83B0DD, delivered)",
+      "update_case_status set to awaiting_landlord, chase date 30/07/2025 (STS-7E4CA1)",
+      "record_note with the next step for each landlord option (NOTE-3B5BBF)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Ticket TKT-1B8B91: a routine appliance fault at Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ. The LG washing machine has failed (power failure). It was in the flat at move-in, so it is presumed landlord-owned. The tenant offers to fit their own machine, keep it and take it when they leave. There are no property, tenancy or repair records, so the case file is the record. The landlord approval email went out on 26/07 with 3 options: (1) we send a panel appliance engineer, up to £250 without further approval; (2) the landlord arranges their own; (3) the landlord accepts the tenant's machine and says what happens to the old LG machine. The tenant was told not to remove the old machine and asked for photos. No contractor is booked. Next: chase the landlord on 30/07/2025 if there's no reply. For option 1, search the panel for an appliance engineer, book within £250 and send the tenant the 'provider instructed' message. For option 2, record the landlord's contractor and hold for works. For option 3, get written confirmation that the new machine belongs to the tenant and isn't on the inventory, agree disposal or storage of the old machine and who pays, then close (completed without payment / closed, no action)."
+    },
+    "conflicts": [],
+    "information_gaps": [
+      "The property, tenancy and repair history lookups all came back empty. The case file was used as the record, so the tenancy status and landlord identity couldn't be checked independently.",
+      "The case file doesn't name the landlord or the tenant. Messages were sent by role through the platform contact records, and both were delivered.",
+      "Whether the washing machine is on the check-in inventory as a landlord-supplied item hasn't been checked. It is assumed from the tenant saying it was there when they moved in.",
+      "The cause of the fault is unknown: the 'power failure, can't be fixed' view came from an online search. Photos, error codes and basic power checks have been requested from the tenant.",
+      "There is no landlord-specific spend limit, so the default £250 limit applies."
+    ],
+    "assumptions": [
+      "The washing machine is a landlord-supplied appliance because it was there at move-in.",
+      "The fault is routine: a washing machine isn't an essential appliance, and no sparking, burning, shocks or vulnerable occupants were reported.",
+      "The default £250 pre-authorised limit applies because the case gives no landlord instructions.",
+      "The tenancy is treated as active because the tenant reported the fault through the agency's own process."
+    ],
+    "tenant_communication": "Portal message (delivered): the landlord has been asked whether to send an engineer, arrange their own repair, or accept the tenant's offer of their own machine. Don't remove or replace the existing machine until the landlord confirms. Please send photos and any error codes, and check the plug, socket, fuse and trip switch. If there's burning, sparking or smoke, switch off at the wall and report it straight away.",
+    "landlord_communication": "Standard landlord approval email (delivered), quoting the tenant's words verbatim. It says the 'can't be fixed' view isn't an engineer's diagnosis and offers 3 options: we send a panel engineer up to £250, the landlord arranges their own, or the landlord accepts the tenant's own machine (tenant-owned, not on the inventory, leaves with the tenant). For the last option the landlord was asked what to do with the old LG machine and told the flat would have no landlord-supplied washer afterwards.",
+    "next_steps": [
+      "Chase the landlord on 30/07/2025 if there's no reply. Escalate to the property manager for manual review after repeated silence.",
+      "When the tenant's photos and check results arrive, add them to the ticket and forward them to the landlord.",
+      "Option 1: search the panel for an appliance engineer at ZZ4 4ZZ, check availability (routine), book within £250 and send the tenant the 'provider instructed' message (no pets).",
+      "Option 2: record the landlord's contractor and set the hold to 'Hold for works'.",
+      "Option 3: get written confirmation of the tenant-owned machine and the inventory change, agree disposal of the old machine, tell the tenant, then close (completed without payment / closed, no action)."
+    ],
+    "risk_flags": [
+      "No property or tenancy record exists in the database, so the landlord identity and tenancy status couldn't be checked independently.",
+      "Inventory and ownership risk if the tenant replaces the machine: the agreement needs to be in writing to avoid a deposit or checkout dispute later."
+    ],
+    "confidence": 0.85,
+    "reasoning": "The history ended with 'Please complete landlord approval step first'. The fault is a non-essential appliance with no safety signs, so it is routine. It is presumed landlord-supplied, so policy says the landlord is asked first whether to instruct our contractor, use their own, or decline. The tenant's offer to fit their own machine is a third option, and it touches inventory and ownership, so only the landlord can decide it. The database lookups were empty, so the case file was treated as the record, as policy says. With no repair history there is no warranty or recurring fault to check. No contractor was booked because the approval step is pending. No escalation was needed because the policy covers this case and every tool call succeeded. The case was put on hold Waiting for Landlord with a 3-working-day chase date."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ4 4ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ4 4ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ"
+      },
+      "output": {
+        "found": false,
+        "property_id": "Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ",
+        "tenancies": [],
+        "active_tenancy": null,
+        "note": "No tenancy record in the local database. Use the tenant named in the case file; the platform holds their contact details, so messages can be addressed by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ"
+      },
+      "output": {
+        "property_id": "Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ",
+        "title": "Washing machine (LG) not working - power failure; tenant offers to replace with own machine",
+        "category": "appliance",
+        "urgency": "routine",
+        "description": "Reported by tenant via portal 2025-07-26 14:02. Tenant's words: \"Washing machine broken, it's LG , we have googled it, it has power failure and can't be fixed, I am willing to replace, this one was here when I moved in, but if I replace it will be mine and not become part of the property, if I ever was to move out I would take it with me.\" Machine was in the property at move-in, so presumed landlord-supplied appliance (landlord responsibility to repair/replace unless landlord accepts tenant's offer). \"Can't be fixed\" is the tenant's own conclusion from an online search, not an engineer diagnosis. Intake classification: Appliances / power failure, ROUTINE (non-essential appliance, no safety risk reported - no sparking/burning/shocks mentioned). No pets, no access considerations. No photos received yet. Property, tenancy and repair-history lookups returned no records; case file used as system of record. No prior repairs on record (no warranty/callback to check). Next step: landlord approval step - landlord to choose between (a) we instruct an appliance engineer to diagnose/repair, (b) landlord arranges own contractor/replacement, or (c) accept tenant's offer to fit their own machine (tenant-owned, removed at end of tenancy) and agree what happens to the existing landlord-owned LG machine.",
+        "reported_by": "Tenant (Flat 9, 59 Alder Lane)"
+      },
+      "output": {
+        "ticket_id": "TKT-1B8B91",
+        "property_id": "Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ",
+        "property_ref": "case file (not in local database)",
+        "title": "Washing machine (LG) not working - power failure; tenant offers to replace with own machine",
+        "category": "appliance",
+        "urgency": "routine",
+        "description": "Reported by tenant via portal 2025-07-26 14:02. Tenant's words: \"Washing machine broken, it's LG , we have googled it, it has power failure and can't be fixed, I am willing to replace, this one was here when I moved in, but if I replace it will be mine and not become part of the property, if I ever was to move out I would take it with me.\" Machine was in the property at move-in, so presumed landlord-supplied appliance (landlord responsibility to repair/replace unless landlord accepts tenant's offer). \"Can't be fixed\" is the tenant's own conclusion from an online search, not an engineer diagnosis. Intake classification: Appliances / power failure, ROUTINE (non-essential appliance, no safety risk reported - no sparking/burning/shocks mentioned). No pets, no access considerations. No photos received yet. Property, tenancy and repair-history lookups returned no records; case file used as system of record. No prior repairs on record (no warranty/callback to check). Next step: landlord approval step - landlord to choose between (a) we instruct an appliance engineer to diagnose/repair, (b) landlord arranges own contractor/replacement, or (c) accept tenant's offer to fit their own machine (tenant-owned, removed at end of tenancy) and agree what happens to the existing landlord-owned LG machine.",
+        "reported_by": "Tenant (Flat 9, 59 Alder Lane)",
+        "status": "open",
+        "created_at": "2026-10-10T12:07:19"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord of Flat 9, 59 Alder Lane, Eastmere",
+        "channel": "email",
+        "body": "Address: Flat 9, 59 Alder Lane, Eastmere, ZZ4 4ZZ\nRef: TKT-1B8B91\n\nHi,\n\nThe tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor?\n\nRequest description: \"Washing machine broken, it's LG , we have googled it, it has power failure and can't be fixed, I am willing to replace, this one was here when I moved in, but if I replace it will be mine and not become part of the property, if I ever was to move out I would take it with me.\"\n\nAs the machine was in the property when the tenant moved in, we understand it is a landlord-supplied appliance. Please note the tenant's view that it \"can't be fixed\" comes from an online search, not an engineer's diagnosis. Please let us know which option you prefer:\n1. We instruct an appliance engineer from our panel to diagnose and repair (within our £250 pre-authorised limit; we will come back to you for approval if a repair or replacement costs more).\n2. You arrange your own engineer or a replacement machine.\n3. You accept the tenant's offer to buy and fit their own washing machine at their cost. It would belong to the tenant, they would take it with them when they leave, and it would not form part of the inventory. If you choose this, please confirm what you want done with the existing LG machine (removed and disposed of, or stored), and note the property would then have no landlord-supplied washing machine when this tenancy ends.\n\nNo photos have been received yet; we have asked the tenant for photos of the machine and any error codes.\n\nKind regards,\nResolve AI, Maintenance Team"
+      },
+      "output": {
+        "message_id": "MSG-5A4BB7",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant of Flat 9, 59 Alder Lane, Eastmere",
+        "channel": "portal",
+        "body": "Hello,\n\nThank you for reporting the problem with the LG washing machine (ref TKT-1B8B91). As the machine was in the property when you moved in, it belongs to the landlord. We have told the landlord and asked whether they want us to send an engineer, arrange their own repair or replacement, or accept your offer to fit your own machine, which you would keep and take with you when you move out.\n\nUntil the landlord confirms, please do not remove, throw away or replace the existing machine. We will let you know their decision as soon as we hear back.\n\nIn the meantime, please could you:\n- send photos of the machine, including the display and any error codes;\n- check the plug is fully in and the socket works (try another small appliance in it), and check whether the fuse in the plug or a trip switch on the consumer unit has gone.\n\nIf you notice any burning smell, sparking or smoke from the machine or socket, switch it off at the wall, do not use it, and tell us straight away.\n\nKind regards,\nResolve AI, Maintenance Team"
+      },
+      "output": {
+        "message_id": "MSG-83B0DD",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-1B8B91",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: approval email sent 26/07 asking for one of 3 options (we instruct an engineer, landlord uses their own, or tenant fits their own machine). Chase Wed 30/07/2025 if no reply."
+      },
+      "output": {
+        "status_id": "STS-7E4CA1",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-1B8B91",
+        "note": "Landlord approval step done 2025-07-26 14:03. The property, tenancy and repair-history lookups all came back empty, so the case file is the system of record. Landlord and tenant names are not in the case file, so both were messaged by role through their platform contact records. Classed as routine: the washing machine is a non-essential appliance and no electrical hazard was reported. The tenant was asked for photos and basic power checks, and was told not to remove the landlord's machine. No contractor booked because the landlord approval step is pending. If the landlord picks option 1: search the panel for an appliance engineer, book within £250, then send the tenant the \"provider instructed\" message. If option 3: get it in writing that the tenant's machine is tenant-owned and outside the inventory, and record what happens to the existing LG machine (disposal/storage, and who pays for it). Then close as completed without payment / closed, no action. Chase the landlord on 30/07. If still silent after repeated chases, review manually."
+      },
+      "output": {
+        "note_id": "NOTE-3B5BBF",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I've asked the landlord what they want done about the broken washing machine, and the case is on hold until they reply. I'll chase them on Wed 30/07/2025 if they don't answer.\n\n**Where it stands:** The tenant at Flat 9, 59 Alder Lane, Eastmere reports their LG washing machine has a power failure. It was in the flat when they moved in, so it's the landlord's appliance. The tenant has offered to buy their own machine, keep it and take it when they leave. The case history said the landlord approval step had to come first, so I did that.\n\n**Checks:** There's no record of this property or its tenancy, and no past repairs on file. I've used the case file as the record instead. With no past repairs, there's no warranty or callback to follow up.\n\n**Urgency:** Routine. A washing machine isn't an essential appliance and the tenant didn't mention sparking, burning or shocks. Their view that it \"can't be fixed\" came from googling it, not from an engineer.\n\n**What I did:**\n1. **Ticket:** opened ticket TKT-1B8B91 (appliance, routine).\n2. **Landlord:** sent the standard approval email, quoting the tenant's message word for word. It gives three options:\n   - we send an appliance engineer from our approved list, spending up to £250 without further approval;\n   - the landlord arranges their own engineer or replacement;\n   - the landlord accepts the tenant's offer. The tenant's machine would stay theirs and not go on the inventory, and the landlord would need to say what happens to the old LG machine.\n3. **Tenant:** messaged them through the portal. The message:\n   - explains the landlord has been asked to decide;\n   - asks them not to remove or replace the old machine yet;\n   - asks for photos of the machine and any error codes;\n   - suggests basic power checks (plug, socket, fuse, trip switch);\n   - says to switch it off and tell us straight away if they notice burning, sparking or smoke.\n4. **Status:** set to awaiting landlord, plus an internal note setting out what to do for each option.\n\nNo engineer is booked yet, because that depends on what the landlord chooses. I haven't escalated, because nothing here needs a manager's decision.\n\n**Gaps:** The case file doesn't give the landlord's or tenant's names, so both messages went to their contact records by role. Both were delivered.\n\n**Next:**\n- If the landlord wants our engineer: find one on the approved list and book them within £250.\n- If they accept the tenant's offer: get written confirmation that the new machine belongs to the tenant, and agree what happens to the old one."
+  ]
+}

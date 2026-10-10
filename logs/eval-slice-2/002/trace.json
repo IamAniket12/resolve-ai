@@ -1,0 +1,517 @@
+{
+  "case_id": "002",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 7,
+  "started_at": "2026-10-10T11:05:29+00:00",
+  "finished_at": "2026-10-10T11:07:35+00:00",
+  "usage": {
+    "input_tokens": 20,
+    "output_tokens": 7481,
+    "cache_read_input_tokens": 91023,
+    "cache_creation_input_tokens": 25652
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 799,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 405,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The agency manager logged a blocked toilet at Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ: 'Toilet need to be removed to clear blockage. Run block lodged by pan connector.' By the time I picked the case up, the landlord had already approved by phone and the manager had rung Leo at Riverside Works, who will call the tenant to arrange a visit. The property isn't in the local database, and Riverside Works isn't on the approved contractor list the tools return.",
+    "issue_category": "plumbing/blockage (blocked toilet)",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "Ticket TKT-AC9B35 is open and set to provider assigned: Riverside Works (Leo) has been instructed and is arranging access with the tenant. Tenant and landlord have been told. Chase is due Mon 10 Aug 2026, and the contractor must attend by Wed 12 Aug 2026 (urgent band).",
+    "actions_taken": [
+      "lookup_property for Flat 3, 15 Willowmere Road, ZZ3 2ZZ: no record found, so the case file was used as the system of record",
+      "search_contractors for plumber, drainage and handyperson at ZZ3 2ZZ: Riverside Works not returned, and no listed contractor covers ZZ3",
+      "create_maintenance_ticket TKT-AC9B35 (plumbing, urgent)",
+      "record_note NOTE-C3DBA0: pickup state, records gaps, contractor not on approved list, £250 spend risk, possible recharge to tenant",
+      "send_message email to Riverside Works (Leo) with job details, £250 quote-first condition and completion evidence request (MSG-F987D6, delivered)",
+      "send_message SMS nudge to Riverside Works (MSG-C4BF6B, delivered)",
+      "send_message email to tenant: provider instructed, pets reminder, asked whether this is the only toilet, advised not to flush (MSG-ED0541, delivered)",
+      "send_message email to landlord confirming the contractor is instructed and that a quote will come first if the cost goes over £250 (MSG-8FF863, delivered)",
+      "update_case_status to provider_assigned (STS-F00E30), chase 10 Aug 2026"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "TKT-AC9B35, Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ. Blocked toilet: the pan needs removing to clear a blockage lodged at the pan connector. The landlord approved by phone and the agency manager instructed Riverside Works (Leo), who will arrange access with the tenant. We have emailed and texted the contractor and emailed the tenant and landlord. Status is provider assigned; we are waiting for the contractor's appointment date. To do: (1) confirm Riverside Works is an approved contractor, or add them to the approved list, because the tools didn't return them; (2) chase Riverside Works on Mon 10 Aug if there's no date, since they must attend by Wed 12 Aug; (3) if their quote is over £250 inc VAT, send it to the landlord for approval before the work goes ahead; (4) at completion, get photos, the cause of the blockage, the tenant's confirmation and an invoice that matches the quote, and consider recharging the tenant if the blockage was caused by misuse."
+    },
+    "conflicts": [
+      {
+        "description": "The agency manager instructed Riverside Works, but they don't appear in the plumber, drainage or handyperson searches, and no listed contractor covers ZZ3.",
+        "how_resolved": "I kept the manager's direct instruction, since a human had already made this choice, and didn't book a slot through the system. This is flagged in an internal note and the status comment for a manager to confirm approval. It doesn't change what happens next, so I didn't escalate."
+      },
+      {
+        "description": "The ticket system recorded the ticket's created_at as 2026-10-10, but the case date is 2026-08-07.",
+        "how_resolved": "I used the case date (7 Aug 2026) for all deadlines and chase dates and treated the system timestamp as an artefact."
+      }
+    ],
+    "information_gaps": [
+      "Property not in the local database: the case file was used as the system of record.",
+      "Tenancy (tenant name, contacts, vulnerability, access notes) couldn't be checked because there's no property ID. Messages were addressed to the tenant by role through the platform's contact record.",
+      "Repair history couldn't be checked, so whether this is a repeat blockage or covered by a warranty is unknown.",
+      "Whether this is the only toilet: asked the tenant.",
+      "Cost estimate not given: the contractor has been asked to quote before going over £250.",
+      "Cause of the blockage unknown: the contractor has been asked to report it.",
+      "Landlord name and any standing instructions unknown: the landlord was addressed by role."
+    ],
+    "assumptions": [
+      "The flat has only one toilet, so the case is urgent with a 3-working-day target (by 12 Aug 2026).",
+      "The landlord's phone approval covers work up to the default £250 limit; anything above that needs the landlord to approve a quote.",
+      "Riverside Works is acceptable as a contractor the manager instructed directly, pending confirmation that they're approved."
+    ],
+    "tenant_communication": "Email (MSG-ED0541): Riverside Works will contact you to arrange a visit for the blocked toilet; please tell them about any pets; please confirm whether this is the only toilet and report any overflow or leak; please avoid flushing it until the repair is done.",
+    "landlord_communication": "Email (MSG-8FF863): confirmed that Riverside Works has been instructed as agreed by phone and is arranging access with the tenant; we'll send a quote for approval first if the cost will be over £250 inc VAT, and we'll report the cause of the blockage.",
+    "next_steps": [
+      "A manager confirms Riverside Works is an approved contractor or adds them to the approved list.",
+      "Chase Riverside Works on Mon 10 Aug 2026 if they haven't given an appointment date; the deadline is Wed 12 Aug.",
+      "If the tenant says there's another toilet, the urgency can drop to routine; if there's an overflow or leak, re-triage.",
+      "If the quote is over £250, send it to the landlord for approval and put the case on hold waiting for the landlord.",
+      "Completion check: contractor confirms done, photos and cause of blockage received, tenant confirms, invoice matches the quote; then close as completed.",
+      "If the contractor reports misuse (wipes or foreign objects), tell the tenant the cost may be recharged."
+    ],
+    "risk_flags": [
+      "Contractor Riverside Works not on the approved contractor list the tools return, and no listed contractor covers ZZ3: approval status unverified.",
+      "Tenancy and vulnerability details couldn't be verified because the property isn't in the database.",
+      "Possible spend over the £250 pre-authorised limit (pan removal and re-seat).",
+      "Possible recharge to the tenant if the blockage was caused by misuse."
+    ],
+    "confidence": 0.8,
+    "reasoning": "The case history shows the landlord approval step was done ('Landlord approval confirmed. Proceed to provider selection') and a contractor was instructed by phone. The correct next steps were therefore to record the work and send the standard communications, not to repeat approval or choose a different contractor. A blocked toilet in a flat is most likely the only toilet, so it is urgent under policy section 1, and the tenant has been asked to confirm. Policy section 0 says an empty database lookup isn't a reason to stop, so the case file was used as the record. Riverside Works wasn't returned by the contractor search. The policy says to book only contractors the tools return, so I didn't make a system booking; the manager had already instructed them directly, and I flagged their approval status for confirmation rather than overriding a human decision. No safety rule applies and the work is within authority, with a quote-first condition if the cost goes over £250, so per section 8 I didn't escalate."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 3, 15 Willowmere Road, ZZ3 2ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 3, 15 Willowmere Road, ZZ3 2ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "plumber",
+        "postcode": "ZZ3 2ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "plumber",
+        "postcode": "ZZ3 2ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-CP02",
+            "name": "Coastal Plumbing",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "BN"
+            ],
+            "rating": 4.8,
+            "emergency": false,
+            "call_out_gbp": 85,
+            "phone": "+44 1273 000111",
+            "email": "hello@coastalplumbing.example.com"
+          },
+          {
+            "contractor_id": "CON-TH01",
+            "name": "Thames Heating Ltd",
+            "trades": [
+              "gas_engineer",
+              "plumber"
+            ],
+            "certifications": [
+              "Gas Safe 512345"
+            ],
+            "postcode_areas": [
+              "SE",
+              "SW",
+              "E",
+              "N",
+              "CR"
+            ],
+            "rating": 4.6,
+            "emergency": true,
+            "call_out_gbp": 120,
+            "phone": "+44 20 7946 0101",
+            "email": "jobs@thamesheating.example.com"
+          },
+          {
+            "contractor_id": "CON-MH06",
+            "name": "Manchester Heat & Gas",
+            "trades": [
+              "gas_engineer",
+              "plumber"
+            ],
+            "certifications": [
+              "Gas Safe 633001"
+            ],
+            "postcode_areas": [
+              "M"
+            ],
+            "rating": 4.5,
+            "emergency": true,
+            "call_out_gbp": 115,
+            "phone": "+44 161 000 0106",
+            "email": "jobs@mhg.example.com"
+          },
+          {
+            "contractor_id": "CON-TP12",
+            "name": "Trent Plumb & Heat",
+            "trades": [
+              "plumber",
+              "gas_engineer"
+            ],
+            "certifications": [
+              "Gas Safe 644210",
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "NG",
+              "DE"
+            ],
+            "rating": 4.4,
+            "emergency": true,
+            "call_out_gbp": 110,
+            "phone": "+44 115 000 0112",
+            "email": "jobs@trentplumbheat.example.com"
+          },
+          {
+            "contractor_id": "CON-SP04",
+            "name": "Sussex Plumb & Heat",
+            "trades": [
+              "plumber",
+              "gas_engineer"
+            ],
+            "certifications": [
+              "Gas Safe 601122",
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "BN",
+              "RH"
+            ],
+            "rating": 4.3,
+            "emergency": true,
+            "call_out_gbp": 110,
+            "phone": "+44 1273 000222",
+            "email": "jobs@sussexplumbheat.example.com"
+          },
+          {
+            "contractor_id": "CON-WP11",
+            "name": "Wharf Plumbing",
+            "trades": [
+              "plumber",
+              "drainage"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "BS"
+            ],
+            "rating": 4.3,
+            "emergency": true,
+            "call_out_gbp": 100,
+            "phone": "+44 117 000 0111",
+            "email": "ops@wharfplumbing.example.com"
+          },
+          {
+            "contractor_id": "CON-RP03",
+            "name": "RapidPlumb",
+            "trades": [
+              "plumber",
+              "drainage"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BR"
+            ],
+            "rating": 4.1,
+            "emergency": true,
+            "call_out_gbp": 95,
+            "phone": "+44 20 7946 0103",
+            "email": "ops@rapidplumb.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "search_contractors",
+      "input": {
+        "trade": "drainage",
+        "postcode": "ZZ3 2ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "drainage",
+        "postcode": "ZZ3 2ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-WP11",
+            "name": "Wharf Plumbing",
+            "trades": [
+              "plumber",
+              "drainage"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "BS"
+            ],
+            "rating": 4.3,
+            "emergency": true,
+            "call_out_gbp": 100,
+            "phone": "+44 117 000 0111",
+            "email": "ops@wharfplumbing.example.com"
+          },
+          {
+            "contractor_id": "CON-RP03",
+            "name": "RapidPlumb",
+            "trades": [
+              "plumber",
+              "drainage"
+            ],
+            "certifications": [
+              "WaterSafe"
+            ],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BR"
+            ],
+            "rating": 4.1,
+            "emergency": true,
+            "call_out_gbp": 95,
+            "phone": "+44 20 7946 0103",
+            "email": "ops@rapidplumb.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "handyperson",
+        "postcode": "ZZ3 2ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "handyperson",
+        "postcode": "ZZ3 2ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-HP07",
+            "name": "HandyPro",
+            "trades": [
+              "handyperson",
+              "locksmith",
+              "glazier"
+            ],
+            "certifications": [],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.2,
+            "emergency": true,
+            "call_out_gbp": 75,
+            "phone": "+44 20 7946 0107",
+            "email": "jobs@handypro.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ",
+        "title": "Blocked toilet - pan removal to clear run blockage at pan connector",
+        "category": "plumbing",
+        "urgency": "urgent",
+        "description": "Reported (via agency manager): \"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\" Landlord verbally approved instructing a contractor (2026-08-07 11:48). Agency manager rang Leo at Riverside Works, who will call the tenant to arrange attendance ASAP. Classified URGENT: blocked toilet, flat, assumed only toilet (not confirmed) - policy: blocked only toilet = urgent, contractor within 3 working days (by Wed 12 Aug 2026). Property not in local property DB; case file used as system of record; no tenancy/repair history available to check for recurring blockage or warranty. Cause of blockage unknown - if contractor finds misuse (e.g. wipes/sanitary items) the tenant may be rechargeable; contractor asked to report cause.",
+        "reported_by": "Agency manager (on behalf of tenant)"
+      },
+      "output": {
+        "ticket_id": "TKT-AC9B35",
+        "property_id": "Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ",
+        "property_ref": "case file (not in local database)",
+        "title": "Blocked toilet - pan removal to clear run blockage at pan connector",
+        "category": "plumbing",
+        "urgency": "urgent",
+        "description": "Reported (via agency manager): \"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\" Landlord verbally approved instructing a contractor (2026-08-07 11:48). Agency manager rang Leo at Riverside Works, who will call the tenant to arrange attendance ASAP. Classified URGENT: blocked toilet, flat, assumed only toilet (not confirmed) - policy: blocked only toilet = urgent, contractor within 3 working days (by Wed 12 Aug 2026). Property not in local property DB; case file used as system of record; no tenancy/repair history available to check for recurring blockage or warranty. Cause of blockage unknown - if contractor finds misuse (e.g. wipes/sanitary items) the tenant may be rechargeable; contractor asked to report cause.",
+        "reported_by": "Agency manager (on behalf of tenant)",
+        "status": "open",
+        "created_at": "2026-10-10T12:06:40"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-AC9B35",
+        "note": "Pickup state: landlord approval confirmed verbally; provider (Riverside Works, contact Leo) instructed by phone by the agency manager, who will contact the tenant directly. Checks: property lookup empty (case file = record); tenancy and repair history could not be checked (no property ID). Riverside Works was NOT returned by search_contractors (plumber/drainage/handyperson), and no panel contractor covers ZZ3. The manager's direct instruction was respected; no slot was booked through the tool because none exists. Please add Riverside Works to the approved panel, or confirm they are an approved off-panel/landlord contractor. Spend: no estimate given. Default authority is £250 inc VAT, and pan removal plus re-seat could exceed it. Contractor has been asked to confirm the cost before going over £250. Cause of blockage to be reported, as a misuse blockage could be recharged to the tenant."
+      },
+      "output": {
+        "note_id": "NOTE-C3DBA0",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Riverside Works (Leo)",
+        "channel": "email",
+        "body": "Request: Blocked toilet - pan removal to clear run blockage at pan connector (our ref TKT-AC9B35)\nAddress: Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ\nTenant: details as given on our call. Please contact the tenant at Flat 3 directly to arrange access.\nRequest description: \"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\"\nPriority: urgent. Please attend within 3 working days (by Wed 12 Aug 2026).\n\nThanks for agreeing to take this on by phone. Please book the appointment with the tenant as soon as possible. If you have already scheduled one, reply with the date and time.\n- Our pre-authorised limit is £250 inc VAT. If the job will cost more, please send a quote before going ahead.\n- On completion, please send photos, the cause of the blockage (e.g. foreign objects or wipes, or a fault with the connector or pipework) and your invoice."
+      },
+      "output": {
+        "message_id": "MSG-F987D6",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Riverside Works (Leo)",
+        "channel": "sms",
+        "body": "Hello, this is Resolve Lettings! Please check your email about the property at Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ (ref TKT-AC9B35)."
+      },
+      "output": {
+        "message_id": "MSG-C4BF6B",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant, Flat 3, 15 Willowmere Road",
+        "channel": "email",
+        "body": "Dear Tenant,\n\nOur maintenance provider Riverside Works will be attending your property for a blocked toilet (pan removal to clear the blockage).\nThey will contact you soon to arrange a mutually convenient time to visit and triage the problem or prepare the quote if needed.\nRequest description: Toilet need to be removed to clear blockage. Run block lodged by pan connector.\nIf you have any pets, please ensure you inform our provider.\n\nPlease reply to let us know if this is the only toilet in the property, or if anything gets worse (for example, water leaking or overflowing). Until the repair is done, please avoid flushing this toilet.\n\nKind regards,\nResolve Lettings Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-ED0541",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord, Flat 3, 15 Willowmere Road",
+        "channel": "email",
+        "body": "Address: Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ\n\nHi,\nThank you for approving this today. As agreed, we have instructed Riverside Works to attend for the blocked toilet (ref TKT-AC9B35). They are arranging access with the tenant directly.\nRequest description: \"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\"\nIf the cost will be more than £250 inc VAT, we will send you their quote for approval before the work goes ahead. We will also tell you the cause of the blockage once the contractor has reported it.\n\nKind regards,\nResolve Lettings Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-8FF863",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-AC9B35",
+        "status": "provider_assigned",
+        "comment": "Maintenance provider assigned: Riverside Works (Leo) is arranging access with the tenant. Waiting for Provider to give an appointment date. Chase Mon 10 Aug 2026; must attend by Wed 12 Aug (urgent band). Riverside Works is not on the tool panel, so a manager should confirm their approval."
+      },
+      "output": {
+        "status_id": "STS-F00E30",
+        "status": "provider_assigned",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I'll start by checking the property, tenancy and repair history.",
+    "The property lookup came back empty, so the case file is the system of record. Next I'll check that Riverside Works is on the approved panel.",
+    "Riverside Works isn't on the plumber or drainage panel. I'll check the handyperson list before deciding how to handle that.",
+    "Riverside Works is now the assigned contractor on ticket TKT-AC9B35. We're waiting for them to agree an appointment with the tenant, and I'll chase them on Mon 10 Aug if there's no date.\n\n**Where the case stood when I picked it up:** the landlord had already approved by phone, and the agency manager had already called Leo at Riverside Works, who said she'd ring the tenant to arrange a visit. I didn't repeat either step.\n\n**Checks:**\n- **Property:** the records lookup found nothing, so I used the case file as the record.\n- **Tenancy and repair history:** I couldn't check these because there's no property ID. So I can't tell whether this is a repeat blockage or whether a warranty applies.\n- **Contractor:** Riverside Works didn't come up in the plumber, drainage or handyperson searches, and no listed contractor covers ZZ3. I kept the manager's direct instruction rather than override it. I didn't book a slot through the system because there's no slot for an unlisted contractor.\n\n**What I did:**\n- **Ticket:** opened TKT-AC9B35 as plumbing, urgent. A blocked toilet in a flat is probably the only toilet, which makes it urgent. That means the contractor should attend within 3 working days, by Wed 12 Aug.\n- **Internal note:** recorded the gaps in the records, the contractor issue and the cost risk.\n- **Riverside Works:** sent the standard job email and SMS. I asked them to book with the tenant and reply with the date. I also asked them to send a quote before going over our £250 limit, and afterwards to send photos, the cause of the blockage and their invoice.\n- **Tenant:** sent the \"provider instructed\" email (with the reminder to mention pets). It asks whether this is the only toilet and says not to flush it in the meantime.\n- **Landlord:** confirmed the contractor has been instructed and said we'll send a quote first if the cost goes over £250.\n- **Status:** set to provider assigned, with the chase date above.\n\n**Assumptions:**\n- I've assumed this is the only toilet; the tenant has been asked to confirm.\n- The cause of the blockage is unknown. If it turns out to be misuse, such as wipes, the tenant may have to pay. I haven't told the tenant this, because nothing shows misuse yet.\n\n**What a person needs to do next:**\n- A manager needs to confirm Riverside Works is an approved contractor, or add them to the approved list.\n- Chase Riverside Works on 10 Aug if they haven't given a date.\n- If their quote is over £250, get the landlord's approval before the work goes ahead.\n- At completion, check the photos, the cause of the blockage, the tenant's confirmation, and that the invoice matches the quote.\n\nI didn't escalate, because nothing about safety or authority needed a human decision."
+  ]
+}

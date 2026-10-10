@@ -1,0 +1,300 @@
+{
+  "case_id": "044",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 5,
+  "started_at": "2026-10-10T11:07:02+00:00",
+  "finished_at": "2026-10-10T11:08:21+00:00",
+  "usage": {
+    "input_tokens": 16,
+    "output_tokens": 5983,
+    "cache_read_input_tokens": 67066,
+    "cache_creation_input_tokens": 10703
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 649,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 396,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "On 13 Jan 2025 the tenant of Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ reported that the window handle fell off when they opened the blind, and the window can no longer be opened. The case was waiting at 'Please approve selection of provider and category' and then sat for 6 days until a 19 Jan hold note saying 'Will email LL'. The landlord approval step had not been done. Our database has no record of the property, tenancy or past repairs.",
+    "issue_category": "structural (window fixture / handle)",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "Ticket TKT-F69EB5 is open as routine. The landlord approval email and a holding message to the tenant were both delivered. The case is on hold (Waiting for Landlord) with a chase date of 22 Jan 2025. No contractor is booked until the landlord replies.",
+    "actions_taken": [
+      "Looked up the property by full address and by postcode: no record found either time. Case file used as the system of record.",
+      "Checked repair history: no jobs on record.",
+      "Checked tenancy: no record. Tenant addressed by role.",
+      "Created maintenance ticket TKT-F69EB5 (routine, structural/window handle, tenant's words quoted exactly).",
+      "Searched approved glaziers for ZZ9 4ZZ: only HandyPro (CON-HP07, rating 4.2, call-out £75) came back, and its listed coverage does not include ZZ9.",
+      "Sent the standard landlord approval email (MSG-4C4BC5, delivered) quoting the tenant's words and asking whether to instruct our contractor, use their own, or decline.",
+      "Emailed the tenant (MSG-A1AFA9, delivered): apology for the delay, waiting on landlord approval, keep the parts, send a photo, tell us urgently if the window can't be secured or is needed for ventilation or escape, and mention pets to the contractor.",
+      "Added internal note NOTE-1D3891 to the ticket.",
+      "Set case status to awaiting_landlord (STS-785FB7) with a chase date of 22 Jan 2025."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Property: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ. Our database has nothing on it (property, tenancy and repair-history lookups all empty), so the case file is the record. Ticket TKT-F69EB5, routine. Issue: the window handle fell off on 13 Jan and the window won't open; it stays shut, so the flat is still secure. Landlord approval email sent 19 Jan 2025 (MSG-4C4BC5); waiting for their answer: our contractor, their own, or decline. Tenant told we're waiting on the landlord and asked for a photo (MSG-A1AFA9). Status: awaiting_landlord, chase 22 Jan 2025, then pass to a manager if there's still no reply. Possible contractor: HandyPro (CON-HP07, +44 20 7946 0107, jobs@handypro.example.com, call-out £75), but its listed areas don't include ZZ9, so check coverage before booking or find another glazier/handyperson. Expected cost is within the £250 default limit. If the tenant says the window is needed for ventilation or as a way out, or can't be secured, raise the urgency."
+    },
+    "conflicts": [
+      {
+        "description": "The case file gives a full property address and an active tenant report, but the property, tenancy and repair-history lookups all came back empty.",
+        "how_resolved": "Following policy, the case file was treated as the system of record. The empty lookups were recorded on the ticket. The gap doesn't change what we do next."
+      },
+      {
+        "description": "HandyPro, the only glazier on the approved list, does not list ZZ9 in its coverage areas.",
+        "how_resolved": "Not booked. Coverage needs confirming before any booking once the landlord approves; otherwise find another contractor."
+      }
+    ],
+    "information_gaps": [
+      "The case file doesn't name the landlord or tenant and there are no contact details. Messages were addressed by role through the platform contact records.",
+      "No landlord standing instructions or spend limit on record, so we followed the agency's normal step of asking the landlord first (the 19 Jan hold note planned that).",
+      "No photo of the window or handle, and the window type is unknown. Photo requested from the tenant.",
+      "Unknown whether the window is needed for ventilation or as a fire escape. Tenant asked to tell us if so.",
+      "No contractor on the panel confirmed as covering ZZ9. To be checked when we choose a provider."
+    ],
+    "assumptions": [
+      "The window remains shut and secure, so this is not a security emergency.",
+      "The window and handle belong to the landlord, so the repair is the landlord's responsibility.",
+      "The cost (a replacement handle) is likely within the £250 default pre-approved limit.",
+      "No vulnerable occupants, since none were mentioned."
+    ],
+    "tenant_communication": "Emailed the tenant (delivered): apologised for the delay; said we've asked the landlord for approval to send a contractor and will tell them who is coming; asked them to keep the handle and parts and send a photo; asked them to tell us at once if the window can't be closed or locked, or is needed for ventilation or escape; reminded them to mention pets to the contractor.",
+    "landlord_communication": "Sent the standard landlord approval email (delivered) quoting the tenant's report word for word. It asks whether they want us to instruct a contractor, will arrange their own, or decline, and says the cost is likely within the £250 limit. Ref TKT-F69EB5.",
+    "next_steps": [
+      "Chase the landlord on 22 Jan 2025 if no reply; pass to the property manager if they stay silent.",
+      "If the landlord approves, check that HandyPro (CON-HP07) covers ZZ9, or find another glazier/handyperson, then book a routine slot (within 20 working days) with at least 24 hours' notice to the tenant.",
+      "Tell the tenant the contractor's name, slot and contact details once booked.",
+      "If the landlord will use their own contractor, record it and later close as completed without payment once the tenant confirms the repair.",
+      "If the tenant reports the window is needed for escape or ventilation, or can't be secured, raise the urgency."
+    ],
+    "risk_flags": [
+      "Delay: the report sat 6 days without contacting the landlord.",
+      "Possible fire-escape or ventilation concern if this is the only openable window (not confirmed; tenant asked).",
+      "No property or tenancy record in our database; tenancy status not checked against our records."
+    ],
+    "confidence": 0.85,
+    "reasoning": "The window handle came off and the window is stuck shut. There is no security, safety or vulnerability issue, so under section 1 this is routine. The window is a landlord fixture, so the landlord is responsible. The history showed the landlord approval step was still to do ('Will email LL'), and the case file has no standing instructions or pre-approval, so the right next step was the standard approval email. After that the case goes on hold (Waiting for Landlord) with a 3-day chase, as the workflow requires. The empty lookups are not a reason to stop, because policy says to use the case file. Booking now would skip the landlord step, and the only panel glazier doesn't list coverage for ZZ9, so no booking was made. No safety rule applies and the policy gives a clear answer, so no escalation is needed."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ9 4ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ9 4ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ"
+      },
+      "output": {
+        "property_id": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ"
+      },
+      "output": {
+        "found": false,
+        "property_id": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+        "tenancies": [],
+        "active_tenancy": null,
+        "note": "No tenancy record in the local database. Use the tenant named in the case file; the platform holds their contact details, so messages can be addressed by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+        "title": "Window handle repair - handle fell off, window cannot be opened",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Tenant reported 2025-01-13 07:04 UTC (verbatim): \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\" Classification: ROUTINE (window remains closed and secure; no security, safety or vulnerability issue reported). Landlord-supplied fixture so landlord responsibility. Workflow: 2025-01-13 'Please approve selection of provider and category'; 2025-01-19 hold 'Will email LL' - landlord approval step not yet completed. Records: property, tenancy and repair-history lookups returned nothing; case file treated as system of record. No photos supplied. Likely trade: glazier / handyperson (replacement window handle), expected to be within £250 default limit.",
+        "reported_by": "Tenant"
+      },
+      "output": {
+        "ticket_id": "TKT-F69EB5",
+        "property_id": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+        "property_ref": "case file (not in local database)",
+        "title": "Window handle repair - handle fell off, window cannot be opened",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Tenant reported 2025-01-13 07:04 UTC (verbatim): \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\" Classification: ROUTINE (window remains closed and secure; no security, safety or vulnerability issue reported). Landlord-supplied fixture so landlord responsibility. Workflow: 2025-01-13 'Please approve selection of provider and category'; 2025-01-19 hold 'Will email LL' - landlord approval step not yet completed. Records: property, tenancy and repair-history lookups returned nothing; case file treated as system of record. No photos supplied. Likely trade: glazier / handyperson (replacement window handle), expected to be within £250 default limit.",
+        "reported_by": "Tenant",
+        "status": "open",
+        "created_at": "2026-10-10T12:07:28"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "glazier",
+        "postcode": "ZZ9 4ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "glazier",
+        "postcode": "ZZ9 4ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-HP07",
+            "name": "HandyPro",
+            "trades": [
+              "handyperson",
+              "locksmith",
+              "glazier"
+            ],
+            "certifications": [],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.2,
+            "emergency": true,
+            "call_out_gbp": 75,
+            "phone": "+44 20 7946 0107",
+            "email": "jobs@handypro.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord of Flat 21, 129 Juniper Mews",
+        "channel": "email",
+        "body": "Address: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ\n\nHi,\n\nThe tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor?\n\nRequest description: \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\"\n\nWe expect this to be a routine replacement of the window handle (glazier/handyperson), likely within the standard £250 pre-authorised limit. If you would like us to instruct, we will arrange it and keep you updated. No photos were supplied by the tenant.\n\nReference: TKT-F69EB5\n\nKind regards,\nResolve AI - Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-4C4BC5",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant of Flat 21, 129 Juniper Mews",
+        "channel": "email",
+        "body": "Dear Tenant,\n\nThank you for reporting the broken window handle at Flat 21, 129 Juniper Mews (ref TKT-F69EB5), and sorry for the delay. We have now contacted your landlord for their go-ahead to send a contractor to replace the handle. Once they reply we will tell you who is coming. The contractor will then contact you to arrange a time.\n\nIn the meantime, please keep the handle and any screws or parts that fell off. If you can, reply with a photo of the window and the handle, as this helps the contractor bring the right part. If the window can't be closed or locked properly, or if you rely on this window for ventilation or as a way out in an emergency, please tell us straight away so we can deal with it urgently.\n\nIf you have any pets, please let the contractor know when they get in touch.\n\nKind regards,\nResolve AI - Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-A1AFA9",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-F69EB5",
+        "note": "Property/tenancy/repair history lookups empty (address and postcode tried) - case file used as system of record; landlord and tenant names not in case file, messages addressed by role. Case sat 6 days (13->19 Jan) before landlord contact - tenant apologised to. Landlord approval email sent 2025-01-19. Provider pre-check: only panel glazier is HandyPro (CON-HP07, glazier/handyperson/locksmith, rating 4.2, call-out £75) but its listed coverage areas do not include ZZ9 - confirm coverage before booking. Not booked: awaiting landlord decision. Asked tenant for photo and to tell us if window cannot be secured or is a means of escape/ventilation (would upgrade urgency)."
+      },
+      "output": {
+        "note_id": "NOTE-1D3891",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-F69EB5",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: approval email sent 19 Jan (instruct us / own contractor / decline). Chase 22 Jan 2025; candidate HandyPro (CON-HP07) - confirm ZZ9 coverage."
+      },
+      "output": {
+        "status_id": "STS-785FB7",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The landlord has been sent the approval email, and the case is on hold waiting for their reply. I'll chase on 22 Jan 2025.\n\n**Where the case stood:** The tenant reported on 13 Jan that the window handle fell off and they can't open the window. The case then sat for six days with no action. The last entry on 19 Jan was \"Will email LL\", so the landlord approval step hadn't been done yet.\n\n**Records check:** Our database has nothing on this property. I tried the full address and the postcode, and the tenancy and repair-history lookups were also empty. I used the case file as the record instead. It doesn't name the landlord or the tenant, so I addressed both messages by role.\n\n**Urgency: routine.** The window is stuck shut, so the flat is still secure. No safety issue or vulnerable occupant was reported. The window is a landlord fixture, so the repair is the landlord's responsibility.\n\n**What I did:**\n- **Ticket:** opened TKT-F69EB5 (routine, quoting the tenant's report word for word).\n- **Landlord:** sent the standard approval email (delivered). It asks whether we should send our contractor, whether they'll use their own, or whether they decline. I said the cost will probably be within the £250 pre-approved limit.\n- **Tenant:** emailed them (delivered) to:\n  - apologise for the delay and say we're waiting on the landlord;\n  - ask them to keep the handle and parts and send a photo if they can;\n  - ask them to tell us straight away if the window can't be shut or locked properly, or if they need it for fresh air or as a way out in an emergency. That would make the job urgent;\n  - ask them to mention any pets to the contractor.\n- **Contractor check:** HandyPro (CON-HP07, call-out £75) is the only glazier on our approved list. Its listed areas don't include ZZ9, so nothing is booked. Booking also has to wait for the landlord's answer.\n- **Records:** added an internal note and set the status to \"awaiting landlord\" with the chase date.\n\n**Next steps for a person:**\n1. If the landlord says go ahead, check with HandyPro that they cover ZZ9 before booking. If they don't, find another glazier or handyperson.\n2. If there's no reply, chase on 22 Jan. If they still don't answer, pass it to a manager.\n3. If the tenant says the window is needed for fresh air or as a way out, or can't be secured, raise the urgency."
+  ]
+}

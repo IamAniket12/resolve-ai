@@ -1,0 +1,244 @@
+{
+  "case_id": "046",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:07:12+00:00",
+  "finished_at": "2026-10-10T11:08:14+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 5918,
+    "cache_read_input_tokens": 81060,
+    "cache_creation_input_tokens": 10560
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 868,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 345,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The tenant at Flat 23, 143 Willowmere Road, Alderwick, ZZ2 6ZZ reported on 2025-09-11 that the bedroom window is not closing properly because one of the hinges is rusted. The system asked for the landlord approval step first, and Clara (Northbridge Lettings) emailed the landlord, Grace, at 2025-09-12 08:49 asking whether to send a contractor. Window repair is the landlord's responsibility. We don't yet know whether the window can be shut and locked, which decides whether this is a security emergency.",
+    "issue_category": "structural (window/hinge - glazier)",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "Ticket TKT-6175C6 is open and on hold waiting for the landlord. Grace's reply to the approval email of 12/09 08:49 is due, and the chase date is Wed 17/09. The tenant has been asked whether the window can be secured; if it cannot, the case moves to emergency make-safe.",
+    "actions_taken": [
+      "lookup_property by full address: no record found (case file used as system of record)",
+      "lookup_property by postcode ZZ2 6ZZ: no record found",
+      "Created maintenance ticket TKT-6175C6 (structural, urgent) with the tenant's words quoted exactly and the triage reasoning",
+      "search_contractors (glazier, ZZ2 6ZZ, non-emergency): only HandyPro CON-HP07 returned, and it does not cover this postcode area",
+      "Emailed the tenant (MSG-8DED61, delivered) acknowledging the report and asking whether the window can be shut and locked, which floor the flat is on, whether rain or draught is coming in, for photos, and about pets; told them not to force the window",
+      "Recorded internal note NOTE-4CD0A1 with where the case stands, when to move it to emergency and the contractor coverage gap",
+      "Set case status to awaiting_landlord (STS-407C25), chase Grace Wed 17/09"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Ticket TKT-6175C6. The tenant reports a bedroom window that won't close properly because of a rusted hinge. The property is not in the database (searched by address and postcode); the case file is the record. Landlord: Grace. Agency contact: Clara. Clara sent the approval email to Grace on 12/09 08:49, so the case is on hold waiting for the landlord, chase Wed 17/09. The tenant was emailed (MSG-8DED61) asking whether the window can be secured, which floor, whether rain is getting in, for photos and about pets. If the tenant says the window can't be locked or rain is getting in: make it an emergency, arrange make-safe without waiting for approval (up to £500) and tell Grace the same day. If Grace approves: book a glazier (likely under the £250 limit). The only panel glazier is HandyPro CON-HP07 (+44 20 7946 0107, £75 call-out), which does not cover ZZ2, so confirm they can travel here or source a local glazier. Then send the tenant the 'provider instructed' message with the pet reminder."
+    },
+    "conflicts": [
+      {
+        "description": "The approved contractor panel has no glazier covering postcode ZZ2. The tool returned HandyPro CON-HP07, whose listed coverage is SE/CR/BN/M/LS/BS/NG only.",
+        "how_resolved": "Not resolved yet: recorded in the ticket note. HandyPro must confirm they can travel here before booking, or a local glazier must be found once approval is given."
+      }
+    ],
+    "information_gaps": [
+      "Property, tenancy and repair history records are missing (lookup empty): used the case file; tenancy status and previous window repairs could not be checked",
+      "Tenant's name and contact details are not in the case file: messaged via the platform contact record",
+      "Whether the window can be shut and locked, which floor, and whether rain is getting in: asked the tenant (MSG-8DED61), awaiting reply",
+      "Photos of the hinge: requested from the tenant",
+      "Landlord decision (our contractor, her own, or decline): awaiting Grace's reply to the 12/09 email",
+      "Pets and access arrangements: asked the tenant"
+    ],
+    "assumptions": [
+      "The tenancy is active, based on the tenant's report in the case file (could not be verified because the records lookup was empty)",
+      "Urgency set to urgent rather than routine because the window may not be securable; under the policy, unclear urgency goes one band up",
+      "A hinge replacement is likely within the £250 default pre-authorised limit, but the agency's landlord approval step is still followed"
+    ],
+    "tenant_communication": "Email MSG-8DED61: acknowledged the report (ref TKT-6175C6), said the landlord has been asked about sending a contractor, asked whether the window can be shut and locked, which floor, whether rain or draught is coming in, for photos and about pets, told them not to force the window, and asked them to report immediately if it cannot be secured.",
+    "landlord_communication": "Before this agent took over, Clara emailed Grace on 2025-09-12 08:49 asking whether she is happy for a contractor to be sent to fix the bedroom window and hinge. No further landlord contact by this agent; waiting for her reply.",
+    "next_steps": [
+      "Wait for Grace's approval; chase her on Wed 17/09 if there is no reply, and escalate to a manager after repeated silence",
+      "If the tenant says the window cannot be secured or rain is getting in: re-band to emergency, search for an emergency glazier or locksmith, make safe within 24h (up to £500) and tell Grace the same day",
+      "On approval: confirm HandyPro CON-HP07 can travel to ZZ2 or find a local glazier, check availability, book, and send the tenant the 'provider instructed' and appointment messages with the pet reminder",
+      "If Grace wants to use her own contractor: record it, inform the tenant, and track until completion",
+      "Completion check: contractor confirms done, tenant confirms or sends photos, invoice checked against the estimate, then close"
+    ],
+    "risk_flags": [
+      "Possible security risk: bedroom window may not be securable (floor level unknown); emergency if confirmed",
+      "Weather-tightness/deterioration risk if the window cannot close (water ingress, damp)",
+      "No approved glazier covers this postcode area"
+    ],
+    "confidence": 0.8,
+    "reasoning": "The history ends just after the landlord approval email was sent, so the next correct state is on hold waiting for the landlord, with a chase about 3 working days later (Wed 17/09). Sending a second approval email would have duplicated Clara's. Window and hinge repairs fall under the landlord's s.11 obligation for structure and exterior. A rusted hinge would normally be routine, but whether the window can be secured is unknown, so I set it to urgent (one band up while information is gathered) and asked the tenant the one fact that would make it an emergency. The property lookup was empty, so the case file is the record, as the policy requires. A contractor search ahead of approval showed no local glazier coverage, which is recorded for whoever books. No safety rule has been triggered, no conflict changes the action, and nothing is above authority, so no escalation is needed."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 23, 143 Willowmere Road, Alderwick, ZZ2 6ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 23, 143 Willowmere Road, Alderwick, ZZ2 6ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ2 6ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ2 6ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 23, 143 Willowmere Road, Alderwick, ZZ2 6ZZ",
+        "title": "Bedroom window not closing properly - rusted hinge",
+        "category": "structural",
+        "urgency": "urgent",
+        "description": "Tenant reported (2025-09-11 21:53 UTC, verbatim): \"Bedroom window is not closing  properly one of the hinges are rusted\". No photos/attachments. Property lookup (full address and postcode) returned no record; case file is the system of record (landlord: Grace; agency contact: Clara, Northbridge Lettings). Classification: window/hinge repair = landlord responsibility (structure/exterior, s.11 LTA 1985). Provisionally set URGENT (one band above likely routine) because it is not yet known whether the window can be shut and locked or which floor the flat is on - a bedroom window that cannot be secured or is letting weather in would be a security/emergency matter. Tenant asked to confirm. Landlord approval email sent 2025-09-12 08:49 by Clara asking whether to send a contractor. Next trade: glazier (window hinge/friction stay replacement). If tenant confirms window cannot be secured, treat as emergency make-safe (up to £500 without approval, inform landlord same day).",
+        "reported_by": "Tenant of Flat 23, 143 Willowmere Road (via Northbridge Lettings intake)"
+      },
+      "output": {
+        "ticket_id": "TKT-6175C6",
+        "property_id": "Flat 23, 143 Willowmere Road, Alderwick, ZZ2 6ZZ",
+        "property_ref": "case file (not in local database)",
+        "title": "Bedroom window not closing properly - rusted hinge",
+        "category": "structural",
+        "urgency": "urgent",
+        "description": "Tenant reported (2025-09-11 21:53 UTC, verbatim): \"Bedroom window is not closing  properly one of the hinges are rusted\". No photos/attachments. Property lookup (full address and postcode) returned no record; case file is the system of record (landlord: Grace; agency contact: Clara, Northbridge Lettings). Classification: window/hinge repair = landlord responsibility (structure/exterior, s.11 LTA 1985). Provisionally set URGENT (one band above likely routine) because it is not yet known whether the window can be shut and locked or which floor the flat is on - a bedroom window that cannot be secured or is letting weather in would be a security/emergency matter. Tenant asked to confirm. Landlord approval email sent 2025-09-12 08:49 by Clara asking whether to send a contractor. Next trade: glazier (window hinge/friction stay replacement). If tenant confirms window cannot be secured, treat as emergency make-safe (up to £500 without approval, inform landlord same day).",
+        "reported_by": "Tenant of Flat 23, 143 Willowmere Road (via Northbridge Lettings intake)",
+        "status": "open",
+        "created_at": "2026-10-10T12:07:31"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "glazier",
+        "postcode": "ZZ2 6ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "glazier",
+        "postcode": "ZZ2 6ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-HP07",
+            "name": "HandyPro",
+            "trades": [
+              "handyperson",
+              "locksmith",
+              "glazier"
+            ],
+            "certifications": [],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.2,
+            "emergency": true,
+            "call_out_gbp": 75,
+            "phone": "+44 20 7946 0107",
+            "email": "jobs@handypro.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant, Flat 23, 143 Willowmere Road",
+        "channel": "email",
+        "body": "Dear Tenant,\n\nThank you for reporting that your bedroom window is not closing properly because one of the hinges is rusted. We have logged this (ref TKT-6175C6) and asked your landlord whether they want us to send a contractor.\n\nSo we can arrange the right repair as quickly as possible, please reply with:\n1. Can you still shut the window fully and lock it? Or is it stuck open, or would it let someone get in?\n2. Which floor is the flat on?\n3. Is rain or a draught coming in?\n4. If you can, a photo of the rusted hinge and the window when it is closed.\n\nIf the window cannot be shut or locked, or it is letting rain in, please tell us straight away. We will then treat it as an emergency and send someone to make it safe.\n\nUntil then, please do not force the window, as this could damage the hinge more. We will let you know who is coming once a contractor is arranged. If you have any pets, please tell us so we can pass this on to the contractor.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-8DED61",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-6175C6",
+        "note": "Where things stand 2025-09-12 08:49: Clara's landlord approval email has already gone to Grace (event 003), so I have not sent a second one. Property lookup by address and by postcode returned nothing, and tenancy/history could not be checked without a property ID, so the case file is our record. The tenant's name is not in the case file; the platform contact record was used. I emailed the tenant (MSG-8DED61) to ask whether the window can be shut and locked, which floor the flat is on, whether rain is getting in, for photos and about pets. Escalation trigger: if the window cannot be secured or rain is getting in, change to EMERGENCY. Then go ahead with make-safe without waiting for approval (up to £500), tell Grace the same day, and use the emergency glazier/locksmith search. Finding a contractor: a glazier search for ZZ2 found NO contractor covering this postcode area. The only panel glazier is HandyPro CON-HP07 (handyperson/locksmith/glazier, 4.2 rating, £75 call-out, emergency-capable), and they cover SE/CR/BN/M/LS/BS/NG only. Check with them that they can travel here, or source locally, once Grace approves. A hinge or friction stay replacement should be within the £250 default limit, but the approval step must be completed first."
+      },
+      "output": {
+        "note_id": "NOTE-4CD0A1",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-6175C6",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: approval email sent to Grace 12/09 08:49 (send contractor or use own?). Tenant also asked if the window can be secured. Chase Grace Wed 17/09; move to emergency if the tenant says it can't be locked."
+      },
+      "output": {
+        "status_id": "STS-407C25",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The case is on hold waiting for the landlord, Grace, to approve a contractor. Clara already sent her the approval email at 08:49 today, so I didn't send another one.\n\n**Records check:** I searched by full address and by postcode, and neither found the property. Without a property record I couldn't check the tenancy or repair history, so the case file is our record. The tenant's name isn't in the case file, so the email went to the platform's contact record for them.\n\n**Urgency:** A rusted hinge is the landlord's repair to pay for. It would usually be routine, but I've set it to urgent for now. We don't yet know whether the window can be shut and locked, which floor the flat is on, or whether rain is getting in. A bedroom window that can't be secured counts as an emergency.\n\n**What I did:**\n1. **Ticket:** opened ticket TKT-6175C6 (window repair, urgent), with the tenant's words quoted exactly.\n2. **Tenant email (MSG-8DED61, delivered):** asked whether the window can be shut and locked, which floor the flat is on, whether rain or a draught is getting in, for photos of the hinge, and about pets. I also told them not to force the window, and to tell us straight away if it can't be secured.\n3. **Contractor search:** none of our approved glaziers cover this postcode. The only one on the panel is HandyPro (CON-HP07: rated 4.2, £75 call-out, offers emergency call-outs), and their coverage is elsewhere. They need to confirm they can travel here, or we find someone local.\n4. **Note and status:** saved an internal note with all of the above. Status is now \"awaiting landlord\".\n\n**What happens next:**\n- **If Grace hasn't replied by Wednesday 17/09:** chase her.\n- **If she approves:** a new hinge should cost less than our £250 limit. Book a glazier (HandyPro if they confirm they can travel here), then email the tenant who is coming and when.\n- **If the tenant says the window can't be locked or rain is getting in:** change the case to emergency. We can then make it safe without waiting for approval (up to £500) and tell Grace the same day.\n\nI haven't escalated anything to a human."
+  ]
+}

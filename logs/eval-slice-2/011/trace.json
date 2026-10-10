@@ -1,0 +1,258 @@
+{
+  "case_id": "011",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 7,
+  "started_at": "2026-10-10T11:05:29+00:00",
+  "finished_at": "2026-10-10T11:06:58+00:00",
+  "usage": {
+    "input_tokens": 20,
+    "output_tokens": 5846,
+    "cache_read_input_tokens": 74787,
+    "cache_creation_input_tokens": 33320
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 1982,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 717,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The tenant of Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ reported that the dishwasher (called a 'Riverside Services' dishwasher in the intake summary) turns on, fills and washes but never finishes its cycle. The problem started recently. There are two guinea pigs and no access restrictions. The history ended with the system asking for the landlord approval step to be completed first.",
+    "issue_category": "appliance",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "Opened ticket TKT-BE50D5 (routine, appliance). Sent the landlord the standard approval email asking whether to instruct our contractor or use their own, and sent the tenant a list of self-checks. The case is on hold Waiting for Landlord, with a chase date of 02/12/2026.",
+    "actions_taken": [
+      "Looked up the property by full address, postcode and street address: no record found each time; the case file was used as the system of record",
+      "Looked up the tenancy: no record found",
+      "Looked up the repair history: no previous jobs",
+      "Created maintenance ticket TKT-BE50D5 (appliance, routine)",
+      "Sent the landlord approval email (MSG-F2E5B1), quoting the tenant's words exactly and asking whether to instruct our contractor or use their own, whether the dishwasher is under warranty, and whether they want a quote first",
+      "Sent the tenant an email (MSG-15B3C2) acknowledging the report, listing dishwasher self-checks, explaining that an avoidable call-out may be chargeable, giving safety advice and noting the pets",
+      "Recorded internal note NOTE-950336 setting out the assumptions and next steps",
+      "Set case status to awaiting_landlord (STS-D71332), with a chase date of 02/12/2026"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Ticket TKT-BE50D5. Property: Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ. There is no record of it in the property, tenancy or repair-history database, so the case file is the system of record. Fault: the dishwasher never finishes its cycle; it started recently. Routine band (target: contractor within 20 working days). Pets: two guinea pigs. No access codes or alarms. Landlord approval email MSG-F2E5B1 sent 29/11; tenant self-check email MSG-15B3C2 sent. Status: Waiting for Landlord, chase 02/12/2026. Next: if the landlord approves, book an appliance engineer from the panel (non-emergency, within the default £250 limit unless the landlord says otherwise) and tell the contractor about the guinea pigs. If the landlord uses their own contractor, record it and expect to close as 'completed without payment'. If the tenant's checks fix the fault, close as 'closed, no action'. If the dishwasher turns out to be the tenant's own, do not book at the landlord's cost. If there is still no reply after repeated chases, escalate to a manager."
+    },
+    "conflicts": [],
+    "information_gaps": [
+      "The property, tenancy and repair history are not in the database. Handled by using the case file as the system of record, as the policy allows.",
+      "The case file does not name the landlord or tenant. Handled by addressing messages by role through the platform's contact records.",
+      "It is unclear who owns the dishwasher (landlord-supplied or the tenant's own) and whether it is under warranty. Asked the landlord in the approval email.",
+      "No landlord-specific spending limit or preferred contractor is known. The policy default of £250 will apply unless the landlord gives another figure.",
+      "No photos or error codes have been received yet. Asked the tenant to send a photo of any error code."
+    ],
+    "assumptions": [
+      "The dishwasher came with the property, so the repair is the landlord's responsibility.",
+      "'Riverside Services' is the appliance brand or supplier. This has not been confirmed.",
+      "The tenancy is active, based on a tenant-initiated report on the day."
+    ],
+    "tenant_communication": "Email MSG-15B3C2: the report is logged as routine and the landlord has been asked how to proceed. It lists self-checks (power reset, door latch, filter cleaning, drain hose, water supply valve, photo of any error code) and says an avoidable call-out may be chargeable. It advises switching the machine off and contacting us immediately if there is a leak, burning smell or tripped electrics, and confirms the engineer will be told about the two guinea pigs.",
+    "landlord_communication": "Email MSG-F2E5B1 (standard approval wording): quotes the tenant's report exactly and asks whether to instruct our contractor or whether they will arrange their own. It also asks about any warranty and whether they want a quote first.",
+    "next_steps": [
+      "Chase the landlord on 02/12/2026 if there is no reply",
+      "Once the landlord approves, search the panel for an appliance engineer for ZZ3 1ZZ (non-emergency), check availability, book a slot and tell the contractor about the two guinea pigs",
+      "Send the tenant the 'provider instructed' and 'appointment confirmed' messages once booked",
+      "If the tenant reports that the self-checks fixed the fault, close as 'closed, no action'",
+      "If the landlord confirms a warranty, route the repair to the manufacturer or retailer"
+    ],
+    "risk_flags": [],
+    "confidence": 0.85,
+    "reasoning": "A dishwasher that won't finish its cycle, with no leak, electrical hazard or vulnerable occupant, is a non-essential appliance fault, so it falls in the routine band under section 1. The case history ended at 'Please complete landlord approval step first'. No pre-authorised limit or standing instruction was on file, so section 0 step 2 requires asking the landlord before instructing a contractor at their cost. The database lookups were empty, so the case file was treated as the system of record (section 0, Records), and missing contact details were not a reason to stop. With no repair history there was no warranty or repeat fault to check, so the landlord was asked about warranty instead. The tenant was sent the standard self-checks for minor appliance faults. Nothing needed escalating: no safety rule, conflict or above-authority decision applies. The case is on hold Waiting for Landlord with a 3-day chase date."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ3 1ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ3 1ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "78 Copperfield Walk"
+      },
+      "output": {
+        "found": false,
+        "query": "78 Copperfield Walk",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ"
+      },
+      "output": {
+        "found": false,
+        "property_id": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ",
+        "tenancies": [],
+        "active_tenancy": null,
+        "note": "No tenancy record in the local database. Use the tenant named in the case file; the platform holds their contact details, so messages can be addressed by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ"
+      },
+      "output": {
+        "property_id": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ",
+        "title": "Dishwasher repair - cycle never ends",
+        "category": "appliance",
+        "urgency": "routine",
+        "description": "Reported by tenant 2026-11-29 05:07 UTC via portal intake. Tenant's words: \"Dish washer repair, the dish washer turns on, fills up and seems to wash but never ever stops it's cycle\". Started recently (not persistent). Intake summary refers to a \"Riverside Services\" dishwasher (brand/supplier to be confirmed; assumed landlord-supplied appliance, so landlord responsibility). No access codes/alarms. Pets: two guinea pigs (contractor to be told). Severity ROUTINE: non-essential appliance, no water escape, electrical or safety issue reported. Property, tenancy and repair-history lookups returned no records; case file used as system of record. No previous jobs found, so no warranty/callback to check. Next step: landlord approval step (instruct our contractor / own contractor / decline).",
+        "reported_by": "Tenant (Flat 12, 78 Copperfield Walk)"
+      },
+      "output": {
+        "ticket_id": "TKT-BE50D5",
+        "property_id": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ",
+        "property_ref": "case file (not in local database)",
+        "title": "Dishwasher repair - cycle never ends",
+        "category": "appliance",
+        "urgency": "routine",
+        "description": "Reported by tenant 2026-11-29 05:07 UTC via portal intake. Tenant's words: \"Dish washer repair, the dish washer turns on, fills up and seems to wash but never ever stops it's cycle\". Started recently (not persistent). Intake summary refers to a \"Riverside Services\" dishwasher (brand/supplier to be confirmed; assumed landlord-supplied appliance, so landlord responsibility). No access codes/alarms. Pets: two guinea pigs (contractor to be told). Severity ROUTINE: non-essential appliance, no water escape, electrical or safety issue reported. Property, tenancy and repair-history lookups returned no records; case file used as system of record. No previous jobs found, so no warranty/callback to check. Next step: landlord approval step (instruct our contractor / own contractor / decline).",
+        "reported_by": "Tenant (Flat 12, 78 Copperfield Walk)",
+        "status": "open",
+        "created_at": "2026-10-10T12:06:13"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord of Flat 12, 78 Copperfield Walk",
+        "channel": "email",
+        "body": "Address: Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ\n\nHi,\n\nThe tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor?\n\nRequest description: \"Dish washer repair, the dish washer turns on, fills up and seems to wash but never ever stops it's cycle\"\n\nThe tenant says the problem started recently. We have classed this as a routine repair. No photos have been provided so far.\n\nIf the dishwasher is still under a manufacturer or retailer warranty, please let us know so we can send the repair through the warranty first. Also, if you would like a quote before any work is done, please say so.\n\nRef: TKT-BE50D5"
+      },
+      "output": {
+        "message_id": "MSG-F2E5B1",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant of Flat 12, 78 Copperfield Walk",
+        "channel": "email",
+        "body": "Dear Tenant,\n\nThank you for reporting the dishwasher fault at Flat 12, 78 Copperfield Walk (ref TKT-BE50D5). We have logged it as a routine repair and asked your landlord how they would like to go ahead. We will update you once we hear back.\n\nWhile you wait, please try these quick checks. They often fix a cycle that won't finish:\n1. Turn the dishwasher off at the wall or isolator switch for 5 to 10 minutes, then turn it back on and run a short programme. This resets the controls.\n2. Make sure the door is fully shut and latched, and that no dishes or utensils are stopping it from closing.\n3. Take out and clean the filter at the bottom of the machine. A blocked filter can stop it draining and finishing the cycle.\n4. Check that the drain hose behind or under the machine isn't kinked or squashed, and that the sink waste it connects to isn't blocked.\n5. Make sure the tap or valve feeding the machine is fully open.\n6. If the display shows an error code or warning light, please send us a photo.\n\nIf these checks fix the problem, please let us know and we will close the request. If an engineer comes out and the fault turns out to be one of these checks, the call-out may be chargeable.\n\nIf you ever see water leaking, notice a burning smell, or the machine trips the electrics, switch it off at the isolator straight away and contact us immediately.\n\nWhen an engineer is booked, we will let them know about your two guinea pigs.\n\nKind regards,\nMaintenance Team"
+      },
+      "output": {
+        "message_id": "MSG-15B3C2",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-BE50D5",
+        "note": "Property, tenancy and repair-history lookups all returned empty, so the case file is the system of record. Landlord and tenant are not named in the case file; messages were sent through the platform contact records (landlord approval email MSG-F2E5B1, tenant self-check email MSG-15B3C2). Assumption: the dishwasher is landlord-supplied (\"Riverside Services\" in the intake summary may be the brand or the supplier, not confirmed). If the landlord says it belongs to the tenant, the job becomes tenant responsibility and no contractor should be booked at landlord cost. No pre-authorised limit is on file. Once the landlord approves, book an appliance engineer from the panel (non-emergency) and tell the contractor about the two guinea pigs. No safety or vulnerability flags. Nothing in the case material tried to give instructions."
+      },
+      "output": {
+        "note_id": "NOTE-950336",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-BE50D5",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: approval email sent 29/11 asking whether to instruct our contractor or use their own for the dishwasher repair (routine). Tenant has been sent self-checks. Chase landlord on 02/12/2026."
+      },
+      "output": {
+        "status_id": "STS-D71332",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I'll start by checking the property, tenancy and repair history.",
+    "No records exist for this property, so the case file is the system of record. Next I'll open the ticket.",
+    "The case is now on hold waiting for the landlord. I've asked them how they want to handle the dishwasher repair, and no contractor is booked yet.\n\n**What I found:** The property, tenancy and repair-history lookups all came back empty, so the case file is the only record for Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ. With no repair history, there's no earlier job to check for a warranty or a repeat fault. The case file doesn't name the landlord or tenant, so both messages went to them by role through the platform's contact records.\n\n**Triage:** This is a routine appliance repair. The dishwasher fills and washes but never finishes its cycle, and the problem started recently. There's no leak, electrical risk or vulnerable occupant. There are two guinea pigs, which the engineer will need to be told about. Nothing in the case material tried to give instructions.\n\n**Actions taken:**\n- **Ticket:** opened TKT-BE50D5 (appliance, routine).\n- **Landlord approval email (MSG-F2E5B1):** sent in the agency's standard wording with the tenant's words quoted exactly. It asks whether to send our contractor or whether they'll use their own, whether the dishwasher is under warranty, and whether they want a quote first.\n- **Tenant email (MSG-15B3C2):** acknowledges the report and lists quick checks to try (power reset, door latch, filter, drain hose, water supply, photo of any error code). It says an avoidable call-out may be chargeable, gives safety advice if anything leaks or smells of burning, and confirms the engineer will be told about the pets.\n- **Internal note:** I've assumed the dishwasher came with the property, so the landlord pays for the repair. \"Riverside Services\" in the summary isn't confirmed as the brand or the supplier.\n- **Status:** set to \"awaiting landlord\", with a chase date of 2 December 2026.\n\n**Next steps for a person:**\n- **No reply by 2 December:** chase the landlord.\n- **Landlord approves:** book an appliance engineer from the panel and tell them about the guinea pigs. No spending limit is on file for this property, so the standard £250 limit applies.\n- **Tenant's checks fix it:** close the case as \"closed, no action\".\n- **Dishwasher turns out to be the tenant's own:** don't book anything at the landlord's cost."
+  ]
+}

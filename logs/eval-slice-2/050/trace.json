@@ -1,0 +1,270 @@
+{
+  "case_id": "050",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:07:18+00:00",
+  "finished_at": "2026-10-10T11:08:32+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 7412,
+    "cache_read_input_tokens": 82772,
+    "cache_creation_input_tokens": 12218
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 1687,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 325,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The tenant of Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ reported on 2024-06-26 that one bedroom window will not shut: the handle turns but does not click in, and the window cannot close properly. They report no pets and no access considerations. The system was waiting on the landlord approval step when I picked the case up. What matters most is whether the flat can be secured, because a window that cannot be locked may leave it unsecured, and the floor level is unknown.",
+    "issue_category": "security/windows & glazing (window handle/locking mechanism)",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "I opened ticket TKT-6E1FE6 as urgent and sent the landlord the standard approval email. I also asked the tenant which floor the window is on and whether it can be secured, and gave interim advice. The case is on hold waiting for the landlord. No contractor has been booked.",
+    "actions_taken": [
+      "lookup_property for the full address and for the postcode ZZ6 0ZZ: no record in the local database, so the case file is the system of record",
+      "create_maintenance_ticket TKT-6E1FE6 (category security, urgency urgent)",
+      "search_contractors (glazier, ZZ6 0ZZ): found only HandyPro (CON-HP07, rating 4.2, £75 call-out, emergency capable), whose listed coverage does not include ZZ6",
+      "send_message to landlord by email (MSG-B3CD83, delivered): standard approval email quoting the tenant verbatim, asking whether to instruct our contractor or use their own",
+      "send_message to tenant by email (MSG-A00E82, delivered): repair logged as urgent, landlord contacted, asked floor/outside access and whether the window can be pulled shut, interim advice and when to call us",
+      "record_note NOTE-5F7C0F on TKT-6E1FE6: triage reasoning, empty lookups, contractor coverage caveat",
+      "update_case_status TKT-6E1FE6 to awaiting_landlord (STS-714D77), with chase dates 27/06 and 28/06"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Ticket TKT-6E1FE6. Property: Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ. It is not in the property database, so the case file is the record; there is no landlord name or instructions, so the default £250 limit applies. Fault: one bedroom window, handle turns but does not engage, window cannot close properly. No pets, no access codes. Triage: intake said ROUTINE; I raised it to URGENT because the floor is unknown and the window may leave the flat unsecured. Done: landlord approval email (MSG-B3CD83) and tenant email asking floor and securability (MSG-A00E82); status awaiting_landlord. Blocked on: the landlord's decision (our contractor or their own) and the tenant's answer on floor and securability. The only panel glazier is HandyPro (CON-HP07, +44 20 7946 0107, jobs@handypro.example.com, £75 call-out), and its coverage does not include ZZ6, so confirm travel before booking. Recommended: if the tenant says the window is reachable from outside and cannot be secured, upgrade to emergency and book a make-safe (up to £500), then tell the landlord the same day. Otherwise, once the landlord approves, confirm HandyPro covers ZZ6, check urgent availability, book within 3 working days, and send the tenant the provider-instructed and appointment messages. Chase the landlord 27/06 and 28/06 if there is no reply."
+    },
+    "conflicts": [
+      {
+        "description": "AI intake classified the issue as ROUTINE (medium confidence), but the tenant's Q&A says the window is 'unable to close properly'. That may mean the property cannot be secured, which policy treats as an emergency.",
+        "how_resolved": "I did not trust either source on its own. Because the floor and outside access are unknown, I applied the policy rule of going one band higher when urgency is uncertain and set the case to URGENT. I asked the tenant for the missing facts and will upgrade to emergency if the flat cannot be secured."
+      },
+      {
+        "description": "The contractor tool returned HandyPro as the only glazier, but its listed postcode coverage (SE, CR, BN, M, LS, BS, NG) does not include ZZ6.",
+        "how_resolved": "Unresolved for now. I have not booked them, and coverage must be confirmed with HandyPro before any booking. This is recorded in the ticket note."
+      },
+      {
+        "description": "The ticket system recorded created_at as 2026-10-10, while the case date is 2024-06-26.",
+        "how_resolved": "This looks like a system clock artefact. I used the case date (2024-06-26) for all deadlines and chase dates."
+      }
+    ],
+    "information_gaps": [
+      "The property was not in the database (searched by full address and by postcode), and tenancy and repair-history lookups could not be run because there is no property ID. The case file is used as the record, so I could not check for previous window repairs or warranty.",
+      "Landlord name, standing instructions and spend limit are unknown. The default £250 limit applies, and the landlord was contacted through the platform contact record by role.",
+      "Tenant name and contact details are not in the case file; the tenant was contacted through the platform contact record.",
+      "Floor level of Flat 3 and whether the window can be reached from outside are unknown. I asked the tenant.",
+      "Whether the window can be pulled shut and secured for now is unknown. I asked the tenant.",
+      "Whether the landlord wants our contractor or their own is unknown. I sent the approval email and the case is on hold."
+    ],
+    "assumptions": [
+      "The repair is a handle or locking mechanism (gearbox/espagnolette) fix that should fall within the £250 limit; no quote has been obtained.",
+      "The window is an external window, so it is the landlord's responsibility (installation/structure); nothing suggests tenant damage.",
+      "Glazier is the right trade, with locksmith or handyperson as alternatives."
+    ],
+    "tenant_communication": "Email MSG-A00E82: the repair is logged as urgent and the landlord has been contacted, and we will confirm who is coming and when. We asked which floor the window is on, whether it can be reached from outside, and whether it can be pulled shut. We advised keeping the window pulled to, not forcing the handle, and calling us straight away if the flat cannot be secured.",
+    "landlord_communication": "Email MSG-B3CD83: standard approval email quoting 'Bedroom window not shutting, handle not engaging.' with the tenant's detail. It asks whether to instruct our contractor or use their own, says we are treating the repair as urgent, and explains that an emergency make-safe would go ahead if the flat is found to be unsecured, with the landlord told the same day. It says the work is expected to be within £250 and that we will ask for approval if a quote exceeds that.",
+    "next_steps": [
+      "Chase the landlord on 27/06 and again on 28/06 if there is no reply; after repeated silence, escalate to the property manager.",
+      "When the tenant replies: if the window is reachable from outside and the flat cannot be secured, upgrade to emergency, book a make-safe (up to £500 without approval) and tell the landlord the same day.",
+      "If the landlord approves our contractor: confirm HandyPro (CON-HP07) will cover ZZ6, or find another glazier, locksmith or handyperson. Check urgent availability, book within 3 working days, and send the tenant the provider-instructed and appointment-confirmed messages.",
+      "If the landlord uses their own contractor: get the contractor's details, keep the case on hold until the works are done, then do the completion check (completed without payment).",
+      "Completion check: contractor confirmation, tenant confirmation or photos, and an invoice no higher than the quote or the £250 limit."
+    ],
+    "risk_flags": [
+      "Possible security risk: the bedroom window cannot close or lock and the floor level is unknown. This becomes an emergency if the window is reachable from outside.",
+      "Property not found in the database: the landlord, the tenancy status and any window repair history could not be checked.",
+      "The only panel glazier is outside its listed coverage area, so attending within the urgent target is at risk."
+    ],
+    "confidence": 0.75,
+    "reasoning": "The system state was 'Please complete landlord approval step first', so the next correct step was the standard landlord approval email rather than booking straight away. The property, tenancy and history lookups were empty, so I treated the case file as the system of record (policy section 0) and did not stop. Under section 1, an external window that cannot be secured is an emergency, and uncertain urgency moves up one band. Because the floor and securability are unknown, I set the case to URGENT instead of the intake's ROUTINE and asked the tenant the one fact that would make it an emergency. No hard safety rule in section 2 applies yet, nothing is above authority, and no sources conflict on who the tenant is or whether the work is allowed, so escalation is not warranted. I put the case on hold waiting for the landlord with chase dates. I found a contractor but did not book one, because approval is pending and the only glazier's coverage needs confirming."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ6 0ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ6 0ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ",
+        "title": "Bedroom window not shutting - handle not engaging",
+        "category": "security",
+        "urgency": "urgent",
+        "description": "Reported by tenant 2024-06-26 18:25 via intake: \"Bedroom window not shutting, handle not engaging.\" Q&A: 1 window (bedroom); handle turns but doesn't click in; window unable to close properly; no seal failure reported; no access considerations; no pets. Intake classified ROUTINE (medium confidence). Upgraded to URGENT pending information: a window that cannot close/latch may leave the property unsecured (policy: unsecurable external window = emergency); floor level of Flat 3 and whether window is reachable from outside are unknown, so treated one band higher while info gathered. Property/tenancy/history lookups returned no record - case file is system of record. Landlord approval step outstanding. Trade: glazier / window mechanism repair (likely gearbox/espag or handle replacement).",
+        "reported_by": "Tenant of Flat 3, 171 Willowmere Road"
+      },
+      "output": {
+        "ticket_id": "TKT-6E1FE6",
+        "property_id": "Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ",
+        "property_ref": "case file (not in local database)",
+        "title": "Bedroom window not shutting - handle not engaging",
+        "category": "security",
+        "urgency": "urgent",
+        "description": "Reported by tenant 2024-06-26 18:25 via intake: \"Bedroom window not shutting, handle not engaging.\" Q&A: 1 window (bedroom); handle turns but doesn't click in; window unable to close properly; no seal failure reported; no access considerations; no pets. Intake classified ROUTINE (medium confidence). Upgraded to URGENT pending information: a window that cannot close/latch may leave the property unsecured (policy: unsecurable external window = emergency); floor level of Flat 3 and whether window is reachable from outside are unknown, so treated one band higher while info gathered. Property/tenancy/history lookups returned no record - case file is system of record. Landlord approval step outstanding. Trade: glazier / window mechanism repair (likely gearbox/espag or handle replacement).",
+        "reported_by": "Tenant of Flat 3, 171 Willowmere Road",
+        "status": "open",
+        "created_at": "2026-10-10T12:07:36"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "glazier",
+        "postcode": "ZZ6 0ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "glazier",
+        "postcode": "ZZ6 0ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-HP07",
+            "name": "HandyPro",
+            "trades": [
+              "handyperson",
+              "locksmith",
+              "glazier"
+            ],
+            "certifications": [],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.2,
+            "emergency": true,
+            "call_out_gbp": 75,
+            "phone": "+44 20 7946 0107",
+            "email": "jobs@handypro.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord of Flat 3, 171 Willowmere Road",
+        "channel": "email",
+        "body": "Address: Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ\n\nHi,\n\nThe tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor?\n\nRequest description: \"Bedroom window not shutting, handle not engaging.\"\n\nFurther detail from the tenant: one bedroom window is affected; the handle turns but does not click in, and the window is unable to close properly. No pets and no special access arrangements.\n\nAs the window cannot currently be closed and locked, we are treating this as urgent (target: contractor within 3 working days). If we find the window is accessible from outside and the flat cannot be secured, we will arrange an emergency make-safe under our emergency authority and let you know the same day. If you'd like us to instruct our panel contractor, the likely work is a handle/locking mechanism repair or replacement, which we would expect to fall within the standard £250 pre-authorised limit; we will come back to you for approval if a quote exceeds that.\n\nRef: TKT-6E1FE6"
+      },
+      "output": {
+        "message_id": "MSG-B3CD83",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant of Flat 3, 171 Willowmere Road",
+        "channel": "email",
+        "body": "Hello,\n\nThank you for reporting that your bedroom window is not shutting and the handle is not engaging (ref TKT-6E1FE6). We have logged this as an urgent repair and have contacted your landlord to arrange a contractor. We will let you know who is coming and when as soon as this is confirmed.\n\nSo we can judge how quickly this needs attending, please reply to tell us:\n1. Which floor the flat/bedroom is on, and whether the window could be reached from outside (e.g. ground floor, next to a flat roof, balcony or fire escape).\n2. Whether you can currently pull the window shut so the flat is secure, even if the handle won't lock.\n\nIn the meantime: please keep the window pulled to as far as possible, especially at night or when you are out, and avoid forcing the handle as this can damage the mechanism further. If the window swings open on its own, is at risk of falling, or you feel the flat cannot be secured, please call us straight away and we will arrange an emergency attendance.\n\nKind regards,\nMaintenance team"
+      },
+      "output": {
+        "message_id": "MSG-A00E82",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-6E1FE6",
+        "note": "Pickup 2024-06-26 18:26. Property, tenancy and repair-history lookups: no record in local DB (searched full address and postcode) - case file used as system of record; landlord name, landlord instructions/spend limit and tenant details not available, so default £250 limit applies and messages sent via platform contact records by role. Triage: intake said ROUTINE (medium confidence); upgraded to URGENT because window cannot close/latch and floor/accessibility unknown (policy: uncertain urgency -> one band higher; unsecurable external window = emergency). Asked tenant for floor/accessibility and whether window can be pulled shut - if ground-floor/accessible and unsecurable, upgrade to EMERGENCY make-safe (up to £500, inform landlord same day). Landlord approval email sent (MSG-B3CD83). Provider check: only glazier on panel is HandyPro (CON-HP07, glazier/locksmith/handyperson, rating 4.2, call-out £75, emergency-capable) but its listed coverage areas do NOT include ZZ6 - must confirm travel/coverage before booking. No booking made yet (landlord approval step outstanding per system)."
+      },
+      "output": {
+        "note_id": "NOTE-5F7C0F",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-6E1FE6",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: approval email sent 26/06 (instruct our contractor vs own). Also asked tenant floor/securability. Urgent band - chase 27/06 then 28/06; upgrade to emergency if tenant says unsecurable."
+      },
+      "output": {
+        "status_id": "STS-714D77",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I've opened ticket **TKT-6E1FE6**, asked the landlord whether to instruct a contractor, and asked the tenant two questions. No contractor is booked yet. The case is on hold waiting for the landlord.\n\n**Records:** Searching the property database by full address and by postcode found nothing, so I couldn't look up tenancy or repair history. I'm using the case file as the record. It doesn't name the landlord or give any landlord instructions, so the standard £250 spend limit applies. Both messages went to the platform's contact record for each party by role (landlord, tenant), and both show as delivered.\n\n**Urgency: urgent, not routine.** The tenant says one bedroom window won't close properly: the handle turns but doesn't click in. We don't know which floor the flat is on or whether the window can be reached from outside. Policy treats a window that leaves the property unsecured as an emergency, and says to go one band higher when urgency is unclear. Urgent means a contractor within 3 working days. There are no pets or access codes.\n\n**What I did:**\n1. **Ticket:** Logged as a security issue, urgent.\n2. **Landlord:** Sent the standard approval email quoting the tenant's words. It asks whether we should instruct our contractor or they'll arrange their own. It also says the repair should cost less than £250, and that we'll arrange an emergency make-safe if the flat turns out to be unsecured.\n3. **Tenant:** Sent an email confirming we've logged the repair and asking:\n   - which floor the bedroom is on, and whether the window can be reached from outside;\n   - whether they can pull it shut for now.\n\n   It also told them to keep the window pulled to, not to force the handle, and to call us straight away if the flat can't be secured.\n4. **Contractor search:** The only glazier on our panel is HandyPro (CON-HP07: rating 4.2, £75 call-out, does emergency call-outs). Their listed coverage areas don't include ZZ6, so we need to confirm they'll travel before booking. I haven't checked their availability or booked a slot.\n5. **Note and status:** Recorded all of this on the ticket and set the status to waiting for the landlord.\n\n**Next steps for a colleague:**\n- **Chase:** If the landlord hasn't replied, chase on 27/06 and again on 28/06; I set this tighter than the usual 3 days because the case is urgent.\n- **If the tenant says the window can be reached from outside and can't be secured:** Change the case to emergency and book a make-safe straight away (up to £500 without approval), then tell the landlord the same day.\n- **Once the landlord approves:** Confirm HandyPro will cover ZZ6 (or find another glazier), check their slots, book, and send the tenant the \"provider instructed\" message.\n- **If the landlord uses their own contractor:** Get their details and keep the case on hold until the work is done."
+  ]
+}

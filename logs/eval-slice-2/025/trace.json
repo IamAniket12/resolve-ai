@@ -1,0 +1,247 @@
+{
+  "case_id": "025",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 7,
+  "started_at": "2026-10-10T11:05:29+00:00",
+  "finished_at": "2026-10-10T11:07:18+00:00",
+  "usage": {
+    "input_tokens": 20,
+    "output_tokens": 6181,
+    "cache_read_input_tokens": 84474,
+    "cache_creation_input_tokens": 21787
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 1311,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 503,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "On 19/05/2024 the tenant of Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ reported that the oven no longer heats on any oven or grill setting, although the light and fan still work. The tenant says this oven replaced one that failed last year, so it may still be under warranty and this is a repeat appliance failure. The landlord approval email to Felix went out at 12:00 on 21/05/2024, the point where I took over.",
+    "issue_category": "appliance",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "Ticket TKT-618872 is open (urgent, appliance) and on hold Waiting for Landlord. Felix has been asked whether to instruct our engineer or use his own, and for the oven's warranty details. The tenant has been sent quick self-checks. No contractor has been booked yet because landlord approval is still pending.",
+    "actions_taken": [
+      "Checked the property database by full address and by postcode: no record found, so the case file was used as the system of record",
+      "Checked the tenancy record: no record found",
+      "Checked the repair history: no previous jobs on record",
+      "Created ticket TKT-618872 (appliance, urgent)",
+      "Emailed Felix (landlord) asking for the oven's warranty details (purchase date, make/model, installer) and whether to send our engineer or use his own contractor (MSG-15102E, delivered)",
+      "Emailed the tenant to acknowledge the report, with self-checks (clock/manual mode, child lock, cooker switch and fuse box, temperature knob), safety advice, a request for make/model and a photo, a question about pets, and a warning that a call-out may be chargeable (MSG-B6F487, delivered)",
+      "Saved internal note NOTE-0E7711 recording the triage, warranty and repeat-failure points",
+      "Set the case status to awaiting_landlord, with a chase on Fri 24/05/2024 (STS-213C43)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "TKT-618872, Flat 2, 176 Lantern Quay, ZZ8 5ZZ. The oven doesn't heat on oven or grill settings; the light and fan still work. Classed as urgent (landlord-supplied cooker). The tenant says the oven was replaced last year, so check warranty first. This is the second oven to fail here. Status: Waiting for Landlord. On 21/05 Felix was sent the approval email plus a follow-up asking for warranty details (MSG-15102E). The tenant was sent self-checks (MSG-B6F487). Next: chase Felix on Fri 24/05, and pass to the PM if he stays silent. If the oven is under warranty, send it to the manufacturer or installer and close as completed without payment. If Felix approves our engineer, search for appliance engineers, book within 3 working days, and get his approval first if the cost is likely to exceed £250. Ask the engineer to check the cooker circuit as well."
+    },
+    "conflicts": [],
+    "information_gaps": [
+      "The property, tenancy and repair-history records were all empty. I used the case file as the system of record; the tenancy status can't be checked against our records.",
+      "The tenant isn't named in the case file, so the message went to the platform's contact record for the flat.",
+      "The exact replacement date, make/model and installer of the oven are unknown. I've asked both the landlord and the tenant.",
+      "It's unknown whether the hob still works, and whether there are pets or any access restrictions. I asked the tenant about pets.",
+      "The landlord's spend limit is unknown, so the default £250 applies.",
+      "The PDF referenced in the approval email was unavailable."
+    ],
+    "assumptions": [
+      "The oven was supplied by the landlord, since it was replaced as part of the property, so it falls in the urgent band.",
+      "There are no vulnerable occupants, as none are mentioned in the case file.",
+      "The 3-working-day target starts once the landlord gives approval."
+    ],
+    "tenant_communication": "Email confirming we have the report, that the landlord has been asked to approve and that we're checking the warranty. It listed quick self-checks and safety advice (switch off if there are sparks or a burning smell), asked for the make, model and a photo of the display, asked about pets, and noted that a call-out may be chargeable if the fault turns out to be a setting.",
+    "landlord_communication": "The standard approval email was sent at 12:00 on 21/05 (before I took over). I then sent a follow-up asking for the oven's purchase date, make/model and installer for a warranty claim, and asking him to confirm whether we should instruct our engineer or he'll arrange his own.",
+    "next_steps": [
+      "Chase Felix on Fri 24/05/2024 if he hasn't replied, and pass to the property manager if he stays silent.",
+      "If the oven is under warranty, raise it with the manufacturer or installer and close as completed without payment.",
+      "If Felix approves our engineer, search for appliance engineers, check slots, book within 3 working days and tell the tenant who is coming. Get Felix's approval first if the cost is likely to exceed £250.",
+      "If the tenant's self-checks fix it, close with no action.",
+      "Ask the engineer to check the cooker supply as well, since this is a repeat failure."
+    ],
+    "risk_flags": [
+      "Repeat failure: this is the second oven to fail at the property, so the cause could be the electrical supply rather than the appliance."
+    ],
+    "confidence": 0.85,
+    "reasoning": "The history ends just after the landlord approval email, so the next step under the workflow is to wait for the landlord. There is no pre-authorised limit or standing instruction, so I didn't book anyone. A landlord-supplied cooker failure counts as urgent, not an emergency, as there are no safety signs. The policy says to check warranty before paying for a new job, so I asked for the oven's details. I sent the standard self-checks to try to avoid an unnecessary call-out. I didn't escalate because the policy covers every step here."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ8 5ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ8 5ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ"
+      },
+      "output": {
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ"
+      },
+      "output": {
+        "found": false,
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+        "tenancies": [],
+        "active_tenancy": null,
+        "note": "No tenancy record in the local database. Use the tenant named in the case file; the platform holds their contact details, so messages can be addressed by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+        "title": "Oven not heating (oven and grill) - possible warranty, recurring appliance failure",
+        "category": "appliance",
+        "urgency": "urgent",
+        "description": "Reported by tenant 2024-05-19 18:21: \"The oven has stopped heating up. Does not work on any settings, the light still switches on and it makes a sound but does not heat up on oven or grill settings. It was replaced sometime last year as the last one stopped working too.\" Classification: URGENT (cooker failure, assumed landlord-supplied as landlord replaced it last year; hob status not stated). No vulnerability, pets or access notes in the case file. Oven was replaced roughly within the last 12 months, so it may still be under manufacturer/installer warranty; check this before paying for a new call-out. Second oven failure at this property (previous unit also failed). Property/tenancy/repair-history lookups were empty; case file used as system of record. Landlord approval email sent to Felix (landlord) 2024-05-21 12:00. No attachments (the referenced PDF was unavailable).",
+        "reported_by": "Tenant (Flat 2, 176 Lantern Quay)"
+      },
+      "output": {
+        "ticket_id": "TKT-618872",
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+        "property_ref": "case file (not in local database)",
+        "title": "Oven not heating (oven and grill) - possible warranty, recurring appliance failure",
+        "category": "appliance",
+        "urgency": "urgent",
+        "description": "Reported by tenant 2024-05-19 18:21: \"The oven has stopped heating up. Does not work on any settings, the light still switches on and it makes a sound but does not heat up on oven or grill settings. It was replaced sometime last year as the last one stopped working too.\" Classification: URGENT (cooker failure, assumed landlord-supplied as landlord replaced it last year; hob status not stated). No vulnerability, pets or access notes in the case file. Oven was replaced roughly within the last 12 months, so it may still be under manufacturer/installer warranty; check this before paying for a new call-out. Second oven failure at this property (previous unit also failed). Property/tenancy/repair-history lookups were empty; case file used as system of record. Landlord approval email sent to Felix (landlord) 2024-05-21 12:00. No attachments (the referenced PDF was unavailable).",
+        "reported_by": "Tenant (Flat 2, 176 Lantern Quay)",
+        "status": "open",
+        "created_at": "2026-10-10T12:06:22"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Felix (landlord)",
+        "channel": "email",
+        "body": "Address: Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ\n\nHi Felix,\n\nFollowing my earlier email about the oven: the tenant says it was replaced last year, so it may still be under the manufacturer's or installer's warranty. If you have the purchase/installation date, make and model, and who supplied and fitted it, please send them over. If it is still under warranty, we will raise it with the manufacturer or installer first so you are not paying for a new call-out.\n\nPlease also confirm whether you want us to instruct our appliance engineer or whether you would prefer to arrange this yourself.\n\nKind regards\nResolve AI, Maintenance (ref TKT-618872)"
+      },
+      "output": {
+        "message_id": "MSG-15102E",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant, Flat 2, 176 Lantern Quay",
+        "channel": "email",
+        "body": "Dear Tenant,\n\nThank you for reporting that the oven is not heating on the oven or grill settings (ref TKT-618872). We have passed this to your landlord for approval and are also checking whether the replacement oven is still under warranty. We will update you as soon as an engineer is arranged.\n\nIn the meantime, could you please try these quick checks? They sometimes fix this kind of fault without an engineer visit:\n1. Clock/timer: many ovens with a digital clock will not heat if the timer is set to auto or the clock has not been set (for example after a power cut). Set the clock and select manual mode (often a hand or saucepan symbol).\n2. Child lock: check that no key-lock symbol is showing on the display.\n3. Fuse box: check that the cooker switch is on and no trip switch has gone off at the consumer unit.\n4. Temperature knob: make sure the knob is turned up and not stuck at 0.\n5. Wait for heat: try the oven for 10-15 minutes to see whether it warms up at all.\n\nPlease do not take the oven apart or remove any panels. If you notice a burning smell, sparks or scorch marks, switch it off at the cooker isolator or consumer unit and contact us straight away.\n\nIf you can, please reply with the make and model (usually on a sticker inside the door edge) and a photo of the display. If you have any pets, please let us know so we can pass this on to the engineer.\n\nPlease note: if an engineer visits and finds the fault was a setting such as the clock or timer, the call-out may be chargeable.\n\nKind regards\nResolve AI, Maintenance"
+      },
+      "output": {
+        "message_id": "MSG-B6F487",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-618872",
+        "note": "Intake 2024-05-21: classified URGENT (assumed landlord-supplied cooker failure; 3-working-day target starts once the landlord approves). Not an emergency: no burning smell, sparks or gas mentioned. Property, tenancy and repair-history lookups all empty; case file used as system of record. Tenant name is not in the case file, so messages went to the tenant contact record. Warranty: the tenant says the oven was replaced \"sometime last year\", so it may be inside a 12-24 month manufacturer warranty. Asked the landlord (MSG-15102E) for purchase date, make/model and installer; if under warranty, route it to the manufacturer/installer first (would close as completed without payment). Recurring: this is the second oven to fail at the property. If the cause is a supply/wiring fault rather than the appliance, an electrician may be needed; the engineer should check the cooker circuit. Sent the tenant self-checks (clock/auto mode, child lock, cooker switch/RCD, knob) and asked for model and photo (MSG-B6F487). No contractor booked: the landlord approval step is pending, there is no pre-authorised limit on file, and no standing instruction. Attachment note: the referenced PDF was unavailable; nothing to verify."
+      },
+      "output": {
+        "note_id": "NOTE-0E7711",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-618872",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: approval (our engineer vs own contractor) plus oven warranty details requested 21/05. Tenant sent self-checks. Chase Fri 24/05/2024; escalate to PM if still no reply."
+      },
+      "output": {
+        "status_id": "STS-213C43",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I'll start by checking the property, tenancy and repair history records.",
+    "The records lookups returned nothing, so the case file is the system of record. Next I'll open the ticket.",
+    "Ticket TKT-618872 is open. The approval email has already gone to Felix, so I'll send him a short follow-up asking about the warranty, and send the tenant an acknowledgement with some quick checks.",
+    "The oven repair is on hold waiting for the landlord, Felix. I haven't booked a contractor, because he still has to approve the work and we may be able to claim it under warranty first.\n\n**Where the case stood:** The tenant reported on 19/05 that the oven's light and fan work but it won't heat on either the oven or grill settings. The approval email to Felix went out at 12:00 today, so we're at the \"Waiting for Landlord\" step.\n\n**Checks:** The property, tenancy and repair-history records all came back empty, so I used the case file as the source of truth. The tenant isn't named in the file, so the tenant message went to the platform's contact record for the flat. The PDF the approval email mentions wasn't available.\n\n**Urgency:** Urgent, since a cooker the landlord supplied has failed (target: an engineer within 3 working days). It's not an emergency: nobody mentioned a burning smell, sparks or gas, and no vulnerable occupants are noted.\n\n**Things to watch:**\n- **Warranty:** The tenant says the oven was replaced \"sometime last year\", so it may still be under warranty. The manufacturer or installer should be asked before anyone pays for a new call-out.\n- **Repeat failure:** This is the second oven to fail at this flat. The engineer should also check the cooker's electrical circuit.\n\n**What I did:**\n1. Opened ticket TKT-618872 (appliance, urgent).\n2. Emailed Felix (MSG-15102E) asking for the oven's purchase date, make and model, and who fitted it. I also asked whether he wants us to send our appliance engineer or arrange his own.\n3. Emailed the tenant (MSG-B6F487) to confirm we have the report, with some quick checks to try: clock set to manual mode, child lock, cooker switch and fuse box, temperature knob. I gave safety advice, asked for the make, model and a photo, asked about pets, and noted that a call-out may be chargeable if the fault turns out to be a setting.\n4. Saved an internal note (NOTE-0E7711) and set the status to \"awaiting landlord\".\n\n**Next steps:**\n- **Chase Felix on Friday 24/05** if he hasn't replied, and pass it to the property manager if he stays silent.\n- **If it's under warranty:** send it back to the manufacturer or installer and close as \"completed without payment\".\n- **If Felix approves our engineer:** check contractors and slots, book within 3 working days, and tell the tenant who is coming. If the cost looks like it will go over £250, ask Felix for approval before booking.\n- **If the tenant's checks fix it:** close with no action."
+  ]
+}
