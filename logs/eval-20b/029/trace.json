@@ -1,0 +1,263 @@
+{
+  "case_id": "029",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 4,
+  "started_at": "2026-10-10T11:50:53+00:00",
+  "finished_at": "2026-10-10T11:52:22+00:00",
+  "usage": {
+    "input_tokens": 14,
+    "output_tokens": 7695,
+    "cache_read_input_tokens": 71493,
+    "cache_creation_input_tokens": 10974
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 3159,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 331,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "tenant",
+      "summary": "Thank the tenant for saying the basin was already cracked when she moved in, tell her it will be checked against the check-in inventory, and explain the next steps (Henry Quinn quotes, the landlord approves, then the repair is done).",
+      "draft": "Address: Flat 6, 24 Lantern Quay, Westmarsh, ZZ3 9ZZ\n\nDear Freya Fletcher,\n\nThank you for confirming that the bathroom hand basin was already cracked when you moved in. We have noted this on the request and will check it against the check-in inventory for the property.\n\nOur maintenance provider Henry Quinn will contact you soon to arrange a suitable time to look at the basin and prepare a quote. Once we have the quote we will send it to the landlord for approval, and then instruct the repair. We will keep you updated.\n\nIn the meantime, please use the basin carefully. If the crack gets worse or water starts leaking from it, please tell us straight away.\n\nIf you have any pets, please let our provider know.\n\nKind regards,\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2025-03-18",
+      "follow_up_action": "If Henry Quinn has not booked a visit with the tenant, send him an SMS and email reminder; after 3 reminders, phone him and find another plumber."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Thank the tenant for saying the basin was already cracked when she moved in, tell her it will be checked against the check-in inventory, and explain the next steps (Henry Quinn quotes, the landlord approves, then the repair is done).",
+        "draft": "Address: Flat 6, 24 Lantern Quay, Westmarsh, ZZ3 9ZZ\n\nDear Freya Fletcher,\n\nThank you for confirming that the bathroom hand basin was already cracked when you moved in. We have noted this on the request and will check it against the check-in inventory for the property.\n\nOur maintenance provider Henry Quinn will contact you soon to arrange a suitable time to look at the basin and prepare a quote. Once we have the quote we will send it to the landlord for approval, and then instruct the repair. We will keep you updated.\n\nIn the meantime, please use the basin carefully. If the crack gets worse or water starts leaking from it, please tell us straight away.\n\nIf you have any pets, please let our provider know.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2025-03-18",
+        "follow_up_action": "If Henry Quinn has not booked a visit with the tenant, send him an SMS and email reminder; after 3 reminders, phone him and find another plumber."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Internal note recording the tenant's statement, that the landlord is responsible unless the inventory shows otherwise, and that the check-in inventory must be checked before the quote goes to the landlord.",
+        "draft": "Case 029, Flat 6, 24 Lantern Quay. 16 Mar 16:15 the tenant (Freya Fletcher) replied to our 15:59 question: \"The basin was like that at the time I was mooving in.\" She says the crack was there before she moved in, so at this point it is not treated as tenant damage. Basin is a landlord installation (sanitation, s.11 LTA 1985), so the landlord is responsible unless the check-in inventory shows the basin was intact at move-in. ACTION: check the check-in inventory and photos for the bathroom basin before the quote goes to the landlord, and put the result in the quote approval email. Records: property and tenancy lookups only rebuilt the case file. No landlord name or instructions on file, so the standard £250 limit applies. No previous repairs, so no warranty or recurring fault. Henry Quinn was asked on 16 Mar 15:58 to quote only and must not start work before approval. Urgency ROUTINE (cracked basin, no leak reported, no vulnerability noted). Tenant has been told to report any leak, which would raise the urgency.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Lift the 'waiting for tenant' hold and set the case to Waiting for Provider (quote), with chase dates.",
+        "draft": "Waiting for Provider: tenant replied (basin cracked at move-in), so hold for tenant lifted. Henry Quinn to book a visit with the tenant and quote. Chase Tue 18 Mar: SMS + email reminder to Henry Quinn. Quote is due Wed 19 Mar; if none by then, chase and consider a second plumber. Check the check-in inventory before the quote goes to the landlord.",
+        "performed": true,
+        "follow_up_on": "2025-03-18",
+        "follow_up_action": "Send Henry Quinn an SMS and email reminder; if there is no quote by Wed 19 Mar, chase him and consider asking a second plumber."
+      }
+    ],
+    "alternative_next_actions": [
+      "Email the landlord now about the cracked basin and the tenant's statement: weaker because there is no cost to approve yet, and the quote approval email will carry the same information plus the inventory result, so this would be a duplicate contact.",
+      "Ask the tenant for move-in photos of the basin: weaker because the check-in inventory is the agency's own evidence and should be checked first, so the tenant isn't burdened unnecessarily.",
+      "Escalate to the property manager because damage responsibility is disputed: weaker because nothing is actually disputed yet; the tenant's statement can be checked against the inventory, and policy treats this as routine work."
+    ],
+    "case_summary": "Tenant Freya Fletcher at Flat 6, 24 Lantern Quay, Westmarsh, ZZ3 9ZZ reported on 14 Mar that her bathroom sink needs fixing; the agency's later email refers to the hand basin being cracked. On 16 Mar Henry Quinn (plumber, landlord-preferred) was asked to visit and quote, and the tenant was asked how the basin got cracked. She replied that it was already cracked when she moved in, so it is likely the landlord's repair, subject to the check-in inventory.",
+    "issue_category": "plumbing/sanitaryware (cracked bathroom hand basin)",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "Tenant thanked and told the next steps. Her statement is recorded, and the case is back on hold waiting for Henry Quinn to book a visit and quote, chase Tue 18 Mar. The quote will go to the landlord for approval once the check-in inventory has been checked.",
+    "actions_taken": [
+      "Sent an email to the tenant Freya Fletcher thanking her, saying the claim will be checked against the inventory and explaining the quote, approval and repair steps (MSG-8A6488, delivered).",
+      "Saved an internal note on the tenant's statement, landlord responsibility, the inventory check, the spend limit and urgency (NOTE-114A43).",
+      "Set the status to awaiting_quote (Waiting for Provider), chase Tue 18 Mar, quote due Wed 19 Mar (STS-9C075B)."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Flat 6, 24 Lantern Quay, Westmarsh, ZZ3 9ZZ. Tenant Freya Fletcher reported a bathroom sink needing repair (a cracked hand basin). Henry Quinn (plumber, landlord-preferred) was asked on 16 Mar to visit and quote only, with no work before approval. The tenant says the basin was already cracked when she moved in. Next: check the check-in inventory for the basin. Chase Henry Quinn on Tue 18 Mar if he hasn't booked a visit. When the quote arrives, send it to the landlord with the tenant's statement and the inventory result (the landlord has not been contacted yet; standard £250 limit, no landlord name or instructions on file). If the inventory shows the basin was intact at move-in, tell the tenant the repair may be charged to her and ask the landlord for their position in writing. If a leak is reported, raise the case to urgent."
+    },
+    "conflicts": [
+      {
+        "description": "The tenant's first report only says she wants her bathroom sink fixed and doesn't mention a crack. The agency's 16 Mar email asks how the basin became cracked, so the crack is known from a source not in the file (probably the attachment sent to the contractor). The index says no attachments are available.",
+        "how_resolved": "Accepted that the fault is a cracked basin: the agency's own question says so and the tenant's reply confirms it. Henry Quinn's visit will confirm the details."
+      },
+      {
+        "description": "Who caused the damage: the agency's question implied possible tenant damage, but the tenant says the crack was there when she moved in.",
+        "how_resolved": "Accepted the tenant's statement for now, since nothing in the file contradicts it, and will check it against the check-in inventory before the quote goes to the landlord. Not escalated because it doesn't change the current step (getting a quote)."
+      }
+    ],
+    "information_gaps": [
+      "Check-in inventory not in the file: needed to confirm the basin was cracked at move-in. Handled by noting that it must be checked before the quote goes to the landlord.",
+      "Landlord name and instructions not on file: lookup returned a record rebuilt from the case file, so standard £250 limit and normal approval step assumed; messages go to 'Landlord' via the platform.",
+      "Whether the basin is leaking: unknown. Assumed not, since nothing was reported; tenant asked to report any leak straight away.",
+      "Attachment-46-document (sent to the contractor) not available to us; it may contain photos of the crack.",
+      "Landlord approval step not visible in the history before the provider was assigned; the quote approval email will cover it."
+    ],
+    "assumptions": [
+      "Tenancy is active, as the lookup assumed from the case file.",
+      "No vulnerable occupants, as none are mentioned.",
+      "The cracked basin is not leaking, so it is routine rather than urgent.",
+      "Henry Quinn was asked to quote only and will not start work before approval."
+    ],
+    "tenant_communication": "Tenant thanked for confirming the crack was there at move-in, told it will be checked against the check-in inventory, and told Henry Quinn will contact her to arrange a visit and quote, which then goes to the landlord before the repair is instructed. Asked to report any worsening or leak, and reminded to tell the provider about pets.",
+    "landlord_communication": "none",
+    "next_steps": [
+      "Tue 18 Mar 2025: if Henry Quinn hasn't booked with the tenant, send him an SMS and email reminder; after 3 reminders, phone him and find another plumber.",
+      "Wed 19 Mar 2025: if there's no quote, chase Henry Quinn and consider asking a second plumber.",
+      "Check the check-in inventory for the bathroom basin's condition at move-in.",
+      "When the quote arrives: send the quote approval email to the landlord with the tenant's statement and the inventory result, and hold as Waiting for Landlord for 3 working days.",
+      "If the inventory shows the basin was intact at move-in: tell the tenant the repair may be charged to her, and ask the landlord for their position in writing.",
+      "If a leak is reported: raise the case to urgent and get Henry Quinn to attend within 3 working days."
+    ],
+    "risk_flags": [
+      "Possible dispute over who caused the damage: tenant says the crack was there at move-in; this must be checked against the check-in inventory before anything is charged to her.",
+      "A cracked basin could start leaking; tenant told to report it straight away."
+    ],
+    "confidence": 0.8,
+    "reasoning": "The history ends with the tenant answering the agency's question about the cracked basin. Under the operating workflow, once a tenant replies to a held question the agency acknowledges it, records it, and moves the case back to the step it was waiting on, here the provider's quote. A basin is part of the landlord's sanitation installation (s.11 LTA 1985), so the landlord is responsible unless the check-in inventory shows tenant damage, which is why the claim is checked rather than taken on trust or dismissed. Urgency is routine: cracked sanitaryware with no reported leak and no vulnerable occupant. Lookups only rebuilt the case file: no landlord instructions on file, standard £250 limit, Henry Quinn preferred, no repair history, so no warranty or repeat-fault issue. No escalation, because policy gives the answer. Not emailing the landlord yet, because the quote approval email is the natural point to involve them. The chase date follows the rule of 2 working days for a provider to book: the case date is Sun 16 Mar, so Tue 18 Mar, with the quote due Wed 19 Mar."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 6, 24 Lantern Quay, Westmarsh, ZZ3 9ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-029",
+        "address": "Flat 6, 24 Lantern Quay, Westmarsh, ZZ3 9ZZ",
+        "postcode": "ZZ3 9ZZ",
+        "case_title": "Case 029: Cracked basin repair request",
+        "case_created": "2025-03-14 14:15:40 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Henry Quinn"
+        ],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 6, 24 Lantern Quay"
+      },
+      "output": {
+        "property_id": "Flat 6, 24 Lantern Quay",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 10,
+        "last_event": "2025-03-16 16:15:33 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-029"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-029",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-029",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Freya Fletcher",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record (address messages by name)"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Freya Fletcher (tenant)",
+        "channel": "email",
+        "body": "Address: Flat 6, 24 Lantern Quay, Westmarsh, ZZ3 9ZZ\n\nDear Freya Fletcher,\n\nThank you for confirming that the bathroom hand basin was already cracked when you moved in. We have noted this on the request and will check it against the check-in inventory for the property.\n\nOur maintenance provider Henry Quinn will contact you soon to arrange a suitable time to look at the basin and prepare a quote. Once we have the quote we will send it to the landlord for approval, and then instruct the repair. We will keep you updated.\n\nIn the meantime, please use the basin carefully. If the crack gets worse or water starts leaking from it, please tell us straight away.\n\nIf you have any pets, please let our provider know.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-8A6488",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 029, Flat 6, 24 Lantern Quay. 16 Mar 16:15 the tenant (Freya Fletcher) replied to our 15:59 question: \"The basin was like that at the time I was mooving in.\" She says the crack was there before she moved in, so at this point it is not treated as tenant damage. Basin is a landlord installation (sanitation, s.11 LTA 1985), so the landlord is responsible unless the check-in inventory shows the basin was intact at move-in. ACTION: check the check-in inventory and photos for the bathroom basin before the quote goes to the landlord, and put the result in the quote approval email. Records: property and tenancy lookups only rebuilt the case file. No landlord name or instructions on file, so the standard £250 limit applies. No previous repairs, so no warranty or recurring fault. Henry Quinn was asked on 16 Mar 15:58 to quote only and must not start work before approval. Urgency ROUTINE (cracked basin, no leak reported, no vulnerability noted). Tenant has been told to report any leak, which would raise the urgency."
+      },
+      "output": {
+        "note_id": "NOTE-114A43",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "awaiting_quote",
+        "comment": "Waiting for Provider: tenant replied (basin cracked at move-in), so hold for tenant lifted. Henry Quinn to book a visit with the tenant and quote. Chase Tue 18 Mar: SMS + email reminder to Henry Quinn. Quote is due Wed 19 Mar; if none by then, chase and consider a second plumber. Check the check-in inventory before the quote goes to the landlord."
+      },
+      "output": {
+        "status_id": "STS-9C075B",
+        "status": "awaiting_quote",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Freya Fletcher (tenant) replied that the basin was already cracked when she moved in, so I've thanked her, logged it, and moved the case from waiting on her to waiting on Henry Quinn's quote.\n\nThe basin is part of the landlord's sanitation installation, so it's the landlord's to repair. That holds unless the check-in inventory shows the basin was fine when she moved in. The lookups found nothing beyond the case file: no landlord name or instructions on file, so the standard £250 limit applies. There are no previous repairs, so no warranty or repeat-fault issue. I've treated it as routine because no leak or vulnerable occupant was reported.\n\n**Primary action – email to the tenant (sent):**\n> Address: Flat 6, 24 Lantern Quay, Westmarsh, ZZ3 9ZZ\n> Dear Freya Fletcher,\n> Thank you for confirming that the bathroom hand basin was already cracked when you moved in. We have noted this on the request and will check it against the check-in inventory for the property.\n> Our maintenance provider Henry Quinn will contact you soon to arrange a suitable time to look at the basin and prepare a quote. Once we have the quote we will send it to the landlord for approval, and then instruct the repair. We will keep you updated.\n> In the meantime, please use the basin carefully. If the crack gets worse or water starts leaking from it, please tell us straight away.\n> If you have any pets, please let our provider know.\n> Kind regards, Northbridge Lettings\n\n**Internal note (saved):** records her reply and that the landlord is responsible unless the inventory shows otherwise. It also says the inventory must be checked before the quote goes to the landlord, and that Henry Quinn is quoting only and must not start work without approval.\n\n**Status:** set to \"Waiting for Provider\". Comment: \"Chase Tue 18 Mar: SMS + email reminder to Henry Quinn. Quote is due Wed 19 Mar; if none by then, chase and consider a second plumber. Check the check-in inventory before the quote goes to the landlord.\"\n\n**Next steps (depend on replies or time passing):**\n- **Tue 18 Mar:** if Henry Quinn hasn't booked with the tenant, send him an SMS and email reminder. After three reminders with no booking, phone him and find another plumber.\n- **Wed 19 Mar:** if there's no quote, chase him and consider asking a second plumber.\n- **When the quote arrives:** check the inventory, then send the quote to the landlord for approval with the tenant's statement and the inventory result. This applies even if it's under £250, because the landlord hasn't been asked yet. Then wait 3 working days for their reply.\n- **If the inventory shows the basin was intact at move-in:** tell the tenant the repair may be charged to her, and ask the landlord for their position in writing.\n- **If she reports a leak:** raise it to urgent and book Henry Quinn sooner.\n\n**Options I didn't take:**\n- **Email the landlord now:** there's no figure to approve yet, and a second email when the quote comes in would be redundant.\n- **Escalate to the property manager:** nothing calls for it; this is a routine repair within the normal process.\n- **Ask the tenant for move-in photos first:** the inventory is the agency's own record, so I'll check that before asking her.\n\nActions taken, primary first:\n1. Sent the email to Freya Fletcher saying the crack was there at move-in and the quote comes next (MSG-8A6488, delivered).\n2. Saved the internal note on her reply, landlord responsibility and the inventory check (NOTE-114A43).\n3. Set the status to \"Waiting for Provider\" with the chase dates Tue 18 Mar and Wed 19 Mar (STS-9C075B)."
+  ]
+}

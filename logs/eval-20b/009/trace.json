@@ -1,0 +1,296 @@
+{
+  "case_id": "009",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 4,
+  "started_at": "2026-10-10T11:49:16+00:00",
+  "finished_at": "2026-10-10T11:50:34+00:00",
+  "usage": {
+    "input_tokens": 14,
+    "output_tokens": 7769,
+    "cache_read_input_tokens": 48009,
+    "cache_creation_input_tokens": 40562
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 5832,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 332,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "tenant",
+      "summary": "The tenant's reply came through with no text and no photos. Email them to ask again for front-garden photos, add a text/WhatsApp fallback and a deadline, and correct the wrong address used in earlier emails.",
+      "draft": "Address: Flat 4, 174 Beacon Close, Westmarsh, ZZ5 5ZZ\n\nGood morning,\n\nThank you for speaking with Ruben earlier, and for replying to my email. Your reply has reached us, but it only had my original message in it. There was no text from you and no photos attached.\n\nCould you please reply to this email with up-to-date photos of the front garden at Flat 4, 174 Beacon Close attached? Please add them as attachments rather than pasting them into the message. A wide shot from the pavement and one or two close-ups is perfect. Please also accept my apologies: some of my earlier emails gave the wrong address by mistake. This request is only about the front garden at Flat 4, 174 Beacon Close.\n\nIf the photos won't attach to an email, you are welcome to send them by text or WhatsApp to the office number instead.\n\nIt would be great to have the photos by Monday 11 March so we can close off this point from the inspection.\n\nKind regards\n\nIsaac\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2024-03-11",
+      "follow_up_action": "If no photos have arrived, send one more email and phone the tenant. If still nothing, note it and tell the landlord the garden item is outstanding, proposing a final deadline or a recheck at the next inspection."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "The tenant's reply came through with no text and no photos. Email them to ask again for front-garden photos, add a text/WhatsApp fallback and a deadline, and correct the wrong address used in earlier emails.",
+        "draft": "Address: Flat 4, 174 Beacon Close, Westmarsh, ZZ5 5ZZ\n\nGood morning,\n\nThank you for speaking with Ruben earlier, and for replying to my email. Your reply has reached us, but it only had my original message in it. There was no text from you and no photos attached.\n\nCould you please reply to this email with up-to-date photos of the front garden at Flat 4, 174 Beacon Close attached? Please add them as attachments rather than pasting them into the message. A wide shot from the pavement and one or two close-ups is perfect. Please also accept my apologies: some of my earlier emails gave the wrong address by mistake. This request is only about the front garden at Flat 4, 174 Beacon Close.\n\nIf the photos won't attach to an email, you are welcome to send them by text or WhatsApp to the office number instead.\n\nIt would be great to have the photos by Monday 11 March so we can close off this point from the inspection.\n\nKind regards\n\nIsaac\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2024-03-11",
+        "follow_up_action": "If no photos have arrived, send one more email and phone the tenant. If still nothing, note it and tell the landlord the garden item is outstanding, proposing a final deadline or a recheck at the next inspection."
+      },
+      {
+        "channel": "sms",
+        "to": "tenant",
+        "summary": "Send an SMS as well, because email has been unreliable for this tenant (it was discussed on the call), and offer text/WhatsApp as another way to send the photos.",
+        "draft": "Hello, this is Northbridge Lettings! Your email reached us but had no photos attached. Please reply to our new email with photos of the front garden at Flat 4, 174 Beacon Close attached, or text/WhatsApp them to this office number, by Mon 11 Mar. Thank you.",
+        "performed": true,
+        "follow_up_on": "2024-03-11",
+        "follow_up_action": "If there is no reply, send a second email and call the tenant, then tell the landlord."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Internal note recording the blank reply, the wrong address used in earlier emails, and that this is the tenant's job with no spend.",
+        "draft": "06/03 09:42: Tenant (Bennett) replied to the email Ruben resent after this morning's call, but the reply had only Isaac's original message in it. No text and no photos. Looks like a blank reply or the attachments were stripped. Re-requested photos by email and SMS, offering text/WhatsApp as a fallback, with a deadline of Mon 11 Mar. Data issue: the emails of 26/02 and 01/03 (events 011, 016, 017) quoted the wrong address in the body ('Flat 2, 72 Lantern Quay, Eastmere, ZZ4 0ZZ'). This may have confused the tenant. The correct address (Flat 4, 174 Beacon Close) was used in the new email and the tenant was told about the mistake. Please check the template/merge field before sending again. Context: this is a tenant-responsibility inspection follow-up (front garden) and no contractor is involved. It has been open since 01/02. The tenant mentioned a family medical situation (13/02), which was taken into account. There are no safety issues and no landlord spend.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "hold",
+        "to": "tenant",
+        "summary": "Put the case on hold, Waiting for Tenant, with a chase date and what to do then.",
+        "draft": "Waiting for Tenant: garden photos re-requested (06/03 reply came through blank). Chase Mon 11 Mar: if still no photos, one more email + call, then inform landlord the garden is outstanding and propose a final deadline / recheck at next visit.",
+        "performed": true,
+        "follow_up_on": "2024-03-11",
+        "follow_up_action": "Send a second email and call the tenant. If still nothing, note it and tell the landlord, proposing a final deadline or a recheck at the next inspection."
+      }
+    ],
+    "alternative_next_actions": [
+      "Tell the landlord now that the garden is still outstanding after five weeks. Weaker: the tenant engaged this morning (call and reply) and the blank reply looks like an email problem, so give them one more chance to send the photos first.",
+      "Escalate to the property manager because the tenant keeps not responding. Weaker: the policy gives the answer (re-request, deadline, then inform the landlord), so escalating would be unnecessary.",
+      "Book a handyperson or gardener to tidy the garden. Weaker: this is the tenant's responsibility from an inspection, there is no landlord approval, and nobody has confirmed the work is still undone.",
+      "Call the tenant again straight away. Weaker: Ruben called three minutes ago. An email and SMS leave a written record and offer another way to send photos."
+    ],
+    "case_summary": "At an inspection the agency found the front garden at Flat 4, 174 Beacon Close, Westmarsh, ZZ5 5ZZ needed tidying, which is the tenant's job. Since 1 Feb the agency has asked the tenant (Nora Bennett) several times for photos showing it is done. The tenant has delayed because of a family medical situation and promised photos more than once. On 6 Mar Ruben called about emails not arriving, and the tenant then replied by email, but the reply had only the agency's original message in it, with no text and no photos.",
+    "issue_category": "not-a-repair (inspection follow-up: tenant garden maintenance)",
+    "urgency": "routine",
+    "decision": "needs_information",
+    "outcome": "Front-garden photos were requested again by email and SMS, with a text/WhatsApp fallback and a deadline of Mon 11 Mar, and the wrong address in earlier emails was corrected. The case is on hold, Waiting for Tenant, with a chase on 11 Mar.",
+    "actions_taken": [
+      "lookup_property: the record came from the case file (CASE-009), with no named landlord and no instructions",
+      "get_repair_history: no other jobs or cases at this address",
+      "lookup_tenancy: active tenancy inferred from the case file, with no vulnerability notes",
+      "send_message email to Nora Bennett (tenant): delivered, MSG-0C8CE1",
+      "send_message SMS to Nora Bennett (tenant): delivered, MSG-CDAD7A",
+      "record_note on CASE-009: saved, NOTE-0C28BA",
+      "update_case_status awaiting_tenant: recorded, STS-48735D"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Inspection follow-up at Flat 4, 174 Beacon Close, ZZ5 5ZZ: the tenant (Bennett) needs to tidy the front garden and send photos. The case has been open since 01/02, with several emails and two calls. On 06/03 the tenant's email reply came through blank (no text, no photos). Photos were requested again by email (MSG-0C8CE1) and SMS (MSG-CDAD7A), with text/WhatsApp offered as another way to send them and a deadline of Mon 11 Mar. Status: awaiting_tenant. On 11 Mar, if there are no photos: send one more email and call the tenant, then tell the landlord the item is outstanding and propose a final deadline or a recheck at the next inspection. Also: the emails of 26/02 and 01/03 gave the wrong address (Flat 2, 72 Lantern Quay), so please check the template. No contractor or spend is involved."
+    },
+    "conflicts": [
+      {
+        "description": "The emails sent on 26 Feb and 1 Mar (events 011, 016, 017) had the correct Flat 4, 174 Beacon Close header but asked about 'the garden at Flat 2, 72 Lantern Quay, Eastmere, ZZ4 0ZZ' in the body.",
+        "how_resolved": "Trusted the case index and property record (Flat 4, 174 Beacon Close). The other address looks like a template or merge error. The tenant was given the correct address with an apology, and an internal note flags the template."
+      },
+      {
+        "description": "The 13 Feb note calls the tenant 'Nora Bennett' but refers to them as 'he/his' and 'she'. The tenancy lookup has no tenant name.",
+        "how_resolved": "Doesn't change the action. Addressed the tenant as 'Nora Bennett', as named in the case file."
+      },
+      {
+        "description": "The tenant said on 26 Feb the garden would be finished that evening with photos the next morning, but no photos have arrived and the 6 Mar reply was blank.",
+        "how_resolved": "There's no evidence either way that the work is done, so photos were requested again rather than assuming completion."
+      }
+    ],
+    "information_gaps": [
+      "Whether the front garden has actually been done. This is unknown, so photos were requested with a deadline of 11 Mar.",
+      "Why the tenant's reply was blank (stripped attachments or a mistaken send). Text/WhatsApp was offered as another channel.",
+      "The 13 Feb photo of the garden's condition is referenced but not available, so there's no baseline image.",
+      "The landlord is not named and there are no landlord instructions. Not needed at this stage; the landlord will be told if the tenant stays silent.",
+      "The contents of the 6 Mar call are only summarised, so we don't know exactly what fix was agreed if the email still didn't arrive."
+    ],
+    "assumptions": [
+      "The tenancy is active and Nora Bennett is the tenant, as the case file indicates.",
+      "The garden is the tenant's responsibility under the tenancy (it was raised at inspection as tenant maintenance), so no landlord approval or contractor is needed.",
+      "The platform contact record reaches the tenant by email and SMS.",
+      "The chase date is 3 working days from Wed 6 Mar, which is Mon 11 Mar."
+    ],
+    "tenant_communication": "Email and SMS sent on 6 Mar: their reply arrived blank. Please send front-garden photos as attachments, or by text/WhatsApp to the office number, by Mon 11 Mar. Apology for the wrong address in earlier emails, confirming the request is only about Flat 4, 174 Beacon Close.",
+    "landlord_communication": "none",
+    "next_steps": [
+      "If photos arrive showing the garden is done: email the tenant to thank them and close the item, tell the landlord the inspection point is resolved, and set the case to closed (no action).",
+      "If photos show the garden is not done: give the tenant a final reasonable deadline in writing and tell the landlord.",
+      "Mon 11 Mar, if there's no reply: send a second email and call the tenant. If still silent, note it and tell the landlord the item is outstanding, recommending a final deadline or a recheck at the next inspection.",
+      "Fix the email template or merge field that inserted 'Flat 2, 72 Lantern Quay' before sending more messages on this case."
+    ],
+    "risk_flags": [
+      "Data protection risk: another property's address appeared in emails to this tenant (template/merge error), so check the template.",
+      "The tenant mentioned a family medical situation (a parent in hospital), which explains some delay. It doesn't make the household vulnerable, but keep the tone considerate.",
+      "Email delivery to this tenant seems unreliable (not received, then a blank reply), so a second channel is being used."
+    ],
+    "confidence": 0.85,
+    "reasoning": "This is an inspection follow-up, not a repair. The tenant must tidy the front garden, so no contractor, spend or landlord approval is involved, and there's no safety issue. The latest event is a tenant email that came through blank right after a call about emails not arriving. The tenant has engaged but still hasn't sent the photos. Under the policy, waiting for a tenant means asking again and holding for 3 working days, then sending a second message and telling the landlord. The inspection follow-up playbook says to set a reasonable deadline and hold with a date. So the right next moment is to ask again (email plus SMS, given the email problems, with an alternative way to send photos), correct the wrong-address error found in earlier emails, record a note, and put the case on hold, Waiting for Tenant, until Mon 11 Mar. Escalating isn't justified: the policy covers this and every tool call succeeded."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 4, 174 Beacon Close, Westmarsh, ZZ5 5ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-009",
+        "address": "Flat 4, 174 Beacon Close, Westmarsh, ZZ5 5ZZ",
+        "postcode": "ZZ5 5ZZ",
+        "case_title": "Case 009: Front garden maintenance follow-up",
+        "case_created": "2024-02-01 10:21:56 UTC",
+        "reported_by_role": "Agency manager",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 4, 174 Beacon Close, Westmarsh, ZZ5 5ZZ"
+      },
+      "output": {
+        "property_id": "Flat 4, 174 Beacon Close, Westmarsh, ZZ5 5ZZ",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 20,
+        "last_event": "2024-03-06 09:42:24 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-009"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-009",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-009",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tenant (not named in the case file)",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Nora Bennett (tenant)",
+        "channel": "email",
+        "body": "Address: Flat 4, 174 Beacon Close, Westmarsh, ZZ5 5ZZ\n\nGood morning,\n\nThank you for speaking with Ruben earlier, and for replying to my email. Your reply has reached us, but it only had my original message in it. There was no text from you and no photos attached.\n\nCould you please reply to this email with up-to-date photos of the front garden at Flat 4, 174 Beacon Close attached? Please add them as attachments rather than pasting them into the message. A wide shot from the pavement and one or two close-ups is perfect. Please also accept my apologies: some of my earlier emails gave the wrong address by mistake. This request is only about the front garden at Flat 4, 174 Beacon Close.\n\nIf the photos won't attach to an email, you are welcome to send them by text or WhatsApp to the office number instead.\n\nIt would be great to have the photos by Monday 11 March so we can close off this point from the inspection.\n\nKind regards\n\nIsaac\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-0C8CE1",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Nora Bennett (tenant)",
+        "channel": "sms",
+        "body": "Hello, this is Northbridge Lettings! Your email reached us but had no photos attached. Please reply to our new email with photos of the front garden at Flat 4, 174 Beacon Close attached, or text/WhatsApp them to this office number, by Mon 11 Mar. Thank you."
+      },
+      "output": {
+        "message_id": "MSG-CDAD7A",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "CASE-009",
+        "note": "06/03 09:42: Tenant (Bennett) replied to the email Ruben resent after this morning's call, but the reply had only Isaac's original message in it. No text and no photos. Looks like a blank reply or the attachments were stripped. Re-requested photos by email and SMS, offering text/WhatsApp as a fallback, with a deadline of Mon 11 Mar. Data issue: the emails of 26/02 and 01/03 (events 011, 016, 017) quoted the wrong address in the body ('Flat 2, 72 Lantern Quay, Eastmere, ZZ4 0ZZ'). This may have confused the tenant. The correct address (Flat 4, 174 Beacon Close) was used in the new email and the tenant was told about the mistake. Please check the template/merge field before sending again. Context: this is a tenant-responsibility inspection follow-up (front garden) and no contractor is involved. It has been open since 01/02. The tenant mentioned a family medical situation (13/02), which was taken into account. There are no safety issues and no landlord spend."
+      },
+      "output": {
+        "note_id": "NOTE-0C28BA",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "CASE-009",
+        "status": "awaiting_tenant",
+        "comment": "Waiting for Tenant: garden photos re-requested (06/03 reply came through blank). Chase Mon 11 Mar: if still no photos, one more email + call, then inform landlord the garden is outstanding and propose a final deadline / recheck at next visit."
+      },
+      "output": {
+        "status_id": "STS-48735D",
+        "status": "awaiting_tenant",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Where it stands: the tenant (Nora Bennett) has been asked since 1 Feb, after an inspection, to tidy the front garden and send photos. After Ruben's call this morning, the tenant replied, but the reply had only Isaac's original email in it, with no text and no photos. The next moment is asking again for the photos, offering another way to send them, and putting the case back on hold with a date. No contractor, cost or landlord approval is needed because the garden is the tenant's job. There's no safety issue.\n\nProblems I found:\n- **Wrong address in earlier emails:** the emails on 26 Feb and 1 Mar named \"Flat 2, 72 Lantern Quay, Eastmere\" in the body, which may have confused the tenant. I used the correct address in the new email, apologised for the mistake, and recorded it so someone can check the email template.\n- **Records:** the property and tenancy lookups only gave back what's in the case file, with no other jobs or cases at this address. I treated the case file as the full record and the tenancy as active.\n\nActions taken at event 21 (primary first):\n1. **Primary: email to Nora Bennett (tenant), delivered (MSG-0C8CE1).** It says her reply arrived blank and asks for up-to-date front-garden photos as attachments by Mon 11 Mar. It offers text or WhatsApp to the office number if attaching doesn't work, and apologises for the wrong address in earlier emails.\n2. **SMS to Nora Bennett, delivered (MSG-CDAD7A):** \"Hello, this is Northbridge Lettings! Your email reached us but had no photos attached. Please reply to our new email with photos of the front garden at Flat 4, 174 Beacon Close attached, or text/WhatsApp them to this office number, by Mon 11 Mar. Thank you.\"\n3. **Internal note saved (NOTE-0C28BA):** records the blank reply, the wrong-address emails (please check the template), and that the garden is the tenant's job with no spend or safety issue.\n4. **Status set to awaiting tenant (STS-48735D):** \"Waiting for Tenant: garden photos re-requested (06/03 reply came through blank). Chase Mon 11 Mar: if still no photos, one more email + call, then inform landlord the garden is outstanding and propose a final deadline / recheck at next visit.\"\n\nNext steps (depend on the tenant replying):\n- **If photos arrive and the garden is done:** send the tenant a short \"thank you, closing this\" email, tell the landlord the inspection point is resolved, and close with no action.\n- **If photos show it's not done, or nothing arrives by Mon 11 Mar:** send one more email and call the tenant, then tell the landlord the garden is still outstanding and propose a final deadline or a recheck at the next visit.\n\nI didn't escalate: the policy covers this case and nothing failed."
+  ]
+}

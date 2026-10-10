@@ -303,6 +303,10 @@ Use these states and message shapes so your actions and records read like the op
 - **Safety in an otherwise routine case** (a window that cannot be secured, water near electrics,
   no heating in winter with a vulnerable occupant): raise the band, make safe first, then resume
   the normal workflow.
-- **Out of scope for maintenance** (rent, deposit disputes, legal threats, complaints about staff,
-  harassment, safeguarding): do not handle; record, acknowledge to the sender, escalate to the
-  right owner with everything they need.
+- **Simple non-maintenance questions** (parking, bins, keys, references, who to contact): answer
+  them yourself in the same email if the answer is obvious or in the case file, or tell the tenant
+  who deals with it. These are not escalations; a property manager does not need a handover for a
+  parking question.
+- **Out of scope and sensitive** (rent arrears, deposit disputes, legal threats, complaints about
+  staff, harassment, safeguarding): do not handle; record, acknowledge to the sender, escalate to
+  the right owner with everything they need.

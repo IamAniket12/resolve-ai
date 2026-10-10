@@ -1,0 +1,319 @@
+{
+  "case_id": "044",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:52:22+00:00",
+  "finished_at": "2026-10-10T11:53:43+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 7827,
+    "cache_read_input_tokens": 101161,
+    "cache_creation_input_tokens": 10712
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 1461,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 396,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "landlord",
+      "summary": "Sent the landlord approval email with the tenant's verbatim report and her clarification (top-of-staircase window, broken latch), because no landlord email or reply is on file despite the 19/24 Jan holds and nothing can be instructed without approval.",
+      "draft": "Address: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ\n\nHi,\n\nThe tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor?\n\nRequest description: \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\"\n\nThe tenant has since confirmed which window it is: \"This is the one at the top of our staircase that has the broken latch.\"\n\nThe window is currently shut and secure but cannot be opened. We would suggest a handyperson/glazier to replace the handle and latch; this would normally fall within the £250 pre-authorised limit. Please let us know how you would like to proceed.\n\nThanks\nGrace",
+      "performed": true,
+      "follow_up_on": "2025-02-05",
+      "follow_up_action": "Chase the landlord by email and SMS; if still silent around 2025-02-10, escalate to the property manager recommending we instruct a handyperson within the £250 limit."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "landlord",
+        "summary": "Sent the landlord approval email with the tenant's verbatim report and her clarification (top-of-staircase window, broken latch), because no landlord email or reply is on file despite the 19/24 Jan holds and nothing can be instructed without approval.",
+        "draft": "Address: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ\n\nHi,\n\nThe tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor?\n\nRequest description: \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\"\n\nThe tenant has since confirmed which window it is: \"This is the one at the top of our staircase that has the broken latch.\"\n\nThe window is currently shut and secure but cannot be opened. We would suggest a handyperson/glazier to replace the handle and latch; this would normally fall within the £250 pre-authorised limit. Please let us know how you would like to proceed.\n\nThanks\nGrace",
+        "performed": true,
+        "follow_up_on": "2025-02-05",
+        "follow_up_action": "Chase the landlord by email and SMS; if still silent around 2025-02-10, escalate to the property manager recommending we instruct a handyperson within the £250 limit."
+      },
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Thanked Harriet for identifying the window, told her it has gone to the landlord for approval and what happens next, and asked her to report any change in whether the window stays secure.",
+        "draft": "Address: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ\n\nHi Harriet,\n\nThank you for confirming it is the window at the top of the staircase with the broken latch. I have passed this to the landlord for approval to send a contractor and will let you know as soon as a contractor is instructed. They will then contact you directly to arrange a time.\n\nIn the meantime please don't force the window. If anything changes (for example, it will not stay shut or can't be secured), let us know straight away.\n\nThanks\nGrace",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Set the case on hold as Waiting for Landlord with the chase date and the escalation plan, so the dashboard shows where it stands.",
+        "draft": "Waiting for Landlord: approval email sent 1 Feb with tenant's clarification (staircase window, broken latch). Chase Wed 5 Feb: email + SMS; if still silent ~Mon 10 Feb, escalate to PM recommending we instruct a handyperson within £250 limit.",
+        "performed": true,
+        "follow_up_on": "2025-02-05",
+        "follow_up_action": "Chase the landlord by email and SMS; on a second silence escalate to the property manager with the recommendation to instruct a handyperson within £250."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Recorded an internal note on the triage, the missing January landlord email and the tenant's mismatched greeting.",
+        "draft": "Picked up at event 8 (1 Feb 2025). Holds of 19 Jan (\"Will email LL\") and 24 Jan (\"Waiting to hear from LL\") have no landlord email or reply on file, so I sent the full landlord approval email today, including the tenant's 1 Feb clarification. I am treating it as a first approval request and also a chase. Triage: routine. The window is shut and secure, no vulnerability is recorded, and it is a landlord installation. Raise to urgent if the window cannot be secured or becomes a safety issue. Tenant addressed agent as \"Turner\" but Grace signed the email; no impact. No landlord name, instructions or preferred contractor on file; the default £250 limit applies. Likely trade: handyperson/glazier.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      }
+    ],
+    "alternative_next_actions": [
+      "Instruct a handyperson now under the £250 pre-authorised limit without waiting for the landlord: weaker because the agency's workflow sends the landlord approval step first, and this is a routine job with no safety or statutory pressure that would justify skipping it.",
+      "Send only a short two-line chase to the landlord: weaker because no original approval email is on file, so the landlord may never have received the request or the clarification about which window.",
+      "Escalate to the property manager now because the landlord has been silent since 19 Jan: weaker because there is no evidence the landlord was ever actually emailed, so a proper request and a chase cycle should come first.",
+      "Just thank the tenant and hold: weaker because the clarification was the missing fact needed to put the request to the landlord, so holding without sending it would only add delay."
+    ],
+    "case_summary": "Tenant Harriet at Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ reported on 13 Jan 2025 that the window handle fell off when she opened the blind and the window can no longer be opened. The agency put the case on hold to email the landlord (19 and 24 Jan), but no landlord email or reply is recorded. On 1 Feb the agency asked which window it was, and the tenant said it is the window at the top of the staircase with the broken latch.",
+    "issue_category": "structural (window handle/latch)",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "The landlord approval request has been sent with the tenant's clarification, the tenant has been told what happens next, and ticket TKT-F69EB5 is on hold as Waiting for Landlord. The landlord will be chased on 5 Feb 2025.",
+    "actions_taken": [
+      "lookup_property: found from the case file (CASE-044); landlord not named, no instructions, spend limit £250, no preferred contractors",
+      "get_repair_history: no previous jobs or other cases at this address",
+      "lookup_tenancy: active tenancy assumed, tenant Harriet, no vulnerability notes",
+      "create_maintenance_ticket: TKT-F69EB5 opened (routine, structural)",
+      "send_message: landlord approval email delivered (MSG-4C4BC5)",
+      "send_message: tenant update email to Harriet delivered (MSG-A1AFA9)",
+      "update_case_status: TKT-F69EB5 set to awaiting_landlord with a chase date of 5 Feb (STS-9E527C)",
+      "record_note: internal triage note saved (NOTE-3A794B)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Ticket TKT-F69EB5, Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ. Tenant: Harriet. The window handle fell off the window at the top of the staircase, which has a broken latch, and the window is stuck shut but secure. Routine priority; the landlord is responsible. The landlord approval email was sent on 1 Feb 2025 (MSG-4C4BC5) because the earlier holds (19/24 Jan) have no landlord email or reply on file. The tenant has been updated (MSG-A1AFA9). Status: Waiting for Landlord. If the landlord approves, book a handyperson/glazier from the panel within £250, tell Harriet who is coming and remind her to mention pets. If the landlord will use their own contractor, record that and tell Harriet. If there is no reply by Wed 5 Feb, chase by email and SMS. If still silent around Mon 10 Feb, escalate to the property manager recommending we instruct within the £250 limit. Raise to urgent if the window cannot be secured."
+    },
+    "conflicts": [
+      {
+        "description": "Holds on 19 Jan ('Will email LL') and 24 Jan ('Waiting to hear from LL') suggest the landlord was contacted, but no landlord email or reply appears anywhere in the history.",
+        "how_resolved": "Trusted the event record, which shows no outgoing landlord email. Sent a full landlord approval email, which also works as a chase if one was sent outside the file."
+      },
+      {
+        "description": "The tenant's reply is addressed to 'Turner', but the agency email she was answering was signed 'Grace'.",
+        "how_resolved": "Immaterial to the action. It is most likely a name mix-up, so I noted it and ignored it."
+      }
+    ],
+    "information_gaps": [
+      "Landlord name and contact details are not in the case file: the email was addressed to 'Landlord' via the platform contact record.",
+      "No landlord standing instructions or preferred contractor are on file, so the default £250 limit and the standard approval step apply.",
+      "There is no photo of the window or handle, and the window type (uPVC/timber) is unknown. A contractor can assess this on attendance, so it does not block the approval request.",
+      "Pets and access arrangements are unknown. The contractor arranges access with the tenant, and the tenant will be reminded to mention pets when a contractor is instructed."
+    ],
+    "assumptions": [
+      "The window is shut and secure, so the property is not at risk of being unsecured. This is based on the tenant saying she is 'unable to open the window'.",
+      "The window is not a required fire escape route, and nobody vulnerable lives in the flat (none recorded).",
+      "The repair (handle/latch replacement) is likely to cost under £250.",
+      "The tenancy is active, as the tenant is still reporting and responding."
+    ],
+    "tenant_communication": "Harriet was thanked for confirming the window, told the request has gone to the landlord for approval and that the contractor will contact her directly once instructed, asked not to force the window, and asked to report straight away if it cannot be secured.",
+    "landlord_communication": "The landlord was sent the standard approval email with the tenant's original report quoted word for word, her clarification of which window it is, a note that the window is secure but cannot be opened, and a suggestion of a handyperson/glazier within the £250 limit. It asks whether to instruct our contractor or whether they will arrange their own.",
+    "next_steps": [
+      "On landlord approval: search the panel for a handyperson/glazier for ZZ9 4ZZ, instruct within £250, tell Harriet who is coming and remind her to mention pets, then hold as Waiting for Provider with a chase 2 working days later.",
+      "If the landlord will use their own contractor: record it, tell Harriet, and ask the landlord to confirm when the work is done.",
+      "Wed 5 Feb 2025, no reply: chase the landlord by email and SMS.",
+      "Around Mon 10 Feb 2025, still silent: escalate to the property manager recommending we instruct a handyperson within the £250 limit.",
+      "If the tenant reports the window will not stay shut or cannot be secured: raise to emergency/urgent and make safe under the emergency authority, then inform the landlord."
+    ],
+    "risk_flags": [
+      "The case has already waited almost 3 weeks with no record that the landlord was contacted, so the delay could lead to a tenant complaint.",
+      "The window cannot be opened, so ventilation is reduced; watch for condensation or damp in the stairwell."
+    ],
+    "confidence": 0.8,
+    "reasoning": "The history ends with the tenant answering the agency's only open question (which window). That was the fact needed to put a complete request to the landlord. The policy workflow requires the landlord approval step before instructing a contractor at the landlord's cost unless there is an emergency or standing instruction. There is none here: the record shows the £250 default limit and no landlord instructions. The fault is routine because the window is shut and secure, nobody vulnerable lives there, and it is not a heating, water or security emergency. It is the landlord's responsibility as part of the structure under s.11. The holds of 19 and 24 Jan imply an email to the landlord, but none is recorded, so I sent the full approval email, which also works as a chase. The bundle follows the policy pattern of an approval email to the landlord, a holding reply to the tenant, and a Waiting for Landlord hold with a chase date of 3 working days from Sat 1 Feb (Wed 5 Feb), escalating after a second silence. Escalating now would be premature because the policy gives the answer and the tools succeeded."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-044",
+        "address": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+        "postcode": "ZZ9 4ZZ",
+        "case_title": "Case 044: Window Handle Repair Request",
+        "case_created": "2025-01-13 07:04:33 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 21, 129 Juniper Mews"
+      },
+      "output": {
+        "property_id": "Flat 21, 129 Juniper Mews",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 7,
+        "last_event": "2025-02-01 08:25:56 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-044"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-044",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-044",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Harriet",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record (address messages by name)"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "CASE-044",
+        "title": "Window handle repair - staircase window (broken latch/handle)",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Reported by tenant Harriet on 13 Jan 2025: \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\" On 1 Feb 2025 tenant clarified: \"This is the one at the top of our staircase that has the broken latch.\" Window is shut and cannot be opened (no security risk - property remains secure; no vulnerability noted). Landlord installation = landlord responsibility. Holds on 19 Jan (\"Will email LL\") and 24 Jan (\"Waiting to hear from LL\") but no landlord approval email is recorded in the file and no landlord reply. Spend limit £250, no landlord instructions or preferred contractors on file. No previous repairs at this address.",
+        "reported_by": "Harriet (tenant)"
+      },
+      "output": {
+        "ticket_id": "TKT-F69EB5",
+        "property_id": "CASE-044",
+        "property_ref": "case file (not in local database)",
+        "title": "Window handle repair - staircase window (broken latch/handle)",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Reported by tenant Harriet on 13 Jan 2025: \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\" On 1 Feb 2025 tenant clarified: \"This is the one at the top of our staircase that has the broken latch.\" Window is shut and cannot be opened (no security risk - property remains secure; no vulnerability noted). Landlord installation = landlord responsibility. Holds on 19 Jan (\"Will email LL\") and 24 Jan (\"Waiting to hear from LL\") but no landlord approval email is recorded in the file and no landlord reply. Spend limit £250, no landlord instructions or preferred contractors on file. No previous repairs at this address.",
+        "reported_by": "Harriet (tenant)",
+        "status": "open",
+        "created_at": "2026-10-10T12:52:40"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord",
+        "channel": "email",
+        "body": "Address: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ\n\nHi,\n\nThe tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor?\n\nRequest description: \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\"\n\nThe tenant has since confirmed which window it is: \"This is the one at the top of our staircase that has the broken latch.\"\n\nThe window is currently shut and secure but cannot be opened. We would suggest a handyperson/glazier to replace the handle and latch; this would normally fall within the £250 pre-authorised limit. Please let us know how you would like to proceed.\n\nThanks\nGrace"
+      },
+      "output": {
+        "message_id": "MSG-4C4BC5",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Harriet (tenant)",
+        "channel": "email",
+        "body": "Address: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ\n\nHi Harriet,\n\nThank you for confirming it is the window at the top of the staircase with the broken latch. I have passed this to the landlord for approval to send a contractor and will let you know as soon as a contractor is instructed. They will then contact you directly to arrange a time.\n\nIn the meantime please don't force the window. If anything changes (for example, it will not stay shut or can't be secured), let us know straight away.\n\nThanks\nGrace"
+      },
+      "output": {
+        "message_id": "MSG-A1AFA9",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-F69EB5",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: approval email sent 1 Feb with tenant's clarification (staircase window, broken latch). Chase Wed 5 Feb: email + SMS; if still silent ~Mon 10 Feb, escalate to PM recommending we instruct a handyperson within £250 limit."
+      },
+      "output": {
+        "status_id": "STS-9E527C",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-F69EB5",
+        "note": "Picked up at event 8 (1 Feb 2025). Holds of 19 Jan (\"Will email LL\") and 24 Jan (\"Waiting to hear from LL\") have no landlord email or reply on file, so I sent the full landlord approval email today, including the tenant's 1 Feb clarification. I am treating it as a first approval request and also a chase. Triage: routine. The window is shut and secure, no vulnerability is recorded, and it is a landlord installation. Raise to urgent if the window cannot be secured or becomes a safety issue. Tenant addressed agent as \"Turner\" but Grace signed the email; no impact. No landlord name, instructions or preferred contractor on file; the default £250 limit applies. Likely trade: handyperson/glazier."
+      },
+      "output": {
+        "note_id": "NOTE-3A794B",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The tenant has now said which window it is: the one at the top of the staircase with the broken latch. So I've sent the landlord the approval request and put the case on hold waiting for the landlord, with a chase date of Wed 5 Feb.\n\nThis is routine priority. The window is stuck shut, so the flat is still secure, and nobody vulnerable is recorded. The landlord has to pay for it because it's part of the building. Two earlier notes on the case (19 and 24 Jan) say we would email the landlord and were waiting on them, but there's no email or reply from the landlord in the file. So I treated today's email as the first request and as a chase. The landlord isn't named on file, so I sent it to \"Landlord\". No limit or preferred contractor is recorded for this landlord, so the standard £250 limit applies. The property and tenancy records were built from the case file, and there are no previous repairs at this address.\n\nActions taken, main one first:\n1. **Primary: landlord approval email (MSG-4C4BC5).** It used the standard approval wording with Harriet's original report quoted word for word, plus her clarification about the window. It asks whether to send our contractor or whether they'll use their own. It suggests a handyperson or glazier and says the job would normally fall within the £250 limit.\n2. **Email to Harriet (MSG-A1AFA9).** It thanks her for confirming, says the landlord has been asked to approve, and says a contractor will contact her directly once instructed. It also tells her not to force the window and to tell us straight away if it won't stay shut or can't be secured.\n3. **Ticket TKT-F69EB5 opened.** Routine, categorised as structural, containing the full report and the clarification.\n4. **Status set to waiting for the landlord.** The comment reads: \"Waiting for Landlord: approval email sent 1 Feb with tenant's clarification (staircase window, broken latch). Chase Wed 5 Feb: email + SMS; if still silent ~Mon 10 Feb, escalate to PM recommending we instruct a handyperson within £250 limit.\"\n5. **Internal note (NOTE-3A794B).** It records the missing landlord email from January, why this is routine, and that the case should become urgent if the window can't be secured.\n\nNext steps: if the landlord approves, book a handyperson or glazier within £250, tell Harriet who is coming and remind her to mention any pets. If they say they'll use their own contractor, record that and pass it on to Harriet. Otherwise:\n- **Wed 5 Feb, no reply:** chase the landlord by email and text.\n- **About Mon 10 Feb, still silent:** escalate to the property manager, recommending we book a handyperson within the £250 limit."
+  ]
+}

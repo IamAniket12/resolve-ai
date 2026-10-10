@@ -1,0 +1,292 @@
+{
+  "case_id": "021",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 3,
+  "started_at": "2026-10-10T11:50:34+00:00",
+  "finished_at": "2026-10-10T11:52:12+00:00",
+  "usage": {
+    "input_tokens": 12,
+    "output_tokens": 8470,
+    "cache_read_input_tokens": 59885,
+    "cache_creation_input_tokens": 14955
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 7550,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 580,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "contractor",
+      "summary": "Completion check: ask Alder Compliance for photos, an itemised invoice (they replaced handles, which were not instructed) and confirmation of key handover/office drop-off, because a bare 'job is completed' is not enough to close.",
+      "draft": "Address: Flat 22, 148 Lantern Quay, Westmarsh, ZZ4 1ZZ\n\nHi,\n\nThank you for letting us know the Key Replacement Request has been completed. Before we can close the job, please could you send us:\n\n1. Photos of the completed work (the new cylinder and handles fitted to the conservatory back door, with the door locking correctly).\n2. Your invoice for the job.\n3. Confirmation that 2 keys have been handed to the tenants, and that the remaining 2 keys (1 for the agency, 1 for the landlord) will be dropped off at our office tomorrow, Saturday 23 November.\n\nPlease note: our instruction covered replacing the lock and supplying 4 keys. Replacing the handles was not in the original instruction, so please show the cylinder, handles and keys as separate lines on the invoice and add a short note on why the handles had to be replaced. No quote was agreed for this job, so if the total is above £250 inc. VAT we will need the landlord to sign it off before payment.\n\nMany thanks,\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2024-11-25",
+      "follow_up_action": "Check the 2 keys arrived at the office (due Sat 23 Nov) and photos were received; if not, SMS + email Alder Compliance. If there is still no invoice on Fri 29 Nov, chase it and do not close."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "contractor",
+        "summary": "Completion check: ask Alder Compliance for photos, an itemised invoice (they replaced handles, which were not instructed) and confirmation of key handover/office drop-off, because a bare 'job is completed' is not enough to close.",
+        "draft": "Address: Flat 22, 148 Lantern Quay, Westmarsh, ZZ4 1ZZ\n\nHi,\n\nThank you for letting us know the Key Replacement Request has been completed. Before we can close the job, please could you send us:\n\n1. Photos of the completed work (the new cylinder and handles fitted to the conservatory back door, with the door locking correctly).\n2. Your invoice for the job.\n3. Confirmation that 2 keys have been handed to the tenants, and that the remaining 2 keys (1 for the agency, 1 for the landlord) will be dropped off at our office tomorrow, Saturday 23 November.\n\nPlease note: our instruction covered replacing the lock and supplying 4 keys. Replacing the handles was not in the original instruction, so please show the cylinder, handles and keys as separate lines on the invoice and add a short note on why the handles had to be replaced. No quote was agreed for this job, so if the total is above £250 inc. VAT we will need the landlord to sign it off before payment.\n\nMany thanks,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2024-11-25",
+        "follow_up_action": "Check the 2 keys arrived at the office (due Sat 23 Nov) and photos were received; if not, SMS + email Alder Compliance. If there is still no invoice on Fri 29 Nov, chase it and do not close."
+      },
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Ask the tenant to confirm the new lock and handles work and that they received their 2 keys, which is the tenant side of the completion check.",
+        "draft": "Address: Flat 22, 148 Lantern Quay, Westmarsh, ZZ4 1ZZ\n\nDear Clara Jenkins,\n\nOur maintenance provider Alder Compliance has told us that the Key Replacement Request has been completed and that the cylinder and handles on the conservatory back door have been replaced.\n\nBefore we close the request, please could you reply to confirm:\n- the new lock and handles work properly and the door locks securely, and\n- you have received your 2 new keys.\n\nIf anything is not working as it should, please let us know and we will ask the provider to come back.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2024-11-27",
+        "follow_up_action": "Send the tenant a second message (SMS + email); if still silent, note it and rely on the contractor's photos plus the keys arriving at the office."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Internal note recording the out-of-scope handles, the £250 sign-off threshold, the 'Clara' naming ambiguity and the key-logging task.",
+        "draft": "Fri 22 Nov 16:04: Alder Compliance says job done (cylinder AND handles replaced) and remaining keys will be dropped at the office Sat 23 Nov. Completion check started: photos, invoice and key confirmation asked from the provider; tenant asked to confirm the lock works and 2 keys were received. Scope point: the instruction (event 008) and the landlord's approval (event 006) covered the lock and 4 new keys. Handles were not instructed, so the provider has been asked to itemise them and explain why. No quote was agreed and the spend limit is £250 inc. VAT; if the invoice is over that, Quinn must sign it off before payment. Name ambiguity: \"Hi Clara\" appears in the contractor instruction and also in the agency's email to the contractor (event 016), and the tenant is Clara Jenkins. It looks like a template or naming mix-up and does not change the action. Office to log receipt of 2 keys (agency + landlord) and tell Quinn their key is available.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Move the case to the completion-check/awaiting-invoice state with the dated chase plan written on the dashboard.",
+        "draft": "Request marked as completed, lets do the final checks. Waiting for Provider (photos, invoice, 2 keys to office Sat 23 Nov) and Tenant (confirm lock + 2 keys). Check Mon 25 Nov: keys at office? If not, chase Alder. Tenant chase Wed 27 Nov. Invoice chase Fri 29 Nov; do not close until received.",
+        "performed": true,
+        "follow_up_on": "2024-11-25",
+        "follow_up_action": "Confirm the keys are at the office and photos received; chase Alder Compliance by SMS + email if not. Invoice chase Fri 29 Nov."
+      }
+    ],
+    "alternative_next_actions": [
+      "Mark the case completed and close it now on the contractor's word. Weaker: policy forbids closing on a bare 'done' without photos, an invoice and tenant confirmation, and the keys have not reached the office yet.",
+      "Email landlord Quinn now to say the job is done. Weaker: it is premature before the invoice, keys and confirmation, and the handle scope or cost may still need Quinn's sign-off. Better to send one complete update with the invoice.",
+      "Only set a hold and wait for the keys and invoice to arrive. Weaker: without an explicit request the contractor may not send photos or an itemised invoice explaining the extra handles."
+    ],
+    "case_summary": "The tenant (Clara Jenkins) at Flat 22, 148 Lantern Quay, Westmarsh, ZZ4 1ZZ reported that the conservatory back-door key snapped and there was no spare (the agency also held none). Landlord Quinn approved a lock replacement with new keys for the tenant, landlord and agency. Alder Compliance was instructed to replace the lock and supply 4 keys (2 tenants, 1 agency, 1 landlord, the last two to the office). On 22 Nov 16:04 the contractor reported the job complete, said they had replaced the cylinder and handles, and said they would drop the remaining keys at the office tomorrow.",
+    "issue_category": "security/locks",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "Completion check is under way: the contractor has been asked for photos, an itemised invoice (explaining the uninstructed handle replacement) and key handover confirmation, and the tenant has been asked to confirm the lock works and their 2 keys were received. The case is on hold awaiting invoice/keys with dated chases.",
+    "actions_taken": [
+      "lookup_property: record built from the case file (landlord Quinn, spend limit £250, preferred contractor Alder Compliance, no special instructions)",
+      "lookup_tenancy: active tenancy, tenant Clara Jenkins, no vulnerability notes",
+      "get_repair_history: no other jobs or cases at this address",
+      "send_message email to Alder Compliance asking for completion photos, an itemised invoice with a reason for the handles, and confirmation of key handover/office drop-off (MSG-E87636, delivered)",
+      "send_message email to Clara Jenkins (tenant) asking her to confirm the lock and handles work and she received 2 keys (MSG-A15581, delivered)",
+      "record_note on CASE-021 covering the scope, spend threshold, naming ambiguity and key logging (NOTE-7C3204)",
+      "update_case_status to awaiting_invoice with chase dates 25/27/29 Nov (STS-F363DD)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Status: completion check (awaiting_invoice). Facts: the conservatory back-door key snapped at Flat 22, 148 Lantern Quay, ZZ4 1ZZ. Landlord Quinn approved a lock replacement and 4 keys (event 006). Alder Compliance was instructed (event 012) and reported done on 22 Nov 16:04, saying it replaced the cylinder AND handles and would drop the remaining keys at the office Sat 23 Nov. Done today: emailed Alder for photos, an itemised invoice with a reason for the handles, and key confirmation; emailed the tenant to confirm the lock works and she received 2 keys. Next: Mon 25 Nov check the 2 keys (agency + landlord) are at the office, then log them and tell Quinn their key is ready; chase Alder if they are missing. Wed 27 Nov chase the tenant if she has not replied. Fri 29 Nov chase the invoice if not received. When the invoice arrives, if it is at or under £250 inc. VAT and the handles are explained, send it to Quinn and close as completed. If it is over £250 (no quote was agreed), get Quinn's sign-off before payment."
+    },
+    "conflicts": [
+      {
+        "description": "Scope: the landlord approval and the instruction covered replacing the lock and supplying 4 keys, but the contractor reports replacing the cylinder AND the handles.",
+        "how_resolved": "Neither source overrides the other yet. The contractor has been asked to itemise the handles and explain why they were needed; if the invoice exceeds £250 or the handle cost is unjustified, the landlord's sign-off will be sought before payment."
+      },
+      {
+        "description": "Name ambiguity: 'Hi Clara' opens the contractor instruction (event 008) and the agency's email to the contractor (event 016), while the tenant is named Clara Jenkins. The contractor email also lists 07700 900625 as 'Contact Details' alongside the tenant name, while the tenant number was later given as 07700 900336.",
+        "how_resolved": "Treated as a template/naming mix-up that does not change the action, since the contractor reached the tenant and completed the job. Noted internally."
+      }
+    ],
+    "information_gaps": [
+      "No completion photos yet; requested from the contractor.",
+      "No invoice or cost yet, and no quote was ever agreed; invoice requested with line items.",
+      "Not yet confirmed that the tenants received 2 keys; asked of both the tenant and the contractor.",
+      "The 2 office keys (agency + landlord) have not arrived yet; expected Sat 23 Nov and to be checked Mon 25 Nov.",
+      "Reason for replacing the handles is unknown; asked of the contractor."
+    ],
+    "assumptions": [
+      "The tenancy is active and Clara Jenkins is the current tenant (inferred from the case file).",
+      "The job is routine: the property stayed secure (only the conservatory back-door key snapped, with no report that the door could not be secured).",
+      "The office will be able to receive the keys on Saturday 23 Nov or the contractor will drop them on the next working day."
+    ],
+    "tenant_communication": "Told on 22 Nov that Alder Compliance reports the cylinder and handles replaced; asked to confirm the lock works and that she received her 2 keys, and to report any problem.",
+    "landlord_communication": "None at this moment. Quinn previously approved the work (event 006) and was told it would be arranged (event 007). An update with the invoice, and notice that the landlord key is at the office, will follow once the checks are complete.",
+    "next_steps": [
+      "Mon 25 Nov: confirm the 2 keys (agency + landlord) are at the office and log them; tell Quinn their key is available. If missing, SMS + email Alder Compliance.",
+      "Wed 27 Nov: if the tenant has not confirmed, send a second message; if still silent, note it and rely on the contractor's photos.",
+      "Fri 29 Nov: if there is no invoice, chase Alder Compliance; do not close until it is received.",
+      "On the invoice: check the cylinder/handles/keys lines. If it is at or under £250 inc. VAT and the handles are justified, send it to Quinn and close as 'completed'. If it is over £250, request Quinn's approval before payment."
+    ],
+    "risk_flags": [
+      "Contractor carried out work beyond the instruction (handles) with no agreed quote; risk the invoice exceeds the £250 authority.",
+      "Keys for the agency and landlord are not yet in the office; security of key custody needs to be confirmed."
+    ],
+    "confidence": 0.86,
+    "reasoning": "The history ends with the contractor claiming completion. Under the policy's completion-check and 'completion claimed without evidence' rules, the next moment is to ask the provider for photos and the invoice and to ask the tenant to confirm, not to close. The handles were outside the approved scope and no quote existed, so the request also asks for an itemised invoice and states the £250 pre-authorised limit; anything above that needs landlord sign-off. The keys are due at the office tomorrow, so the first check date is the next working day (Mon 25 Nov). The tenant chase is 3 working days out (Wed 27 Nov) and the invoice chase 5 working days out (Fri 29 Nov). No safety rule applies and everything is within the workflow, so no escalation is needed. The lookups returned case-file-built records with no conflicting data."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 22, 148 Lantern Quay, Westmarsh, ZZ4 1ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-021",
+        "address": "Flat 22, 148 Lantern Quay, Westmarsh, ZZ4 1ZZ",
+        "postcode": "ZZ4 1ZZ",
+        "case_title": "Case 021: Key Replacement Request",
+        "case_created": "2024-11-21 09:30:14 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "Quinn",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Alder Compliance",
+          "Clara"
+        ],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 22, 148 Lantern Quay"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "Flat 22, 148 Lantern Quay",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-021",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Clara Jenkins",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record (address messages by name)"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 22, 148 Lantern Quay"
+      },
+      "output": {
+        "property_id": "Flat 22, 148 Lantern Quay",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 20,
+        "last_event": "2024-11-22 16:04:29 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Alder Compliance",
+        "channel": "email",
+        "body": "Address: Flat 22, 148 Lantern Quay, Westmarsh, ZZ4 1ZZ\n\nHi,\n\nThank you for letting us know the Key Replacement Request has been completed. Before we can close the job, please could you send us:\n\n1. Photos of the completed work (the new cylinder and handles fitted to the conservatory back door, with the door locking correctly).\n2. Your invoice for the job.\n3. Confirmation that 2 keys have been handed to the tenants, and that the remaining 2 keys (1 for the agency, 1 for the landlord) will be dropped off at our office tomorrow, Saturday 23 November.\n\nPlease note: our instruction covered replacing the lock and supplying 4 keys. Replacing the handles was not in the original instruction, so please show the cylinder, handles and keys as separate lines on the invoice and add a short note on why the handles had to be replaced. No quote was agreed for this job, so if the total is above £250 inc. VAT we will need the landlord to sign it off before payment.\n\nMany thanks,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-E87636",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Clara Jenkins (tenant)",
+        "channel": "email",
+        "body": "Address: Flat 22, 148 Lantern Quay, Westmarsh, ZZ4 1ZZ\n\nDear Clara Jenkins,\n\nOur maintenance provider Alder Compliance has told us that the Key Replacement Request has been completed and that the cylinder and handles on the conservatory back door have been replaced.\n\nBefore we close the request, please could you reply to confirm:\n- the new lock and handles work properly and the door locks securely, and\n- you have received your 2 new keys.\n\nIf anything is not working as it should, please let us know and we will ask the provider to come back.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-A15581",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "CASE-021",
+        "note": "Fri 22 Nov 16:04: Alder Compliance says job done (cylinder AND handles replaced) and remaining keys will be dropped at the office Sat 23 Nov. Completion check started: photos, invoice and key confirmation asked from the provider; tenant asked to confirm the lock works and 2 keys were received. Scope point: the instruction (event 008) and the landlord's approval (event 006) covered the lock and 4 new keys. Handles were not instructed, so the provider has been asked to itemise them and explain why. No quote was agreed and the spend limit is £250 inc. VAT; if the invoice is over that, Quinn must sign it off before payment. Name ambiguity: \"Hi Clara\" appears in the contractor instruction and also in the agency's email to the contractor (event 016), and the tenant is Clara Jenkins. It looks like a template or naming mix-up and does not change the action. Office to log receipt of 2 keys (agency + landlord) and tell Quinn their key is available."
+      },
+      "output": {
+        "note_id": "NOTE-7C3204",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "CASE-021",
+        "status": "awaiting_invoice",
+        "comment": "Request marked as completed, lets do the final checks. Waiting for Provider (photos, invoice, 2 keys to office Sat 23 Nov) and Tenant (confirm lock + 2 keys). Check Mon 25 Nov: keys at office? If not, chase Alder. Tenant chase Wed 27 Nov. Invoice chase Fri 29 Nov; do not close until received."
+      },
+      "output": {
+        "status_id": "STS-F363DD",
+        "status": "awaiting_invoice",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Alder Compliance says the job is done, so I've started the completion check: I asked them for evidence and their invoice, asked the tenant to confirm the door works, and put the case on hold. Nothing gets closed until we have evidence, the invoice and the keys.\n\nThe property and tenancy lookups only had what's in the case file (landlord Quinn, £250 spend limit, tenant Clara Jenkins). There's no earlier repair history at this address.\n\n**Things to watch:**\n- **Handles weren't instructed.** Quinn approved, and we instructed, a new lock and 4 keys. The contractor also replaced the handles. I've asked them to list the handles separately on the invoice and explain why they were needed.\n- **No quote was agreed.** If the invoice comes in over £250 including VAT, Quinn must sign it off before we pay.\n- **The name \"Clara\" is used twice.** The contractor instruction and our email to the contractor both open \"Hi Clara\", but the tenant is Clara Jenkins. It looks like a template mix-up and doesn't change what we do.\n\n**Follow-up dates (also written in the hold comment):**\n- **Mon 25 Nov:** check the 2 keys reached the office (due Sat 23 Nov). If not, chase Alder. Once they're in, tell Quinn their key is ready.\n- **Wed 27 Nov:** if the tenant hasn't replied, send a second message.\n- **Fri 29 Nov:** if there's no invoice, chase Alder. Once it's in, check it against the instruction, send it to Quinn and close as completed.\n\nActions taken, primary first:\n1. **Primary:** Emailed Alder Compliance (delivered, MSG-E87636): \"Thank you for letting us know the Key Replacement Request has been completed. Before we can close the job, please could you send us: 1. Photos of the completed work (the new cylinder and handles fitted to the conservatory back door, with the door locking correctly). 2. Your invoice for the job. 3. Confirmation that 2 keys have been handed to the tenants, and that the remaining 2 keys (1 for the agency, 1 for the landlord) will be dropped off at our office tomorrow, Saturday 23 November. Please note: our instruction covered replacing the lock and supplying 4 keys. Replacing the handles was not in the original instruction, so please show the cylinder, handles and keys as separate lines on the invoice and add a short note on why the handles had to be replaced. No quote was agreed for this job, so if the total is above £250 inc. VAT we will need the landlord to sign it off before payment.\"\n2. Emailed Clara Jenkins, the tenant (delivered, MSG-A15581): \"Our maintenance provider Alder Compliance has told us that the Key Replacement Request has been completed and that the cylinder and handles on the conservatory back door have been replaced. Before we close the request, please could you reply to confirm: the new lock and handles work properly and the door locks securely, and you have received your 2 new keys. If anything is not working as it should, please let us know and we will ask the provider to come back.\"\n3. Saved an internal note (NOTE-7C3204) on the extra handles, the £250 sign-off rule, the name mix-up and logging the keys at the office.\n4. Set the status to awaiting_invoice (STS-F363DD): \"Request marked as completed, lets do the final checks. Waiting for Provider (photos, invoice, 2 keys to office Sat 23 Nov) and Tenant (confirm lock + 2 keys). Check Mon 25 Nov: keys at office? If not, chase Alder. Tenant chase Wed 27 Nov. Invoice chase Fri 29 Nov; do not close until received.\""
+  ]
+}

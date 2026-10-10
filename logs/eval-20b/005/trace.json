@@ -1,0 +1,345 @@
+{
+  "case_id": "005",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 4,
+  "started_at": "2026-10-10T11:49:16+00:00",
+  "finished_at": "2026-10-10T11:51:15+00:00",
+  "usage": {
+    "input_tokens": 14,
+    "output_tokens": 9218,
+    "cache_read_input_tokens": 79112,
+    "cache_creation_input_tokens": 36999
+  },
+  "manifest": [
+    {
+      "name": "attachment-01-check-out-inspection-report.pdf",
+      "kind": "pdf",
+      "chars": 9296,
+      "note": ""
+    },
+    {
+      "name": "attachment-02-cleaning-quote.pdf",
+      "kind": "pdf",
+      "chars": 1690,
+      "note": ""
+    },
+    {
+      "name": "attachment-03-cleaning-quote.pdf",
+      "kind": "pdf",
+      "chars": 1256,
+      "note": ""
+    },
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 4832,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 683,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "contractor",
+      "summary": "Tell Stonebridge Works (Ava Nolan) to go ahead with the approved £205 end-of-tenancy clean, carpet included, because the landlord approved it in full at event 16 and it is within the £250 limit.",
+      "draft": "Job Id: NBL-005-0163\nAddress: Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ\n\nHi Ava,\n\nGood news - the landlord has approved your quote in full, including the carpet. Please go ahead with:\n- General end-of-tenancy clean throughout as per the check-out report, including all appliances, with deeper cleaning of the bathroom and kitchen (heavy limescale and grime) - £135\n- Shampoo the bedroom two carpet - £45\n- Defrost the freezer - £25\nApproved total: £205. If anything comes up that would take the cost above this, please contact us before doing it.\n\nThe property is vacant (tenant has moved out), so there is no tenant to arrange access with. Please contact the office to arrange key collection and return.\n\nPlease book the job as soon as possible and reply with the date you will attend. Once finished, please send after photos of each room (especially the kitchen, bathroom, freezer and bedroom two carpet) together with your invoice, and return the keys to the office.\n\nRegards\nKendall\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2024-11-19",
+      "follow_up_action": "If there is no booking date, send an SMS and email reminder. After 3 reminders, phone Stonebridge Works (or hand the call to a human) and find another cleaner."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "contractor",
+        "summary": "Tell Stonebridge Works (Ava Nolan) to go ahead with the approved £205 end-of-tenancy clean, carpet included, because the landlord approved it in full at event 16 and it is within the £250 limit.",
+        "draft": "Job Id: NBL-005-0163\nAddress: Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ\n\nHi Ava,\n\nGood news - the landlord has approved your quote in full, including the carpet. Please go ahead with:\n- General end-of-tenancy clean throughout as per the check-out report, including all appliances, with deeper cleaning of the bathroom and kitchen (heavy limescale and grime) - £135\n- Shampoo the bedroom two carpet - £45\n- Defrost the freezer - £25\nApproved total: £205. If anything comes up that would take the cost above this, please contact us before doing it.\n\nThe property is vacant (tenant has moved out), so there is no tenant to arrange access with. Please contact the office to arrange key collection and return.\n\nPlease book the job as soon as possible and reply with the date you will attend. Once finished, please send after photos of each room (especially the kitchen, bathroom, freezer and bedroom two carpet) together with your invoice, and return the keys to the office.\n\nRegards\nKendall\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2024-11-19",
+        "follow_up_action": "If there is no booking date, send an SMS and email reminder. After 3 reminders, phone Stonebridge Works (or hand the call to a human) and find another cleaner."
+      },
+      {
+        "channel": "sms",
+        "to": "contractor",
+        "summary": "Send the standard SMS so the contractor sees the go-ahead email.",
+        "draft": "Hello, this is Northbridge Lettings! Please check your email regarding the property at Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ - your cleaning quote (£205 incl. carpet) is approved, please go ahead and reply with your date.",
+        "performed": true,
+        "follow_up_on": "2024-11-19",
+        "follow_up_action": "Send a second SMS and email reminder if there is still no booking date."
+      },
+      {
+        "channel": "email",
+        "to": "landlord",
+        "summary": "Thank the landlord and confirm the full job has been instructed at the quoted price.",
+        "draft": "Job Id: NBL-005-0163\nAddress: Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ\n\nHi Palmer,\n\nThank you. I have instructed Stonebridge Works to go ahead with the full clean, including the bedroom two carpet and freezer defrost, at the quoted £205. I will let you know the date and send over the invoice and completion photos once the work is done.\n\nRegards\nKendall",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Internal note recording the approval, the cost check, the possible deposit deduction, the data errors and the repair items that sit outside this job.",
+        "draft": "16 Nov 2024: Landlord Palmer approved Stonebridge Works quote in full incl. carpets (event 16). £205 total, no VAT shown; within £250 default limit even if 20% VAT were added (£246). Contractor instructed by email + SMS; landlord acknowledged. Vacant property - access via office keys, no tenant contact needed. Recharge: check-out report records Unacceptable cleanliness in bed 1, kitchen, bathroom, bed 2 vs end-of-tenancy standard - cleaning cost is a candidate deposit deduction; keep quote + invoice + after-photos as evidence. Data anomalies: check-out report shows appointment 25 Feb 2025 and quotes dated 05/03/25, both after the case date (report signature 2 Nov 2024) - probably date-format/template errors, check before using as deposit evidence. Event 11 named the wrong property (Flat 27, 117 Lantern Quay) and event 13 was addressed 'Hi Palmer' but went to the contractor; both appear to be clerical errors. Separate maintenance items in the report (hallway door closer, stuck balcony doors, en-suite extractor fan, peeling cupboards, wall damage, bed 2 radiator) are NOT part of this job - flag to PM/landlord as a separate request.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "hold",
+        "to": "contractor",
+        "summary": "Put the case on hold, Waiting for Provider to give a booking date, with a chase date of Tue 19 Nov (2 working days).",
+        "draft": "Waiting for Provider: Stonebridge Works told to go ahead with the £205 EOT clean incl. carpet (landlord approved 16 Nov). Chase Tue 19 Nov: SMS + email reminder for a booking date; after 3 reminders, phone them and find another cleaner.",
+        "performed": true,
+        "follow_up_on": "2024-11-19",
+        "follow_up_action": "Send an SMS and email reminder to Stonebridge Works. After 3 reminders, phone them and find another cleaner."
+      }
+    ],
+    "alternative_next_actions": [
+      "Tell the contractor to go ahead without emailing the landlord back. Weaker: the landlord was not told the job was instructed, and the agency normally keeps the landlord informed of spend.",
+      "Ask the landlord whether the cleaning should be charged to the tenant's deposit before instructing. Weaker: this delays an approved job that is within authority; the deposit can be dealt with from the invoice and evidence afterwards.",
+      "Escalate the date errors to the property manager before instructing. Weaker: they do not change the work or the cost, and over-escalating routine work counts as a failure."
+    ],
+    "case_summary": "The agency manager asked for an estimate for end-of-tenancy cleaning at Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ, which is empty after the tenant moved out. The check-out report rates four rooms as unacceptably dirty. Stonebridge Works (Ava Nolan) quoted £135 for the general and deep clean, £45 for the bedroom 2 carpet and £25 for the freezer defrost, £205 in total. The quote was sent to landlord Palmer, who approved it in full, carpets included, on 16 Nov 2024.",
+    "issue_category": "not-a-repair (check-out cleaning)",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "The landlord approved the £205 clean, carpet included. Stonebridge Works has been told to go ahead and to arrange keys with the office, the landlord has been told, and the case is on hold waiting for the provider to give a date, with a chase on 19 Nov 2024.",
+    "actions_taken": [
+      "Looked up the property: record built from the case file, landlord Palmer, £250 spend limit, no standing instructions.",
+      "Checked the repair history: no other jobs or cases at this address.",
+      "Searched the handyperson panel for ZZ8 9ZZ: only 'Clarke' was returned, so no listing for Stonebridge Works and no slot to book.",
+      "Emailed Ava Nolan (Stonebridge Works) to go ahead with the full £205 job (MSG-3DF4F0, delivered).",
+      "Sent Stonebridge Works the SMS nudge (MSG-25C061, delivered).",
+      "Emailed Palmer (landlord) to confirm the job had been instructed (MSG-6BE6FD, delivered).",
+      "Added an internal note on NBL-005-0163 (NOTE-EAFB10).",
+      "Set the case status to awaiting_provider with a chase on 19 Nov (STS-7B6FCC)."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Job NBL-005-0163, Flat 10, 160 Alder Lane, ZZ8 9ZZ, empty after check-out. Landlord Palmer approved the Stonebridge Works quote of £205 (clean £135, bedroom 2 carpet £45, freezer defrost £25; no VAT stated) on 16 Nov 2024. Ava has been told by email and SMS to go ahead, get the keys from the office, reply with a date, and send after-photos and the invoice. Palmer has been told. Status is awaiting_provider; chase Tue 19 Nov by SMS and email, and after 3 reminders phone her and find another cleaner. On completion: get photos and the invoice (£205 or less is fine; more needs a reason and Palmer's sign-off), check the keys are back, send the invoice to Palmer, and decide whether to claim the cost from the deposit using the check-out report. The repair items in the report are separate and need their own request."
+    },
+    "conflicts": [
+      {
+        "description": "The check-out report shows an appointment date of 25 Feb 2025 and both quotes are dated 05/03/25. Both are later than the case date of 16 Nov 2024, but the report signature is dated 2 Nov 2024.",
+        "how_resolved": "Treated as date-format or template errors, because the case history and the signature date fit Nov 2024. This does not change the instruction. Flagged in the note to check before using these documents as deposit evidence."
+      },
+      {
+        "description": "The agency email at event 11 on this job named a different property (Flat 27, 117 Lantern Quay, Kingshaven).",
+        "how_resolved": "Treated as a clerical error. The quote received (attachment 02/03) is for Flat 10, 160 Alder Lane, and the job and address match."
+      },
+      {
+        "description": "The event 13 email was sent to the contractor but begins 'Hi Palmer'. The landlord version was sent at event 15.",
+        "how_resolved": "Clerical error. The landlord's approval at event 16 answers event 15, so it is valid."
+      }
+    ],
+    "information_gaps": [
+      "The quote does not say whether VAT applies. Handled: even with 20% VAT added (£246) it is within the £250 limit.",
+      "There is no contact record for Stonebridge Works in the contractor panel. Messages were sent by name through the platform's contact record, and both were delivered.",
+      "No date has been agreed yet. This is waiting on the provider, chase on 19 Nov.",
+      "The landlord has not said whether the cost should be charged to the tenant's deposit. This will be raised when the invoice comes in."
+    ],
+    "assumptions": [
+      "The property is empty, so access is by office keys and no tenant needs notice.",
+      "The £205 is the full price, and with or without VAT it is within authority.",
+      "Stonebridge Works is the contractor assigned at event 3, and Ava Nolan is the contact."
+    ],
+    "tenant_communication": "none (property vacant; former tenant not contacted at this stage)",
+    "landlord_communication": "Thanked Palmer and confirmed that Stonebridge Works has been instructed to do the full clean, including the bedroom 2 carpet and freezer defrost, at £205. Told him the date, invoice and completion photos will follow.",
+    "next_steps": [
+      "Tue 19 Nov 2024: if there is no booking date, send Stonebridge Works an SMS and email reminder. After 3 reminders, phone them and find another cleaner.",
+      "When a date is given, record it and set the hold to wait for the work to be done.",
+      "The day after the clean: ask for after-photos and the invoice, and check the keys are back with the office.",
+      "Check the invoice against £205. If it is higher, ask for the reason and get Palmer's agreement before paying.",
+      "Send the invoice to Palmer and close the case as completed. Decide with the property manager or Palmer whether to claim the cost from the deposit, using the check-out report, quote, invoice and photos.",
+      "Raise the repair items from the check-out report (door closer, balcony doors, extractor fan, cupboards, wall damage, bedroom 2 radiator) with Palmer as a separate request."
+    ],
+    "risk_flags": [
+      "The check-out report records that the smoke and CO detectors were not tested. They should be tested before the flat is re-let.",
+      "The dates in the report and quotes are inconsistent, which could weaken a deposit claim if they are not corrected.",
+      "The bedroom 1 balcony doors are stuck and the en-suite extractor fan does not work. These are outside this cleaning job but should be fixed before re-letting."
+    ],
+    "confidence": 0.88,
+    "reasoning": "Event 16 is Palmer's written approval of the whole quote, carpets included. The quote of £205 (£246 if VAT were added) is within the £250 default authority, and there are no stricter landlord instructions. Under the policy, the step after landlord approval is to instruct the provider and set the hold Waiting for Provider, chasing after 2 working days. The case date is Sat 16 Nov, so the chase falls on Tue 19 Nov. Because the flat is empty, the vacant-property playbook applies: access is through the office, there is no tenant to contact, and cleaning costs should be weighed against the check-out report for the deposit. I also told the landlord, since the agency keeps landlords informed of spend. The date and wrong-property errors do not change the action, so I recorded them rather than escalating. Nothing needs a human decision now."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-005",
+        "address": "Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ",
+        "postcode": "ZZ8 9ZZ",
+        "case_title": "Case 005: Check-Out Cleaning",
+        "case_created": "2024-11-02 13:58:25 UTC",
+        "reported_by_role": "Agency manager",
+        "landlord_name": "Palmer",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ"
+      },
+      "output": {
+        "property_id": "Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 16,
+        "last_event": "2024-11-16 09:24:32 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "search_contractors",
+      "input": {
+        "trade": "handyperson",
+        "postcode": "ZZ8 9ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "handyperson",
+        "postcode": "ZZ8 9ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "BATCH-3",
+            "name": "Clarke",
+            "trades": [
+              "handyperson"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          }
+        ],
+        "note": ""
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Ava Nolan (Stonebridge Works)",
+        "channel": "email",
+        "body": "Job Id: NBL-005-0163\nAddress: Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ\n\nHi Ava,\n\nGood news - the landlord has approved your quote in full, including the carpet. Please go ahead with:\n- General end-of-tenancy clean throughout as per the check-out report, including all appliances, with deeper cleaning of the bathroom and kitchen (heavy limescale and grime) - £135\n- Shampoo the bedroom two carpet - £45\n- Defrost the freezer - £25\nApproved total: £205. If anything comes up that would take the cost above this, please contact us before doing it.\n\nThe property is vacant (tenant has moved out), so there is no tenant to arrange access with. Please contact the office to arrange key collection and return.\n\nPlease book the job as soon as possible and reply with the date you will attend. Once finished, please send after photos of each room (especially the kitchen, bathroom, freezer and bedroom two carpet) together with your invoice, and return the keys to the office.\n\nRegards\nKendall\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-3DF4F0",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Ava Nolan (Stonebridge Works)",
+        "channel": "sms",
+        "body": "Hello, this is Northbridge Lettings! Please check your email regarding the property at Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ - your cleaning quote (£205 incl. carpet) is approved, please go ahead and reply with your date."
+      },
+      "output": {
+        "message_id": "MSG-25C061",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Palmer (landlord)",
+        "channel": "email",
+        "body": "Job Id: NBL-005-0163\nAddress: Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ\n\nHi Palmer,\n\nThank you. I have instructed Stonebridge Works to go ahead with the full clean, including the bedroom two carpet and freezer defrost, at the quoted £205. I will let you know the date and send over the invoice and completion photos once the work is done.\n\nRegards\nKendall"
+      },
+      "output": {
+        "message_id": "MSG-6BE6FD",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "NBL-005-0163",
+        "note": "16 Nov 2024: Landlord Palmer approved Stonebridge Works quote in full incl. carpets (event 16). £205 total, no VAT shown; within £250 default limit even if 20% VAT were added (£246). Contractor instructed by email + SMS; landlord acknowledged. Vacant property - access via office keys, no tenant contact needed. Recharge: check-out report records Unacceptable cleanliness in bed 1, kitchen, bathroom, bed 2 vs end-of-tenancy standard - cleaning cost is a candidate deposit deduction; keep quote + invoice + after-photos as evidence. Data anomalies: check-out report shows appointment 25 Feb 2025 and quotes dated 05/03/25, both after the case date (report signature 2 Nov 2024) - probably date-format/template errors, check before using as deposit evidence. Event 11 named the wrong property (Flat 27, 117 Lantern Quay) and event 13 was addressed 'Hi Palmer' but went to the contractor; both appear to be clerical errors. Separate maintenance items in the report (hallway door closer, stuck balcony doors, en-suite extractor fan, peeling cupboards, wall damage, bed 2 radiator) are NOT part of this job - flag to PM/landlord as a separate request."
+      },
+      "output": {
+        "note_id": "NOTE-EAFB10",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "NBL-005-0163",
+        "status": "awaiting_provider",
+        "comment": "Waiting for Provider: Stonebridge Works told to go ahead with the £205 EOT clean incl. carpet (landlord approved 16 Nov). Chase Tue 19 Nov: SMS + email reminder for a booking date; after 3 reminders, phone them and find another cleaner."
+      },
+      "output": {
+        "status_id": "STS-7B6FCC",
+        "status": "awaiting_provider",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Palmer (the landlord) approved the full cleaning quote this morning, including the carpet. I've told Stonebridge Works (Ava Nolan) to go ahead, thanked Palmer, and put the case on hold until Tuesday to wait for a booking date.\n\n**What I checked**\n- **Records:** The property record matches the case file. The default spend limit is £250 and there are no standing instructions from Palmer. There's no repair history beyond this case.\n- **Cost:** The quote adds up to £205 but doesn't say whether VAT is included. Even with 20% VAT added it would be £246, still under the £250 limit.\n- **Access:** The flat is empty since the tenant left, so there's no tenant to contact. I asked Stonebridge Works to get the keys from the office.\n\n**Things you may need to act on**\n- **Dates in the paperwork:** The check-out report says the appointment was 25 Feb 2025 and both quotes are dated 05/03/25. Both are after today's case date of 16 Nov 2024, and the report was signed on 2 Nov 2024. This is probably a date-format error, but check it before using these documents to support a deposit deduction.\n- **Clerical slips:** The email to the contractor on 10 Nov named the wrong property (Flat 27, 117 Lantern Quay). The 13 Nov email started \"Hi Palmer\" but went to the contractor. Neither changes what we do next.\n- **Deposit:** The report rates four rooms as unacceptably dirty, so this cleaning cost could be taken from the deposit. Keep the quote, the invoice and the after-photos.\n- **Repairs not in this job:** The report also lists repairs: the hallway door closer, stuck balcony doors, the en-suite extractor fan, peeling cupboards, damaged walls and a radiator problem in bedroom 2. Raise these with Palmer as a separate request.\n\n**What happens next**\n- **Tue 19 Nov:** If Stonebridge Works hasn't given a date, send an SMS and email reminder. After three reminders with no booking, phone them and find another cleaner.\n- **The day after the clean:** Ask for after-photos and the invoice, and make sure the keys are back at the office. The invoice should be £205 or less; anything higher needs an explanation and Palmer's sign-off.\n- **To close:** Send Palmer the invoice and photos, then mark the case completed.\n\n**Options I didn't take**\n- **Booking a slot myself:** The cleaner arranges keys and timing with the office, and the panel search returned no listing for Stonebridge Works, so I had no slot to book.\n- **Escalating:** Not needed. The work is approved and within the spend limit.\n\nActions taken, primary first:\n1. PRIMARY – Emailed Ava Nolan (Stonebridge Works) to go ahead: full clean at £205 including the bedroom 2 carpet and freezer defrost, keys from the office, reply with a date, then send photos and the invoice and return the keys. Ref MSG-3DF4F0, delivered.\n2. Sent Stonebridge Works an SMS: \"Hello, this is Northbridge Lettings! Please check your email regarding the property at Flat 10, 160 Alder Lane, Westmarsh, ZZ8 9ZZ - your cleaning quote (£205 incl. carpet) is approved, please go ahead and reply with your date.\" Ref MSG-25C061, delivered.\n3. Emailed Palmer: thanks, Stonebridge Works told to do the full clean including carpet at £205, date, invoice and photos to follow. Ref MSG-6BE6FD, delivered.\n4. Added an internal note on job NBL-005-0163 covering the approval, the cost, possible deposit deduction, the date and wrong-property slips, and the separate repairs. Ref NOTE-EAFB10.\n5. Set the status to Waiting for Provider: \"Stonebridge Works told to go ahead with the £205 EOT clean incl. carpet (landlord approved 16 Nov). Chase Tue 19 Nov: SMS + email reminder for a booking date; after 3 reminders, phone them and find another cleaner.\" Ref STS-7B6FCC."
+  ]
+}

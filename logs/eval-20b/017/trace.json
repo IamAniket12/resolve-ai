@@ -1,0 +1,195 @@
+{
+  "case_id": "017",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 3,
+  "started_at": "2026-10-10T11:50:33+00:00",
+  "finished_at": "2026-10-10T11:51:13+00:00",
+  "usage": {
+    "input_tokens": 12,
+    "output_tokens": 3645,
+    "cache_read_input_tokens": 55867,
+    "cache_creation_input_tokens": 7200
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 3256,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 386,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "tenant",
+      "summary": "Thank the tenant for confirming the extractor fan works once switched on and tell her the request is closed with no contractor or cost, because closing a case is a message to the reporter.",
+      "draft": "Address: Flat 1, 31 Juniper Mews, Cedarford, ZZ7 7ZZ\n\nGood morning Clara,\n\nThank you for confirming that the kitchen extractor fan is now working after switching it on at the switch to the right-hand side of the hob. As no contractor or cost is needed, we will now close this request.\n\nIf the fan stops working again, please let us know and we will raise a new request.\n\nKind regards,\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "",
+      "follow_up_action": ""
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Thank the tenant for confirming the extractor fan works once switched on and tell her the request is closed with no contractor or cost, because closing a case is a message to the reporter.",
+        "draft": "Address: Flat 1, 31 Juniper Mews, Cedarford, ZZ7 7ZZ\n\nGood morning Clara,\n\nThank you for confirming that the kitchen extractor fan is now working after switching it on at the switch to the right-hand side of the hob. As no contractor or cost is needed, we will now close this request.\n\nIf the fan stops working again, please let us know and we will raise a new request.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "email",
+        "to": "landlord",
+        "summary": "Tell the landlord that their workaround fixed the problem and that the request is closed at no cost, as the landlord-workaround playbook requires.",
+        "draft": "Address: Flat 1, 31 Juniper Mews, Cedarford, ZZ7 7ZZ\n\nGood day,\n\nThank you for your advice regarding the kitchen extractor fan. The tenant has confirmed the fan is working after switching it on at the switch to the right-hand side of the hob. No contractor was instructed and there is no cost, so we are closing this request.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Set the case to closed, no action, so the dashboard shows that no work was needed.",
+        "draft": "Closed, no action: tenant confirmed 16 Sep the extractor fan works once switched on at the switch to the right of the hob (landlord's advice). No contractor, no cost. Tenant and landlord told by email.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      }
+    ],
+    "alternative_next_actions": [
+      "Close the status only, without messaging. This is weaker because policy says closing is a message: the tenant and landlord should hear the outcome.",
+      "Email only the tenant and close. This is weaker because the landlord gave the workaround and should be told it worked and that no cost was incurred.",
+      "Book an electrician or handyperson to check the fan anyway. This is weaker because the tenant confirmed it works, so the call-out would be an unnecessary cost the landlord would refuse to pay."
+    ],
+    "case_summary": "On 11 Sep the tenant, Clara, reported that the kitchen extractor fan at Flat 1, 31 Juniper Mews, Cedarford ZZ7 7ZZ would not turn on. The agency asked the landlord for approval. The landlord replied that a switch to the right of the hob needs to be on. The agency passed this to the tenant, who confirmed at 08:55 on 16 Sep that the fan now works.",
+    "issue_category": "appliance",
+    "urgency": "routine",
+    "decision": "resolved",
+    "outcome": "The fan works once switched on at the isolator switch, so no contractor and no cost were needed. The tenant and landlord were told by email and the case is closed, no action.",
+    "actions_taken": [
+      "lookup_property: verified Flat 1, 31 Juniper Mews (record CASE-017, built from the case file; default £250 limit, no landlord instructions)",
+      "send_message: closing email to tenant Clara (MSG-5E0CCB, delivered)",
+      "send_message: outcome and closure email to landlord (MSG-5D7500, delivered)",
+      "update_case_status: closed_no_action (STS-30AEA5)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "No human action needed. The tenant confirmed the kitchen extractor fan works after switching it on at the switch to the right of the hob, as the landlord advised. No contractor was instructed and there is no cost. The tenant and landlord were told by email and the status is closed_no_action. No maintenance ticket was ever opened, so the closure is not linked to a ticket. If the tenant reports the fan failing again, raise a new request and start the landlord approval step."
+    },
+    "conflicts": [],
+    "information_gaps": [
+      "The landlord is not named in the case file, so the message was addressed by role through the platform contact record.",
+      "The tenant's photo was referenced but unavailable. It was not needed because the issue is resolved.",
+      "No maintenance ticket was ever created because no contractor was needed, so the status update has no ticket ID."
+    ],
+    "assumptions": [
+      "The tenant's email ('The customer confirms that the extractor fan is working after locating the button') is a clear confirmation that the fault is resolved.",
+      "The fan was off at the switch, not faulty, so no electrical check is needed."
+    ],
+    "tenant_communication": "Tenant was told the fan is confirmed working, that no contractor or cost is needed, that the request is closed, and to report again if it stops working.",
+    "landlord_communication": "Landlord was thanked for the advice and told the tenant confirmed the fan works, that no contractor or cost was incurred, and that the request is closed.",
+    "next_steps": [
+      "None. If the fan fails again, raise a new request."
+    ],
+    "risk_flags": [],
+    "confidence": 0.95,
+    "reasoning": "The landlord suggested a workaround (switch to the right of the hob). The team passed it to the tenant, who confirmed the fan works. Under the landlord-workaround and closing playbooks, the next moment is a short closing email to the reporter, a note of the result to the landlord, and the closed-no-action status. There are no safety or vulnerability issues, no spend, and no conflicting sources, so escalation is not warranted."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 1, 31 Juniper Mews, Cedarford, ZZ7 7ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-017",
+        "address": "Flat 1, 31 Juniper Mews, Cedarford, ZZ7 7ZZ",
+        "postcode": "ZZ7 7ZZ",
+        "case_title": "Case 017: Kitchen Extractor Fan Repair Request",
+        "case_created": "2026-09-11 08:37:27 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Clara (tenant)",
+        "channel": "email",
+        "body": "Address: Flat 1, 31 Juniper Mews, Cedarford, ZZ7 7ZZ\n\nGood morning Clara,\n\nThank you for confirming that the kitchen extractor fan is now working after switching it on at the switch to the right-hand side of the hob. As no contractor or cost is needed, we will now close this request.\n\nIf the fan stops working again, please let us know and we will raise a new request.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-5E0CCB",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord",
+        "channel": "email",
+        "body": "Address: Flat 1, 31 Juniper Mews, Cedarford, ZZ7 7ZZ\n\nGood day,\n\nThank you for your advice regarding the kitchen extractor fan. The tenant has confirmed the fan is working after switching it on at the switch to the right-hand side of the hob. No contractor was instructed and there is no cost, so we are closing this request.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-5D7500",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "closed_no_action",
+        "comment": "Closed, no action: tenant confirmed 16 Sep the extractor fan works once switched on at the switch to the right of the hob (landlord's advice). No contractor, no cost. Tenant and landlord told by email."
+      },
+      "output": {
+        "status_id": "STS-30AEA5",
+        "status": "closed_no_action",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The request is closed with no action needed. Clara confirmed the kitchen fan works now that it's switched on at the switch to the right of the hob, which is what the landlord suggested. No contractor was sent and there's no cost, so I told her and the landlord by email and set the status to closed.\n\n- **What I checked:** The property record matched the case file. No landlord name or standing instructions are on file, and the default £250 spend limit was never used.\n- **Triage:** Routine. There were no safety, vulnerability or responsibility issues.\n- **Ticket:** No maintenance ticket was ever opened, because no contractor was needed. The closed status therefore isn't linked to a ticket.\n- **Follow-up:** None. If the fan fails again, that's a new request.\n\nActions taken at event 12 (primary first):\n1. **Primary:** Emailed the tenant (MSG-5E0CCB, delivered): \"Good morning Clara, Thank you for confirming that the kitchen extractor fan is now working after switching it on at the switch to the right-hand side of the hob. As no contractor or cost is needed, we will now close this request. If the fan stops working again, please let us know and we will raise a new request. Kind regards, Northbridge Lettings\"\n2. Emailed the landlord (MSG-5D7500, delivered): \"Thank you for your advice regarding the kitchen extractor fan. The tenant has confirmed the fan is working after switching it on at the switch to the right-hand side of the hob. No contractor was instructed and there is no cost, so we are closing this request.\"\n3. Set the status to closed, no action (STS-30AEA5), with the comment: \"Closed, no action: tenant confirmed 16 Sep the extractor fan works once switched on at the switch to the right of the hob (landlord's advice). No contractor, no cost. Tenant and landlord told by email.\""
+  ]
+}

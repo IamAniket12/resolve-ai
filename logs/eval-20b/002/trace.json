@@ -1,0 +1,349 @@
+{
+  "case_id": "002",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:49:16+00:00",
+  "finished_at": "2026-10-10T11:50:53+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 9064,
+    "cache_read_input_tokens": 99450,
+    "cache_creation_input_tokens": 28420
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 5673,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 405,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "landlord",
+      "summary": "Send the Riverside Works quote for a new toilet and cistern to the landlord for approval: a replacement is beyond the original call-out approval and likely above the £250 limit, so nothing can proceed without the landlord.",
+      "draft": "Address: Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ\n\nHi,\n\nPlease find attached a quote for this property. Can you please advise if you approve for me to raise an order for these works.\n\nBackground: Riverside Works came out on 08/08/2026 for the blocked toilet (\"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\"). Their engineer says the toilet needs repiping. However, the screws holding it are rusted, so there is a real risk the pan will break when it is removed, and there is no backup unit. They have therefore quoted for a new toilet and cistern (quote and photos from the visit attached).\n\nThe toilet is still blocked, so the tenant may have no working toilet. We would be grateful for your decision as soon as possible. Riverside Works will not go ahead until we have your approval.\n\nKind regards,\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2026-08-17",
+      "follow_up_action": "Chase the landlord by email and SMS; if still silent about a week after the quote was sent (around 19-20 Aug), escalate to the property manager recommending we proceed under s.11 if it is the only toilet."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "landlord",
+        "summary": "Send the Riverside Works quote for a new toilet and cistern to the landlord for approval: a replacement is beyond the original call-out approval and likely above the £250 limit, so nothing can proceed without the landlord.",
+        "draft": "Address: Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ\n\nHi,\n\nPlease find attached a quote for this property. Can you please advise if you approve for me to raise an order for these works.\n\nBackground: Riverside Works came out on 08/08/2026 for the blocked toilet (\"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\"). Their engineer says the toilet needs repiping. However, the screws holding it are rusted, so there is a real risk the pan will break when it is removed, and there is no backup unit. They have therefore quoted for a new toilet and cistern (quote and photos from the visit attached).\n\nThe toilet is still blocked, so the tenant may have no working toilet. We would be grateful for your decision as soon as possible. Riverside Works will not go ahead until we have your approval.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2026-08-17",
+        "follow_up_action": "Chase the landlord by email and SMS; if still silent about a week after the quote was sent, escalate to the property manager."
+      },
+      {
+        "channel": "email",
+        "to": "contractor",
+        "summary": "Answer the provider, as event 15 asked: acknowledge the quote, tell them not to start until approval, and ask for the total including VAT and the lead time.",
+        "draft": "Dear Riverside Works,\n\nRe: Blocked toilet, Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ\n\nThank you for attending and for sending the quote and photos for a new toilet and cistern. We have passed them to the landlord for approval. Please do not go ahead with the works until we confirm approval. We will be in touch as soon as we hear back.\n\nIf the quote you sent does not show the total price including VAT and your lead time for the replacement, please reply with both.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2026-08-17",
+        "follow_up_action": "If the total including VAT and the lead time are still unconfirmed, chase Riverside Works by email and SMS."
+      },
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Update the tenant on the outcome of the visit and the landlord approval step, and ask whether this is the only toilet so the job can be prioritised correctly.",
+        "draft": "Dear Noah Turner,\n\nThank you for giving Riverside Works access on 08/08. Their engineer found that the toilet needs repiping, but it may break when it is removed because the fixings have rusted. They have therefore quoted to replace the toilet and cistern. We have sent the quote to your landlord for approval today and will let you know as soon as we hear back. Riverside Works will then contact you to arrange a time.\n\nCan you please let us know whether this is the only toilet in the property, so we can treat the job with the right priority.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2026-08-17",
+        "follow_up_action": "If the tenant has not answered the only-toilet question, send a second message; if still silent, note it and inform the landlord."
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Put the case on hold, Waiting for Landlord, with a dated chase.",
+        "draft": "Waiting for Landlord: approval of Riverside Works quote (new toilet + cistern) sent 12/08. Chase Mon 17 Aug: email + SMS. If still silent about a week later, escalate to PM (sooner if tenant confirms it is the only toilet).",
+        "performed": true,
+        "follow_up_on": "2026-08-17",
+        "follow_up_action": "Chase the landlord by email and SMS; escalate to the property manager after a second silence."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Internal note recording the assumptions, the missing quote amount and the escalation trigger.",
+        "draft": "Event 16: Riverside Works says it attended on 08/08 (this covers the \"No work results\" flag from 11/08). Their email text gives no quote amount. A new toilet and cistern is assumed to be over the £250 limit, so the quote went to the landlord. The approval on 07/08 covered the call-out only, not a replacement. request_landlord_approval was not used because no figure has been confirmed; once Riverside confirms the total including VAT, log it against this ticket. Responded to provider as event 15 asked: told not to go ahead until approval. Asked the tenant whether this is the only toilet. If yes, this is urgent sanitation (s.11 LTA 1985): chase the landlord sooner and escalate to the PM if there is still no answer. Landlord is not named in the file, so the message was addressed by role.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      }
+    ],
+    "alternative_next_actions": [
+      "Use request_landlord_approval with an estimated figure: weaker because the quote amount has not been confirmed, and a guessed number risks misinforming the landlord.",
+      "Tell Riverside Works to proceed with the replacement now under the urgent band: weaker because the cost is likely above £250 and the landlord only approved a call-out; booking first and asking forgiveness breaches the spend policy unless it is confirmed to be the only toilet and the landlord stays silent.",
+      "Escalate straight to the property manager: weaker because the policy already gives the answer (send the quote to the landlord and hold), so this would be an unnecessary escalation.",
+      "Ask Riverside Works to try removing and repiping the existing toilet anyway: weaker because the engineer has flagged a breakage risk with no backup, which could leave the tenant with no toilet at all."
+    ],
+    "case_summary": "The agency manager reported a blocked toilet at Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ (tenant Noah Turner): a run blockage at the pan connector means the toilet must be removed. The landlord approved a call-out by phone on 07/08, and Riverside Works attended on 08/08. On 12/08 Riverside reported that the toilet needs repiping, but rusted screws risk breaking it on removal and there is no backup, so they quoted for a new toilet and cistern (with photos). The quote amount was not captured, and the blockage remains unresolved.",
+    "issue_category": "plumbing/blocked toilet",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "The quote for a new toilet and cistern has been sent to the landlord for approval, Riverside Works has been told to hold, and the tenant has been updated and asked whether this is the only toilet. The case is on hold, Waiting for Landlord, with a chase on Mon 17 Aug 2026.",
+    "actions_taken": [
+      "Looked up the property (built from the case file, ref CASE-002; spend limit £250; preferred contractor Riverside Works; landlord not named).",
+      "Retrieved repair history (no prior jobs or other cases at the address).",
+      "Looked up the tenancy (active, tenant Noah Turner; no vulnerability notes).",
+      "Created ticket TKT-AC9B35 (plumbing, urgent).",
+      "Emailed the landlord the quote approval request (MSG-2ECB9F, delivered).",
+      "Emailed Riverside Works acknowledging the quote, telling them to hold until approval and asking for the total including VAT and the lead time (MSG-F987D6, delivered).",
+      "Emailed tenant Noah Turner a progress update and asked whether this is the only toilet (MSG-C4BF6B, delivered).",
+      "Set status to awaiting_landlord with a chase on Mon 17 Aug (STS-A0A702).",
+      "Recorded an internal note (NOTE-5DCFF6)."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Ticket TKT-AC9B35, Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ, tenant Noah Turner. Blocked toilet (run block at the pan connector). The landlord approved a call-out on 07/08; Riverside Works attended on 08/08. On 12/08 Riverside quoted for a new toilet and cistern because the old pan may break on removal (rusted screws, no backup). The quote amount is not in the email text. On 12/08 the quote was sent to the landlord, Riverside was told to hold and to confirm the total including VAT and the lead time, and the tenant was updated and asked whether this is the only toilet. Status: Waiting for Landlord, chase Mon 17 Aug by email and SMS. If the landlord approves: instruct Riverside and tell the tenant. If the landlord is silent after a second chase, or it is the only toilet and there is a delay: escalate to the PM with a recommendation to proceed under s.11. If the landlord declines: escalate, because sanitation is a statutory landlord repair."
+    },
+    "conflicts": [
+      {
+        "description": "Event 14 (11/08) flagged 'No work results', but event 16 (12/08) shows Riverside Works attended the appointment and produced a quote and photos.",
+        "how_resolved": "Trusted the contractor's email of 12/08 as the later, more specific source; the flag was a timing gap, not a no-show."
+      },
+      {
+        "description": "The appointment was booked for 'tomorrow after half ten (08/08/2026)', but the call was on 08/08, so 'tomorrow' would mean 09/08.",
+        "how_resolved": "Immaterial now: the contractor confirms it attended. Recorded only."
+      }
+    ],
+    "information_gaps": [
+      "Quote amount not stated in the contractor email: asked Riverside to confirm the total including VAT; assumed above £250 for routing to the landlord.",
+      "Whether this is the only toilet in the flat: asked the tenant; it determines how hard to push on urgency.",
+      "Landlord not named in the file: addressed by role via the platform contact record.",
+      "The contractor's lead time for the replacement is unknown: asked Riverside."
+    ],
+    "assumptions": [
+      "A new toilet and cistern costs more than the £250 pre-authorised limit.",
+      "The landlord's 07/08 approval covered the call-out only, not a replacement.",
+      "The quote and photos from event 16 are available to attach to the landlord email.",
+      "The case date 2026-08-12 is a Wednesday, so 3 working days takes the chase to Mon 17 Aug 2026."
+    ],
+    "tenant_communication": "Told the tenant on 12/08 that the engineer found the toilet needs repiping but may break on removal, so a replacement has been quoted and sent to the landlord for approval; Riverside Works will arrange a time once it is approved. Asked whether this is the only toilet.",
+    "landlord_communication": "Sent the landlord the quote approval email on 12/08 with background (repiping needed, breakage risk from rusted fixings, no backup, toilet still blocked) and asked them to approve raising an order; told them Riverside will not proceed without approval.",
+    "next_steps": [
+      "Mon 17 Aug: if there is no landlord reply, chase by email and SMS; escalate to the PM after a second silence (around 19-20 Aug).",
+      "If the tenant confirms it is the only toilet, chase the landlord sooner and escalate to the PM if there is a delay (s.11 sanitation).",
+      "When Riverside confirms the quote total, record it against the ticket (request_landlord_approval with the real figure if needed).",
+      "On landlord approval: instruct Riverside Works, tell the tenant, and hold Waiting for Provider with a chase 2 working days later.",
+      "After the works: get photos and the invoice, check the invoice against the quote, then close."
+    ],
+    "risk_flags": [
+      "Possible loss of the only toilet (sanitation, s.11 LTA 1985): the blockage has been unresolved since at least 07/08.",
+      "Removing the existing toilet risks breaking it with no backup, which would leave no toilet."
+    ],
+    "confidence": 0.85,
+    "reasoning": "The history ends with the provider's quote for a replacement after an attended visit, and the system asked whether a response to the provider is needed. Policy says: after a quote, send it to the landlord for approval and do not instruct, and keep the provider informed. The landlord only approved a call-out, and a new toilet and cistern is almost certainly over the £250 authority, so landlord approval is required. I sent the standard quote approval email, told the provider to hold and confirm the price, and updated the tenant. I asked about the only toilet because that decides whether the statutory urgency overrides waiting. I then set Waiting for Landlord with a chase 3 working days out (Mon 17 Aug). No escalation is needed: the policy gives the answer and every tool call succeeded."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-002",
+        "address": "Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ",
+        "postcode": "ZZ3 2ZZ",
+        "case_title": "Case 002: Blocked toilet at Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ",
+        "case_created": "2026-08-07 11:48:38 UTC",
+        "reported_by_role": "Agency manager",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Riverside Works"
+        ],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ"
+      },
+      "output": {
+        "property_id": "Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 16,
+        "last_event": "2026-08-12 04:45:11 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-002"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-002",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-002",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Noah Turner",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record (address messages by name)"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "CASE-002",
+        "title": "Blocked toilet - quote for new toilet and cistern received from Riverside Works",
+        "category": "plumbing",
+        "urgency": "urgent",
+        "description": "Reported by agency manager 07/08/2026: \"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\" Landlord approved instructing a contractor by phone on 07/08; Riverside Works (Leo/Eliza) instructed, appointment 08/08/2026 after 10:30. 12/08/2026 Riverside Works emailed: engineer attended; toilet needs repiping, but removal risks breaking it (rusted screws) and no backup is available. They sent a quote for a new toilet and cistern plus photos. The quote amount was not captured in the email text; a new toilet and cistern is very likely over the £250 pre-authorised limit, so the landlord must approve it. Urgent band: the blockage is still there and this may be the only toilet in the flat (not confirmed).",
+        "reported_by": "Agency manager (on behalf of tenant Noah Turner)"
+      },
+      "output": {
+        "ticket_id": "TKT-AC9B35",
+        "property_id": "CASE-002",
+        "property_ref": "case file (not in local database)",
+        "title": "Blocked toilet - quote for new toilet and cistern received from Riverside Works",
+        "category": "plumbing",
+        "urgency": "urgent",
+        "description": "Reported by agency manager 07/08/2026: \"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\" Landlord approved instructing a contractor by phone on 07/08; Riverside Works (Leo/Eliza) instructed, appointment 08/08/2026 after 10:30. 12/08/2026 Riverside Works emailed: engineer attended; toilet needs repiping, but removal risks breaking it (rusted screws) and no backup is available. They sent a quote for a new toilet and cistern plus photos. The quote amount was not captured in the email text; a new toilet and cistern is very likely over the £250 pre-authorised limit, so the landlord must approve it. Urgent band: the blockage is still there and this may be the only toilet in the flat (not confirmed).",
+        "reported_by": "Agency manager (on behalf of tenant Noah Turner)",
+        "status": "open",
+        "created_at": "2026-10-10T12:49:47"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Landlord",
+        "channel": "email",
+        "body": "Address: Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ\n\nHi,\n\nPlease find attached a quote for this property. Can you please advise if you approve for me to raise an order for these works.\n\nBackground: Riverside Works came out on 08/08/2026 for the blocked toilet (\"Toilet need to be removed to clear blockage. Run block lodged by pan connector.\"). Their engineer says the toilet needs repiping. However, the screws holding it are rusted, so there is a real risk the pan will break when it is removed, and there is no backup unit. They have therefore quoted for a new toilet and cistern (quote and photos from the visit attached).\n\nThe toilet is still blocked, so the tenant may have no working toilet. We would be grateful for your decision as soon as possible. Riverside Works will not go ahead until we have your approval.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-2ECB9F",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Riverside Works",
+        "channel": "email",
+        "body": "Dear Riverside Works,\n\nRe: Blocked toilet, Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ\n\nThank you for attending and for sending the quote and photos for a new toilet and cistern. We have passed them to the landlord for approval. Please do not go ahead with the works until we confirm approval. We will be in touch as soon as we hear back.\n\nIf the quote you sent does not show the total price including VAT and your lead time for the replacement, please reply with both.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-F987D6",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Noah Turner (tenant)",
+        "channel": "email",
+        "body": "Dear Noah Turner,\n\nThank you for giving Riverside Works access on 08/08. Their engineer found that the toilet needs repiping, but it may break when it is removed because the fixings have rusted. They have therefore quoted to replace the toilet and cistern. We have sent the quote to your landlord for approval today and will let you know as soon as we hear back. Riverside Works will then contact you to arrange a time.\n\nCan you please let us know whether this is the only toilet in the property, so we can treat the job with the right priority.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-C4BF6B",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-AC9B35",
+        "status": "awaiting_landlord",
+        "comment": "Waiting for Landlord: approval of Riverside Works quote (new toilet + cistern) sent 12/08. Chase Mon 17 Aug: email + SMS. If still silent about a week later, escalate to PM (sooner if tenant confirms it is the only toilet)."
+      },
+      "output": {
+        "status_id": "STS-A0A702",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-AC9B35",
+        "note": "Event 16: Riverside Works says it attended on 08/08 (this covers the \"No work results\" flag from 11/08). Their email text gives no quote amount. A new toilet and cistern is assumed to be over the £250 limit, so the quote went to the landlord. The approval on 07/08 covered the call-out only, not a replacement. request_landlord_approval was not used because no figure has been confirmed; once Riverside confirms the total including VAT, log it against this ticket. Responded to provider as event 15 asked: told not to go ahead until approval. Asked the tenant whether this is the only toilet. If yes, this is urgent sanitation (s.11 LTA 1985): chase the landlord sooner and escalate to the PM if there is still no answer. Landlord is not named in the file, so the message was addressed by role."
+      },
+      "output": {
+        "note_id": "NOTE-5DCFF6",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Riverside Works attended on 8 Aug and sent a quote for a new toilet and cistern, so I sent it to the landlord for approval and put the case on hold. The quote amount isn't in their email text, so I haven't put a figure anywhere. A replacement is very likely over the £250 limit, and the landlord's 7 Aug approval only covered sending someone out.\n\nThe property and tenancy records were built from the case file, and there's no earlier repair history. I opened ticket TKT-AC9B35 (plumbing, urgent) because the case had no ticket in the system. I didn't use the formal landlord approval request tool because it needs a cost figure and we don't have one confirmed. The landlord isn't named in the file, so I addressed them by role.\n\nActions at event 17, primary first:\n\n1. **Primary – email to the landlord (delivered, MSG-2ECB9F):** \"Address: Flat 3, 15 Willowmere Road, Alderwick, ZZ3 2ZZ. Hi, Please find attached a quote for this property. Can you please advise if you approve for me to raise an order for these works.\" It goes on to say the toilet needs repiping, but rusted screws mean it may break when removed and there's no backup, hence the quote with photos. It also says the toilet is still blocked, so the tenant may have no working toilet, and that Riverside Works won't start until the landlord approves.\n2. **Email to Riverside Works (delivered, MSG-F987D6):** thanks them for the quote and photos, says it's with the landlord, and tells them not to start until we confirm approval. It also asks for the total including VAT and their lead time if the quote doesn't show them. This answers event 15's question about whether the provider needs a response.\n3. **Email to Noah Turner, the tenant (delivered, MSG-C4BF6B):** explains what the engineer found, says the replacement quote went to the landlord today and Riverside Works will contact him once it's approved, and asks whether this is the only toilet in the flat.\n4. **Status set to Waiting for Landlord:** \"Waiting for Landlord: approval of Riverside Works quote (new toilet + cistern) sent 12/08. Chase Mon 17 Aug: email + SMS. If still silent about a week later, escalate to PM (sooner if tenant confirms it is the only toilet).\"\n5. **Internal note on the ticket (NOTE-5DCFF6):** records that the visit clears the 11 Aug \"No work results\" flag, that we're assuming the quote is over £250, and that the approval tool wasn't used for lack of a figure. It also says that if this is the only toilet, it's an urgent landlord repair by law, so we should chase sooner and escalate.\n\n**Follow up on Mon 17 Aug 2026:** if the landlord hasn't replied, chase by email and SMS, and escalate to the property manager about a week after that. If they approve, tell Riverside Works to go ahead and let the tenant know. Once Riverside Works confirms the total, log it as the formal approval figure. If the tenant says it's the only toilet, chase the landlord before 17 Aug."
+  ]
+}

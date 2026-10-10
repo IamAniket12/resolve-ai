@@ -1,0 +1,189 @@
+2026-10-10 12:49:16,616 INFO resolve: run eval-20b: 20 cases from data/public_cut20 | provider=anthropic model=claude-opus-5-5 tools=mock workers=6 timeout=600s
+2026-10-10 12:49:21,890 INFO resolve: [007] tool lookup_property ok (0ms)
+2026-10-10 12:49:21,890 INFO resolve: [007] tool get_repair_history ok (0ms)
+2026-10-10 12:49:22,728 INFO resolve: [009] tool lookup_property ok (0ms)
+2026-10-10 12:49:22,729 INFO resolve: [009] tool get_repair_history ok (0ms)
+2026-10-10 12:49:23,125 INFO resolve: [007] tool lookup_tenancy ok (0ms)
+2026-10-10 12:49:24,054 INFO resolve: [010] tool lookup_property ok (0ms)
+2026-10-10 12:49:24,055 INFO resolve: [010] tool lookup_tenancy ok (0ms)
+2026-10-10 12:49:24,055 INFO resolve: [010] tool get_repair_history ok (0ms)
+2026-10-10 12:49:24,880 INFO resolve: [009] tool lookup_tenancy ok (0ms)
+2026-10-10 12:49:31,808 INFO resolve: [002] tool lookup_property ok (0ms)
+2026-10-10 12:49:31,809 INFO resolve: [002] tool get_repair_history ok (0ms)
+2026-10-10 12:49:32,913 INFO resolve: [011] tool lookup_property ok (0ms)
+2026-10-10 12:49:32,913 INFO resolve: [011] tool lookup_property ok (0ms)
+2026-10-10 12:49:33,571 INFO resolve: [002] tool lookup_tenancy ok (0ms)
+2026-10-10 12:49:35,480 INFO resolve: [011] tool lookup_tenancy ok (0ms)
+2026-10-10 12:49:35,480 INFO resolve: [011] tool get_repair_history ok (0ms)
+2026-10-10 12:49:39,689 INFO resolve: [007] tool send_message ok (0ms)
+2026-10-10 12:49:39,691 INFO resolve: [007] tool record_note ok (0ms)
+2026-10-10 12:49:41,487 INFO resolve: [005] tool lookup_property ok (0ms)
+2026-10-10 12:49:41,487 INFO resolve: [005] tool get_repair_history ok (0ms)
+2026-10-10 12:49:41,488 INFO resolve: [005] tool search_contractors ok (0ms)
+2026-10-10 12:49:42,173 INFO resolve: [007] tool update_case_status ok (0ms)
+2026-10-10 12:49:43,203 INFO resolve: [009] tool send_message ok (0ms)
+2026-10-10 12:49:43,203 INFO resolve: [009] tool send_message ok (0ms)
+2026-10-10 12:49:43,203 INFO resolve: [009] tool record_note ok (0ms)
+2026-10-10 12:49:43,203 INFO resolve: [009] tool update_case_status ok (0ms)
+2026-10-10 12:49:43,385 INFO resolve: [010] tool send_message ok (0ms)
+2026-10-10 12:49:43,386 INFO resolve: [010] tool send_message ok (0ms)
+2026-10-10 12:49:43,386 INFO resolve: [010] tool record_note ok (0ms)
+2026-10-10 12:49:43,386 INFO resolve: [010] tool update_case_status ok (0ms)
+2026-10-10 12:49:47,708 INFO resolve: [002] tool create_maintenance_ticket ok (0ms)
+2026-10-10 12:49:51,468 INFO resolve: [007] model: Harriet's Monday date is confirmed and she has the key arrangements, but I had to assume where the keys are. Nothing in the file says who holds them. Someone at the office needs to check the keys for 
+2026-10-10 12:49:51,621 INFO resolve: [011] tool update_case_status ok (0ms)
+2026-10-10 12:49:51,621 INFO resolve: [011] tool send_message ok (0ms)
+2026-10-10 12:49:51,621 INFO resolve: [011] tool record_note ok (0ms)
+2026-10-10 12:49:52,954 INFO resolve: [010] model: The tenant, Miles Fletcher, sent the January solar meter photo at event 12. It reads **16845** and the PV isolator is switched on, so nothing needs repairing. I sent the reading to the landlord, thank
+2026-10-10 12:49:53,143 INFO resolve: [009] model: Where it stands: the tenant (Nora Bennett) has been asked since 1 Feb, after an inspection, to tidy the front garden and send photos. After Ruben's call this morning, the tenant replied, but the reply
+2026-10-10 12:49:56,717 INFO resolve: [005] tool send_message ok (0ms)
+2026-10-10 12:49:56,718 INFO resolve: [005] tool send_message ok (0ms)
+2026-10-10 12:49:56,718 INFO resolve: [005] tool send_message ok (0ms)
+2026-10-10 12:49:57,738 INFO resolve: [002] tool send_message ok (0ms)
+2026-10-10 12:49:57,738 INFO resolve: [002] tool send_message ok (0ms)
+2026-10-10 12:49:57,739 INFO resolve: [002] tool send_message ok (0ms)
+2026-10-10 12:50:02,411 INFO resolve: [011] model: The repair is booked: the contractor phoned the tenant and she agreed to a visit on the morning of Monday 7 December. So I've marked the appointment as booked, confirmed it to her by email and added a
+2026-10-10 12:50:03,786 INFO resolve: [002] tool update_case_status ok (0ms)
+2026-10-10 12:50:03,787 INFO resolve: [002] tool record_note ok (0ms)
+2026-10-10 12:50:03,985 INFO resolve: [005] tool record_note ok (0ms)
+2026-10-10 12:50:03,985 INFO resolve: [005] tool update_case_status ok (0ms)
+2026-10-10 12:50:14,626 INFO resolve: [002] model: Riverside Works attended on 8 Aug and sent a quote for a new toilet and cistern, so I sent it to the landlord for approval and put the case on hold. The quote amount isn't in their email text, so I ha
+2026-10-10 12:50:17,785 INFO resolve: [005] model: Palmer (the landlord) approved the full cleaning quote this morning, including the carpet. I've told Stonebridge Works (Ava Nolan) to go ahead, thanked Palmer, and put the case on hold until Tuesday t
+2026-10-10 12:50:23,889 INFO resolve: [010] completed in 67s -> in_progress / not_a_repair
+2026-10-10 12:50:31,345 INFO resolve: [014] tool lookup_property ok (0ms)
+2026-10-10 12:50:31,345 INFO resolve: [014] tool get_repair_history ok (0ms)
+2026-10-10 12:50:32,905 INFO resolve: [014] tool lookup_tenancy ok (0ms)
+2026-10-10 12:50:33,685 INFO resolve: [007] completed in 77s -> in_progress / routine
+2026-10-10 12:50:34,978 INFO resolve: [009] completed in 78s -> needs_information / routine
+2026-10-10 12:50:36,417 INFO resolve: [011] completed in 80s -> in_progress / routine
+2026-10-10 12:50:37,915 INFO resolve: [017] tool lookup_property ok (0ms)
+2026-10-10 12:50:39,635 INFO resolve: [021] tool lookup_property ok (0ms)
+2026-10-10 12:50:39,635 INFO resolve: [021] tool lookup_tenancy ok (0ms)
+2026-10-10 12:50:39,635 INFO resolve: [021] tool get_repair_history ok (0ms)
+2026-10-10 12:50:39,965 INFO resolve: [027] tool lookup_property ok (0ms)
+2026-10-10 12:50:39,965 INFO resolve: [027] tool get_repair_history ok (0ms)
+2026-10-10 12:50:46,568 INFO resolve: [017] tool send_message ok (0ms)
+2026-10-10 12:50:46,570 INFO resolve: [017] tool send_message ok (0ms)
+2026-10-10 12:50:46,570 INFO resolve: [017] tool update_case_status ok (0ms)
+2026-10-10 12:50:52,261 INFO resolve: [014] tool send_message ok (0ms)
+2026-10-10 12:50:52,261 INFO resolve: [014] tool record_note ok (0ms)
+2026-10-10 12:50:52,262 INFO resolve: [014] tool update_case_status ok (0ms)
+2026-10-10 12:50:52,336 INFO resolve: [027] tool send_message ok (0ms)
+2026-10-10 12:50:52,337 INFO resolve: [027] tool escalate_to_human ok (0ms)
+2026-10-10 12:50:52,337 INFO resolve: [027] tool update_case_status ok (0ms)
+2026-10-10 12:50:53,954 INFO resolve: [002] completed in 97s -> in_progress / urgent
+2026-10-10 12:50:56,219 INFO resolve: [017] model: The request is closed with no action needed. Clara confirmed the kitchen fan works now that it's switched on at the switch to the right of the hob, which is what the landlord suggested. No contractor 
+2026-10-10 12:51:00,842 INFO resolve: [014] model: The landlord replied that the front door problem keeps coming back, mentioned a workaround and suggested a contractor look next month. Under our policy, the next step is to pass that workaround to the
+2026-10-10 12:51:04,511 INFO resolve: [021] tool send_message ok (0ms)
+2026-10-10 12:51:04,512 INFO resolve: [021] tool send_message ok (0ms)
+2026-10-10 12:51:04,512 INFO resolve: [021] tool record_note ok (0ms)
+2026-10-10 12:51:04,512 INFO resolve: [021] tool update_case_status ok (0ms)
+2026-10-10 12:51:06,371 INFO resolve: [029] tool lookup_property ok (0ms)
+2026-10-10 12:51:06,372 INFO resolve: [029] tool get_repair_history ok (0ms)
+2026-10-10 12:51:08,500 INFO resolve: [029] tool lookup_tenancy ok (0ms)
+2026-10-10 12:51:12,509 INFO resolve: [027] model: The tenant's new email is about registering for a garage parking space, which isn't a repair. I've acknowledged it, passed it to the property manager and kept the drain job closed.
+
+**Where the case s
+2026-10-10 12:51:13,537 INFO resolve: [017] completed in 40s -> resolved / routine
+2026-10-10 12:51:15,616 INFO resolve: [005] completed in 119s -> in_progress / routine
+2026-10-10 12:51:19,334 INFO resolve: [031] tool lookup_property ok (0ms)
+2026-10-10 12:51:19,335 INFO resolve: [031] tool search_contractors ok (0ms)
+2026-10-10 12:51:22,499 INFO resolve: [037] tool lookup_property ok (0ms)
+2026-10-10 12:51:22,501 INFO resolve: [037] tool get_repair_history ok (0ms)
+2026-10-10 12:51:23,628 INFO resolve: [031] tool lookup_tenancy ok (0ms)
+2026-10-10 12:51:23,629 INFO resolve: [031] tool get_repair_history ok (0ms)
+2026-10-10 12:51:24,548 INFO resolve: [037] tool lookup_tenancy ok (0ms)
+2026-10-10 12:51:29,778 INFO resolve: [029] tool send_message ok (0ms)
+2026-10-10 12:51:29,778 INFO resolve: [029] tool record_note ok (0ms)
+2026-10-10 12:51:29,778 INFO resolve: [029] tool update_case_status ok (0ms)
+2026-10-10 12:51:30,021 INFO resolve: [037] tool search_contractors ok (0ms)
+2026-10-10 12:51:30,832 INFO resolve: [021] model: Alder Compliance says the job is done, so I've started the completion check: I asked them for evidence and their invoice, asked the tenant to confirm the door works, and put the case on hold. Nothing 
+2026-10-10 12:51:32,814 INFO resolve: [014] completed in 69s -> needs_information / routine
+2026-10-10 12:51:36,608 INFO resolve: [027] completed in 60s -> escalated / not_a_repair
+2026-10-10 12:51:38,531 INFO resolve: [039] tool lookup_property ok (0ms)
+2026-10-10 12:51:38,532 INFO resolve: [039] tool get_repair_history ok (0ms)
+2026-10-10 12:51:39,768 INFO resolve: [039] tool lookup_tenancy ok (0ms)
+2026-10-10 12:51:40,841 INFO resolve: [031] tool create_maintenance_ticket ok (0ms)
+2026-10-10 12:51:42,453 INFO resolve: [041] tool lookup_property ok (0ms)
+2026-10-10 12:51:42,453 INFO resolve: [041] tool get_repair_history ok (0ms)
+2026-10-10 12:51:44,683 INFO resolve: [037] tool send_message ok (0ms)
+2026-10-10 12:51:44,685 INFO resolve: [037] tool send_message ok (0ms)
+2026-10-10 12:51:44,686 INFO resolve: [037] tool send_message ok (0ms)
+2026-10-10 12:51:44,973 INFO resolve: [041] tool lookup_tenancy ok (0ms)
+2026-10-10 12:51:46,420 INFO resolve: [029] model: Freya Fletcher (tenant) replied that the basin was already cracked when she moved in, so I've thanked her, logged it, and moved the case from waiting on her to waiting on Henry Quinn's quote.
+
+The bas
+2026-10-10 12:51:51,410 INFO resolve: [037] tool record_note ok (0ms)
+2026-10-10 12:51:51,411 INFO resolve: [037] tool update_case_status ok (0ms)
+2026-10-10 12:51:54,080 INFO resolve: [039] tool send_message ok (0ms)
+2026-10-10 12:51:59,426 INFO resolve: [031] tool send_message ok (0ms)
+2026-10-10 12:51:59,427 INFO resolve: [031] tool send_message ok (0ms)
+2026-10-10 12:51:59,427 INFO resolve: [031] tool send_message ok (0ms)
+2026-10-10 12:51:59,427 INFO resolve: [031] tool record_note ok (0ms)
+2026-10-10 12:51:59,428 INFO resolve: [031] tool update_case_status ok (0ms)
+2026-10-10 12:52:00,284 INFO resolve: [041] tool send_message ok (0ms)
+2026-10-10 12:52:00,285 INFO resolve: [041] tool send_message ok (0ms)
+2026-10-10 12:52:00,812 INFO resolve: [039] tool update_case_status ok (0ms)
+2026-10-10 12:52:00,812 INFO resolve: [039] tool record_note ok (0ms)
+2026-10-10 12:52:01,558 INFO resolve: [037] model: Beacon Utilities still haven't booked the shower hose repair after three reminders (28 Mar, 30 Mar, 2 Apr). Their call to Eliza today hit an automated "enter a six-digit code" prompt, so I don't count
+2026-10-10 12:52:07,522 INFO resolve: [041] tool record_note ok (0ms)
+2026-10-10 12:52:07,523 INFO resolve: [041] tool update_case_status ok (0ms)
+2026-10-10 12:52:12,505 INFO resolve: [021] completed in 98s -> in_progress / routine
+2026-10-10 12:52:12,569 INFO resolve: [039] model: Nora's reply doesn't yet say whether anything is caught in the machine, so the case stays on hold waiting for her. I replied asking for her video and a few quick checks, and booked no contractor.
+
+**W
+2026-10-10 12:52:13,424 INFO resolve: [031] model: The plumber and the tenant agreed a visit on Saturday 27 July, 2–5pm, so I confirmed that appointment to the tenant and the provider and logged it. No call-out was booked through the booking tool: the
+2026-10-10 12:52:17,223 INFO resolve: [043] tool lookup_property ok (0ms)
+2026-10-10 12:52:17,224 INFO resolve: [043] tool get_repair_history ok (0ms)
+2026-10-10 12:52:19,360 INFO resolve: [041] model: The tenant's drain pump clean didn't fix the washing machine. The landlord is sending his own person, Amelia, so we don't book a contractor or spend anything. I replied to the tenant, passed the updat
+2026-10-10 12:52:19,919 INFO resolve: [043] tool lookup_tenancy ok (0ms)
+2026-10-10 12:52:19,920 INFO resolve: [043] tool get_repair_history ok (0ms)
+2026-10-10 12:52:22,742 INFO resolve: [029] completed in 89s -> in_progress / routine
+2026-10-10 12:52:30,383 INFO resolve: [044] tool lookup_property ok (0ms)
+2026-10-10 12:52:30,385 INFO resolve: [044] tool get_repair_history ok (0ms)
+2026-10-10 12:52:32,195 INFO resolve: [043] tool create_maintenance_ticket ok (0ms)
+2026-10-10 12:52:32,238 INFO resolve: [044] tool lookup_tenancy ok (0ms)
+2026-10-10 12:52:40,318 INFO resolve: [044] tool create_maintenance_ticket ok (0ms)
+2026-10-10 12:52:41,602 INFO resolve: [043] tool send_message ok (0ms)
+2026-10-10 12:52:41,602 INFO resolve: [043] tool send_message ok (0ms)
+2026-10-10 12:52:41,602 INFO resolve: [043] tool send_message ok (0ms)
+2026-10-10 12:52:44,961 INFO resolve: [037] completed in 89s -> in_progress / routine
+2026-10-10 12:52:46,908 INFO resolve: [044] tool send_message ok (0ms)
+2026-10-10 12:52:46,908 INFO resolve: [044] tool send_message ok (0ms)
+2026-10-10 12:52:48,299 INFO resolve: [043] tool record_note ok (0ms)
+2026-10-10 12:52:48,299 INFO resolve: [043] tool update_case_status ok (0ms)
+2026-10-10 12:52:50,099 INFO resolve: [046] tool lookup_property ok (0ms)
+2026-10-10 12:52:50,100 INFO resolve: [046] tool get_repair_history ok (0ms)
+2026-10-10 12:52:54,189 INFO resolve: [044] tool update_case_status ok (0ms)
+2026-10-10 12:52:54,190 INFO resolve: [044] tool record_note ok (0ms)
+2026-10-10 12:52:54,859 INFO resolve: [041] completed in 78s -> in_progress / routine
+2026-10-10 12:52:59,684 INFO resolve: [046] tool update_case_status ok (0ms)
+2026-10-10 12:52:59,685 INFO resolve: [046] tool record_note ok (0ms)
+2026-10-10 12:53:00,557 INFO resolve: [047] tool lookup_property ok (0ms)
+2026-10-10 12:53:00,558 INFO resolve: [047] tool lookup_property ok (0ms)
+2026-10-10 12:53:01,250 INFO resolve: [043] model: Ava (the landlord) said yes to sending a contractor, and Oakfield Homes was already instructed, so I replied to her, fixed a wrong tenant contact we'd sent Oakfield, and put the case on hold waiting f
+2026-10-10 12:53:01,285 INFO resolve: [039] completed in 88s -> needs_information / routine
+2026-10-10 12:53:02,478 INFO resolve: [047] tool lookup_tenancy ok (0ms)
+2026-10-10 12:53:02,479 INFO resolve: [047] tool get_repair_history ok (0ms)
+2026-10-10 12:53:02,572 INFO resolve: [031] completed in 109s -> in_progress / urgent
+2026-10-10 12:53:04,156 INFO resolve: [044] model: The tenant has now said which window it is: the one at the top of the staircase with the broken latch. So I've sent the landlord the approval request and put the case on hold waiting for the landlord,
+2026-10-10 12:53:05,745 INFO resolve: [049] tool lookup_property ok (0ms)
+2026-10-10 12:53:05,746 INFO resolve: [049] tool lookup_tenancy ok (0ms)
+2026-10-10 12:53:05,746 INFO resolve: [049] tool get_repair_history ok (0ms)
+2026-10-10 12:53:08,152 INFO resolve: [046] model: Case 046 is on hold as Waiting for Provider. Lantern Utilities is approved to replace the bedroom window hinge but hasn't given an appointment date yet. They emailed today (15 Sep, signed "Mercer") to
+2026-10-10 12:53:10,973 INFO resolve: [049] tool create_maintenance_ticket ok (0ms)
+2026-10-10 12:53:12,274 INFO resolve: [047] tool create_maintenance_ticket ok (0ms)
+2026-10-10 12:53:16,360 INFO resolve: [049] tool send_message ok (0ms)
+2026-10-10 12:53:16,360 INFO resolve: [049] tool update_case_status ok (0ms)
+2026-10-10 12:53:20,407 INFO resolve: [047] tool send_message ok (0ms)
+2026-10-10 12:53:20,408 INFO resolve: [047] tool send_message ok (0ms)
+2026-10-10 12:53:25,304 INFO resolve: [049] model: The landlord has approved the tenant fixing the shed door themselves, and has said we should send a contractor if they can't. So I emailed the tenant to pass that on and put the case on hold until the
+2026-10-10 12:53:26,690 INFO resolve: [047] tool record_note ok (0ms)
+2026-10-10 12:53:26,691 INFO resolve: [047] tool update_case_status ok (0ms)
+2026-10-10 12:53:35,080 INFO resolve: [047] model: The landlord's reply was about a plumber, but the tenant had already said the toilet was fixed. It also gave the wrong address: Flat 18, 88 Alder Lane instead of Flat 24, 150 Copperfield Walk. He hasn
+2026-10-10 12:53:39,137 INFO resolve: [046] completed in 54s -> in_progress / routine
+2026-10-10 12:53:41,588 INFO resolve: [043] completed in 89s -> in_progress / routine
+2026-10-10 12:53:43,000 INFO resolve: [044] completed in 80s -> in_progress / routine
+2026-10-10 12:53:50,361 INFO resolve: [049] completed in 49s -> needs_information / routine
+2026-10-10 12:54:12,401 INFO resolve: [047] completed in 78s -> in_progress / urgent
+2026-10-10 12:54:12,412 INFO resolve: run eval-20b finished: 20/20 completed, 0 fallback. Answers in ANSWERS_public, logs in logs/eval-20b

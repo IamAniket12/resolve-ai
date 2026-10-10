@@ -1,0 +1,283 @@
+{
+  "case_id": "007",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 5,
+  "started_at": "2026-10-10T11:49:16+00:00",
+  "finished_at": "2026-10-10T11:50:33+00:00",
+  "usage": {
+    "input_tokens": 16,
+    "output_tokens": 8081,
+    "cache_read_input_tokens": 84273,
+    "cache_creation_input_tokens": 49945
+  },
+  "manifest": [
+    {
+      "name": "attachment-01-check-out-inspection-report.pdf",
+      "kind": "pdf",
+      "chars": 9483,
+      "note": ""
+    },
+    {
+      "name": "attachment-02-tax-invoice.pdf",
+      "kind": "pdf",
+      "chars": 1003,
+      "note": ""
+    },
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 5905,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 583,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "contractor",
+      "summary": "Confirm Harriet's offered Monday 6 Oct slot for the landlord-approved lounge works and tell her where the keys are. The property is vacant, so access goes through the office rather than a tenant.",
+      "draft": "Job Id: NBL-007-0235\nAddress: Flat 8, 168 Alder Lane, Kingshaven, ZZ4 3ZZ\n\nHi Harriet\n\nThank you. Monday 6 October is confirmed for the approved works:\nLounge: 1. Replace the two spotlights that are not working. 2. Replace the water-damaged ceiling tile/board.\nApproved quote: £198.37 plus VAT.\n\nAccess: the property is vacant (the tenancy has ended), so there is no tenant to arrange access with. The keys are held at the Northbridge Lettings office. Please collect them from the office on Monday morning and return them to the office the same day once the works are done.\n\nWhen you have finished, please send us before-and-after photos of the spotlights and the ceiling, and your invoice for the approved amount. If you find anything else, for example signs that the leak is still active above the ceiling, please send photos and contact us before doing any extra work.\n\nRegards\nMaya\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2025-10-07",
+      "follow_up_action": "Ask Clarke/Harriet for completion photos and the invoice, and confirm the keys are back at the office. If they did not attend, rebook and tell the landlord."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "contractor",
+        "summary": "Confirm Harriet's offered Monday 6 Oct slot for the landlord-approved lounge works and tell her where the keys are. The property is vacant, so access goes through the office rather than a tenant.",
+        "draft": "Job Id: NBL-007-0235\nAddress: Flat 8, 168 Alder Lane, Kingshaven, ZZ4 3ZZ\n\nHi Harriet\n\nThank you. Monday 6 October is confirmed for the approved works:\nLounge: 1. Replace the two spotlights that are not working. 2. Replace the water-damaged ceiling tile/board.\nApproved quote: £198.37 plus VAT.\n\nAccess: the property is vacant (the tenancy has ended), so there is no tenant to arrange access with. The keys are held at the Northbridge Lettings office. Please collect them from the office on Monday morning and return them to the office the same day once the works are done.\n\nWhen you have finished, please send us before-and-after photos of the spotlights and the ceiling, and your invoice for the approved amount. If you find anything else, for example signs that the leak is still active above the ceiling, please send photos and contact us before doing any extra work.\n\nRegards\nMaya\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2025-10-07",
+        "follow_up_action": "Ask Clarke/Harriet for completion photos and the invoice, and confirm the keys are back at the office. If they did not attend, rebook and tell the landlord."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Internal note recording the key-location assumption, the vacant-versus-tenancy-record conflict, the spend check and the date/invoice anomalies, so the office can have the keys ready and check the invoice later.",
+        "draft": "Event 24 (3 Oct 2025 15:30): Harriet (Clarke's office) offered Mon 6 Oct and asked where the keys are. We confirmed Monday by email and told them the keys are at the Northbridge Lettings office, to be collected that morning and returned the same day. ASSUMPTION: the keys are with the office after checkout. Office staff please make sure the keys are ready for collection on Mon 6 Oct and record when they are signed out and back in. SOURCE CONFLICT: the tenancy lookup says 'active (assumed)', but the case file says the property is NOT TENANTED (event 15, auto-paused) and the checkout report is on file. I am trusting the case file, so the property is vacant and there is no tenant to notify. If a new tenant has moved in, we must give them 24h notice before Monday. Approved spend: £198.37 + VAT = £238.04, which is within the £250 limit and the landlord approved it on 28 Sep. DATA ANOMALIES: (1) the checkout report gives the appointment/inspection date as 25 Aug 2026 but is signed 27 Sep 2025, so it is probably a typo; (2) the invoice attachment (Willow Homes, £240.00 inc VAT, dated 8 Oct 2025) is dated after today, so it cannot be relied on yet. When the invoice arrives, compare it with the quote: £240.00 is £1.96 over £238.04, so ask for the reason and get landlord sign-off before paying, and check that the supplier name (Willow Homes) matches the contractor we instructed (Clarke). Responsibility: the ceiling damage came from a leak (structure/installation, so landlord); the bulbs are landlord's per the approved instruction. Neither is a deposit deduction item. The bathroom cleaning/items-left defects from the checkout are not part of this job.",
+        "performed": true,
+        "follow_up_on": "2025-10-06",
+        "follow_up_action": "Office to check the keys are ready for collection on Monday morning and log when they are signed out and back in."
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Set the case to appointment booked, holding as Waiting for Provider (works), with the chase date and plan written on the dashboard.",
+        "draft": "Waiting for Provider (works). Clarke/Harriet booked Mon 6 Oct; vacant property, keys to be collected from and returned to the office. Check Tue 7 Oct: ask for completion photos + invoice (quote £198.37+VAT) and confirm keys are back; if no-show, rebook and tell the landlord.",
+        "performed": true,
+        "follow_up_on": "2025-10-07",
+        "follow_up_action": "Ask the provider for completion photos and the invoice and confirm the keys are returned. If they did not attend, rebook and tell the landlord. If no invoice arrives within 5 working days of completion, chase it."
+      }
+    ],
+    "alternative_next_actions": [
+      "Reply asking Harriet to wait until the office confirms where the keys are before confirming Monday. This is weaker: it delays approved, within-limit works on a vacant flat for a fact the office can settle internally before Monday.",
+      "Book through schedule_contractor using an availability slot. This is weaker: the contractor has already offered a date by email and there is no panel contractor ID or slot for Clarke in the tools, so an email confirmation is the team's normal step.",
+      "Also email the landlord to say the works are booked for Monday. This is reasonable but optional: the landlord has already approved, so the update is better sent at completion together with the invoice."
+    ],
+    "case_summary": "After checkout at the vacant Flat 8, 168 Alder Lane, Kingshaven ZZ4 3ZZ, the agency manager asked for a quote for two lounge spotlights that are not working and a water-damaged ceiling tile. Clarke quoted £198.37 + VAT (£238.04, within the £250 limit) and the landlord approved on 28 Sep. After two reminders, Harriet from Clarke's office offered Monday 6 Oct and asked where the keys are.",
+    "issue_category": "electrical (lighting) / structural (ceiling) - check-out works",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "Clarke's office is confirmed for Mon 6 Oct to replace the two lounge spotlights and the ceiling tile at the approved £198.37 + VAT, collecting keys from the office. The case is set to appointment booked, holding as Waiting for Provider, with a completion check on Tue 7 Oct.",
+    "actions_taken": [
+      "Looked up the property (built from the case file, CASE-007; spend limit £250; preferred contractor Clarke)",
+      "Checked repair history (no other jobs or cases at this address)",
+      "Looked up the tenancy (returned 'active (assumed)', which conflicts with the case file's NOT TENANTED)",
+      "Emailed Harriet (Clarke's office) confirming Mon 6 Oct, the scope, the approved price, key collection from and return to the office, and asking for photos and the invoice (MSG-40DDE9, delivered)",
+      "Recorded an internal note on NBL-007-0235 covering the keys assumption, the tenancy conflict, the spend check and the invoice/date anomalies (NOTE-469045)",
+      "Set the status to appointment booked, holding as Waiting for Provider (works), chase Tue 7 Oct (STS-82C294)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Routine landlord-approved check-out works within the £250 limit. Contractor Clarke (Harriet) is confirmed by email for Mon 6 Oct to replace two lounge spotlights and one water-damaged ceiling tile at Flat 8, 168 Alder Lane, ZZ4 3ZZ, at £198.37 + VAT (£238.04). The property is vacant, and the contractor was told to collect the keys from the Northbridge Lettings office and return them the same day. The office must make sure the keys are there and log when they go out and come back. On Tue 7 Oct, ask for completion photos and the invoice. The attached invoice (Willow Homes, £240.00, dated 8 Oct) is £1.96 over the quote and from a differently named supplier: ask for the reason, get landlord sign-off for the difference, then send it to the landlord and close as completed."
+    },
+    "conflicts": [
+      {
+        "description": "The tenancy lookup returned 'active (assumed)', but case event 15 says the property is NOT TENANTED and the job comes from a check-out report.",
+        "how_resolved": "Trusted the case file, because the lookup was explicitly inferred while event 15 is a system record and fits the checkout. Treated the property as vacant with access via the office keys, and flagged that a new tenant would need 24h notice."
+      },
+      {
+        "description": "The check-out report gives the inspection/appointment date as 25 Aug 2026 but was signed on 27 Sep 2025.",
+        "how_resolved": "Treated as a typo; the 27 Sep 2025 signature fits the case timeline. It does not change the action."
+      },
+      {
+        "description": "The attached tax invoice is from Willow Homes for £240.00 inc VAT, dated 8 Oct 2025, which is after today. The approved quote was from Clarke for £198.37 + VAT = £238.04.",
+        "how_resolved": "Not acted on yet because the invoice is not due until after completion. Flagged for the completion check: ask why it is £1.96 higher, get landlord sign-off for the increase, and confirm the supplier identity before paying."
+      }
+    ],
+    "information_gaps": [
+      "Exact key location was not stated in the file. I assumed the keys are held at the Northbridge Lettings office after checkout, told the contractor so, and asked the office in the internal note to confirm and have them ready.",
+      "The landlord's name is not in the file; not needed for this step.",
+      "Whether the leak that caused the ceiling damage is still active is unknown. The contractor was asked to report any signs of an active leak before doing extra work.",
+      "Contractor phone/ID is not in the tools; used the platform contact record."
+    ],
+    "assumptions": [
+      "The property is vacant (event 15 NOT TENANTED, post-checkout), so no tenant notice is needed.",
+      "The keys are held at the agency office.",
+      "Harriet works in Clarke's office and 'Monday' means 6 Oct 2025.",
+      "The landlord's 'Pls go ahead' on 28 Sep approves the quote as sent (£198.37 + VAT)."
+    ],
+    "tenant_communication": "none - the property is vacant after checkout",
+    "landlord_communication": "The landlord approved the quote on 28 Sep ('Pls go ahead'); nothing new was sent at this step. The landlord will be updated at completion with the invoice.",
+    "next_steps": [
+      "Mon 6 Oct: office has the keys ready, logs the collection, and checks they are returned the same day.",
+      "Tue 7 Oct: ask Clarke/Harriet for before/after photos and the invoice. If they did not attend, rebook and inform the landlord.",
+      "On receipt of the invoice: compare it with the quote of £238.04 inc VAT. If it is £240.00, ask why it is £1.96 higher and get landlord sign-off, and confirm the supplier name (Willow Homes vs Clarke).",
+      "Send the invoice to the landlord, then close as completed. If no invoice arrives within 5 working days of completion, chase the provider.",
+      "If the contractor reports an active leak above the ceiling, open a separate plumbing/roof investigation and request landlord approval."
+    ],
+    "risk_flags": [
+      "Possible active leak behind the water-damaged ceiling tile; contractor asked to check and report.",
+      "Key control on a vacant property: log key sign-out and return.",
+      "Invoice amount (£240.00) slightly exceeds the approved quote (£238.04) and the supplier name differs; check before paying."
+    ],
+    "confidence": 0.85,
+    "reasoning": "The landlord approved Clarke's £198.37 + VAT quote, which is within the £250 default authority. The provider was instructed and chased (events 17-22), and Harriet has now offered Monday and asked about keys. The next moment therefore follows the policy step 'appointment': confirm the slot to the provider and settle access. Under the vacant-property playbook, access is confirmed with the office rather than a tenant, so I told the contractor to collect and return the keys at the office. I then recorded the assumptions and conflicts and set the status to appointment booked, holding as Waiting for Provider, with a check the day after the appointment (Tue 7 Oct), as the provider-attendance interval requires. No escalation is needed because the works are routine, approved and within authority. The invoice discrepancy is noted for the completion check rather than acted on now."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 8, 168 Alder Lane, Kingshaven, ZZ4 3ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-007",
+        "address": "Flat 8, 168 Alder Lane, Kingshaven, ZZ4 3ZZ",
+        "postcode": "ZZ4 3ZZ",
+        "case_title": "Case 007: Check-Out Works: Lounge Lighting and Ceiling Repair",
+        "case_created": "2025-09-27 14:10:08 UTC",
+        "reported_by_role": "Agency manager",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Clarke"
+        ],
+        "agency_staff_on_case": [
+          "Maya Ashford"
+        ],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 8, 168 Alder Lane, Kingshaven, ZZ4 3ZZ"
+      },
+      "output": {
+        "property_id": "Flat 8, 168 Alder Lane, Kingshaven, ZZ4 3ZZ",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 23,
+        "last_event": "2025-10-03 15:30:35 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-007"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-007",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-007",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tenant (not named in the case file)",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Harriet (Clarke's office)",
+        "channel": "email",
+        "body": "Job Id: NBL-007-0235\nAddress: Flat 8, 168 Alder Lane, Kingshaven, ZZ4 3ZZ\n\nHi Harriet\n\nThank you. Monday 6 October is confirmed for the approved works:\nLounge: 1. Replace the two spotlights that are not working. 2. Replace the water-damaged ceiling tile/board.\nApproved quote: £198.37 plus VAT.\n\nAccess: the property is vacant (the tenancy has ended), so there is no tenant to arrange access with. The keys are held at the Northbridge Lettings office. Please collect them from the office on Monday morning and return them to the office the same day once the works are done.\n\nWhen you have finished, please send us before-and-after photos of the spotlights and the ceiling, and your invoice for the approved amount. If you find anything else, for example signs that the leak is still active above the ceiling, please send photos and contact us before doing any extra work.\n\nRegards\nMaya\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-40DDE9",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "NBL-007-0235",
+        "note": "Event 24 (3 Oct 2025 15:30): Harriet (Clarke's office) offered Mon 6 Oct and asked where the keys are. We confirmed Monday by email and told them the keys are at the Northbridge Lettings office, to be collected that morning and returned the same day. ASSUMPTION: the keys are with the office after checkout. Office staff please make sure the keys are ready for collection on Mon 6 Oct and record when they are signed out and back in. SOURCE CONFLICT: the tenancy lookup says 'active (assumed)', but the case file says the property is NOT TENANTED (event 15, auto-paused) and the checkout report is on file. I am trusting the case file, so the property is vacant and there is no tenant to notify. If a new tenant has moved in, we must give them 24h notice before Monday. Approved spend: £198.37 + VAT = £238.04, which is within the £250 limit and the landlord approved it on 28 Sep. DATA ANOMALIES: (1) the checkout report gives the appointment/inspection date as 25 Aug 2026 but is signed 27 Sep 2025, so it is probably a typo; (2) the invoice attachment (Willow Homes, £240.00 inc VAT, dated 8 Oct 2025) is dated after today, so it cannot be relied on yet. When the invoice arrives, compare it with the quote: £240.00 is £1.96 over £238.04, so ask for the reason and get landlord sign-off before paying, and check that the supplier name (Willow Homes) matches the contractor we instructed (Clarke). Responsibility: the ceiling damage came from a leak (structure/installation, so landlord); the bulbs are landlord's per the approved instruction. Neither is a deposit deduction item. The bathroom cleaning/items-left defects from the checkout are not part of this job."
+      },
+      "output": {
+        "note_id": "NOTE-469045",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "NBL-007-0235",
+        "status": "appointment_booked",
+        "comment": "Waiting for Provider (works). Clarke/Harriet booked Mon 6 Oct; vacant property, keys to be collected from and returned to the office. Check Tue 7 Oct: ask for completion photos + invoice (quote £198.37+VAT) and confirm keys are back; if no-show, rebook and tell the landlord."
+      },
+      "output": {
+        "status_id": "STS-82C294",
+        "status": "appointment_booked",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Harriet's Monday date is confirmed and she has the key arrangements, but I had to assume where the keys are. Nothing in the file says who holds them. Someone at the office needs to check the keys for Flat 8, 168 Alder Lane are there and ready to collect on Monday morning.\n\n**Where the case stands:** The landlord approved the quote on 28 Sep: £198.37 plus VAT (£238.04), which is within the £250 limit. Clarke's office (Harriet) replied today offering Monday 6 Oct and asking where the keys are. The property is empty. The tenancy lookup said \"active (assumed)\", but the case file says the flat is not tenanted and the checkout report is on file. I went with the case file, so there's no tenant to give notice to. If someone has moved in, they need 24 hours' notice before Monday.\n\n**Two things to check when the invoice comes in:**\n- **Amount:** the invoice attached to the case is from Willow Homes, not Clarke, for £240.00. That's £1.96 more than the approved quote. It's also dated 8 Oct, after today. Before paying, ask Clarke why it's higher, get the landlord to agree the extra, and check the supplier name matches.\n- **Checkout report date:** it gives the inspection date as 25 Aug 2026 but was signed on 27 Sep 2025, so 2026 is probably a typo.\n\n**Next check, Tue 7 Oct:** ask Clarke for photos of the finished work and the invoice, and check the keys are back at the office. If they didn't turn up, rebook and tell the landlord. Once the invoice is in and checked, send it to the landlord and close the case.\n\nActions taken, primary first:\n1. **Email to Harriet (Clarke's office), delivered (MSG-40DDE9):** confirms Monday 6 Oct for the two spotlights and the ceiling board at the approved £198.37 plus VAT. It says the flat is empty, so there's no tenant to contact, and asks her to collect the keys from the office that morning and return them the same day. It also asks for before-and-after photos and the invoice, and to call us before doing anything extra, such as if the leak above the ceiling is still active.\n2. **Internal note on NBL-007-0235 (NOTE-469045):** records the key assumption, the empty-flat versus tenancy-record conflict, the spend check and the two date and invoice problems above.\n3. **Status set to appointment booked (STS-82C294), recorded as \"Waiting for Provider (works)\":** booked for Monday 6 Oct, keys from the office, next check Tue 7 Oct as above."
+  ]
+}

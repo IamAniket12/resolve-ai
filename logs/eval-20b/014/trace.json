@@ -1,0 +1,264 @@
+{
+  "case_id": "014",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 4,
+  "started_at": "2026-10-10T11:50:23+00:00",
+  "finished_at": "2026-10-10T11:51:32+00:00",
+  "usage": {
+    "input_tokens": 14,
+    "output_tokens": 7442,
+    "cache_read_input_tokens": 72079,
+    "cache_creation_input_tokens": 11842
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 3522,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 455,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "tenant",
+      "summary": "Pass the landlord's workaround and next-month timescale to the tenant, and ask them to confirm the door closes and locks securely and the glass and frame are intact, because the playbook says the tenant tries a landlord's workaround first while we keep watch on security and glass safety.",
+      "draft": "Address: Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ\n\nDear Tenant,\n\nThank you for your patience. Your landlord has replied about the front door. They say this is a recurring issue with the door, that there is a workaround for closing it in the meantime, and that they would like a contractor to look at it next month. If you are not sure what the workaround is, please tell us and we will get the details from your landlord.\n\nPlease try the workaround and let us know:\n1. Can the front door now be closed without slamming it?\n2. Can you still lock the door securely from inside and outside?\n3. Is the glass in the door still intact, with no cracks, and is the frame still firmly fixed?\n\nImportant: if at any point the door cannot be locked, the glass cracks or breaks, or the frame comes loose, please call us straight away. We will then send a contractor urgently to make the door safe and secure, without waiting until next month.\n\nKind regards\n\nAva\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2024-06-12",
+      "follow_up_action": "If the tenant hasn't replied, send a second message (email and SMS). Once they reply, tell the landlord the result. If the door cannot be secured or the glass or frame fails, book an emergency make-safe and inform the landlord the same day."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Pass the landlord's workaround and next-month timescale to the tenant, and ask them to confirm the door closes and locks securely and the glass and frame are intact, because the playbook says the tenant tries a landlord's workaround first while we keep watch on security and glass safety.",
+        "draft": "Address: Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ\n\nDear Tenant,\n\nThank you for your patience. Your landlord has replied about the front door. They say this is a recurring issue with the door, that there is a workaround for closing it in the meantime, and that they would like a contractor to look at it next month. If you are not sure what the workaround is, please tell us and we will get the details from your landlord.\n\nPlease try the workaround and let us know:\n1. Can the front door now be closed without slamming it?\n2. Can you still lock the door securely from inside and outside?\n3. Is the glass in the door still intact, with no cracks, and is the frame still firmly fixed?\n\nImportant: if at any point the door cannot be locked, the glass cracks or breaks, or the frame comes loose, please call us straight away. We will then send a contractor urgently to make the door safe and secure, without waiting until next month.\n\nKind regards\n\nAva\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2024-06-12",
+        "follow_up_action": "If the tenant hasn't replied, send a second message (email and SMS). Once they reply, tell the landlord the result. If the door cannot be secured or the glass or frame fails, book an emergency make-safe and inform the landlord the same day."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Record the landlord's reply, the missing workaround details, the safety flags, the corrected category and the emergency plan, so the next person knows the triggers.",
+        "draft": "Landlord replied 07 Jun 07:44 (event 9). They say the front door issue is recurring, mention a workaround, and suggest a contractor looks at it next month. The workaround itself is not described in the email as we received it. Following the workaround playbook, we passed it to the tenant first (email 07 Jun) and asked them to confirm the door closes, locks securely, and the glass and frame are intact. Risk flags: the fridge contractor (Oliver) said slamming could shatter the glass, and the door and frame wobble, so there is a possible security and glass safety issue. If the tenant reports the door cannot be secured, or the glass or frame fails, raise to emergency (property cannot be secured) and book a locksmith or glazier/handyperson under emergency make-safe authority (up to £500), then inform the landlord the same day. We are not pushing back on the landlord's next-month timescale yet because nothing currently shows the door cannot be secured. The intake classified this as 'Appliances'; that is wrong. The category is security/structural (front door). No repair history at this address. No landlord spend limit on file beyond the default £250. No vulnerability recorded.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "hold",
+        "to": "tenant",
+        "summary": "Put the case on hold, waiting for the tenant, with a chase date and a plan for that date.",
+        "draft": "Waiting for Tenant. Landlord's workaround passed on, contractor proposed for next month; asked tenant if the door closes and locks securely and the glass is intact. Chase Wed 12 Jun: second message to tenant, then report the result to the landlord. If the door can't be secured, book an emergency make-safe and inform the landlord.",
+        "performed": true,
+        "follow_up_on": "2024-06-12",
+        "follow_up_action": "Send the tenant a second message by email and SMS. If they are still silent, note it and tell the landlord. If they report the door can't be secured, book an emergency make-safe."
+      }
+    ],
+    "alternative_next_actions": [
+      "Push back to the landlord now and ask to book a contractor this week. Weaker: the playbook says the tenant tries the workaround first, and nothing yet shows the door can't be secured.",
+      "Book an emergency locksmith or glazier now. Weaker: no report yet that the door can't be locked or that the glass is broken, so this would be unauthorised landlord spend.",
+      "Only acknowledge the landlord and plan the contractor for next month. Weaker: the tenant hasn't been told the landlord's position and the security check hasn't been done.",
+      "Escalate to the property manager. Weaker: the policy already gives the answer, so it would be over-escalation."
+    ],
+    "case_summary": "The tenant at Flat 12, 52 Meadow Row, Kingshaven reported that the front door has to be slammed to shut. The fridge contractor (Oliver) phoned to say the door and frame wobble and that slamming could shatter the glass. The agency emailed the landlord for approval. The landlord replied that this is a recurring issue, mentioned a workaround, and suggested a contractor look at it next month.",
+    "issue_category": "security/locks (front door, frame and glazing)",
+    "urgency": "routine",
+    "decision": "needs_information",
+    "outcome": "We passed the landlord's workaround and next-month timescale to the tenant and asked them to confirm the door is secure and the glass intact. The case is on hold waiting for the tenant, with a chase on 12 Jun 2024, and an emergency make-safe if the door can't be secured.",
+    "actions_taken": [
+      "Looked up the property: record built from the case file, CASE-014, spend limit £250, no landlord instructions",
+      "Checked repair history: no previous jobs or other cases at this address",
+      "Looked up the tenancy: assumed active, tenant not named, no vulnerability recorded",
+      "Emailed the tenant with the landlord's workaround, the next-month timescale and the security/glass check (MSG-05CE32, delivered)",
+      "Recorded an internal note (NOTE-E4700E)",
+      "Set status to awaiting_tenant with a chase on Wed 12 Jun (STS-B58997)"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Flat 12, 52 Meadow Row, ZZ9 5ZZ. Front door has to be slammed; the door and frame wobble. The fridge contractor (Oliver) warned the glass could shatter. The landlord says it's a recurring issue, has a workaround, and suggests a contractor next month. The workaround itself wasn't in the email as we received it. On 07 Jun we asked the tenant to try it and confirm the door closes, locks securely, and the glass and frame are intact. Status: waiting for the tenant, chase Wed 12 Jun. If the tenant reports the door can't be secured or the glass/frame has failed: treat as an emergency, book a locksmith or glazier/handyperson from the panel (make-safe allowed up to £500 without approval) and tell the landlord the same day. Otherwise report the result to the landlord and agree a contractor visit next month (needs landlord approval above £250). No ticket number exists yet."
+    },
+    "conflicts": [
+      {
+        "description": "The intake classified the issue as 'Appliances' (fridge questions), but the tenant's report and the contractor's call are about the front door, frame and glass.",
+        "how_resolved": "Trusted the tenant's words and the contractor's call, and reclassified as security/structural front door. The fridge was already fitted (event 5)."
+      },
+      {
+        "description": "The landlord says it can wait until next month, but the contractor warned slamming could shatter the glass and the frame wobbles.",
+        "how_resolved": "Accepted the landlord's timescale for now, on the condition that the tenant confirms the door is secure and the glass is intact. If the door can't be secured, it goes to emergency make-safe."
+      }
+    ],
+    "information_gaps": [
+      "The details of the landlord's workaround weren't in the email as we received it. We asked the tenant to tell us if they don't know it, and we'll get it from the landlord.",
+      "Whether the door locks securely and the glass is intact. Asked the tenant.",
+      "Tenant name, pets and access details are not in the case file. These are needed at booking.",
+      "The landlord isn't named and there's no contractor preference. We address them as 'Landlord'."
+    ],
+    "assumptions": [
+      "Oliver is the fridge contractor who phoned in, not the tenant.",
+      "The tenancy is active, as the records lookup inferred from the case file.",
+      "The door can currently be locked, because the tenant reported needing to slam it, not that it won't close or lock."
+    ],
+    "tenant_communication": "Email 07 Jun: the landlord's workaround and next-month contractor plan. Asked whether the door closes without slamming, locks securely, and whether the glass and frame are sound. Told to call straight away if the door can't be locked or the glass or frame fails.",
+    "landlord_communication": "No new message at this moment. On 06 Jun the landlord was asked whether to send someone. Their reply (workaround, next month) will be answered with the tenant's result.",
+    "next_steps": [
+      "12 Jun: chase the tenant if they haven't replied, then tell the landlord.",
+      "Report the tenant's result to the landlord and agree the contractor visit next month (approval needed if over £250).",
+      "If the door can't be secured: emergency booking from the panel, then inform the landlord the same day.",
+      "Tell the tenant who is coming and when, and remind them to mention any pets."
+    ],
+    "risk_flags": [
+      "Possible security risk: the door and frame wobble.",
+      "Glass safety: the contractor warned the glass could shatter from slamming.",
+      "Recurring fault, as the landlord said."
+    ],
+    "confidence": 0.72,
+    "reasoning": "The workaround playbook says a landlord's workaround goes to the tenant first, then the result goes back to the landlord, and we push back only if a safety or security problem remains. Nothing yet shows the door can't be secured, so we accepted the landlord's timescale on the condition of the tenant's check. That check is safeguarded by an emergency trigger under the rule that a property that can't be secured is an emergency. Tenant waits get a 3-working-day chase: Fri 7 Jun plus 3 working days is Wed 12 Jun. No escalation, because the policy covers this and all tools succeeded."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-014",
+        "address": "Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ",
+        "postcode": "ZZ9 5ZZ",
+        "case_title": "Case 014: Front Door Repair Request",
+        "case_created": "2024-06-06 11:55:37 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [
+          "Ava Sawyer"
+        ],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 12, 52 Meadow Row"
+      },
+      "output": {
+        "property_id": "Flat 12, 52 Meadow Row",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 9,
+        "last_event": "2024-06-07 07:44:13 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-014"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-014",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-014",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tenant (not named in the case file)",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant (Flat 12, 52 Meadow Row)",
+        "channel": "email",
+        "body": "Address: Flat 12, 52 Meadow Row, Kingshaven, ZZ9 5ZZ\n\nDear Tenant,\n\nThank you for your patience. Your landlord has replied about the front door. They say this is a recurring issue with the door, that there is a workaround for closing it in the meantime, and that they would like a contractor to look at it next month. If you are not sure what the workaround is, please tell us and we will get the details from your landlord.\n\nPlease try the workaround and let us know:\n1. Can the front door now be closed without slamming it?\n2. Can you still lock the door securely from inside and outside?\n3. Is the glass in the door still intact, with no cracks, and is the frame still firmly fixed?\n\nImportant: if at any point the door cannot be locked, the glass cracks or breaks, or the frame comes loose, please call us straight away. We will then send a contractor urgently to make the door safe and secure, without waiting until next month.\n\nKind regards\n\nAva\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-05CE32",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Landlord replied 07 Jun 07:44 (event 9). They say the front door issue is recurring, mention a workaround, and suggest a contractor looks at it next month. The workaround itself is not described in the email as we received it. Following the workaround playbook, we passed it to the tenant first (email 07 Jun) and asked them to confirm the door closes, locks securely, and the glass and frame are intact. Risk flags: the fridge contractor (Oliver) said slamming could shatter the glass, and the door and frame wobble, so there is a possible security and glass safety issue. If the tenant reports the door cannot be secured, or the glass or frame fails, raise to emergency (property cannot be secured) and book a locksmith or glazier/handyperson under emergency make-safe authority (up to £500), then inform the landlord the same day. We are not pushing back on the landlord's next-month timescale yet because nothing currently shows the door cannot be secured. The intake classified this as 'Appliances'; that is wrong. The category is security/structural (front door). No repair history at this address. No landlord spend limit on file beyond the default £250. No vulnerability recorded."
+      },
+      "output": {
+        "note_id": "NOTE-E4700E",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "awaiting_tenant",
+        "comment": "Waiting for Tenant. Landlord's workaround passed on, contractor proposed for next month; asked tenant if the door closes and locks securely and the glass is intact. Chase Wed 12 Jun: second message to tenant, then report the result to the landlord. If the door can't be secured, book an emergency make-safe and inform the landlord."
+      },
+      "output": {
+        "status_id": "STS-B58997",
+        "status": "awaiting_tenant",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The landlord replied that the front door problem keeps coming back, mentioned a workaround and suggested a contractor look next month. Under our policy, the next step is to pass that workaround to the tenant first. I've done that and asked them to confirm the door can still be locked securely and the glass and frame are sound. I didn't push back on the landlord's next-month timing, because nothing yet shows the door can't be secured. If the tenant says it can't be, we treat it as an emergency, book someone to make it safe (we can spend up to £500 without approval) and tell the landlord the same day.\n\n- The records only contain what's in the case file: there's no earlier repair history at this address, no vulnerability noted and the standard £250 spend limit.\n- The landlord's email as we received it doesn't say what the workaround actually is. I asked the tenant to tell us if they don't know, and we'll get the details from the landlord.\n- The first automatic classification called this an appliance issue (because of the fridge delivery). It's really a front door security and glass safety issue, and I've noted that.\n- I haven't replied to the landlord yet. Per our policy, they hear back once we know whether the workaround helped.\n\n1. **Primary:** Emailed the tenant (delivered, MSG-05CE32): \"Your landlord has replied about the front door. They say this is a recurring issue with the door, that there is a workaround for closing it in the meantime, and that they would like a contractor to look at it next month. If you are not sure what the workaround is, please tell us… Please try the workaround and let us know: 1. Can the front door now be closed without slamming it? 2. Can you still lock the door securely from inside and outside? 3. Is the glass in the door still intact, with no cracks, and is the frame still firmly fixed? Important: if at any point the door cannot be locked, the glass cracks or breaks, or the frame comes loose, please call us straight away. We will then send a contractor urgently to make the door safe and secure, without waiting until next month.\"\n2. Added an internal note (NOTE-E4700E) covering the landlord's reply, the missing workaround details, the risk of the glass shattering and the frame wobbling, the corrected category, and the emergency plan if the door can't be secured.\n3. Put the case on hold, waiting for the tenant (STS-B58997): \"Waiting for Tenant. Landlord's workaround passed on, contractor proposed for next month; asked tenant if the door closes and locks securely and the glass is intact. Chase Wed 12 Jun: second message to tenant, then report the result to the landlord. If the door can't be secured, book an emergency make-safe and inform the landlord.\""
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "case_id": "049",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 4,
+  "started_at": "2026-10-10T11:53:01+00:00",
+  "finished_at": "2026-10-10T11:53:50+00:00",
+  "usage": {
+    "input_tokens": 14,
+    "output_tokens": 5445,
+    "cache_read_input_tokens": 71740,
+    "cache_creation_input_tokens": 9641
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 2510,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 466,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "tenant",
+      "summary": "Pass the landlord's decision to the tenant: they may fix the shed door themselves if they can, and if not we will instruct a contractor. Ask them to confirm by Mon 11 Mar.",
+      "draft": "Address: Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ\n\nDear Tenant,\n\nThank you for reporting the sagging shed door. I have spoken to the landlord, who is happy for you to adjust/fix the door yourselves if you are able to (for example lifting it and tightening or re-fixing the hinge screws so it closes without being lifted).\n\nIf you cannot fix it, or it gets worse, please just reply to this email (photos would be helpful) and we will instruct a contractor to attend instead.\n\nCould you please let us know by Monday 11 March whether you have been able to sort it, or whether you would like us to send a contractor.\n\nKind regards,\nRowan\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2024-03-11",
+      "follow_up_action": "If the tenant has not replied, send a second message. If they cannot fix the door, book a handyperson (landlord has already approved, job must stay within the £250 limit). If they are still silent after that, note it and inform the landlord."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Pass the landlord's decision to the tenant: they may fix the shed door themselves if they can, and if not we will instruct a contractor. Ask them to confirm by Mon 11 Mar.",
+        "draft": "Address: Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ\n\nDear Tenant,\n\nThank you for reporting the sagging shed door. I have spoken to the landlord, who is happy for you to adjust/fix the door yourselves if you are able to (for example lifting it and tightening or re-fixing the hinge screws so it closes without being lifted).\n\nIf you cannot fix it, or it gets worse, please just reply to this email (photos would be helpful) and we will instruct a contractor to attend instead.\n\nCould you please let us know by Monday 11 March whether you have been able to sort it, or whether you would like us to send a contractor.\n\nKind regards,\nRowan\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2024-03-11",
+        "follow_up_action": "If the tenant has not replied, send a second message. If they cannot fix the door, book a handyperson (landlord has already approved, job must stay within the £250 limit). If they are still silent after that, note it and inform the landlord."
+      },
+      {
+        "channel": "hold",
+        "to": "agency",
+        "summary": "Put the case on hold as Waiting for Tenant, with a chase date and the plan for that date written into the status comment.",
+        "draft": "Waiting for Tenant: landlord approved tenant self-fix, else contractor. Chase Mon 11 Mar: second message to tenant; if they can't fix it, select a handyperson (within £250 limit, landlord already approved); if still silent, note and inform landlord.",
+        "performed": true,
+        "follow_up_on": "2024-03-11",
+        "follow_up_action": "Send a second message to the tenant. Book a handyperson if they cannot fix the door, or close the case with a message if they have fixed it. If they are still silent, note it and inform the landlord."
+      }
+    ],
+    "alternative_next_actions": [
+      "Book a handyperson straight away: weaker, because the landlord's first choice is for the tenant to fix it and the tenant offered to do so, so a call-out now could be an unnecessary cost.",
+      "Close the case as no action: weaker, because we do not yet know whether the tenant can fix the door, the landlord made a contractor conditional on that, and the policy says a case must never be closed without telling the tenant.",
+      "Email the landlord again for more detail: weaker, because the landlord's reply already gives a clear decision, so asking again would only add delay."
+    ],
+    "case_summary": "The tenant at Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ reported a sagging shed door that has to be lifted to close. They said they don't mind lifting it and are reporting it in case it gets worse. It was classed as routine with no access considerations and no pets. The agency sent the landlord approval email, and the landlord replied that the tenant may fix the door themselves if they can, otherwise it should go to a contractor.",
+    "issue_category": "structural (outbuilding/shed door)",
+    "urgency": "routine",
+    "decision": "needs_information",
+    "outcome": "The landlord's decision was passed to the tenant, who was asked whether they can fix the door or want a contractor. The case is on hold as Waiting for Tenant until Mon 11 Mar 2024. No contractor has been booked and nothing has been spent.",
+    "actions_taken": [
+      "Looked up the property, tenancy and repair history. Records were built from the case file: active tenancy, £250 spend limit, no previous jobs at this address.",
+      "Created ticket TKT-D3F83D (structural, routine).",
+      "Emailed the tenant with the landlord's decision and a request to reply by 11 Mar (MSG-600F82, delivered).",
+      "Set ticket TKT-D3F83D to awaiting_tenant with a chase date of Mon 11 Mar (STS-54E4E0)."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "TKT-D3F83D, Flat 13, 103 Meadow Row, Bellmere ZZ3 7ZZ. Shed door is sagging and has to be lifted to close. Routine, no safety or security risk, no pets, no access issues. The landlord approved (6 Mar) the tenant fixing it themselves, otherwise a contractor. The tenant was emailed 6 Mar and asked to reply by 11 Mar. Case is on hold as Waiting for Tenant. On Mon 11 Mar: if the tenant has fixed it, tell the tenant and landlord, then close as no action. If they cannot fix it, search the panel for a handyperson and instruct within the £250 limit (no further landlord approval needed), then send the tenant the provider-instructed email. If the tenant is silent, send a second message, and if there is still no reply, note it and inform the landlord."
+    },
+    "conflicts": [],
+    "information_gaps": [
+      "We don't yet know whether the tenant can fix the door. They were asked by email and the case is on hold until 11 Mar.",
+      "The tenant and landlord are not named in the case file. Messages were sent by role through the platform contact records.",
+      "There are no photos of the door. The tenant was asked to send some if they cannot fix it."
+    ],
+    "assumptions": [
+      "Records were built from the case file. The tenancy is assumed active because the tenant raised the case.",
+      "A handyperson job, if needed, is expected to fall within the £250 pre-authorised limit and is covered by the landlord's conditional approval.",
+      "Working days are counted from Wed 6 Mar 2024, so 3 working days gives Mon 11 Mar 2024."
+    ],
+    "tenant_communication": "Emailed 6 Mar: the landlord is happy for the tenant to fix the door themselves. If they can't, or it gets worse, they should reply (with photos if possible) and we will instruct a contractor. They were asked to confirm by Mon 11 Mar.",
+    "landlord_communication": "An approval email was sent on 6 Mar (event 4) and the landlord replied with a conditional approval. The landlord has not been contacted again at this moment, and will be updated once the tenant's outcome is known.",
+    "next_steps": [
+      "Mon 11 Mar: check whether the tenant has replied, and send a second message if not.",
+      "If the tenant cannot fix the door: search the panel for a handyperson for ZZ3 7ZZ, check routine availability, book within £250, send the tenant the provider-instructed email and set a Waiting for Provider hold.",
+      "If the tenant has fixed it: send the tenant and landlord a short closing email, then set the status to closed_no_action.",
+      "If the tenant is still silent after the second message: note it and inform the landlord."
+    ],
+    "risk_flags": [],
+    "confidence": 0.85,
+    "reasoning": "The last event is the landlord's reply approving a tenant self-fix, with a contractor as the fallback. The policy says a landlord's workaround goes to the tenant first and the landlord is told the result afterwards. The issue is routine, the door still closes when lifted, it is an outbuilding, and there is no vulnerability or safety concern, so there was nothing to escalate. A ticket was created so the case could be tracked. The bundle for this moment was the tenant email plus a Waiting for Tenant hold, with the chase date set 3 working days ahead (11 Mar) as the policy requires. Booking a contractor now would ignore the landlord's preference, and closing now would be premature."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-049",
+        "address": "Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ",
+        "postcode": "ZZ3 7ZZ",
+        "case_title": "Case 049: Shed Door Repair Request",
+        "case_created": "2024-03-05 22:10:48 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-049",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Tenant (not named in the case file)",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ"
+      },
+      "output": {
+        "property_id": "Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 7,
+        "last_event": "2024-03-06 23:37:03 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "CASE-049",
+        "title": "Shed door sagging - needs lifting to close",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Tenant reported 05/03/2024: \"Minor issue / weathering: Shed door is sagging and needs to be lifted from the bottom to close properly. We don't mind lifting it from the bottom, but wanted to report it in case it gets worse.\" Intake: routine, no ceiling sagging, no access considerations, no pets. Landlord approval email sent 06/03 (Rowan). Landlord replied 06/03: approves the tenant fixing the door themselves if they can; otherwise assign to a contractor. No prior repairs at this address. No safety/security concern (outbuilding, door still closes when lifted).",
+        "reported_by": "Tenant"
+      },
+      "output": {
+        "ticket_id": "TKT-D3F83D",
+        "property_id": "CASE-049",
+        "property_ref": "case file (not in local database)",
+        "title": "Shed door sagging - needs lifting to close",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Tenant reported 05/03/2024: \"Minor issue / weathering: Shed door is sagging and needs to be lifted from the bottom to close properly. We don't mind lifting it from the bottom, but wanted to report it in case it gets worse.\" Intake: routine, no ceiling sagging, no access considerations, no pets. Landlord approval email sent 06/03 (Rowan). Landlord replied 06/03: approves the tenant fixing the door themselves if they can; otherwise assign to a contractor. No prior repairs at this address. No safety/security concern (outbuilding, door still closes when lifted).",
+        "reported_by": "Tenant",
+        "status": "open",
+        "created_at": "2026-10-10T12:53:10"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant",
+        "channel": "email",
+        "body": "Address: Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ\n\nDear Tenant,\n\nThank you for reporting the sagging shed door. I have spoken to the landlord, who is happy for you to adjust/fix the door yourselves if you are able to (for example lifting it and tightening or re-fixing the hinge screws so it closes without being lifted).\n\nIf you cannot fix it, or it gets worse, please just reply to this email (photos would be helpful) and we will instruct a contractor to attend instead.\n\nCould you please let us know by Monday 11 March whether you have been able to sort it, or whether you would like us to send a contractor.\n\nKind regards,\nRowan\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-600F82",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-D3F83D",
+        "status": "awaiting_tenant",
+        "comment": "Waiting for Tenant: landlord approved tenant self-fix, else contractor. Chase Mon 11 Mar: second message to tenant; if they can't fix it, select a handyperson (within £250 limit, landlord already approved); if still silent, note and inform landlord."
+      },
+      "output": {
+        "status_id": "STS-54E4E0",
+        "status": "awaiting_tenant",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The landlord has approved the tenant fixing the shed door themselves, and has said we should send a contractor if they can't. So I emailed the tenant to pass that on and put the case on hold until they reply. No contractor has been booked yet.\n\n**Checks:** Our records had nothing beyond the case file, so I worked from that. There are no earlier repairs at this address and no vulnerability or access notes. The door still closes when lifted and it's an outbuilding, so there's no safety or security risk and it stays routine. There was no ticket yet, so I opened one: TKT-D3F83D (routine).\n\n**If the tenant can't fix it:** we book a handyperson. The landlord has already approved a contractor, so no second approval is needed as long as the job stays within the £250 limit.\n\n1. **Primary – email to the tenant (sent, MSG-600F82, delivered):**\n   > Address: Flat 13, 103 Meadow Row, Bellmere, ZZ3 7ZZ\n   > Dear Tenant,\n   > Thank you for reporting the sagging shed door. I have spoken to the landlord, who is happy for you to adjust/fix the door yourselves if you are able to (for example lifting it and tightening or re-fixing the hinge screws so it closes without being lifted).\n   > If you cannot fix it, or it gets worse, please just reply to this email (photos would be helpful) and we will instruct a contractor to attend instead.\n   > Could you please let us know by Monday 11 March whether you have been able to sort it, or whether you would like us to send a contractor.\n   > Kind regards, Rowan, Northbridge Lettings\n2. **Status set to \"awaiting tenant\" on TKT-D3F83D (STS-54E4E0):**\n   > Waiting for Tenant: landlord approved tenant self-fix, else contractor. Chase Mon 11 Mar: second message to tenant; if they can't fix it, select a handyperson (within £250 limit, landlord already approved); if still silent, note and inform landlord.\n\n**Follow-up on Mon 11 Mar 2024** (3 working days from 6 Mar):\n- **Tenant has fixed it:** tell the tenant and landlord, then close as \"closed, no action\".\n- **Tenant can't fix it:** book a handyperson from the approved list and send the tenant the \"provider instructed\" email (no pets at the property).\n- **Tenant hasn't replied:** send a second message; if there's still no reply, note it and tell the landlord.\n\nOptions I didn't take:\n- **Book a handyperson now:** weaker, because the landlord's first choice is the tenant's own fix and the tenant offered to do it.\n- **Close the case now:** weaker, because we don't yet know the tenant can fix it, and the policy says never to close without telling them."
+  ]
+}

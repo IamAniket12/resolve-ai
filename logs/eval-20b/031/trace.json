@@ -1,0 +1,459 @@
+{
+  "case_id": "031",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 5,
+  "started_at": "2026-10-10T11:51:13+00:00",
+  "finished_at": "2026-10-10T11:53:02+00:00",
+  "usage": {
+    "input_tokens": 16,
+    "output_tokens": 11816,
+    "cache_read_input_tokens": 93859,
+    "cache_creation_input_tokens": 19453
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 4844,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 423,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "tenant",
+      "summary": "Confirm to the tenant the Saturday 27 Jul 2-5pm plumbing appointment the provider agreed with him by phone at event 10, with what to do in the meantime and the access/ID points, because the appointment stage now needs the tenant told who, when and what to do.",
+      "draft": "Dear Oliver Jenkins,\n\nThank you for agreeing a time with our plumber. Your Plumbing request appointment is now confirmed.\n\nAddress: Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ\nConfirmed Time Slot: Saturday 27 July 2024, 2:00pm - 5:00pm\nMaintenance Provider Name: Meadow Solutions (the engineer who called you introduced themselves as Harbour Services. We are checking with Meadow Solutions that this is their team. If someone from a different company turns up, please ask for ID and contact us before letting them in.)\nContact Details: the number the provider called you from, or reply to this email and we will pass on any message.\nRequest description: The toilet cistern keeps filling with water and never stops. I have received a letter from Oakfield Services about a water leakage over two weeks ago.\n\nUntil the visit: if the toilet has a small isolating valve on the pipe into the cistern (it usually has a screw slot), you can turn it a quarter turn to stop the water running between flushes, then turn it back to refill the cistern when you need to flush. This cuts the water being wasted. If the leak gets worse or water escapes onto the floor, contact us straight away.\n\nYou told us you are happy for the plumber to attend when you are not home. If you will be out on Saturday, please let us know how they will get in.\n\nPlease tell the Maintenance Provider about any changes on your side, and let them know if you have any pets.\n\nKind regards,\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2024-07-29",
+      "follow_up_action": "Ask the tenant to confirm the cistern is fixed; if the provider did not attend, re-book and tell the tenant."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Confirm to the tenant the Saturday 27 Jul 2-5pm plumbing appointment the provider agreed with him by phone at event 10, with what to do in the meantime and the access/ID points, because the appointment stage now needs the tenant told who, when and what to do.",
+        "draft": "Dear Oliver Jenkins,\n\nThank you for agreeing a time with our plumber. Your Plumbing request appointment is now confirmed.\n\nAddress: Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ\nConfirmed Time Slot: Saturday 27 July 2024, 2:00pm - 5:00pm\nMaintenance Provider Name: Meadow Solutions (the engineer who called you introduced themselves as Harbour Services. We are checking with Meadow Solutions that this is their team. If someone from a different company turns up, please ask for ID and contact us before letting them in.)\nContact Details: the number the provider called you from, or reply to this email and we will pass on any message.\nRequest description: The toilet cistern keeps filling with water and never stops. I have received a letter from Oakfield Services about a water leakage over two weeks ago.\n\nUntil the visit: if the toilet has a small isolating valve on the pipe into the cistern (it usually has a screw slot), you can turn it a quarter turn to stop the water running between flushes, then turn it back to refill the cistern when you need to flush. This cuts the water being wasted. If the leak gets worse or water escapes onto the floor, contact us straight away.\n\nYou told us you are happy for the plumber to attend when you are not home. If you will be out on Saturday, please let us know how they will get in.\n\nPlease tell the Maintenance Provider about any changes on your side, and let them know if you have any pets.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2024-07-29",
+        "follow_up_action": "Ask the tenant to confirm the cistern is fixed; if the provider did not attend, re-book and tell the tenant."
+      },
+      {
+        "channel": "sms",
+        "to": "tenant",
+        "summary": "Send the tenant the standard appointment SMS so he has the slot on his phone.",
+        "draft": "Hello, this is Northbridge Lettings! Your Plumbing request appointment is scheduled for 2pm-5pm (Saturday 27 July 2024). To reschedule, contact the provider on the number they called you from, or reply to our email.",
+        "performed": true,
+        "follow_up_on": "2024-07-29",
+        "follow_up_action": "Ask the tenant to confirm the fix; if the provider did not attend, re-book and tell the tenant."
+      },
+      {
+        "channel": "email",
+        "to": "contractor",
+        "summary": "Tell Meadow Solutions the appointment is recorded, ask them to confirm the 'Harbour Services' caller is their team and to arrange access if the tenant is out, and remind them of the £250 limit and the need for completion photos and an invoice.",
+        "draft": "Dear Meadow Solutions,\n\nPlumbing request: Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ\nTenant: Oliver Jenkins\n\nThank you. We have recorded the appointment agreed with the tenant by phone today: Saturday 27 July 2024, 2:00pm - 5:00pm. The tenant has been told.\n\nPlease reply to confirm two things:\n1. The caller gave the company name \"Harbour Services\". Is that your team or a subcontractor working for you on this job? This job was instructed to Meadow Solutions.\n2. If the tenant is out, how will you get in? The tenant has said he is happy for you to attend when he is not home. Please arrange key or access details directly with him.\n\nRequest description: The toilet cistern keeps filling with water and never stops. I have received a letter from Oakfield Services about a water leakage over two weeks ago.\n\nThe pre-authorised limit is £250 inc. VAT. If the work will cost more, send us a quote, photos and an estimated completion time, and do not go ahead until we approve it. When you finish, please send completion photos and your invoice.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2024-07-29",
+        "follow_up_action": "Ask Meadow Solutions for completion photos and the invoice; if they have not confirmed the Harbour Services identity, phone them; if no-show, re-book or re-source and tell the tenant."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Record the contractor-name discrepancy, the missed urgent target, the water supplier letter and why the booking tool was not used.",
+        "draft": "Event 10 (23 Jul 07:13) is logged as a Contractor->Tenant call. The caller is named as \"Harbour Services\", but the provider assigned on 18 Jul and reminded on 19 and 23 Jul is Meadow Solutions. Harbour Services is not on the panel search. Working assumption: this is Meadow Solutions or their subcontractor, because the call came in response to our reminders and is logged under the contractor role. Asked Meadow Solutions to confirm in writing. Tenant told to ask for ID. Appointment Sat 27 Jul 2-5pm is outside the 3-working-day urgent target (due 23 Jul). Accepted because the provider and tenant agreed it, and the tenant was given isolating-valve advice to stop the water waste in the meantime. Water supplier (Oakfield Services) has written to the tenant about leakage. Possible water-bill or supplier-notice implications for the landlord; check at completion. No external tool slot exists: the booking was made directly between the provider and the tenant, so schedule_contractor was not used.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Set the case to appointment booked / Waiting for Provider with the post-appointment check date so the dashboard shows where it stands.",
+        "draft": "Waiting for Provider: Meadow Solutions to attend Sat 27 Jul 2-5pm (caller named \"Harbour Services\", confirmation asked for). Check Mon 29 Jul: ask the provider for photos and the invoice and the tenant to confirm the fix. If no-show, re-book and tell the tenant.",
+        "performed": true,
+        "follow_up_on": "2024-07-29",
+        "follow_up_action": "Ask the provider for completion photos and the invoice and the tenant to confirm the fix; if no-show, re-book and tell the tenant."
+      }
+    ],
+    "alternative_next_actions": [
+      "Hold off on confirming to the tenant until Meadow Solutions confirms Harbour Services is their team. This is weaker because the tenant has already agreed the slot and would be left with no written confirmation, and one email to the provider can settle the identity question in parallel.",
+      "Escalate the contractor-name mismatch to the property manager. This is weaker because it doesn't change the next action, can be resolved from the provider, and would be an unnecessary escalation of an urgent job that is within authority.",
+      "Re-source to another panel plumber for an earlier slot, since the urgent 3-working-day target has passed. This is weaker because the agreed Saturday visit is only 4 days away, the tenant agreed it, the leak is contained, and a new contractor is unlikely to be faster and would lose continuity with the landlord-preferred provider.",
+      "Phone Meadow Solutions now to verify the caller. This is weaker because a written email is enough for a non-emergency, and it leaves a record."
+    ],
+    "case_summary": "Tenant Oliver Jenkins at Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ reported on 18 Jul 2024 that the toilet cistern fills continuously, and that the water supplier (Oakfield Services) has written to him about a leak. The landlord approved, and Meadow Solutions (the landlord-preferred provider) was instructed on 18 Jul and reminded on 19 and 23 Jul. At event 10 (23 Jul 07:13) a caller from the contractor side, who gave the name 'Harbour Services', agreed a visit with the tenant for Saturday 27 Jul, 2-5pm. The tenant had said he is happy for the plumbers to attend when he is not home.",
+    "issue_category": "plumbing/leak",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "Appointment for Saturday 27 July 2024, 2-5pm recorded and confirmed to the tenant by email and SMS and to Meadow Solutions by email, with a request to confirm the 'Harbour Services' identity and access arrangements. The case is set to appointment_booked (Waiting for Provider) with a completion check on Mon 29 Jul 2024.",
+    "actions_taken": [
+      "Looked up the property, tenancy, repair history and plumber panel (records built from the case file; Meadow Solutions is landlord-preferred; no prior jobs).",
+      "Created mirror ticket TKT-6282F7 (urgent, plumbing) for existing Case 031, explicitly not a new job.",
+      "Emailed tenant Oliver Jenkins the appointment confirmation for Sat 27 Jul 2-5pm with interim isolating-valve advice, ID/access points and the pets reminder (MSG-D98EF4, delivered).",
+      "Sent the tenant the appointment SMS (MSG-123AEA, delivered).",
+      "Emailed Meadow Solutions to record the appointment, asked them to confirm the Harbour Services identity and access arrangements, and reminded them of the £250 quote threshold and the need for completion photos and an invoice (MSG-168E22, delivered).",
+      "Recorded internal note NOTE-311021 on the contractor-name discrepancy, missed target, water supplier letter and why the booking tool was not used.",
+      "Set the status to appointment_booked (STS-62B5AD) with check date Mon 29 Jul 2024."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Case 031 / TKT-6282F7. The toilet cistern at Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ fills continuously. Tenant: Oliver Jenkins. Landlord approval was confirmed 18 Jul and Meadow Solutions (landlord-preferred) instructed 18 Jul, with reminders on 19 and 23 Jul. On 23 Jul a caller named 'Harbour Services' agreed a visit with the tenant for Sat 27 Jul 2-5pm. The tenant and Meadow Solutions have been told; Meadow Solutions has been asked to confirm Harbour Services is their team/subcontractor and to arrange access if the tenant is out. Spend limit is £250 inc. VAT, so a quote is required above that. On Mon 29 Jul: get completion photos and the invoice from the provider and confirmation from the tenant. If no-show, re-book and tell the tenant. If Meadow Solutions says Harbour Services is not theirs, treat the Saturday visit as unverified, warn the tenant and re-book with Meadow Solutions. Check whether the Oakfield Services leakage letter needs a reply or affects the landlord's water bill."
+    },
+    "conflicts": [
+      {
+        "description": "The provider instructed and reminded is Meadow Solutions (events 4-6, 8-9), but the event 10 call log names the caller as 'Harbour Services', which is not on the panel search.",
+        "how_resolved": "Assumed to be Meadow Solutions or their subcontractor, because the call came straight after our reminders and is logged under the Contractor role. The appointment was accepted, but written confirmation was asked from Meadow Solutions and the tenant was told to ask for ID. If it is not Meadow Solutions' team, the visit will be treated as unverified and re-booked."
+      }
+    ],
+    "information_gaps": [
+      "Identity of 'Harbour Services' versus Meadow Solutions: asked Meadow Solutions to confirm in writing.",
+      "Access if the tenant is out on Saturday (he consented to attendance in his absence but no key arrangement is recorded): asked the provider to arrange it with the tenant, and asked the tenant to tell us.",
+      "Contractor and tenant phone numbers are not in the file: messages were sent through platform contact records, and the tenant was pointed to the number the provider called from.",
+      "Contents of the Oakfield Services water-leakage letter (bill or notice) are unknown: flagged for the completion check.",
+      "Landlord name is not in the file: no landlord message was needed at this moment.",
+      "Whether there are pets is unknown: tenant reminded to tell the provider."
+    ],
+    "assumptions": [
+      "'Harbour Services' is the attending trade name or subcontractor of Meadow Solutions.",
+      "The appointment is Saturday 27 July 2024 (the first Saturday after the 23 Jul call), 2-5pm.",
+      "The leak is contained (water going into the pan/overflow, nothing on the floor), so the job is urgent, not emergency.",
+      "Landlord approval at event 3 covers instructing Meadow Solutions up to the £250 pre-authorised limit.",
+      "The tenancy is active and the household is not vulnerable (nothing in the file suggests otherwise)."
+    ],
+    "tenant_communication": "Email and SMS confirming the plumbing appointment on Sat 27 Jul 2024, 2-5pm with Meadow Solutions (caller introduced as Harbour Services; ask for ID). The email also gave isolating-valve advice to stop water waste, asked him to say how they get in if he is out, told him to contact us if the leak worsens, and reminded him to mention pets.",
+    "landlord_communication": "none at this moment (the landlord approved on 18 Jul; no new spend or decision required).",
+    "next_steps": [
+      "Await Meadow Solutions' reply confirming the Harbour Services identity and access arrangements. If no reply by Thu 25 Jul, send an SMS + email reminder before the Saturday visit.",
+      "If a quote above £250 inc. VAT arrives, send it to the landlord for approval and do not authorise the work until approved.",
+      "Mon 29 Jul 2024: ask the provider for completion photos and the invoice, and ask the tenant to confirm the cistern has stopped running. If no-show, re-book and tell the tenant.",
+      "At completion, check whether the Oakfield Services leakage letter needs action (water bill, supplier notice) and inform the landlord.",
+      "Once the invoice is received and matches the quote or limit, send it to the landlord and close the case as completed."
+    ],
+    "risk_flags": [
+      "Unverified contractor identity: the caller named 'Harbour Services' instead of the instructed Meadow Solutions, and access in the tenant's absence is offered. The tenant has been advised to ask for ID.",
+      "Urgent 3-working-day target missed (due 23 Jul; visit 27 Jul).",
+      "Ongoing water leakage notified by the water supplier: possible cost or bill implications for the landlord."
+    ],
+    "confidence": 0.78,
+    "reasoning": "The history ends with the contractor-side caller agreeing a Saturday 2-5pm slot with the tenant after two reminders. Under the policy the stage is now appointment, so the bundle is: confirm to the tenant (email + SMS in the standard shapes), confirm to the provider, and set the case to appointment booked / Waiting for Provider, with the check the day after the appointment. Sunday 28 Jul is not a working day, so the check falls on Mon 29 Jul. Urgency is urgent: a continuous but contained leak, flagged by the water supplier, with no vulnerability recorded. The contractor-name discrepancy doesn't change the next action, so I didn't escalate it; I asked the provider and protected the tenant with ID advice instead. No booking tool slot was used because the slot was agreed directly between the provider and the tenant, and I didn't invent a slot ID. The landlord had already approved and no spend above £250 has arisen, so no landlord contact was needed now."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-031",
+        "address": "Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ",
+        "postcode": "ZZ4 4ZZ",
+        "case_title": "Case 031: Plumbing request",
+        "case_created": "2024-07-18 01:05:36 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Meadow Solutions"
+        ],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "search_contractors",
+      "input": {
+        "trade": "plumber",
+        "postcode": "ZZ4 4ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "plumber",
+        "postcode": "ZZ4 4ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "NAMED-1",
+            "name": "Meadow Solutions",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "named in this case file",
+            "note": "Already involved in this case: prefer for continuity, warranty or an open quote. Contact via platform record."
+          },
+          {
+            "contractor_id": "BATCH-1",
+            "name": "Oakfield Homes",
+            "trades": [
+              "appliance_engineer",
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 2 other case(s) in this batch"
+          },
+          {
+            "contractor_id": "BATCH-6",
+            "name": "Henry Quinn",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          },
+          {
+            "contractor_id": "BATCH-7",
+            "name": "Beacon Utilities",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          },
+          {
+            "contractor_id": "BATCH-8",
+            "name": "maintenance provider",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          },
+          {
+            "contractor_id": "BATCH-9",
+            "name": "Oliver",
+            "trades": [
+              "plumber"
+            ],
+            "certifications": [],
+            "postcode_areas": [],
+            "rating": 0,
+            "emergency": true,
+            "call_out_gbp": null,
+            "phone": "",
+            "email": "",
+            "source": "used by the agency in 1 other case(s) in this batch"
+          }
+        ],
+        "note": "Contractors already named in this case come first; then ones the agency used in other cases; then the panel."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-031"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-031",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-031",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Oliver Jenkins",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record (address messages by name)"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "CASE-031"
+      },
+      "output": {
+        "property_id": "CASE-031",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 10,
+        "last_event": "2024-07-23 07:13:53 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "CASE-031",
+        "title": "Plumbing request - toilet cistern continuously filling (mirror of existing Case 031, not a new job)",
+        "category": "plumbing",
+        "urgency": "urgent",
+        "description": "Mirror record for existing Case 031 (opened 18 Jul 2024) so status and notes can be tracked; NOT a second job. Tenant Oliver Jenkins reported: \"The toilet cistern keeps filling with water and never stops. I have received a letter from Oakfield Services about a water leakage over two weeks ago.\" Classified urgent (contained but continuous leak; water supplier has written about leakage). Landlord approval confirmed 18 Jul; Meadow Solutions assigned 18 Jul (landlord-preferred). Tenant consented 18 Jul to access when not home. Provider reminders sent 19 Jul and 23 Jul. 23 Jul 07:13 call log: contractor (caller named as \"Harbour Services\") agreed visit with tenant Saturday 27 Jul 2024, 2-5pm. Spend limit GBP 250 - quote required above this.",
+        "reported_by": "Oliver Jenkins (tenant)"
+      },
+      "output": {
+        "ticket_id": "TKT-6282F7",
+        "property_id": "CASE-031",
+        "property_ref": "case file (not in local database)",
+        "title": "Plumbing request - toilet cistern continuously filling (mirror of existing Case 031, not a new job)",
+        "category": "plumbing",
+        "urgency": "urgent",
+        "description": "Mirror record for existing Case 031 (opened 18 Jul 2024) so status and notes can be tracked; NOT a second job. Tenant Oliver Jenkins reported: \"The toilet cistern keeps filling with water and never stops. I have received a letter from Oakfield Services about a water leakage over two weeks ago.\" Classified urgent (contained but continuous leak; water supplier has written about leakage). Landlord approval confirmed 18 Jul; Meadow Solutions assigned 18 Jul (landlord-preferred). Tenant consented 18 Jul to access when not home. Provider reminders sent 19 Jul and 23 Jul. 23 Jul 07:13 call log: contractor (caller named as \"Harbour Services\") agreed visit with tenant Saturday 27 Jul 2024, 2-5pm. Spend limit GBP 250 - quote required above this.",
+        "reported_by": "Oliver Jenkins (tenant)",
+        "status": "open",
+        "created_at": "2026-10-10T12:51:40"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Oliver Jenkins (tenant)",
+        "channel": "email",
+        "body": "Dear Oliver Jenkins,\n\nThank you for agreeing a time with our plumber. Your Plumbing request appointment is now confirmed.\n\nAddress: Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ\nConfirmed Time Slot: Saturday 27 July 2024, 2:00pm - 5:00pm\nMaintenance Provider Name: Meadow Solutions (the engineer who called you introduced themselves as Harbour Services. We are checking with Meadow Solutions that this is their team. If someone from a different company turns up, please ask for ID and contact us before letting them in.)\nContact Details: the number the provider called you from, or reply to this email and we will pass on any message.\nRequest description: The toilet cistern keeps filling with water and never stops. I have received a letter from Oakfield Services about a water leakage over two weeks ago.\n\nUntil the visit: if the toilet has a small isolating valve on the pipe into the cistern (it usually has a screw slot), you can turn it a quarter turn to stop the water running between flushes, then turn it back to refill the cistern when you need to flush. This cuts the water being wasted. If the leak gets worse or water escapes onto the floor, contact us straight away.\n\nYou told us you are happy for the plumber to attend when you are not home. If you will be out on Saturday, please let us know how they will get in.\n\nPlease tell the Maintenance Provider about any changes on your side, and let them know if you have any pets.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-D98EF4",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Oliver Jenkins (tenant)",
+        "channel": "sms",
+        "body": "Hello, this is Northbridge Lettings! Your Plumbing request appointment is scheduled for 2pm-5pm (Saturday 27 July 2024). To reschedule, contact the provider on the number they called you from, or reply to our email."
+      },
+      "output": {
+        "message_id": "MSG-123AEA",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Meadow Solutions",
+        "channel": "email",
+        "body": "Dear Meadow Solutions,\n\nPlumbing request: Flat 14, 134 Copperfield Walk, Cedarford, ZZ4 4ZZ\nTenant: Oliver Jenkins\n\nThank you. We have recorded the appointment agreed with the tenant by phone today: Saturday 27 July 2024, 2:00pm - 5:00pm. The tenant has been told.\n\nPlease reply to confirm two things:\n1. The caller gave the company name \"Harbour Services\". Is that your team or a subcontractor working for you on this job? This job was instructed to Meadow Solutions.\n2. If the tenant is out, how will you get in? The tenant has said he is happy for you to attend when he is not home. Please arrange key or access details directly with him.\n\nRequest description: The toilet cistern keeps filling with water and never stops. I have received a letter from Oakfield Services about a water leakage over two weeks ago.\n\nThe pre-authorised limit is £250 inc. VAT. If the work will cost more, send us a quote, photos and an estimated completion time, and do not go ahead until we approve it. When you finish, please send completion photos and your invoice.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-168E22",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-6282F7",
+        "note": "Event 10 (23 Jul 07:13) is logged as a Contractor->Tenant call. The caller is named as \"Harbour Services\", but the provider assigned on 18 Jul and reminded on 19 and 23 Jul is Meadow Solutions. Harbour Services is not on the panel search. Working assumption: this is Meadow Solutions or their subcontractor, because the call came in response to our reminders and is logged under the contractor role. Asked Meadow Solutions to confirm in writing. Tenant told to ask for ID. Appointment Sat 27 Jul 2-5pm is outside the 3-working-day urgent target (due 23 Jul). Accepted because the provider and tenant agreed it, and the tenant was given isolating-valve advice to stop the water waste in the meantime. Water supplier (Oakfield Services) has written to the tenant about leakage. Possible water-bill or supplier-notice implications for the landlord; check at completion. No external tool slot exists: the booking was made directly between the provider and the tenant, so schedule_contractor was not used."
+      },
+      "output": {
+        "note_id": "NOTE-311021",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-6282F7",
+        "status": "appointment_booked",
+        "comment": "Waiting for Provider: Meadow Solutions to attend Sat 27 Jul 2-5pm (caller named \"Harbour Services\", confirmation asked for). Check Mon 29 Jul: ask the provider for photos and the invoice and the tenant to confirm the fix. If no-show, re-book and tell the tenant."
+      },
+      "output": {
+        "status_id": "STS-62B5AD",
+        "status": "appointment_booked",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The plumber and the tenant agreed a visit on Saturday 27 July, 2–5pm, so I confirmed that appointment to the tenant and the provider and logged it. No call-out was booked through the booking tool: the provider and tenant fixed the time between themselves, so there was no slot ID to book.\n\n- **Records:** The property, tenancy and repair history lookups only returned what the case file already says. Meadow Solutions is the landlord's preferred provider and there are no earlier repairs at this address.\n- **Name mismatch:** The provider assigned on 18 Jul and reminded on 19 and 23 Jul is Meadow Solutions, but the person who called the tenant on 23 Jul said \"Harbour Services\". Harbour Services isn't on the contractor list. I'm assuming it's Meadow Solutions or someone working for them, because the call came straight after our reminders and is logged as from the contractor. I've asked Meadow Solutions to confirm in writing and told the tenant to ask for ID.\n- **Ticket:** I opened TKT-6282F7 (urgent) as a copy of Case 031 so the status and notes can be tracked. It is not a second job.\n- **Deadline missed:** The 3-working-day target for an urgent job ran out on 23 Jul, so Saturday is late. I accepted it because both sides have agreed it. Meanwhile the tenant can use the small valve on the pipe into the cistern to stop the water waste.\n- **Water supplier letter:** Oakfield Services has written to the tenant about a leak. This may affect the landlord's water bill, so it should be checked when the job is finished.\n\n**Next step:** On Mon 29 Jul, ask Meadow Solutions for completion photos and the invoice, and ask the tenant to confirm the fix. If nobody turned up, re-book and tell the tenant. If the cost goes over £250, get the landlord's approval before the work goes ahead.\n\n**Options I didn't take:**\n- Escalating the name mismatch to the property manager: it doesn't change what happens next and can be settled with one email to the provider.\n- Holding off on confirming to the tenant until Meadow Solutions replies: the tenant would have no confirmation for a visit that's already agreed.\n\nActions taken, primary first:\n1. Emailed the tenant (Oliver Jenkins) to confirm the appointment (MSG-D98EF4): Sat 27 Jul 2024, 2–5pm, Meadow Solutions (caller named \"Harbour Services\", ask for ID), how to use the valve until then, how the provider gets in if he's out, and a reminder to mention pets.\n2. Texted the tenant (MSG-123AEA): \"Hello, this is Northbridge Lettings! Your Plumbing request appointment is scheduled for 2pm-5pm (Saturday 27 July 2024). To reschedule, contact the provider on the number they called you from, or reply to our email.\"\n3. Emailed Meadow Solutions (MSG-168E22): appointment recorded; asked them to confirm Harbour Services works for them and how they'll get in if the tenant is out; quote needed before any work over £250 inc. VAT; send completion photos and the invoice when done.\n4. Added an internal note (NOTE-311021): the name mismatch and my assumption, the missed deadline, the water supplier letter, and why the booking tool wasn't used.\n5. Set the status to appointment_booked (STS-62B5AD): \"Waiting for Provider: Meadow Solutions to attend Sat 27 Jul 2-5pm (caller named \"Harbour Services\", confirmation asked for). Check Mon 29 Jul: ask the provider for photos and the invoice and the tenant to confirm the fix. If no-show, re-book and tell the tenant.\"\n6. Created ticket TKT-6282F7 (urgent, plumbing) as a copy of Case 031, not a new job."
+  ]
+}

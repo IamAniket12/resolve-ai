@@ -1,0 +1,206 @@
+{
+  "case_id": "046",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 3,
+  "started_at": "2026-10-10T11:52:44+00:00",
+  "finished_at": "2026-10-10T11:53:39+00:00",
+  "usage": {
+    "input_tokens": 12,
+    "output_tokens": 5851,
+    "cache_read_input_tokens": 59029,
+    "cache_creation_input_tokens": 11433
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 6225,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 345,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "hold",
+      "to": "contractor",
+      "summary": "Put the case on hold as Waiting for Provider. Lantern Utilities has acknowledged the approved hinge replacement and will confirm a booking date, so the next step depends on them.",
+      "draft": "Case 046 – Waiting for Provider. Lantern Utilities (Mercer) acknowledged on 15 Sep and will confirm a booking date for the bedroom window hinge replacement (£90 + VAT, approved by landlord). Chase Wed 17 Sep 2025: SMS + email reminder asking for the appointment date. After 3 reminders, call them and re-source.",
+      "performed": true,
+      "follow_up_on": "2025-09-17",
+      "follow_up_action": "If there is still no appointment date, send Lantern Utilities an SMS and email reminder asking for the date. After 3 reminders with no booking, phone them (or hand the call to a human), then find another contractor from the panel and tell the tenant the new plan."
+    },
+    "next_actions": [
+      {
+        "channel": "hold",
+        "to": "contractor",
+        "summary": "Put the case on hold as Waiting for Provider. Lantern Utilities has acknowledged the approved hinge replacement and will confirm a booking date, so the next step depends on them.",
+        "draft": "Case 046 – Waiting for Provider. Lantern Utilities (Mercer) acknowledged on 15 Sep and will confirm a booking date for the bedroom window hinge replacement (£90 + VAT, approved by landlord). Chase Wed 17 Sep 2025: SMS + email reminder asking for the appointment date. After 3 reminders, call them and re-source.",
+        "performed": true,
+        "follow_up_on": "2025-09-17",
+        "follow_up_action": "If there is still no appointment date, send Lantern Utilities an SMS and email reminder asking for the date. After 3 reminders with no booking, phone them (or hand the call to a human), then find another contractor from the panel and tell the tenant the new plan."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Recorded an internal note on where the case stands, the spend check, the name discrepancies, and when to upgrade the case to an emergency.",
+        "draft": "Case 046, Flat 23, 143 Willowmere Road, ZZ2 6ZZ. Where it stands at 15 Sep 12:31: the tenant (Freya Grant) reported that the bedroom window is not closing properly because of a rusted hinge. Classed as Routine: the report doesn't say the window can't be secured. Landlord approved the contractor visit (12 Sep). Lantern Utilities quoted £90 + VAT (£108 inc VAT) for hinges. That is within the £250 default limit, and the landlord approved it in writing anyway on 12 Sep at 16:03. We told the contractor to go ahead on 12 Sep at 16:38. On 15 Sep Lantern (signed \"Mercer\") acknowledged and said they will tell us when it is booked. No appointment date has been given yet. Discrepancies for a human to know about (they don't change the action): (1) the landlord approval emails were addressed to \"Grace\" but the replies are signed \"Felix\". The property record lists the landlord as \"Grace, Felix\", so these are treated as joint landlords. (2) Contractor emails were signed by \"Jenkins\" and later by \"Mercer\". Both are treated as Lantern Utilities staff. (3) The tenant hasn't said whether the window can be closed and locked. If the tenant or contractor reports that it can't be secured, upgrade to Emergency (security) and arrange a make-safe. There is no other repair history at this address.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      }
+    ],
+    "alternative_next_actions": [
+      "Send Lantern Utilities a reminder now asking for the appointment date. This is weaker because they acknowledged less than a minute ago and said they will confirm, so a chase before the 2-working-day interval is premature.",
+      "Email the tenant now that the contractor will book soon. This is weaker because she was already told on 12 Sep that Lantern will contact her, and there is no new information to give until a date is confirmed.",
+      "Take no action and leave the existing hold in place. This is weaker because the hold set on 12 Sep had no chase date, and policy requires every wait to have a dated check and a plan for that date."
+    ],
+    "case_summary": "The tenant, Freya Grant, reported that the bedroom window at Flat 23, 143 Willowmere Road, Alderwick, ZZ2 6ZZ is not closing properly because a hinge is rusted. The landlord (Felix/Grace) approved a contractor visit and then the £90 + VAT hinge replacement quoted by Lantern Utilities, and the contractor was told to go ahead on 12 Sep. On 15 Sep the contractor acknowledged and said it will confirm when the job is booked, so we are waiting for the provider to give an appointment date.",
+    "issue_category": "structural/windows (window hinge repair)",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "The landlord has approved the hinge replacement (£90 + VAT) and Lantern Utilities is instructed. The case is on hold as Waiting for Provider until Lantern confirms an appointment date, with a chase due Wed 17 Sep 2025.",
+    "actions_taken": [
+      "Looked up the property: found as CASE-046, built from the case file. Landlord listed as \"Grace, Felix\"; spend limit £250; preferred contractors Lantern Utilities and Jenkins.",
+      "Checked repair history: no previous jobs or other cases at this address.",
+      "Set the case status to awaiting_provider (STS-CBD344) with a hold comment giving the 17 Sep 2025 chase date and plan.",
+      "Recorded an internal note (NOTE-496A3D) on where the case stands, the name conflicts and when to upgrade to emergency."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "No escalation needed. This is a routine window hinge repair: the landlord approved it, the cost (£108 inc VAT) is within authority, and the contractor is instructed and has acknowledged. For a colleague picking this up: we are waiting for Lantern Utilities to give an appointment date. On Wed 17 Sep 2025, if there is no date, send them an SMS and email reminder; after 3 reminders, phone them and re-source from the panel. Once a date is confirmed, send the tenant (Freya Grant) the slot and contractor contact details, inform the landlord (Felix), and set the status to appointment_booked. After the visit, ask for photos and the invoice (expected £90 + VAT; any increase needs a reason and landlord sign-off), confirm with the tenant, then close as completed."
+    },
+    "conflicts": [
+      {
+        "description": "The landlord approval emails (events 003 and 016) were addressed to \"Grace\", but both landlord replies (events 007 and 018) came from \"Felix\". The agency's own reply (event 008) was addressed to Felix, and the property record lists the landlord as \"Grace, Felix\".",
+        "how_resolved": "Treated as joint landlords, or one landlord contact under two names, as the property record suggests. Both approvals came from the landlord's side and are consistent, so the action does not change. Noted for staff to tidy up the contact record."
+      },
+      {
+        "description": "The contractor's quote email (event 015) was signed \"Jenkins\" and the booking acknowledgement (event 022) was signed \"Mercer\". The property record lists \"Lantern Utilities\" and \"Jenkins\" as separate preferred contractors.",
+        "how_resolved": "Both emails were replies in the Lantern Utilities thread, so both people are treated as Lantern Utilities staff. This does not change the action."
+      }
+    ],
+    "information_gaps": [
+      "No appointment date yet: the contractor will confirm. Handled with the Waiting for Provider hold and the 17 Sep chase.",
+      "It is unknown whether the window can still be closed and locked (a security risk). Assumed routine because the report only says it 'is not closing properly'. The note says to upgrade to emergency if it cannot be secured.",
+      "No platform ticket ID was available in the case file. The status and note were recorded without one, and no duplicate ticket was created.",
+      "No tenancy lookup was done. The case file names Freya Grant as the tenant, and the tenancy is treated as active because the agency has been corresponding with her."
+    ],
+    "assumptions": [
+      "The window can still be secured, so the case is routine rather than an emergency.",
+      "Grace and Felix are the same landlord contact or joint landlords, and Felix's approvals are valid.",
+      "Jenkins and Mercer both work for Lantern Utilities.",
+      "The existing provider instruction stands and does not need re-sending."
+    ],
+    "tenant_communication": "Nothing new at this moment. On 12 Sep the tenant was told that Lantern Utilities will attend and will contact her to arrange a time, and was reminded to mention any pets.",
+    "landlord_communication": "Nothing new at this moment. The landlord has approved both the contractor visit and the £90 + VAT hinge replacement, and the agency has thanked them.",
+    "next_steps": [
+      "Wed 17 Sep 2025: if Lantern Utilities has given no appointment date, send an SMS and email reminder.",
+      "After 3 reminders with no booking: phone Lantern Utilities (or hand the call to a human), then re-source from the panel and tell the tenant.",
+      "When a date is confirmed: send the tenant an appointment confirmation by email and SMS with the slot and contractor contact details, inform the landlord, and set the status to appointment_booked.",
+      "The day after the appointment: ask the contractor for completion photos and the invoice, and ask the tenant to confirm the window now closes properly.",
+      "Check the invoice against the £90 + VAT quote, send it to the landlord and close the case as completed."
+    ],
+    "risk_flags": [
+      "Possible security risk if the bedroom window cannot be secured: not stated in the report. If confirmed, upgrade to emergency and arrange a make-safe."
+    ],
+    "confidence": 0.85,
+    "reasoning": "The history shows the landlord approval step done (events 007 and 018), the quote approved and within the £250 limit (£90 + VAT = £108), and the contractor told to go ahead (event 020). The last event (022) is the contractor saying it will confirm when the job is booked. Under the policy, when we are waiting for a provider to book, the case goes on hold as Waiting for Provider with a check after 2 working days: Mon 15 Sep plus 2 working days is Wed 17 Sep 2025. On that date we send an SMS and email reminder, and after 3 reminders we phone the provider and re-source. Messaging the tenant or contractor now would add nothing. No safety rule applies on the facts given, so no escalation is needed. The name conflicts were noted but do not change the action."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 23, 143 Willowmere Road, ZZ2 6ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-046",
+        "address": "Flat 23, 143 Willowmere Road, Alderwick, ZZ2 6ZZ",
+        "postcode": "ZZ2 6ZZ",
+        "case_title": "Case 046: Bedroom Window Repair",
+        "case_created": "2025-09-11 21:53:55 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "Grace, Felix",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Lantern Utilities",
+          "Jenkins"
+        ],
+        "agency_staff_on_case": [
+          "Clara Ashford"
+        ],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 23, 143 Willowmere Road"
+      },
+      "output": {
+        "property_id": "Flat 23, 143 Willowmere Road",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 22,
+        "last_event": "2025-09-15 12:31:31 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "awaiting_provider",
+        "comment": "Case 046 – Waiting for Provider. Lantern Utilities (Mercer) acknowledged on 15 Sep and will confirm a booking date for the bedroom window hinge replacement (£90 + VAT, approved by landlord). Chase Wed 17 Sep 2025: SMS + email reminder asking for the appointment date. After 3 reminders, call them and re-source."
+      },
+      "output": {
+        "status_id": "STS-CBD344",
+        "status": "awaiting_provider",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 046, Flat 23, 143 Willowmere Road, ZZ2 6ZZ. Where it stands at 15 Sep 12:31: the tenant (Freya Grant) reported that the bedroom window is not closing properly because of a rusted hinge. Classed as Routine: the report doesn't say the window can't be secured. Landlord approved the contractor visit (12 Sep). Lantern Utilities quoted £90 + VAT (£108 inc VAT) for hinges. That is within the £250 default limit, and the landlord approved it in writing anyway on 12 Sep at 16:03. We told the contractor to go ahead on 12 Sep at 16:38. On 15 Sep Lantern (signed \"Mercer\") acknowledged and said they will tell us when it is booked. No appointment date has been given yet. Discrepancies for a human to know about (they don't change the action): (1) the landlord approval emails were addressed to \"Grace\" but the replies are signed \"Felix\". The property record lists the landlord as \"Grace, Felix\", so these are treated as joint landlords. (2) Contractor emails were signed by \"Jenkins\" and later by \"Mercer\". Both are treated as Lantern Utilities staff. (3) The tenant hasn't said whether the window can be closed and locked. If the tenant or contractor reports that it can't be secured, upgrade to Emergency (security) and arrange a make-safe. There is no other repair history at this address."
+      },
+      "output": {
+        "note_id": "NOTE-496A3D",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Case 046 is on hold as Waiting for Provider. Lantern Utilities is approved to replace the bedroom window hinge but hasn't given an appointment date yet. They emailed today (15 Sep, signed \"Mercer\") to say they'll tell us once it's booked.\n\n1. **Primary:** I set the case to Waiting for Provider (status STS-CBD344). The dashboard comment reads: \"Case 046 – Waiting for Provider. Lantern Utilities (Mercer) acknowledged on 15 Sep and will confirm a booking date for the bedroom window hinge replacement (£90 + VAT, approved by landlord). Chase Wed 17 Sep 2025: SMS + email reminder asking for the appointment date. After 3 reminders, call them and re-source.\"\n2. I added an internal note (NOTE-496A3D) on where the case stands:\n   - The repair is routine, because the tenant hasn't said the window can't be secured.\n   - The £90 + VAT (£108) hinge quote is within the £250 limit, and the landlord also approved it in writing on 12 Sep.\n   - The landlord emails went to \"Grace\" but the replies are signed \"Felix\". The property record lists both, so I've treated them as joint landlords.\n   - The contractor signed first as \"Jenkins\", then as \"Mercer\". I've treated both as Lantern Utilities staff.\n   - If the window turns out not to lock, the case becomes an emergency and needs a make-safe.\n\nI didn't send any messages. The tenant was already told on 12 Sep that Lantern will contact her, and the contractor's email needs no reply. There's no ticket ID for this case and I didn't open a new ticket, so the status and note are logged without one.\n\n**Next check: Wed 17 Sep 2025** (2 working days). If Lantern still hasn't given a date, send them an SMS and email reminder. After three reminders, phone them (or pass the call to a colleague) and find another contractor from the panel. Once a date is confirmed, tell the tenant the time slot and contact details, update the landlord, and set the status to appointment booked. After the visit, ask for photos and the invoice (it should be no more than £108), then close.\n\n**Alternatives I didn't take:**\n- **Chasing Lantern now:** they replied less than a minute ago and said they'll confirm, so a reminder before 17 Sep would be premature.\n- **Sending the tenant an update now:** there's nothing new to tell her until a date is confirmed."
+  ]
+}

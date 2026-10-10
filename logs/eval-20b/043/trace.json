@@ -1,0 +1,370 @@
+{
+  "case_id": "043",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T11:52:12+00:00",
+  "finished_at": "2026-10-10T11:53:41+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 9873,
+    "cache_read_input_tokens": 109832,
+    "cache_creation_input_tokens": 16281
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 4799,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 424,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "landlord",
+      "summary": "Reply to Ava's approval: confirm that Oakfield Homes is instructed, that small fixes up to £250 go ahead and that anything bigger will be quoted to her first. This answers the system prompt at event 12 to respond to the landlord.",
+      "draft": "Address: Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ\n\nHi Ava,\n\nThank you for confirming. We have instructed our maintenance provider, Oakfield Homes, to contact the tenant and attend to look at the washing machine that isn't draining.\n\nIf it's a simple, low-cost fix (within the £250 pre-authorised limit) they will repair it on the visit. If it needs parts or turns out to be more involved, they will quote first and I will send you the quote to approve before any further work goes ahead.\n\nI'll keep you updated once the appointment is booked.\n\nKind regards,\nJenkins (covering for Theo)\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2026-04-15",
+      "follow_up_action": "Once Oakfield books, update Ava with the appointment. If Oakfield sends a quote over £250, forward it to Ava for approval and chase her after 3 working days."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "landlord",
+        "summary": "Reply to Ava's approval: confirm that Oakfield Homes is instructed, that small fixes up to £250 go ahead and that anything bigger will be quoted to her first. This answers the system prompt at event 12 to respond to the landlord.",
+        "draft": "Address: Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ\n\nHi Ava,\n\nThank you for confirming. We have instructed our maintenance provider, Oakfield Homes, to contact the tenant and attend to look at the washing machine that isn't draining.\n\nIf it's a simple, low-cost fix (within the £250 pre-authorised limit) they will repair it on the visit. If it needs parts or turns out to be more involved, they will quote first and I will send you the quote to approve before any further work goes ahead.\n\nI'll keep you updated once the appointment is booked.\n\nKind regards,\nJenkins (covering for Theo)\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2026-04-15",
+        "follow_up_action": "Once Oakfield books, update Ava with the appointment. If Oakfield sends a quote over £250, forward it to Ava for approval."
+      },
+      {
+        "channel": "email",
+        "to": "contractor",
+        "summary": "Email Oakfield Homes the correct tenant contact, because event 11 gave the wrong tenant's name and phone, and confirm the landlord's approval and the £250 limit.",
+        "draft": "Address: Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ\nRequest: Washing Machine Repair Request - not draining\n\nHello Oliver,\n\nTwo updates on this job:\n\n1. Correction to the tenant details: our earlier email gave the wrong tenant name and number by mistake. Please ignore those and delete them. The correct tenant contact for this property is:\nTenant: Isaac Quinn\nPhone: 07700 900844\n\n2. The landlord has now confirmed in writing that you can attend. If it's a simple, low-cost fix (up to £250 inc. VAT), please go ahead and repair it on the visit. If it needs parts or more work, please send us a quote with photos and an estimated completion time, and wait for our approval before you go ahead.\n\nRequest description: \"Washing machine not draining any water. Have manually drained by removing filter. Have also cleaned the filter. Still the drum is not draining.\"\n\nPlease book the appointment with the tenant as soon as possible. If you have already scheduled an appointment, reply with the date and time.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2026-04-15",
+        "follow_up_action": "If there is no booking, send Oakfield an SMS and email reminder. After 3 reminders, phone them and find another contractor from the panel."
+      },
+      {
+        "channel": "sms",
+        "to": "contractor",
+        "summary": "SMS to Oakfield Homes pointing them to the email and giving the correct tenant contact.",
+        "draft": "Hello, this is Northbridge Lettings! Please check your email about the property at Flat 8, 118 Meadow Row, ZZ3 6ZZ. The correct tenant contact is Isaac Quinn, 07700 900844. Please ignore the other details we sent earlier.",
+        "performed": true,
+        "follow_up_on": "2026-04-15",
+        "follow_up_action": "If there is no booking, send another SMS and email reminder."
+      },
+      {
+        "channel": "note",
+        "to": "agency",
+        "summary": "Internal note recording the late written approval, the tenant details clash, the possible data-protection issue and the Theo/Jenkins cover.",
+        "draft": "Event 14 review. (1) Landlord approval: Ava Rowan confirmed in writing 13/04 06:45. Oakfield Homes had already been instructed at 04:09–04:10, before her reply (event 11 said \"Landlord instruct...\" without written approval on file). Her reply now covers the instruction, within £250; anything over that has to be quoted and approved. (2) Conflict in tenant details: events 9/10 and the tenancy record say the tenant is Isaac Quinn, 07700 900844. Event 11 (to Oliver at Oakfield) said \"Grace Ashford, 07700 900641\", which looks pasted in from another case. We are going with Isaac Quinn: it matches the tenancy record and the original instruction. Correction sent to Oakfield by email and SMS, asking them to delete the wrong details. Possible minor personal-data disclosure (a third party's name and phone sent to a contractor). Property manager to decide if it needs logging under the data-protection process. (3) The landlord's email is addressed to Theo. Jenkins is covering, and the reply was signed as covering for Theo.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Set the case to provider assigned, on hold Waiting for Provider, with a chase date, and return it to auto mode.",
+        "draft": "Waiting for Provider: landlord approved 13/04, Oakfield Homes instructed (correct tenant contact resent). Chase Wed 15 Apr: SMS + email reminder to book with tenant, then call after 3 reminders. Back to auto mode.",
+        "performed": true,
+        "follow_up_on": "2026-04-15",
+        "follow_up_action": "Send Oakfield an SMS and email reminder to book with the tenant. After 3 reminders, phone them and find another contractor from the panel."
+      }
+    ],
+    "alternative_next_actions": [
+      "Return the request to auto mode without replying to Ava. This is weaker because she has just written in, the system asked whether she needs a response, and she should know the job is going ahead and how anything above £250 will be handled.",
+      "Escalate the tenant details clash to the property manager. This is weaker because the tenancy record and events 9/10 already settle that the tenant is Isaac Quinn, and a correction to the contractor fixes it. The data-protection question is recorded in the note instead.",
+      "Email Isaac Quinn again. This is weaker because he was already told at event 9 that Oakfield Homes will contact him, and nothing has changed for him."
+    ],
+    "case_summary": "Tenant Isaac Quinn at Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ reported on 6 April that the landlord's washing machine will not drain, even after he cleaned the filter and drained it by hand. The landlord, Ava Rowan, was asked to approve on 7 April and chased on 12 April. Oakfield Homes was instructed at 04:09 on 13 April, and Ava approved in writing at 06:45 that day. Oakfield's instruction at event 11 contained the wrong tenant name and phone number (Grace Ashford, 07700 900641).",
+    "issue_category": "appliance",
+    "urgency": "routine",
+    "decision": "in_progress",
+    "outcome": "The landlord has approved the job, Oakfield Homes is instructed with the correct tenant contact, and they can fix it on the visit if it costs up to £250 or must quote first if it costs more. The case is on hold Waiting for Provider, with a chase on 15 April 2026.",
+    "actions_taken": [
+      "Looked up the property (CASE-043, built from the case file): landlord Ava, £250 limit, landlord-preferred contractor Oakfield Homes.",
+      "Checked the repair history: no previous jobs.",
+      "Looked up the tenancy: active, tenant Isaac Quinn.",
+      "Created ticket TKT-833AD2 (appliance, routine).",
+      "Emailed Ava Rowan (landlord) to confirm Oakfield Homes is instructed and how the £250 limit and quotes will work (MSG-4A5725, delivered).",
+      "Emailed Oakfield Homes the correct tenant contact (Isaac Quinn, 07700 900844), asked them to delete the wrong details and confirmed the landlord's approval and £250 limit (MSG-17DA73, delivered).",
+      "Sent Oakfield Homes an SMS with the correct tenant contact (MSG-8D6395, delivered).",
+      "Recorded internal note NOTE-CAE143 on the tenant details clash, the possible data issue and the late written approval.",
+      "Set status to provider_assigned, Waiting for Provider, chase on Wed 15 Apr (STS-059AB6)."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Flat 8, 118 Meadow Row, ZZ3 6ZZ (ticket TKT-833AD2). Washing machine not draining; the landlord's appliance; routine. Landlord Ava Rowan approved in writing on 13 April at 06:45. Oakfield Homes (Oliver) is instructed to fix it if it costs up to £250 and to quote first if it costs more. The correct tenant is Isaac Quinn, 07700 900844. Event 11 wrongly sent Grace Ashford, 07700 900641, to Oakfield; this has been corrected and Oakfield asked to delete those details. The property manager may want to decide whether this needs logging as a data-protection issue; it does not block the job. Next: chase Oakfield on Wed 15 Apr if no booking. When they book, send Isaac the appointment confirmation by email and SMS. Any quote over £250 goes to Ava for approval."
+    },
+    "conflicts": [
+      {
+        "description": "Events 9/10 and the tenancy record say the tenant is Isaac Quinn, 07700 900844. Event 11 (the email to Oliver at Oakfield) says the tenant is Grace Ashford, 07700 900641.",
+        "how_resolved": "I trusted Isaac Quinn because he is in both the tenancy record and the original instruction; the Grace Ashford details look copied from another case. I sent Oakfield the correction by email and SMS, asked them to delete the wrong details, and noted a possible data-protection issue for the property manager."
+      },
+      {
+        "description": "Oakfield Homes was instructed at 04:09, and event 11 told them the landlord had instructed the repair, but Ava's written approval only arrived at 06:45.",
+        "how_resolved": "Ava's approval at event 13 now covers the instruction. Work is limited to £250 without a quote, and anything over that goes back to Ava. Recorded in the internal note."
+      },
+      {
+        "description": "Ava's email is addressed to Theo, but Jenkins is covering (event 6).",
+        "how_resolved": "Not material. The reply was signed by Jenkins as covering for Theo."
+      }
+    ],
+    "information_gaps": [
+      "We don't know the washing machine's age, make or warranty status, and the repair history is empty. I assumed no warranty applies; Oakfield should check on the visit.",
+      "Pets and access arrangements are unknown. The tenant was already asked at event 9 to tell the provider about any pets.",
+      "No appointment date yet. Waiting for Oakfield to book with the tenant."
+    ],
+    "assumptions": [
+      "The washing machine is supplied by the landlord, because the landlord was asked to approve and agreed.",
+      "Routine band: a washing machine is not an essential appliance, there is no safety risk and no vulnerability is recorded.",
+      "The default £250 limit applies because the landlord has no other instructions on file.",
+      "Today, 13 April 2026, is a Monday, so the provider chase after 2 working days falls on Wednesday 15 April 2026."
+    ],
+    "tenant_communication": "No new message at this moment. Isaac Quinn was told at event 9 that Oakfield Homes will contact him to arrange a visit or quote, and to mention any pets.",
+    "landlord_communication": "Ava Rowan was emailed thanks for her approval, confirmation that Oakfield Homes is instructed, and that fixes up to £250 go ahead on the visit while anything more will be quoted to her for approval first.",
+    "next_steps": [
+      "Wed 15 Apr 2026: if Oakfield has not booked, send them an SMS and email reminder. After 3 reminders, phone them and find another contractor from the panel.",
+      "When the appointment is booked, send Isaac Quinn the confirmation by email and SMS, and update Ava.",
+      "If Oakfield quotes over £250, send the quote to Ava for approval and hold Waiting for Landlord, chasing after 3 working days.",
+      "After the visit, get completion evidence (photos), the tenant's confirmation and the invoice. Check the invoice against the limit or quote, then close.",
+      "Property manager: decide whether the wrong tenant details sent to Oakfield need logging as a data-protection issue."
+    ],
+    "risk_flags": [
+      "Possible minor data-protection issue: another person's name and phone number (Grace Ashford, 07700 900641) were sent to Oakfield Homes at event 11. A correction was sent asking them to delete it.",
+      "The contractor was instructed before the landlord's written approval; this is now covered by her approval at event 13."
+    ],
+    "confidence": 0.85,
+    "reasoning": "The history ends with Ava's written approval and a system prompt asking whether she needs a response. Oakfield Homes, the landlord's preferred contractor, was already instructed, so the next step was not to source a contractor again. It was to acknowledge Ava, confirm the instruction and explain how the £250 limit and any quote will be handled. Checking the records showed that event 11 gave Oakfield the wrong tenant name and phone, which would stop them booking with the real tenant and also shared a third party's data. So the same moment includes a correction to Oakfield by email and SMS, plus an internal note. Under the policy, after a provider is instructed the case holds Waiting for Provider with a chase after 2 working days, which is Wed 15 Apr. This is a routine appliance fault within authority with no safety issue, so no escalation is needed, and Isaac was already told who is coming."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-043",
+        "address": "Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ",
+        "postcode": "ZZ3 6ZZ",
+        "case_title": "Case 043: Washing Machine Repair Request",
+        "case_created": "2026-04-06 07:31:34 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "Ava",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [
+          "Oakfield Homes",
+          "maintenance provider"
+        ],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 8, 118 Meadow Row"
+      },
+      "output": {
+        "property_id": "Flat 8, 118 Meadow Row",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 13,
+        "last_event": "2026-04-13 06:45:16 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "CASE-043"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-043",
+        "status": "active (assumed: the case was raised by/for a current occupier)",
+        "active_tenancy": {
+          "tenancy_id": "CASE-043",
+          "status": "active",
+          "tenants": [
+            {
+              "name": "Isaac Quinn",
+              "phone": "",
+              "email": "",
+              "contact": "via platform record (address messages by name)"
+            }
+          ],
+          "vulnerability_notes": "",
+          "access_notes": "see the case history for access arrangements and pets"
+        },
+        "note": "Tenancy inferred from the case file; verify end dates or vulnerabilities only if the case raises them."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "CASE-043"
+      },
+      "output": {
+        "property_id": "CASE-043",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 13,
+        "last_event": "2026-04-13 06:45:16 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "CASE-043",
+        "title": "Washing Machine Repair Request - not draining",
+        "category": "appliance",
+        "urgency": "routine",
+        "description": "Tenant (Isaac Quinn) reported 06/04: \"Washing machine not draining any water. Have manually drained by removing filter. Have also cleaned the filter. Still the drum is not draining.\" Landlord-supplied appliance, routine band (no safety issue, no vulnerability noted). Approval email to landlord Ava 07/04, SMS chase 12/04. Oakfield Homes (landlord-preferred) instructed 13/04 04:09 before written approval; landlord Ava Rowan approved in writing 13/04 06:45 (\"Yes, that is fine to send out a contractor\"). Spend limit £250: fix if simple and cheap, otherwise quote for landlord approval. No previous repairs on record, no warranty indicated.",
+        "reported_by": "Isaac Quinn (tenant)"
+      },
+      "output": {
+        "ticket_id": "TKT-833AD2",
+        "property_id": "CASE-043",
+        "property_ref": "case file (not in local database)",
+        "title": "Washing Machine Repair Request - not draining",
+        "category": "appliance",
+        "urgency": "routine",
+        "description": "Tenant (Isaac Quinn) reported 06/04: \"Washing machine not draining any water. Have manually drained by removing filter. Have also cleaned the filter. Still the drum is not draining.\" Landlord-supplied appliance, routine band (no safety issue, no vulnerability noted). Approval email to landlord Ava 07/04, SMS chase 12/04. Oakfield Homes (landlord-preferred) instructed 13/04 04:09 before written approval; landlord Ava Rowan approved in writing 13/04 06:45 (\"Yes, that is fine to send out a contractor\"). Spend limit £250: fix if simple and cheap, otherwise quote for landlord approval. No previous repairs on record, no warranty indicated.",
+        "reported_by": "Isaac Quinn (tenant)",
+        "status": "open",
+        "created_at": "2026-10-10T12:52:32"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "landlord",
+        "recipient": "Ava Rowan (landlord)",
+        "channel": "email",
+        "body": "Address: Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ\n\nHi Ava,\n\nThank you for confirming. We have instructed our maintenance provider, Oakfield Homes, to contact the tenant and attend to look at the washing machine that isn't draining.\n\nIf it's a simple, low-cost fix (within the £250 pre-authorised limit) they will repair it on the visit. If it needs parts or turns out to be more involved, they will quote first and I will send you the quote to approve before any further work goes ahead.\n\nI'll keep you updated once the appointment is booked.\n\nKind regards,\nJenkins (covering for Theo)\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-4A5725",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Oakfield Homes",
+        "channel": "email",
+        "body": "Address: Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ\nRequest: Washing Machine Repair Request - not draining\n\nHello Oliver,\n\nTwo updates on this job:\n\n1. Correction to the tenant details: our earlier email gave the wrong tenant name and number by mistake. Please ignore those and delete them. The correct tenant contact for this property is:\nTenant: Isaac Quinn\nPhone: 07700 900844\n\n2. The landlord has now confirmed in writing that you can attend. If it's a simple, low-cost fix (up to £250 inc. VAT), please go ahead and repair it on the visit. If it needs parts or more work, please send us a quote with photos and an estimated completion time, and wait for our approval before you go ahead.\n\nRequest description: \"Washing machine not draining any water. Have manually drained by removing filter. Have also cleaned the filter. Still the drum is not draining.\"\n\nPlease book the appointment with the tenant as soon as possible. If you have already scheduled an appointment, reply with the date and time.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-17DA73",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "contractor",
+        "recipient": "Oakfield Homes",
+        "channel": "sms",
+        "body": "Hello, this is Northbridge Lettings! Please check your email about the property at Flat 8, 118 Meadow Row, ZZ3 6ZZ. The correct tenant contact is Isaac Quinn, 07700 900844. Please ignore the other details we sent earlier."
+      },
+      "output": {
+        "message_id": "MSG-8D6395",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "TKT-833AD2",
+        "note": "Event 14 review. (1) Landlord approval: Ava Rowan confirmed in writing 13/04 06:45. Oakfield Homes had already been instructed at 04:09–04:10, before her reply (event 11 said \"Landlord instruct...\" without written approval on file). Her reply now covers the instruction, within £250; anything over that has to be quoted and approved. (2) Conflict in tenant details: events 9/10 and the tenancy record say the tenant is Isaac Quinn, 07700 900844. Event 11 (to Oliver at Oakfield) said \"Grace Ashford, 07700 900641\", which looks pasted in from another case. We are going with Isaac Quinn: it matches the tenancy record and the original instruction. Correction sent to Oakfield by email and SMS, asking them to delete the wrong details. Possible minor personal-data disclosure (a third party's name and phone sent to a contractor). Property manager to decide if it needs logging under the data-protection process. (3) The landlord's email is addressed to Theo. Jenkins is covering, and the reply was signed as covering for Theo."
+      },
+      "output": {
+        "note_id": "NOTE-CAE143",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "TKT-833AD2",
+        "status": "provider_assigned",
+        "comment": "Waiting for Provider: landlord approved 13/04, Oakfield Homes instructed (correct tenant contact resent). Chase Wed 15 Apr: SMS + email reminder to book with tenant, then call after 3 reminders. Back to auto mode."
+      },
+      "output": {
+        "status_id": "STS-059AB6",
+        "status": "provider_assigned",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Ava (the landlord) said yes to sending a contractor, and Oakfield Homes was already instructed, so I replied to her, fixed a wrong tenant contact we'd sent Oakfield, and put the case on hold waiting for them to book.\n\n- **Tenant details clash:** event 11 gave Oliver at Oakfield \"Grace Ashford, 07700 900641\". Events 9 and 10 and the tenancy record both say the tenant is Isaac Quinn, 07700 900844, so I went with Isaac. The other name and number look copied from another case. That means someone else's personal data went to a contractor, so the property manager should decide whether it needs logging as a data-protection issue.\n- **Order of events:** Oakfield was instructed (04:09) about two and a half hours before Ava approved in writing (06:45). Her reply now covers the job up to the £250 limit; anything above that needs a quote first.\n- **No ticket existed yet,** so I opened one: TKT-833AD2, appliance, routine (it's the landlord's machine and there's no safety issue).\n- **No message to the tenant:** Isaac was already told at event 9 that Oakfield is coming.\n\nActions taken at event 14, primary first:\n\n1. **PRIMARY – Email to Ava Rowan (landlord), MSG-4A5725, delivered:** \"Address: Flat 8, 118 Meadow Row, Alderwick, ZZ3 6ZZ. Hi Ava, Thank you for confirming. We have instructed our maintenance provider, Oakfield Homes, to contact the tenant and attend to look at the washing machine that isn't draining. If it's a simple, low-cost fix (within the £250 pre-authorised limit) they will repair it on the visit. If it needs parts or turns out to be more involved, they will quote first and I will send you the quote to approve before any further work goes ahead. I'll keep you updated once the appointment is booked. Kind regards, Jenkins (covering for Theo), Northbridge Lettings\"\n2. **Email to Oakfield Homes (Oliver), MSG-17DA73, delivered:** says the earlier tenant details were wrong and asks him to delete them. Gives the correct contact (Isaac Quinn, 07700 900844). Confirms the landlord has approved in writing: repair it if it's under £250, otherwise send a quote with photos and an estimated completion time and wait for approval. Includes the tenant's description of the fault and asks him to book with the tenant as soon as possible, or reply with the date and time if already booked.\n3. **SMS to Oakfield Homes, MSG-8D6395, delivered:** \"Hello, this is Northbridge Lettings! Please check your email about the property at Flat 8, 118 Meadow Row, ZZ3 6ZZ. The correct tenant contact is Isaac Quinn, 07700 900844. Please ignore the other details we sent earlier.\"\n4. **Internal note on TKT-833AD2, NOTE-CAE143:** records that the job was instructed before approval and is now covered, the tenant details clash and the possible data issue, and that Ava's email was addressed to Theo while Jenkins covers.\n5. **Status set to provider_assigned (STS-059AB6):** \"Waiting for Provider: landlord approved 13/04, Oakfield Homes instructed (correct tenant contact resent). Chase Wed 15 Apr: SMS + email reminder to book with tenant, then call after 3 reminders. Back to auto mode.\"\n\n**Follow-up on:** Wednesday 15 April 2026.\n**Follow-up action:** if Oakfield hasn't booked, send an SMS and email reminder. After 3 reminders with no booking, phone them and find another contractor from the panel. Once they book, send the appointment confirmation to Isaac by email and SMS. If they send a quote over £250, forward it to Ava for approval.\n\n**Alternative I didn't take:** escalating the tenant details clash to the property manager. It's weaker because the tenancy record settles who the tenant is and the fix only needed a correction to Oakfield. The data-protection question is in the note for the manager instead."
+  ]
+}

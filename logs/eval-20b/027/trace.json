@@ -1,0 +1,217 @@
+{
+  "case_id": "027",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 3,
+  "started_at": "2026-10-10T11:50:36+00:00",
+  "finished_at": "2026-10-10T11:51:36+00:00",
+  "usage": {
+    "input_tokens": 12,
+    "output_tokens": 5677,
+    "cache_read_input_tokens": 56442,
+    "cache_creation_input_tokens": 9728
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 3593,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 548,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "next_action": {
+      "channel": "email",
+      "to": "tenant",
+      "summary": "Acknowledge the tenant's non-maintenance question about registering for a garage parking space, tell them it has gone to the property manager, and confirm the closed drain job stays closed.",
+      "draft": "Job Id: NBL-027-8010\nAddress: Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ\n\nHi there,\n\nThank you for your email about registering for a parking space in the garage.\n\nThis mailbox handles maintenance requests, so I have passed your question to your property manager. They will come back to you about whether you need to register, and how to do it. You don't need to do anything else for now.\n\nWe are glad the bath drain is clear now. That maintenance request (NBL-027-8010) stays closed. If the drain blocks again, or anything else needs repairing, please send us a new maintenance request.\n\nKind regards,\nNorthbridge Lettings",
+      "performed": true,
+      "follow_up_on": "2026-05-13",
+      "follow_up_action": "Check that the property manager has replied to the tenant about garage parking; if not, chase the property manager."
+    },
+    "next_actions": [
+      {
+        "channel": "email",
+        "to": "tenant",
+        "summary": "Acknowledge the tenant's non-maintenance question about registering for a garage parking space, tell them it has gone to the property manager, and confirm the closed drain job stays closed.",
+        "draft": "Job Id: NBL-027-8010\nAddress: Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ\n\nHi there,\n\nThank you for your email about registering for a parking space in the garage.\n\nThis mailbox handles maintenance requests, so I have passed your question to your property manager. They will come back to you about whether you need to register, and how to do it. You don't need to do anything else for now.\n\nWe are glad the bath drain is clear now. That maintenance request (NBL-027-8010) stays closed. If the drain blocks again, or anything else needs repairing, please send us a new maintenance request.\n\nKind regards,\nNorthbridge Lettings",
+        "performed": true,
+        "follow_up_on": "2026-05-13",
+        "follow_up_action": "Check that the property manager has replied to the tenant about garage parking; if not, chase the property manager."
+      },
+      {
+        "channel": "escalate",
+        "to": "property_manager",
+        "summary": "Pass the out-of-scope garage parking question to the property manager (low severity) so they can reply to the tenant.",
+        "draft": "Property: Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ (record built from the case file; landlord not named; no other cases at this address).\nFacts: On 9 May 2026 at 11:20 the tenant emailed about job NBL-027-8010. That job was a blocked bath drain. It was resolved on 28 Apr when the tenant cleared it with a plunger, and closed on 2 May as \"Resolved following instructions. No contractor required.\" The new email asks whether they need to register for a parking space in the garage. This is not a repair, so maintenance does not handle it.\nDone: I emailed the tenant to say their question has gone to the property manager and that the drain job stays closed. I did not reopen the maintenance job, book a contractor or spend anything.\nFor you: Reply to the tenant about garage parking: whether they need to register, how to do it, and whether the tenancy or the building management covers this. Please answer within 3 working days (by Wed 13 May 2026). The tenant has been told someone will come back to them.\nNo maintenance action is needed.",
+        "performed": true,
+        "follow_up_on": "2026-05-13",
+        "follow_up_action": "If the tenant has had no reply about parking, chase the property manager."
+      },
+      {
+        "channel": "status_update",
+        "to": "agency",
+        "summary": "Keep the maintenance job closed with no action and note on the dashboard that the parking question went to the property manager.",
+        "draft": "Drain fixed by tenant with plunger, no contractor or cost. Tenant's 9 May email is a garage parking question, not a repair: tenant told it's been passed on, sent to property manager to reply by Wed 13 May. Maintenance job stays closed.",
+        "performed": true,
+        "follow_up_on": "",
+        "follow_up_action": ""
+      }
+    ],
+    "alternative_next_actions": [
+      "Reopen the drain job and contact the tenant to check on the drain: weaker because the tenant reported nothing wrong with the drain, so this would be pointless work.",
+      "Answer the parking question directly: weaker because nothing in the case file covers garage or parking rules, so any answer would be a guess; the property manager should give it.",
+      "Leave the case closed without replying: weaker because the policy does not allow closing silently, and the tenant would get no answer."
+    ],
+    "case_summary": "The tenant of Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ reported a slow-draining bath/shower on 17 Apr 2026. They were advised to try a plunger and drain cleaner, cleared the blockage themselves on 28 Apr, and the job (NBL-027-8010) was closed on 2 May with no contractor and no cost. On 9 May the tenant emailed again, this time asking whether they need to register for a garage parking space, which is not a maintenance matter.",
+    "issue_category": "not-a-repair",
+    "urgency": "not_a_repair",
+    "decision": "escalated",
+    "outcome": "The drain job stays closed with no action and no cost. The tenant's parking question has been acknowledged and passed to the property manager, who should reply by 13 May 2026.",
+    "actions_taken": [
+      "Looked up the property (CASE-027, record built from the case file; landlord not named; spend limit £250).",
+      "Checked repair history: no other jobs or cases at this address.",
+      "Emailed the tenant to acknowledge the parking question, say it has gone to the property manager, and confirm the drain job stays closed (MSG-3C79B0, delivered).",
+      "Escalated the parking question to the property manager at low severity, reply needed by 13 May 2026 (ESC-ADA0CD, queued).",
+      "Set the case status to closed_no_action with a dashboard comment (STS-078C28)."
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": true,
+      "to": "property manager",
+      "reason": "The tenant has asked a non-maintenance question (whether they need to register for a garage parking space), which falls outside maintenance and needs an answer from the property manager.",
+      "handover": "Property: Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ (record built from the case file; landlord not named; no other cases at this address). Job NBL-027-8010 (blocked bath drain) was resolved by the tenant with a plunger on 28 Apr and closed on 2 May with no contractor and no cost. On 9 May 2026 at 11:20 the tenant emailed asking whether they need to register for a parking space in the garage. The tenant has been emailed to say the question has gone to the property manager; the maintenance job stays closed and nothing has been spent. For you: reply to the tenant on whether they need to register, how to do it, and whether the tenancy or the building management covers garage parking. Please reply by Wed 13 May 2026. No maintenance action is needed."
+    },
+    "conflicts": [],
+    "information_gaps": [
+      "The tenant's email is only a summary ('The customer is inquiring about the need to register for a parking space in the garage'); the full wording is not available. Handled by passing it to the property manager.",
+      "There is nothing in the case file about garage or parking rules, or the tenancy terms on parking, so the agent cannot answer; this is left to the property manager.",
+      "The landlord is not named and the tenant's name is missing from the case file; messages were addressed by role through the platform contact records."
+    ],
+    "assumptions": [
+      "The 9 May email is only about parking and does not report that the drain has blocked again.",
+      "Garage parking registration is handled by the property manager or building management, not by maintenance."
+    ],
+    "tenant_communication": "Emailed on 9 May 2026: their garage parking question has been passed to the property manager, who will reply; the drain job stays closed; they should send a new maintenance request if the drain blocks again or anything else needs repairing.",
+    "landlord_communication": "none",
+    "next_steps": [
+      "13 May 2026: check that the property manager has replied to the tenant about parking; if not, chase the property manager.",
+      "Open a new maintenance job only if the tenant reports a new fault."
+    ],
+    "risk_flags": [],
+    "confidence": 0.85,
+    "reasoning": "The drain job was already resolved: the tenant cleared it themselves, no contractor was used and nothing was spent. The new email asks about registering for garage parking, which is not a repair. Policy section 11 says out-of-scope requests should be recorded, acknowledged to the sender and escalated to the right owner, and section 8 lists tenant questions outside maintenance as a reason to escalate. Policy also says a case is never closed silently. So the right moment-12 bundle is: acknowledge the tenant by email, escalate to the property manager at low severity with a reply-by date, and keep the maintenance job closed with no action. No contractor, landlord approval or spend was needed, and there are no safety or vulnerability issues."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ"
+      },
+      "output": {
+        "found": true,
+        "source": "case file",
+        "property_id": "CASE-027",
+        "address": "Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ",
+        "postcode": "ZZ2 3ZZ",
+        "case_title": "Case 027: Blocked Bath Drain Request",
+        "case_created": "2026-04-17 14:15:59 UTC",
+        "reported_by_role": "Tenant",
+        "landlord_name": "not named yet in the case file (address messages to 'Landlord')",
+        "landlord_instructions": "none on file; follow the standard landlord approval step",
+        "spend_limit_gbp": 250,
+        "preferred_contractors": [],
+        "agency_staff_on_case": [],
+        "note": "Record built from the case file (names as they appear in it). The platform holds contact details: address messages by name or role."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 10, 30 Copperfield Walk"
+      },
+      "output": {
+        "property_id": "Flat 10, 30 Copperfield Walk",
+        "jobs": [],
+        "other_cases_at_this_address": [],
+        "events_in_this_case": 11,
+        "last_event": "2026-05-09 11:20:57 UTC",
+        "note": "No other cases at this address in the batch; the history inside this case file is the full record."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "send_message",
+      "input": {
+        "recipient_type": "tenant",
+        "recipient": "Tenant, Flat 10, 30 Copperfield Walk",
+        "channel": "email",
+        "body": "Job Id: NBL-027-8010\nAddress: Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ\n\nHi there,\n\nThank you for your email about registering for a parking space in the garage.\n\nThis mailbox handles maintenance requests, so I have passed your question to your property manager. They will come back to you about whether you need to register, and how to do it. You don't need to do anything else for now.\n\nWe are glad the bath drain is clear now. That maintenance request (NBL-027-8010) stays closed. If the drain blocks again, or anything else needs repairing, please send us a new maintenance request.\n\nKind regards,\nNorthbridge Lettings"
+      },
+      "output": {
+        "message_id": "MSG-3C79B0",
+        "status": "delivered",
+        "via": "platform contact record"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "NBL-027-8010",
+        "severity": "low",
+        "to": "property_manager",
+        "reason": "Tenant has a non-maintenance question (garage parking space registration) on a closed maintenance job",
+        "handover": "Property: Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ (record built from the case file; landlord not named; no other cases at this address).\nFacts: On 9 May 2026 at 11:20 the tenant emailed about job NBL-027-8010. That job was a blocked bath drain. It was resolved on 28 Apr when the tenant cleared it with a plunger, and closed on 2 May as \"Resolved following instructions. No contractor required.\" The new email asks whether they need to register for a parking space in the garage. This is not a repair, so maintenance does not handle it.\nDone: I emailed the tenant to say their question has gone to the property manager and that the drain job stays closed. I did not reopen the maintenance job, book a contractor or spend anything.\nFor you: Reply to the tenant about garage parking: whether they need to register, how to do it, and whether the tenancy or the building management covers this. Please answer within 3 working days (by Wed 13 May 2026). The tenant has been told someone will come back to them.\nNo maintenance action is needed."
+      },
+      "output": {
+        "escalation_id": "ESC-ADA0CD",
+        "status": "queued",
+        "to": "property_manager",
+        "severity": "low"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "NBL-027-8010",
+        "status": "closed_no_action",
+        "comment": "Drain fixed by tenant with plunger, no contractor or cost. Tenant's 9 May email is a garage parking question, not a repair: tenant told it's been passed on, sent to property manager to reply by Wed 13 May. Maintenance job stays closed."
+      },
+      "output": {
+        "status_id": "STS-078C28",
+        "status": "closed_no_action",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "The tenant's new email is about registering for a garage parking space, which isn't a repair. I've acknowledged it, passed it to the property manager and kept the drain job closed.\n\n**Where the case stood:** The blocked bath drain (NBL-027-8010) was cleared by the tenant with a plunger on 28 Apr. It was closed on 2 May with no contractor and no cost. The new email asks only about parking. The records check found no other cases or jobs at this address, so there's nothing else to act on here.\n\n**Next actions (event 12), primary first:**\n\n1. **Primary – email to the tenant (delivered, MSG-3C79B0):**\n   > Job Id: NBL-027-8010\n   > Address: Flat 10, 30 Copperfield Walk, Willowbank, ZZ2 3ZZ\n   >\n   > Hi there,\n   >\n   > Thank you for your email about registering for a parking space in the garage.\n   >\n   > This mailbox handles maintenance requests, so I have passed your question to your property manager. They will come back to you about whether you need to register, and how to do it. You don't need to do anything else for now.\n   >\n   > We are glad the bath drain is clear now. That maintenance request (NBL-027-8010) stays closed. If the drain blocks again, or anything else needs repairing, please send us a new maintenance request.\n   >\n   > Kind regards,\n   > Northbridge Lettings\n\n2. **Escalation to the property manager (low severity, ESC-ADA0CD):** asks them to answer the tenant's parking question by Wed 13 May 2026 (3 working days). The handover covers the case history, that the tenant has been told someone will reply, and that no maintenance action is needed.\n\n3. **Status set to \"closed, no action\" (STS-078C28):**\n   > Drain fixed by tenant with plunger, no contractor or cost. Tenant's 9 May email is a garage parking question, not a repair: tenant told it's been passed on, sent to property manager to reply by Wed 13 May. Maintenance job stays closed.\n\n**Follow-up:** On Wed 13 May 2026, check that the property manager has replied to the tenant. If not, chase them. Only reopen maintenance if the tenant reports a new fault.\n\n**Options I rejected:**\n- *Reopening the drain job or sending a contractor:* the tenant reported nothing wrong.\n- *Answering the parking question myself:* there's nothing about parking rules in the file, so I'd be guessing.\n- *Closing without replying:* the policy doesn't allow closing without telling the person who wrote in.\n\nActions taken, primary first:\nEmailed the tenant to acknowledge the garage parking question, say it has gone to the property manager, and confirm the drain job stays closed (MSG-3C79B0, delivered).\nEscalated the parking question to the property manager at low severity, reply needed by Wed 13 May 2026 (ESC-ADA0CD).\nSet the case status to closed, no action, with the parking routing noted (STS-078C28)."
+  ]
+}
