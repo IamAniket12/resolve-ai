@@ -37,6 +37,13 @@ def answer_md(r: CaseResult) -> str:
         f"**Confidence:** {x.confidence:.2f}  ",
         f"**Processing status:** {r.status}" + (f" ({r.error})" if r.error else ""),
         "",
+        "## Next action (event n+1)",
+        f"**{x.next_action.channel.replace('_', ' ')} → {x.next_action.to}** — {x.next_action.summary}",
+        "",
+        *([ "> " + line for line in x.next_action.draft.strip().splitlines()] + [""] if x.next_action.draft.strip() else []),
+        f"Performed in this run: {'yes' if x.next_action.performed else 'no (recommended)'}",
+        "",
+        *(["Other defensible next actions:", _bullets(x.alternative_next_actions), ""] if x.alternative_next_actions else []),
         "## Summary",
         x.case_summary,
         "",
@@ -160,6 +167,7 @@ def run_summary(results: List[CaseResult]) -> str:
         "## Run summary",
         "",
         f"- Cases: {n}; answered by the agent: {done}; fallback answers (crash/timeout): {n - done}",
+        "- Next actions: " + ", ".join(f"{k} {v}" for k, v in Counter(f"{r.resolution.next_action.channel}→{r.resolution.next_action.to}" for r in results).most_common()),
         "- Decisions: " + ", ".join(f"{k} {v}" for k, v in dec.most_common()),
         "- Urgency: " + ", ".join(f"{k} {v}" for k, v in urg.most_common()),
         f"- Escalated to a human: {esc} of {n} ({100 * esc / n:.0f}%), each with a written handover",
@@ -175,8 +183,9 @@ def run_summary(results: List[CaseResult]) -> str:
 
 
 def write_index(results: List[CaseResult], answers_dir: Path) -> None:
-    rows = ["| Case | Status | Decision | Urgency | Escalated | Confidence |", "|---|---|---|---|---|---|"]
+    rows = ["| Case | Status | Next action | Decision | Urgency | Escalated | Confidence |", "|---|---|---|---|---|---|---|"]
     for r in sorted(results, key=lambda r: r.case_id):
         x = r.resolution
-        rows.append(f"| [{r.case_id}]({r.case_id}/ANSWER.md) | {r.status} | {x.decision} | {x.urgency} | {'yes' if x.escalation.required else 'no'} | {x.confidence:.2f} |")
+        na = f"{x.next_action.channel} → {x.next_action.to}"
+        rows.append(f"| [{r.case_id}]({r.case_id}/ANSWER.md) | {r.status} | {na} | {x.decision} | {x.urgency} | {'yes' if x.escalation.required else 'no'} | {x.confidence:.2f} |")
     (answers_dir / "INDEX.md").write_text("# Answers index\n\n" + run_summary(results) + "\n" + "\n".join(rows) + "\n", encoding="utf-8")

@@ -335,7 +335,21 @@ class MockLLM(LLM):
         gaps = [] if res.get("lookup_property") and res["lookup_property"][-1]["ok"] else ["Property could not be verified from the material"]
         if cls.get("ambiguous"):
             gaps.append("Whether the kitchen hot tap is also cold - decides electric shower (electrician) vs boiler (Gas Safe engineer)")
+        na = {"channel": "no_action", "to": "none", "summary": "No action identified.", "draft": "", "performed": False}
+        order = [("escalate_to_human", "escalate", "property_manager"), ("schedule_contractor", "book_appointment", "contractor"),
+                 ("request_landlord_approval", "request_approval", "landlord"), ("send_message", None, None), ("update_case_status", "status_update", "agency")]
+        for name, ch, to in order:
+            hits = [r for r in res.get(name, []) if r["ok"]]
+            if hits:
+                h = hits[0]
+                if name == "send_message":
+                    ch = "email" if h["input"].get("channel") == "email" else ("sms" if h["input"].get("channel") in {"sms", "whatsapp"} else "note")
+                    to = h["input"].get("recipient_type", "tenant")
+                na = {"channel": ch, "to": to, "summary": f"{name.replace('_', ' ')} as the next step", "draft": str(h["input"].get("body") or h["input"].get("reason") or h["input"].get("comment") or "")[:600], "performed": True}
+                break
         return {
+            "next_action": na,
+            "alternative_next_actions": [],
             "case_summary": f"Reported {cls['category']} issue at {prop.get('address', 'unverified property')}. Urgency assessed as {cls['urgency']}." + (f" Evidence: \"{cls['evidence']}\"" if cls.get("evidence") else "") + (f" Vulnerability: {vuln_note}" if vuln_note else ""),
             "issue_category": cls["category"],
             "urgency": cls["urgency"] if cls["urgency"] in {"emergency", "urgent", "routine"} else "unclear",

@@ -141,6 +141,7 @@ def fallback_result(bundle: CaseBundle, error: str, events: Optional[List[ToolEv
     done = [f"{e.name}({json.dumps(e.input)[:120]})" for e in events if e.ok]
     failed = [f"{e.name}: {e.error}" for e in events if not e.ok]
     res = Resolution(
+        next_action={"channel": "escalate", "to": "property_manager", "summary": "Hand the case to a person: the automated run could not complete.", "draft": "", "performed": False},
         case_summary=f"Case {bundle.case_id}: automated processing did not complete ({error[:200]}). Files received: {', '.join(a.name for a in bundle.attachments) or 'none'}.",
         issue_category="unclear", urgency="unclear", decision="escalated",
         outcome="Not resolved autonomously. Escalated to the property manager with the partial trace so no case is dropped.",

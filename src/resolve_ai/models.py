@@ -34,6 +34,14 @@ class CaseBundle:
             for a in self.attachments
         ]
 
+    def event_count(self) -> int:
+        """Number of history events in the material (the 'n' of the n+1 task), 0 if the format has none."""
+        import re
+        n = 0
+        for a in self.attachments:
+            n = max(n, len(re.findall(r'<a id="event-(\d+)"></a>', a.text or "")))
+        return n
+
     def as_of(self) -> str:
         """The case's own 'now': the latest timestamp found in the material (histories are dated, not today)."""
         import re
@@ -84,8 +92,20 @@ class Conflict(BaseModel):
     how_resolved: str = Field(description="Which source was trusted and why, or 'unresolved - escalated'.")
 
 
+class NextAction(BaseModel):
+    """The single next action (event n+1) the agency should take now. This is what the case is judged on."""
+    model_config = ConfigDict(extra="forbid")
+    channel: Literal["email", "sms", "call", "note", "hold", "status_update", "escalate", "book_appointment", "request_approval", "no_action"]
+    to: Literal["tenant", "landlord", "contractor", "property_manager", "agency", "none"]
+    summary: str = Field(description="One sentence: what the action is and why it is the right next step now.")
+    draft: str = Field(default="", description="The message text, hold comment or note exactly as it would be sent or recorded. Empty for no_action.")
+    performed: bool = Field(default=False, description="True if this action was carried out via a tool in this run.")
+
+
 class Resolution(BaseModel):
     model_config = ConfigDict(extra="forbid")
+    next_action: NextAction = Field(default_factory=lambda: NextAction(channel="no_action", to="none", summary="not set"))
+    alternative_next_actions: List[str] = Field(default_factory=list, description="Other defensible next actions, each in one line, best first.")
     case_summary: str = Field(description="2-4 sentences: who reported what, about which property, and what matters.")
     issue_category: str = Field(description="e.g. heating/boiler, plumbing/leak, electrical, gas, damp/mould, pests, appliance, security/locks, structural, not-a-repair, unclear")
     urgency: Literal["emergency", "urgent", "routine", "not_a_repair", "unclear"]

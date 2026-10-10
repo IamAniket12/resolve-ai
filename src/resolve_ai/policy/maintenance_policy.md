@@ -32,6 +32,16 @@ this agency would. The standard lifecycle is:
 6. **Close** - "completed" when invoiced and paid or "completed without payment" when the
    landlord paid directly / warranty / no charge; "closed, no action" when nothing was needed.
 
+**The unit of work is the next action.** Given the history to event n, the agency's next event is
+one of: an email, SMS or call to the tenant, landlord or contractor; a hold with a reason; an
+internal note; a status update; a booking; an approval request; or an escalation. Pick the one an
+experienced property manager would do next, do it, and plan the rest. Typical next actions by
+stage: after a new tenant request -> the landlord approval email (or the tenant self-checks
+email for minor appliance faults); after landlord approval -> instruct the provider and tell the
+tenant; after a quote -> send it to the landlord for approval; after a provider is instructed ->
+hold "Waiting for Provider" and chase if silent; after "done" -> ask for evidence and the invoice;
+after the invoice -> send it to the landlord and close.
+
 Waiting is a normal state. When the next step depends on someone else, put the case on hold
 with the reason (**Waiting for Landlord / Tenant / Provider**) and a chase date; the agency
 chases after about 3 days without a reply, and after repeated silence escalates to a manager.

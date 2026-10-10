@@ -33,6 +33,8 @@ def main() -> None:
     a = ap.parse_args()
     total = hits = 0
     flags = []
+    n1_total = n1_channel = n1_to = 0
+    CH = {"email": "email", "sms": "sms", "call": "call", "note": "note", "hold": "hold", "update": "status_update"}
     for tr in sorted(Path("logs", a.run_id).glob("*/trace.json")):
         t = json.loads(tr.read_text())
         cid = t["case_id"]
@@ -54,6 +56,17 @@ def main() -> None:
         total += len(real_parties)
         hits += len(overlap)
         st = next((e["input"] for e in reversed(t["tool_events"]) if e["name"] == "update_case_status" and e["ok"]), {})
+        # n+1: the next event the AGENCY took (skipping automated system Updates), vs the agent's declared next_action
+        real_n1 = next((m for m in tail if m["ch"] != "Update" and (m["frm"].lower().startswith(("agency", "northbridge", "juniper", "cedar", "harbour", "lantern", "oakfield")) or m["ch"] == "Hold")), None)
+        na = r.get("next_action") or {}
+        if real_n1 is not None and na:
+            n1_total += 1
+            rch = CH.get(real_n1["ch"].strip().lower(), real_n1["ch"].lower())
+            rto = role(real_n1["to"]) if real_n1["ch"] in {"Email", "SMS", "Call"} else "agency"
+            ch_ok = (na.get("channel") == rch) or (rch == "hold" and na.get("channel") in {"hold", "status_update"}) or (rch == "note" and na.get("channel") in {"note", "status_update"})
+            to_ok = (na.get("to") == rto) or (rto == "agency" and na.get("to") in {"agency", "none"})
+            n1_channel += ch_ok; n1_to += to_ok
+            print(f"   n+1 agent: {na.get('channel')} → {na.get('to')} | real: {real_n1['ch']} → {real_n1['to']} :: {re.sub(r'\s+', ' ', real_n1['body'])[:110]}  [{'ch ok' if ch_ok else 'ch X'} / {'to ok' if to_ok else 'to X'}]")
         print(f"== {cid}: agent {r['decision']} / status {st.get('status', '-')} | contacted {sorted(agent_parties)} | real next contacted {sorted(real_parties)} | overlap {sorted(overlap)}")
         if r["escalation"]["required"] and not real_escalated:
             flags.append(f"{cid}: agent escalated, real team did not (reason: {r['escalation']['reason'][:120]})")
@@ -61,7 +74,8 @@ def main() -> None:
             flags.append(f"{cid}: agent booked a contractor; real team had not booked within the next {a.next} events")
         if real_parties and not overlap:
             flags.append(f"{cid}: agent contacted nobody the real team contacted next")
-    print(f"\nparties overlap: {hits}/{total}")
+    print(f"\nn+1 match: channel {n1_channel}/{n1_total}, recipient {n1_to}/{n1_total}")
+    print(f"parties overlap within next {a.next} events: {hits}/{total}")
     print("flags:" if flags else "flags: none")
     for f in flags:
         print(" -", f)
