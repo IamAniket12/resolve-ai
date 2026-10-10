@@ -10,7 +10,7 @@ keeps the tenant and landlord informed — and stops to involve a human when it
 should (gas, electrics, approvals, conflicting records).
 
 Built with Claude and ElevenLabs. Open source, Apache 2.0:
-<REPO_URL>
+https://github.com/IamAniket12/resolve-ai
 
 Thanks to Dwelly, Anthropic, ElevenLabs, General Catalyst and EQT.
 #AIAgents #PropTech #Hackathon
@@ -18,4 +18,4 @@ Thanks to Dwelly, Anthropic, ElevenLabs, General Catalyst and EQT.
 ## X
 Built Resolve AI at @dwelly's Real-World Agents Hackathon: a maintenance agent that
 takes "my boiler's dead" to a booked contractor, and knows when to escalate to a
-human. Claude + ElevenLabs. Open source: <REPO_URL>
+human. Claude + ElevenLabs. Open source: https://github.com/IamAniket12/resolve-ai

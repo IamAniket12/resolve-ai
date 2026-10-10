@@ -68,7 +68,7 @@ Design choices that matter for the Reality Test:
 Prerequisites: Python 3.10+, git. (ffmpeg only if you want to convert audio locally.)
 
 ```bash
-git clone <REPO_URL> && cd <repo>
+git clone https://github.com/IamAniket12/resolve-ai && cd <repo>
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 cp .env.example .env            # add ANTHROPIC_API_KEY (and ELEVENLABS_API_KEY for voice)
