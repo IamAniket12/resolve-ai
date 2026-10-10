@@ -101,7 +101,9 @@ class MockBackend:
     def lookup_tenancy(self, property_id: str) -> dict:
         ts = [t for t in self.tenancies if _norm(t["property_id"]) == _norm(property_id)]
         if not ts:
-            raise ToolError(f"No tenancy on record for {property_id}")
+            return {"found": False, "property_id": property_id, "tenancies": [], "active_tenancy": None,
+                    "note": "No tenancy record in the local database. Use the tenant named in the case file; the platform "
+                            "holds their contact details, so messages can be addressed by name or role."}
         active = [t for t in ts if t.get("status") == "active"]
         return {"tenancies": ts, "active_tenancy": active[0] if active else None,
                 "warning": None if active else "No ACTIVE tenancy - verify before acting"}
@@ -146,11 +148,11 @@ class MockBackend:
         return {"contractor_id": contractor_id, "name": c["name"], "urgency": urgency, "slots": slots}
 
     def create_maintenance_ticket(self, property_id: str, title: str, category: str, urgency: str, description: str, reported_by: str) -> dict:
-        if not self._find_property(property_id):
-            raise ToolError(f"Cannot create ticket: property {property_id} not found. Verify the property first.")
-        t = {"ticket_id": self._ref("TKT"), "property_id": property_id, "title": title, "category": category,
-             "urgency": urgency, "description": description, "reported_by": reported_by,
-             "status": "open", "created_at": datetime.now().isoformat(timespec="seconds")}
+        known = self._find_property(property_id)
+        t = {"ticket_id": self._ref("TKT"), "property_id": known["property_id"] if known else property_id,
+             "property_ref": "records" if known else "case file (not in local database)",
+             "title": title, "category": category, "urgency": urgency, "description": description,
+             "reported_by": reported_by, "status": "open", "created_at": datetime.now().isoformat(timespec="seconds")}
         self.state["tickets"].append(t)
         return t
 
@@ -174,19 +176,23 @@ class MockBackend:
         return booking
 
     def send_message(self, recipient_type: str, recipient: str, channel: str, body: str) -> dict:
-        if not recipient or recipient.lower() in {"unknown", "n/a", "none"}:
-            raise ToolError("No recipient contact details supplied; look up the tenancy/property for contact details.")
-        if channel in {"sms", "whatsapp"} and not re.match(r"^\+?[\d\s()-]{7,}$", recipient):
-            raise ToolError(f"'{recipient}' is not a phone number; use email or look up the correct contact.")
-        if channel == "email" and "@" not in recipient:
-            raise ToolError(f"'{recipient}' is not an email address.")
+        if not recipient or recipient.lower() in {"unknown", "n/a", "none", ""}:
+            raise ToolError("No recipient given. Use a phone number, an email address, or the person's name/role "
+                            "(e.g. 'Landlord', 'Felix (landlord)', 'Riverside Works') and the platform will use its contact record.")
+        is_phone = bool(re.match(r"^\+?[\d\s()-]{7,}$", recipient))
+        is_email = "@" in recipient
+        via = "direct" if (is_phone or is_email) else "platform contact record"
+        if channel in {"sms", "whatsapp"} and is_email:
+            raise ToolError(f"'{recipient}' is an email address; choose channel=email or give a phone number.")
+        if channel == "email" and is_phone:
+            raise ToolError(f"'{recipient}' is a phone number; choose channel=sms or give an email address.")
         for t in self.tenancies:
             if recipient_type == "tenant" and channel == "sms" and t.get("sms_disabled") and any(recipient.replace(" ", "") == (x.get("phone") or "").replace(" ", "") for x in t["tenants"]):
                 raise ToolError("SMS delivery failed: number unreachable (carrier error 30006). Try another channel.")
-        m = {"message_id": self._ref("MSG"), "recipient_type": recipient_type, "recipient": recipient,
+        m = {"message_id": self._ref("MSG"), "recipient_type": recipient_type, "recipient": recipient, "via": via,
              "channel": channel, "body": body, "status": "delivered", "sent_at": datetime.now().isoformat(timespec="seconds")}
         self.state["messages"].append(m)
-        return {"message_id": m["message_id"], "status": "delivered"}
+        return {"message_id": m["message_id"], "status": "delivered", "via": via}
 
     def request_landlord_approval(self, ticket_id: str, landlord_id: str, estimated_cost_gbp: float, reason: str) -> dict:
         a = {"approval_id": self._ref("APR"), "ticket_id": ticket_id, "landlord_id": landlord_id,

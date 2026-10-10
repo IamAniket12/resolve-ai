@@ -1,0 +1,119 @@
+2026-10-10 11:57:20,563 INFO resolve: run eval-slice: 10 cases from data/public_cut | provider=anthropic model=claude-opus-5-5 tools=mock workers=6 timeout=600s
+2026-10-10 11:57:23,328 INFO resolve: [030] tool lookup_property ok (0ms)
+2026-10-10 11:57:23,328 INFO resolve: [030] tool lookup_property ok (0ms)
+2026-10-10 11:57:24,245 INFO resolve: [002] model: I'll start by verifying the property, tenancy and repair history.
+2026-10-10 11:57:24,246 INFO resolve: [002] tool lookup_property ok (0ms)
+2026-10-10 11:57:25,096 INFO resolve: [025] model: I'll start by verifying the property, tenancy and repair history.
+2026-10-10 11:57:25,096 INFO resolve: [025] tool lookup_property ok (0ms)
+2026-10-10 11:57:25,884 INFO resolve: [030] tool lookup_tenancy ERROR (0ms)
+2026-10-10 11:57:25,885 INFO resolve: [030] tool get_repair_history ok (0ms)
+2026-10-10 11:57:28,193 INFO resolve: [011] tool lookup_property ok (0ms)
+2026-10-10 11:57:28,223 INFO resolve: [020] tool lookup_property ok (0ms)
+2026-10-10 11:57:28,224 INFO resolve: [020] tool get_repair_history ok (0ms)
+2026-10-10 11:57:28,288 INFO resolve: [025] tool lookup_property ok (0ms)
+2026-10-10 11:57:29,049 INFO resolve: [002] tool search_contractors ok (0ms)
+2026-10-10 11:57:29,049 INFO resolve: [002] tool search_contractors ok (0ms)
+2026-10-10 11:57:29,766 INFO resolve: [008] tool lookup_property ok (0ms)
+2026-10-10 11:57:29,766 INFO resolve: [008] tool get_repair_history ok (0ms)
+2026-10-10 11:57:30,508 INFO resolve: [011] tool lookup_property ok (0ms)
+2026-10-10 11:57:35,161 INFO resolve: [008] tool lookup_property ok (0ms)
+2026-10-10 11:57:35,162 INFO resolve: [008] tool lookup_tenancy ERROR (0ms)
+2026-10-10 11:57:35,167 INFO resolve: [002] tool lookup_tenancy ERROR (0ms)
+2026-10-10 11:57:35,167 INFO resolve: [002] tool get_repair_history ok (0ms)
+2026-10-10 11:57:39,736 INFO resolve: [025] tool lookup_tenancy ERROR (0ms)
+2026-10-10 11:57:39,737 INFO resolve: [025] tool get_repair_history ok (0ms)
+2026-10-10 11:57:44,259 INFO resolve: [002] model: Records are empty for the property, tenancy and history, so the case file is the system of record. Opening the ticket now.
+2026-10-10 11:57:44,260 INFO resolve: [002] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:57:45,470 INFO resolve: [011] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:57:45,470 INFO resolve: [011] tool search_contractors ok (0ms)
+2026-10-10 11:57:45,933 INFO resolve: [030] tool search_contractors ok (0ms)
+2026-10-10 11:57:48,061 INFO resolve: [002] tool lookup_property ok (0ms)
+2026-10-10 11:57:48,062 INFO resolve: [002] tool lookup_property ok (0ms)
+2026-10-10 11:57:49,101 INFO resolve: [025] model: The records are empty, so the case file is the system of record. Next I'll open the ticket so the case can be tracked.
+2026-10-10 11:57:49,102 INFO resolve: [025] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:57:53,037 INFO resolve: [030] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:57:53,611 INFO resolve: [020] tool record_note ok (0ms)
+2026-10-10 11:57:53,611 INFO resolve: [020] tool update_case_status ok (0ms)
+2026-10-10 11:57:59,149 INFO resolve: [030] tool record_note ok (2ms)
+2026-10-10 11:58:02,040 INFO resolve: [011] tool record_note ok (0ms)
+2026-10-10 11:58:03,109 INFO resolve: [020] model: This is a routine property inspection, not a repair. The inspection is booked and the tenant has been told, so I booked no contractor, sent no messages and didn't escalate.
+
+**Where it stands:** the i
+2026-10-10 11:58:03,456 INFO resolve: [025] model: The ticket can't be created because the property isn't in the database. That isn't a temporary fault, so retrying won't help. I'll record the case state against the case itself.
+2026-10-10 11:58:03,457 INFO resolve: [025] tool record_note ok (0ms)
+2026-10-10 11:58:03,457 INFO resolve: [025] tool update_case_status ok (0ms)
+2026-10-10 11:58:07,182 INFO resolve: [002] tool record_note ok (0ms)
+2026-10-10 11:58:07,183 INFO resolve: [002] tool update_case_status ok (0ms)
+2026-10-10 11:58:12,272 INFO resolve: [030] tool escalate_to_human ok (0ms)
+2026-10-10 11:58:13,504 INFO resolve: [011] tool escalate_to_human ok (0ms)
+2026-10-10 11:58:13,720 INFO resolve: [008] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:58:14,396 INFO resolve: [030] tool update_case_status ok (0ms)
+2026-10-10 11:58:15,035 INFO resolve: [025] model: The case is on hold waiting for the landlord (Felix), with a chase due on 23 May. The approval email was already sent to him today at 12:00, so nothing more can happen until he replies.
+
+**Where the c
+2026-10-10 11:58:16,023 INFO resolve: [011] tool update_case_status ok (0ms)
+2026-10-10 11:58:20,056 INFO resolve: [002] model: The case is now marked **provider assigned** and waiting for Riverside Works to book a visit. I couldn't open a ticket or message anyone, because the system has no record of this property and the case
+2026-10-10 11:58:21,418 INFO resolve: [020] completed in 61s -> in_progress / not_a_repair
+2026-10-10 11:58:23,288 INFO resolve: [008] tool send_message ok (0ms)
+2026-10-10 11:58:23,803 INFO resolve: [030] model: I've escalated this case to the property manager (ESC-7C2007). I couldn't send the landlord approval request because the case file has no landlord or tenant contact details. I also couldn't open a tic
+2026-10-10 11:58:24,927 INFO resolve: [011] model: Case 011 is stuck at the landlord approval step. The landlord hasn't been asked yet, because I have no contact details for the landlord or the tenant. I've passed it to the property manager at low sev
+2026-10-10 11:58:26,206 INFO resolve: [038] model: I'll start by verifying the property, tenancy and repair history.
+2026-10-10 11:58:26,206 INFO resolve: [038] tool lookup_property ok (0ms)
+2026-10-10 11:58:28,764 INFO resolve: [038] tool lookup_property ok (0ms)
+2026-10-10 11:58:38,794 INFO resolve: [025] completed in 78s -> in_progress / urgent
+2026-10-10 11:58:39,423 INFO resolve: [038] tool lookup_tenancy ERROR (0ms)
+2026-10-10 11:58:39,423 INFO resolve: [038] tool get_repair_history ok (0ms)
+2026-10-10 11:58:43,165 INFO resolve: [044] tool lookup_property ok (0ms)
+2026-10-10 11:58:43,424 INFO resolve: [008] tool escalate_to_human ok (0ms)
+2026-10-10 11:58:45,773 INFO resolve: [011] completed in 85s -> escalated / routine
+2026-10-10 11:58:48,019 INFO resolve: [044] tool lookup_property ok (0ms)
+2026-10-10 11:58:48,019 INFO resolve: [044] tool get_repair_history ok (0ms)
+2026-10-10 11:58:48,416 INFO resolve: [008] tool update_case_status ok (0ms)
+2026-10-10 11:58:50,424 INFO resolve: [046] tool lookup_property ok (0ms)
+2026-10-10 11:58:52,241 INFO resolve: [046] tool lookup_property ok (0ms)
+2026-10-10 11:58:53,421 INFO resolve: [002] completed in 93s -> in_progress / urgent
+2026-10-10 11:58:54,092 INFO resolve: [008] tool record_note ok (0ms)
+2026-10-10 11:58:55,512 INFO resolve: [038] model: Every records lookup came back empty, so the case file is the system of record. Next I'll open the ticket against the case-file address.
+2026-10-10 11:58:55,512 INFO resolve: [038] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:58:55,513 INFO resolve: [038] tool search_contractors ok (0ms)
+2026-10-10 11:58:56,580 INFO resolve: [050] tool lookup_property ok (0ms)
+2026-10-10 11:58:59,011 INFO resolve: [030] completed in 98s -> escalated / urgent
+2026-10-10 11:58:59,463 INFO resolve: [050] tool lookup_property ok (0ms)
+2026-10-10 11:58:59,463 INFO resolve: [050] tool lookup_tenancy ERROR (0ms)
+2026-10-10 11:58:59,464 INFO resolve: [050] tool get_repair_history ok (0ms)
+2026-10-10 11:59:06,029 INFO resolve: [044] tool lookup_tenancy ERROR (0ms)
+2026-10-10 11:59:06,029 INFO resolve: [044] tool search_contractors ok (0ms)
+2026-10-10 11:59:06,029 INFO resolve: [044] tool search_contractors ok (0ms)
+2026-10-10 11:59:06,331 INFO resolve: [008] model: I've asked the contractor for a clearer quote and handed the landlord approval to you. Nothing has been approved or booked, and no ticket exists yet.
+
+**Where the case stood:** you asked for a check-o
+2026-10-10 11:59:11,604 INFO resolve: [046] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:59:11,605 INFO resolve: [046] tool search_contractors ok (0ms)
+2026-10-10 11:59:14,215 INFO resolve: [050] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:59:14,216 INFO resolve: [050] tool search_contractors ok (0ms)
+2026-10-10 11:59:19,293 INFO resolve: [050] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:59:21,239 INFO resolve: [044] tool create_maintenance_ticket ERROR (0ms)
+2026-10-10 11:59:21,243 INFO resolve: [046] tool record_note ok (0ms)
+2026-10-10 11:59:21,243 INFO resolve: [046] tool update_case_status ok (0ms)
+2026-10-10 11:59:25,375 INFO resolve: [044] tool check_contractor_availability ok (0ms)
+2026-10-10 11:59:26,723 INFO resolve: [038] tool record_note ok (0ms)
+2026-10-10 11:59:26,724 INFO resolve: [038] tool update_case_status ok (0ms)
+2026-10-10 11:59:26,724 INFO resolve: [038] tool escalate_to_human ok (0ms)
+2026-10-10 11:59:31,657 INFO resolve: [046] model: I've put case 046 on hold waiting for the landlord. There's no ticket yet, because the system wouldn't create one for a property it doesn't know.
+
+**Where it stands:** The tenant reported last night t
+2026-10-10 11:59:32,759 INFO resolve: [050] tool escalate_to_human ok (0ms)
+2026-10-10 11:59:37,395 INFO resolve: [050] tool update_case_status ok (0ms)
+2026-10-10 11:59:37,395 INFO resolve: [050] tool record_note ok (0ms)
+2026-10-10 11:59:38,749 INFO resolve: [038] model: The case is on hold waiting for the landlord, but the landlord approval step hasn't been sent yet. The property isn't in our system and the case file has no landlord or tenant contact details, so a pr
+2026-10-10 11:59:45,106 INFO resolve: [050] model: I couldn't do the landlord approval step, so I've passed the case to the property manager (ESC-D33EAF, medium severity). The property isn't on our system, there's no ticket, and nothing has been booke
+2026-10-10 11:59:46,227 INFO resolve: [044] tool record_note ok (0ms)
+2026-10-10 11:59:46,228 INFO resolve: [044] tool escalate_to_human ok (0ms)
+2026-10-10 11:59:47,043 INFO resolve: [008] completed in 146s -> escalated / routine
+2026-10-10 11:59:49,667 INFO resolve: [044] tool update_case_status ok (0ms)
+2026-10-10 11:59:56,227 INFO resolve: [046] completed in 70s -> in_progress / urgent
+2026-10-10 12:00:02,780 INFO resolve: [044] model: Nothing has been booked and no messages went out. I couldn't open a ticket, and the case file has no contact details for the landlord or the tenant. I've passed the case to the property manager at low
+2026-10-10 12:00:07,016 INFO resolve: [038] completed in 106s -> escalated / routine
+2026-10-10 12:00:19,583 INFO resolve: [050] completed in 86s -> escalated / urgent
+2026-10-10 12:00:36,137 INFO resolve: [044] completed in 117s -> escalated / routine
+2026-10-10 12:00:36,150 INFO resolve: run eval-slice finished: 10/10 completed, 0 fallback. Answers in ANSWERS_public, logs in logs/eval-slice

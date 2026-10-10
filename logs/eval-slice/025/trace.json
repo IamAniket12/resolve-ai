@@ -1,0 +1,203 @@
+{
+  "case_id": "025",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 6,
+  "started_at": "2026-10-10T10:57:20+00:00",
+  "finished_at": "2026-10-10T10:58:38+00:00",
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 5752,
+    "cache_read_input_tokens": 68221,
+    "cache_creation_input_tokens": 18719
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 1311,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 503,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The tenant of Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ reported on 2024-05-19 that the oven won't heat on any oven or grill setting, though the light and the sound still work. The oven was replaced 'sometime last year' after the previous one failed. The case was already at the landlord approval step: the approval email went to the landlord (Felix) on 2024-05-21 at 12:00, which is 'now'. What matters: it may still be under warranty, it is the second oven failure in about a year, and the property records are empty.",
+    "issue_category": "appliance",
+    "urgency": "urgent",
+    "decision": "in_progress",
+    "outcome": "The case is on hold, Waiting for Landlord. The approval email went to Felix on 21/05 at 12:00; the chase is due 23/05 and it goes to a manager if he is still silent on 24/05. No contractor was booked, because landlord approval is still pending and the warranty route should be checked before any paid call-out.",
+    "actions_taken": [
+      "Looked up the property by full address and by postcode ZZ8 5ZZ; both lookups returned no record, so the case file was used as the system of record",
+      "Ran get_repair_history: no previous jobs on record",
+      "Saved an internal note (NOTE-FBBB4C) covering the classification, empty records, failed ticket creation, warranty and repeat-fault flags, and the self-checks to send the tenant",
+      "Set the case status to awaiting_landlord (STS-C0A0DD): Waiting for Landlord, chase 23/05, escalate 24/05"
+    ],
+    "failed_actions": [
+      "lookup_tenancy failed with 'No tenancy on record'. The case file says the source is the tenant, so the tenancy was assumed to be active; no tenant name or contact details are available",
+      "create_maintenance_ticket failed with 'property not found'. This is not a temporary fault, so I didn't retry. I recorded the note and status without a ticket ID; the property needs adding to the database before a ticket can be opened"
+    ],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "Case 025, Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ: the oven won't heat (oven or grill); the light and sound still work. Reported by the tenant on 19/05. Classed as URGENT: a landlord-supplied cooker has failed, so a contractor is due within 3 working days of approval. No safety hazard was reported. Done: the landlord-approval email went to Felix on 21/05 at 12:00 (our contractor, his own, or decline). The case is on hold Waiting for Landlord (STS-C0A0DD), with note NOTE-FBBB4C. Blocked or missing: (1) the property, tenancy and repair-history records are empty and ticket creation failed, so an admin must add the property and open a ticket; (2) no tenant name or contact details and no landlord email or ID are in the case file, so I couldn't send any messages. Next: chase Felix on 23/05, and pass it to the manager if there's no reply by 24/05. When he replies, ask for the oven's make/model, install date and supplier/installer, and try the manufacturer or installer warranty before booking a paid appliance engineer. Flag this to him as the second oven failure in about a year. Before booking, send the tenant self-checks (clock/timer in manual mode, child lock, fuse spur/circuit breaker) and ask whether the hob works."
+    },
+    "conflicts": [
+      {
+        "description": "The case file names a tenant-reported property with an approval email sent to the landlord, but the property, tenancy and repair-history databases have no record of it.",
+        "how_resolved": "Under the policy, the case file is the system of record when lookups are empty. I trusted the case file and flagged that the property needs adding to the database."
+      }
+    ],
+    "information_gaps": [
+      "Tenant name and contact details are missing, so I couldn't send a tenant update; to be filled once the database record exists",
+      "Landlord email and ID are missing (first name Felix only). The approval email had already gone out through the system; I couldn't send a follow-up about the warranty",
+      "Oven make/model, install date, installer/supplier and warranty terms are unknown; to be asked of the landlord when he replies",
+      "Whether the hob still works (which affects how urgent this is) is unknown; to be asked of the tenant",
+      "The approval email mentions an attachment, 'Referenced PDF unavailable'; its contents are unknown",
+      "Whether the oven is gas or electric is unknown; there's no hazard reported either way"
+    ],
+    "assumptions": [
+      "The oven is landlord-supplied, because the tenant says it was replaced last year as part of the property",
+      "The tenancy is active, based on the case file even though the tenancy lookup was empty",
+      "Classed as urgent rather than emergency: no gas smell, burning or sparking was reported, and the occupants aren't known to be vulnerable",
+      "The landlord approval email logged at 2024-05-21 12:00 in the history was actually delivered"
+    ],
+    "tenant_communication": "None from me: no tenant contact details are available. Per the history, the tenant hasn't had an update since reporting.",
+    "landlord_communication": "Before I took over, the system emailed the standard landlord approval request to Felix on 2024-05-21 at 12:00, asking whether to send our contractor or whether he'll arrange his own. I sent nothing further, because no landlord contact details are on record.",
+    "next_steps": [
+      "An admin should add the property, tenant and landlord records to the database, then open the maintenance ticket",
+      "Chase Felix on 23/05 if there's no reply; pass it to the manager on 24/05 if he's still silent",
+      "When Felix replies, get the oven's make/model, install date and supplier/installer, and try the warranty or manufacturer before any paid job",
+      "Send the tenant the self-checks (clock/timer manual mode, child lock, fuse spur/circuit breaker) and ask whether the hob works; mention that an avoidable call-out may be chargeable",
+      "Once approved and if there's no warranty route, book an appliance engineer within 3 working days, tell the tenant who is coming, and remind them to mention pets",
+      "Tell the landlord this is the second oven failure in about a year; if it fails again, suggest assessing the cause, e.g. the supply or installation"
+    ],
+    "risk_flags": [
+      "Possible warranty: the oven was replaced in the last year, so avoid paying for a job a warranty might cover",
+      "Repeat fault: second oven failure in about a year",
+      "Property, tenancy and repair-history records are missing from the database, so normal checks couldn't be completed",
+      "Contact details are missing, so the tenant hasn't been updated since reporting the fault"
+    ],
+    "confidence": 0.8,
+    "reasoning": "The history shows the landlord approval step was done today at 12:00, so the correct next state is on hold, Waiting for Landlord. Repeating the request or booking a contractor before approval would break the workflow. A landlord-supplied cooker failure is URGENT under section 1, with no safety hazard reported, so section 2 doesn't apply and escalation isn't needed. Section 3 warranty guidance and section 7 repeat-fault rules apply because the oven was replaced last year, so warranty details should be sought from the landlord before any paid call-out. All lookups were empty, so I treated the case file as the record, as the policy says. Ticket creation failed because the property isn't in the database, so the note and status were recorded without a ticket. The chase date is set a day earlier than the usual 3 days because of the urgent band."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ8 5ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ8 5ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ"
+      },
+      "output": null,
+      "ok": false,
+      "error": "No tenancy on record for Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ"
+      },
+      "output": {
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ",
+        "title": "Oven not heating (oven and grill) - replacement oven installed last year",
+        "category": "appliance",
+        "urgency": "urgent",
+        "description": "Reported by tenant 2024-05-19 18:21 (verbatim): \"The oven has stopped heating up. Does not work on any settings, the light still switches on and it makes a sound but does not heat up on oven or grill settings. It was replaced sometime last year as the last one stopped working too.\" Classification: URGENT. This is a cooker failure, assumed landlord-supplied because the landlord replaced it last year. Hob status is unknown. No gas or electrical hazard was reported (light and fan/sound still work). Possible WARRANTY: the oven was replaced around 2023, so it is likely still inside a manufacturer or installer warranty (often 1-2 years). Make/model, install date and installer are needed before any paid call-out. History: this is the second oven failure in about a year. Records: property, tenancy and repair-history lookups all returned nothing, so the case file is the system of record. Landlord (Felix) was sent the approval-step email on 2024-05-21 12:00. We are waiting for his decision: our contractor, his own contractor, or decline.",
+        "reported_by": "Tenant (name not in case file)"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Cannot create ticket: property Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ not found. Verify the property first.",
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 025, Flat 2, 176 Lantern Quay, Westmarsh, ZZ8 5ZZ. Oven not heating on oven or grill settings; the light and fan still work. Reported by tenant 2024-05-19. Intake: URGENT (landlord-supplied cooker failure; target is a contractor within 3 working days once approved). No safety hazard reported. Records: property, postcode, tenancy and repair-history lookups all returned nothing. create_maintenance_ticket failed with \"property not found\", so there is no ticket ID yet; the property record needs adding to the database. No tenant name or contact details and no landlord email or ID are in the case file, so I could not send any messages. Approval step done: the landlord-approval email went to Felix on 2024-05-21 12:00 (by the system, per the history). WARRANTY FLAG: the tenant says the oven was replaced \"sometime last year\", so it is probably still under manufacturer or installer warranty. When Felix replies, ask for the make/model, purchase/install date and supplier/installer, and send the job back to them or the manufacturer before booking a paid appliance engineer. RECURRING: this is the second oven failure in about a year. When the landlord approves, also send the tenant self-checks: oven clock/timer set to manual mode (a common cause of \"light on, no heat\"), child lock, fuse spur/MCB. Check whether the hob works, since a working hob affects how urgent this is."
+      },
+      "output": {
+        "note_id": "NOTE-FBBB4C",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "awaiting_landlord",
+        "comment": "Hold - Waiting for Landlord: approval email sent to Felix 21/05 12:00 (own contractor/ours/decline, plus warranty details for last year's replacement oven). Urgent band, chase 23/05; escalate if still silent 24/05."
+      },
+      "output": {
+        "status_id": "STS-C0A0DD",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I'll start by verifying the property, tenancy and repair history.",
+    "The records are empty, so the case file is the system of record. Next I'll open the ticket so the case can be tracked.",
+    "The ticket can't be created because the property isn't in the database. That isn't a temporary fault, so retrying won't help. I'll record the case state against the case itself.",
+    "The case is on hold waiting for the landlord (Felix), with a chase due on 23 May. The approval email was already sent to him today at 12:00, so nothing more can happen until he replies.\n\n**Where the case stands:** The tenant reported on 19 May that the oven won't heat on any oven or grill setting, though the light and the sound still work. The oven was replaced last year after the previous one also failed. The history ends with the request to Felix asking whether we should send our contractor, he'll use his own, or he declines. I didn't send a second request or book anyone, because the landlord has to approve first.\n\n**Checks:**\n- **Records are empty:** the property, postcode, tenancy and repair-history lookups all returned nothing, so the case file is the only record.\n- **No ticket:** creating one failed with \"property not found\". Retrying won't fix that, so I saved the note (NOTE-FBBB4C) and the hold status (STS-C0A0DD) without a ticket number.\n\n**Classification:** urgent. A landlord-supplied oven has failed, and once he approves, a contractor should attend within 3 working days. No gas or electrical hazard was reported.\n\n**Flags:**\n- **Possible warranty:** the oven is only about a year old, so it may still be under manufacturer or installer warranty. Before anyone pays for a call-out, get the make/model, install date and installer from Felix and send the job back to them.\n- **Repeat fault:** this is the second oven failure in about a year.\n\n**What a person needs to do next:**\n1. Add the property to the database, then open the ticket.\n2. Find the tenant's and Felix's contact details. Neither is in the case file, so I couldn't send the tenant an update or ask Felix for the warranty details.\n3. Chase Felix on 23 May if he hasn't replied, and pass it to a manager on 24 May if he's still silent.\n4. Once he approves, send the tenant some quick checks before a call-out: oven clock or timer set to manual, child lock, and the fuse spur or circuit breaker. Also ask whether the hob still works."
+  ]
+}

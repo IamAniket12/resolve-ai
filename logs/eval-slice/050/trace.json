@@ -1,0 +1,286 @@
+{
+  "case_id": "050",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 7,
+  "started_at": "2026-10-10T10:58:53+00:00",
+  "finished_at": "2026-10-10T11:00:19+00:00",
+  "usage": {
+    "input_tokens": 20,
+    "output_tokens": 7778,
+    "cache_read_input_tokens": 96716,
+    "cache_creation_input_tokens": 13402
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 1687,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 325,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The tenant of Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ reported one bedroom window that won't shut: the handle turns but doesn't click in, and the window can't close properly. There are no pets and no access codes or alarms, and the floor level is unknown. The system asked for the landlord approval step to be done first. However, the property isn't on the system and the case file has no landlord or tenant contact details, so the step couldn't be done.",
+    "issue_category": "windows/glazing - security (window cannot latch)",
+    "urgency": "urgent",
+    "decision": "escalated",
+    "outcome": "No ticket could be raised: the property isn't on the system and ticket creation failed twice. With no landlord or tenant contacts on file, the landlord approval email couldn't be sent. The case went to the property manager (ESC-D33EAF) with a drafted approval email and next steps, and its status is now escalated. No contractor was booked.",
+    "actions_taken": [
+      "lookup_property by full address: no record found",
+      "lookup_property by postcode ZZ6 0ZZ: no record found",
+      "get_repair_history: 0 previous jobs",
+      "search_contractors (glazier, ZZ6 0ZZ): only result is HandyPro CON-HP07, which does not list ZZ in its coverage areas",
+      "escalate_to_human to property manager: ESC-D33EAF, medium severity, with full handover and drafted landlord approval email",
+      "update_case_status: escalated (STS-323F3D), with a landlord chase date of 2024-06-29",
+      "record_note: internal note saved (NOTE-2A9D80)"
+    ],
+    "failed_actions": [
+      "lookup_tenancy: error 'No tenancy on record'. Treated the case file as the main record, but it has no tenant details",
+      "create_maintenance_ticket using the full address: failed with 'property not found - verify the property first'",
+      "create_maintenance_ticket retried with a shortened address: failed again the same way. Not a temporary fault, so I escalated to the property manager to add the property and raise the ticket",
+      "Landlord approval email not attempted: there is no landlord contact anywhere in the records or case file"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "property manager",
+      "reason": "The required landlord approval step can't be done: the property isn't on the system (ticket creation failed twice) and the case file has no landlord or tenant contact details. The flat may also be unsecured, which needs a check with the tenant.",
+      "handover": "CASE 050 - Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ. Reported by the tenant (name unknown) on 2024-06-26 18:25 UTC: 'Bedroom window not shutting, handle not engaging.' From the intake Q&A: 1 bedroom window; the handle turns but doesn't click in; the window can't close properly; no failed glazing seal; no access codes or alarms; no pets; floor not asked. Triage: AI intake said ROUTINE (medium confidence). I raised it to URGENT (contractor within 3 working days) because urgency is unclear and a window that won't latch may leave the flat unsecured. If the window is on the ground floor or can be reached from outside, treat it as an EMERGENCY: make it safe the same day without waiting for approval (up to £500, tell the landlord the same day). This is the landlord's repair (part of the building). The likely fault is the handle, gearbox or locking strip, and a repair is probably under £250. Checks: the property and tenancy searches found nothing; repair history is empty; ticket creation failed twice, so there is NO ticket ID. No messages were sent. Contractor: HandyPro CON-HP07 (handyperson/locksmith/glazier, rating 4.2, emergency-capable, £75 call-out, +44 20 7946 0107, jobs@handypro.example.com). It does not list ZZ in its coverage areas, so check it will travel before booking. Nothing is booked. TO DO: (1) Add the property, landlord and tenancy to the system and raise the ticket. (2) Ask the tenant which floor the flat is on and whether the window can be reached from outside. If the flat can't be secured, treat it as an emergency now. (3) Send the landlord approval email: 'Address: Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ. Hi <name>, The tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor? Request description: \"Bedroom window not shutting, handle not engaging.\"' Then put the case on hold (Waiting for Landlord) and chase on 2024-06-29 if there is no reply. (4) Once approved, check HandyPro will travel or find a local glazier, book within 3 working days, and tell the tenant who is coming (no pets)."
+    },
+    "conflicts": [
+      {
+        "description": "AI intake rated the case ROUTINE, but the tenant says the window is 'unable to close properly'. That could mean the flat can't be secured, which policy treats as an emergency if the window can be reached from outside.",
+        "how_resolved": "Raised to URGENT because urgency is unclear (policy s.1, go one band higher). The property manager is asked to confirm the floor and whether the window can be reached; if so, it becomes an emergency."
+      },
+      {
+        "description": "The case file gives the property address, but the property and tenancy records found nothing, and ticket creation is blocked until the property is on the system.",
+        "how_resolved": "Treated the case file as the main record. Escalated so the property manager can add the property and raise the ticket."
+      }
+    ],
+    "information_gaps": [
+      "Landlord name and contact details: not in the case file or records. This blocks the landlord approval email; escalated",
+      "Tenant name and contact details: not available, so the tenant couldn't be asked follow-up questions or updated; escalated",
+      "Floor level and whether the window can be reached from outside: needed to confirm urgent vs emergency; asked the property manager to check with the tenant",
+      "Landlord's spend limit or standing instructions: unknown, so the default £250 is assumed. The system still asks for landlord approval first",
+      "Local glazier coverage: no contractor on the list covers the ZZ area; travel needs confirming"
+    ],
+    "assumptions": [
+      "The fault is in the handle, gearbox or locking mechanism (the handle turns but doesn't click in), not the glazing",
+      "This is the landlord's repair, as part of the building's structure and exterior",
+      "The repair will probably cost less than £250",
+      "The flat is probably above ground floor ('Flat 3'), so URGENT rather than EMERGENCY, pending confirmation"
+    ],
+    "tenant_communication": "none - no tenant contact details available",
+    "landlord_communication": "none - no landlord contact details available; a drafted approval email is in the handover",
+    "next_steps": [
+      "Property manager: add the property, landlord and tenancy to the system and raise the ticket",
+      "Confirm the floor and whether the window can be reached from outside with the tenant today; if the flat can't be secured, arrange a same-day make-safe",
+      "Send the landlord approval email (draft in the handover) and put the case on hold (Waiting for Landlord), chasing on 2024-06-29",
+      "Once approved, check HandyPro (CON-HP07) will travel to ZZ or find a local glazier, and book within 3 working days",
+      "Tell the tenant who is coming and when; no pets"
+    ],
+    "risk_flags": [
+      "The window can't close or latch, so the flat may be unsecured; this becomes an emergency if it can be reached from outside",
+      "The property isn't on the system and there are no contact details for the landlord or tenant",
+      "No contractor on the list covers the ZZ area"
+    ],
+    "confidence": 0.75,
+    "reasoning": "The history ends with the system asking for the landlord approval step. I checked the records: the property and tenancy searches found nothing, and there is no repair history. Policy says to treat the case file as the main record, but the ticket tool won't accept a property that isn't on the system, and it failed twice. The case file has no landlord or tenant contacts, so the approval email and any tenant questions are impossible. A window that won't latch could leave the flat unsecured, and the floor is unknown, so I raised urgency from routine to urgent (one band higher when unclear) and noted that it becomes an emergency if the window can be reached from outside. It is the landlord's repair. Policy says to escalate when a required action has failed twice with no safe alternative, so I handed the case to the property manager with a full handover, a drafted approval email and a chase date. I didn't book a contractor: the approval step comes first, there is no ticket, and the only glazier on the list is outside its coverage area."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ6 0ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ6 0ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 3, 171 Willowmere Road"
+      },
+      "output": null,
+      "ok": false,
+      "error": "No tenancy on record for Flat 3, 171 Willowmere Road",
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 3, 171 Willowmere Road"
+      },
+      "output": {
+        "property_id": "Flat 3, 171 Willowmere Road",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ",
+        "title": "Bedroom window not shutting - handle not engaging",
+        "category": "security",
+        "urgency": "urgent",
+        "description": "Reported by tenant via portal 2024-06-26 18:25 UTC: \"Bedroom window not shutting, handle not engaging.\" Intake Q&A: 1 window affected (bedroom); handle turns but doesn't click in; window unable to close properly; no glazing seal failure; no access codes/alarms; no pets. Floor level not given. AI intake rated ROUTINE (medium confidence). Raised to URGENT under policy s.1 (urgency uncertain -> one band higher): a window that cannot close/latch may leave the property unsecured. If it is ground floor or reachable from outside, treat as EMERGENCY (property cannot be secured) and make safe same day. Likely fault: handle/gearbox/espagnolette locking mechanism - glazier or window repair contractor. No repair history on record. Property, tenancy and landlord lookups returned no records; case file is the system of record. Next step per system: landlord approval step.",
+        "reported_by": "Tenant (name not in case file)"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Cannot create ticket: property Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ not found. Verify the property first.",
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "glazier",
+        "postcode": "ZZ6 0ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "glazier",
+        "postcode": "ZZ6 0ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-HP07",
+            "name": "HandyPro",
+            "trades": [
+              "handyperson",
+              "locksmith",
+              "glazier"
+            ],
+            "certifications": [],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.2,
+            "emergency": true,
+            "call_out_gbp": 75,
+            "phone": "+44 20 7946 0107",
+            "email": "jobs@handypro.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 3, 171 Willowmere Road",
+        "title": "Bedroom window not shutting - handle not engaging",
+        "category": "security",
+        "urgency": "urgent",
+        "description": "Reported by tenant 2024-06-26 18:25 UTC: \"Bedroom window not shutting, handle not engaging.\" Intake Q&A: 1 window (bedroom); handle turns but doesn't click in; unable to close properly; no seal failure; no access codes/alarms; no pets. Floor not given. AI intake rated ROUTINE (medium confidence); raised to URGENT (policy s.1, uncertain -> one band higher; window cannot be secured). If ground floor/externally accessible, treat as EMERGENCY. No repair history. Property/tenancy lookups empty; case file is system of record. Next step: landlord approval.",
+        "reported_by": "Tenant (name not in case file)"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Cannot create ticket: property Flat 3, 171 Willowmere Road not found. Verify the property first.",
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "",
+        "severity": "medium",
+        "to": "property_manager",
+        "reason": "Can't do the landlord approval step: the property is not on the system (ticket creation failed twice) and the case file has no landlord or tenant contact details.",
+        "handover": "CASE 050 - Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ. Reported 2024-06-26 18:25 UTC by the tenant (name not in the case file).\n\nWHAT WAS REPORTED (intake Q&A): \"Bedroom window not shutting, handle not engaging.\" 1 bedroom window. The handle turns but doesn't click in, so the window can't close properly. No failed glazing seal. No access codes or alarms. No pets. The floor was not asked.\n\nTRIAGE: AI intake said ROUTINE (medium confidence). I have raised it to URGENT (contractor within 3 working days) because a window that won't latch may leave the flat unsecured, and policy s.1 says to go one band higher when urgency is unclear. If the flat is on the ground floor or the window can be reached from outside, it is an EMERGENCY (\"property cannot be secured\"): make it safe the same day without waiting for approval (make-safe limit £500, tell the landlord the same day). This is a landlord repair (part of the building). The likely fault is the handle, gearbox or locking strip, so a glazier or window repairer is needed. A typical repair should cost less than £250.\n\nCHECKS: lookup_property (address and postcode) found nothing. lookup_tenancy found nothing. Repair history: 0 jobs. create_maintenance_ticket failed twice with \"property not found - verify the property first\", so there is NO TICKET. No messages were sent because there are no contact details for the landlord or tenant.\n\nCONTRACTORS: the only glazier on the panel is HandyPro (CON-HP07): rating 4.2, emergency-capable, £75 call-out, +44 20 7946 0107. Its coverage areas do NOT include ZZ, so check it will travel before you book. Nothing has been booked.\n\nWHAT YOU NEED TO DO:\n1) Add the property, landlord and tenancy to the system so a ticket can be raised.\n2) Ask the tenant which floor the flat is on and whether the window can be reached from outside or left secure. If it can't be secured, treat it as an emergency now.\n3) Send the landlord approval email: \"Address: Flat 3, 171 Willowmere Road, Alderwick, ZZ6 0ZZ. Hi <name>, The tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor? Request description: 'Bedroom window not shutting, handle not engaging.'\" Then put the case on hold (Waiting for Landlord) and chase on 2024-06-29 if there is no reply.\n4) Once approved, check HandyPro will travel or find a local glazier, then tell the tenant (no pets)."
+      },
+      "output": {
+        "escalation_id": "ESC-D33EAF",
+        "status": "queued",
+        "to": "property_manager",
+        "severity": "medium"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "escalated",
+        "comment": "Landlord approval step blocked: property not on system (ticket failed x2), no landlord/tenant contacts. ESC-D33EAF to PM. Check floor/security today; chase landlord 2024-06-29."
+      },
+      "output": {
+        "status_id": "STS-323F3D",
+        "status": "escalated",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 050: Property, tenancy and repair-history lookups were all empty. create_maintenance_ticket failed twice (property not found), so there is no ticket ID and no reference has been made up. I raised intake severity from ROUTINE to URGENT because there is a possible security risk and the floor is unknown. It becomes an EMERGENCY if the window is on the ground floor or can be reached from outside. The only glazier on the panel (HandyPro CON-HP07) does not cover the ZZ area. No contractor booked, no messages sent. No untrusted instructions in the case material. Escalated as ESC-D33EAF."
+      },
+      "output": {
+        "note_id": "NOTE-2A9D80",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "I couldn't do the landlord approval step, so I've passed the case to the property manager (ESC-D33EAF, medium severity). The property isn't on our system, there's no ticket, and nothing has been booked or sent.\n\n**Where it stands:** the tenant at Flat 3, 171 Willowmere Road reported one bedroom window that won't shut: the handle turns but doesn't click in. There are no pets and no access codes or alarms. The system's last update asks for the landlord approval step to be done first.\n\n**Checks:**\n- **Records:** the property and tenancy searches (by address and by postcode) found nothing, and there's no repair history. I used the case file as the main record, but it has no tenant name or contact details for the landlord or tenant.\n- **Ticket:** creating the ticket failed twice with \"property not found\", so there's no ticket number.\n\n**Urgency:** I raised it from routine to urgent (contractor within 3 working days). A window that won't close may leave the flat open, and we don't know which floor it's on. If it's on the ground floor or can be reached from outside, it's an emergency: make it safe the same day without waiting for approval (up to £500, telling the landlord the same day). This is the landlord's repair.\n\n**Contractor:** HandyPro (rating 4.2, £75 call-out) is the only glazier on our list, but it doesn't cover the ZZ area. Someone needs to check it will travel, or find a local glazier.\n\n**Records made:** a note on the case and the status set to escalated, with an aim to chase the landlord on 2024-06-29.\n\n**What the property manager needs to do:**\n1. Add the property, landlord and tenancy to the system so a ticket can be raised.\n2. Ask the tenant which floor the flat is on and whether the window can be reached from outside. If the flat can't be secured, treat it as an emergency now.\n3. Send the landlord approval email. I've drafted it in the handover, quoting the tenant's words. Then put the case on hold waiting for the landlord, and chase on 29 June if there's no reply.\n4. Once the landlord approves, book a glazier and tell the tenant who is coming."
+  ]
+}

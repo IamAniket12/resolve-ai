@@ -1,0 +1,348 @@
+{
+  "case_id": "044",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 8,
+  "started_at": "2026-10-10T10:58:38+00:00",
+  "finished_at": "2026-10-10T11:00:36+00:00",
+  "usage": {
+    "input_tokens": 22,
+    "output_tokens": 9010,
+    "cache_read_input_tokens": 110308,
+    "cache_creation_input_tokens": 14529
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 649,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 396,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "On 2025-01-13 the tenant of Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ reported that the window handle fell off when they opened the blind, and the window now cannot be opened. On 2025-01-19 the case went on hold with 'Will email LL', so the landlord approval step is outstanding. The property is not on the system: no property, tenancy or repair history was found. The case file has no landlord or tenant contact details.",
+    "issue_category": "structural (window furniture / window handle)",
+    "urgency": "routine",
+    "decision": "escalated",
+    "outcome": "No contractor was booked and no messages were sent. The ticket could not be created because the property is not on the system, and there are no landlord or tenant contacts. The case was escalated at low severity to the property manager (ESC-7B8B77) with a draft landlord approval email. The status is set to awaiting_landlord, with a comment that the email has not been sent yet, and a check date of 22 Jan 2025.",
+    "actions_taken": [
+      "lookup_property by full address: returned not found (case file treated as system of record)",
+      "lookup_property by postcode ZZ9 4ZZ: returned not found",
+      "get_repair_history: no previous jobs",
+      "search_contractors glazier (non-emergency): only HandyPro CON-HP07 returned; its listed coverage does not include ZZ",
+      "search_contractors handyperson (non-emergency): only HandyPro CON-HP07 returned",
+      "check_contractor_availability CON-HP07 routine: slots 13/16/20 Oct 2026 only, far outside the routine target; not booked",
+      "record_note NOTE-F2C33D: triage, lookup results, ticket failure, missing contacts and contractor findings",
+      "escalate_to_human ESC-7B8B77 to property_manager (low): property not on system, no landlord/tenant contacts, no in-area contractor; includes draft landlord approval email",
+      "update_case_status STS-303C07: awaiting_landlord - approval email drafted but not sent; check 22 Jan 2025"
+    ],
+    "failed_actions": [
+      "lookup_tenancy for the property address: error 'No tenancy on record'. No alternative source exists; the case file has no tenant name or contact",
+      "create_maintenance_ticket: error 'property not found - verify the property first'. Not transient, so not retried; recorded in an internal note and escalated to the property manager instead"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "property manager",
+      "reason": "A routine window handle repair is blocked. The property is not on the system, so no ticket can be created. The case file has no landlord or tenant contact details, so the landlord approval email the team planned ('Will email LL') cannot be sent. The only panel contractor does not cover the area and has no slot within the routine target.",
+      "handover": "FACTS: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ. Tenant reported 2025-01-13 07:04 (verbatim): 'Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.' No photos; room/window not stated. Classified ROUTINE: the window is stuck shut, so the flat appears secure. Routine target is a contractor within 20 working days, about 10 Feb 2025. Landlord responsibility (structure/exterior). Upgrade the band if the window won't close or lock, is a fire escape window, or there is damp, mould or a health issue. Workflow at pickup: 'Please approve selection of provider and category', then Hold 'Will email LL' (19 Jan). The landlord approval step is outstanding. DONE: property lookup by address and postcode found nothing; no tenancy; no repair history. create_maintenance_ticket was refused (property not found), so there is no ticket ID. Contractor panel: only HandyPro CON-HP07 (+44 20 7946 0107, jobs@handypro.example.com, rating 4.2, call-out £75). It does not list ZZ coverage, and its routine slots are 13/16/20 Oct 2026, so nothing was booked. No messages were sent to the landlord or tenant (no contacts). Internal note NOTE-F2C33D; status awaiting_landlord, check 22 Jan 2025. NEEDED: (1) Add the property and tenancy to the system, or supply the landlord and tenant contacts, so the ticket can be raised. (2) Send the landlord approval email (draft below), or rely on the £250 default pre-authorisation; a handle replacement is likely about £75-£150. (3) Find a contractor covering ZZ9 who can attend by about 10 Feb, either a local handyperson/glazier or the landlord's own; or ask HandyPro to confirm travel and an earlier slot. (4) Ask the tenant which window/room, for a photo of the handle and spindle, and to confirm the window is closed and secure. DRAFT LANDLORD EMAIL: 'Address: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ. Hi <landlord first name>, The tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor? Request description: \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\"' RECOMMENDATION: once contacts are available, send the email, put the case on hold as Waiting for Landlord, and chase on 22 Jan 2025. Then instruct a local handyperson/glazier within authority."
+    },
+    "conflicts": [
+      {
+        "description": "The case file treats this as a live property and tenancy, but the agency database has no property record, no tenancy record and no repair history for it.",
+        "how_resolved": "Policy says the case file is the system of record when lookups are empty, so the address and request were treated as genuine. The ticketing tool still requires a database property, so ticket creation is blocked; escalated to the property manager to set the property up."
+      },
+      {
+        "description": "The contractor search returned HandyPro as the only glazier/handyperson, but its listed coverage areas (SE, CR, BN, M, LS, BS, NG) do not include ZZ, and its earliest routine slot (13 Oct 2026) is far outside the 20-working-day routine target.",
+        "how_resolved": "Not booked. Policy says to move on when the contractor cannot attend within target. Sourcing a local contractor, or confirming HandyPro travel and an earlier slot, is in the handover."
+      }
+    ],
+    "information_gaps": [
+      "Landlord name and email/phone: not in the case file or the records. Blocks the landlord approval email; asked of the property manager via escalation.",
+      "Tenant name and phone/email: not in the case file; tenancy lookup empty. Blocks tenant updates and access arrangements; asked of the property manager.",
+      "Which room/window, and whether the window is fully closed and lockable: not stated. Assumed secure because the tenant says it cannot be opened; asked to be confirmed with the tenant.",
+      "Photo of the handle/spindle: none supplied. Would help the contractor bring the right part; requested via handover.",
+      "Whether the window is a fire escape or the only ventilation in a room with damp: unknown. Recorded as a trigger to upgrade urgency.",
+      "No property ID, so no ticket ID: blocked until the property is added to the system."
+    ],
+    "assumptions": [
+      "The window is stuck closed and the property is secure, so the case is ROUTINE rather than a security emergency.",
+      "A replacement window handle is within the £250 default pre-authorised spend (estimated £75-£150), but the team's own plan was to seek landlord approval first, so no booking was made before approval.",
+      "The repair is the landlord's responsibility (window furniture as part of structure/exterior); there is no indication of tenant misuse.",
+      "The 'Will email LL' hold means the email had not yet been sent when the case was handed over."
+    ],
+    "tenant_communication": "none. There is no tenant name or contact in the case file or the records.",
+    "landlord_communication": "none. A landlord approval email was drafted (in the escalation handover) but could not be sent because there is no landlord contact.",
+    "next_steps": [
+      "Property manager: add the property and tenancy to the system, or supply the landlord and tenant contacts; then create the maintenance ticket (routine, window handle).",
+      "Send the landlord approval email using the drafted text; hold as Waiting for Landlord and chase on 22 Jan 2025.",
+      "Contact the tenant: confirm which window, that it is closed and secure, ask for a photo, and get access times and any pets.",
+      "Source a contractor covering ZZ9 (local handyperson/glazier or the landlord's own), or confirm HandyPro will travel and offer a slot by about 10 Feb 2025.",
+      "Once approved, instruct the contractor, send the 'provider instructed' message to the tenant, and later do the completion check (contractor confirmation, tenant confirmation or photos, invoice within quote/authority)."
+    ],
+    "risk_flags": [
+      "Property and tenancy are not on the agency system; no ticket exists, so the case could be lost on the dashboard.",
+      "Routine response target (about 10 Feb 2025) at risk: the case is 6 days old, the landlord has not been contacted and there is no in-area contractor.",
+      "Unverified: whether the affected window is a fire escape route or the only ventilation (upgrade if so)."
+    ],
+    "confidence": 0.7,
+    "reasoning": "The report is a detached window handle with the window stuck shut. The flat appears secure and there is no safety hazard, vulnerability or health complaint, so policy section 1 places it in ROUTINE. Window furniture falls under the landlord's structure/exterior obligation. The history ends at the landlord approval step: the provider-selection prompt was followed by a 'Will email LL' hold. So the next correct action is the landlord approval email, not a full lifecycle restart. I followed policy and treated the case file as the system of record after the empty lookups. However, the ticket tool refused to create a ticket without a database property. The case file also has no landlord or tenant contacts, so neither the approval email nor the tenant update could be sent. The only panel contractor does not cover the postcode and cannot attend within the routine target (policy 5.5), so nothing was booked. I did not invent contacts, references or bookings. Because no tool route remains, I made one low-severity escalation to the property manager, with a full handover and the drafted approval email. I set the dashboard status to awaiting_landlord, stating that the email is not yet sent, with a 22 Jan check date. I found no embedded instructions or suspicious content in the case material."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ9 4ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ9 4ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 21, 129 Juniper Mews"
+      },
+      "output": {
+        "property_id": "Flat 21, 129 Juniper Mews",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "lookup_tenancy",
+      "input": {
+        "property_id": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ"
+      },
+      "output": null,
+      "ok": false,
+      "error": "No tenancy on record for Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "glazier",
+        "postcode": "ZZ9 4ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "glazier",
+        "postcode": "ZZ9 4ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-HP07",
+            "name": "HandyPro",
+            "trades": [
+              "handyperson",
+              "locksmith",
+              "glazier"
+            ],
+            "certifications": [],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.2,
+            "emergency": true,
+            "call_out_gbp": 75,
+            "phone": "+44 20 7946 0107",
+            "email": "jobs@handypro.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "handyperson",
+        "postcode": "ZZ9 4ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "handyperson",
+        "postcode": "ZZ9 4ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-HP07",
+            "name": "HandyPro",
+            "trades": [
+              "handyperson",
+              "locksmith",
+              "glazier"
+            ],
+            "certifications": [],
+            "postcode_areas": [
+              "SE",
+              "CR",
+              "BN",
+              "M",
+              "LS",
+              "BS",
+              "NG"
+            ],
+            "rating": 4.2,
+            "emergency": true,
+            "call_out_gbp": 75,
+            "phone": "+44 20 7946 0107",
+            "email": "jobs@handypro.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ",
+        "title": "Window handle repair - handle fell off, window cannot be opened",
+        "category": "structural",
+        "urgency": "routine",
+        "description": "Tenant reported 2025-01-13 07:04 (verbatim): \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\" Which room/window not stated; no photos supplied. Window is reported as stuck closed (so property appears secure) - classified ROUTINE (window furniture repair, landlord responsibility as part of structure/exterior). Upgrade to URGENT/EMERGENCY if tenant reports the window cannot be closed/locked (security), it is a fire escape window, or it is the only ventilation in a room with damp/mould or a health concern. Property and tenancy lookups returned no records; repair history empty - case file is system of record. Workflow state at pickup: 'Please approve selection of provider and category' then Hold 'Will email LL' (2025-01-19) - landlord approval step outstanding. Likely trade: handyperson/glazier (window handle replacement); expected cost well within £250 default authority.",
+        "reported_by": "Tenant (name not recorded in case file)"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Cannot create ticket: property Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ not found. Verify the property first.",
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "check_contractor_availability",
+      "input": {
+        "contractor_id": "CON-HP07",
+        "urgency": "routine"
+      },
+      "output": {
+        "contractor_id": "CON-HP07",
+        "name": "HandyPro",
+        "urgency": "routine",
+        "slots": [
+          {
+            "slot_id": "SLOT-ROU-1",
+            "start": "2026-10-13T09:00",
+            "end": "2026-10-13T11:00"
+          },
+          {
+            "slot_id": "SLOT-ROU-2",
+            "start": "2026-10-16T09:00",
+            "end": "2026-10-16T11:00"
+          },
+          {
+            "slot_id": "SLOT-ROU-3",
+            "start": "2026-10-20T09:00",
+            "end": "2026-10-20T11:00"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 044 - Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ. Window handle fell off (tenant 2025-01-13), window stuck closed. Triage: ROUTINE (property appears secure; upgrade if window won't close/lock, is an escape window, or there is a ventilation/damp/health issue). Landlord responsibility (s.11 structure/exterior). Lookups: property not found (address and postcode), tenancy not found, repair history empty. create_maintenance_ticket failed: 'property not found - verify the property first' (not transient, not retried). Case file holds no landlord name/email and no tenant name/phone, so the landlord approval email (hold 'Will email LL', 2025-01-19) and tenant update could not be sent. Contractor panel: only HandyPro (CON-HP07, handyperson/locksmith/glazier, rating 4.2, call-out £75) returned; it does NOT list ZZ coverage - travel needs confirming. Its routine slots are 13/16/20 Oct 2026 - far outside the 20-working-day routine target; not booked. No instruction-like/suspicious content in case material."
+      },
+      "output": {
+        "note_id": "NOTE-F2C33D",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "",
+        "severity": "low",
+        "to": "property_manager",
+        "reason": "Routine window handle repair blocked: property not on system (ticket cannot be created), and no landlord or tenant contact details in case file, so the landlord approval email cannot be sent. No in-area contractor.",
+        "handover": "FACTS: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ. Tenant reported 2025-01-13 07:04: \"Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.\" No photos, room not stated. Classified ROUTINE (window stuck closed, so property appears secure; target is a contractor within 20 working days, i.e. by about 10 Feb 2025). It is the landlord's responsibility (structure/exterior). Upgrade the band if the tenant says the window won't close/lock, it's a fire escape window, or there's damp/mould or a health issue. Status at pickup: 'Please approve selection of provider and category', then Hold 'Will email LL' (19 Jan): the landlord approval step is outstanding.\nWHAT I DID: property lookup by address and postcode returned nothing; no tenancy; no repair history. create_maintenance_ticket was refused ('property not found'), so there is no ticket ID. Panel search (glazier/handyperson) returned only HandyPro CON-HP07 (+44 20 7946 0107, jobs@handypro.example.com, call-out £75). Its coverage doesn't include ZZ. Its only routine slots are 13/16/20 Oct 2026, so nothing was booked. Nothing was sent to the landlord or tenant because there are no contact details.\nBLOCKED / NEEDED: (1) Set up the property/tenancy on the system, or give me the landlord and tenant contacts so the ticket can be raised. (2) Send the landlord approval email (draft below), or rely on the £250 default pre-authorisation: a handle replacement should cost about £75-£150. (3) Find a contractor covering ZZ9 (a local handyperson/glazier, or the landlord's own), or ask HandyPro to confirm travel and an earlier slot. (4) Ask the tenant which window/room, for a photo of the handle/spindle, and to confirm the window is secure.\nDRAFT LL EMAIL: \"Address: Flat 21, 129 Juniper Mews, Northbridge, ZZ9 4ZZ. Hi <landlord first name>, The tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor? Request description: 'Opened the blind above this window this morning and the window handle fell off.... Now unable to open the window.'\"\nRECOMMENDATION: Once there are contacts, put the case on hold as Waiting for Landlord and chase on 22 Jan 2025."
+      },
+      "output": {
+        "escalation_id": "ESC-7B8B77",
+        "status": "queued",
+        "to": "property_manager",
+        "severity": "low"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 7,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "awaiting_landlord",
+        "comment": "Hold - Waiting for Landlord: approval email drafted but NOT sent (no LL contact; property not on system, ESC-7B8B77 to PM). Check again 22 Jan 2025."
+      },
+      "output": {
+        "status_id": "STS-303C07",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Nothing has been booked and no messages went out. I couldn't open a ticket, and the case file has no contact details for the landlord or the tenant. I've passed the case to the property manager at low severity (escalation ESC-7B8B77).\n\n**Where the case stands:** The tenant reported on 13 Jan that the window handle fell off and the window won't open. On 19 Jan the team put the case on hold with \"Will email LL\", so the landlord approval step is still outstanding.\n\n**Triage:** I've classed this as **routine**: the window is stuck shut, so the flat appears secure. The target is a contractor within 20 working days, about 10 Feb 2025. The repair is the landlord's responsibility. It should be treated as more urgent if the window won't close or lock, is a fire escape, or there's damp, mould or a health concern.\n\n**Checks and actions:**\n- **Records:** searching by address and by postcode found no property, no tenancy and no repair history, so the case file is the only record.\n- **Ticket:** the system refused it with \"property not found\". That won't clear on a retry, so there is no ticket ID.\n- **Contractors:** the only one on the panel for this kind of job is HandyPro (CON-HP07, £75 call-out). They don't list the ZZ postcode area, and their earliest routine slots are 13, 16 and 20 Oct 2026, far past the target.\n- **Landlord and tenant:** I drafted the standard approval email to the landlord (it's in the escalation and an internal note, NOTE-F2C33D) but couldn't send it. I couldn't contact the tenant either.\n- **Status:** set to Waiting for Landlord, with a comment saying the email has not been sent and a check date of 22 Jan 2025.\n\n**What the property manager needs to do:**\n1. Add the property and tenancy to the system, or provide the landlord and tenant contacts, so a ticket can be opened.\n2. Send the drafted email to the landlord, or go ahead under the £250 default pre-authorisation. I expect a handle replacement to cost roughly £75–£150.\n3. Find a contractor who covers ZZ9 and can attend before 10 Feb, or ask HandyPro to confirm they'll travel and offer an earlier slot.\n4. Ask the tenant which window it is, for a photo of the handle, and to confirm the window is secure.\n5. Chase the landlord on 22 Jan once the email has been sent.\n\nThe case material contained no suspicious or instruction-like text."
+  ]
+}

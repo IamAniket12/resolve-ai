@@ -88,10 +88,10 @@ TOOL_DEFINITIONS: List[Dict[str, Any]] = [
     },
     {
         "name": "send_message",
-        "description": "Send a message to the tenant, landlord, contractor or property manager. Use the contact details from the records. Returns a delivery receipt or an error.",
+        "description": "Send a message to the tenant, landlord, contractor or property manager. Give a phone number or email if you have one; otherwise give the person's name or role as it appears in the case file and the platform uses its own contact record for that party. Returns a delivery receipt or an error.",
         "input_schema": _schema({
             "recipient_type": {"type": "string", "enum": ["tenant", "landlord", "contractor", "property_manager"]},
-            "recipient": {"type": "string", "description": "Phone number or email address"},
+            "recipient": {"type": "string", "description": "Phone number, email address, or the recipient's name/role from the case file (e.g. 'Felix (landlord)', 'Riverside Works')"},
             "channel": {"type": "string", "enum": ["sms", "email", "whatsapp", "portal"]},
             "body": {"type": "string"},
         }),

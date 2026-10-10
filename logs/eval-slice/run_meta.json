@@ -1,0 +1,23 @@
+{
+  "run_id": "eval-slice",
+  "cases_path": "data/public_cut",
+  "n_cases": 10,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "tool_backend": "mock",
+  "workers": 6,
+  "case_timeout": 600,
+  "effort": "high",
+  "cases": [
+    "002",
+    "008",
+    "011",
+    "020",
+    "025",
+    "030",
+    "038",
+    "044",
+    "046",
+    "050"
+  ]
+}

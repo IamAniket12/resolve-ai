@@ -1,0 +1,163 @@
+{
+  "case_id": "020",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 3,
+  "started_at": "2026-10-10T10:57:20+00:00",
+  "finished_at": "2026-10-10T10:58:21+00:00",
+  "usage": {
+    "input_tokens": 12,
+    "output_tokens": 4502,
+    "cache_read_input_tokens": 28179,
+    "cache_creation_input_tokens": 34426
+  },
+  "manifest": [
+    {
+      "name": "attachment-01-property-inspection-report.pdf",
+      "kind": "pdf",
+      "chars": 8901,
+      "note": ""
+    },
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 896,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 331,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "Auto-created inspection case for Flat 12, 162 Beacon Close, Cedarford, ZZ9 5ZZ. A routine periodic property inspection is booked for 13/02/2024, 08:00-12:00. The tenant was told by SMS and email on 08/02/2024 that the management key will be used if they are out. An inspection report is attached, but it is dated 16/02/2024, which is in the future and does not match the booked date, so it cannot be the result of this visit.",
+    "issue_category": "not-a-repair",
+    "urgency": "not_a_repair",
+    "decision": "in_progress",
+    "outcome": "The inspection is booked for 13/02/2024 AM and the tenant was told with more than 24 hours' notice. The case is set to appointment_booked with a check on 14/02/2024 to get the real report and photos and send them to the landlord. The future-dated attachment is flagged as unreliable.",
+    "actions_taken": [
+      "lookup_property on the full address: no record found, so the case file was used as the system of record",
+      "get_repair_history: no previous jobs",
+      "record_note NOTE-CA1620: intake classification, current position, problems with the attached report, and provisional follow-up points (dog flap, pets, command-strip marks)",
+      "update_case_status set to appointment_booked (STS-5B30D7) with next check 14/02/2024"
+    ],
+    "failed_actions": [],
+    "escalation": {
+      "required": false,
+      "to": "none",
+      "reason": "",
+      "handover": "No escalation needed. Inspection booked 13/02/2024 08:00-12:00 at Flat 12, 162 Beacon Close, Cedarford, ZZ9 5ZZ. Tenant told by SMS and email on 08/02, with management-key access if absent. The property database has no record of this address and there is no repair history. The case file has no landlord or tenant names or contact details. The attached report is dated and signed 16/02/2024 (future), is branded Northbridge Lettings (our SMS was signed Oakfield Services) and records 0 photos, so do not rely on it. On 14/02: get the genuine signed report and photos from the inspector, check them against the attachment, and send to the landlord. Check landlord consent for the tenant-fitted dog flap and whether the tenancy allows pets (small dog, fish tank). The Bedroom 1 command-strip marks are for the tenant to make good. Raise separate tickets for any faults that are the landlord's responsibility."
+    },
+    "conflicts": [
+      {
+        "description": "The attached report is dated and signed 16 February 2024 16:32:45. That is after the case date (08/02/2024) and does not match the booked inspection date (13/02/2024).",
+        "how_resolved": "Trusted the history and SMS (booked 13/02, not yet happened). Treated the attachment as misfiled, a template or wrongly dated, and did not act on its findings. Flagged it for checking against the genuine report."
+      },
+      {
+        "description": "The report is branded 'Northbridge Lettings' but the tenant SMS is signed 'Oakfield Services'.",
+        "how_resolved": "Not material to the next action. Noted for the team to check the branding/agency."
+      },
+      {
+        "description": "The report says photos are taken, but records 0 photos for every area and has only a placeholder image.",
+        "how_resolved": "Noted. Photos to be obtained with the genuine report after 13/02."
+      }
+    ],
+    "information_gaps": [
+      "The property database has no record of this address. The case file was used as the system of record.",
+      "No landlord name or contact details. A landlord report email cannot be sent until the property manager supplies them.",
+      "No tenant name or contact details in the case file. Not needed now because the tenant has already been told."
+    ],
+    "assumptions": [
+      "The inspection booked for 13/02/2024 AM is still going ahead, since nothing in the history says it was cancelled.",
+      "Event 001 ('AM slot, any time morning') records the tenant's or agency's preferred slot, and the booking matches it."
+    ],
+    "tenant_communication": "Before I took over, the agency sent an SMS and email on 08/02/2024 confirming the inspection on 13/02/2024 between 08:00 and 12:00. They said photos will be taken for the landlord and the management key will be used if the tenant is not present. I sent no further messages.",
+    "landlord_communication": "none",
+    "next_steps": [
+      "14/02/2024: get the signed inspection report and photos from the inspector.",
+      "Check the genuine report against the attachment and correct the record if the attachment was misfiled.",
+      "Send the report to the landlord once their contact details are confirmed.",
+      "Check landlord consent for the dog flap and the tenancy pet clause.",
+      "Bedroom 1 command-strip marks are for the tenant to make good, to be assessed at checkout.",
+      "Raise separate maintenance tickets for any faults found that are the landlord's responsibility."
+    ],
+    "risk_flags": [
+      "Attached inspection report is dated in the future (16/02/2024) and does not match the booked date, so it is unreliable.",
+      "Unexplained branding mismatch (Northbridge Lettings vs Oakfield Services).",
+      "Tenant-fitted dog flap is an alteration that may need landlord consent. Pets present."
+    ],
+    "confidence": 0.85,
+    "reasoning": "This is a periodic inspection, not a repair, so there is no urgency band, no contractor and no landlord approval. The history shows the inspection is already booked and the tenant was given more than 24 hours' notice (policy section 6), so the next right step is to record the case and hold it until the inspection takes place. The records lookups returned nothing, so the case file was the system of record (policy section 0). The attached report cannot belong to an inspection that has not happened yet, so I did not act on its findings and flagged it instead. Its provisional points (dog flap, pets, command-strip marks) are not safety or statutory issues and can be checked once the genuine report arrives. Nothing required human escalation (policy section 8: do not over-escalate routine work)."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 12, 162 Beacon Close, Cedarford, ZZ9 5ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 12, 162 Beacon Close, Cedarford, ZZ9 5ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 1,
+      "name": "get_repair_history",
+      "input": {
+        "property_id": "Flat 12, 162 Beacon Close"
+      },
+      "output": {
+        "property_id": "Flat 12, 162 Beacon Close",
+        "jobs": [],
+        "count": 0
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 020 – Property inspection, Flat 12, 162 Beacon Close, Cedarford, ZZ9 5ZZ. Intake: not a repair (routine periodic inspection, auto-created 2024-02-07). Records: lookup_property returned no record and repair history is empty, so the case file is the system of record. It has no landlord or tenant names/contact details.\nWhere it stands (2024-02-08 03:34): the inspection is booked for 13/02/2024, AM slot 08:00–12:00. The tenant was told by SMS and email on 08/02 (more than 24h notice). Access is by management key if the tenant isn't home. The SMS also tells the tenant photos will be taken. Nothing needs booking or approving.\nCONFLICTS / RISK FLAGS in attachment-01 (inspection report): (1) It is dated and signed 16 February 2024 16:32:45. That is after 'now' (08/02) and doesn't match the booked date of 13/02, so it can't be the result of this inspection. It may be misfiled, a template or a wrong date. Don't act on it as findings for this visit. (2) It is branded 'Northbridge Lettings' but the tenant SMS is signed 'Oakfield Services'. Check the branding/agency. (3) It says photos were taken but records 0 photos for every area. The only image is a placeholder.\nProvisional points to check once the genuine 13/02 report arrives (none are urgent repairs): the tenant has fitted a dog flap in the back door/utility room, which is an alteration – check landlord consent and the pet clause. A small dog and a fish tank are noted, so confirm pets are allowed. Command-strip sticker marks on the Bedroom 1 wall by the window: tenant to remove and make good (tenant responsibility, end-of-tenancy/deposit matter). No damp, condensation or smoking. Smoke and CO alarms were recorded as working.\nNext: after 13/02, get the signed report and photos from the inspector. Check it against this attachment. Send the report to the landlord. Raise any landlord-responsibility defects as separate tickets."
+      },
+      "output": {
+        "note_id": "NOTE-CA1620",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "appointment_booked",
+        "comment": "Inspection booked 13/02/2024 08:00-12:00 and tenant notified 08/02. Attached report is dated 16/02 (future), so don't rely on it. Next check 14/02/2024: get the genuine report and photos and send them to the landlord."
+      },
+      "output": {
+        "status_id": "STS-5B30D7",
+        "status": "appointment_booked",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "This is a routine property inspection, not a repair. The inspection is booked and the tenant has been told, so I booked no contractor, sent no messages and didn't escalate.\n\n**Where it stands:** the inspection at Flat 12, 162 Beacon Close, Cedarford, ZZ9 5ZZ is set for 13/02/2024 between 08:00 and 12:00. The tenant was told by SMS and email on 08/02, which is more than the 24 hours' notice we need. If they aren't home, we go in with the management key. I set the case to **appointment booked**, with a next check on **14/02/2024**.\n\n**Records:** the property lookup found nothing and there is no repair history, so I used the case file as the record. It doesn't give names or contact details for the landlord or tenant.\n\n**Problems with the attached inspection report (written up in note NOTE-CA1620):**\n- It is dated and signed 16 February 2024. That is after today (08/02) and after the booked date of 13/02, so it can't be from this visit. It may be misfiled, a template or wrongly dated. I haven't treated its findings as real.\n- It is branded \"Northbridge Lettings\", but our SMS to the tenant was signed \"Oakfield Services\".\n- It says photos are taken, but records 0 photos for every room, and its only image is a placeholder.\n\n**Points to check once the real report arrives (none are urgent):**\n- The tenant has fitted a dog flap in the back door. We need to check whether the landlord agreed to it and whether the tenancy allows pets (a small dog and a fish tank are noted).\n- There are command-strip marks on the Bedroom 1 wall by the window. Removing them is the tenant's job; it's an end-of-tenancy and deposit matter.\n- No damp, condensation or smoking was noted, and the smoke and CO alarms were recorded as working.\n\n**Next steps for a person:**\n1. After 13/02, get the signed report and photos from the inspector and check them against this attachment.\n2. Send the report to the landlord.\n3. Open separate tickets for any faults that are the landlord's responsibility."
+  ]
+}

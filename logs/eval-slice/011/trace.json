@@ -1,0 +1,230 @@
+{
+  "case_id": "011",
+  "status": "completed",
+  "error": null,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "steps": 7,
+  "started_at": "2026-10-10T10:57:20+00:00",
+  "finished_at": "2026-10-10T10:58:45+00:00",
+  "usage": {
+    "input_tokens": 20,
+    "output_tokens": 6624,
+    "cache_read_input_tokens": 86586,
+    "cache_creation_input_tokens": 21713
+  },
+  "manifest": [
+    {
+      "name": "history.md",
+      "kind": "text",
+      "chars": 1982,
+      "note": ""
+    },
+    {
+      "name": "index.md",
+      "kind": "text",
+      "chars": 717,
+      "note": ""
+    }
+  ],
+  "resolution": {
+    "case_summary": "The tenant at Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ reported through the portal that the dishwasher (described as a 'Riverside Services' dishwasher) fills and washes but never finishes its cycle. It started recently. There are two guinea pigs at the property, no access restrictions and no vulnerability mentioned. The case had reached 'Please complete landlord approval step first'. The property isn't in the database, and the case file has no contact details for the landlord or the tenant.",
+    "issue_category": "appliance",
+    "urgency": "routine",
+    "decision": "escalated",
+    "outcome": "The landlord approval step couldn't be done: there is no landlord contact, no tenant contact and no property record, and ticket creation was refused. A low-severity handover (ESC-AF19F1) went to the property manager with a draft approval email. The case is set to awaiting landlord, chase 2026-12-02. No contractor was booked and no messages were sent.",
+    "actions_taken": [
+      "lookup_property by full address: no record found",
+      "lookup_property by postcode ZZ3 1ZZ: no record found",
+      "search_contractors (appliance_engineer, ZZ3 1ZZ, non-emergency): returned only CON-AF10 ApplianceFix South West, which covers BS/BA only",
+      "record_note saved (NOTE-CAE92E) with triage, gaps and contractor coverage problem",
+      "escalate_to_human to property manager, low severity (ESC-AF19F1), with handover and draft landlord approval email",
+      "update_case_status set to awaiting_landlord (STS-08DC00), comment says the approval request is not yet sent, chase 2026-12-02"
+    ],
+    "failed_actions": [
+      "create_maintenance_ticket failed with 'Cannot create ticket: property ... not found'. This is a validation error, not a temporary fault, so it wasn't retried. The note and case status were recorded without a ticket ID, and the property manager was asked to create the property record."
+    ],
+    "escalation": {
+      "required": true,
+      "to": "property manager",
+      "reason": "The landlord approval step is blocked. The property isn't in the database, ticket creation was refused, and the case file has no landlord or tenant contact details, so the approval email and tenant messages can't be sent.",
+      "handover": "CASE 011: ROUTINE dishwasher repair at Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ. No safety issue. Tenant's words (portal, 2026-11-29 05:07 UTC): 'Dish washer repair, the dish washer turns on, fills up and seems to wash but never ever stops it's cycle'. Started recently. Two guinea pigs, no entry codes or alarms, no vulnerability. DONE: property lookup by address and by postcode returned nothing. Ticket creation was refused ('property not found'). The appliance engineer search found only CON-AF10 ApplianceFix South West (rated 4.5, £95 call-out, +44 117 000 0110), which covers BS/BA only, not ZZ. Internal note NOTE-CAE92E saved. Status set to awaiting_landlord. No contractor booked, no messages sent. BLOCKED: no landlord name, email or ID, no tenant contact, no property record or ticket. TO DO: (1) Create the property, landlord and tenancy in the CRM, or supply the contact details. (2) Send the standard landlord approval email quoting the tenant verbatim, asking whether to instruct our contractor or use their own. Also ask whether the dishwasher is landlord-supplied and under warranty; if it's the tenant's own, it isn't a landlord repair. (3) Hold: Waiting for Landlord, chase 2026-12-02. (4) Once approved, send the tenant self-checks (cancel/reset programme, clean filter and check the drain hose, door latching, power off at the wall for 5 minutes, note any error code) and warn that an avoidable call-out may be chargeable. (5) Then find an appliance engineer who covers ZZ. The likely cost is within the £250 default limit. Tell the engineer about the guinea pigs."
+    },
+    "conflicts": [
+      {
+        "description": "The case file gives a full property address, but the property database has no record of it (searched by address and by postcode).",
+        "how_resolved": "Treated the case file as the system of record, as policy requires. Ticket creation still failed, so I escalated to the property manager to create the record."
+      }
+    ],
+    "information_gaps": [
+      "Landlord name and contact or ID: missing, which blocks the approval email. Escalated.",
+      "Tenant name and contact: missing, which blocks the acknowledgement and self-check message. Escalated.",
+      "Whether the dishwasher is landlord-supplied or the tenant's own: unknown, which decides who pays. The approval email should ask.",
+      "Warranty or repair history: none on file. The approval email should ask the landlord.",
+      "Landlord-specific spend limit or preferred contractor: unknown. The £250 default applies.",
+      "No appliance engineer on the panel covers ZZ postcodes: a coverage gap for the property manager to fill."
+    ],
+    "assumptions": [
+      "The ROUTINE rating is correct: no leak, electrical fault or safety symptoms were reported.",
+      "'Riverside Services' is the appliance brand or supplier, not a contractor on our panel.",
+      "The £250 default spend limit applies, as no landlord instructions are on file."
+    ],
+    "tenant_communication": "None. No tenant contact details are available.",
+    "landlord_communication": "None. No landlord contact details are available. A draft approval email is in the handover.",
+    "next_steps": [
+      "Property manager creates the property, landlord and tenancy records, or supplies the contact details",
+      "Send the landlord approval email, including the questions about who supplied the dishwasher and warranty",
+      "Hold Waiting for Landlord, chase 2026-12-02",
+      "Once approved, send the tenant self-checks, then source an appliance engineer covering ZZ and tell them about the guinea pigs"
+    ],
+    "risk_flags": [
+      "No property record in the database, so there's no ticket ID yet",
+      "Pets at the property (two guinea pigs): tell the contractor",
+      "No approved appliance engineer covers this postcode"
+    ],
+    "confidence": 0.8,
+    "reasoning": "Under policy the fault is ROUTINE: a non-essential appliance with no safety symptoms. The workflow requires the landlord approval step before any contractor is instructed. Policy says an empty database lookup isn't a reason to stop, but ticket creation was refused and the case file has no landlord or tenant contacts, so neither the approval request nor tenant messages could be sent. A human has to supply the details or send the email, which is why the decision is 'escalated' at low severity rather than 'needs_information'. I booked nothing because approval is outstanding, it isn't confirmed that the dishwasher is landlord-supplied, and no panel contractor covers the area."
+  },
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "lookup_property",
+      "input": {
+        "query": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 2,
+      "name": "lookup_property",
+      "input": {
+        "query": "ZZ3 1ZZ"
+      },
+      "output": {
+        "found": false,
+        "query": "ZZ3 1ZZ",
+        "note": "No record in the local property database. Treat the case file as the system of record for this property: use the address, landlord, tenant and history it contains, and say in the answer that the records lookup returned nothing."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "create_maintenance_ticket",
+      "input": {
+        "property_id": "Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ",
+        "title": "Dishwasher repair - does not finish its cycle",
+        "category": "appliance",
+        "urgency": "routine",
+        "description": "Tenant reported via portal on 2026-11-29 at 05:07 UTC. Tenant's words: \"Dish washer repair, the dish washer turns on, fills up and seems to wash but never ever stops it's cycle\". Started recently. Appliance is described as a Riverside Services dishwasher. Intake classification: ROUTINE (high confidence). No leak, no electrical or safety symptoms reported, and the rest of the kitchen can still be used. Access: tenant says there are no entry codes or alarms. Pets: two guinea pigs. No vulnerability mentioned. The property database lookup returned no record (searched by address and by postcode), so the case file is the system of record. Not yet confirmed whether the landlord supplied the dishwasher (landlord's responsibility) or the tenant owns it (tenant's responsibility). No repair history is on file, so warranty status is unknown. Workflow: landlord approval is needed before we instruct anyone.",
+        "reported_by": "Tenant (via portal intake)"
+      },
+      "output": null,
+      "ok": false,
+      "error": "Cannot create ticket: property Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ not found. Verify the property first.",
+      "duration_ms": 0
+    },
+    {
+      "step": 3,
+      "name": "search_contractors",
+      "input": {
+        "trade": "appliance_engineer",
+        "postcode": "ZZ3 1ZZ",
+        "emergency": false
+      },
+      "output": {
+        "trade": "appliance_engineer",
+        "postcode": "ZZ3 1ZZ",
+        "emergency_only": false,
+        "contractors": [
+          {
+            "contractor_id": "CON-AF10",
+            "name": "ApplianceFix South West",
+            "trades": [
+              "appliance_engineer"
+            ],
+            "certifications": [
+              "Manufacturer-trained (Beko, Bosch)"
+            ],
+            "postcode_areas": [
+              "BS",
+              "BA"
+            ],
+            "rating": 4.5,
+            "emergency": false,
+            "call_out_gbp": 95,
+            "phone": "+44 117 000 0110",
+            "email": "jobs@appliancefix-sw.example.com"
+          }
+        ],
+        "note": "No contractor covers this postcode area; showing the full panel for the trade. Confirm travel/coverage with the contractor before booking."
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 4,
+      "name": "record_note",
+      "input": {
+        "ticket_id": "",
+        "note": "Case 011, Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ. Dishwasher runs without stopping and never finishes its cycle. Started recently. Classified ROUTINE: no leak, no electrical or safety symptoms. Pets: two guinea pigs. No access restrictions. No vulnerability mentioned.\n- Property lookup returned no record, by address and by postcode. The case file is the system of record.\n- Ticket creation was refused (\"property not found\"). This is a validation error, not a temporary fault, so I did not retry.\n- The case file has no contact details for the landlord or the tenant. I can't send the landlord approval email or tell the tenant anything.\n- Unknown: whether the dishwasher is landlord-supplied (landlord pays) or the tenant's own (tenant pays). \"Riverside Services\" may be a brand or a supplier. The landlord approval email should confirm this.\n- Contractor search for an appliance engineer: only result is CON-AF10, ApplianceFix South West (rated 4.5, call-out £95, phone +44 117 000 0110). It covers BS/BA only, not ZZ. Coverage must be confirmed before choosing it.\n- No repair history is on file, so I can't check for a warranty. If the dishwasher was fitted or repaired recently, it should go back under warranty first.\n- No contractor booked. No messages sent."
+      },
+      "output": {
+        "note_id": "NOTE-CAE92E",
+        "status": "saved"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 5,
+      "name": "escalate_to_human",
+      "input": {
+        "ticket_id": "",
+        "severity": "low",
+        "to": "property_manager",
+        "reason": "Landlord approval step can't be done: property not in the database, ticket creation refused, and no landlord or tenant contact details in the case file",
+        "handover": "CASE 011. ROUTINE dishwasher repair at Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ. No safety issue. This is low severity: it only needs the records fixing and the approval email sending.\n\nFACTS (from the case file only): Tenant reported via portal on 2026-11-29 at 05:07 UTC: \"Dish washer repair, the dish washer turns on, fills up and seems to wash but never ever stops it's cycle\". Started recently. Described as a \"Riverside Services\" dishwasher. Two guinea pigs. No entry codes or alarms. No vulnerability. Intake severity is ROUTINE (20 working days), which I agree with. The system is waiting on the landlord approval step.\n\nWHAT I DID: Looked up the property by address and by postcode; no record either time. Tried to create a ticket; refused with \"property not found\" (validation error, not retried). Searched the appliance engineer panel: only CON-AF10, ApplianceFix South West (rated 4.5, £95 call-out, +44 117 000 0110, jobs@appliancefix-sw.example.com), which covers BS/BA only, not ZZ. Saved internal note NOTE-CAE92E. No contractor booked. No messages sent.\n\nBLOCKED: (1) No landlord name, email or ID, so I can't send the approval email or a formal approval request. (2) No tenant contact, so I can't acknowledge the report or send self-checks. (3) No property record, so I can't open a ticket.\n\nRECOMMENDED NEXT STEPS:\n(a) Add the property, landlord and tenancy to the CRM, or give me the landlord's and tenant's contact details.\n(b) Send the standard landlord approval email: \"Address: Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ. Hi <name>, The tenant of this property has reported the following. Can you please advise if you wish for me to instruct a contractor to attend or if you want to arrange your own contractor? Request description: 'Dish washer repair, the dish washer turns on, fills up and seems to wash but never ever stops it's cycle'\". Also ask whether the dishwasher was supplied by the landlord and whether it is under warranty. If it is the tenant's own, it isn't a landlord repair.\n(c) Hold: Waiting for Landlord. Chase on 2026-12-02 if no reply.\n(d) Once approved: send the tenant quick self-checks first (start the reset/cancel programme; clean the filter and check the drain hose for kinks or blockage; check the door closes and latches fully; switch off at the wall for 5 minutes and restart; note any error code). Say an avoidable call-out may be chargeable.\n(e) Then find an appliance engineer who actually covers ZZ. Panel coverage is a gap. Cost should be within the £250 default (£95 call-out plus parts), unless the landlord has a different limit. Tell the engineer about the guinea pigs."
+      },
+      "output": {
+        "escalation_id": "ESC-AF19F1",
+        "status": "queued",
+        "to": "property_manager",
+        "severity": "low"
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "step": 6,
+      "name": "update_case_status",
+      "input": {
+        "ticket_id": "",
+        "status": "awaiting_landlord",
+        "comment": "Landlord approval step NOT yet sent: no landlord contact or property record (ESC-AF19F1 to PM). Once sent, chase landlord 2026-12-02."
+      },
+      "output": {
+        "status_id": "STS-08DC00",
+        "status": "awaiting_landlord",
+        "recorded": true
+      },
+      "ok": true,
+      "error": null,
+      "duration_ms": 0
+    }
+  ],
+  "model_notes": [
+    "Case 011 is stuck at the landlord approval step. The landlord hasn't been asked yet, because I have no contact details for the landlord or the tenant. I've passed it to the property manager at low severity (ESC-AF19F1).\n\n**The problem:** At Flat 12, 78 Copperfield Walk, Kingshaven, ZZ3 1ZZ, the dishwasher fills and washes but never stops its cycle. It started recently. There are two guinea pigs, no access restrictions and no vulnerability mentioned. I kept the intake rating of **ROUTINE** (contractor within 20 working days), since there's no leak, electrical fault or safety risk.\n\n**What I did:**\n- **Property lookup:** no record, by address or by postcode. I'm treating the case file as the record.\n- **Ticket:** creation was refused with \"property not found\". That's a validation error, not a temporary fault, so I didn't retry. There is no ticket ID.\n- **Contractor search:** the only appliance engineer on the panel is ApplianceFix South West (rated 4.5, £95 call-out). It covers BS and BA postcodes only, not ZZ, so I booked no one. In any case, booking has to wait for landlord approval.\n- **Records:** saved an internal note (NOTE-CAE92E) and set the case to \"awaiting landlord\". The status comment makes clear the approval request hasn't actually gone out yet.\n- **Messages:** none sent to the landlord or tenant, because there's no contact on file.\n\n**Still unknown:** whether the landlord supplied the dishwasher or the tenant owns it, and whether it's under warranty. There's no repair history to check.\n\n**What the property manager needs to do (the handover includes a draft approval email):**\n1. Add the property, landlord and tenancy to the system, or send me their contact details.\n2. Send the landlord approval email. It should also ask who supplied the dishwasher and whether it's under warranty.\n3. Put the case on hold waiting for the landlord, and chase on 2 December 2026 if there's no reply.\n4. Once approved, send the tenant some quick self-checks to try before a call-out.\n5. Then find an appliance engineer who covers ZZ. This should fall within the £250 default spend limit. Tell the engineer about the guinea pigs."
+  ]
+}

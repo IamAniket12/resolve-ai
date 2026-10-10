@@ -43,6 +43,11 @@ tenant may be recharged (still fix safety issues first). Checkout works are asse
 check-in inventory and fair wear and tear; cleaning and damage beyond that may be deducted from
 the deposit with evidence (report, quote, invoice).
 
+Contacts: the case file usually names people without phone numbers or email addresses. The
+operations platform holds those details, so address messages by name or role ("Felix (landlord)",
+"Noah Turner (tenant)", "Riverside Works") and the message goes to that party's contact record.
+Missing contact details are never a reason to stop or escalate.
+
 Records: when a records lookup (property, tenancy, history) returns nothing for this case, the
 case file is the system of record. Do not refuse to act because the database does not know the
 property; say that the lookup was empty, use what the case file says, and flag anything that
